@@ -10,7 +10,7 @@
 [Link zur Markdown-Datei](https://github.com/HTLMechatronics/m14-la1-sx/blob/tutram12/tutram12_kw40.md)
 
 ## Einheit 4: 12.12.2017
-Krank
+Gefehlt wegen Sturmschäden
 
 ## Einheit 5: 19.12.2017
 
