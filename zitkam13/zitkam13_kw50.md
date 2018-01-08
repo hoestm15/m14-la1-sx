@@ -1,12 +1,16 @@
-# Labor KW50  
-# 12.12.2017  
+# Labor KW50 12.12.2017  
 
 ## Makefiles  
 ### Theorie  
 Bei der C-Prpgrammierung verwendet man normalerweise für die Übersetzung des Programs eine **IDE(Integrated Development Environment)** wie zum Beispiel **Codeblocks** oder **Netbeans**. Diese IDE's greifen aber auch auf das Tool **make** zurück.  
 
 Wird **make** in der Konsole aufgerufen, so wird eine Steuerdatei names **Makefile** ausgeführt.  
-Bei richtiger Einstellung des **Makefile** wird nur das Nötigste gemacht und schon abgeschlossene Teile weggelassen.
+Bei richtiger Einstellung des **Makefile** wird nur das Nötigste gemacht und schon abgeschlossene Teile weggelassen.  
+Ein **Makefile** besteht aus:  
+* einem Ziel  
+* einer Abhängigkeit  
+* einem Befehl  
+
 In der Datei ** Makefile** befinden sich die relevanten Informationen für eine Übersetzung. 
 
 **Zum Beispiel:**  
