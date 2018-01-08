@@ -72,6 +72,8 @@ clean:
         -rm main.elf
         -rm main.hex
  ```
+ An obersten Stelle steht das wichtigste **Ziel**. Um dieses zu erreichen werden andere Ziele und Datein benötigt.
+ Das **Target** *clean* steht immer zum Schluß des Programmes. 
  #### C - Quelltext
   ```  
  #define F_CPU 16000000L
