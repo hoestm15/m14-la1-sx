@@ -42,7 +42,7 @@ In der Datei ** Makefile** befinden sich die relevanten Informationen für eine 
  
  Als Übung machten wir in der Laboreinheit ein Beispiel. Dieses Beispiel compilierten, linkten und spielten das fertige Program auf den µC mit dem Befehl **make**.  
  
- **Makefile:**
+ **Makefile der Einheit:**
  ```  
  flash: main.hex bootloader.hex
         avrdude -c usbasp -p atmega328p -e -U flash:w:main.hex:i -U flash:w:boo$
@@ -62,4 +62,23 @@ clean:
         -rm main.o
         -rm main.elf
         -rm main.hex
-´´´
+ ```
+ **C-Quelltext**  
+ ```  
+ #define F_CPU 16000000L
+#include <avr/io.h>
+#include <util/delay.h>
+
+int main()
+{
+
+        DDRB |=(1 << PB5);
+        while(1)
+        {
+                PORTB ^= (1 <<PB5);
+                _delay_ms(200);
+        }
+
+        return 0;
+}
+```  
