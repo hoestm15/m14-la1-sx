@@ -1,4 +1,4 @@
-# Labor SX 4AHME KW38-40
+# Labor SX 4AHME KW38-...
 
 ## 1. Einheit,19.09.2017  
 Link zur [1. Einheit](https://github.com/strlum14/test1/blob/master/strlum14_kw38.md)
