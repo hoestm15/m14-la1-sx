@@ -31,7 +31,13 @@ In der Datei ** Makefile** befinden sich die relevanten Informationen für eine 
  Nach dem Compilieren ist der nächste Schritt **Linken** 
  Danach entsteht eine Datei mit der Endung **.elf**
  Dazu benötigt man den Befehl    
- ´´´  
- avr-gcc -mmcu=atmega328p -Os -o main.elf main.o  
- ´´´
+```
+ avr-gcc -mmcu=atmega328p -Os -o main.elf main.o
+ ```  
+ **3.Schritt Erzeugen einer Intel Hex-Datei**  
+ Von der **.elf** Datei entsteht eine **.hex**  Datei mit dem Befehl  
+ ```
+  avr-objcopy -O ihex main.elf main.hex
+ ```    
+ 
  
