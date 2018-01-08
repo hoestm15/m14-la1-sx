@@ -18,5 +18,20 @@ In der Datei ** Makefile** befinden sich die relevanten Informationen für eine 
  ### Schitte einer C-Übersetzung  
  
  **1.Schritt Compilieren**  
- Für unseren µC wird der GNU-Compiler **avr-gcc** verwendet.
+ Für unseren µC wird der GNU-Compiler **avr-gcc** verwendet.  
+ Danach entsteht eine Datei mit der Endung **.o**
+ Dazu benötigt man den Befehl   
+ ```
+ avr-gcc -mmcu=atmega328p -Os -c main.c
+ ```  
+ * mit **-mmcu** wird der µC Typ festgelegt  
+ *  **-c** ist das es nur compiliert wird   
+ 
+ **2.Schritt Linken**  
+ Nach dem Compilieren ist der nächste Schritt **Linken** 
+ Danach entsteht eine Datei mit der Endung **.elf**
+ Dazu benötigt man den Befehl  
+ ´´´
+ avr-gcc -mmcu=atmega328p -Os -o main.elf main.o  
+ ´´´
  
