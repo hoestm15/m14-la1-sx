@@ -17,5 +17,6 @@ In der Datei ** Makefile** befinden sich die relevanten Informationen für eine 
  
  ### Schitte einer C-Übersetzung  
  
- **1.Schritt**
+ **1.Schritt Compilieren**  
+ Für unseren µC wird der GNU-Compiler **avr-gcc** verwendet.
  
