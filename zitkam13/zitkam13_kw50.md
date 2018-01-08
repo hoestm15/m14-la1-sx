@@ -30,8 +30,8 @@ In der Datei ** Makefile** befinden sich die relevanten Informationen für eine 
  **2.Schritt Linken**  
  Nach dem Compilieren ist der nächste Schritt **Linken** 
  Danach entsteht eine Datei mit der Endung **.elf**
- Dazu benötigt man den Befehl  
- ´´´
+ Dazu benötigt man den Befehl    
+ ´´´  
  avr-gcc -mmcu=atmega328p -Os -o main.elf main.o  
  ´´´
  
