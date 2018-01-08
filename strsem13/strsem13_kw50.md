@@ -51,7 +51,7 @@ Bei der Atmel megaAVR Familie, wird dafür der GNU-Compile avr-gcc verwendet.
  * Aus der *.elf* Datei entsteht eine *i.hex* Datei.
  
 ### Übungsprogramm  
-*Makefile*
+#### *Makefile*
   ```  
  flash: main.hex bootloader.hex
         avrdude -c usbasp -p atmega328p -e -U flash:w:main.hex:i -U flash:w:boo$
@@ -72,7 +72,25 @@ clean:
         -rm main.elf
         -rm main.hex
  ```
- 
+ #### C - Quelltext
+  ```  
+ #define F_CPU 16000000L
+#include <avr/io.h>
+#include <util/delay.h>
+
+int main()
+{
+
+        DDRB |=(1 << PB5);
+        while(1)
+        {
+                PORTB ^= (1 <<PB5);
+                _delay_ms(200);
+        }
+
+        return 0;
+}
+``` 
  
  
  
