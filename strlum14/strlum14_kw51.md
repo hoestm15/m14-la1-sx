@@ -55,3 +55,63 @@ Wäre die Ausgabe zusätzlicher Programminfos , ist aber nicht zwingend nötig.
 Ziel der Übung war, es zu verstehen wie die Übersetzung mit Hilfe der Übersetzungstools make funktioniert.
 --> Hier einige Ausschnitte der Übung .
 
+### Makefile 
+
+flash: main.hex bootloader.hex
+       avrdude -c usbasp -p atmega328p -e -U flash:w:main.hex:i -U flash:w:boot
+       #avrdude -c usbasp -p atmega328p  -U flash:w:bootloader.hex:i
+
+
+main.hex: main.elf
+       avr-objcopy -O ihex main.elf main.hex
+
+main.elf: main.o
+       avr-gcc -mmcu=atmega328p -Os -o main.elf main.o
+
+main.o: main.c
+      avr-gcc -mmcu=atmega328p -Os -c main.c
+clean: 
+       -rm main.o
+       -rm main.elf
+       -rm main.hex
+       
+## Quelltext-C
+
+#define F_CPU 16000000L
+#include <avr/io.h>
+#include <util/delay.h>
+
+int main()
+{
+
+      DDRB |=(1 << PB5);
+      while(1)
+      {
+              PORTB ^= (1 <<PB5);
+              _delay_ms(200);
+      }
+
+      return 0;
+}
+
+### Übersetzung mit make
+
+Die Übersetzung kann auch mit einem einzigen Aufruf make erfolgen. In diesem Fall muss sich im Projektverzeichnis die Datei Makefile befinden --> siehe oben !
+
+Makefiles bestehen immer aus 1 oder mehreren Targets, das Ende vom Namen wird mit 
+einem Doppelpunkt gekennzeichnet. Unter den Targets stehen die Anweisungen die ausgeführt werden
+müssen, um das Ziel zu erreichen. Damit Anweisungen als solche erkannt werden, ist es nötig, dass sie 
+mithilfe eines echten Tabulator eingerückt werden. 
+
+Rechts neben den Makefile-Namen stehen die Abhängigkeiten --> Depencies , sind mehrere vorhanden, müssen
+sie mit Leerzteichen getrennt sein. 
+
+Abhängigkeiten wären :
+                       --> andere Targets
+                       --> Dateien
+                       
+Mithilfe des Targets clean ist es möglich, alle Daten zu löschen. 
+Ruft man also make clean auf --> alle erzeugten Daten werden gelöscht.
+
+
+
