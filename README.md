@@ -5,3 +5,4 @@
 * Gruppe 3: 2. Einheit, 28.11.2017 
     * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/Protokoll2.md)
 * Gruppe 3: 3. Einheit, 05.12.2017
+    * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/Protokoll3.md)
