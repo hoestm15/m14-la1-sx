@@ -41,7 +41,7 @@ Register | Verwendung
 **Definition:** Der Variable wird ein Speicherbereich zugeteilt  
 
 
-## Übungsbeispiel 1  
+## 1.Übungsbeispiel  
 ```
 int main(void)  
 {  
@@ -71,7 +71,7 @@ int main(void)
 
 
 
-## 2.Beispiel  
+## 2.Übungsbeispiel  
  ```
 int main(void)  
 {  
@@ -122,7 +122,7 @@ double / double: *1380 Takte*
 
 
 
-## Übung 3  
+## 3. Übungsbeispiel   
 ```
 int main(void)  
 {  
