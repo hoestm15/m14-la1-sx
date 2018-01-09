@@ -137,7 +137,7 @@ int main(void)
 ```  
 Der Befehl *BRNE* ist der wichtigste Maschinenebefehl. BRNE bedeutet Branch if not equal.Er führt die Operation solange aus, bis eine festgelegte Bedindung erfüllt ist. Es wird hier von 10 nach 0 gezählt.  
 
-## Taktverbrauch bei Rechenoperationen  
+### Taktverbrauch bei Rechenoperationen  
 Rechnung | Takte   
 -------- | -----  
 8 + 8 Bit | 46  
