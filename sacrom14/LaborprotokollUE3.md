@@ -1,7 +1,7 @@
 # 3. Protokoll  
 
-**Name:** Sackl Martin   
-**Klasse** 4ahme    
+**Name:** Sackl Roland 
+**Klasse** 4AHME  
 **Gruppe:** 3
 
 **Anwesend:** Reinbacher, Ruffenacht, Sackl M., Sackl R., Sammer, Schmuck, Schuster   
