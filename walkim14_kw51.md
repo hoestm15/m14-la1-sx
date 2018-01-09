@@ -22,7 +22,7 @@ Es gibt drei Varianten zur Datenübertragung:
 * Discrete Inputs  -> Ein einzelnes Bit welches nur gelesen werden kann (z.B. Taster).    
 * Coils            -> Ein einzelnes Bit welches gelesen und beschrieben werden kann (z.B. LED).     
 * Input Register   -> Ein 16 Bit Wert welcher nur gelesen werden kann (z.B. Temperatursensor).    
-* Holding Register -> Ein 16 Bit Wert welcher gelesen und beschrieben werden kann.    
+* Holding Register -> Ein 16 Bit Wert welcher gelesen und beschrieben werden kann. (z.B  LED-Anzeige)
 
 ## **Function-Codes**
 
