@@ -57,19 +57,19 @@ Ziel der Übung war, es zu verstehen wie die Übersetzung mit Hilfe der Überset
 
 ### Makefile 
 
-flash: main.hex bootloader.hex
- avrdude -c usbasp -p atmega328p -e -U flash:w:main.hex:i -U flash:w:boot 
- #avrdude -c usbasp -p atmega328p  -U flash:w:bootloader.hex:i
+flash: main.hex bootloader.hex  
+ avrdude -c usbasp -p atmega328p -e -U flash:w:main.hex:i -U flash:w:boot  
+ #avrdude -c usbasp -p atmega328p  -U flash:w:bootloader.hex:i  
 
 
-main.hex: main.elf 
-avr-objcopy -O ihex main.elf main.hex
+main.hex: main.elf   
+avr-objcopy -O ihex main.elf main.hex  
 
-main.elf: main.o 
-avr-gcc -mmcu=atmega328p -Os -o main.elf main.o
+main.elf: main.o   
+avr-gcc -mmcu=atmega328p -Os -o main.elf main.o  
 
-main.o: main.c 
-avr-gcc -mmcu=atmega328p -Os -c main.c
+main.o: main.c   
+avr-gcc -mmcu=atmega328p -Os -c main.c  
  
  clean:  
        -rm main.o 
