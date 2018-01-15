@@ -36,6 +36,7 @@ Dieser Datentyp ermöglicht es mit einem Byte, im Gegensatz zu char oder signed 
 
 Das Schlüssselwort volatile ermöglicht die genaue Einsicht in den Vorgang der Erstellung einer Variable. Ohne dieses Schlüsselwort ist die Einsicht nur vereinfacht möglich.
 
+
 Obiges Programm wurde gestartet und im Debugging-Modus aufgerufen.
 Danach wurde das Programm disassembliert um eine Auflistung aller durchzuführenden Maschinenbefehle zu erhalten.
 
