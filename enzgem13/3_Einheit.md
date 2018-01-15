@@ -8,7 +8,7 @@ Gruppe: 1
 
 # Fortsetzung Atmel-Studio  
 ## Wiederholung der letzten Einheit  
-Siehe: [2.Einheit](https://github.com/HTLMechatronics/m14-la1-sx/edit/enzgem13/enzgem13/2_Einheit.md)  
+Siehe: [2.Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/enzgem13/enzgem13/2_Einheit.md)  
   
 ## Erstellen eines neuen Programmes mit Atmel Studio  
 
