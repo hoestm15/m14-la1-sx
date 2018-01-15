@@ -79,3 +79,38 @@ Maschinenbefehl | Geschrieben | Funktion
 `28.0f` | ADD R18,R24 | Die beiden Register werden addiert, ohne Berücksichtigung des Carry-Flags. Das Endergebnis wird in R18 gespeichert.
 `31.1d` | ADC R19,R1 | Addition mit Berücksichtigung des Carry-Flags.
 
+<br>
+
+**Es folgen weitere besprochene  Quellcodes:
+
+#### Schleife  
+
+int main (void)  
+{  
+	volatile a = 10;  
+        uint8_t b;  
+
+	for (b=0; b<10; b++)  
+	{  
+	}  
+	return 0;  
+	
+#### Multiplikation  
+
+int main (void)  
+{  
+	volatile unsigned char a = 12;  
+	volatile unsigned char b = 8;  
+	  
+	return a*b;  
+}  
+
+#### Division  
+
+int main (void)  
+{  
+	volatile unsigned char a = 12;  
+	volatile unsigned char b = 8;  
+	
+	return a/b;  
+}  
