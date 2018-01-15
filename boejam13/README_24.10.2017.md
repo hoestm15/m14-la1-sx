@@ -59,6 +59,15 @@ int main (void)
 ```
 Um die Übersicht der Maschinenbefhele zu erhalten muss man das Programm im Debugging-Modus starten und anschließend in den Disassambly-Modus gehen.
 
+Weiters haben wir noch den Quellcode für die Schleife, Multiplikation und Division durchbesprochen.
+
+## Fazit 
+
+Bestimmte Rechenoperationen sind für den µC kein großer Aufwand (z.b. Multiplizieren und Addieren), da diese Operatinen eigene Befehle haben. Jedoch dauert z.b. das Dividieren dauert lange, also ein großer Aufwand, da diese Operation keinen eigenen Befehl hat. 
+Auch große Variablen sind für den Prozessor zeitaufwendiger.
+
+
+
 
 
   
