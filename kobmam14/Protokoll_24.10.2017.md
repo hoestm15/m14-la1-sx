@@ -21,7 +21,7 @@ Wie begannen damit die folgende Funktion zu erstellen und zu analysieren. <br> <
 int main (void) <br>
 { <br>
    volatile unsigned char x; <br>
-   x = 12; <br> <br>
+   x = 12; <br>
    return x; <br>
 } <br> <br>
 Es wurde eine Variable **"x"** mit dem Datentyp **"unsigned char"**, welche mit dem Schlüsselwort **"volatile"** versehen wurde, im Stackspeicher angelegt. <br>
@@ -63,7 +63,7 @@ Maschinenbefehl | Geschrieben | Funktion
 int main (void) <br>
 { <br>
    volatile unsigned char a = 12; <br>
-   volatile unsigned char b = 8; <br> <br>
+   volatile unsigned char b = 8; <br>
    return a+b; <br>
 } <br> <br>
 Auch bei diesem Programm wurde die selbe Vorgehensweise verwendet. <br>
@@ -92,8 +92,8 @@ int main (void)   <br>
 
    for (b=0; b<10; b++)   <br>
    {   <br>
-   }   <br> <br>
-   return 0;
+   }   <br>
+   return 0; <br>
 }
 	
 #### Multiplikation  
@@ -101,7 +101,7 @@ int main (void)   <br>
 int main (void) <br>
 {   <br>
    volatile unsigned char a = 12;   <br>
-   volatile unsigned char b = 8;   <br> <br>
+   volatile unsigned char b = 8;   <br>
 	  
    return a*b;  <br> 
 }  
@@ -111,7 +111,7 @@ int main (void) <br>
 int main (void)   <br>
 {  <br> 
    volatile unsigned char a = 12;   <br>
-   volatile unsigned char b = 8;   <br> <br>
+   volatile unsigned char b = 8;   <br>
 	
    return a/b;  <br> 
 }  
