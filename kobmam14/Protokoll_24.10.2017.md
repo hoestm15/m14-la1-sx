@@ -78,3 +78,4 @@ Maschinenbefehl | Geschrieben | Funktion
 `30.e0` | LDI R19, 0x00 | Konstante 0x00 wird am Register R19 abgelegt.
 `28.0f` | ADD R18,R24 | Die beiden Register werden addiert, ohne Berücksichtigung des Carry-Flags. Das Endergebnis wird in R18 gespeichert.
 `31.1d` | ADC R19,R1 | Addition mit Berücksichtigung des Carry-Flags.
+
