@@ -21,7 +21,7 @@ Wie begannen damit die folgende Funktion zu erstellen und zu analysieren. <br> <
 int main (void) <br>
 { <br>
    volatile unsigned char x; <br>
-   x = 12; <br>
+   x = 12; <br> <br>
    return x; <br>
 } <br> <br>
 Es wurde eine Variable **"x"** mit dem Datentyp **"unsigned char"**, welche mit dem Schlüsselwort **"volatile"** versehen wurde, im Stackspeicher angelegt. <br>
@@ -100,18 +100,18 @@ int main (void)   <br>
 
 int main (void) <br>
 {   <br>
-	volatile unsigned char a = 12;   <br>
-	volatile unsigned char b = 8;   <br> <br>
+   volatile unsigned char a = 12;   <br>
+   volatile unsigned char b = 8;   <br> <br>
 	  
-	return a*b;  <br> 
+   return a*b;  <br> 
 }  
 
 #### Division  
 
 int main (void)   <br>
 {  <br> 
-	volatile unsigned char a = 12;   <br>
-	volatile unsigned char b = 8;   <br> <br>
+   volatile unsigned char a = 12;   <br>
+   volatile unsigned char b = 8;   <br> <br>
 	
-	return a/b;  <br> 
+   return a/b;  <br> 
 }  
