@@ -70,3 +70,11 @@ Auch bei diesem Programm wurde die selbe Vorgehensweise verwendet. <br>
 Folgende neue Maschinenbefehle kamen hinzu:
 <br>
 
+Maschinenbefehl | Geschrieben | Funktion
+--------------- | --------- | ---------
+`00.d0` | RCALL PC+0x0001 | Springt zum nächsten Befehl.
+`88.e0` | LDI R24,0x08 | Die Konstante 08 wird im Register R24 abgelegt.
+`2a.81` | LDD R18,Y+2 | Variable b wird in Register R18 geladen.
+`30.e0` | LDI R19, 0x00 | Konstante 0x00 wird am Register R19 abgelegt.
+`28.0f` | ADD R18,R24 | Die beiden Register werden addiert, ohne Berücksichtigung des Carry-Flags. Das Endergebnis wird in R18 gespeichert.
+`31.1d` | ADC R19,R1 | Addition mit Berücksichtigung des Carry-Flags.
