@@ -54,7 +54,8 @@ Maschinenbefehl | Geschrieben | Funktion
 `90.e0` | LDI R25,0x00 | Rückgabewert
 `0f.90` | POP R0 | Variable wird freigegeben.
 `df.91` | POP R29 | Register R29 wird vom Stack entfernt.
-`cf.91` | POP R28 | Register R28 wird vom Stack entfernt. <br> <br> <br>
+`cf.91` | POP R28 | Register R28 wird vom Stack entfernt.
+<br> <br>
 
 #### Addition
 
