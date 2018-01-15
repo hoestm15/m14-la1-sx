@@ -81,36 +81,37 @@ Maschinenbefehl | Geschrieben | Funktion
 
 <br>
 
-**Es folgen weitere besprochene  Quellcodes:
+**Es folgen weitere besprochene  Quellcodes:**
 
 #### Schleife  
 
-int main (void)  
-{  
-	volatile a = 10;  
-        uint8_t b;  
+int main (void)   <br>
+{   <br>
+   volatile a = 10;  <br> 
+   uint8_t b;   <br>
 
-	for (b=0; b<10; b++)  
-	{  
-	}  
-	return 0;  
+   for (b=0; b<10; b++)   <br>
+   {   <br>
+   }   <br> <br>
+   return 0; <br>  
+}
 	
 #### Multiplikation  
 
-int main (void)  
-{  
-	volatile unsigned char a = 12;  
-	volatile unsigned char b = 8;  
+int main (void) <br>
+{   <br>
+   volatile unsigned char a = 12;   <br>
+   volatile unsigned char b = 8;   <br> <br>
 	  
-	return a*b;  
+   return a*b;  <br> 
 }  
 
 #### Division  
 
-int main (void)  
-{  
-	volatile unsigned char a = 12;  
-	volatile unsigned char b = 8;  
+int main (void)   <br>
+{  <br> 
+volatile unsigned char a = 12;   <br>
+volatile unsigned char b = 8;   <br> <br>
 	
-	return a/b;  
+return a/b;  <br> 
 }  
