@@ -27,3 +27,15 @@ int main (void) <br>
 Es wurde eine Variable **"x"** mit dem Datentyp **"unsigned char"**, welche mit dem Schlüsselwort **"volatile"** versehen wurde, im Stackspeicher angelegt. <br>
 Daraufhin bekommt diese den Wert **12** zugewiesen. <br>
 Im Anschluss wird die Variable x, nach einem Typecast auf "int", zurückgegeben.
+
+# unsigned char
+
+Dieser Datentyp ermöglicht es mit einem Byte, im Gegensatz zu char oder signed char, welche vozeichenbehaftet sind, vorzeichenlose Zahlen von 0 bis 255 darzustellen.
+
+# volatile
+
+Das Schlüssselwort volatile ermöglicht die genaue Einsicht in den Vorgang der Erstellung einer Variable. Ohne dieses Schlüsselwort ist die Einsicht nur vereinfacht möglich.
+
+Obiges Programm wurde gestartet und im Debugging-Modus aufgerufen.
+Danach wurde das Programm disassembliert um eine Auflistung aller durchzuführenden Maschinenbefehle zu erhalten.
+
