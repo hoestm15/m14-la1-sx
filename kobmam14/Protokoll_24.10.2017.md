@@ -34,7 +34,8 @@ Dieser Datentyp ermöglicht es mit einem Byte, im Gegensatz zu char oder signed 
 
 #### volatile
 
-Das Schlüssselwort volatile ermöglicht die genaue Einsicht in den Vorgang der Erstellung einer Variable. Ohne dieses Schlüsselwort ist die Einsicht nur vereinfacht möglich.
+Das Schlüssselwort volatile ermöglicht die genaue Einsicht in den Vorgang der Erstellung einer Variable
+Ohne dieses Schlüsselwort ist die Einsicht nur vereinfacht möglich.
 
 <br>
 Obiges Programm wurde gestartet und im Debugging-Modus aufgerufen.
@@ -114,4 +115,11 @@ int main (void)   <br>
    volatile unsigned char b = 8;   <br>
 	
    return a/b;  <br> 
-}  
+} 
+
+<br>
+
+##### Addition, Subtraktion, Multiplikation
+Für diese Rechenoperationen hat der AT328P eigene Befehle/Tabellen und kann sie daher schnell ausführen
+##### Division
+Für eine Division braucht der Prozessor deutlich länger, da er keine Tabellen dfür hat.
