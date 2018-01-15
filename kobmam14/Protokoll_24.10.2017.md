@@ -56,7 +56,7 @@ Maschinenbefehl | Geschrieben | Funktion
 `df.91` | POP R29 | Register R29 wird vom Stack entfernt.
 `cf.91` | POP R28 | Register R28 wird vom Stack entfernt.
 
-<br> <br>
+<br>
 
 #### Addition
 
