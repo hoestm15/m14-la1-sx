@@ -93,25 +93,25 @@ int main (void)   <br>
    for (b=0; b<10; b++)   <br>
    {   <br>
    }   <br> <br>
-   return 0; <br>  
+   return 0;
 }
 	
 #### Multiplikation  
 
 int main (void) <br>
 {   <br>
-   volatile unsigned char a = 12;   <br>
-   volatile unsigned char b = 8;   <br> <br>
+	volatile unsigned char a = 12;   <br>
+	volatile unsigned char b = 8;   <br> <br>
 	  
-   return a*b;  <br> 
+	return a*b;  <br> 
 }  
 
 #### Division  
 
 int main (void)   <br>
 {  <br> 
-volatile unsigned char a = 12;   <br>
-volatile unsigned char b = 8;   <br> <br>
+	volatile unsigned char a = 12;   <br>
+	volatile unsigned char b = 8;   <br> <br>
 	
-return a/b;  <br> 
+	return a/b;  <br> 
 }  
