@@ -38,5 +38,19 @@ Das Schlüssselwort volatile ermöglicht die genaue Einsicht in den Vorgang der 
 
 <br>
 Obiges Programm wurde gestartet und im Debugging-Modus aufgerufen.
-Danach wurde das Programm disassembliert um eine Auflistung aller durchzuführenden Maschinenbefehle zu erhalten.
+Danach wurde das Programm disassembliert um eine Auflistung aller durchzuführenden Maschinenbefehle zu erhalten:
 
+Maschinenbefehl | Geschrieben | Funktion
+--------------- | --------- | ---------
+`cf.93` | PUSH R28 | Register R28 wird auf den Stack gelegt.
+`df.93` | PUSH R29 | Register R29 wird auf den Stack gelegt.
+`1f.92` | PUSH R1 | Register R1 wird auf den Stack gelegt.
+`cd.b7` | IN R28,0x3D | 0x3D wird aus dem I/O-Register in R28 geladen.
+`de.b7` | IN R29,0x3E | 0x3E wird aus dem I/O-Register in R29 geladen.
+`8c.e0` | LDI R24,0x0C | Die Konstante 0C wird im Register R24 abgelegt.
+`89.83` | STD Y+1,R24 | Konstante aus R24 wird am Speicherplatz des Stacks der lokalen Variable abgelegt.
+`89.81` | LDD R24,Y+1 | Die Variable wird in Register R24 geladen.
+`90.e0` | LDI R25,0x00 | Rückgabewert
+`0f.90` | POP R0 | Variable wird freigegeben.
+`df.91` | POP R29 | Register R29 wird vom Stack entfernt.
+`cf.91` | POP R28 | Register R28 wird vom Stack entfernt.
