@@ -39,7 +39,7 @@ Das Schlüssselwort volatile ermöglicht die genaue Einsicht in den Vorgang der 
 <br>
 Obiges Programm wurde gestartet und im Debugging-Modus aufgerufen.
 Danach wurde das Programm disassembliert um eine Auflistung aller durchzuführenden Maschinenbefehle zu erhalten:
-<br>
+<br> <br>
 
 Maschinenbefehl | Geschrieben | Funktion
 --------------- | --------- | ---------
@@ -54,9 +54,8 @@ Maschinenbefehl | Geschrieben | Funktion
 `90.e0` | LDI R25,0x00 | Rückgabewert
 `0f.90` | POP R0 | Variable wird freigegeben.
 `df.91` | POP R29 | Register R29 wird vom Stack entfernt.
-`cf.91` | POP R28 | Register R28 wird vom Stack entfernt.
+`cf.91` | POP R28 | Register R28 wird vom Stack entfernt. <br> <br>
 
-<br>
 #### Addition
 
 int main (void) <br>
