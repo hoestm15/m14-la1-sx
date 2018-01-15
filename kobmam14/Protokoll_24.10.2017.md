@@ -117,9 +117,6 @@ int main (void)   <br>
    return a/b;  <br> 
 } 
 
-<br>
+**Für Rechenoperationen wie das Addieren, die Subtraktion und die Multiplikation hat der AT328P eigene Befehle/Tabellen und kann sie daher schnell ausführen.**
 
-##### Addition, Subtraktion, Multiplikation
-Für diese Rechenoperationen hat der AT328P eigene Befehle/Tabellen und kann sie daher schnell ausführen
-##### Division
-Für eine Division braucht der Prozessor deutlich länger, da er keine Tabellen dfür hat.
+**Für eine Division braucht der Prozessor deutlich länger, da er keine Tabellen dfür hat.**
