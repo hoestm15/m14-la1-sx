@@ -28,11 +28,11 @@ Es wurde eine Variable **"x"** mit dem Datentyp **"unsigned char"**, welche mit 
 Daraufhin bekommt diese den Wert **12** zugewiesen. <br>
 Im Anschluss wird die Variable x, nach einem Typecast auf "int", zurückgegeben.
 
-# unsigned char
+#### unsigned char
 
 Dieser Datentyp ermöglicht es mit einem Byte, im Gegensatz zu char oder signed char, welche vozeichenbehaftet sind, vorzeichenlose Zahlen von 0 bis 255 darzustellen.
 
-# volatile
+#### volatile
 
 Das Schlüssselwort volatile ermöglicht die genaue Einsicht in den Vorgang der Erstellung einer Variable. Ohne dieses Schlüsselwort ist die Einsicht nur vereinfacht möglich.
 
