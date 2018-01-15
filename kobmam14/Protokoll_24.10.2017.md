@@ -120,3 +120,7 @@ int main (void)   <br>
 *Für Rechenoperationen wie das Addieren, die Subtraktion und die Multiplikation hat der AT328P eigene Befehle/Tabellen und kann sie daher schnell ausführen.*
 
 *Für eine Division braucht der Prozessor deutlich länger, da ihm dort keine Tabellen zur Verfügung stehen.*
+
+### Heartbleed-Bug
+
+Der Heartbleed-Bug ist ein schwerwiegender Programmfehler in älteren Versionen der Open-Source-Bibliothek OpenSSL, durch den private Daten von Clients und Servern ausgelesen werden können. Der Fehler betrifft die OpenSSL-Versionen 1.0.1 bis 1.0.1f und wurde mit Version 1.0.1g am 7. April 2014 behoben. Bei der Sicherheitslücke handelt es sich um einen lesenden Zugriff über die Grenzen eines Datenpuffers (buffer over-read). Anders als bei einem Pufferüberlauf werden keine Daten außerhalb von Puffergrenzen geschrieben. Es wurde ein unabsichtlicher Programmierfehler begangen und die Prüfung einer Eingabevariable versäumt, in der die Länge des zurückzuliefernden Puffers mitgeteilt wird.
