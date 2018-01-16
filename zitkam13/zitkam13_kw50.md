@@ -61,7 +61,6 @@ main.elf: main.o
         avr-gcc -mmcu=atmega328p -Os -o main.elf main.o
 
 main.o: main.c
-
         avr-gcc -mmcu=atmega328p -Os -c main.c
 clean: 
         -rm main.o
