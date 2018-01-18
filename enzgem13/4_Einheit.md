@@ -76,7 +76,8 @@ main.hex: main.elf
   ->  avr-objcopy -O ihex main.elf main.hex // -> Die main.elf wird in einen Hexcode umgewandelt
 
 main.elf: main.o
-  ->  avr-gcc -mmcu=atmega328p -Os -o main.elf main.o // -> Dieser Schritt wird Linker genannt - es werden die nötigen Adressen                                                                     vergeben und die Hardware in unserem Fall der atmega328p bekanntgegeben
+  ->  avr-gcc -mmcu=atmega328p -Os -o main.elf main.o // -> Dieser Schritt wird Linker genannt - es werden die nötigen Adressen 
+                                                            vergeben und die Hardware in unserem Fall der atmega328p bekanntgegeben
   
 main.o: main.c
   ->  avr-gcc -mmcu=atmega328p -Os -c main.c // -> Das C-Programm wird in Assembler-Code umgewandelt
