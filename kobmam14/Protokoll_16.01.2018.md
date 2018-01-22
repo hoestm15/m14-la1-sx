@@ -89,10 +89,11 @@ main.elf: main.o
 main.o: main.c
   ->  avr-gcc -mmcu=atmega328p -Os -c main.c // -> Das C-Programm wird in eine Objektdatei umgewandelt
   
-clean: // wird durch "make clean" aufgerufen -> Verzeichnet wird "bereingt", also in den Grundzustand versetzt
+clean: // wird durch "make clean" aufgerufen -> Verzeichnet wird "bereingt", also in den Grundzustand
+                                                                                             versetzt
   ->  -rm main.o 
   ->  -rm main.elf
   ->  -rm main.hex
+  
 ```
-
 Vor den Remove- befehlen (z.B -rm main.o) kann man das zuvor erwähnte "-" erkennen, welches in diesem Fall dafür sorgt, dass auch wenn die zu entfernende Datei nicht mehr vorhanden ist, die nachfolgenden Befehle trozdem ausgeführt werden.
