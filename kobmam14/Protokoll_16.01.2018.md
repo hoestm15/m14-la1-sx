@@ -53,3 +53,44 @@ Wird der Befehl make aufgerufen, wird das Makefile soweit durchlaufen, bist ein 
 
 ## Praktische Übung
 
+```c
+#define F_CPU 16000000L
+
+#include <avr/io.h>
+#include <util/delay.h>
+
+int main()
+{
+  DDRB = (1 << PB5);
+  while (1)
+  {
+    PORTB ^= (1 << PB5);
+    _delay_ms(500);
+  }
+  return 0;
+}
+```
+Es wurde ein Blicklicht in C erstellt und dann wie folgt mit hilfe eines Makefiles übersetzt.  
+
+```
+all: build // wird durch "make all" aufgerufen -> alle Dateien werden erstellt
+
+build: main.hex // -> wird durch "make build" aufgerufen
+
+cleanandbuild: clean build
+
+main.hex: main.elf
+  ->  avr-objcopy -O ihex main.elf main.hex // -> Die .elf Datei wird in eine .hex Datei umgewandelt
+
+main.elf: main.o
+  ->  avr-gcc -mmcu=atmega328p -Os -o main.elf main.o // -> Linker: Die Adressen werden vergeben und die Hardware bekanntgegeben
+  
+main.o: main.c
+  ->  avr-gcc -mmcu=atmega328p -Os -c main.c // -> Das C-Programm wird in eine Objektdatei umgewandelt
+  
+clean: // wird durch "make clean" aufgerufen -> Verzeichnet wird "bereingt", also in den Grundzustand versetzt
+  ->  -rm main.o 
+  ->  -rm main.elf
+  ->  -rm main.hex
+```
+Vor den Remove- befehlen (z.B -rm main.o) kann man das zuvor erwähnte "-" erkennen, welches in diesem Fall dafür sorgt, dass auch wenn die zu entfernende Datei nicht mehr vorhanden ist, die nachfolgenden Befehle trozdem ausgeführt werden.
