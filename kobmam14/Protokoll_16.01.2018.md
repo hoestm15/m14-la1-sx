@@ -29,3 +29,14 @@ Um das Build-Management-Tool make benutzen zu können, wird eine Steuerdatei ben
 
 Makefiles bestehen aus Zielen (Targets), den Abhngigkeiten (Dependencies) und Kommandos (Commands).
 Zur veranschaulichung:
+
+```
+Ziel 1: Abhängigkeiten 
+  ->  Kommando 1
+  ->  Kommando 2
+  ->  Kommando 3
+
+Ziel 2: Abhängigkeiten
+  ->  Kommando 1
+  ->  Kommando 2
+```
