@@ -6,5 +6,7 @@
   Abwesend: niemand  
   
   ## Makefiles
-  Um normalerweise einen Quellcode zu Übersetzen braucht man mehrere Kommandos, mit Makefiles muss man nur eine File mit der Abfolge der Befehle die benötigt werden erstellen, danach muss man bei jeder Änderung der Datei nur mehr den Befehl make eingeben.
+  Um normalerweise einen Quellcode zu Übersetzen braucht man mehrere Kommandos,
+  mit Makefiles muss man nur eine File mit der Abfolge der Befehle die benötigt werden erstellen,
+  danach muss man bei jeder Änderung der Datei nur mehr den Befehl make eingeben.
   
