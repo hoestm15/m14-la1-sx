@@ -100,9 +100,9 @@ clean: // wird durch "make clean" aufgerufen -> Verzeichnet wird "bereingt", als
 ```
 Vor den Remove- befehlen (z.B -rm main.o) kann man das zuvor erwähnte "-" erkennen, welches in diesem Fall dafür sorgt, dass auch wenn die zu entfernende Datei nicht mehr vorhanden ist, die nachfolgenden Befehle trozdem ausgeführt werden.
 
-## 2. Praktische Übung: Verbinden von 2 Programmen
+## 2. Praktische Übung: Verbinden von zwei Programmen
 
-Ziel der 2. Übung war es 2 verschiedene Programme mit hilfe von Makefiles zu verbinden.
+Ziel der 2. Übung war es zwei verschiedene Programme mit hilfe von Makefiles zu verbinden.
 Dafür wurden die Programme main.c sowie util.c erstellt.
 Zusätzlich wurde noch die Headerdatei util.h erstellt welche dafür verwendet wurde um eine Funktion bekanntzugeben.
 
