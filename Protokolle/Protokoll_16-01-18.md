@@ -84,6 +84,7 @@ int main () {
 ##### Makefile:
 Hier werden main.c und util.c zu einer einzigen main.hex kompiliert.
 (main.c, util.c --> main.o, util.o --> main.elf --> main.hex)
+Ansonsten erfüllt diese Makefile die gleiche Funktion, wie die in Beispiel 1.
 
 ```
 all: build
