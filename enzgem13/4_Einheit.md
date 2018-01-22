@@ -154,25 +154,38 @@ build: main.hex
 
 cleanandbuild: clean build
 
-prog: main.hex
+prog: main.hex // -> prog wird erstellt: genauere Erklärung unten
         avrdude -c usbasp -p atmega328p -e -U flash:w:main.hex:i
-        touch prog
+        touch prog // -> Zeitstempel von prog wird geändert
 
 main.hex: main.elf
         avr-objcopy -O ihex main.elf main.hex
 
 main.elf: main.o util.o
-        avr-gcc -mmcu=atmega328p -Os -o main.elf main.o util.o
+        avr-gcc -mmcu=atmega328p -Os -o main.elf main.o util.o // -> verlinkt die beiden Programme
 
-main.o: main.c util.h
+main.o: main.c util.h 
         avr-gcc -mmcu=atmega328p -Os -c main.c
 
-util.o: util.c
+util.o: util.c // util.c wird übersetzt, aber nicht gelinkt
         avr-gcc -mmcu=atmega328p -Os -c util.c
 
 clean:
-        -rm *.o
+        -rm *.o // -> alle Dateien mit der Endung .o werden gelöscht
         -rm main.elf
         -rm main.hex
         -rm prog
 ```  
+Bei der Erstellung von *main.elf* werden nun *main.o* und *util.o* als Abhängigkeiten angegeben, da bei der Änderung eines der beiden
+Programme das Kommando erneut durchlaufen werden muss.  
+Dasselbe gilt bei der Erstellung von *main.o* für *util.h*.  
+Die Programmierung des Atmega 328p erfolgt mit dem Tool *avrdude*. Das oben genannte Kommando ist passen auf den Atmega 328p 
+ausgerichtet ([avrdude-guide](https://www.mikrocontroller.net/articles/AVRDUDE)).  
+Wichtig bei diesem Schritt ist die erstellte Datei *prog*. Sie dient lediglich dazu, dass in Verbindung mit dem Befehl **touch**
+das Kommando immer durchlaufen wird. Dies ist notwendig, da man *prog* von allen Dateien abhängig machen müsste damit er immer das
+Kommando durchläuft. Es spricht für sich selbst dass prog immer durchlaufen werden muss (wegen gemachten Änderungen), damit immer das 
+aktuelle Programm am Microcontroller ausgeführt wird.  
+## Zusammenfassung  
+Makefiles sind eine praktische Lösung, um sich auf lange Zeit gesehen Arbeit zu erparen. Man kann sie in jedem Netbeans-Projekt und 
+in vielen anderen Anwendungen finden. Sie sind einfach zu verstehen und mit ein bisschen Background-Wissen kann man bereits einfache 
+Anwendungen damit lösen.
