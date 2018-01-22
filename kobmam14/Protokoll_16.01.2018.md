@@ -51,7 +51,7 @@ Ziel 2: Abhängigkeiten
 
 **Wird der Befehl make aufgerufen, wird das Makefile soweit durchlaufen, bist ein Fehler auftritt.** Das bedeutet, dass alle nachfolgenden Schritte nicht abgewickelt werden. Somit ist es wichtig vor Befehlen, bei denen Fehler auftreten können entprechende Maßnahmen, wie z.B ein vorne hingesetzes "-", welches soviel wie "egal, mach weiter" bedeutet, zu setzen.
 
-## Praktische Übung
+## 1. Praktische Übung: Übersetzung eines Programmes mit hilfe von Makefiles
 
 ```c
 #define F_CPU 16000000L
@@ -97,3 +97,6 @@ clean: // wird durch "make clean" aufgerufen -> Verzeichnet wird "bereingt", als
   
 ```
 Vor den Remove- befehlen (z.B -rm main.o) kann man das zuvor erwähnte "-" erkennen, welches in diesem Fall dafür sorgt, dass auch wenn die zu entfernende Datei nicht mehr vorhanden ist, die nachfolgenden Befehle trozdem ausgeführt werden.
+
+## 2. Praktische Übung: Verbinden von 2 Programmen
+
