@@ -102,7 +102,7 @@ Vor den Remove- befehlen (z.B -rm main.o) kann man das zuvor erwähnte "-" erken
 
 ## 2. Praktische Übung: Verbinden von 2 Programmen
 
-Ziel der 2. Übung war es 2 verschieden Programme mit hilfe von Makefiles zu verbinden.
+Ziel der 2. Übung war es 2 verschiedene Programme mit hilfe von Makefiles zu verbinden.
 Dafür wurden die Programme main.c sowie util.c erstellt.
 Zusätzlich wurde noch die Headerdatei util.h erstellt welche dafür verwendet wurde um eine Funktion bekanntzugeben.
 
