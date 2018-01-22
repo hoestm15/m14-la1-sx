@@ -53,6 +53,8 @@ Ziel 2: Abhängigkeiten
 
 ## 1. Praktische Übung: Übersetzung eines Programmes mit hilfe von Makefiles
 
+Ziel der 1. Übung war es ein C Programm mit hilfe vom Makefiles zu übersetzen.
+
 ```c
 #define F_CPU 16000000L
 
@@ -100,3 +102,78 @@ Vor den Remove- befehlen (z.B -rm main.o) kann man das zuvor erwähnte "-" erken
 
 ## 2. Praktische Übung: Verbinden von 2 Programmen
 
+Ziel der 2. Übung war es 2 verschieden Programme mit hilfe von Makefiles zu verbinden.
+Dafür wurden die Programme main.c sowie util.c erstellt.
+Zusätzlich wurde noch eine Headerdatei erstellt welche dafür verwendet wurde um eine Funktion bekanntzugeben.
+
+util.h:  
+```c
+#ifndef UTIL_H
+#define UTIL_H
+
+void toggleLED ();
+
+#endif
+```    
+util.c:  
+```c
+#include <avr/io.h>
+
+void toggleLED()
+{
+  PORTB ^= (1 << PB5);
+}
+``` 
+
+main.c:  
+```c
+#define F_CPU 16000000L
+
+#include <avr/io.h>
+#include <util/delay.h>
+
+#include "util.h"
+int main()
+{
+  DDRB = (1 << PB5);
+  while (1)
+  {
+    toggleLED();
+    _delay_ms(500);
+  }
+  return 0;
+}
+
+```  
+Makefile:
+```
+all: build
+
+build: main.hex
+
+cleanandbuild: clean build
+
+prog: main.hex // -> Erstellen des Programms
+        avrdude -c usbasp -p atmega328p -e -U flash:w:main.hex:i
+        touch prog // -> Anpassen des Zeitstempels
+
+main.hex: main.elf
+        avr-objcopy -O ihex main.elf main.hex
+
+main.elf: main.o util.o
+        avr-gcc -mmcu=atmega328p -Os -o main.elf main.o util.o // -> Die beiden Programme werden verlinkt
+
+main.o: main.c util.h // -> Die Headerdatei muss auch überprüft werden
+        avr-gcc -mmcu=atmega328p -Os -c main.c
+
+util.o: util.c
+        avr-gcc -mmcu=atmega328p -Os -c util.c
+
+clean:
+        -rm *.o // -> Entfernen aller .o Dateien
+        -rm main.elf
+        -rm main.hex
+        -rm prog
+```  
+Zuerst wurden aus beiden Programmen einzeln Objektdateien erstellt, wobei dem Ziel main.o noch die Headerdatei als Abhängigkeit vorgegben wurde, da auch diese überprüft werden muss.
+Beim Linken werden beiden Programme als Abhängigkeiten festgelegt, da bei der Änderung von main.o oder util.o, der Schritt komplett neu durchgeführt werden muss.
