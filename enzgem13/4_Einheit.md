@@ -87,7 +87,7 @@ clean: // -> sozusagen: auf Grundzustand zurücksetzen
   ->  -rm main.elf
   ->  -rm main.hex
 ```
-Das Zeichen "-" vor dem remove (**rm**) Befehl sorgt wie beriets oben erwähnt dafür, dass egal ob die zu löschende Datei vorhanden ist oder nicht, alle remove Kommandos durchlaufen werden.
+Das Zeichen "-" vor dem remove (**rm**) Befehl sorgt wie bereits oben erwähnt dafür, dass egal ob die zu löschende Datei vorhanden ist oder nicht, alle remove Kommandos durchlaufen werden.
   
 Nun kann man im Terminal:  
 ```> make```  
@@ -103,4 +103,47 @@ z.B.:
 ```make main.o```  
 Man wird feststellen dass nur die main.o erstellt wurde. Mithilfe der Abhängigkeiten ist es auch möglich, nur:  
 ```make main.elf```  
-einzugeben, man wird feststellen dass ebenso eine *main.o* erstellt wurde, da diese Datei als Abhängigkeit für dei *main.elf* fungiert.  
+einzugeben, man wird feststellen dass ebenso eine *main.o* erstellt wurde, da diese Datei als Abhängigkeit für die *main.elf* fungiert.  
+## Zusammenführen zweier Programme und Übersetzung (mit darauffolgender Programmierung des Atmega 328p)  
+Für diesen Auftrag werden 3 Dateien benötigt: ein Hauptprogramm *main.c*, eine Headerdatei *util.h* und ein zweites Programm *util.c*  
+In unserem Fall wollen wir nur, dass das toggeln der LED von *util.c* gelöst wird.  
+main.c:  
+```c
+#define F_CPU 16000000L
+
+#include <avr/io.h>
+#include <util/delay.h>
+
+#include "util.h" // -> die Headerdatei wird eingebunden
+
+int main()
+{
+  DDRB = (1 << PB5);
+  while (1)
+  {
+    toggleLED();
+    _delay_ms(500);
+  }
+  return 0;
+}
+```  
+util.h:  
+```c
+#ifndef UTIL_H
+#define UTIL_H
+
+void toggleLED (); // -> es wird lediglich die Funktion bekanntgegeben
+
+#endif
+```  
+util.c:  
+```c
+#include <avr/io.h>
+
+void toggleLED()
+{
+  PORTB ^= (1 << PB5);
+}
+```  
+Dieses Beispiel hätte in der Praxis zwar wenig Sinn, ist aber belanglos da es lediglich um das Makefile geht.  
+Makefile:  
