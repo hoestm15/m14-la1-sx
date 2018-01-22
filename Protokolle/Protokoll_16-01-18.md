@@ -116,7 +116,7 @@ clean:
 ```
 
 ##### main.c
-Dieses Programm erfüllt dieselbe Funktion wie in Beispiel 1, nur dass hier, auf eine zweite Datei "util.c" zugegriffen wird. 
+Dieses Programm erfüllt dieselbe Funktion wie in Beispiel 1, nur dass hier auf eine zweite Datei "util.c" zugegriffen wird. 
 ```
 define F_CPU 16000000L
 #include <avr/io.h>
