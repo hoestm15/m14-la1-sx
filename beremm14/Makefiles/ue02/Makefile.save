@@ -1,0 +1,36 @@
+all: build
+
+build: main.hex
+
+cleanandbuild: clean build
+
+prog: main.hex
+        avrdude -c usbasp -p atmega328p -e -U flash:w:main.hex:i
+        touch prog
+
+main.hex: main.elf
+        avr-objcopy -O ihex main.elf main.hex
+
+main.elf: main.o
+        avr-gcc -mmcu=atmega328p -Os -o main.elf main.o
+
+main.o: main.c
+        avr-gcc -mmcu=atmega328p -Os -c main.c
+
+util.hex: util.elf
+        avr-objcopy -O ihex util.elf util.hex
+
+util.elf: util.o
+        avr-gcc -mmcu=atmega328p -Os -o util.elf util.o
+
+util.o: util.c
+        avr-gcc -mmcu=atmega328p -Os -c util.c
+
+
+clean:
+	-rm main.o
+	-rm util.o
+	-rm main.elf
+	-rm util.elf
+	-rm main.hex
+	-rm util.hex
