@@ -75,23 +75,23 @@ int main()
 Es wurde ein Blicklicht in C erstellt und dann wie folgt mit hilfe eines Makefiles übersetzt.  
 
 ```
-all: build // wird durch "make all" aufgerufen -> alle Dateien werden erstellt
+all: build # wird durch "make all" aufgerufen -> alle Dateien werden erstellt
 
-build: main.hex // -> wird durch "make build" aufgerufen
+build: main.hex # wird durch "make build" aufgerufen
 
 cleanandbuild: clean build
 
 main.hex: main.elf
-  ->  avr-objcopy -O ihex main.elf main.hex // -> Die .elf Datei wird in eine .hex Datei umgewandelt
+  ->  avr-objcopy -O ihex main.elf main.hex # Die .elf Datei wird in eine .hex Datei umgewandelt
 
 main.elf: main.o
-  ->  avr-gcc -mmcu=atmega328p -Os -o main.elf main.o // -> Linker: Die Adressen werden vergeben und die
+  ->  avr-gcc -mmcu=atmega328p -Os -o main.elf main.o # Linker: Die Adressen werden vergeben und die
                                                                     Hardware bekanntgegeben
   
 main.o: main.c
-  ->  avr-gcc -mmcu=atmega328p -Os -c main.c // -> Das C-Programm wird in eine Objektdatei umgewandelt
+  ->  avr-gcc -mmcu=atmega328p -Os -c main.c # Das C-Programm wird in eine Objektdatei umgewandelt
   
-clean: // wird durch "make clean" aufgerufen -> Verzeichnet wird "bereingt", also in den Grundzustand
+clean: # wird durch "make clean" aufgerufen -> Verzeichnet wird "bereingt", also in den Grundzustand
                                                                                              versetzt
   ->  -rm main.o 
   ->  -rm main.elf
@@ -153,24 +153,24 @@ build: main.hex
 
 cleanandbuild: clean build
 
-prog: main.hex // -> Erstellen des Programms
+prog: main.hex # Erstellen des Programms
         avrdude -c usbasp -p atmega328p -e -U flash:w:main.hex:i
-        touch prog // -> Anpassen des Zeitstempels
+        touch prog # Anpassen des Zeitstempels
 
 main.hex: main.elf
         avr-objcopy -O ihex main.elf main.hex
 
 main.elf: main.o util.o
-        avr-gcc -mmcu=atmega328p -Os -o main.elf main.o util.o // -> Die beiden Programme werden verlinkt
+        avr-gcc -mmcu=atmega328p -Os -o main.elf main.o util.o # Die beiden Programme werden verlinkt
 
-main.o: main.c util.h // -> Die Headerdatei muss auch überprüft werden
+main.o: main.c util.h # Die Headerdatei muss auch überprüft werden
         avr-gcc -mmcu=atmega328p -Os -c main.c
 
 util.o: util.c
         avr-gcc -mmcu=atmega328p -Os -c util.c
 
 clean:
-        -rm *.o // -> Entfernen aller .o Dateien
+        -rm *.o # Entfernen aller .o Dateien
         -rm main.elf
         -rm main.hex
         -rm prog
