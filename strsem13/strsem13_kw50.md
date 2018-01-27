@@ -2,7 +2,7 @@
 ## *Thema: Makefiles*  
  Name:   Sebastian Strutz  
  Klasse: 4AHME  
- Datum: 26.09.2017  
+ Datum: 12.12.2017  
  Anwesend: Strutz, Strauß, Zitz  
  Abwesend: Tuttner, Uhl, Waltl, Wieser
  
