@@ -12,7 +12,7 @@ mit GUI angezeigt werden. Dich bevor wir mit dem Programm beginnen können muss 
 werden. Dafür wird ein entsprechendes Feldbusprotokoll benötigt. Dieses Feldbusprotokoll legt fest, wie Daten wohin übertragen werden.
 Wir werden für unsere Zwecke *Modbus* verwenden, da man es kostenfrei beziehen kann und relativ leicht zu verstehen ist.
 
-
+![Angabe](https://github.com/HTLMechatronics/m14-la1-sx/blob/enzgem13/enzgem13/Angabe.png)
 
 ## Einführung: Modbus
 Ursprünglich wurde das Modbus-Protokoll für die Kommunikation zwischen SPS Geräten entwickelt, Nun wird es in der Hausautomatisierung
