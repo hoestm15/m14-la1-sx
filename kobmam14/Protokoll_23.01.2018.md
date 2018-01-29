@@ -32,7 +32,41 @@ Mittels Modbus können **ein Master**(fragt an) und **mehrere Slaves**(liefern A
     * Modbus ASCII (textuelle, byteweise Übertragung von Daten)
    
     * Modbus TCP (Daten werden in TCP Paketen übertragen)
+      Der **TCP-Port 502** ist für Modbus/TCP reserviert.
     
 Der Ablauf der Kommuniktion wird über ein Server/Client Prinzip geregelt. Das bedeutet, dass ein Client (z.B. ein PC) ein **Request** an den Server stellt, (z.B. ein Sensor) welcher darauf mit einer **Response** antwortet.
 Dabei muss jeder Busteilnehmer eine eindeutige Adresse besitzen. Die Adresse "0" ist dabei für einen Broadcast reserviert.
 Alle Teilnehmer dürfen Nachrichten über den Bus senden, normalerweise wird dies aber vom Master geregelt.
+
+#### Modbus-Gateway
+
+Unter Gateway versteht man einen Protokollumsetzter. Dies bedeutet, dass verschiedene Modbus-Varianten miteinander verbunden werden können. (zum Beispiel TCP/IP und RS-232)
+
+### Daten-Modell
+
+ Beim Modbus Daten-Modell wird in vier verschiedene Adressräume unterschieden:
+
+    * Discrete Inputs (ein einzelnes Bit, welches nur gelesen werden kann)
+      zum Beispiel: ein Taster
+      
+    * Coils (ein Bit, welches gelesen und beschrieben werden kann)
+      zum Beispiel: eine LED
+      
+    * Input Registers (ein 16-Bit Wert der nur gelesen werden kann)
+      zum Beispiel: ein Temperatursensor
+    
+    * Hold-Registers (ein 16-Bit Wert der gelesen und beschrieben werden kann)
+      zum Beispiel: die Anzeige am Sure-Board
+      
+
+### Function-Codes
+
+Über Function-Codes sind die Bedeutungen der Frames im Modbus-Frame defineiert.
+Für Requests und Non-Error-Responses werden folgende Codes verwendet:
+
+
+   * User defined Function Codes (65-72, 100-110, dürfen individuell verwendet werden)
+    
+   * Reserved Function Codes (8, 9, 10, 13, 14, 41, 42, 90, 91, 125, 126, 127, Werte, welche von Unternehmen werwendet wurden)
+   
+   * Public Function Codes (alle zwischen 1 und 127 übrigen Werte, eindeutig von der Modbus.org community festgelegt)
