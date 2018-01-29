@@ -13,7 +13,7 @@
 Gefehlt wegen Sturmschäden
 
 ## Einheit 5: 19.12.2017
-[Link zur Markdown-Datei](https://github.com/HTLMechatronics/m14-la1-sx/blob/tutram12/tutram12_kw51.md)
+Per hand nachgebracht
 
 ## Einheit 6: 09.01.2017
-[Link zur Markdown-Datei](https://github.com/HTLMechatronics/m14-la1-sx/blob/tutram12/tutram12_kw02.md)
+Labor-Test
