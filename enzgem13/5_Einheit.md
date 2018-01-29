@@ -12,8 +12,6 @@ mit GUI angezeigt werden. Dich bevor wir mit dem Programm beginnen können muss 
 werden. Dafür wird ein entsprechendes Feldbusprotokoll benötigt. Dieses Feldbusprotokoll legt fest, wie Daten wohin übertragen werden.
 Wir werden für unsere Zwecke *Modbus* verwenden, da man es kostenfrei beziehen kann und relativ leicht zu verstehen ist.
 
-[Grafik: Server-Client]
-
 ## Einführung: Modbus
 Ursprünglich wurde das Modbus-Protokoll für die Kommunikation zwischen SPS Geräten entwickelt, Nun wird es in der Hausautomatisierung
 und Industrie gerne verwendet, da es wie schon erwähnt kostenfrei ist und sich damit sowohl RS-232 Verbindungen, RS-485 Busse und 
@@ -35,5 +33,32 @@ sendet eine Anfrage (Request) an den Server (Aktor, Sensor oder anderer PC) und 
 Server. Kurz gesagt:  
 ```Client -> Request(Daten oder Codes) -> Server(führt Anweisung aus) -> Response -> Client(erhält die Antwort, meist Daten oder Codes)```
   
+### Modbus Gateway  
+Ein Gateway wird benötigt, wenn man verschiedene Varianten eines Feldbusprotokolls miteinander verbinden möchte (z.B.: TCP/IP mit 
+RS232 verbinden). 
+  
+  
+Genauere Infos zu Modbus: http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf  
+  
+## Modbus Daten-Model  
+Das Daten-Model unterscheidet zwischen vier Adressräumen(Register, Ausgänge...):  
+* Discrete Inputs (ein Bit das nur gelesen werden kann)
+* Coils (1 Coil entspricht 1 Bit das beschrieben und gelesen werden kann)
+* Input Register (16 Bit Wert der nur gelesen werden kann)
+* Hold Register (16 Bit Wert der gelesen und beschrieben werden kann)  
+      
+Die obigen Adressräume können für verschiedene Aufgaben verwendet werden. So wird ein *Discrete Input* in der Regel ein Taster oder Sensor sein und eine *Coil* für eine LED oder ein Relais verwendet werden.  
 
+## Function Codes  
+Function Codes werden dazu verwendet bestimmte Teile des Datenmodells zu erreichen und ebenso um andere Informationen im Frame 
+bekanntzugeben.  
+Für Requests verwendet man die folgenden Codes:
+* User defined Function Codes (können vom Benutzer individuell verwendet werden)
+* Reserved Funtion Codes (Werte, die von Unternehmen verwendet und reserviert wurden)
+* Public Function Codes (Werte die von der Modbus.org community festgelegt wurden)  
+  
+Um besser zu verstehen, wofür Function Codes verwendet werden, sieht man sich am besten die Tabelle der Public Function Codes an.  
+(Nur ein Auszug der Tabelle):  
+| Function Code | Hex | Name | Typ |
+|:-------------:| --- | ---- | --- |
   
