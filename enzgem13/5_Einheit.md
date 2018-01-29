@@ -12,6 +12,8 @@ mit GUI angezeigt werden. Dich bevor wir mit dem Programm beginnen können muss 
 werden. Dafür wird ein entsprechendes Feldbusprotokoll benötigt. Dieses Feldbusprotokoll legt fest, wie Daten wohin übertragen werden.
 Wir werden für unsere Zwecke *Modbus* verwenden, da man es kostenfrei beziehen kann und relativ leicht zu verstehen ist.
 
+
+
 ## Einführung: Modbus
 Ursprünglich wurde das Modbus-Protokoll für die Kommunikation zwischen SPS Geräten entwickelt, Nun wird es in der Hausautomatisierung
 und Industrie gerne verwendet, da es wie schon erwähnt kostenfrei ist und sich damit sowohl RS-232 Verbindungen, RS-485 Busse und 
@@ -33,14 +35,14 @@ sendet eine Anfrage (Request) an den Server (Aktor, Sensor oder anderer PC) und 
 Server. Kurz gesagt:  
 ```Client -> Request(Daten oder Codes) -> Server(führt Anweisung aus) -> Response -> Client(erhält die Antwort, meist Daten oder Codes)```
   
-### Modbus Gateway  
+#### Modbus Gateway  
 Ein Gateway wird benötigt, wenn man verschiedene Varianten eines Feldbusprotokolls miteinander verbinden möchte (z.B.: TCP/IP mit 
 RS232 verbinden). 
   
   
 Genauere Infos zu Modbus: http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf  
   
-## Modbus Daten-Model  
+### Modbus Daten-Model  
 Das Daten-Model unterscheidet zwischen vier Adressräumen(Register, Ausgänge...):  
 * Discrete Inputs (ein Bit das nur gelesen werden kann)
 * Coils (1 Coil entspricht 1 Bit das beschrieben und gelesen werden kann)
@@ -49,7 +51,7 @@ Das Daten-Model unterscheidet zwischen vier Adressräumen(Register, Ausgänge...
       
 Die obigen Adressräume können für verschiedene Aufgaben verwendet werden. So wird ein *Discrete Input* in der Regel ein Taster oder Sensor sein und eine *Coil* für eine LED oder ein Relais verwendet werden.  
 
-## Function Codes  
+### Function Codes  
 Function Codes werden dazu verwendet bestimmte Teile des Datenmodells zu erreichen und ebenso um andere Informationen im Frame 
 bekanntzugeben.  
 Für Requests verwendet man die folgenden Codes:
@@ -59,7 +61,32 @@ Für Requests verwendet man die folgenden Codes:
   
 Um besser zu verstehen, wofür Function Codes verwendet werden, sieht man sich am besten die Tabelle der Public Function Codes an.  
 (Nur ein Auszug der Tabelle):  
-| Function Code | Hex | Name | Typ |
-|:-------------:| --- | ---- | --- |
 
+Function Code | Hex | Name | Typ
+--------------- | --------- | --------- | ---
+1 | 01 | Read Coils | Bit
+2 | 02 | Read Discrete Inputs | Bit
+3 | 03 | Read Holding Registers | 16-Bit
+4 | 04 | Read Input Register | 16-Bit
+5 | 05 | Write Single Coil | Bit
+6 | 06 | Write Single Register | 16-Bit  
   
+### ASCII Transmission Mode
+In diesem Modus werden die Frame-Bytes mittels ASCII-Text übertragen. Dabei zu beachten ist, dass für die Konfiguration der seriellen 
+Schnittstellen 7E1 oder 7N2 verwendet werden. Man verfügt also nur über 7 Daten-Bits pro Frame.  
+Der Aufbau eines jeden Modbus Serial Line ASCII sieht wie folgt aus:  
+
+Start | Address | Function | Data | LRC | End
+----- | --------- | --------- | --------- | --- | ---
+1 char | 2 chars | 2 chars | 0 up to 2x252 char(s) | 2 chars | 2 chars  
+  
+**Wichtig!**: Es sind nur Zeichen von 0-9 und A-F erlaubt. Die Byte-Werte werden logischerweise als Hex-Zahl-Text angegeben.  
+  
+## Java Native Interface  
+Ein Problem, auf das wir bei der Ausführung des Auftrags stoßen, ist, dass es keine Verbindung zwischen der UART Schnittstelle des 
+Sure Boards und der Software (also unserem Java Programm gibt).  
+Die Lösung: JNI - Java Native Interface (eine standardisierte Anwendungsprogrammierschnittstelle)
+Zusammengefasst wird JNI für Lösungen verwendet, in denen man nicht nur Java als Programmiersprache einsetzen kann.  
+Perfekt für unsere Anwendung: `ATMEGA16 - Programmiersprache C -> Java Applikation - Programmiersprache Java`  
+Dadurch ist es auch möglich, die Anwendung die in einer anderen Programmiersprache geschrieben wurde für das Java Programm zugreifbar zu 
+machen. 
