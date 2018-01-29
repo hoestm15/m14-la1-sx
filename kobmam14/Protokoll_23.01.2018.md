@@ -84,6 +84,7 @@ An folgender Tabelle lassen sich die Bedeutungen einiger, wichtiger Public Funct
 15| 0F | Write Multiple Coils |	Bit
 16| 10 | Write Multiple Registers | 16-Bit
 
+Für weitere, detailiertere Informationen siehe: [Modbus](http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf) 
 
 ### Java Native Interface (JNI)
 
