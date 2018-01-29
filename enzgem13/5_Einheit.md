@@ -61,4 +61,5 @@ Um besser zu verstehen, wofür Function Codes verwendet werden, sieht man sich a
 (Nur ein Auszug der Tabelle):  
 | Function Code | Hex | Name | Typ |
 |:-------------:| --- | ---- | --- |
+
   
