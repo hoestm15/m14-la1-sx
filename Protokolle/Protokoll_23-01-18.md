@@ -6,7 +6,7 @@
 * Abwesend: -
 
 ### Modbus
-Modbus ist ein Kommunikationsprotokoll, welches ursprünglich für das Verbinden von SPS'en entwickelt wurde. Es basiert auf einer Master/Slave- und einer Client/Server-Architektur. Da es sich um ein offenes Protokoll handelt, entwickelte es sich zu einem Standart in der Industrie. Auch in der Hausautomatisierung wird der Modbus gerne verwendet, da es sich um ein kostenloses Protokoll handelt.
+[Modbus](http://http://www.modbus.org/) ist ein Kommunikationsprotokoll, welches ursprünglich für das Verbinden von SPS'en entwickelt wurde. Es basiert auf einer Master/Slave- und einer Client/Server-Architektur. Da es sich um ein offenes Protokoll handelt, entwickelte es sich zu einem Standart in der Industrie. Auch in der Hausautomatisierung wird der Modbus gerne verwendet, da es sich um ein kostenloses Protokoll handelt.
 #### Varianten
 Die zwei Hauptvarianten sind:
 * Serielle Snittstelle (z.B.: UART, RS 232, ...)
@@ -45,6 +45,16 @@ Function Code | Hex | Name | Typ
 6 | 06 | Write Single Register | 16-Bit 
 15| 0F | Write Multiple Coils |	Bit
 16| 10 | Write Multiple Registers | 16-Bit
+
+### Verbindungsschichten
+![Beispiel für einzelne Schichten](https://github.com/HTLMechatronics/m14-la1-sx/blob/knarom14/Protokolle/Schichten.png)
+
+#### Java Native Interface
+> JNI ermöglicht es, native Methoden zu schreiben für Situationen, in denen es nicht möglich ist, ausschließlich Java als Programmiersprache einzusetzen. Dies ist der Fall, wenn beispielsweise die Standard-Java-Klassenbibliothek bestimmte Plattform-abhängige Features oder andere Programmbibliotheken nicht unterstützt. Weiterhin ist es per JNI möglich, eine weitere in einer anderen Programmiersprache programmierte Anwendung für Java zugreifbar zu machen. Viele Klassen der Java-Standardbibliothek basieren auf JNI, um beispielsweise die Datei-Ein- und Ausgabe oder Soundwiedergabe zu ermöglichen. Indem Java Leistungs- und Plattform-abhängige Implementierungen in die Standardbibliothek integriert, kann der Java-Programmierer und -Nutzer diese Features in sicherer und Plattform-unabhängiger Weise nutzen.
+*Quelle: [Wikipedia, JNI](https://de.wikipedia.org/wiki/Java_Native_Interface)*
+
+### Übung
+Um den Stoff dieser Einheit anzuwenden, ist, mit Hilfe eines Java-Programms, ein Temperatursensor über das Sure-Board anzusteuern. Die Temperatur wird in einer GUI dagestellt.
 
 
 
