@@ -13,7 +13,7 @@
 Gefehlt wegen Sturmschäden
 
 ## Einheit 5: 19.12.2017
-Per hand nachgebracht
+handgeschrieben nachgebracht
 
 ## Einheit 6: 09.01.2017
 Labor-Test
