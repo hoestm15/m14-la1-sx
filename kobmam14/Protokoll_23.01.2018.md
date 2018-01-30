@@ -22,6 +22,8 @@ Wir haben **Modbus** als Protokoll festgelegt, da es kostenlos, und relativ leic
 Das **Kommunikationsprotokoll** Modbus, wurde für die Kommunikation zwischen speicherprogrammierbaren Steuerungen ins Leben gerufen. <br>
 Es findet häufig in der Industrie und Hausautomatisierung Verwendung, da es sich beim Modbus-Protokoll um einen offen Standard handelt. Außerdem lassen sich damit RS-232-Verbindungen, RS-485-Busse und TCP/IP-Netzwerke umsetzen.
 
+![](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/modbus_communication_stack_png.png)
+
 
 Mittels Modbus können **ein Master**(fragt an) und **mehrere Slaves**(liefern Antwort) verbunden werden.
 
