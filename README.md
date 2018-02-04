@@ -12,3 +12,6 @@
   * [Dateien Übung 2](beremm14/Makefiles/ue02/)
 * 5. Einheit: 23.01.18
   * [Protokoll](beremm14/README_2018-1-23.md)
+* 6. Einheit: 30.01.18
+  * [Protokoll](beremm14/README_2018-01-30.md)
+  * [Projekt Repository](https://github.com/beremm14/Temperaturmessung_sure/tree/master/Temperaturmessung)
