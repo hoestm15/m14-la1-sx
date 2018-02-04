@@ -9,3 +9,4 @@ Anwesend: Nebel Florian, Mandl Gerhard, Michael Mörth, Moritz Martinak, Mario N
 Abwesend: - <br>
 
 In dieser Einhat haben wir einfache C-Programme geschrieben und anschließend die Assembler-Befehle durchbesprochen.
+
