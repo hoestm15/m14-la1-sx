@@ -20,14 +20,14 @@ Abwesend: -
 ## Übungen in Atmel Studio  
 ### Erstes Beispiel  
 
-```c
+``c
 int main (void)  
 {  
    volatile unsigned char x;  
    x = 12;  
    return x;  
 } 
-```
+``
 
 
 
