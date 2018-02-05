@@ -40,3 +40,19 @@ int main (void)
 }
 ```
 Unsere Aufgabe war es nun, das Programm im Debugging-Modus zu starten. Anschließend waren die Maschinenbefehle zu analysieren und die Befehle im [Datasheet des ATmega328p](http://www.atmel.com/Images/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf) nachschlagen.
+
+#### Assemblerbefehle
+Maschinenbefehl | in Worten | Beschreibung
+--------------- | --------- | ---------
+`cf.93` | PUSH R28 | Der Wert des Registers R28 wird auf den Stack gelegt.
+`df.93` | PUSH R29 | Der Wert des Registers R29 wird auf den Stack gelegt.
+`1f.92` | PUSH R1 | Der Wert des Registers R1 (*immer 0*) wird auf den Stack gelegt. 
+`cd.b7` | IN R28,0x3D | Der Wert 0x3D wird aus dem I/O-Register in das Register R28 geladen.
+`de.b7` | IN R29,0x3E | Der Wert 0x3E wird aus dem I/O-Register in das Register R29 geladen.
+`8c.e0` | LDI R24,0x0C | Die Konstante 0C wird im Register R24 abgelegt.
+`89.83` | STD Y+1,R24 | Konstante aus R24 wird am Speicherplatz des Stacks der lokalen Variable abgelegt. *R28 & R29 beschreiben das Y-Register. Da die Variable genau nach dem Y-Register auf den Stack gelegt wurde, ist die Adresse im Stack "Y+1"* Die Variable wird gespeichert.
+`89.81` | LDD R24,Y+1 | Die Variable wird in Register R24 geladen.
+`90.e0` | LDI R25,0x00 | Rückgabewert
+`0f.90` | POP R0 | Variable wird freigegeben.
+`df.91` | POP R29 | Register R29 wird vom Stack entfernt.
+`cf.91` | POP R28 | Register R28 wird vom Stack entfernt. *R29 muss zuerst enfernt werden, da im Stack nur von oben nach unten gelesen werden kann. Gespeichert kann hingegen nur von unten nach oben werden.*
