@@ -42,7 +42,7 @@ int main (void)
 Unsere Aufgabe war es nun, das Programm im Debugging-Modus zu starten. Anschließend waren die Maschinenbefehle zu analysieren und die Befehle im [Datasheet des ATmega328p](http://www.atmel.com/Images/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf) nachschlagen.
 
 #### Assemblerbefehle
-Maschinenbefehl | in Worten | Beschreibung
+Maschinenbefehl | in Textform | Beschreibung
 --------------- | --------- | ---------
 cf.93 | PUSH R28 | Der Wert des Registers R28 wird auf den Stack gelegt.
 df.93 | PUSH R29 | Der Wert des Registers R29 wird auf den Stack gelegt.
@@ -59,5 +59,18 @@ cf.91 | POP R28 | Das Register R28 wird vom Stack entfernt.
 
 #### Frage während der Stunde
 Während der Stunde kam die Frage auf, wieso das Register R29 vor dem Register R28 entfernt wird. Die Antwort ist ganz einfach: Der Stack kann nur von oben nach unten gelesen werden. Genauere Informationen können [hier](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll2_7.11.2017.md#stack) gefunden werden.
+
+### Addition von zwei Variablen
+#### Quellcode
+```c
+int main (void)
+{
+	volatile unsigned char a = 12;
+	volatile unsigned char b = 8;
+	
+	return a+b;
+}
+```
+Wie beim Programm zuvor war es unsere Aufgabe, die Maschinenbefehle im [Datasheet des ATmega328p](http://www.atmel.com/Images/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf) nachzuschlagen und kurz zu beschreiben.
 
 
