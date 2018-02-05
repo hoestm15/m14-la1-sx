@@ -16,7 +16,7 @@ In dieser Einhat haben wir einfache C-Programme geschrieben und mit Atmel-Studio
 
 ### 1. Beispiel
 
-**Quellcode** 
+**Quellcode** <br>
 ```c
 int main (void)
 {
@@ -27,7 +27,7 @@ int main (void)
 }
 ```
 
-**Assemblebefele**
+**Assemblebefele** <br>
 Maschinenbefehl | in Worten | Kommentar
 --------------- | --------- | ---------
 `cf.93` | PUSH R28 | Register R28 wird auf den Stack gelegt.
