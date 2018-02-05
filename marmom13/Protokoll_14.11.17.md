@@ -46,4 +46,43 @@ int main (void)
    return a+b;  
 } 
 ```
-Ähnlich wie auch bei dem ersten Beispiel dissembliereten wir das Programm im Debugging Modus. Die Maschienenbefehle überschnitten sich zum größten Teil mit der ersten Übung, nur die Befehle die für die Addition benötigt wurden änderten sich.
+Ähnlich wie auch bei dem ersten Beispiel dissembliereten wir das Programm im Debugging Modus. Die Maschienenbefehle überschnitten sich zum größten Teil mit der ersten Übung, nur die Befehle die für die Addition benötigt wurden änderten sich.   
+
+### Drittes Beispiel  
+
+```c
+int main (void)  
+{  
+   volatile a = 10;  
+   uint8_t b;  
+
+   for (b=0; b<10; b++)  
+   {  
+   }  
+   return 0;  
+} 
+```    
+
+### Beispiel 4  
+
+```c
+int main (void) <br>
+{  
+   volatile unsigned char a = 12;  
+   volatile unsigned char b = 8;  
+	  
+   return a*b;  
+} 
+```    
+
+### Beispiel 5  
+
+```c
+int main (void)  
+{  
+   volatile unsigned char a = 12;  
+   volatile unsigned char b = 8;  
+	
+   return a/b;  
+} 
+```
