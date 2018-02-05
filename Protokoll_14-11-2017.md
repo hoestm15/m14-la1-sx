@@ -16,7 +16,7 @@ In dieser Einhat haben wir einfache C-Programme geschrieben und mit Atmel-Studio
 
 ## Beispiele
 
-#### Quellcode
+#### Quellcode zur Variablen Initaliesirung
 ```c
 int main (void)
 {
@@ -27,7 +27,7 @@ int main (void)
 }
 ```
 
-#### Assemblebefele
+#### Assemblebefele zur Variablen Initaliesirung
 Maschinenbefehl | in Worten | Bedeutung
 --------------- | --------- | ---------
 `cf.93` | PUSH R28 | Register R28 wird im Stack gespeichert
@@ -44,3 +44,20 @@ Maschinenbefehl | in Worten | Bedeutung
 `cf.91` | POP R28 | Register R28 wird vom Stack genommen (Freigabe)
 
 ****************************************************************************************************************************************
+
+#### Quellcode zur Addition zweier Variablen
+```c
+int main (void)
+{
+	volatile unsigned char a = 12;
+	volatile unsigned char b = 8;
+	
+	return a+b;
+}
+```
+
+
+
+
+
+
