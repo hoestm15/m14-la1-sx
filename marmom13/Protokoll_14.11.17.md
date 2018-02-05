@@ -28,8 +28,9 @@ int main (void)
    return x;  
 } 
 ```  
-_Datentyp Character (char):_ Ein Character repräsentiert die kleinste adressierbare Einheit in C, in der Regel acht Bit. Deshalb wird die Größe von Objekten und Typen oft als ganzzahliges Vielfaches eines Characters angegeben. Je nach Compiler kann char entweder gleichbedeutend sein mit signed char (-128 bis 127, fast immer der Fall) oder mit unsigned char (0 bis 255). Um auch Zeichen aus Zeichensätzen aufnehmen zu können, die mehr Zeichen umfassen als der relativ kleine ASCII-Zeichensatz, wurde mit wchar_t bald ein zweiter für Zeichen konzipierter Datentyp eingeführt. Er umfasst in fast allen Implementierungen mehr als acht Bit. 
-(Quelle: [https://de.wikipedia.org/wiki/Datentypen_in_C](https://de.wikipedia.org/wiki/Datentypen_in_C))
+__Datentyp Character (char):__ Ein Character repräsentiert die kleinste adressierbare Einheit in C, in der Regel acht Bit. Deshalb wird die Größe von Objekten und Typen oft als ganzzahliges Vielfaches eines Characters angegeben. Je nach Compiler kann char entweder gleichbedeutend sein mit signed char (-128 bis 127, fast immer der Fall) oder mit unsigned char (0 bis 255). Um auch Zeichen aus Zeichensätzen aufnehmen zu können, die mehr Zeichen umfassen als der relativ kleine ASCII-Zeichensatz, wurde mit wchar_t bald ein zweiter für Zeichen konzipierter Datentyp eingeführt. Er umfasst in fast allen Implementierungen mehr als acht Bit. 
+(Quelle: [https://de.wikipedia.org/wiki/Datentypen_in_C](https://de.wikipedia.org/wiki/Datentypen_in_C))  
+dsf
 
 
 
