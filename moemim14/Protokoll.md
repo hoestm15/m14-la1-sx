@@ -71,6 +71,26 @@ int main (void)
 	return a+b;
 }
 ```
-Wie beim Programm zuvor war es unsere Aufgabe, die Maschinenbefehle im [Datasheet des ATmega328p](http://www.atmel.com/Images/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf) nachzuschlagen und kurz zu beschreiben.
+Wie beim Programm zuvor war es unsere Aufgabe, das Programm im Debugging-Modus zu starten und anschließend die Maschinenbefehle im [Datasheet des ATmega328p](http://www.atmel.com/Images/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf) nachzuschlagen und kurz zu beschreiben.
 
-
+#### Assemblerbefehle
+Maschinenbefehl | in Textform | Beschreibung
+--------------- | --------- | ---------
+cf.93 | PUSH R28 | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll.md#assemblerbefehle)
+df.93 | PUSH R29 | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll.md#assemblerbefehle)
+00.d0 | RCALL PC+0x0001 | Es wird zum nächsten Befehl gesprungen und es werden 2 Bytes auf dem Stack abgelegt.
+cd.b7 | IN R28,0x3D | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll.md#assemblerbefehle)
+de.b7 | IN R29,0x3E | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll.md#assemblerbefehle)
+8c.c0 | LDI R24,0x0C | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll.md#assemblerbefehle)
+89.83 | STD Y+1,R24 | Wert aus dem Register R24 wird am Stack abgelegt (Speicheradresse ist die Adresse der ersten Variable a) 
+88.e0 | LDI R24,0x08 | Der Wert 8 wird im Register R24 abgelegt.
+89.83 | STD Y+2,R24 | Wert aus dem Register R24 wird am Stack abgelegt (Speicheradresse ist die Adresse der ersten Variable b) 
+89.81 | LDD R24,Y+1 | Der Wert der Variable a wird in das Register R24 geladen
+2a.81 | LDD R18,Y+2 | Der Wert der Variable b wird in das Register R18 geladen
+30.e0 | LDI R19, 0x00 | Der Wert 0x00 wird ins Register R19 geladen.
+28.0f | ADD R18,R24 | Addition der beiden Register. R18 ist der Speicherort. Das Carry-Flag wird nicht berrücksichtigt.
+31.1d | ADC R19,R1 | Addition mit Berücksichtigung des Carry-Flags. [Weitere Informationen zum Carry-Flag](https://de.wikipedia.org/wiki/Übertragsbit)
+0f.90 | POP R0 | Die Variable b wird freigegeben.
+0f.90 | POP R0 | Die Variable a wird freigegeben.
+df.91 | POP R29 | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll.md#assemblerbefehle)
+cf.91 | POP R28 | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll.md#assemblerbefehle)
