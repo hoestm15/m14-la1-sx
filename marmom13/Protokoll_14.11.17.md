@@ -28,9 +28,13 @@ int main (void)
    return x;  
 } 
 ```  
-__Datentyp Character (char):__ Ein Character repräsentiert die kleinste adressierbare Einheit in C, in der Regel acht Bit. Deshalb wird die Größe von Objekten und Typen oft als ganzzahliges Vielfaches eines Characters angegeben. Je nach Compiler kann char entweder gleichbedeutend sein mit signed char (-128 bis 127, fast immer der Fall) oder mit unsigned char (0 bis 255). Um auch Zeichen aus Zeichensätzen aufnehmen zu können, die mehr Zeichen umfassen als der relativ kleine ASCII-Zeichensatz, wurde mit wchar_t bald ein zweiter für Zeichen konzipierter Datentyp eingeführt. Er umfasst in fast allen Implementierungen mehr als acht Bit. 
-(Quelle: [https://de.wikipedia.org/wiki/Datentypen_in_C](https://de.wikipedia.org/wiki/Datentypen_in_C))  
-dsf
+__Datentyp Character (char):__ "Ein Character repräsentiert die kleinste adressierbare Einheit in C, in der Regel acht Bit. Deshalb wird die Größe von Objekten und Typen oft als ganzzahliges Vielfaches eines Characters angegeben. Je nach Compiler kann char entweder gleichbedeutend sein mit signed char (-128 bis 127, fast immer der Fall) oder mit unsigned char (0 bis 255). Um auch Zeichen aus Zeichensätzen aufnehmen zu können, die mehr Zeichen umfassen als der relativ kleine ASCII-Zeichensatz, wurde mit wchar_t bald ein zweiter für Zeichen konzipierter Datentyp eingeführt. Er umfasst in fast allen Implementierungen mehr als acht Bit."  
+(Quelle: [https://de.wikipedia.org/wiki/Datentypen_in_C](https://de.wikipedia.org/wiki/Datentypen_in_C))    
+
+__Schlüsselwort volatile:__ "Volatile ist ein Zusatz bei der Deklaration von Variablen in Programmiersprachen wie C, C++, Java oder C#.
+
+In C und C++ wird durch diesen Typqualifikator spezifiziert, dass sich der Wert der Variable jederzeit ändern kann, beispielsweise durch andere Prozesse, Threads oder sogar externe Hardware.[1] Bei der Generierung des Maschinen-Codes aus einem in C oder C++ geschriebenen Programm verhindert die Kennzeichnung einer Variablen als volatile eine in diesem Fall die Funktionalität beeinträchtigende Optimierung, so dass das Programm immer auf den tatsächlich in der Hardware vorhandenen Wert zugreift." (Quelle: [https://de.wikipedia.org/wiki/Volatile_(Informatik)](https://de.wikipedia.org/wiki/Volatile_(Informatik))  
+
 
 
 
