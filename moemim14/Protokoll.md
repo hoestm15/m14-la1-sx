@@ -1,7 +1,8 @@
 # 3. Protokoll
 
-Michael Mörth  
-4AHME, Gruppe 2  
-7.11.2017   
-Anwesend: Köhler, Mandl, Martinak, Mörth, Muri, Nabernik, Nebel, Platzer  
-Abwesend: niemand  
+Name: Michael Mörth  
+Klasse: 4AHME  
+Gruppe: 2  
+
+Anwesend: Nebel Florian, Mandl Gerhard, Michael Mörth, Moritz Martinak, Mario Nabernik, Muri Lorenz, Platzer Andreas, Marcel Köhler    
+Abwesend: -
