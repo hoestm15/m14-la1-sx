@@ -59,26 +59,26 @@ int main (void)
 #### Assemblebefele zur Addition zweier Variablen
 Maschinenbefehl | in Worten | Kommentar
 --------------- | --------- | ---------
-`cf.93` | PUSH R28 | Register R28 wird auf den Stack gelegt.
-`df.93` | PUSH R29 | Register R29 wird auf den Stack gelegt.
-`00.d0` | RCALL PC+0x0001 | Springt zum nächsten Befehl. *Durch den RCALL werden 2 Bytes auf dem Stack reserviert, die für die Variablen a & b verwendet werden.*
-`cd.b7` | IN R28,0x3D | 0x3D wird aus dem I/O-Register in R28 geladen.
-`de.b7` | IN R29,0x3E | 0x3E wird aus dem I/O-Register in R29 geladen.
-`8c.c0` | LDI R24,0x0C | Konstante (0C = 12) wird im Register R24 abgelegt.
-`89.83` | STD Y+1,R24 | Konstante aus R24 wird am Speicherplatz des Stacks der ersten lokalen Variable (a) abgelegt.
-`88.e0` | LDI R24,0x08 | Konstante (08 = 8) wird im Register R24 abgelegt.
-`89.83` | STD Y+2,R24 | Konstante aus R24 wird am Speicherplatz des Stacks der zweiten lokalen Variable (b) abgelegt.
-`89.81` | LDD R24,Y+1 | Variable a wird in Register R24 geladen.
-`2a.81` | LDD R18,Y+2 | Variable b wird in Register R18 geladen.
-`30.e0` | LDI R19, 0x00 | Konstante 0x00 wird am Register R19 abgelegt.
-`28.0f` | ADD R18,R24 | Die beiden Register werden addiert, ohne Berücksichtigung des Carry-Flags. Das Endergebnis wird in R18 gespeichert.
-`31.1d` | ADC R19,R1 | Addition mit Berücksichtigung des Carry-Flags. *Das Carry-Flag enthält den Übertrag einer Addition. [Weitere Informationen](https://de.wikipedia.org/wiki/Übertragsbit)
-`0f.90` | POP R0 | Variable b wird freigegeben.
-`0f.90` | POP R0 | Variable a wird freigegeben.
-`df.91` | POP R29 | Register R29 wird vom Stack entfernt.
-`cf.91` | POP R28 | Register R28 wird vom Stack entfernt.
+`cf.93` | PUSH R28 | Register R28 wird im Stack gespeichert
+`df.93` | PUSH R29 | Register R29 wird im Stack gespeichert
+`00.d0` | RCALL PC+0x0001 | Sprung zum nächsten Befehl, 2 Bytes werden am Stack für a und b reserviert
+`cd.b7` | IN R28,0x3D | 0x3D wird in das Register R28 übertragen
+`de.b7` | IN R29,0x3E | 0x3E wird in das Register R29 übertragen
+`8c.c0` | LDI R24,0x0C | 0x0C (= 12, Konstante) wird in das Register R24 übertragen (Variable a)
+`89.83` | STD Y+1,R24 | Register R24 wird in auf den reservierten Platz (für lokale Variablen) übertragen 
+`88.e0` | LDI R24,0x08 | 0x08 (= 8, Konstante) wird in das Register R24 übertragen (Variable b)
+`89.83` | STD Y+2,R24 | Register R24 wird in auf den reservierten Platz (für lokale Variablen) übertragen 
+`89.81` | LDD R24,Y+1 | Variable a wird vom Stack in das Register R24 geladen.
+`2a.81` | LDD R18,Y+2 | Variable b wird vom Stack in das Register R18 geladen.
+`30.e0` | LDI R19, 0x00 |  0x00 (= 0, Konstante) wird in das Register R19 übertragen
+`28.0f` | ADD R18,R24 | Register R18 wird mit R24 addiert --> Ergebnis wird in R18 gespeichert (ohne Carry-Flag)
+`31.1d` | ADC R19,R1 | Register R19 wird mit R1 addiert --> Ergebnis wird in R19 gespeichert (mit Carry-Flag)
+`0f.90` | POP R0 | Variable b wird vom Stack freigegeben
+`0f.90` | POP R0 | Variable a wird vom Stack freigegeben
+`df.91` | POP R29 | Das Register R29 wird vom Stack genommen (Freigabe)
+`cf.91` | POP R28 | Das Register R28 wird vom Stack genommen (Freigabe)
 
-
+Quelle: [Assemblerbefehle](http://andremueller.gmxhome.de/befehle.html)
 
 
 
