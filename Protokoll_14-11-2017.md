@@ -14,7 +14,7 @@ In dieser Einhat haben wir einfache C-Programme geschrieben und mit Atmel-Studio
 ### Atmel-Studio
 [Atmel-Studio](https://www.microchip.com/avr-support/atmel-studio-7) ist ein Programm mit desssen Hilfe man zum Beispiel C Programme schreiben kann. Die Besonderheit ist, dass Atmel-Studio nicht nur das geschrieben Programm ausführt sondern auch die Maschienen/Assemblerbefehle auflistet.
 
-### 1. Beispiel
+## Beispiele
 
 #### Quellcode
 ```c
@@ -36,7 +36,7 @@ Maschinenbefehl | in Worten | Bedeutung
 `cd.b7` | IN R28,0x3D | 0x3D wird in das Register R28 übertragen
 `de.b7` | IN R29,0x3E | 0x3E wird in das Register R29 übertragen
 `8c.e0` | LDI R24,0x0C | 0x0C (= 12, Konstante) wird in das Register R24 übertragen
-`89.83` | STD Y+1,R24 | Register R24 wird in auf den reservierten Platz (für lokale Variablen) übertragen (Y+1 bedeutet die Variable wird direkt nach dem Y-Register agelegt
+`89.83` | STD Y+1,R24 | Register R24 wird in auf den reservierten Platz (für lokale Variablen) übertragen (Y+1 bedeutet die Variable wird direkt nach dem Y-Register agelegt)
 `89.81` | LDD R24,Y+1 | Die Variable wird in dAS Register R24 geladen
 `90.e0` | LDI R25,0x00 | Der Rückgabewert wird in das Register R25 übertragen
 `0f.90` | POP R0 | Die Variable wird vom Stack genommen (Freigabe)
