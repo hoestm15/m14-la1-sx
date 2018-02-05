@@ -80,5 +80,11 @@ Maschinenbefehl | in Worten | Kommentar
 
 Quelle: [Assemblerbefehle](http://andremueller.gmxhome.de/befehle.html)
 
+## Verwendete Ausdrücke
+### volatile
+Durch das Scglüsselwort ``volatile`` werden alle Assemblerbefehle, zur Erstellung von Variablen angezeigt und es wird immer auf den echten "Hardwarewert" zugegriffen.
+
+### unsigned char
+Um nur Zahlen zwischen 0 und 255 darzustellen verwenden wir ``unsigned char``. (nicht Vorzeichenbehaftet)
 
 
