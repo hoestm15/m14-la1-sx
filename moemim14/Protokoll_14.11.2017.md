@@ -76,12 +76,12 @@ Wie beim Programm zuvor war es unsere Aufgabe, das Programm im Debugging-Modus z
 #### Assemblerbefehle
 Maschinenbefehl | in Textform | Beschreibung
 --------------- | --------- | ---------
-cf.93 | PUSH R28 | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll.md#assemblerbefehle)
-df.93 | PUSH R29 | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll.md#assemblerbefehle)
+cf.93 | PUSH R28 | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll_14.11.2017.md#assemblerbefehle)
+df.93 | PUSH R29 | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll_14.11.2017.md#assemblerbefehle)
 00.d0 | RCALL PC+0x0001 | Es wird zum nächsten Befehl gesprungen und es werden 2 Bytes auf dem Stack abgelegt.
-cd.b7 | IN R28,0x3D | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll.md#assemblerbefehle)
-de.b7 | IN R29,0x3E | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll.md#assemblerbefehle)
-8c.c0 | LDI R24,0x0C | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll.md#assemblerbefehle)
+cd.b7 | IN R28,0x3D | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll_14.11.2017.md#assemblerbefehle)
+de.b7 | IN R29,0x3E | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll_14.11.2017.md#assemblerbefehle)
+8c.c0 | LDI R24,0x0C | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll_14.11.2017.md#assemblerbefehle)
 89.83 | STD Y+1,R24 | Wert aus dem Register R24 wird am Stack abgelegt (Speicheradresse ist die Adresse der ersten Variable a) 
 88.e0 | LDI R24,0x08 | Der Wert 8 wird im Register R24 abgelegt.
 89.83 | STD Y+2,R24 | Wert aus dem Register R24 wird am Stack abgelegt (Speicheradresse ist die Adresse der ersten Variable b) 
@@ -92,8 +92,8 @@ de.b7 | IN R29,0x3E | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob
 31.1d | ADC R19,R1 | Addition mit Berücksichtigung des Carry-Flags. [Weitere Informationen zum Carry-Flag](https://de.wikipedia.org/wiki/Übertragsbit)
 0f.90 | POP R0 | Die Variable b wird freigegeben.
 0f.90 | POP R0 | Die Variable a wird freigegeben.
-df.91 | POP R29 | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll.md#assemblerbefehle)
-cf.91 | POP R28 | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll.md#assemblerbefehle)
+df.91 | POP R29 | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll_14.11.2017.md#assemblerbefehle)
+cf.91 | POP R28 | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll_14.11.2017.md#assemblerbefehle)
 
 ### Testen der Geschwindigkeiten von bestimmten Operationen
 Ziel dieser Übung war es, zu erkennen wie lange bestimmte Operationen zur Ausführung brauchen. Das geteste System war wie immer der Atmega328p.
