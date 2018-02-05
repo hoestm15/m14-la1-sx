@@ -109,7 +109,7 @@ int main (void)
 ```
 
 
-Operation| Datentyp | Anzahl der benötigten Takte | in µs | Bemerkungen
+Operation| Datentyp | Anzahl der benötigten Takte | Zeit in µs | Bemerkungen
 ---|---|---|---|---
 Addition| 8 Bit + 8 Bit | 46 Takte | 2,89
 Multiplikation| 8 Bit * 8 Bit | 47 Takte | 2,96 | kaum ein Unterschied zur Addition (Grund: eigener Multiplikationsbefehl vorhanden)
