@@ -28,18 +28,18 @@ int main (void)
 ```
 
 #### Assemblebefele
-Maschinenbefehl | in Worten | Kommentar
+Maschinenbefehl | in Worten | Bedeutung
 --------------- | --------- | ---------
-`cf.93` | PUSH R28 | Register R28 wird auf den Stack gelegt.
-`df.93` | PUSH R29 | Register R29 wird auf den Stack gelegt.
-`1f.92` | PUSH R1 | Register R1 wird auf den Stack gelegt. *Register R1 ist immer "0", es wird auf dem Stack der Speicher für die lokale Variable reserviert.*
-`cd.b7` | IN R28,0x3D | 0x3D wird aus dem I/O-Register in R28 geladen.
-`de.b7` | IN R29,0x3E | 0x3E wird aus dem I/O-Register in R29 geladen.
-`8c.e0` | LDI R24,0x0C | Konstante (0C = 12) wird im Register R24 abgelegt.
-`89.83` | STD Y+1,R24 | Konstante aus R24 wird am Speicherplatz des Stacks der lokalen Variable abgelegt. *R28 & R29 beschreiben das Y-Register. Da die Variable genau nach dem Y-Register auf den Stack gelegt wurde, ist die Adresse im Stack "Y+1"* Die Variable wird gespeichert.
-`89.81` | LDD R24,Y+1 | Die Variable wird in Register R24 geladen.
-`90.e0` | LDI R25,0x00 | Rückgabewert
-`0f.90` | POP R0 | Variable wird freigegeben.
-`df.91` | POP R29 | Register R29 wird vom Stack entfernt.
-`cf.91` | POP R28 | Register R28 wird vom Stack entfernt. *(R29 muss zuerst enfernt werden, da im Stack nur von oben nach unten gelesen werden kann. Gespeichert kann hingegen nur von unten nach oben werden. Weiteres ist ebenfalls im [Protokoll der zweiten Einheit](/beremm14/README_2017-10-17.md) zu finden.)*
+`cf.93` | PUSH R28 | Register R28 wird im Stack gespeichert
+`df.93` | PUSH R29 | Register R29 wird im Stack gespeichert
+`1f.92` | PUSH R1 | Register R1 (R1 besizt immer der Wert 0) wird im Stack gespeichert reserviert Platz für lokale Variablen
+`cd.b7` | IN R28,0x3D | 0x3D wird in das Register R28 übertragen
+`de.b7` | IN R29,0x3E | 0x3E wird in das Register R29 übertragen
+`8c.e0` | LDI R24,0x0C | 0x0C (= 12, Konstante) wird in das Register R24 übertragen
+`89.83` | STD Y+1,R24 | Register R24 wird in auf den reservierten Platz (für lokale Variablen) übertragen (Y+1 bedeutet die Variable wird direkt nach dem Y-Register agelegt
+`89.81` | LDD R24,Y+1 | Die Variable wird in dAS Register R24 geladen
+`90.e0` | LDI R25,0x00 | Der Rückgabewert wird in das Register R25 übertragen
+`0f.90` | POP R0 | Die Variable wird vom Stack genommen (Freigabe)
+`df.91` | POP R29 | Das Register R29 wird vom Stack genommen (Freigabe
+`cf.91` | POP R28 | Register R28 wird vom Stack genommen (Freigabe)
 
