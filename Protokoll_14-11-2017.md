@@ -32,7 +32,7 @@ Maschinenbefehl | in Worten | Bedeutung
 --------------- | --------- | ---------
 `cf.93` | PUSH R28 | Register R28 wird im Stack gespeichert
 `df.93` | PUSH R29 | Register R29 wird im Stack gespeichert
-`1f.92` | PUSH R1 | Register R1 (R1 besizt immer der Wert 0) wird im Stack gespeichert reserviert Platz für lokale Variablen
+`1f.92` | PUSH R1 | Register R1 (R1 besitzt immer der Wert 0) wird im Stack gespeichert reserviert Platz für lokale Variablen
 `cd.b7` | IN R28,0x3D | 0x3D wird in das Register R28 übertragen
 `de.b7` | IN R29,0x3E | 0x3E wird in das Register R29 übertragen
 `8c.e0` | LDI R24,0x0C | 0x0C (= 12, Konstante) wird in das Register R24 übertragen
