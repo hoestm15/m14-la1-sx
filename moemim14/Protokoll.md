@@ -97,6 +97,17 @@ cf.91 | POP R28 | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moe
 
 ### Testen der Geschwindigkeiten von bestimmten Operationen
 Ziel dieser Übung war es, zu erkennen wie lange bestimmte Operationen zur Ausführung brauchen. Das geteste System war wie immer der Atmega328p.
+#### Beispiel für einen der angewandten Quelltexte
+```c
+int main (void)
+{
+	volatile unsigned double a = 192,23;
+	volatile unsigned double b = 172,231;
+	
+	return a*b;
+}
+```
+
 
 Operation| Datentyp | Anzahl der benötigten Takte | in µs | Bemerkungen
 ---|---|---|---|---
@@ -108,7 +119,7 @@ Multiplikation| 32 Bit * 32 Bit | 165 Takte| 10,39 |
 Division| 32 Bit / 32 Bit | 701 Takte | 44,16 |
 Addition| float + float | 905 Takte | 57,01 |
 Multiplikation| float * float | 1763 Takte | 111,06 |
-Division| float / float | 1380 Takte | 86,94 | Normalerweiße benötigt der Prozess des Dividierens länger als der Prozess zum Multiplizieren. Eine mögliche Ursache für die Kürze Zeit, wäre eventuell, dass sich die gewählten Werte einfacher dividieren lassen.
+Division| float / float | 1380 Takte | 86,94 | Normalerweiße benötigt der Prozess des Dividierens länger als der Prozess zum Multiplizieren. Eine mögliche Ursache für die Kürze Zeit wäre eventuell, dass sich die gewählten Werte einfacher dividieren lassen.
 Division| double / double | 1380 Takte | 86,94 | Kein Unterschied zu float da der Datentyp double wie der Datentyp float vom µP behandelt wird.
 
 #### Erkentnisse des Tests
