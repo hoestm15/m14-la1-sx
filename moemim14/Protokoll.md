@@ -98,15 +98,21 @@ cf.91 | POP R28 | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moe
 ### Testen der Geschwindigkeiten von bestimmten Operationen
 Ziel dieser Übung war es, zu erkennen wie lange bestimmte Operationen zur Ausführung brauchen. Das geteste System war wie immer der Atmega328p.
 
-Operation| Operation | Anzahl der benötigten Takte | in µs | Kommentar
+Operation| Datentyp | Anzahl der benötigten Takte | in µs | Bemerkungen
 ---|---|---|---|---
 Addition| 8 Bit + 8 Bit | 46 Takte | 2,89
-Multiplikation| 8 Bit * 8 Bit | 47 Takte | 2,96 | kaum ein Unterschied zur Addition, weil ein eigener Multiplikationsbefehl zur Vefügung steht
-Division| 8 Bit / 8 Bit | 123 Takte | 7,77 | deutlich mehr Takte als bei der Multiplikaton, weil die Operation mit einer Schleife ud keinem eigenen Befehl durchgeführt wird
+Multiplikation| 8 Bit * 8 Bit | 47 Takte | 2,96 | kaum ein Unterschied zur Addition (Grund: eigener Multiplikationsbefehl vorhanden)
+Division| 8 Bit / 8 Bit | 123 Takte | 7,77 | Da kein eigener Befehl zur Verfügung steht, wird mit Schleifen gearbeitet -> Darum längere Zeit als bei der Multiplikation
 Addition| 32 Bit + 32 Bit | 192 Takte | 12,09 |
 Multiplikation| 32 Bit * 32 Bit | 165 Takte| 10,39 |
 Division| 32 Bit / 32 Bit | 701 Takte | 44,16 |
 Addition| float + float | 905 Takte | 57,01 |
 Multiplikation| float * float | 1763 Takte | 111,06 |
 Division| float / float | 1380 Takte | 86,94 | Normalerweiße benötigt der Prozess des Dividierens länger als der Prozess zum Multiplizieren. Eine mögliche Ursache für die Kürze Zeit, wäre eventuell, dass sich die gewählten Werte einfacher dividieren lassen.
-Division| double / double | 1380 Takte | 86,94 | Der Datentyp double wird von dem Kompiler als float verarbeitet, da keine doppeltgenauen Fließkommazahlen für den Mikroprozessor zur Verfügung stehen
+Division| double / double | 1380 Takte | 86,94 | Kein Unterschied zu float da der Datentyp double wie der Datentyp float vom µP behandelt wird.
+
+#### Erkentnisse des Tests
+In Systemen in der Echtzeit erforderlich ist, ist es sehr wichtig, immer den kleinstmöglichen Datentyp zu verwenden. Wie man bei der Division von zwei float Werten erkennen kann, können dadurch lange Verzögerungen entstehen und die Echtzeit kann unter Umständen nicht mehr gewährleistet werden.
+
+### Resümee
+
