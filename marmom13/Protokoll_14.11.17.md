@@ -32,7 +32,6 @@ __Datentyp Character (char):__ "Ein Character repräsentiert die kleinste adress
 (Quelle: [https://de.wikipedia.org/wiki/Datentypen_in_C](https://de.wikipedia.org/wiki/Datentypen_in_C))    
 
 __Schlüsselwort volatile:__ "Volatile ist ein Zusatz bei der Deklaration von Variablen in Programmiersprachen wie C, C++, Java oder C#.
-
 In C und C++ wird durch diesen Typqualifikator spezifiziert, dass sich der Wert der Variable jederzeit ändern kann, beispielsweise durch andere Prozesse, Threads oder sogar externe Hardware.[1] Bei der Generierung des Maschinen-Codes aus einem in C oder C++ geschriebenen Programm verhindert die Kennzeichnung einer Variablen als volatile eine in diesem Fall die Funktionalität beeinträchtigende Optimierung, so dass das Programm immer auf den tatsächlich in der Hardware vorhandenen Wert zugreift." (Quelle: [https://de.wikipedia.org/wiki/Volatile_(Informatik)](https://de.wikipedia.org/wiki/Volatile_(Informatik))  
 
 
