@@ -126,4 +126,5 @@ Division| double / double | 1380 Takte | 86,94 | Kein Unterschied zu float da de
 In Systemen in der Echtzeit erforderlich ist, ist es sehr wichtig, immer den kleinstmöglichen Datentyp zu verwenden. Wie man bei der Division von zwei float Werten erkennen kann, können dadurch lange Verzögerungen entstehen und die Echtzeit kann unter Umständen nicht mehr gewährleistet werden.
 
 ### Resümee
+Die Verwendung des Schlüsselwortes volatile führt dazu, das der Compiler das Programm nicht verkürzt und "unnötige" Befehle nicht ausführt. In manchen Anwendungen ist die Verwendung von volatile allerdings dringend nötig.
 Wie bereits [hier](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll.md#erkentnisse-des-tests) erwähnt kann die Wahl von zu großen Datentypen zum Verlust der Echtzeit führen.
