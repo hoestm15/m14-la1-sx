@@ -40,6 +40,6 @@ Maschinenbefehl | in Worten | Bedeutung
 `89.81` | LDD R24,Y+1 | Die Variable wird in dAS Register R24 geladen
 `90.e0` | LDI R25,0x00 | Der Rückgabewert wird in das Register R25 übertragen
 `0f.90` | POP R0 | Die Variable wird vom Stack genommen (Freigabe)
-`df.91` | POP R29 | Das Register R29 wird vom Stack genommen (Freigabe
+`df.91` | POP R29 | Das Register R29 wird vom Stack genommen (Freigabe)
 `cf.91` | POP R28 | Register R28 wird vom Stack genommen (Freigabe)
 
