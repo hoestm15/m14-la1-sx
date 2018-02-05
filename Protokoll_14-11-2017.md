@@ -17,13 +17,15 @@ In dieser Einhat haben wir einfache C-Programme geschrieben und mit Atmel-Studio
 ## Beispiele
 
 #### Quellcode zur Variablen Initaliesirung
-```c int main (void)
+```c
+int main (void)
 {
 	volatile unsigned char x;
 	x = 12;
 	
 	return x;
-} ```
+}
+```
 
 #### Assemblebefele zur Variablen Initaliesirung
 Maschinenbefehl | in Worten | Bedeutung
@@ -44,13 +46,15 @@ Maschinenbefehl | in Worten | Bedeutung
 ****************************************************************************************************************************************
 
 #### Quellcode zur Addition zweier Variablen
-```c int main (void)
+```c 
+int main (void)
 {
 	volatile unsigned char a = 12;
 	volatile unsigned char b = 8;
 	
 	return a+b;
-} ```
+}
+```
 
 
 
