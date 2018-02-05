@@ -23,7 +23,20 @@ Wie in der letzten Einheit haben in der heutigen Einheit die Abarbeitungen von P
 ### Wichtige Informationen zu Beginn der Stunde
 
 #### Das Schlüsselwort volatile
-> Volatile ist ein Zusatz bei der Deklaration von Variablen in Programmiersprachen wie C, C++, Java oder C#.
+> Volatile ist ein Zusatz bei der Deklaration von Variablen in Programmiersprachen wie C, C++, Java oder C#.  
 > In C und C++ wird durch diesen Typqualifikator spezifiziert, dass sich der Wert der Variable jederzeit ändern kann, beispielsweise durch andere Prozesse, Threads oder sogar externe Hardware. Bei der Generierung des Maschinen-Codes aus einem in C oder C++ geschriebenen Programm verhindert die Kennzeichnung einer Variablen als volatile eine in diesem Fall die Funktionalität beeinträchtigende Optimierung, so dass das Programm immer auf den tatsächlich in der Hardware vorhandenen Wert zugreift.
 
 *Quelle: [Wikipedia](https://de.wikipedia.org/wiki/Volatile_(Informatik))*
+
+### Anlegen einer Variable
+#### Quellcode
+```c
+int main (void)
+{
+	volatile unsigned char x;
+	x = 12;
+	
+	return x;
+}
+```
+Unsere Aufgabe war es nun, das Programm im Debugging-Modus zu starten. Anschließend waren die Maschinenbefehle zu analysieren und die Befehle im [Datasheet des ATmega328p](http://www.atmel.com/Images/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf) nachschlagen.
