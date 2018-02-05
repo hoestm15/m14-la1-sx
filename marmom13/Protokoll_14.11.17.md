@@ -46,4 +46,4 @@ int main (void)
    return a+b;  
 } 
 ```
-
+Ähnlich wie auch bei dem ersten Beispiel dissembliereten wir das Programm im Debugging Modus. Die Maschienenbefehle überschnitten sich zum größten Teil mit der ersten Übung, nur die Befehle die für die Addition benötigt wurden änderten sich.
