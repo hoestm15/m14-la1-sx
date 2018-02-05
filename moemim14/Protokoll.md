@@ -16,3 +16,15 @@ Folgende Dinge wurden besprochen:
 * Assembler Befehle
 
 Für genauere Informationen zu den besprochenen Themen können Sie [hier](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll2_7.11.2017.md) finden.
+
+## Fortführung der Analyse von der Abarbeitung von Programmen
+Wie in der letzten Einheit haben in der heutigen Einheit die Abarbeitungen von Programmen analysiert.
+
+### Wichtige Informationen zu Beginn der Stunde
+
+#### Das Schlüsselwort volatile
+> Volatile ist ein Zusatz bei der Deklaration von Variablen in Programmiersprachen wie C, C++, Java oder C#.
+
+> In C und C++ wird durch diesen Typqualifikator spezifiziert, dass sich der Wert der Variable jederzeit ändern kann, beispielsweise durch andere Prozesse, Threads oder sogar externe Hardware. Bei der Generierung des Maschinen-Codes aus einem in C oder C++ geschriebenen Programm verhindert die Kennzeichnung einer Variablen als volatile eine in diesem Fall die Funktionalität beeinträchtigende Optimierung, so dass das Programm immer auf den tatsächlich in der Hardware vorhandenen Wert zugreift.
+
+*Quelle: [Wikipedia](https://de.wikipedia.org/wiki/Volatile_(Informatik))*
