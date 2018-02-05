@@ -50,7 +50,7 @@ df.93 | PUSH R29 | Der Wert des Registers R29 wird auf den Stack gelegt.
 cd.b7 | IN R28,0x3D | Der Wert 0x3D wird aus dem I/O-Register in das Register R28 geladen.
 de.b7 | IN R29,0x3E | Der Wert 0x3E wird aus dem I/O-Register in das Register R29 geladen.
 8c.e0 | LDI R24,0x0C | Die Konstante 0C (0C =^ dezimal 12) wird im Register R24 abgelegt.
-89.83 | STD Y+1,R24 | Konstante aus dem REgister R24 wird am Speicherplatz des Stacks der lokalen Variable abgelegt. Die Angabe Y+1 entspricht dem nächsten freien Speicherplatz im Y-Register ([siehe Y-Register](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll2_7.11.2017.md#xyz-register))
+89.83 | STD Y+1,R24 | Konstante aus dem REgister R24 wird am Speicherplatz des Stacks der lokalen Variable abgelegt. Die Angabe Y+1 entspricht dem nächsten freien Speicherplatz im Y-Register ([siehe Y-Register](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll_7.11.2017.md#xyz-register))
 89.81 | LDD R24,Y+1 | Die Variable wird in Register R24 geladen.
 90.e0 | LDI R25,0x00 | Ins Register R25 wird der Rückgabewert geladen.
 0f.90 | POP R0 | Variable wird freigegeben.
