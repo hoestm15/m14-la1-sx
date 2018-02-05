@@ -42,3 +42,4 @@ Maschinenbefehl | in Worten | Kommentar
 `0f.90` | POP R0 | Variable wird freigegeben.
 `df.91` | POP R29 | Register R29 wird vom Stack entfernt.
 `cf.91` | POP R28 | Register R28 wird vom Stack entfernt. *(R29 muss zuerst enfernt werden, da im Stack nur von oben nach unten gelesen werden kann. Gespeichert kann hingegen nur von unten nach oben werden. Weiteres ist ebenfalls im [Protokoll der zweiten Einheit](/beremm14/README_2017-10-17.md) zu finden.)*
+
