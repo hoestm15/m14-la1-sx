@@ -43,3 +43,4 @@ Maschinenbefehl | in Worten | Bedeutung
 `df.91` | POP R29 | Das Register R29 wird vom Stack genommen (Freigabe)
 `cf.91` | POP R28 | Register R28 wird vom Stack genommen (Freigabe)
 
+****************************************************************************************************************************************
