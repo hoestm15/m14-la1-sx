@@ -15,7 +15,7 @@ Folgende Dinge wurden besprochen:
 * Atmel Studio
 * Assembler Befehle
 
-Für genauere Informationen zu den besprochenen Themen können Sie [hier](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll2_7.11.2017.md) finden.
+Genauere Informationen können [hier](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll2_7.11.2017.md) gefunden werden.
 
 ## Fortführung der Analyse von der Abarbeitung von Programmen
 Wie in der letzten Einheit haben in der heutigen Einheit die Abarbeitungen von Programmen analysiert.
