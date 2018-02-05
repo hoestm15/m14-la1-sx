@@ -46,7 +46,7 @@ int main (void)
    return a+b;  
 } 
 ```
-Ähnlich wie auch bei dem ersten Beispiel dissembliereten wir das Programm im Debugging Modus. Die Maschienenbefehle überschnitten sich zum größten Teil mit der ersten Übung, nur die Befehle die für die Addition benötigt wurden änderten sich.   
+Ähnlich wie auch bei dem ersten Beispiel dissembliereten wir das Programm im Debugging Modus. Die Maschienenbefehle überschnitten sich zum größten Teil mit der ersten Übung, nur die Befehle die für die Addition benötigt wurden änderten sich. (Das gleiche Trifft auch auf alle anderen folgende Beispiele zu).   
 
 ### Drittes Beispiel  
 
@@ -63,7 +63,7 @@ int main (void)
 } 
 ```    
 
-### Beispiel 4  
+### Viertes Beispiel  
 
 ```c
 int main (void) <br>
@@ -75,7 +75,7 @@ int main (void) <br>
 } 
 ```    
 
-### Beispiel 5  
+### Fünftes Beispiel  
 
 ```c
 int main (void)  
