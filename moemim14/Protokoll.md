@@ -44,15 +44,20 @@ Unsere Aufgabe war es nun, das Programm im Debugging-Modus zu starten. Anschlie�
 #### Assemblerbefehle
 Maschinenbefehl | in Worten | Beschreibung
 --------------- | --------- | ---------
-`cf.93` | PUSH R28 | Der Wert des Registers R28 wird auf den Stack gelegt.
-`df.93` | PUSH R29 | Der Wert des Registers R29 wird auf den Stack gelegt.
-`1f.92` | PUSH R1 | Der Wert des Registers R1 (*immer 0*) wird auf den Stack gelegt. 
-`cd.b7` | IN R28,0x3D | Der Wert 0x3D wird aus dem I/O-Register in das Register R28 geladen.
-`de.b7` | IN R29,0x3E | Der Wert 0x3E wird aus dem I/O-Register in das Register R29 geladen.
-`8c.e0` | LDI R24,0x0C | Die Konstante 0C wird im Register R24 abgelegt.
-`89.83` | STD Y+1,R24 | Konstante aus R24 wird am Speicherplatz des Stacks der lokalen Variable abgelegt. *R28 & R29 beschreiben das Y-Register. Da die Variable genau nach dem Y-Register auf den Stack gelegt wurde, ist die Adresse im Stack "Y+1"* Die Variable wird gespeichert.
-`89.81` | LDD R24,Y+1 | Die Variable wird in Register R24 geladen.
-`90.e0` | LDI R25,0x00 | Rückgabewert
-`0f.90` | POP R0 | Variable wird freigegeben.
-`df.91` | POP R29 | Register R29 wird vom Stack entfernt.
-`cf.91` | POP R28 | Register R28 wird vom Stack entfernt. *R29 muss zuerst enfernt werden, da im Stack nur von oben nach unten gelesen werden kann. Gespeichert kann hingegen nur von unten nach oben werden.*
+cf.93 | PUSH R28 | Der Wert des Registers R28 wird auf den Stack gelegt.
+df.93 | PUSH R29 | Der Wert des Registers R29 wird auf den Stack gelegt.
+1f.92 | PUSH R1 | Der Wert des Registers R1 (*immer 0*) wird auf den Stack gelegt. 
+cd.b7 | IN R28,0x3D | Der Wert 0x3D wird aus dem I/O-Register in das Register R28 geladen.
+de.b7 | IN R29,0x3E | Der Wert 0x3E wird aus dem I/O-Register in das Register R29 geladen.
+8c.e0 | LDI R24,0x0C | Die Konstante 0C (0C =^ dezimal 12) wird im Register R24 abgelegt.
+89.83 | STD Y+1,R24 | Konstante aus dem REgister R24 wird am Speicherplatz des Stacks der lokalen Variable abgelegt. Die Angabe Y+1 entspricht dem nächsten freien Speicherplatz im Y-Register ([siehe Y-Register](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll2_7.11.2017.md#xyz-register))
+89.81 | LDD R24,Y+1 | Die Variable wird in Register R24 geladen.
+90.e0 | LDI R25,0x00 | Ins Register R25 wird der Rückgabewert geladen.
+0f.90 | POP R0 | Variable wird freigegeben.
+df.91 | POP R29 | Das Register R29 wird vom Stack entfernt.
+cf.91 | POP R28 | Das Register R28 wird vom Stack entfernt.
+
+#### Frage während der Stunde
+Während der Stunde kam die Frage auf, wieso das Register R29 vor dem Register R28 entfernt wird. Die Antwort ist ganz einfach: Der Stack kann nur von oben nach unten gelesen werden. Genauere Informationen können [hier](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll2_7.11.2017.md#stack) gefunden werden.
+
+
