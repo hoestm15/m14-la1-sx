@@ -101,8 +101,8 @@ Ziel dieser √úbung war es, zu erkennen wie lange bestimmte Operationen zur Ausf√
 ```c
 int main (void)
 {
-	volatile unsigned double a = 192,23;
-	volatile unsigned double b = 172,231;
+	volatile unsigned double a = 192.23;
+	volatile unsigned double b = 172.231;
 	
 	return a*b;
 }
