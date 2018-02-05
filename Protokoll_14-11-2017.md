@@ -46,15 +46,13 @@ Maschinenbefehl | in Worten | Bedeutung
 ****************************************************************************************************************************************
 
 #### Quellcode zur Addition zweier Variablen
-```c
-int main (void)
+```c int main (void)
 {
 	volatile unsigned char a = 12;
 	volatile unsigned char b = 8;
 	
 	return a+b;
-}
-```
+}```
 
 
 
