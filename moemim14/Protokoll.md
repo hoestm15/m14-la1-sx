@@ -94,3 +94,19 @@ de.b7 | IN R29,0x3E | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob
 0f.90 | POP R0 | Die Variable a wird freigegeben.
 df.91 | POP R29 | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll.md#assemblerbefehle)
 cf.91 | POP R28 | [siehe](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll.md#assemblerbefehle)
+
+### Testen der Geschwindigkeiten von bestimmten Operationen
+Ziel dieser Übung war es, zu erkennen wie lange bestimmte Operationen zur Ausführung brauchen. Das geteste System war wie immer der Atmega328p.
+
+Operation| Operation | Anzahl der benötigten Takte | in µs | Kommentar
+---|---|---|---|---
+Addition| 8 Bit + 8 Bit | 46 Takte | 2,89
+Multiplikation| 8 Bit * 8 Bit | 47 Takte | 2,96 | kaum ein Unterschied zur Addition, weil ein eigener Multiplikationsbefehl zur Vefügung steht
+Division| 8 Bit / 8 Bit | 123 Takte | 7,77 | deutlich mehr Takte als bei der Multiplikaton, weil die Operation mit einer Schleife ud keinem eigenen Befehl durchgeführt wird
+Addition| 32 Bit + 32 Bit | 192 Takte | 12,09 |
+Multiplikation| 32 Bit * 32 Bit | 165 Takte| 10,39 |
+Division| 32 Bit / 32 Bit | 701 Takte | 44,16 |
+Addition| float + float | 905 Takte | 57,01 |
+Multiplikation| float * float | 1763 Takte | 111,06 |
+Division| float / float | 1380 Takte | 86,94 | Normalerweiße benötigt der Prozess des Dividierens länger als der Prozess zum Multiplizieren. Eine mögliche Ursache für die Kürze Zeit, wäre eventuell, dass sich die gewählten Werte einfacher dividieren lassen.
+Division| double / double | 1380 Takte | 86,94 | Der Datentyp double wird von dem Kompiler als float verarbeitet, da keine doppeltgenauen Fließkommazahlen für den Mikroprozessor zur Verfügung stehen
