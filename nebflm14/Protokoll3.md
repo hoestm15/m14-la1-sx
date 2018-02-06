@@ -108,12 +108,18 @@ int main (void)
 }
 ```
 
-## [Echtzeitfähigkeit](https://de.wikipedia.org/wiki/Echtzeitsystem)
+## [Echtzeitfähigkeit](https://de.wikipedia.org/wiki/Echtzeitsystem)  
+
+Befehl | Variablen | Takt | Dauer
+------ | --------- | ---- | -----
 Addition | 8 Bit + 8 Bit | 46 Takte | 2,89µs
 Multiplikation | 8 Bit * 8 Bit | 47 Takte | 2,96µs
 Division | 8 Bit / 8 Bit | 123 Takte | 7,77µs
-Die bedeutend längere Dauer der Divison ergibt sich daraus, dass im Gegensatz zur Addition und zur Multiplikation kein eigener Befehl zur Verfügung steht, sondern mit Schleifen gearbeitet werden muss.
+Die bedeutend längere Dauer der Divison ergibt sich daraus, dass im Gegensatz zur Addition und zur Multiplikation kein eigener Befehl zur Verfügung steht, sondern mit Schleifen gearbeitet werden muss.  
 
+
+Befehl | Variablen | Takt | Dauer
+------ | --------- | ---- | -----
 Addition | 32 Bit + 32 Bit | 192 Takte | 12,09µs
 Multiplikation | 32 Bit * 32 Bit | 165 Takte| 10,39µs
 Division | 32 Bit / 32 Bit | 701 Takte | 44,16µs
