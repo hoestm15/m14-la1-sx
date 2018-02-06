@@ -66,7 +66,7 @@ int main (void)
 ```
   
 | Nr | Maschinenbefehl | in Worten | Kommentar |
-| -- | --------------- | --------- | --------- |
+| -- | --------------------- | --------- | --------- |
 01 | cf.93 | PUSH R28 | Inhalt von R28 auf Stack legen
 02 | df.93 | PUSH R29 | Inhalt von R29 auf Stack legen
 03 | 00.d0 | RCALL PC+0x0001 | zum nächsten Befehl springen, 2 Bytes auf Stack ablegen
@@ -108,7 +108,7 @@ int main (void)
 }
 ```
 
-##[Echtzeitfähigkeit](https://de.wikipedia.org/wiki/Echtzeitsystem)
+## [Echtzeitfähigkeit](https://de.wikipedia.org/wiki/Echtzeitsystem)
 Addition | 8 Bit + 8 Bit | 46 Takte | 2,89µs
 Multiplikation | 8 Bit * 8 Bit | 47 Takte | 2,96µs
 Division | 8 Bit / 8 Bit | 123 Takte | 7,77µs
