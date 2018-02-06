@@ -66,7 +66,7 @@ int main (void)
 ```
   
 | Nr | Maschinenbefehl | in Worten | Kommentar |
-| -- | --------------------- | --------- | --------- |
+| -- | ------------------------------- | --------- | --------- |
 01 | cf.93 | PUSH R28 | Inhalt von R28 auf Stack legen
 02 | df.93 | PUSH R29 | Inhalt von R29 auf Stack legen
 03 | 00.d0 | RCALL PC+0x0001 | zum nächsten Befehl springen, 2 Bytes auf Stack ablegen
