@@ -10,6 +10,8 @@ Abwesend: - <br>
 
 ## C-Programme - Atmel-Studio
 In dieser Einhat haben wir einfache C-Programme geschrieben und mit Atmel-Studio ausgeführt und anschließend die Assembler Befehle durchbesprochen. <br>
+Die Ausgabe von AtmelStudio schaut wie folgt aus:
+![Atmel-Studio-OUT](https://github.com/HTLMechatronics/m14-la1-sx/blob/murlom14/Atmel_Studio_OUT.jpg)
 
 ### Atmel-Studio
 [Atmel-Studio](https://www.microchip.com/avr-support/atmel-studio-7) ist ein Programm mit desssen Hilfe man zum Beispiel C Programme schreiben kann. Die Besonderheit ist, dass Atmel-Studio nicht nur das geschrieben Programm ausführt sondern auch die Maschienen/Assemblerbefehle auflistet.
