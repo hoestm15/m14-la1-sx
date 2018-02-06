@@ -38,6 +38,8 @@ Das Programm wurde von uns im Debugging Modus gestartet, um die Maschinenbefehle
 
 ### Assemblerbefehle
 In der linken Spalte befinden sich die, durch das Debuggen erlangten Maschinenbefehle in Hexadezimalzahlen. In der mittleren Spalte werden die Befehle in einer textuellen Form dargestellt, welche bereits die Funktion erahnen lässt, rechts die Beschreibung der Befehle.
+| Nr | Maschinenbefehl | in Worten | Kommentar |
+---|-----------------|-----------|----------|
 01 | cf.93 | PUSH R28 | Inhalt von R28 auf Stack legen
 02 | df.93 | PUSH R29 | Inhalt von R29 auf Stack legen
 03 | 1f.92 | PUSH R1 | Inhalt von R1 auf Stack legen
