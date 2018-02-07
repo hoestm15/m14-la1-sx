@@ -102,3 +102,4 @@ Befehl | Beschreibung
 `main.hex: main.elf` | Die Datei mit `main.elf` wird zur Hex-Datei `main.hex` umcodiert.
 `clean:`| Es werden alle angegeben Dateien aus dem Verzeichnis gelöscht.
 
+> Wenn eine angegeben Datei im Verzeichnis nicht vorhanden ist liefert das Kommando `rm` einen Rückgabewert != 0 (Fehler aufgetreten). Für das Makefile bedeutet das, dass die Abarbeitung des Makefiles abgebrochen wird. Das `-` vor dem Kommando `rm` wird benötigt, um einen Abbruch des Programmes zu verhindern. 
