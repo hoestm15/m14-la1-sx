@@ -103,3 +103,13 @@ Befehl | Beschreibung
 `clean:`| Es werden alle angegeben Dateien aus dem Verzeichnis gelöscht.
 
 > Wenn eine angegeben Datei im Verzeichnis nicht vorhanden ist liefert das Kommando `rm` einen Rückgabewert != 0 (Fehler aufgetreten). Für das Makefile bedeutet das, dass die Abarbeitung des Makefiles abgebrochen wird. Das `-` vor dem Kommando `rm` wird benötigt, um einen Abbruch des Programmes zu verhindern. 
+
+#### Aufrufmöglickeiten
+
+Befehl | Beschreibung
+------ | ------------
+`make` | Führt die Kommandos des ersten Ziels des Makefiles durch.
+`make clean` | Führt die Kommandos des Ziels `clean` aus. Es werden alle angegebenen Dateien aus dem Verzeichnis gelöscht.
+`make main.o` | Übersetzt die Datei `main.c` in den Maschinencode.
+`make main.elf` | Trägt die Adressen im Maschinencode ein. Die Datei ist ausführbar.
+`make main.hex` | Die Datei `main.elf` wird in eine Hex-Datei umcodiert.
