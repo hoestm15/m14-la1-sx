@@ -94,3 +94,11 @@ clean:
         -rm main.hex
 ```
 #### Details zum Makefile
+
+Befehl | Beschreibung
+------ | ------------
+`main.o: main.c` | Die Datei `main.c` wird übersetzt. In der Datei `main.o` stehen dann die Maschinenbefehle.
+`main.elf: main.o` | Die Datei mit `main.o` wird gelinkt. Es werden alle Adressen vergeben.
+`main.hex: main.elf` | Die Datei mit `main.elf` wird zur Hex-Datei `main.hex` umcodiert.
+`clean:`| Es werden alle angegeben Dateien aus dem Verzeichnis gelöscht.
+
