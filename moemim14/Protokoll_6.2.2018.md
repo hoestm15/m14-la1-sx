@@ -113,3 +113,31 @@ Befehl | Beschreibung
 `make main.o` | Übersetzt die Datei `main.c` in den Maschinencode.
 `make main.elf` | Trägt die Adressen im Maschinencode ein. Die Datei ist ausführbar.
 `make main.hex` | Die Datei `main.elf` wird in eine Hex-Datei umcodiert.
+
+## Aufgabe 2
+Unsere zweite Aufgabe war es mit Hilfe eines Makefiles ein C-Programm aus dem FIVU-Unterrichts übersetzen. Das Makefile soll ausßerdem den bootloader und den flash initialisieren.
+
+### Initialisieren des Flash
+Um diese Aufgabe zu realisieren mussten wir zuerst einen Befehl finden, welcher den Flash auf unserem Atmega328p initialisiert. Den Befehl konnten wir in einer der vorgefertigten Dateien in unserem System finden. Die Datei konnten wir mit Hilfe des Befehls `which` ausfindig machen. Der Befehl `which` liefert uns dann den Dateipfad (*/usr/bin/flashbootloader*)
+des gesuchten Programmes.  
+Mit dem Befehl `less` haben wir uns danach den Quellcode der Datei ausgegeben und haben unseren gesuchten Befehl in unserem Makefile ergänzt.
+
+**Quelltext des Makefiles**
+```
+main.hex: main.elf
+        avr-objcopy -O ihex main.elf main.hex
+
+main.elf: main.o
+        avr-gcc -o main.elf main.o
+
+main.o: main.c
+        avr-gcc -mmcu="atmega328p" -Os -c -DF_CPU=16000000L main.c
+
+flash: main.hex
+        avrdude -c usbasp -p atmega328p -e -U flash:w:bootloader.hex:i
+        touch flash
+```
+> Der Befehl `touch flash` wird benötigt, damit der Flash nur dann initialisiert wird, wenn es eine Änderung gegeben hat. `touch flash` aktualisiert somit den Zeitstempel und der Flash wird nur bei einer Änderung neu initialisiert.
+
+### Programm und bootloader zusammen intialisieren
+Hierzu mussten wir die beiden Programme `main.hex` und den `bootloader` in einer Datei zusammenfügen. Zuerst mussten wir das Programm `bootloader` wieder mit dem Befehl `which`ausfindig machen. Danach wurde die Datei mit dem Befehl `cp /usr/share/htl-aiit-tools/boards/arduinoNanoV3/bootloader.hex ./` in unser aktuelles Arbeitsverzeichnis kopiert. Mit dem Befehl `cat` haben wir die Dateien danach zusammengefügt. In der zusammengeführeten Datei mussten wir anschließend die letzte Zeile des ersten Programmes löschen. Die Zeile musste gelöscht werden, da das Programm an dieser Zeile ansonsten beendet worden wäre. Die Zeile konnten wir mit Hilfe eines Beispieles von [Wikipedia](https://de.wikipedia.org/wiki/Intel_HEX) erkennen. Die Datei kann XXX betrachtet werden.
