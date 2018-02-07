@@ -32,4 +32,26 @@ Normalerweise werden C-Files in IDEs (Integrated Development Enviroment) wie zum
 > Genutzt wird es beispielsweise, um in Projekten, die aus vielen verschiedenen Dateien mit Quellcode bestehen, **automatisiert alle Arbeitsschritte** (Übersetzung, Linken, Dateien kopieren etc.) **zu steuern**, bis hin zum fertigen, ausführbaren Programm. make ist jedoch so flexibel ausgelegt, dass es auch beliebige andere Aufgaben steuern kann, bei denen die zeitliche Abhängigkeit von Dateien eine Rolle spielt.
 > Das Hilfsprogramm make ist Teil des POSIX-Standards, dessen gegenwärtige Bezeichnung **IEEE Std 1003.1, 2008 Edition** lautet (äquivalent dazu Single UNIX Specification V3, SUSv3).
  
-*Quelle: [Wikipedia, make](https://de.wikipedia.org/wiki/Make)*
+*Quelle: [Wikipedia](https://de.wikipedia.org/wiki/Make)*
+
+**Zusammenfassung:**
+Zusammengefasst kann man sagen, dass Makefiles eine Liste von Terminal-Commands zurÜbersetzung von Programmensind. Diese Terminal-Commands werden nur ausgeführt, wenn bestimmte Bedingungen erfüllt sind. Die Befehle werden anschließend automatisiert abgearbeitet. Makefiles sind auf allen Unix-basierenden Betriebssystem lauffähig.
+
+### Aufbau von Makefiles
+```
+Ziel 1: Voraussetzung 1, ... , Voraussetzung n  
+[Tab] Kommando 1  
+[Tab] ...  
+[Tab] Kommando n  
+
+Ziel 2: Voraussetzung 1, ... , Voraussetzung n  
+[Tab] Kommando 1  
+[Tab] ...  
+[Tab] Kommando n  
+```
+
+### Aufruf von `make` im Terminal
+Um Makefiles aufzurufen muss man einfach das Kommando `make` im Terminal eingeben. Makefiles versuchen immer so effektiv wie möglich zu arbeiten.Um dies zu erreichen vergleicht das Makefile vor dem Durchlauf die *Zeitstempel* der Dateien und entscheidet danach, ob das Kommando ausgeführt werden muss. Das Makefile wird dann die Ziele abhängig von den Voraussetzungen abgearbeitet.
+
+#### Zeitstempel in Makefiles
+Die Verwendung der Zeitstempel kann durch folgendes Beispiel beschrieben werden. Möchte man zum Beispiel aus einer `main.c` eine `main.o` erzeugen, wird beim aller ersten Durchlauf wird dann das Ziel `main.o` durchlaufen. Wird das Makefile dann wieder aufgerufen und die Datei `main.o` einen neueren Zeitstempel als die Datei `main.c` hat, wird die Datei `main.o` nicht neu erstellt.
