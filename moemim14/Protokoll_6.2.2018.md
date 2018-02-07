@@ -55,3 +55,42 @@ Um Makefiles aufzurufen muss man einfach das Kommando `make` im Terminal eingebe
 
 #### Zeitstempel in Makefiles
 Die Verwendung der Zeitstempel kann durch folgendes Beispiel beschrieben werden. Möchte man zum Beispiel aus einer `main.c` eine `main.o` erzeugen, werden dann alle Kommandos des Ziels `main.o` ausgeführt. Wird das Makefile dann wieder aufgerufen und die Datei `main.o` hat einen neueren Zeitstempel als die Datei `main.c`, wird die Datei `main.o` nicht neu erstellt.
+
+## Aufgabe 1
+Unsere erste Aufgabe war es mit Hilfe eines Makefiles ein C-Programm aus dem FIVU-Unterrichts übersetzen. Das Programm soll danach auf unserem Atmega328p lauffähig sein.
+
+### Quelltext des C-Programmes
+```
+#include <avr/io.h>
+#include <util/delay.h>
+
+int main()
+{
+        DDRB = (1<<PB5);
+        while(1)
+        {
+                PORTB=(1<<PB5);
+                _delay_ms(500);
+                PORTB = 0;
+                _delay_ms(500);
+        }
+        return 0;
+}
+```
+### Quelltext Makefile
+```
+main.hex: main.elf
+        avr-objcopy -O ihex main.elf main.hex
+
+main.elf: main.o
+        avr-gcc -o main.elf main.o
+
+main.o: main.c
+        avr-gcc -mmcu="atmega328p" -Os -c -DF_CPU=16000000L main.c
+
+clean:
+        -rm main.o
+        -rm main.elf
+        -rm main.hex
+```
+#### Details zum Makefile
