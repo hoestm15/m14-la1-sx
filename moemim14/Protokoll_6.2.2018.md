@@ -60,7 +60,7 @@ Die Verwendung der Zeitstempel kann durch folgendes Beispiel beschrieben werden.
 Unsere erste Aufgabe war es mit Hilfe eines Makefiles ein C-Programm aus dem FIVU-Unterrichts übersetzen. Das Programm soll danach auf unserem Atmega328p lauffähig sein.
 
 ### Quelltext des C-Programmes
-```
+```c
 #include <avr/io.h>
 #include <util/delay.h>
 
