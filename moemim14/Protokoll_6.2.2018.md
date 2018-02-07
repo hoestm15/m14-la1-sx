@@ -23,3 +23,13 @@ Im ersten Schritt wird die Datei `main.c` zur Objektdatei `main.o` übersetzt. I
 Im zweiten Schritt wird die Objektdatei `main.o` zur ausführbaren (*executable*) Datei `main.elf` übersetzt. Dieser Vorgang wird *Linken* genannt. Hier werden alle tatsächlichen Adressen eingetragen, wodurch das Programm ausgeführt werden kann.
 
 Der dritte Schritt wird nur benötigt, wenn das System die `main.elf` nicht ausführen kann. Die Datei `main.elf` wird zur Hex-Datei `main.hex` übersetzt. Dieser Vorgang wird *Konvertieren* genannt.
+
+## Makefiles
+Normalerweise werden C-Files in IDEs (Integrated Development Enviroment) wie zum Beispiel Netbeans & Codeblocks programmiert. BeiÜbersetzungsvorgang wird dann auf das Übersetzungstool *make* zurückgegriffen.
+
+### make
+> make (englisch für machen, erstellen) ist ein *Build-Management-Tool*, das Kommandos in Abhängigkeit von Bedingungen ausführt. Es wird hauptsächlich bei der Softwareentwicklung als Programmierwerkzeug eingesetzt.
+> Genutzt wird es beispielsweise, um in Projekten, die aus vielen verschiedenen Dateien mit Quellcode bestehen, **automatisiert alle Arbeitsschritte** (Übersetzung, Linken, Dateien kopieren etc.) **zu steuern**, bis hin zum fertigen, ausführbaren Programm. make ist jedoch so flexibel ausgelegt, dass es auch beliebige andere Aufgaben steuern kann, bei denen die zeitliche Abhängigkeit von Dateien eine Rolle spielt.
+> Das Hilfsprogramm make ist Teil des POSIX-Standards, dessen gegenwärtige Bezeichnung **IEEE Std 1003.1, 2008 Edition** lautet (äquivalent dazu Single UNIX Specification V3, SUSv3).
+ 
+*Quelle: [Wikipedia, make](https://de.wikipedia.org/wiki/Make)*
