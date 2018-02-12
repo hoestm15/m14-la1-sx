@@ -34,4 +34,13 @@ Das Hilfsprogramm make ist Teil des POSIX-Standards, dessen gegenwärtige Bezeic
 
 Quelle: [https://de.wikipedia.org/wiki/Make](https://de.wikipedia.org/wiki/Make)
 
+## Syntax  
+
+Ziel: Voraussetzung1, ... , Voraussetzung n  
+[echter Tabulator] Befehl 1  
+[echter Tabulator] ... 
+[echter Tabulator] Befehl n
+
+
+
 
