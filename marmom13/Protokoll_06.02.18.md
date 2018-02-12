@@ -84,10 +84,32 @@ clean:
         -rm main.o
         -rm main.elf
         -rm main.hex
+```  
+
+### Aufrufmöglichkeiten  
+
+make Führt die Kommandos des ersten Ziels aus.  
+make <Name des Ziels> führt das Komando mit dem genannten Ziel aus.  
+
+## Zweite Aufgabenstellung  
+
+Bei der zweiten Aufgabe ging es darum mit Hilfe einer Makefile eine main.c sowie einen bootloader zu initialisieren.  
+
+### Quelltext Makefile  
+
 ```
+main.hex: main.elf
+        avr-objcopy -O ihex main.elf main.hex
 
+main.elf: main.o
+        avr-gcc -o main.elf main.o
 
+main.o: main.c
+        avr-gcc -mmcu="atmega328p" -Os -c -DF_CPU=16000000L main.c
 
+flash: main.hex
+        avrdude -c usbasp -p atmega328p -e -U flash:w:bootloader.hex:i
+        touch flash
+```  
 
-
-
+Der Befehl **touch flash** stellt sicher, dass der Flash nur dann initialisiert wird, wenn es eine Änderung gegeben hat.  
