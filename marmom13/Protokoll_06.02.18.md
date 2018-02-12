@@ -113,3 +113,4 @@ flash: main.hex
 ```  
 
 Der Befehl **touch flash** stellt sicher, dass der Flash nur dann initialisiert wird, wenn es eine Änderung gegeben hat.  
+ 
