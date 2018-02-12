@@ -88,8 +88,8 @@ clean:
 
 ### Aufrufmöglichkeiten  
 
-make führt die Kommandos des ersten Ziels aus.  
-make <<Name des Ziels>> führt das Komando mit dem genannten Ziel aus.  
+**make** führt die Kommandos des ersten Ziels aus.  
+**make <Name des Ziels>** führt das Komando mit dem genannten Ziel aus.  
 
 ## Zweite Aufgabenstellung  
 
