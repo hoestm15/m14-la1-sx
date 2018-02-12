@@ -49,7 +49,7 @@ Eine bereits erstellte Makefile kann man mit dem befehl make aufrufen. Vor durch
 
 Ein Programm das eine Led auf unserem Atmega328p blinken lässt, soll mit dem tool make übersetzt werden.
 
-# Quelltext  
+### Quelltext Programm
 
 ```c
 #include <avr/io.h>
@@ -67,6 +67,23 @@ int main()
         }
         return 0;
 }
+```
+### Quelltext Makefile  
+
+```
+main.hex: main.elf
+        avr-objcopy -O ihex main.elf main.hex
+
+main.elf: main.o
+        avr-gcc -o main.elf main.o
+
+main.o: main.c
+        avr-gcc -mmcu="atmega328p" -Os -c -DF_CPU=16000000L main.c
+
+clean:
+        -rm main.o
+        -rm main.elf
+        -rm main.hex
 ```
 
 
