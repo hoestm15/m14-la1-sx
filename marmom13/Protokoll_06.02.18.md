@@ -38,8 +38,38 @@ Quelle: [https://de.wikipedia.org/wiki/Make](https://de.wikipedia.org/wiki/Make)
 
 Ziel: Voraussetzung1, ... , Voraussetzung n  
 [echter Tabulator] Befehl 1  
-[echter Tabulator] ... 
-[echter Tabulator] Befehl n
+[echter Tabulator] ...  
+[echter Tabulator] Befehl n  
+
+## Aufruf  
+
+Eine bereits erstellte Makefile kann man mit dem befehl make aufrufen. Vor durchlauf des Vorganks kontrolliert das Tool den Zeitstempel der Dateien. Dateien die sich nicht verändert haben werden nicht berücksichtigt. Will man das eine unveränderte Datei trodzdem berücksichtigt wird, kann man ihren Zeitstempel mit dem Befehl touch aktualisieren.
+
+## Erste Aufgabenstellung  
+
+Ein Programm das eine Led auf unserem Atmega328p blinken lässt, soll mit dem tool make übersetzt werden.
+
+# Quelltext  
+
+```c
+#include <avr/io.h>
+#include <util/delay.h>
+
+int main()
+{
+        DDRB = (1<<PB5);
+        while(1)
+        {
+                PORTB=(1<<PB5);
+                _delay_ms(500);
+                PORTB = 0;
+                _delay_ms(500);
+        }
+        return 0;
+}
+```
+
+
 
 
 
