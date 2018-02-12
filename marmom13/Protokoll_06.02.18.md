@@ -7,7 +7,7 @@
 Name: Moritz Martinak  
 Lehrer: sx  
 Gruppe: 2  
-Übungsdatum: 14.11.2017  
+Übungsdatum: 06.02.2018  
 Abwesend: -  
 
 # Wiederholung  
