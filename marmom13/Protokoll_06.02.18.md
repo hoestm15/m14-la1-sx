@@ -2,7 +2,7 @@
 
 ## 4. Einheit  
 
-## Thema: Atmel Studio
+## Thema: Makefiles
 
 Name: Moritz Martinak  
 Lehrer: sx  
