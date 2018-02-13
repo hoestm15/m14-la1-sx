@@ -8,7 +8,7 @@
 * Gruppe: 2  
 * Anwesend: Marcel Köhler, Michael Mörth, Florian Nebel, Lorenz Muri, Moritz Martinak, Andreas Platzer, Mario Nabernik, Gerhard Mandl  
 * Abwesend: -  
-* Thema: Atmel Studio
+* Thema: Makefiles
 
 ## Kompilieren
 Schritte | Befehle | Erklärung  
