@@ -20,7 +20,7 @@ Schritte | Befehle | Erklärung
 #### Zusammengefasst
 Zunächst wird `main.c` zu `main.o` übersetzt. Dies ist eine ObjektDatei.  Beim __Compilen__ wird der Quelltext dann in Assemblerbefehle übersetzt. Durch das __Assemblieren__ wird der Assemblerquelltext dann in binäre Maschinenbefehle übersetzt.
 Danach wird `main.o` zu `main.elf` übersetzt. Diese Datei ist executable (ausführbar).Sie ist deswegen ausführbar, da ale tatsächlichen Addressen eingetragen wurden. Den ganze Vorgang nennt man __Linken__.
-Der letzte Schritt ist das _Konvertieren_. Dies wird benötigt, wenn das System die `main.elf` Datei nicht ausführen kann. Dadurch wird `main.elf` zu `main.hex`.
+Der letzte Schritt ist das __Konvertieren__. Dies wird benötigt, wenn das System die `main.elf` Datei nicht ausführen kann. Dadurch wird `main.elf` zu `main.hex`.
 ## Makefiles
 C Programme werden in IDEs programmiert. Die Übersetzung dieser Files erfolgt dann mit dem Werkzeug `make`.
 
@@ -73,6 +73,17 @@ Befehl | Beschreibung
 
 Tritt ein Fehler auf, liefert das angegebene Kommando `rm` einen Rückgabewert != 0 zurück. Dies bedeutet __Fehler__. Das Programm wird abgebrochen. Mit einem "-" vor dem
 `rm` wird dies verhindert.
+
+
+#### Aufrufmöglickeiten im Terminal
+
+Befehl | Beschreibung
+------ | ------------
+`make` | Führt die Kommandos des ersten Ziels aus.
+`make clean` | Führt die Kommandos des Ziels `clean` aus.
+`make main.o` | Compilen.
+`make main.elf` | Trägt die Adressen im Maschinencode ein. Die Datei ist ausführbar.
+`make main.hex` | Konvertieren.
 
 ## Aufgabe 2
 Übersetzung eines C-Programms mit Hilfe eines Makefiles. Die Lauffähigkeit auf dem Atmega 328p soll sicher gestellt sein. Mit Hilfe des Makefiles soll außerdem der _flash_ und der _bootloader_ initialisiert werden.
