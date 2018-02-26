@@ -1,0 +1,43 @@
+# 5.Protokoll - 13.02.2018
+Schriftführer: Gerhard Mandl  
+Betreuer: Sx  
+Klasse: 4AHME  
+Gruppe: 2  
+Anwesend: Nebel Florian, Mandl Gerhard, Moritz Martinak, Mario Nabernik, Muri Lorenz, Platzer Andreas, Marcel Köhler  
+Abwesend: Michael Mörth
+
+## Inhaltsangabe:
+    1. Besprechung der letzten Protokolle
+    2. 
+    3.
+    4. 
+    
+## Modbus
+Um von einem Sure-Board Daten an einen PC zu übertragen wird ein entsprechendes Feldbusprotokoll benötigt. In _Fivu_ haben wir bereits einige besprochen, aber Varianten wie Powerlink(B&R), Profinet(PROFIBUS) oder Flexray
+(div. Automobil- und Elektronikunternehmen) fallen aufgrund von fehlenden Lizenzen für unsere Zwecke flach.  
+Jedoch können wir den Modbus verwenden, den dieser ist ein offener und freier Modbus.  
+
+Anfänglich wurde der Modbus für die Kommunikation zwischen SPS-Geräten entwickelt, etablierte sich aber in der Industrie als De-Facto-Stamdard. da es sich wie bereits erwähnt um ein offenes Protokoll handelt. Seti 2007 ist die Version Modbus TCP Teil der IEC 61158. Es lassen sich sowohl RS-232 Netzwerke, sowie TCP/IP - Netzwerke aufbauen.
+
+Mit Modbus kann ein Master mit mehreren Slaves verbunden werden. Jeder Teilnehmer des Netzwerkes ist berechtigt Daten zu übertragen, regeln tut dies der Master.
+
+Man unterscheidet zwischen 3 Betriebsarten:
+* Modbus ASCII (byteweise Übertragung, textuell)
+* Modbus RTU (byteweise Übertragung, binär)
+* Modbus TCP (Übertragung in TCP-Paketen)
+
+## Protokollaufbau
+#### RTU
+> Im RTU-Modus wird der Sendebeginn durch eine Sendepause von mindestens der 3,5-fachen Zeichenlänge markiert. Die Länge der Sendepause hängt somit von der Übertragungsgeschwindigkeit ab. Das Adressfeld besteht aus acht Bit, die die Empfängeradresse darstellen. Der Slave sendet bei seiner Antwort an den Master ebendiese Adresse zurück, damit der Master die Antwort zuordnen kann. Das Funktionsfeld besteht aus 8 Bit. Hat der Slave die Anfrage des Masters korrekt empfangen, so antwortet er mit demselben Funktionscode. Ist ein Fehler aufgetreten, so verändert er den Funktionscode, indem er das höchstwertige Bit des Funktionsfeldes auf 1 setzt. Das Datenfeld enthält Hinweise, welche Register der Slave auslesen soll, und ab welcher Adresse diese beginnen. Der Slave setzt dort die ausgelesenen Daten (z. B. Messwerte) ein, um sie an den Master zu senden. Im Fehlerfall wird dort ein Fehlercode übertragen. Das Feld für die Prüfsumme, die mittels CRC ermittelt wird, beträgt 16 Bit. Das gesamte Telegramm muss in einem kontinuierlichen Datenstrom übertragen werden. Tritt zwischen zwei Zeichen eine Sendeunterbrechung auf, die länger als 1,5 Zeichen ist, so ist das Telegramm als unvollständig zu bewerten und sollte vom Empfänger verworfen werden.
+
+#### ASCII
+> Im ASCII-Modus beginnen Nachrichten mit einem vorangestellten Doppelpunkt, das Ende der Nachricht wird durch die Zeichenfolge Carriage return – Line feed (CRLF) markiert.
+
+> Die ersten zwei Bytes enthalten zwei ASCII-Zeichen, die die Adresse des Empfängers darstellen. Der auszuführende Befehl ist auf den nächsten zwei Bytes codiert. Über ein Zeichen folgen die Daten. Über das gesamte Telegramm (ohne Start- und Ende-Markierung) wird zur Fehlerprüfung ein LRC ausgeführt, dessen Paritätsdatenwort in den abschließenden zwei Zeichen untergebracht wird. Tritt während der Übertragung eines Frames eine Pause von > 1s auf, wird der Frame als Fehlerfall bewertet. Der Benutzer kann ein längeres Timeout konfigurieren.
+
+#### TCP/IP
+| Transaktionsnummer | Protokollkennzeichen | Zahl der nachfolgenden Bytes | Adresse | Funktion | Daten |
+|:------------------:|:--------------------:|:----------------------------:|:-------:|:--------:|:-----:|
+| 2 Byte | 2 Byte (immer 0x0000) | 2 Byte | 1 Byte | 1 Byte | n Byte |
+
+*Quelle: [Wikipedia, Modbus](https://de.wikipedia.org/wiki/Modbus)*  
