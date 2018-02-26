@@ -6,5 +6,7 @@
 [Protokoll 2](https://github.com/HTLMechatronics/m14-la1-sx/blob/marmom13/marmom13/Protokoll_07.11.17.md)
 * Gruppe 2: 3. Einheit, 14.10.2017
 [Protokoll 3](https://github.com/HTLMechatronics/m14-la1-sx/blob/marmom13/marmom13/Protokoll_14.11.17.md)
-* Gruppe 2: 4. Einheit, 14.10.2017
+* Gruppe 2: 4. Einheit, 06.02.2018
 [Protokoll 4](https://github.com/HTLMechatronics/m14-la1-sx/blob/marmom13/marmom13/Protokoll_06.02.18.md)  
+* Gruppe 2: 5. Einheit, 13.02.2018
+[Protokoll 4](https://github.com/HTLMechatronics/m14-la1-sx/blob/marmom13/marmom13/Protokoll_13.02.18.md)  
