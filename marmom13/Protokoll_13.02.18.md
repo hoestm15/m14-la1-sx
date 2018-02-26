@@ -21,3 +21,5 @@ Es gibt bei der Datenübertragung drei Betriebsarten:
 - Modbus TCP (Übertragung von Daten in TCP Paketen)  
 
 
+
+
