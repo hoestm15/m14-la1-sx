@@ -8,7 +8,7 @@ Name: Moritz Martinak
 Lehrer: sx  
 Gruppe: 2  
 Übungsdatum: 13.02.2018  
-Abwesend: Michael Mörth  
+Abwesend: Michael Mörth, Mario Nabernik, Marcel Köhler  
 
 # Grundlagen Modbus  
 
@@ -19,7 +19,4 @@ Es gibt bei der Datenübertragung drei Betriebsarten:
 - Modbus ASCII (byteweise Übertragung von Daten die im ASCII-Code codeirt sind)  
 - Modbus RTU (byteweise Übertragung von Daten im Binärsystem)  
 - Modbus TCP (Übertragung von Daten in TCP Paketen)  
-
-
-
 
