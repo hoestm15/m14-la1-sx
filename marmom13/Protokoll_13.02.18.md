@@ -20,3 +20,6 @@ Es gibt bei der Datenübertragung drei Betriebsarten:
 - Modbus RTU (byteweise Übertragung von Daten im Binärsystem)  
 - Modbus TCP (Übertragung von Daten in TCP Paketen)  
 
+## Kommunikation  
+
+Die Kommunikation basiert auf einem Server/Vlient Prinzip. Dabei wird vom Client ein Request an den Server geschickt, dieser entfängt ihn und schickt die angefragten Daten zurück.
