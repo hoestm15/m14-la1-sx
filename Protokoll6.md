@@ -98,4 +98,42 @@ jcbSerialDevice.setModel(new DefaultComboBoxModel<String>(ports));
 Ports nicht lokas sondern als object abspeichern
 ```java
 private String [] ports;
+private jssc.SerialPort serialPort;
 ```
+Beim drücken des refresh But
+```java
+refresh();
+```
+Verbinden
+	jbutConnectActionPerformed
+	{
+	    connect();
+	}
+	
+```java
+private void connect () {
+    try{
+        String port = (String)jcbSerialDevice.getSelectedItem();
+        serialPort = new jssc.SerialPort(port);
+        serialPort.openPort();
+    } catch (Throwable th) {
+        show Throwable("Serielle Schnittstelle kann nicht geöffnet werden", th);
+    }
+}
+```
+
+```java
+private showThrowable (String msg, Throwable th) {
+  th.printStackTrace(System.err);
+  JOptionPane.showMessageDialog(this, msg, "Fehler aufgetreten", JOptionPane.ERROR_MESSAGE);
+}
+```
+
+
+## Ableitungsbaum Fehlerklassen (Baum zeichnen)
+Exception abgeleitet von Throwable, abgeleitet von Object
+davon abgeleitet: RuntimeException
+unter anderem von Throwable abgeleitet: Error wird bei schwerwiegenden Fehlern in VM erzeugt, Programm beenden
+Fehler der jssc werden als Error geworfen (wird weitergeworfen wenn nur Exceptions gefangen werden) Programm würde ohne Fehlermeldung auf GUI-Ebene beendet werden, Fehlermeldung nur im Terminal
+Deshalb: Throwable (Error und Exception) fangen und ausgeben
+andere Möglichkeit: Multicatch
