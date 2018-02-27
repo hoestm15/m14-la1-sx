@@ -31,3 +31,26 @@ Die Daten können über drei Arten übertragen werden:
 * Modbus RTU
 * Modbus ASCII
 * Modbus TCP
+
+### Kommunikationsablauf
+Der Kommunikationsablauf beruht auf einem Server/Client Prinzip. Der Client (Master) sendet einen Request zum Server (Slave). Dieser antworter mit einer Response. Der Client erreicht den Server über dessen eindeutige Adresse.
+![Modbus-Client-Server](https://github.com/HTLMechatronics/m14-la1-sx/blob/murlom14/modbus_transaction_error_free_png.png)
+Der Function code wird für "Fehlermeldungen" verwendet, die Werte 1 bis 127 werden übergeben beigültigen Responses und die Werte 128 bis 255 werden bei fehlerhaften Responses übergeben.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
