@@ -8,4 +8,6 @@
   * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll_14.11.2017.md#3-protokoll---14112017)
 * Gruppe 2: 4. Einheit, 06.02.2018
   *  [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll_6.2.2018.md#protokoll---06022018)
+* Gruppe 2: 5. Einhiet, 13.02.2018
+  * Abwesend
 
