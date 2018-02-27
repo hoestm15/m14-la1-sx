@@ -25,7 +25,7 @@ Mit Hilfe des Modbus kann ein "Master" mit mehreren "Slaves" kommunizieren.
 Der "Master" ist zum Beispiel ein Computer, dieser kann mit mehreren "Slaves" wie zum Beispiel Sensoren oder Aktoren Daten austauschen. 
 Jeder Slave besitzt eine bestimmte Adresse (mit 1 beginnend) durch diese Adresse kann der Master entscheiden von welchem Slave er gerade Daten erhalten möchte.
 
-!(Modbus-Darstellung)https://technologyuk.net/telecommunications/industrial-networks/modbus.shtml
+![Modbus-Darstellung](https://technologyuk.net/telecommunications/industrial-networks/modbus.shtml)
 
 Die Daten können über drei Arten übertragen werden:
 * Modbus RTU
