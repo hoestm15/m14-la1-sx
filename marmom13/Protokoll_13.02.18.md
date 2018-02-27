@@ -22,4 +22,4 @@ Es gibt bei der Datenübertragung drei Betriebsarten:
 
 ## Kommunikation  
 
-Die Kommunikation basiert auf einem Server/Vlient Prinzip. Dabei wird vom Client ein Request an den Server geschickt, dieser entfängt ihn und schickt die angefragten Daten zurück. <Bild>(https://github.com/HTLMechatronics/m14-la1-sx/blob/marmom13/marmom13/modbus_transaction_error_free_png.png)
+Die Kommunikation basiert auf einem Server/Vlient Prinzip. Dabei wird vom Client ein Request an den Server geschickt, dieser entfängt ihn und schickt die angefragten Daten zurück. ![Bild](https://github.com/HTLMechatronics/m14-la1-sx/blob/marmom13/marmom13/modbus_transaction_error_free_png.png)
