@@ -37,7 +37,7 @@ Der Kommunikationsablauf beruht auf einem Server/Client Prinzip. Der Client (Mas
 ![Modbus-Client-Server](https://github.com/HTLMechatronics/m14-la1-sx/blob/murlom14/modbus_transaction_error_free_png.png)
 Der Function code wird für "Fehlermeldungen" verwendet, die Werte 1 bis 127 werden übergeben beigültigen Responses und die Werte 128 bis 255 werden bei fehlerhaften Responses übergeben.
 
-
+Siehe auch: [Modbus-eBook](https://lms.at/dotlrn/classes/htl_elektrotechnik/610437.4AHME_LA1.17_18/xolrn/E7BE8C85F66CA/2148F16AC6F2E.symlink?resource_id=0-236827434-257560369&m=view#167572556)
 
 
 
