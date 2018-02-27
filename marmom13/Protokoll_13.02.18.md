@@ -32,3 +32,6 @@ Das _Modbus-Daten-Modell_ wird in drei Tabellen unterschieden:
 | Art | Definition | Beispiel |
 |:---:| ---------- | -------- |
 | Discrete Inputs | Ein einzelnes Bit das nur gelesen werden kann | Taster, Endschalter... |
+| Coils | Einzelnes Bit das gelesen und beschrieben werden kann | Relais, LED... |
+| Input Register | Ein 16-Bit Wert der nur gelesen kann | Sensoren, ADC... |
+| Hold-Registers | Ein 16-Bit Wert der gelesen und beschrieben werden kann | PWM-Einheit, DAC...
