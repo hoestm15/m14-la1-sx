@@ -62,22 +62,40 @@ public void updateSwingControls () {
     jbutSingleMeasurement.setEneabled(false);
     jbutContinousMeasurement.setEneabled(false);
     jbutStopMeasurement.setEneabled(false);
+    
+    if(ports == null && ports.length == 0) {
+        jbutRefresh.setEneabled(true);
+    }
+    else if(ports != null && ports.length > 0) {
+        jcbSerialDevice.setEneabled(true);
+	jbutConnect.setEneabled(true);
+    }
 }
 ```
 
 Aufruf in Constructor:
 ```java
-updateSwingControls();
 setLocationRelativeTo(null);
 jlabTemperatur.setText("? °C");
+refresh();
 ```
-
+(Java-Doc zur Hilfe nehmen)
 Überprüfen welche Geräte angeschlossen sind
 Welche Schnittstellen stehen zur Verfügung?
 ```java
-String [] port = jssc.SerialPortList.getPortNames();
+private void refresh {
+    /*String*/ [] ports = jssc.SerialPortList.getPortNames(); //wird durch Objekt private String [] ports abgelöst
+    updateSwingControls();
+}
 ```
-
-
-
-
+im Debugging-Modus überprüfen welchen inhalt "ports" besitzt (Schnittstellen werden angezeigt)
+Schnittstelle=Interface(Methodensammlung) ableitbar, nicht instanzierbar
+```java
+jcbSerialDevice.setModel(new DefaultComboBoxModel<String>(ports));
+```
+<E> Klassen typisieren (Generics) wichtig für Fehlerverhinderung durch Compiler
+	wenn möglich hinzufügen
+Ports nicht lokas sondern als object abspeichern
+```java
+private String [] ports;
+```
