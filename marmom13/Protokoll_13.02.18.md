@@ -43,3 +43,14 @@ Das _Modbus-Daten-Modell_ wird in drei Tabellen unterschieden:
 Wie im Bild zu erkennen ist werden In einer Protocol Data Unit Werte von 0 bis 65535, im Modbus data model jedoch Adressen von 1 bis 65536 verwendet werden. Daher ist ein Adress-Mapping erforderlich.  
 Genauer nachzulesen im [Skript](https://lms.at/dotlrn/classes/htl_elektrotechnik/610437.4AHME_LA1.17_18/xolrn/E7BE8C85F66CA/2148F16AC6F2E.symlink?resource_id=0-236827434-257560369&m=view#167572805).  
 
+## Function-Codes  
+
+In einem Modbusframe gibt es immer einen Function-Code der die Bedeutung des Frames definiert. Dabei sind Werte zwischen 1 und 127 für Non-Error-Responses zulässig. Diese werden in drei Bereiche unterteilt:  
+- User defined Function Codes (65-72, 100-110)  
+Dürfen Individuell verwendet werden.  
+- Reserved Function Codes (8 (19,21-65535), 9, 10, 13, 14, 41, 42, 90, 91, 125, 126, 127)  
+Werte die von Unternehmen für Produkte verwendtet wurden.  
+- Public Function Codes (Alle übrigen Werte)  
+Werte die von der Modbus-Community eindeutig festgelegt sind.  
+
+
