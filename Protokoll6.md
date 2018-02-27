@@ -63,6 +63,11 @@ public void updateSwingControls () {
     jbutContinousMeasurement.setEneabled(false);
     jbutStopMeasurement.setEneabled(false);
     
+    if(serialPort != null && serialPort.isOpened()) {
+      jbutDisconnect.setEnabled(true);
+      return;
+    }
+      
     if(ports == null && ports.length == 0) {
         jbutRefresh.setEneabled(true);
     }
@@ -95,7 +100,7 @@ jcbSerialDevice.setModel(new DefaultComboBoxModel<String>(ports));
 ```
 <E> Klassen typisieren (Generics) wichtig für Fehlerverhinderung durch Compiler
 	wenn möglich hinzufügen
-Ports nicht lokas sondern als object abspeichern
+Ports nicht lokal sondern als object abspeichern
 ```java
 private String [] ports;
 private jssc.SerialPort serialPort;
@@ -116,6 +121,7 @@ private void connect () {
         String port = (String)jcbSerialDevice.getSelectedItem();
         serialPort = new jssc.SerialPort(port);
         serialPort.openPort();
+	updateSwingControls();
     } catch (Throwable th) {
         show Throwable("Serielle Schnittstelle kann nicht geöffnet werden", th);
     }
@@ -123,12 +129,31 @@ private void connect () {
 ```
 
 ```java
+private void disconnect () {
+    try
+    {
+        serialPort.closePort();
+	
+    } 
+    catch (Throwable th)
+    {
+        showThrowable("Fehler beim Schließen der Schnittstelle");
+    }
+    finally {
+      serialPort = null;
+      updateSwingControls();
+    }
+}
+```
+    
+
+```java
 private showThrowable (String msg, Throwable th) {
   th.printStackTrace(System.err);
   JOptionPane.showMessageDialog(this, msg, "Fehler aufgetreten", JOptionPane.ERROR_MESSAGE);
 }
 ```
-
+Exeptionhandling bei Schnittstellenabfrage hinzufügen
 
 ## Ableitungsbaum Fehlerklassen (Baum zeichnen)
 Exception abgeleitet von Throwable, abgeleitet von Object
