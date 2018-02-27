@@ -27,4 +27,7 @@ Die Kommunikation basiert auf einem Server/Vlient Prinzip. Dabei wird vom Client
 Genauer nachzulesen im [Skript](https://lms.at/dotlrn/classes/htl_elektrotechnik/610437.4AHME_LA1.17_18/xolrn/E7BE8C85F66CA/2148F16AC6F2E.symlink?resource_id=0-236827434-257560369&m=view#167572556).  
 
 ## Daten-Modell  
-Das _Modbus-Daten-Modell_ wird in drei Tabellen unterschieden: 
+Das _Modbus-Daten-Modell_ wird in drei Tabellen unterschieden:  
+
+| Art | Definition | Beispiel |
+| :..................: | ........................................................ | .......................... |
