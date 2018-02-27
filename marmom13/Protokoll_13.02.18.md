@@ -56,6 +56,17 @@ Folgende sind in dieser Tabelle beschrieben:
 
 ![Bild](https://github.com/HTLMechatronics/m14-la1-sx/blob/marmom13/marmom13/Functioncodes.png)  
 
+## ASCII Transmission Mode  
+
+Im ASCII Transmission Mode werden die Frame-Bytes als ASCII-Codierte Zeichen versendet. Für die Konfiguration der seriellen Schnittstelle werden Standartmäßig 7-Daten-Bits verwendet. Geräte dürfen im Bedarfsfall aber auch eine davon abweichende Festlegung haben. Der Aufbau sieht folgendermaßen aus:  
+
+![Frame](https://github.com/HTLMechatronics/m14-la1-sx/blob/marmom13/marmom13/modbus_serial_ascii_frame_png.png)  
+
+Jeder Byte-Wert wird als Hex-Zahl-Text angegeben. Dabei sind nur die Zeichen 0 bis 9 und A bis F erlaubt.  
+
+
+
+
 
 
 
