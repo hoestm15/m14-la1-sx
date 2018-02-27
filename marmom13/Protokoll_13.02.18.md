@@ -36,4 +36,7 @@ Das _Modbus-Daten-Modell_ wird in drei Tabellen unterschieden:
 | Input Register | Ein 16-Bit Wert der nur gelesen kann | Sensoren, ADC... |
 | Hold-Registers | Ein 16-Bit Wert der gelesen und beschrieben werden kann | PWM-Einheit, DAC... |  
 
-16 Bit-Werte werden dabei in der Big-Endian Variante versendet, das heißt das im Daten-Frame das höherwertige Byte als erstes versendet wird.
+16 Bit-Werte werden dabei in der Big-Endian Variante versendet, das heißt das im Daten-Frame das höherwertige Byte als erstes versendet wird. ![Bild](https://github.com/HTLMechatronics/m14-la1-sx/blob/marmom13/marmom13/modbus_addressing_model_png.png)  
+Wie im Bild zu erkennen ist werden In einer Protocol Data Unit Werte von 0 bis 65535, im Modbus data model jedoch Adressen von 1 bis 65536 verwendet werden. Daher ist ein Adress-Mapping erforderlich.  
+Genauer nachzulesen im [Skript](https://lms.at/dotlrn/classes/htl_elektrotechnik/610437.4AHME_LA1.17_18/xolrn/E7BE8C85F66CA/2148F16AC6F2E.symlink?resource_id=0-236827434-257560369&m=view#167572805).  
+
