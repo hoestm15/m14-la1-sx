@@ -52,5 +52,12 @@ Dürfen Individuell verwendet werden.
 Werte die von Unternehmen für Produkte verwendtet wurden.  
 - Public Function Codes (Alle übrigen Werte)  
 Werte die von der Modbus-Community eindeutig festgelegt sind.  
+Folgende sind in dieser Tabelle beschrieben:  
+
+![Bild](https://github.com/HTLMechatronics/m14-la1-sx/blob/marmom13/marmom13/Functioncodes.png)  
+
+
+
+
 
 
