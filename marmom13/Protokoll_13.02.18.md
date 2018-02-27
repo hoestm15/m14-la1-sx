@@ -30,4 +30,5 @@ Genauer nachzulesen im [Skript](https://lms.at/dotlrn/classes/htl_elektrotechnik
 Das _Modbus-Daten-Modell_ wird in drei Tabellen unterschieden:  
 
 | Art | Definition | Beispiel |
-|:...:| .......... | ........ |
+|:---:| ---------- | -------- |
+| Discrete Inputs | Ein einzelnes Bit das nur gelesen werden kann | Taster, Endschalter... |
