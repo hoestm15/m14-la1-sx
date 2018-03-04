@@ -27,4 +27,22 @@ Im Disassembly findet man:
 * Speicheradressen der Maschinenbefehle
 * evtl. kurze Beschreibung des Assemblerbefehls
 __________________________________________________
+#### Modifizierer
+Modifizierer | Auswirkung
+-------------|-----------
+volatile | Verhindert, dass diese Variable durch einen festen Wert ersetzt wird. Dies ist zum Beispiel erforderlich, wenn die Variable zwar im Programm nicht verändert wird, aber durch äußere Einflüsse (Interrupts, etc.) verändert werden kann. Dadurch muss man diese Variable wie eine Variable behandeln, auch wenn es sich dabei auf den ersten Blick um einen Festwert handelt. Damit darf die Variable nicht mehr vom Code-Optimierer wegoptimiert werden.
+unsigned | Zeigt an, dass es sich um eine vorzeichenlose Zahl handelt. Dadurch lässt sich im positiven Bereich mit `unsigned int` ein größerer Zahlenbereich abdecken als mit `(signed) int`
+____________________
 #### 1. Übung
+
+Aufgabe war es, folgendes Programm zu analysieren:
+```
+int main(void)  
+{  
+  volatile unsigned char x;   
+  x=10+23; 
+  
+  return x;  
+}  
+```  
+Die entsprechenden Maschinenbefehle dazu sind: 
