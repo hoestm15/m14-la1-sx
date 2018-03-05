@@ -59,7 +59,17 @@ int main(void)
 ```
 
 Die entsprechenden Maschinenbefehle dazu sind: 
-
-
+Assemblerbefehl | Beschreibung
+--------------- | --------- 
+`PUSH` | Der Inhalt eines internen Registers wird am Stack abgelegt
+`RCALL` | Eine Subroutine wird aufgerufen, die Rücksprungadresse wird am Stack abgelegt
+`IN` | Der Inhalt eines I/O-Registers wird in ein internes Register geladen
+`LDI` | Ein Zahlenwert wird in ein internes Register geladen
+`STD` | Der Inhalt eines Registers wird am Stack abgelegt
+`LDD` | Der mit `STD` abgelegte Wert wird wieder eingelesen
+`ADD` | Addieren ohne Rücksicht auf das Carry-Flag
+`ADC` | Addieren mit Rücksichtnahme auf das Carry-Flag 
+`POP` | Variable vom Stack nehmen (Speicherplatz freigeben)
+`RET` | Rücksprung von der Subroutine zum rufenden Maschienenbefehl
 
 [siehe auch: ATMEL Instruction Set Manual](http://www.atmel.com/images/Atmel-0856-AVR-Instruction-Set-Manual.pdf)
