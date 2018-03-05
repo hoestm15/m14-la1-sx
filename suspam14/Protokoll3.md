@@ -42,7 +42,7 @@ Das/Der Disassembly enthält:
 * Mit **unsigned** wird eine Variable nicht vorzeichenbehaftet. In dem Datentyp ``` char ``` kann man somit einen Wert zwischen 0 und 255 statt von -128 bis 127 speichern.
 
 ## Startup Code
-Der Startup Code bringt den Mikroprozessor in einen Zustand der es ermöglicht den Programm Code fehlerfrei abzuarbeiten.
+Der Startup Code bringt den Mikroprozessor in einen Zustand, der es ermöglicht den Programm Code fehlerfrei abzuarbeiten.
 
 ## Übungsbeispiele
 
