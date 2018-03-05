@@ -41,6 +41,9 @@ Das/Der Disassembly enthält:
 > Dies wurde bei unseren Übungen benötigt damit der Compiler die Gleichungen nicht selber löst, sondern wir den Rechenverlauf im Dissassembly nachvollziehen können. 
 * Mit **unsigned** wird eine Variable nicht vorzeichenbehaftet. In dem Datentyp ``` char ``` kann man somit einen Wert zwischen 0 und 255 statt von -128 bis 127 speichern.
 
+## Startup Code
+Der Startup Code bringt den Mikroprozessor in einen Zustand der es ermöglicht den Programm Code fehlerfrei abzuarbeiten.
+
 ## Übungsbeispiele
 
 ### Übung 1: Zuweisen einer Konstante
@@ -144,8 +147,7 @@ Um eine Schleife zu bauen wird der Assembler Befehl **BRNE (Branch if not equal)
 
 
 ## Prozessorgeschwindigkeit
-Testen der Prozessorgeschwindigkeit für verschiedene Rechenoperationen und Datentypen
-
+### Testen der Prozessorgeschwindigkeit für verschiedene Rechenoperationen und Datentypen
 Rechenoperation | Datentyp | benötigte Takte
 --- | --- | ---
 Addition | 8 bit int | 46
