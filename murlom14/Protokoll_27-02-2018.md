@@ -21,5 +21,14 @@ Mit Hilfe dieser Variable kann abgefragt werden ob ein Port geöffnet ist.
 ```java
 private jssc.SerialPort serialPort;
 ```
-
+#### SureModbusGUI (Konstruktor)
+```java
+public SureModbusGui () {
+    initComponents();
+    setLocationRelativeTo(null);    // Die GUI wird mittig am Bildschirmm ausgegeben
+    jlaTemperatur.setText("? °C");  // Die Temperatur ist anfangs unbekannt (noch nicht mit Sureboard verbunden) 
+    
+    refresh();                      // Die Methode refresh(); wird aufgerufen
+  }
+```
 
