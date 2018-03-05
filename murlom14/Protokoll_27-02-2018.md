@@ -48,7 +48,7 @@ private void refrehPorts () {
 ```java
 public void updateSwingControls ()
   {
-    jcbSerialDevice.setEnabled(false);                  // bei jedem aufruf dieser Methode werden alle Buttons/Combobox deaktiviert
+    jcbSerialDevice.setEnabled(false);                  // bei jedem aufruf dieser Methode werden alle Buttons/Combobox zuerst deaktiviert
     jbutConnect.setEnabled(false);
     jbutDisconnect.setEnabled(false);
     jbutRefresh.setEnabled(false);
@@ -56,22 +56,23 @@ public void updateSwingControls ()
     jbutContinousMeasurement.setEnabled(false);
     jbutStopMeasurement.setEnabled(false);
     
-    if(serialPort != null && serialPort.isOpened())     // wenn ein port erkannt wurde und der Port geöffnet ist (verbunden) wird der Button Trennen wieder aktiviert
+    if(serialPort != null && serialPort.isOpened())     // wenn ein port erkannt wurde und der Port geöffnet ist (verbunden) 
     {
-      jbutDisconnect.setEnabled(true);
+      jbutDisconnect.setEnabled(true);                  // wird der Button Trennen wieder aktiviert
       return;
     }
     
-    if(ports == null || ports.length == 0)
+    if(ports == null || ports.length == 0)              // solange kein port erkannt/verbunden ist
+    
     {
-      jbutRefresh.setEnabled(true);
+      jbutRefresh.setEnabled(true);                     // wird der Button "Aktualisieren" aktiviert
     }
     
-    if(ports != null && ports.length > 0)
+    if(ports != null && ports.length > 0)               // sobald ein port erkannt wurde 
     {
-      jcbSerialDevice.setEnabled(true);
-      jbutConnect.setEnabled(true);
-      jbutRefresh.setEnabled(true);
+      jcbSerialDevice.setEnabled(true);                 // wird die Combobox aktiviert
+      jbutConnect.setEnabled(true);                     // der "Verbinden" Button aktiviert
+      jbutRefresh.setEnabled(true);                     // und der "Aktualisieren" Button aktiviert
     }
   }
 ```
