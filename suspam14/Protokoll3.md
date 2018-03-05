@@ -54,12 +54,22 @@ int main (void)
   return x;  
 } 
 ```
+Maschinenbefehl | Assembler Befehl | Beschreibung
+--- | --- | ---
+cf.93 | PUSH R28 | R28 wird am Stack abgelegt, weil die XYZ- Register nicht während eines Funktionaufruf geändert werden dürfen
+df.93 | PUSH R29 | R29 wird am Stack abgelegt, weil die XYZ- Register nicht während eines Funktionaufruf geändert werden dürfen
+1f.92 | PUSH R1 | Stackpointer wird um 1 erhöht um Platz für eine variable zu schaffen
+cd.b7 | IN R28,0x3D | Der Stackpointer wird in R28 geladen (Y- Register)
+de.b7 | IN R29,0x3E | Der Stackpointer wird in R29 geladen (Y- Register)
+81.e2 | LDI R24,0x21 | Die Konstante 33 wird in R24 geschrieben
+89.83 | STD Y+1,R24 | Die Konstante aus R24 wird am Stack abgelegt (aufgrund von volatile)
+89.81 | LDD R24,Y+1 | Die Konstante wird aus dem Stack geladen 
+90.e0 | LDI R25,0x00 | Rückgabewert
+0f.90 | POP R0 | Variable wird freigegeben
+df.91 | POP R29 | Y Register wird vom Stack zurückgeholt
+cf.91 | POP R28 | Y Register wird vom Stack zurückgeholt
+08.95 | RET | Programmende
 
-12: {  
-00000040 cf.93                PUSH R28		Push register on stack  
-00000041 df.93                PUSH R29		Push register on stack   
->Pushed Register vom Stack
->R26 bis R31 dürfen bei Funktionsaufruf nicht verändert werden  
 
 00000042 1f.92                PUSH R1		Push register on stack  
 >erhöht Stackpointer um 1 -> definition von Variable  
@@ -105,7 +115,7 @@ int main(void)
 
 00000044 cd.b7                IN R28,0x3D		In from I/O location  
 00000045 de.b7                IN R29,0x3E		In from I/O location  
->Y=SP  
+>Y=SP   
     13: 	volatile unsigned char a=10;  
 00000046 8a.e0                LDI R24,0x0A		Load immediate   
 00000047 89.83                STD Y+1,R24		Store indirect with displacement  
