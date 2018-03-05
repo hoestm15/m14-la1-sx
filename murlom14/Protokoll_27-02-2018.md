@@ -48,7 +48,7 @@ private void refrehPorts () {
 ```java
 public void updateSwingControls ()
   {
-    jcbSerialDevice.setEnabled(false);
+    jcbSerialDevice.setEnabled(false);                  // bei jedem aufruf dieser Methode werden alle Buttons/Combobox deaktiviert
     jbutConnect.setEnabled(false);
     jbutDisconnect.setEnabled(false);
     jbutRefresh.setEnabled(false);
@@ -56,12 +56,11 @@ public void updateSwingControls ()
     jbutContinousMeasurement.setEnabled(false);
     jbutStopMeasurement.setEnabled(false);
     
-    if(serialPort != null && serialPort.isOpened())
+    if(serialPort != null && serialPort.isOpened())     // wenn ein port erkannt wurde und der Port geöffnet ist (verbunden) wird der Button Trennen wieder aktiviert
     {
       jbutDisconnect.setEnabled(true);
       return;
     }
-    
     
     if(ports == null || ports.length == 0)
     {
@@ -74,7 +73,6 @@ public void updateSwingControls ()
       jbutConnect.setEnabled(true);
       jbutRefresh.setEnabled(true);
     }
-    
   }
 ```
 
