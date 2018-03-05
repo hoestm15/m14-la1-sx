@@ -146,18 +146,19 @@ Um eine Schleife zu bauen wird der Assembler Befehl **BRNE (Branch if not equal)
 ## Prozessorgeschwindigkeit
 Testen der Prozessorgeschwindigkeit für verschiedene Rechenoperationen und Datentypen
 
-Addition dauert 46 Takte  
-Multiplikation dauert 47 Takte  
-Division dauert 123 Takte  
-32 bit + 32 bit dauert 92 Takte  
-32 bit * 32 bit dauert 165 Takte  
-32 bit / 32 bit dauert 701 Takte  
+Rechenoperation | Datentyp | benötigte Takte
+--- | --- | ---
+Addition | 8 bit int | 46
+Multiplikation | 8 bit int |47
+Division | 8 bit int | 123
+Addition | 32 bit int | 92
+Multiplikation | 32 bit int |165
+Division | 32 bit int| 701
+Addition | float | 911
+Multiplikation | float |1763
+Division | float| 1380
+Addition | double | 911
+Multiplikation | double |1763
+Division | double| 1380
 
-float + float dauert 911 Takte  
-float * float dauert 1763 Takte  
-float / float dauert 1380 Takte  
-
-double + double dauert 911  
-double * double dauert 1763  
-double / double dauert 1380  
-double dauert gleich lang wie float, weil bei einem avr µc statt double nur float verwendet wird
+Es ist zu erkennen das der Prozessor für Rechenoperationen mit float und double exakt gleich lange braucht. Das liegt daran das der avr-gcc Compiler beim kompilieren keine doppeltgenauen Fließkommazahlen zulässt und statt diesen float verwendet.
