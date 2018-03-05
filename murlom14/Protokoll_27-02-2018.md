@@ -17,18 +17,42 @@ Für das Java-Prgramm wurde uns eine [Vorlage](https://github.com/HTLMechatronic
 ### Quellcode
 
 #### Klassenvariable
-Mit Hilfe dieser Variable kann abgefragt werden ob ein Port geöffnet ist.
 ```java
-private jssc.SerialPort serialPort;
+private SerialPort serialPort;     // gibt an ob ein Port geöffnet ist
+private String [] ports;                // wird vverwendet um den Namen eines Ports zu "speichern"
 ```
-#### SureModbusGUI (Konstruktor)
+#### SureModbusGUI () (Konstruktor)
 ```java
 public SureModbusGui () {
     initComponents();
     setLocationRelativeTo(null);    // Die GUI wird mittig am Bildschirmm ausgegeben
     jlaTemperatur.setText("? °C");  // Die Temperatur ist anfangs unbekannt (noch nicht mit Sureboard verbunden) 
     
-    refresh();                      // Die Methode refresh(); wird aufgerufen
+    refresh();                      // Die Methode refresh() wird aufgerufen
   }
 ```
+#### refresh ()
+```java
+private void refrehPorts () {
+    ports = jssc.SerialPortList.getPortNames();                                 // der Portname wird in ports geschreiben
+    System.out.println(ports);                                                  // gibt ports aus
+    DefaultComboBoxModel <String> model = new DefaultComboBoxModel (ports)      // neues Model erzeugt
+    jcbSerialDevice.setModel(model);                                            // Model wird gesetzt 
+    
+    updateSwingControls();                                                      // Die Methode updateSwingControls() wird aufgerufen
+    
+  }
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
