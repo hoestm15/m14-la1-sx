@@ -1,3 +1,28 @@
+# Protokoll 3: Microcontroller
+Name: Patrick Schuster
+Klasse: 4AHME  
+Gruppe: 3    
+Anwesend: Reinbacher, Ruffenacht, Sackl, Sackl, Sammer, Schmuck, Schuster  
+Abwesend: keiner
+
+## Wiederholung der 2. Einheit
+Zu Beginn der Stunde haben wir die einzelnen Funktionen des Prozessorfensters in Atmel Studio, die CPU Register und dissambly wiederholt.  
+### CPU-Register
+Register | Verwendung
+--- | ---
+R1 | hat immer den Wert 0x00  
+R8 - R25 | für Parameter und Rückgabewerte  
+R26 & R27 | X-register  
+R28 & R29 | Y-Register  
+R30 & R31 | Z-Register  
+
+[Protokoll der 2. Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/suspam14/suspam14/Protokoll2.md)
+
+## deklarieren, definieren und initialisieren
+* **deklarieren** Es wird eine Variable benannt und dem Compiler bekannt gegeben.
+* **definieren** Es wird der Variable ein Speicherbereich zugewiesen
+* **initialisieren** Es wird der Variable ein initialer Anfangswert zugewiesen
+
 12: {  
 00000040 cf.93                PUSH R28		Push register on stack  
 00000041 df.93                PUSH R29		Push register on stack   
