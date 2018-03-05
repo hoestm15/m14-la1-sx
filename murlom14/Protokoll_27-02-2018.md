@@ -127,9 +127,24 @@ private void disconnect()
   }
 ```
 
+#### ActionPerformed ()
+```java
+private void jbutConnectActionPerformed(java.awt.event.ActionEvent evt)                                            
+  {                                                
+    connect ();                                                               // beim drücken des Button "Verbinden" wird die Methode connect() aufgerufen
+  } 
+  
+  private void jbutRefreshActionPerformed(java.awt.event.ActionEvent evt)                                            
+  {                                                
+    refresh();                                                                // beim drücken des Button "Aktualisieren" wird die Methode refresh() aufgerufen
+  }                                           
 
+  private void jbutDisconnectActionPerformed(java.awt.event.ActionEvent evt)                                               
+  {                                                   
+    disconnect();                                                             // beim drücken des Button "Trennen" wird die Methode disconnect() aufgerufen
+  }                                              
 
-
+```
 
 
 
