@@ -5,5 +5,5 @@ Name: Muri Lorenz <br>
 Klasse: 4AHME <br>
 Gruppe: 2 <br>
 Datum der Einheit: 6.2.2018 <br>
-Anwesend: Nebel Florian, Mandl Gerhard,  Moritz Martinak,  Muri Lorenz, Platzer Andreas, Michael Mörth, Mario Nabernik, Marcel Köhler<br>
+Anwesend: Nebel, Mandl, Martinak, Muri, Platzer, Mörth, Nabernik, Köhler<br>
 Abwesend: - <br>
