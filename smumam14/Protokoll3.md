@@ -58,15 +58,16 @@ int main(void)
 } 
 ```
 
-Die entsprechenden Maschinenbefehle dazu sind: 
+Die entsprechenden Maschinenbefehle dazu sind:
+
 Assemblerbefehl | Beschreibung
 --------------- | ------------ 
 `PUSH` | Der Inhalt eines internen Registers wird am Stack abgelegt
 `RCALL` | Eine Subroutine wird aufgerufen, die Rücksprungadresse wird am Stack abgelegt
 `IN` | Der Inhalt eines I/O-Registers wird in ein internes Register geladen
 `LDI` | Ein Zahlenwert wird in ein internes Register geladen
-`STD` | Der Inhalt eines Registers wird am Stack abgelegt
-`LDD` | Der mit `STD` abgelegte Wert wird wieder eingelesen
+`STD` | Der Inhalt eines Registers wird gespeichert
+`LDD` | Der mit `STD` abgelegte Wert wird wieder in ein Register eingelesen
 `ADD` | Addieren ohne Rücksicht auf das Carry-Flag
 `ADC` | Addieren mit Rücksichtnahme auf das Carry-Flag 
 `POP` | Variable vom Stack nehmen (Speicherplatz freigeben)
