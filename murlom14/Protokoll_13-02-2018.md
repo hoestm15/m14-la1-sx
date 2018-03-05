@@ -25,7 +25,7 @@ Mit Hilfe des Modbus kann ein "Master" mit mehreren "Slaves" kommunizieren.
 Der "Master" ist zum Beispiel ein Computer, dieser kann mit mehreren "Slaves" wie zum Beispiel Sensoren oder Aktoren Daten austauschen. 
 Jeder Slave besitzt eine bestimmte Adresse (mit 1 beginnend) durch diese Adresse kann der Master entscheiden von welchem Slave er gerade Daten erhalten möchte.
 
-![Modbus-Darstellung](https://github.com/HTLMechatronics/m14-la1-sx/blob/murlom14/modbus_system.gif)
+![Modbus-Darstellung](https://github.com/HTLMechatronics/m14-la1-sx/blob/murlom14/murlom14/modbus_system.gif)
 
 Die Daten können über drei Arten übertragen werden:
 * Modbus RTU
@@ -34,23 +34,7 @@ Die Daten können über drei Arten übertragen werden:
 
 ### Kommunikationsablauf
 Der Kommunikationsablauf beruht auf einem Server/Client Prinzip. Der Client (Master) sendet einen Request zum Server (Slave). Dieser antworter mit einer Response. Der Client erreicht den Server über dessen eindeutige Adresse.
-![Modbus-Client-Server](https://github.com/HTLMechatronics/m14-la1-sx/blob/murlom14/modbus_transaction_error_free_png.png)
+![Modbus-Client-Server](https://github.com/HTLMechatronics/m14-la1-sx/blob/murlom14/murlom14/modbus_transaction_error_free_png.png)
 Der Function code wird für "Fehlermeldungen" verwendet, die Werte 1 bis 127 werden übergeben beigültigen Responses und die Werte 128 bis 255 werden bei fehlerhaften Responses übergeben.
 
 Siehe auch: [Modbus-eBook](https://lms.at/dotlrn/classes/htl_elektrotechnik/610437.4AHME_LA1.17_18/xolrn/E7BE8C85F66CA/2148F16AC6F2E.symlink?resource_id=0-236827434-257560369&m=view#167572556)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
