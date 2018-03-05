@@ -37,10 +37,10 @@ ____________________
 
 Aufgabe war es, folgende Programme zu analysieren:
 ```c
-int main(void)  
+int main (void)  
 {  
   volatile unsigned char x;   
-  x= 10 + 23; 
+  x = 10 + 23; 
   
   return x;  
 }  
@@ -48,7 +48,7 @@ int main(void)
   
   
 ```c
-int main(void)  
+int main (void)  
 {  
   volatile unsigned char a = 10;  
   volatile unsigned char b = 20;  
@@ -74,13 +74,13 @@ Assemblerbefehl | Beschreibung
 `RET` | Rücksprung von der Subroutine zum rufenden Maschienenbefehl
 
 [siehe auch: ATMEL Instruction Set Manual](http://www.atmel.com/images/Atmel-0856-AVR-Instruction-Set-Manual.pdf)
-______________________________________________________-
+______________________________________________________
 #### Geschwindigkeitstest
 Operation | Takte | Anmerkungen
 ----------|-------|------------
 8 Bit + 8 Bit | 46 | -
 8 Bit x 8 Bit | 47 | -
-8 Bit / 8 Bit | 123 | Längere Dauer, da es keinen eigenen Maschinenbefehl zum dividieren gibt. Hier wird nämlich z.B. rotiert und subtrahiert, und das alles in Schleifen, (wie händisch dividieren). Dadurch ist die lange Dauer zu erklären.
+8 Bit / 8 Bit | 123 | Längere Dauer, da es keinen eigenen Maschinenbefehl zum dividieren gibt. Hier wird nämlich z.B. rotiert und subtrahiert, und das alles in Schleifen (wie händisch dividieren). Dadurch ist die lange Dauer zu erklären.
 32 Bit + 32 Bit | 92 | -
 32 Bit x 32 Bit | 165 | -
 32 Bit / 32 Bit | 701 | Hier gilt das selbe wie für die 8-Bit-Division
@@ -88,3 +88,21 @@ float + float | 905 | -
 float x float | 1763 | -
 float / float | 1380 | Normalerweise ist eine Multiplikation immer schneller als eine Division. Hier liegt offensichtlich eine Ausnahme vor, welche darin begründet sein mag, dass sich unsere zufällig gewählten Werte sehr leicht dividieren ließen
 double / double | 1380 | kein Unterschied zu float, da der µC keine doppeltgenauen Fließkommazahlen kennt, und deshalb, auch wenn double im Quellcode steht, intern nur mit einfacher Genauigkeit rechnet
+_________________________________________________________
+#### 3. Übung (Schleifen)
+
+```c
+int main (void)  
+{  
+  volatile int i;  
+  volatile int a;  
+  
+  for (i = 0; i < 10; i ++)  
+  {  
+    a += 10;  
+  }
+  
+  return a;
+}  
+```
+Hier ist der Befehl `BRNE` ( = Branch if Not Equal) ausschlaggebend. Er vergleicht den Inhalt des Registers, in dem die Laufvariable der Schleife steht, mit dem Z-Flag und bricht ab, sobald diese gleich sind. 
