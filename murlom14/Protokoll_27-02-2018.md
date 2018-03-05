@@ -45,7 +45,7 @@ private void refrehPorts () {
 ```
 
 #### updateSwingControls ()
-````java
+```java
 public void updateSwingControls ()
   {
     jcbSerialDevice.setEnabled(false);
