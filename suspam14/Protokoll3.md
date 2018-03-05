@@ -71,29 +71,6 @@ cf.91 | POP R28 | Y Register wird vom Stack zurückgeholt
 08.95 | RET | Programmende
 
 
-00000042 1f.92                PUSH R1		Push register on stack  
->erhöht Stackpointer um 1 -> definition von Variable  
-
-00000043 cd.b7                IN R28,0x3D		In from I/O location  
-00000044 de.b7                IN R29,0x3E		In from I/O location  
->Lädt Stackpointer in Y-Register
-
-14: 	x=10+23;
-00000045 81.e2                LDI R24,0x21		Load immediate 
-00000046 89.83                STD Y+1,R24		Store indirect with displacement 
->wegen volatile  
-
-15: 	return x;
-00000047 89.81                LDD R24,Y+1		Load indirect with displacement 
-
-    16: }
-00000048 90.e0                LDI R25,0x00		Load immediate 
-00000049 0f.90                POP R0		Pop register from stack 
-0000004A df.91                POP R29		Pop register from stack 
-0000004B cf.91                POP R28		Pop register from stack 
-0000004C 08.95                RET 		Subroutine return 
-
-
 ### Übung 2: Addition von zwei Variablen
 
 ```
@@ -106,48 +83,38 @@ int main(void)
 }
 ```
 
-12: {
-00000040 cf.93                PUSH R28		Push register on stack  
-00000041 df.93                PUSH R29		Push register on stack  
-00000042 00.d0                RCALL PC+0x0001		Relative call subroutine  
-00000043 00.d0                RCALL PC+0x0001		Relative call subroutine  
->Macht Platz am Stack  
+Maschinenbefehl | Assembler Befehl| Beschreibung  
+--- | --- | --- 
+cf.93 | PUSH R28 | R28 wird am Stack abgelegt, weil die XYZ- Register nicht während eines Funktionaufruf geändert werden dürfen
+df.93 | PUSH R29 | R29 wird am Stack abgelegt, weil die XYZ- Register nicht während eines Funktionaufruf geändert werden dürfen
+00.d0 | RCALL PC+0x0001 | Zum Weiterspringen wird die Rücksprungadresse wird am Stack abgelegt
+00.d0 | RCALL PC+0x0001 | Zum Weiterspringen wird die Rücksprungadresse wird am Stack abgelegt  
+cd.b7 | IN R28,0x3d | Der Stackpointer wird in R28 geladen (Y- Register)  
+de.b7 | IN R29,0x3e | Der Stackpointer wird in R29 geladen (Y- Register) 
+8a.e0 | LDI R24,0x0A | Die Konstante  10 wird in R24 geschrieben
+89.83 | STD Y+1,R24 | R24 wird am Stack, an der Stelle Stackpointer +1, abgelegt Variable a 
+84.e1 | LDI R24,0x14 | Die Konstante 20 wird in R24 geschrieben.
+8a.83 | STD Y+2,R24 | R24 wird am Stack, an der Stelle Stackpointer +2, abgelegt Variable b  
+29.81 | LDD R18,Y+1 | Variable a wird in R18 geladen 
+8a.81 | LDD R24,Y+2 | Variable b wird in R24 geladen 
+90.e0 | LDI R25, 0x00 | Der Wert 0 wird in R25 geschrieben  
+82.0f | ADD R24,R18 | R18 & R24 werden ohne Berücksichtigung des C-Flags addiert und in R24 gespeichert
+91.1d | ADC R25,R1 | R1 & R24 werden mit Berücksichtigung des C-Flags addiert     
+9c.83 | STD Y+4,R25| Ergebnis der zweiten Addition wird der Variable e im Stack zugewiesen   
+8b.83 | STD Y+3,R24| Ergebnis der ersten Addition wird der Variable e im Stack zugewiesen
+2b.81 | LDD R18, Y+3 | Die Variable e wird vom Stack in R18 geladen (aufgrund von volatile)
+3c.81 | LDD R19, Y+4 | Die Variable e wird vom Stack in R19 geladen (aufgrund von volatile) 
+82.2f | MOV R24,R18 | Die Variable e wird nach R24 verschoben  
+93.2f | MOV R25,R19 | Die Variable e wird nach R25 verschoben. 
+0f.90 | POP R0 | Variable e wird freigegeben 
+0f.90 | POP R0 | Variable e wird freigegeben  
+0f.90 | POP R0 | Variable b wird freigegeben  
+0f.90 | POP R0 | Variable a wird freigegeben  
+df.91 | POP R29 | R29 wird freigegeben   
+cf.91 | POP R28 | R28 wird freigegeben  
+|| RET| Return to Subroutine  
 
-00000044 cd.b7                IN R28,0x3D		In from I/O location  
-00000045 de.b7                IN R29,0x3E		In from I/O location  
->Y=SP   
-    13: 	volatile unsigned char a=10;  
-00000046 8a.e0                LDI R24,0x0A		Load immediate   
-00000047 89.83                STD Y+1,R24		Store indirect with displacement  
-    14: 	volatile unsigned char b=20;
-00000048 84.e1                LDI R24,0x14		Load immediate  
-00000049 8a.83                STD Y+2,R24		Store indirect with displacement  
-    15: 	volatile int e=a+b;
-0000004A 29.81                LDD R18,Y+1		Load indirect with displacement  
-0000004B 8a.81                LDD R24,Y+2		Load indirect with displacement  
-0000004C 90.e0                LDI R25,0x00		Load immediate  
-
-0000004D 82.0f                ADD R24,R18		Add without carry  
-0000004E 91.1d                ADC R25,R1		Add with carry  
->R18 + R24 = R25  
-
-0000004F 9c.83                STD Y+4,R25		Store indirect with displacement  
-00000050 8b.83                STD Y+3,R24		Store indirect with displacement  
->speichert R25 am Stack 
-
-    16: 	return e;
-00000051 8b.81                LDD R24,Y+3		Load indirect with displacement  
-00000052 9c.81                LDD R25,Y+4		Load indirect with displacement  
-    17: }
-00000053 0f.90                POP R0		Pop register from stack 
-00000054 0f.90                POP R0		Pop register from stack 
-00000055 0f.90                POP R0		Pop register from stack 
-00000056 0f.90                POP R0		Pop register from stack 
-00000057 df.91                POP R29		Pop register from stack 
-00000058 cf.91                POP R28		Pop register from stack
-> Leert Stack
-
-
+### Übung 3: Addition mit einer Schleife
 
 ```
 int main(void)
@@ -161,15 +128,20 @@ int main(void)
 	return 0;
 }
 ```
-    17: 		x+=10;
-00000048 89.81                LDD R24,Y+1		Load indirect with displacement 
-00000049 9a.81                LDD R25,Y+2		Load indirect with displacement 
-0000004A 0a.96                ADIW R24,0x0A		Add immediate to word 
-0000004B 9a.83                STD Y+2,R25		Store indirect with displacement 
-0000004C 89.83                STD Y+1,R24		Store indirect with displacement 
-0000004D 21.50                SUBI R18,0x01		Subtract immediate 
-    15: 	for(i=0;i<10;i++)
-0000004E c9.f7                BRNE PC-0x06		Branch if not equal 
+> In dieser Tabelle befindet sich nur die Schleife des Programms. Der Startup Code und das Ende wurde weggelassen da diese Teile des Programms nichts neues beinhalten.  
+
+Maschinenbefehl | Assembler Befehl| Beschreibung  
+--- | --- | --- 
+89.81 | LDD R24,Y+1 | Variable x wird in R24 geladen
+9a.81 | LDD R25,Y+2 | Variable x wird in R25 geladen
+0a.96 | ADIW R24,0x0A | Zur Variable x wird 10 addiert
+9a.83 | STD Y+2,R25 | R25 wird am Stack, an der Stelle Stackpointer +,2 abgelegt
+89.83 | STD Y+1,R24 | R24 wird am Stack, an der Stelle Stackpointer +,2 abgelegt
+21.50 | SUBI R18,0x01 | Vom Zähler der Schleife wird 1 abgezogen. Der Zähler wird in R18 gespeichert
+c9.f7 | BRNE PC-0x06 | Wenn der Zähler nicht 0 ist springt das Programm 6 Schritte zurück (Schleife)
+
+Um eine Schleife zu bauen wird der Assembler Befehl **BRNE (Branch if not equal)** benötigt. Dieser führt eine Befehlskette so lange aus bis eine gewisse Bedienung erfüllt ist. Diese Bedienung ist in der Regel das im Zählerregister 0 steht. Der Befehl vergleicht das Zero-Flag, wenn dieses gesetzt ist verlässt er die Schleife.
+
 
 ## Prozessorgeschwindigkeit
 Testen der Prozessorgeschwindigkeit für verschiedene Rechenoperationen und Datentypen
