@@ -1,12 +1,12 @@
 # Protokoll 3: Microcontroller
-Name: Patrick Schuster
+Name: Patrick Schuster  
 Klasse: 4AHME  
 Gruppe: 3    
 Anwesend: Reinbacher, Ruffenacht, Sackl, Sackl, Sammer, Schmuck, Schuster  
 Abwesend: keiner
 
 ## Wiederholung der 2. Einheit
-Zu Beginn der Stunde haben wir die einzelnen Funktionen des Prozessorfensters in Atmel Studio, die CPU Register und dissambly wiederholt.  
+Zu Beginn der Stunde haben wir die einzelnen Funktionen des Prozessorfensters in Atmel Studio, die CPU Register und Dissambly wiederholt.  
 ### CPU-Register
 Register | Verwendung
 --- | ---
@@ -16,12 +16,44 @@ R26 & R27 | X-register
 R28 & R29 | Y-Register  
 R30 & R31 | Z-Register  
 
+### Prozessorfenster
+Das Prozessorfenster enthält:  
+* Program Counter
+* Cyclic Counter
+* Stackpointer
+* Inhalt der Register
+* Frequenz
+### Disassembly
+Das/Der Disassembly enthält:
+* Maschinenbefehl 
+* Assembler Befehl
+* Speicheradressen der Befehle 
+
 [Protokoll der 2. Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/suspam14/suspam14/Protokoll2.md)
 
 ## deklarieren, definieren und initialisieren
 * **deklarieren** Es wird eine Variable benannt und dem Compiler bekannt gegeben.
 * **definieren** Es wird der Variable ein Speicherbereich zugewiesen
 * **initialisieren** Es wird der Variable ein initialer Anfangswert zugewiesen
+
+## Schlüsselwörter für Datentypen
+* Mit **volatile**  wird verhindert das der Compiler beim kompilieren diese Variable "wegoptimiert". 
+> Dies wurde bei unseren Übungen benötigt damit der Compiler die Gleichungen nicht selber löst, sondern wir den Rechenverlauf im Dissassembly nachvollziehen können. 
+* Mit **unsigned** wird eine Variable nicht vorzeichenbehaftet. In dem Datentyp ``` char ``` kann man somit einen Wert zwischen 0 und 255 statt von -128 bis 127 speichern.
+
+## Übungsbeispiele
+
+### Übung 1: Zuweisen einer Konstante
+
+```
+int main (void)  
+{  
+  volatile unsigned char x;   
+  x = 10 + 23; 
+  
+  return x;  
+} 
+```
 
 12: {  
 00000040 cf.93                PUSH R28		Push register on stack  
@@ -50,6 +82,9 @@ R30 & R31 | Z-Register
 0000004A df.91                POP R29		Pop register from stack 
 0000004B cf.91                POP R28		Pop register from stack 
 0000004C 08.95                RET 		Subroutine return 
+
+
+### Übung 2: Addition von zwei Variablen
 
 ```
 int main(void)
@@ -103,21 +138,7 @@ int main(void)
 > Leert Stack
 
 
-Addition dauert 46 Takte  
-Multiplikation dauert 47 Takte  
-Division dauert 123 Takte  
-32 bit + 32 bit dauert 92 Takte  
-32 bit * 32 bit dauert 165 Takte  
-32 bit / 32 bit dauert 701 Takte  
 
-float + float dauert 911 Takte  
-float * float dauert 1763 Takte  
-float / float dauert 1380 Takte  
-
-double + double dauert 911  
-double * double dauert 1763  
-double / double dauert 1380  
-double dauert gleich lang wie float, weil bei einem avr µc statt double nur float verwendet wird
 ```
 int main(void)
 {
@@ -139,3 +160,22 @@ int main(void)
 0000004D 21.50                SUBI R18,0x01		Subtract immediate 
     15: 	for(i=0;i<10;i++)
 0000004E c9.f7                BRNE PC-0x06		Branch if not equal 
+
+## Prozessorgeschwindigkeit
+Testen der Prozessorgeschwindigkeit für verschiedene Rechenoperationen und Datentypen
+
+Addition dauert 46 Takte  
+Multiplikation dauert 47 Takte  
+Division dauert 123 Takte  
+32 bit + 32 bit dauert 92 Takte  
+32 bit * 32 bit dauert 165 Takte  
+32 bit / 32 bit dauert 701 Takte  
+
+float + float dauert 911 Takte  
+float * float dauert 1763 Takte  
+float / float dauert 1380 Takte  
+
+double + double dauert 911  
+double * double dauert 1763  
+double / double dauert 1380  
+double dauert gleich lang wie float, weil bei einem avr µc statt double nur float verwendet wird
