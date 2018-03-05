@@ -146,8 +146,21 @@ private void jbutConnectActionPerformed(java.awt.event.ActionEvent evt)
 
 ```
 
+##### Wenn das Programm gestartet wird
+* Wenn das Sureboard nicht verbunden ist, wird "? °C" angezeigt
+* Der Button "Aktualisieren" ist aktiviert
+* Der Button "Verbinden" ist deaktiviert (bei keiner erkannten Verbindung)
+* Der Button "Trennen" ist deaktiviert (bei keiner erkannten Verbindung)
+* Die Combobox ist deaktiviert (bei keiner erkannten Verbindung)
 
+##### Wenn das Sureboard erkannt wurde aber nicht verbunden
+* Die Combobox istert
+* Der Button "Verbinden" soll eingeblendet werden.
 
+##### Wenn das Sureboard verbunden ist
+* Der Button "Aktualisieren" ist deaktiviert
+* Der Button "Trennen" ist aktiviert
+* Der Button "Verbinden" ist deaktiviert
 
 
 
