@@ -146,7 +146,7 @@ private void jbutConnectActionPerformed(java.awt.event.ActionEvent evt)
 
 ```
 
-##### Wenn das Programm gestartet wird
+##### Wenn das Programm gestartet wird (kein Sureboard erkannt)
 * Wenn das Sureboard nicht verbunden ist, wird "? °C" angezeigt
 * Der Button "Aktualisieren" ist aktiviert
 * Der Button "Verbinden" ist deaktiviert (bei keiner erkannten Verbindung)
@@ -154,13 +154,18 @@ private void jbutConnectActionPerformed(java.awt.event.ActionEvent evt)
 * Die Combobox ist deaktiviert (bei keiner erkannten Verbindung)
 
 ##### Wenn das Sureboard erkannt wurde aber nicht verbunden
-* Die Combobox istert
-* Der Button "Verbinden" soll eingeblendet werden.
+* Die Combobox ist aktiviert
+* Der Button "Verbinden" ist aktiviert
+* Der Button "Aktualisieren" ist aktiviert
+* Der Button "Trennen" ist deaktiviert
 
 ##### Wenn das Sureboard verbunden ist
 * Der Button "Aktualisieren" ist deaktiviert
 * Der Button "Trennen" ist aktiviert
 * Der Button "Verbinden" ist deaktiviert
+
+### Endergebniss der Einheit am 27.02.2018
+![GUI-TemperaturSensor](https://github.com/HTLMechatronics/m14-la1-sx/blob/murlom14/murlom14/GUI-Temperatur.jpg)
 
 
 
