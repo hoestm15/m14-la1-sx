@@ -21,6 +21,7 @@ Für das Java-Prgramm wurde uns eine [Vorlage](https://github.com/HTLMechatronic
 private SerialPort serialPort;     // gibt an ob ein Port geöffnet ist
 private String [] ports;                // wird vverwendet um den Namen eines Ports zu "speichern"
 ```
+
 #### SureModbusGUI () (Konstruktor)
 ```java
 public SureModbusGui () {
@@ -31,18 +32,16 @@ public SureModbusGui () {
     refresh();                      // Die Methode refresh() wird aufgerufen
   }
 ```
-#### refresh ()
+
+#### showThrowable
 ```java
-private void refrehPorts () {
-    ports = jssc.SerialPortList.getPortNames();                                 // der Portname wird in ports geschreiben
-    System.out.println(ports);                                                  // gibt ports aus
-    DefaultComboBoxModel <String> model = new DefaultComboBoxModel (ports)      // neues Model erzeugt
-    jcbSerialDevice.setModel(model);                                            // Model wird gesetzt 
-    
-    updateSwingControls();                                                      // Die Methode updateSwingControls() wird aufgerufen
-    
+private void showThrowable (String msg, Throwable th)
+  {
+    th.printStackTrace(System.err);
+    JOptionPane.showMessageDialog(this, msg, "Fehler !!!", JOptionPane.ERROR_MESSAGE);
   }
 ```
+JNI-Fehler statt als Exception als Error ausgegeben. Daher muss man im catch mittels Throwable alles fangen und anschließend im showThrowable eine/n Warnung/Fehler ausgeben.
 
 #### updateSwingControls ()
 ```java
@@ -77,6 +76,56 @@ public void updateSwingControls ()
   }
 ```
 
+#### refresh ()
+```java
+private void refrehPorts () {
+    ports = jssc.SerialPortList.getPortNames();                                 // der Portname wird in ports geschreiben
+    System.out.println(ports);                                                  // gibt ports aus
+    DefaultComboBoxModel <String> model = new DefaultComboBoxModel (ports)      // neues Model erzeugt
+    jcbSerialDevice.setModel(model);                                            // Model wird gesetzt 
+    
+    updateSwingControls();                                                      // Die Methode updateSwingControls() wird aufgerufen
+    
+  }
+```
+
+#### connect ()
+```java
+private void connect ()
+  {
+    try                                                                                 // try catch für die Fehler behandlung
+    {
+    String port = (String)jcbSerialDevice.getSelectedItem();                            // die ausgewählt Verbindung (in der Combobox) wird port zugewiesen
+    serialPort = new jssc.SerialPort(port);                                             // port wird einem verfügbarem serialPort zugewiesen 
+    serialPort.openPort();                                                              // ein Port wird geöffnet
+    }
+    catch(Throwable th)
+    {
+      showThrowable("Serielle Schnittstelle kann nicht geöffnet werden!", th);          // wenn ein Fehler auftritt wird Funktion showThrowable() zur Fehlerbehandlung aufgerufen
+    }
+  }
+
+```
+
+#### disconnect ()
+```java
+private void disconnect()
+  {
+    try                                                                     // try catch für die Fehler behandlung
+    {
+      serialPort.closePort();                                               // der Port wird geschlossen, die Übertragung beendet
+    }
+    catch (Throwable th)
+    {
+      showThrowable("Schnittstelle kann nicht getrennt werden", th);        // wenn ein Fehler auftritt wird Funktion showThrowable() zur Fehlerbehandlung aufgerufen
+    }
+    finally
+    {
+      serialPort = null;                                                    // der port wird auf null gesetzt
+      updateSwingControls();                                                // die Methode updateSwingControls() wird aufgerufen
+    }
+  }
+```
 
 
 
