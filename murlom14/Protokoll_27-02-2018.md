@@ -18,7 +18,7 @@ Für das Java-Prgramm wurde uns eine [Vorlage](https://github.com/HTLMechatronic
 
 #### Klassenvariable
 ```java
-private SerialPort serialPort;     // gibt an ob ein Port geöffnet ist
+private SerialPort serialPort;          // gibt an ob ein Port geöffnet ist
 private String [] ports;                // wird vverwendet um den Namen eines Ports zu "speichern"
 ```
 
@@ -37,8 +37,8 @@ public SureModbusGui () {
 ```java
 private void showThrowable (String msg, Throwable th)
   {
-    th.printStackTrace(System.err);
-    JOptionPane.showMessageDialog(this, msg, "Fehler !!!", JOptionPane.ERROR_MESSAGE);
+    th.printStackTrace(System.err);                                                         // gibt einen Fehler im Output aus
+    JOptionPane.showMessageDialog(this, msg, "Fehler !!!", JOptionPane.ERROR_MESSAGE);      // Ausgabe eines Fehler (Pop-up-Fenster)
   }
 ```
 JNI-Fehler statt als Exception als Error ausgegeben. Daher muss man im catch mittels Throwable alles fangen und anschließend im showThrowable eine/n Warnung/Fehler ausgeben.
