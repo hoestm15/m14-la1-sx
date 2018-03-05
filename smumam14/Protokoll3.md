@@ -60,7 +60,7 @@ int main(void)
 
 Die entsprechenden Maschinenbefehle dazu sind: 
 Assemblerbefehl | Beschreibung
---------------- | --------- 
+--------------- | ------------ 
 `PUSH` | Der Inhalt eines internen Registers wird am Stack abgelegt
 `RCALL` | Eine Subroutine wird aufgerufen, die Rücksprungadresse wird am Stack abgelegt
 `IN` | Der Inhalt eines I/O-Registers wird in ein internes Register geladen
