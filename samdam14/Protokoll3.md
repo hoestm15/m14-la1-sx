@@ -9,7 +9,7 @@
   
 -----------------------------------------------------------  
 #### Wiederholung Einheit 2  
-*Was findet man im Prozessorfenster? Aufgaben der Bestamdteile?*  
+*Was findet man im Prozessorfenster? Aufgaben der Bestandteile?*  
 * program counter  
 * cyclic counter  
 * X-/Y-/Z-Register  
