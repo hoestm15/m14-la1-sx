@@ -38,9 +38,9 @@ Register | Verwendung
   
 ### Informationen zur Übung:
 
-  **volotaile**
+  **volatile**
   
-  Mit dem Schlüsselwort `volotaile` wir dem Compiler bei der Varaiblendeklaration bekannt gegeben, dass die Variable auch durch analoge Signale von außen verändert werden kann. Das Schlüsselwort wurde verwendet um den Compiler davon abzuhalten,
+  Mit dem Schlüsselwort `volatile` wir dem Compiler bei der Varaiblendeklaration bekannt gegeben, dass die Variable auch durch analoge Signale von außen verändert werden kann. Das Schlüsselwort wurde verwendet um den Compiler davon abzuhalten,
   die einfachen Gleichungen unserer Programme selber zu lösen und im Programm nur mehr zurückzugeben.
   
   **unsignede char**
@@ -71,8 +71,8 @@ Register | Verwendung
 `cd.b7` | IN R28,0x3D | Der Stackpointer (0x3D) wird aus dem I/O Register in R28 (Y-Register) geladen.
 `de.b7` | IN R29,0x3E | Der Stackpointer (0x3E) wird aus dem I/O-Register in R29 (Y-Register) geladen.
 `81.e2` | LDI R24,0x21 | Konstante (0x21 = 12) wiDer Stackpointer (0x3D) wird aus dem I/O-Register in R28 (Y-Registerrd im Register R24 abgelegt.
-`89.83` | STD Y+1,R24 | Konstante aus R24 wird am vorhin reservierten Speicherplatz des Stacks abgelegt. Das ist aufgrund des Schlüsselweortes 'volotaile' nötig, weil die Variable ja von außen verändert werden kann.
-`89.81` | LDD R24,Y+1 | Die Variable wird ins Register R24 geladen. Das ist aufgrund des Schlüsselwortes 'volotaile' nötig, weil die Variable ja von außen verändert werden kann.
+`89.83` | STD Y+1,R24 | Konstante aus R24 wird am vorhin reservierten Speicherplatz des Stacks abgelegt. Das ist aufgrund des Schlüsselweortes 'volatile' nötig, weil die Variable ja von außen verändert werden kann.
+`89.81` | LDD R24,Y+1 | Die Variable wird ins Register R24 geladen. Das ist aufgrund des Schlüsselwortes 'volatile' nötig, weil die Variable ja von außen verändert werden kann.
 `90.e0` | LDI R25,0x00 | Rückgabewert
 `0f.90` | POP R0 | Variable wird freigegeben.
 `df.91` | POP R29 | Register R29 wird vom Stack wieder zurückgeholt.
