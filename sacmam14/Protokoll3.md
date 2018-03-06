@@ -17,6 +17,8 @@ R26 + R27 | X- Register
 R28 + R29 | Y- Register  
 R30 + R31 | Z- Register  
 
+X-, Y-, Z- Register sind da um Zeiger zu speichern.  
+
 #### Atmel Studio Fenster   
 Im Prozessorfenster findet man:  
 * program counter  
