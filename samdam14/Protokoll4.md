@@ -55,7 +55,56 @@ _command_ | Anweisung, Regel
 
 --------------------------------------------------------  
 ##### Aufrufen von _make_  
-Im Terminal kann man mittels dem Kommando _make_ die Abarbeitung des _Makefile_´s starten. Das _make_-Tool erkennt selbstständig, ob _targets_ überhaupt wieder erreicht werden müssen oder ob sie sich bereits im aktuellsten Zustand befinden. Zuerst wird geschaut, ob die Abhängigkeit (_dependency_) als Ziel (_target_) weiter unten im _Makefile_ befindet. Ist das nicht der Fall, dann wird der Zeitstempel des _targets_ mit dem des vorhandenen, gleichnamigen verglichen. 
+Im Terminal kann man mittels dem Kommando _make_ die Abarbeitung des _Makefile_´s starten. Das _make_-Tool erkennt selbstständig, ob _targets_ überhaupt wieder erreicht werden müssen oder ob sie sich bereits im aktuellsten Zustand befinden. Zuerst wird geschaut, ob die Abhängigkeit (_dependency_) als Ziel (_target_) weiter unten im _Makefile_ befindet. Ist das nicht der Fall, dann wird der Zeitstempel des _targets_ mit dem des vorhandenen, gleichnamigen verglichen. Dadurch kann _make_ möglichst effektiv arbeiten.  
+  
+##### Zeitstempel  
+Ausgangssituation: aus main.c eine main.o erstellen  
+Beim ersten Aufruf von _make_ im Terminal werden die _commands_ (Regeln zum Erreichen des Ziels) abgearbeitet. Ruft man _make_ ein zweites Mal im Terminal auf, so vergleicht es die Zeitstempel. Ist der Zeitstempel von main.o aktueller als der von main.c, dann ist main.o aktuell und braucht nicht erneut erstellt werden. Hätte jemand in der Zwischenzeit main.c bearbeitet und ne gespeichert, dann ist der Zeitstempel von main.c aktueller und main.o muss neu erstellt werden.  
+Der Zeitstempel ist auf Millisekunden genau.  
+
+---------------------------------------------------------  
+##### Übungen mit _Makefiles_  
+###### Übung 1: Übersetzen eines einfachen C-Programms  
+Das Programm soll mit Eingabe des _make test1_-Kommandos im Terminal den Text "_Guten Morgen!_" ausgeben.  
+  
+**main.c**  
+```
+#include <stdio.h>
+
+int main()
+{
+printf("Guten Morgen!\n");
+return 0;
+}
+```
+**Makefile**  
+```
+test1: main.o
+	gcc -o test1 main.o
+
+main.o: main.c
+	gcc -c main.c
+
+cleanAndBuild: clean test1
+
+clean:
+	-rm main.o
+	-rm test1
+```
+target | dependencies | commands
+------ | ------------ | ----------
+test1 | main.o | gcc -o test1 main.o
+main.o | main.c | gcc -c main.c
+cleanAndBuild | clean test1 | -
+clean | - | -rm main.o & -rm test1  
+
+
+
+
+
+
+
+
 
 
 
