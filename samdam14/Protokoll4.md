@@ -98,15 +98,92 @@ main.o | main.c | gcc -c main.c
 cleanAndBuild | clean test1 | -
 clean | - | -rm main.o & -rm test1  
 
+  
+Das "-" vor rm bedeutet, dass wenn eine zu löschende Datei bereits gelöscht wurde, der ausgegebene Fehler ignoriert werden soll und die nachfolgenden Anweisungen ausgeführt werden sollen. Dies funktioniert über die  Rückgabewerte der Kommandos. Ist dieser ungleich 0, so  wird ein Fehler ausgegeben.  
+  
 
+gcc -c: kompiliere und assembliere, ohne zu linken, das Ergebnis sind Objektfiles  
+gcc -o: gleich, nur das der resultierende Filename vegeben werden kann  
+siehe: [gcc](https://www-user.tu-chemnitz.de/~hmai/gcc/Ausarbeitung_1/allg_opt.html)  
+  
+Mit dem Aufruf _make_ werden alle Kommandos ausgeführt. Es besteht aber auch die Möglichkeit, die Schritte einzeln aufzurufen:  
+  
+Kommando | Beschreibung
+-------- | ------------
+make clean | Die von _make_ generierten Dateien werden gelöscht
+make cleanAndBuild | generierte Dateien werden gelöscht und anschließend neu erzeugt
+make main.o | C-Programm wird in Maschinensprache übersetzt
+  
+-----------------------------------------------------------  
+  
+###### Übung 2: Zusammenführen von 2 C-Dateien mit Hilfe eines Makefiles  
+Es soll für den Arduino Nano ein C-Programm mittels Makefiles übersetzt werden. Die LED soll getoggled werden. Die Funkion _toggleLed_ soll in einer zweiten C-Datei programmiert werden.  
+  
+**main.c**  
+```
+#include <avr/io.h>
+#include <util/delay.h>
+#include "util.h"
 
+int main ()
+{
+	DDRB = (1<<PB5);
 
+	while (1) {
+		toggleLed();
+		_delay_ms(200);
+	}
+	return 0;
+}
+```
+  
+**util.c**  
+```
+#include <avr/io.h>
 
+void toggleLed ()
+{
+PORTB ^= (1<<PB5);
+}
+```
+  
+**util.h**  
+```
+#ifndef UTIL_H
+#define UTIL_H
 
+void toggleLed();
 
+#endif //UTIL_H
+```
+  
+**Makefile**  
+```
+main.hex: main.elf
+	avr-objcopy -O ihex main.elf main.hex
 
+main.elf: main.o util.o
+	avr-gcc -o main.elf main.o util.o
 
+main.o: main.c util.h
+	avr-gcc -mmcu="atmega328p" -Os -DF_CPU=16000000 -c main.c
 
+util.o: util.c
+	avr-gcc -mmcu="atmega328p" -Os -DF_CPU=16000000 -c util.c
 
-
+clean:
+	-rm *.o
+	-rm main.elf
+	-rm main.hex
+```
+  
+Schritt | Erklärung
+------- | ---------
+main.hex : main.elf | Executable File wird in eine Hex-Datei umgewandelt
+main.elf: main.o util.o | Beide C-Programme werden mittels Linker zusammengeführt
+main.o: main.c util.h | main.c wird in Maschinensprache übersetzt, Einbindung der Header-Datei util.h
+util.o: util.c | util.c wird in Maschinensprache übersetzt
+clean: | Alle Dateien mit der Endung .o, main.elf und main.hex werden gelöscht
+  
+  
 
