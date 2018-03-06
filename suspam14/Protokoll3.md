@@ -115,7 +115,7 @@ de.b7 | IN R29,0x3e | Der Stackpointer wird in R29 geladen (Y- Register)
 0f.90 | POP R0 | Variable a wird freigegeben  
 df.91 | POP R29 | R29 wird freigegeben   
 cf.91 | POP R28 | R28 wird freigegeben  
-|| RET| Return to Subroutine  
+|| RET| Programmende  
 
 ### Übung 3: Addition mit einer Schleife
 
