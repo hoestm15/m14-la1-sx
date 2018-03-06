@@ -11,7 +11,7 @@ Ein **Makefile** besteht aus:
 * einer Abhängigkeit  
 * einem Befehl  
 
-In der Datei ** Makefile** befinden sich die relevanten Informationen für eine Übersetzung. 
+In der Datei **Makefile** befinden sich die relevanten Informationen für eine Übersetzung. 
 
 **Zum Beispiel:**  
 
