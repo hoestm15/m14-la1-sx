@@ -10,7 +10,7 @@ Die Themengebiete beim Test waren **Makefiles** und **Modbus**.
   
 Wir benötigen das JNI um eine Kommunikationsschnittstelle zwischen unserer [Java Virtual Machine](https://de.wikipedia.org/wiki/Java_Virtual_Machine) und den [seriellen Schnittstellen](https://de.wikipedia.org/wiki/Serielle_Schnittstelle) auf die unserer Betriebssystem zugreift, herzustellen. Um auf USB-Schnittstellen im Speziellen zuzugreifen wird die Schnittstelle [javax.comm](https://de.wikipedia.org/wiki/Java_Communications_API) verwendet.  
 ### Funktionsweise in unserem Fall
-![JNI](/zitkam13/jni.jpg)
+![JNI](/zitkam13/jni.PNG)
 ### Programmbibliotheken
 In unseren *AIIT-Templates* unter Netbeans finden sich [Programmbibliotheken](https://de.wikipedia.org/wiki/Programmbibliothek) für JNI.
 Jedes Betriebssystem, bzw. jede [Architektur](https://de.wikipedia.org/wiki/Rechnerarchitektur) benötigt zum Kompilieren seine/ihre eigene Bibliothek.
@@ -20,12 +20,6 @@ Jedes Betriebssystem, bzw. jede [Architektur](https://de.wikipedia.org/wiki/Rech
 | [Linux](https://de.wikipedia.org/wiki/Linux) | [x86](https://de.wikipedia.org/wiki/X86-Prozessor) | 32 bit | `.so` |
 | [Linux](https://de.wikipedia.org/wiki/Linux) | [x86](https://de.wikipedia.org/wiki/X86-Prozessor) | 64 bit | `.so` |
 | [Linux](https://de.wikipedia.org/wiki/Linux) | [ARM](https://de.wikipedia.org/wiki/ARM-Architektur) | 32 bit | `.so` |
-| [macOS](https://de.wikipedia.org/wiki/MacOS) | [x86](https://de.wikipedia.org/wiki/X86-Prozessor) | 32 bit | `.jnilib` |
-| [macOS](https://de.wikipedia.org/wiki/MacOS) | [x86](https://de.wikipedia.org/wiki/X86-Prozessor) | 64 bit | `.jnilib` |
-| [macOS](https://de.wikipedia.org/wiki/MacOS) | [PowerPC](https://de.wikipedia.org/wiki/PowerPC) | 32 bit | `.jnilib` |
-| [macOS](https://de.wikipedia.org/wiki/MacOS) | [PowerPC](https://de.wikipedia.org/wiki/PowerPC) | 64 bit | `.jnilib` |
-| [Solaris](https://de.wikipedia.org/wiki/Solaris_(Betriebssystem)) | [x86](https://de.wikipedia.org/wiki/X86-Prozessor) | 32 bit | `.so` |
-| [Solaris](https://de.wikipedia.org/wiki/Solaris_(Betriebssystem)) | [x86](https://de.wikipedia.org/wiki/X86-Prozessor) | 64 bit | `.so` |
 | [Windows](https://de.wikipedia.org/wiki/Microsoft_Windows) | [x86](https://de.wikipedia.org/wiki/X86-Prozessor) | 32 bit | `.dll` |
 | [Windows](https://de.wikipedia.org/wiki/Microsoft_Windows) | [x86](https://de.wikipedia.org/wiki/X86-Prozessor) | 64 bit | `.dll` |
 
