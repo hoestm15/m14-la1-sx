@@ -23,3 +23,5 @@ Jedes Betriebssystem, bzw. jede [Architektur](https://de.wikipedia.org/wiki/Rech
 | [Windows](https://de.wikipedia.org/wiki/Microsoft_Windows) | [x86](https://de.wikipedia.org/wiki/X86-Prozessor) | 32 bit | `.dll` |
 | [Windows](https://de.wikipedia.org/wiki/Microsoft_Windows) | [x86](https://de.wikipedia.org/wiki/X86-Prozessor) | 64 bit | `.dll` |
 
+## Programm   
+Wir setzten das Program der Einheit 5 (19.12.2017) fort. Bei diesem Programm wurde die Temperatur visualisiert. Gemessen wurde diese mit dem Sure-Board und danach mit Modbus übertragen. 
