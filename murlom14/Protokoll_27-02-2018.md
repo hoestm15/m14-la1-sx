@@ -166,8 +166,9 @@ private void jbutConnectActionPerformed(java.awt.event.ActionEvent evt)
 
 ### Endergebniss der Einheit am 27.02.2018
 Mittels eines C-Programmes auf dem Sureboard werden die Sensordaten verarbeitet und für die Modbus Kommunikation bereitgestellt. Dises C-Programm muss mittels EasyProgrammer auf das Sureboard geladen werden (die Hexdatei findet man in der Vorlage).
+#### EasyProgrammer
 ![EasyProgrammer](https://github.com/HTLMechatronics/m14-la1-sx/blob/murlom14/murlom14/EasyProgrammer.png)
-
+#### Java-GUI
 ![GUI-TemperaturSensor](https://github.com/HTLMechatronics/m14-la1-sx/blob/murlom14/murlom14/GUI-Temperatur.jpg)
 
 
