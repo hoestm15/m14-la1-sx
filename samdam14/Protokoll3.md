@@ -28,8 +28,8 @@ zum Protokoll: [Protokoll Einheit 2](https://github.com/HTLMechatronics/m14-la1-
 *Für was werden die Register R25 bis R8 benötigt?*  
 * R25 bis R8 wird vom C-Compiler für Parameter und Rückgaben verwendet  
 --------------------------------------------  
-#### Datentypen unsigned und volatile  
-Datentyp | Auswirkung
+#### Modifizierer unsigned und volatile  
+Modifizierer | Auswirkung
 -------- | ----------
 unsigned | Modifiziert den eigentlichen Datentyp. Der Datentyp _int_ (_signed int_) umfasst einen Zahlenbereich von  2³² = 4294967296 Zahlen, die den Bereich von -2147483648 bis +2147483647 abdecken. Steht _unsigned_ vor dem _int_, dann deckt man einen Bereich von 2³² Zahlen größer gleich 0 ab.
 volatile | Steht im Datentyp einer Variable _volatile_, dann darf diese Variable vom Compiler nicht mehr wegoptimiert werden. Quelle:[C++ Forum](https://www.c-plusplus.net/forum/154918-full)  
