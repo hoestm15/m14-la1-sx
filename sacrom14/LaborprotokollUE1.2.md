@@ -5,5 +5,5 @@
   **Uhrzeit:** *9:40-12:25*  
   **Gruppe:** *3*  
   
-  **Abwesend:**   Schmuck Martin
+  **Abwesend:**   Schmuck Martin   
   **Anwesend:**   Sackl Martin, Sackl Roland, Reinbacher Bernhard,Sammer Daniel,Ruffennacht Florian,Schuster Patrick
