@@ -21,11 +21,11 @@ Um den C-Code in eine ausführbahre Datei umzuwandeln sind folgende Schritte not
 *Assemblieren* | main.a | main.o | Der Assemblercode wird in Maschinencode übersetzt
 *Linken* | main.o | main.exe/ main.out |  Alle Programmteile werden durch den Linker vereint. Daraus entsteht ein ausführbares Programm
 
-*Umwandeln* | | | Die ausführbare Datei wird in ein Format umgewandelt, das der Programmer versteht. (z.B. Hex)
+*Umwandeln* | main.exe/main.out | z.B. main.hex | Die ausführbare Datei wird in ein Format umgewandelt, das der Programmer versteht. (z.B. Hex)
 
 Im Sprachgebrauch werden meist die Schritte des Vorgangs bis zum entstehen einer Beispiel.o-Datei als "**compelieren**" bezeichnet. Ganz grob werden teilweise auch alle hier angeführten Schritte als "**compilieren**" verstanden.
 
-##make-Tool
+## make-Tool
 Der gesamte Übersetzungsvorgang wird im Normalfall durch das **make-Tool** übernommen. Dieses ruft sogenannte *Makefiles*  auf.
 
 # Makefiles
@@ -104,8 +104,10 @@ Es wurden folgende Kommandos verwendet:
 Kommando | Beschreibung
 ---------| ------------
 gcc -c | Es wird kompiliert, aber noch nicht gelinkt. Dabei entsteht die .o-Datei
-gcc -o | Hier kann zusätzlich noch der Name der .o -Datei vergeben werden
+gcc -o | Hier wird gelinkt und der Name der ausführbaren Datei vergeben
 -rm | Die Datei wird gelöscht. Durch das `-` wird aber auch bei einem Fehler fortgesetzt.
+
+[Weiteres zu gcc](https://wiki.ubuntuusers.de/GCC/)
 
 # 2. Praktische Übung: Übersetzung eines Programmes für den Arduino nano durch ein Makefile 
 
@@ -146,7 +148,7 @@ void toggleLed () {
 
 **util.h**
 
-```
+```c
 ifndef UTIL_H
 #define UTIL_H
 
@@ -154,3 +156,29 @@ void toggleLed();
 
 #endif //UTIL_H
 ```
+**Makefile**
+
+```
+main.hex: main.elf
+	avr-objcopy -O ihex main.elf main.hex
+
+main.elf: main.o util.o
+	avr-gcc -o main.elf main.o util.o
+
+main.o: main.c util.h
+	avr-gcc -mmcu=atmega328p -Os -DF_CPU=16000000 -c main.c
+
+util.o: util.c
+	avr-gcc -mmcu=atmega328p -Os -DF_CPU=16000000 -c util.c
+
+clean: 
+	-rm *.o
+	-rm main.elf
+	-rm main.hex
+
+```
+**Der Unterschied zum Makefile der ersten praktischen Übung** besteht darin, dass hier die Programmteile erst beim linken zusammenkommen (*Ziel __main.elf*__). Die Datein main.o und util.o werden unabhängig von einander erstellt, wobei bei dem Ziel main.o zusätzlich noch die Datei util.h als Abhängigkeit gilt. 
+
+**Um das Programm für den Arduino nano zu erstellen** müssen beim kompilieren die `avr-` Kommandos mit den entsprechenden Optionen verwendet werden. Mit dem Ziel main.hex wird die ausführbahre Datei main.elf noch in ein für den µC verständliches Format gebracht.
+
+[Weitere Informationen zu Makefiles (Wikpedia)](https://de.wikipedia.org/wiki/Make)
