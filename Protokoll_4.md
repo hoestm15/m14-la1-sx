@@ -57,6 +57,7 @@ Ob ein **Fehler** aufgetreten ist lässt sich über die Rückgabewerte der Komma
 
 
 
+
 #  1. Praktische Übung: Übersetzung eines Programmes durch ein Makefile
 
 Diese kleine C-Programm soll "Guten Morgen" ausgeben. Es wurde die Datei main.c mithilfe des `nano`-Befehls erstellt:
@@ -96,7 +97,7 @@ Kommando | Beschreibung
 -------- | ------------
 make clean | Die erstellten Dateien werden gelöscht
 make cleanAndBuild | Die erstellten  Dateien werden gelöscht und anschließend neu erzeugt
-make main.o |Der C-Code wird in Maschinencode übersetzt
+make main.o | Der C-Code wird in Maschinencode übersetzt
   
 Es wurden folgende Kommandos verwendet:
 
@@ -106,3 +107,50 @@ gcc -c | Es wird kompiliert, aber noch nicht gelinkt. Dabei entsteht die .o-Date
 gcc -o | Hier kann zusätzlich noch der Name der .o -Datei vergeben werden
 -rm | Die Datei wird gelöscht. Durch das `-` wird aber auch bei einem Fehler fortgesetzt.
 
+# 2. Praktische Übung: Übersetzung eines Programmes für den Arduino nano durch ein Makefile 
+
+Für den Arduino Nano soll ein C-Programm übersetzt werden, dass die LED toggled. Die Funktion toggleLed() soll in nicht im Hauptprogramm, sondern in util.c geschrieben werden. 
+
+**main.c**
+```c
+#include <avr/io.h>
+#include <util/delay.h>
+#include "util.h"
+
+int main ()
+{
+
+	DDRB = (1 << PB5);
+	while (1)
+		{
+			//PORTB = (1 << PB5);
+			//_delay_ms(500);
+			//PORTB= 0;
+			//_delay_ms(500);
+			toggleLed();
+			_delay_ms(500);
+		}
+
+	return 0;
+}
+```
+
+**util.c**
+```c
+#include <avr/io.h>
+
+void toggleLed () {
+	PORTB^= (1<<PB5);
+}
+```
+
+**util.h**
+
+```
+ifndef UTIL_H
+#define UTIL_H
+
+void toggleLed();
+
+#endif //UTIL_H
+```
