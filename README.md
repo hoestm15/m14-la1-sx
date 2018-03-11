@@ -10,7 +10,7 @@ __Turnus 1:__
 
 
 __Turnus 2:__
-1. Einheit: [Protokoll](sacrom14/LaborprotokollUE1.2.md)L
+1. Einheit: [Protokoll](sacrom14/LaborprotokollUE1.2.md)
 
  2. Einheit:[Protokoll]()
 
