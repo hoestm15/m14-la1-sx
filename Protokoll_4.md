@@ -20,6 +20,7 @@ Um den C-Code in eine ausführbahre Datei umzuwandeln sind folgende Schritte not
 *Compelieren* | main.? | main.a | Der durch den Präprozzessor bearbeitete Code wird in Assmeblercode umgewandelt
 *Assemblieren* | main.a | main.o | Der Assemblercode wird in Maschinencode übersetzt
 *Linken* | main.o | main.exe/ main.out |  Alle Programmteile werden durch den Linker vereint. Daraus entsteht ein ausführbares Programm
+
 *Umwandeln* | | | Die ausführbare Datei wird in ein Format umgewandelt, das der Programmer versteht. (z.B. Hex)
 
 Im Sprachgebrauch werden meist die Schritte des Vorgangs bis zum entstehen einer Beispiel.o-Datei als "**compelieren**" bezeichnet. Ganz grob werden teilweise auch alle hier angeführten Schritte als "**compilieren**" verstanden.
@@ -89,10 +90,19 @@ clean:
  
 ```
 Dieses einfach Makefile lässt sich in der Konsole durch den `make`- Befehl als Ganzes ausführen. Es können aber auch einzelne Ziele
-aufgerufen werden:
+in der Konsole aufgerufen werden:
+
 Kommando | Beschreibung
 -------- | ------------
-make clean | Die von _make_ generierten Dateien werden gelöscht
-make cleanAndBuild | generierte Dateien werden gelöscht und anschließend neu erzeugt
-make main.o | C-Programm wird in Maschinensprache übersetzt
+make clean | Die erstellten Dateien werden gelöscht
+make cleanAndBuild | Die erstellten  Dateien werden gelöscht und anschließend neu erzeugt
+make main.o |Der C-Code wird in Maschinencode übersetzt
   
+Es wurden folgende Kommandos verwendet:
+
+Kommando | Beschreibung
+---------| ------------
+gcc -c | Es wird kompiliert, aber noch nicht gelinkt. Dabei entsteht die .o-Datei
+gcc -o | Hier kann zusätzlich noch der Name der .o -Datei vergeben werden
+-rm | Die Datei wird gelöscht. Durch das `-` wird aber auch bei einem Fehler fortgesetzt.
+
