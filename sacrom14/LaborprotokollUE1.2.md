@@ -1,7 +1,7 @@
 # 1.Protokoll  
   
   **Name**:  *Sackl Roland*  
-  **Datum:** *6.03.2018*  
+  **Datum:** *06.03.2018*  
   **Uhrzeit:** *9:40-12:25*  
   **Gruppe:** *3*  
   
