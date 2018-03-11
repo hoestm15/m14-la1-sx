@@ -20,7 +20,6 @@ Um den C-Code in eine ausführbahre Datei umzuwandeln sind folgende Schritte not
 *Compelieren* | main.? | main.a | Der durch den Präprozzessor bearbeitete Code wird in Assmeblercode umgewandelt
 *Assemblieren* | main.a | main.o | Der Assemblercode wird in Maschinencode übersetzt
 *Linken* | main.o | main.exe/ main.out |  Alle Programmteile werden durch den Linker vereint. Daraus entsteht ein ausführbares Programm
-
 *Umwandeln* | main.exe/main.out | z.B. main.hex | Die ausführbare Datei wird in ein Format umgewandelt, das der Programmer versteht. (z.B. Hex)
 
 Im Sprachgebrauch werden meist die Schritte des Vorgangs bis zum entstehen einer Beispiel.o-Datei als "**compelieren**" bezeichnet. Ganz grob werden teilweise auch alle hier angeführten Schritte als "**compilieren**" verstanden.
@@ -47,9 +46,11 @@ __*Anmerkung*:__ Für den Tabulator vor den Kommandos müssen echte Tabulatoren 
 ## Funktionsweise von Makefiles
 Beim Aufruf des Makefiles wird zuerst das erste Ziel aufgerufen. Die Abhängigkeiten werden dabei zuerst auf andere Ziele und dann auf Datein untersucht. Bei **anderen Zielen als Abhängigkeit** werden zuerst die abhängigen Ziele  abgearbeitet. Bei **Datein als Abhängigkeit** wird der Zeitstempel von dem Ziel und der Datei verglichen um zu erfassen, ob ein neuerliches Durchführen der Kommandos überhaupt nötig ist. 
 
+### Zeitstempel
 Der **Zeitstempel** gibt an wann eine Datei das letzte Mal verändert wurde. Mit dem Befehl `touch <Datei>` kann dieser Zeitstempel auf Linux-Systemen aktualisiert werden.
 
 [Weitere Informmationen zum touch-Befehl](https://wiki.ubuntuusers.de/touch/)  
+
 
 Wenn das Makefile aufgerufen wird, läuft das Makefile soweit durch, bis ein **Fehler** auftritt. Das bedeutet, dass alle nachfolgenden Schritte nicht abgewickelt werden. Um das bei Befehlen, bei denen Fehler auftreten können, zu verhindern kann ein vor dem jeweiligen Kommando ein `-` eingefügt werden. 
 
@@ -58,7 +59,7 @@ Ob ein **Fehler** aufgetreten ist lässt sich über die Rückgabewerte der Komma
 
 
 
-#  1. Praktische Übung: Übersetzung eines Programmes durch ein Makefile
+#  Übersetzung eines Programmes durch ein Makefile
 
 Diese kleine C-Programm soll "Guten Morgen" ausgeben. Es wurde die Datei main.c mithilfe des `nano`-Befehls erstellt:
 
@@ -109,7 +110,7 @@ gcc -o | Hier wird gelinkt und der Name der ausführbaren Datei vergeben
 
 [Weiteres zu gcc](https://wiki.ubuntuusers.de/GCC/)
 
-# 2. Praktische Übung: Übersetzung eines Programmes für den Arduino nano durch ein Makefile 
+#  Übersetzung eines Programmes für den Arduino nano durch ein Makefile 
 
 Für den Arduino Nano soll ein C-Programm übersetzt werden, dass die LED toggled. Die Funktion toggleLed() soll in nicht im Hauptprogramm, sondern in util.c geschrieben werden. 
 
