@@ -1,3 +1,4 @@
+
 # **3. Laborprotokoll** 
 
 *von Florian Ruffenacht*
@@ -46,6 +47,52 @@ __*Anmerkung*:__ Für den Tabulator vor den Kommandos müssen echte Tabulatoren 
 Beim Aufruf des Makefiles wird zuerst das erste Ziel aufgerufen. Die Abhängigkeiten werden dabei zuerst auf andere Ziele und dann auf Datein untersucht. Bei **anderen Zielen als Abhängigkeit** werden zuerst die abhängigen Ziele  abgearbeitet. Bei **Datein als Abhängigkeit** wird der Zeitstempel von dem Ziel und der Datei verglichen um zu erfassen, ob ein neuerliches Durchführen der Kommandos überhaupt nötig ist. 
 
 Der **Zeitstempel** gibt an wann eine Datei das letzte Mal verändert wurde. Mit dem Befehl `touch <Datei>` kann dieser Zeitstempel auf Linux-Systemen aktualisiert werden.
+
 [Weitere Informmationen zum touch-Befehl](https://wiki.ubuntuusers.de/touch/)  
 
-Wenn das Makefile aufgerufen wird, läuft das Makefile soweit durch, bis ein **Fehler** auftritt. Das bedeutet, dass alle nachfolgenden Schritte nicht abgewickelt werden. Um das bei Befehlen, bei denen Fehler auftreten können, zu verhindern kann ein vor dem jeweiligen Kommando ein `-` eingefügt werden. Somit wird das 
+Wenn das Makefile aufgerufen wird, läuft das Makefile soweit durch, bis ein **Fehler** auftritt. Das bedeutet, dass alle nachfolgenden Schritte nicht abgewickelt werden. Um das bei Befehlen, bei denen Fehler auftreten können, zu verhindern kann ein vor dem jeweiligen Kommando ein `-` eingefügt werden. 
+
+Ob ein **Fehler** aufgetreten ist lässt sich über die Rückgabewerte der Kommandos erfahren. Ist der Rückgabewert ungleich 0, so wird ein Fehler ausgegeben. In der Konsole kann der Rückgabewert des letzten Kommandors mit dem Befehle `echo $?`ausgeben:
+
+
+
+#  1. Praktische Übung: Übersetzung eines Programmes durch ein Makefile
+
+Diese kleine C-Programm soll "Guten Morgen" ausgeben. Es wurde die Datei main.c mithilfe des `nano`-Befehls erstellt:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+printf("Guten Morgen");
+return 0;
+}
+
+```
+Dazu wurde folgendes Makefile erstellt:
+```
+# Das ist ein Kommentar
+
+test1: main.o
+	gcc -o test1 main.o
+
+main.o: main.c
+	gcc -c main.c
+
+cleanAndBuild: clean test1
+
+
+clean:  
+	-rm main.o
+	-rm test1
+ 
+```
+Dieses einfach Makefile lässt sich in der Konsole durch den `make`- Befehl als Ganzes ausführen. Es können aber auch einzelne Ziele
+aufgerufen werden:
+Kommando | Beschreibung
+-------- | ------------
+make clean | Die von _make_ generierten Dateien werden gelöscht
+make cleanAndBuild | generierte Dateien werden gelöscht und anschließend neu erzeugt
+make main.o | C-Programm wird in Maschinensprache übersetzt
+  
