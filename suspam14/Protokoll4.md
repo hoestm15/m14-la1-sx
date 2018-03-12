@@ -52,4 +52,106 @@ Fehler können zum Beispiel beim Ziel *clean* auftreten, wenn Dateien gelöscht 
 ### Zeitstempel ändern
 Falls ein Ziel bereits exestiert wird der Zeitstempel verglichen um zu bestimmen ob ein erneutes ausführen der Befehle nötig ist. Ist der Zeitstempel von main.c aktueller als der von main.o muss main.o neu erstellt werden, umgekehrt hingegen nicht. Um diesen zu ändern gibt es den shell Befehl `touch <Dateiname>`.
 
-# Übung 
+# Übung 1
+In der ersten Übung haben wir ein Programm erstellt das den Text *Guten Morgen* ausgeben soll.  
+```c
+#include <stdio.h>
+
+int main()
+{
+printf("Guten Morgen");
+return 0;
+}
+```
+Makefile zur Übersetung des Beispielprogramms:
+```
+# Das ist ein Kommentar
+
+test1: main.o
+	gcc -o test1 main.o
+
+main.o: main.c
+	gcc -c main.c
+
+cleanAndBuild: clean test1
+
+
+clean:  
+	-rm main.o
+	-rm test1
+ 
+```
+Als Kompiler haben wir den GCC Compiler verwendet.  
+#### Verwendete Kommandos
+Kommando | Beschreibung
+--- | ---
+gcc - c | Präprozessieren, kompilieren und assemblieren ohne zu linken. Es entsteht eine Objektdatei (.o)
+gcc -o | das Programm wird gelinkt
+-rm | Datei wird gelöscht  
+# Übung 2
+In der zweiten Übung haben wir ein Programm für den Arduino Nano geschrieben das die On-Board LED blinken lassen soll. Dieses Programm besteht aus mehreren Dateien, somit ist die Makefile komplexer.
+
+**main.c**
+```c
+#include <avr/io.h>
+#include <util/delay.h>
+#include "util.h"
+
+int main ()
+{
+	DDRB = (1 << PB5);
+	while (1)
+		{
+			toggleLed();
+			_delay_ms(500);
+		}
+	return 0;
+}
+```
+
+**util.c**
+```c
+#include <avr/io.h>
+
+void toggleLed () {
+	PORTB^= (1<<PB5);
+}
+```
+
+**util.h**
+
+```c
+ifndef UTIL_H
+#define UTIL_H
+
+void toggleLed();
+
+#endif //UTIL_H
+```
+**Makefile**
+
+```
+main.hex: main.elf
+	avr-objcopy -O ihex main.elf main.hex
+
+main.elf: main.o util.o
+	avr-gcc -o main.elf main.o util.o
+
+main.o: main.c util.h
+	avr-gcc -mmcu=atmega328p -Os -DF_CPU=16000000 -c main.c
+
+util.o: util.c
+	avr-gcc -mmcu=atmega328p -Os -DF_CPU=16000000 -c util.c
+
+clean: 
+	-rm *.o
+	-rm main.elf
+	-rm main.hex
+  
+cleanAndBuild: clean main.hex
+
+```
+Um das Programm für den Arduino verwenden zu können haben wir den AVR-GCC Kompiler anstatt des GCC Kompilers verwendet. 
+
+### Anmerkung:
+Der größe Unterschied zwischen der ersten und der zweiten Übung bestand darin, dass die zweite aus mehreren Datein bestand. Diese mussten richtig zusammengeführt werden.
