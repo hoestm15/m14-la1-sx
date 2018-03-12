@@ -100,6 +100,13 @@ main.o | main.c | gcc -c main.c
 cleanAndBuild | clean test1 | -
 clean | - | -rm main.o & -rm test1  
 
+Es wurden folgende Kommandos verwendet:
+
+Kommando | Beschreibung
+---------| ------------
+gcc -c | Es wird kompiliert, aber nicht gelinkt. Es entsteht die .o-Datei
+gcc -o | Beei diesen Befehl wird gelinkt und der Name der Datei vergeben
+-rm | Die Datei wird gelöscht. Durch das - wird der Befehl auch bei einem Fehler fortgesetzt.
 
 
 Befehl | Beschreibung  
@@ -108,13 +115,7 @@ make clean | Alle Dateinen die von *make* erstellten würden werden gelöscht.
 make cleanAndBuild |  Alle Dateinen die von *make* erstellten würden werden gelöscht und danach wieder erstellt.  
 make main.o | Der Programmiercode wird in Maschinenbefehlt übersetzt.
 
-Es wurden folgende Kommandos verwendet:
 
-Kommando | Beschreibung
----------| ------------
-gcc -c | Es wird kompiliert, aber nicht gelinkt. Es entsteht die .o-Datei
-gcc -o | Beei diesen Befehl wird gelinkt und der Name der Datei vergeben
--rm | Die Datei wird gelöscht. Durch das - wird der Befehl auch bei einem Fehler fortgesetzt.
 
 
 
