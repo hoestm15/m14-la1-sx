@@ -24,7 +24,7 @@ Das gesamte Übersetzen eines Programmes versteht man im groben Sprachgebrauch  
 
 
 ## make-Tool
-Der gesamte Übersetzungsvorgang wird im Normalfall durch das **make-Tool** übernommen. Dieses ruft sogenannte *Makefiles*  auf.
+Der gesamte Übersetzungsvorgang wird durch das **make-Tool** übernommen. Dieses ruft sogenannte *Makefiles*  auf.
 Im Normalfall wird der Übersetzungsvorgang durch das "make Tool" übernommen. Hierfür benötigt man ein *Makefile*.
 
 Weitere Informationen:  
