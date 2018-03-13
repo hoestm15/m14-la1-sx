@@ -112,5 +112,5 @@ private showThrowable (String msg, Throwable th) {
 ```
 
 ## Exception
-![Ableitungsbaum](https://github.com/HTLMechatronics/m14-la1-sx/blob/nebflm14/nebflm14/Exception.jpg)
+![Ableitungsbaum](https://github.com/HTLMechatronics/m14-la1-sx/blob/nebflm14/nebflm14/Exception.jpg)  
 Die Klasse [Exception](https://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html) wird von der Klasse [Throwable](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html) abgeleitet, welche von der Klasse [Object](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html) abgeleitet wird. Eine weiter Ableitung von Throwable ist der [Error](https://docs.oracle.com/javase/7/docs/api/java/lang/Error.html). Ein solcher wird unter anderem bei schwerwiegenden Fehlern in der JVM erzeugt, nach welchen das Programm beendet wird. JSSC wirft Errors, welche weitergeworfen werden würden wenn nur Exeptions abgefangen werden würden und das Programm würde ohne Fehlermeldung auf GUI-Ebene schließen. Als Lösung bieten sich zwei Möglichkeiten an. Entweder es werden alle Throwables abgefangen, oder es wird ein Multicatch realisiert. In beiden Fällen könnten sowohl Errors, als auch Exceptions behandelt werden.
