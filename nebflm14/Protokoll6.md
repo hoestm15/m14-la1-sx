@@ -10,9 +10,9 @@ Anwesend: Köhler Marcel, Mandl Gerhard, Martinak Moritz, Mörth Michael, Muri L
 Abwesend: ---
 
 Zu Beginn der Einheit luden wir den Modbusslave vom [Server](https://www.htl-mechatronik.at/svn/modbus/) herunter und führten die *sure.elf.hex*-Datei mit dem EasyProgrammer aus. Das Template zur grafische Oberfläche für die Temperaturanzeige konnten vom Server über einen am LMS liegenden Link herunterladen und mit NetBeans öffnen.
-![Display](https://github.com/HTLMechatronics/nebflm14/)
+![Display](https://github.com/HTLMechatronics/m14-la1-sx/blob/nebflm14/nebflm14/Oberfläche.jpg)
 
-##Java
+## Java
 ![Hardwarezugriff](https://github.com/HTLMechatronics/m14-la1-sx/blob/nebflm14/nebflm14/Hardwarezugriff.jpg)
 Grundsätzlich regelt das Betriebssystem z.B. Windows den Zugriff auf serielle Schnittstellen wie z.B. Uart oder USB. Ein C-Programm würde dierekt auf das Betribssystem zugreifen, welches dann mit der Hardware kommuniziert.
 Unter Java wird zur Kommunikation zwischen Programm und Hardware eine virtuelle Maschine, die sogenannte **Java Virtuelle Maschine (JVM)** zwischengeschaltet. Die Idee: Java wendet sich an die virtuelle Machine, diese an das Betriebssystem, und dieses an die Hardware. Das Problem liegt darin, dass die JVM keine seriellen Schnittstellen unterstützt. Früher konnte man sich auf Maschinen des Herstellers Sun mit der Klasse **Java.comm** behelfen. Auch wenn man diese Software noch heute nachinstallieren könnte, wird diese nur mehr geringfügig eingesetzt, da sie nur auf einem System lauffähig wäre und dadurch die Multiplattformfähigkeit, eine der essentiellen Eigenschaften Javas verloren gehen.
