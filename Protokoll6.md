@@ -9,17 +9,14 @@ Gruppe:   2
 Anwesend: Köhler Marcel, Mandl Gerhard, Martinak Moritz, Mörth Michael, Muri Lorenz, Nabernik Mario, Nebel Florian, Platzer Andreas  
 Abwesend: ---
 
-[Modbusslave](https://www.htl-mechatronik.at/svn/modbus/)
-sure_modbusslave
-sure.elf.hex herunterladen
-easyprogrammer öffnen
-sure.elf.hex auswählen
-Start
-Template mit gezeichneter Grafik aus Github(LMS) holen
-Vorlage Java Programm für Modbus Temp mit snapshot speichern
-Projekt mit Netbeans öffnen
-Grafische Oberfläche zur Temperaturmessung erscheint
-Projekt umbenennen ("Vorlage" entfernen)
+Zu Beginn der Einheit luden wir den Modbusslave vom [Server](https://www.htl-mechatronik.at/svn/modbus/) herunter und führten die *sure.elf.hex*-Datei mit dem EasyProgrammer aus. Das Template zur grafische Oberfläche für die Temperaturanzeige konnten vom Server über einen am LMS liegenden Link herunterladen und mit NetBeans öffnen.
+
+##Java
+Grundsätzlich regelt das Betriebssystem z.B. Windows den Zugriff auf serielle Schnittstellen wie z.B. Uart oder USB. Ein C-Programm würde dierekt auf das Betribssystem zugreifen, welches dann mit der Hardware kommuniziert.
+Unter Java wird zur Kommunikation zwischen Programm und Hardware eine Virtuelle Maschine, die sogenannte Java Virtuelle Maschine (JVM) zwischengeschaltet. Die Idee: Java wendet sich an die Virtuelle Machine, diese an das Betriebssystem, und dieses an die Hardware. Das Problem liegt darin, dass die JVM keine seriellen Schnittstellen unterstützt. Früher konnte man sich auf Maschinen des Herstellers Sun mit der Klasse *Java.comm* behelfen. Auch wenn man diese Software noch heute nachinstallieren könnte wird diese nur mehr geringfügig eingesetzt, da sie nur auf einem System lauffähig wäre, würde die Multiplattformfähigkeit und somit eine der essentiellen Eigenschaften Javas verloren gehen.
+
+
+
 
 ## Java
 Hardware Uart(Serielle Schnittstelle)
@@ -162,3 +159,18 @@ unter anderem von Throwable abgeleitet: Error wird bei schwerwiegenden Fehlern i
 Fehler der jssc werden als Error geworfen (wird weitergeworfen wenn nur Exceptions gefangen werden) Programm würde ohne Fehlermeldung auf GUI-Ebene beendet werden, Fehlermeldung nur im Terminal
 Deshalb: Throwable (Error und Exception) fangen und ausgeben
 andere Möglichkeit: Multicatch
+
+
+
+
+
+sure_modbusslave
+sure.elf.hex herunterladen
+easyprogrammer öffnen
+sure.elf.hex auswählen
+Start
+Template mit gezeichneter Grafik aus Github(LMS) holen
+Vorlage Java Programm für Modbus Temp mit snapshot speichern
+Projekt mit Netbeans öffnen
+Grafische Oberfläche zur Temperaturmessung erscheint
+Projekt umbenennen ("Vorlage" entfernen)
