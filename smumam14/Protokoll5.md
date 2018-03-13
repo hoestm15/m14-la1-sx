@@ -44,7 +44,7 @@ folgende Felbusse sind unter anderem zur Zeit üblich:
        * Profibus [1989]  
 * Automobilbereich  
        * CAN-Bus (Controller Area Network): anspruchsvolle Systeme, zB Motor-/Getriebesteuerung [Bosch, Intel; 1983]  
-       * LIN (Local Interconnect Network): weniger anspruchsvolle Systeme, zB Fensterheber oder Sitzheizung [Daimler, VW, BMW; 1999] 
+       * LIN (Local Interconnect Network): weniger anspruchsvolle Systeme, zB Fensterheber [Daimler, VW, BMW; 1999]  
        * FlexRay: möglicher Nachfolger von CAN [Daimler, BMW; 2000]
  * Haustechnik  
        * KNX (sehr kostspielig) [2002]  
