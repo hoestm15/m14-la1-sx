@@ -36,6 +36,18 @@ Java Swing ist eine einfache Möglichkeit, um in Java graphische Benutzerschnitt
 
 :point_right: Intelligenter Sensor:  
 Intelligent ist der Sensor deswegen, weil er schon einen fertigen Temperaturwert zurückliefert, das heißt, er muss irgendwie einen eingebauten Prozessor haben, welcher die Werte umrechenen kann. Im Gegensatz dazu würde ein unintelligenter Sensor (zB Pt100) einfach zB eine Spannung zwischen 0 und 10 Volt zurückliefern und mann müsste sich selbst um die Auswertung kümmern.
-
-
+  
+:point_right: Feldbus:  
+folgende Felbusse sind unter anderem zur Zeit üblich:
+* Automatisierungstechnik / Industrie:  
+       * Powerlink (offen, Basis: Ethernet, echtzeitfähig) [B&R; 2001]  
+       * Profibus [1989]  
+* Automobilbereich  
+       * CAN-Bus (Controller Area Network): anspruchsvolle Systeme, zB Motor-/Getriebesteuerung [Bosch, Intel; 1983]  
+       * LIN (Local Interconnect Network): weniger anspruchsvolle Systeme, zB Fensterheber oder Sitzheizung [Daimler, VW, BMW; 1999] 
+       * FlexRay: möglicher Nachfolger von CAN [Daimler, BMW; 2000]
+ * Haustechnik  
+       * KNX (sehr kostspielig) [2002]  
+       
+       
 
