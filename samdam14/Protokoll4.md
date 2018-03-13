@@ -4,7 +4,7 @@
 **Gruppe: 3**  
 **Datum: 06.03.2018**  
 **Uhrzeit: 9:40-12:25**  
-**Anwesend: Reinbacher B., Ruffenacht F., Sackl M., Sackl R., Sammer D., Schuster P.  
+**Anwesend: Reinbacher B., Ruffenacht F., Sackl M., Sackl R., Sammer D., Schuster P.**  
 **Abwesend: Schmuck Martin**  
   
 -----------------------------------------------------------  
