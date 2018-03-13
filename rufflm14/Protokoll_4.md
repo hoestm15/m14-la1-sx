@@ -22,7 +22,7 @@ Um den C-Code in eine ausführbahre Datei umzuwandeln sind folgende Schritte not
 *Linken* | main.o | main.exe/ main.out |  Alle Programmteile werden durch den Linker vereint. Daraus entsteht ein ausführbares Programm
 *Umwandeln* | main.exe/main.out | z.B. main.hex | Die ausführbare Datei wird in ein Format umgewandelt, das der Programmer versteht. (z.B. Hex)
 
-Im Sprachgebrauch werden meist die Schritte des Vorgangs bis zum entstehen einer Beispiel.o-Datei als "**compelieren**" bezeichnet. Ganz grob werden teilweise auch alle hier angeführten Schritte als "**compilieren**" verstanden.
+Im Sprachgebrauch werden meist die Schritte des Vorgangs bis zum entstehen einer Beispiel.o-Datei als "**compelieren**" bezeichnet. Ganz grob werden teilweise auch alle hier angeführten Schritte als "**compelieren**" verstanden.
 
 ## make-Tool
 Der gesamte Übersetzungsvorgang wird im Normalfall durch das **make-Tool** übernommen. Dieses ruft sogenannte *Makefiles*  auf.
