@@ -111,8 +111,8 @@ gcc -o | Beei diesen Befehl wird gelinkt und der Name der Datei vergeben
 
 Befehl | Beschreibung  
 ------ | ------------    
-make clean | Alle Dateinen die von *make* erstellten würden werden gelöscht.   
-make cleanAndBuild |  Alle Dateinen die von *make* erstellten würden werden gelöscht und danach wieder erstellt.  
+make clean | Alle Dateinen die von *make* erstellten würden, werden gelöscht.   
+make cleanAndBuild |  Alle Dateinen die von *make* erstellten würden, werden gelöscht und danach wieder erstellt.  
 make main.o | Der Programmiercode wird in Maschinenbefehlt übersetzt.
 
 
