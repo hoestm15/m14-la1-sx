@@ -100,7 +100,7 @@ main.o | main.c | gcc -c main.c
 cleanAndBuild | clean test1 | -
 clean | - | -rm main.o & -rm test1  
 
-Es wurden folgende Kommandos verwendet:
+
 
 Kommando | Beschreibung
 ---------| ------------
