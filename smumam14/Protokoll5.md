@@ -58,7 +58,13 @@ Unsere Wahl fiel auf den sogennanten Modbus, da er sowohl mit RS485 als auch mit
 :point_right: __asynchrone Datenübertragung:__   
   Asynchron heißt im Grunde nur, dass Daten jederzeit auf der daherkommen können. Dies ist zum Beispiel bei UART (Universal Asynchronous Reciever Transmitter) der Fall. Bei der synchronen Datenübertragung können nur zu gewissen Zeiten Daten gesendet werden. Denkbar wäre, dass das Senden zum Beispiel mit einem ganz bestimmten Takt synchron laufen muss. Ein Beispiel für synchrone Datenübertragung ist SPI.  
   
-
+#### Der Modbus
+siehe auch [Skript Modbus](https://lms.at/dotlrn/classes/htl_elektrotechnik/610437.4AHME_LA1.17_18/xolrn/E7BE8C85F66CA/2148F16AC6F2E.symlink?resource_id=0-236827434-257560369&m=view#167572556) von DI Manfred Steiner  
+  
+Beim Modbus handelt es sich um einen offenen Feldbus, welcher 1979 von Gould-Modicon zur Kommunikation mit deren hauseigenen SPSen vorgestellt wurde. Er verfügt über drei verschiedene Ebenen:
+* Modbus ASCII: Hier kann immer ein ASCII-Zeichen nach dem anderen gesendet werden (rein textuell)  
+* Modbus RTU: Hier werden die Daten Binär übertragen
+* Modbus TCP: Hier werden TCP/IP-Pakete übertragen
 
 
 
