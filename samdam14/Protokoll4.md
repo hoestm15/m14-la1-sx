@@ -68,7 +68,7 @@ Der Zeitstempel ist auf Millisekunden genau.
 Das Programm soll mit Eingabe des _make test1_-Kommandos im Terminal den Text "_Guten Morgen!_" ausgeben.  
   
 **main.c**  
-```
+```c
 #include <stdio.h>
 
 int main()
@@ -120,7 +120,7 @@ make main.o | C-Programm wird in Maschinensprache übersetzt
 Es soll für den Arduino Nano ein C-Programm mittels Makefiles übersetzt werden. Die LED soll getoggled werden. Die Funkion _toggleLed_ soll in einer zweiten C-Datei programmiert werden.  
   
 **main.c**  
-```
+```c
 #include <avr/io.h>
 #include <util/delay.h>
 #include "util.h"
@@ -138,7 +138,7 @@ int main ()
 ```
   
 **util.c**  
-```
+```c
 #include <avr/io.h>
 
 void toggleLed ()
