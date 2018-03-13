@@ -10,7 +10,7 @@ __Turnus 1:__
  
 __Turnus 2:__
 * Gruppe 3: 4. Einheit, 06.03.2018  
-    * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/Protokoll4.md)
+    * Nicht Anwesend (erkrankt)
 * Gruppe 3: 5. Einheit, 13.03.2018
     * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/Protokoll5.md)
 * Gruppe 3: 6. Einheit, 20.03.2018
