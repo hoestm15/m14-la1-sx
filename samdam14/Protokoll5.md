@@ -17,7 +17,7 @@ Eine UART-Schnittstelle dient zum Senden umd zum Empfangen von Daten über Daten
 ----------------------------------------------------------  
 #### Projekt: Temperaturmessung  
 ![UART/Feldbus](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/feldbus.png)  
-Gemessene Werte des Temperatursensors LM75 am *SURE-Board* sollen mittels Feldbusprotokoll auf den Computer übertragen werden. Dort sollen die Daten von einer *Java Swing Appliktion* bearbeitet und visualisiert werden. Benötigtes Wissen wird folgt im Protokoll!  
+Gemessene Werte des Temperatursensors LM75 am *SURE-Board* sollen mittels Feldbusprotokoll auf den Computer übertragen werden. Dort sollen die Daten von einer *Java Swing Appliktion* bearbeitet und visualisiert werden. Benötigtes Wissen zur Lösung der Aufgabenstellung wird im folgenden Protokoll erklärt!  
   
 ##### Feldbusprotokoll  
 Damit man Daten vom SURE-Board auf den Computer übertragen kann, wird ein Feldbusprotokoll benötigt.  
