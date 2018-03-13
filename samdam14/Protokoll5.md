@@ -41,7 +41,7 @@ Die oben genannten Feldbusprotokolle stehen alle in Verbindung mit Lizenzen und 
   
 ##### Modbus  
 ![Modbus](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/modbus.JPG)  
-Das Modbus-Protokoll wurde am Anfang zur Kommunikation zwischen zwei oder mehreren SPSen. In der Industrie hat sich *Modbus* als ein "De-Facto-Standard" hervorgehoben. De-Facto, da es sich um ein offenes Protokoll handelt. Die Version Modbus TCP ist aber dennoch seit 2007 Teil der Norm IEC 61158. Das Modbus-Protokoll findet sich heuzutage in der Hausautomatisierung/Haustechnik in Verbindung mit RS-485-Netzwerken.   
+Das Modbus-Protokoll wurde am Anfang zur Kommunikation zwischen zwei oder mehreren SPSen. In der Industrie hat sich *Modbus* als ein "De-Facto-Standard" hervorgehoben. De-Facto, da es sich um ein offenes Protokoll handelt. Die Version Modbus TCP ist aber dennoch seit 2007 Teil der Norm IEC 61158. Das Modbus-Protokoll findet sich heuzutage in der Hausautomatisierung/Haustechnik in Verbindung mit RS-485-Netzwerken. Durch Modbus lassen sich Geräte mit unterschiedlichsten Verbindungstechnolgien miteinander verbinden.  
 [Wiki/Modbus](https://de.wikipedia.org/wiki/Modbus)  
 [Wiki/Feldbus/Normung(IEC61158](https://de.wikipedia.org/wiki/Feldbus#Normung)  
   
@@ -50,19 +50,38 @@ Der Kommunikationsablauf von Modbus ist ein einfaches Master-Slave- / Server-Cli
 Jeder Bus-Teilnehmer braucht eine eindeutige Adresse. (Adresse 0 ist für den Broadcast reserviert1). Theoretisch kann jeder Server und Client sein. Praktisch ist es aber, wenn ein *Master*/Server Anfragen stellt (z.B. an Aktoren oder Sensoren) und der jeweils adressierte *Slave*/Client mit einer Antwort antwortet.  
   
 Bi Modbus unterscheidet man zwischen 3 Betriebsarten:  
-Betriebsart | Übertragungsweise
------------ | -----------------
-Modbus ASCII | byteweise Übertragung, textuell
-Modbus RTU | byteweise Übertragung, binär
-Modbus TCP | Übertragung in TCP-Paketen
+* Modbus ASCII: byteweise Übertragung, textuell  
+* Modbus RTU: byteweise Übertragung, binär  
+* Modbus TCP: Übertragung in TCP-Paketen  
+  
+---------------------------------------------  
+  
+##### Protokollaufbau RTU  
+> Im RTU-Modus wird der Sendebeginn durch eine Sendepause von mindestens der 3,5-fachen Zeichenlänge markiert. Die Länge der Sendepause hängt somit von der Übertragungsgeschwindigkeit ab. Das Adressfeld besteht aus acht Bit, die die Empfängeradresse darstellen. Der Slave sendet bei seiner Antwort an den Master ebendiese Adresse zurück, damit der Master die Antwort zuordnen kann. Das Funktionsfeld besteht aus 8 Bit. Hat der Slave die Anfrage des Masters korrekt empfangen, so antwortet er mit demselben Funktionscode. Ist ein Fehler aufgetreten, so verändert er den Funktionscode, indem er das höchstwertige Bit des Funktionsfeldes auf 1 setzt. Das Datenfeld enthält Hinweise, welche Register der Slave auslesen soll, und ab welcher Adresse diese beginnen. Der Slave setzt dort die ausgelesenen Daten (z. B. Messwerte) ein, um sie an den Master zu senden. Im Fehlerfall wird dort ein Fehlercode übertragen. Das Feld für die Prüfsumme, die mittels CRC ermittelt wird, beträgt 16 Bit. Das gesamte Telegramm muss in einem kontinuierlichen Datenstrom übertragen werden. Tritt zwischen zwei Zeichen eine Sendeunterbrechung auf, die länger als 1,5 Zeichen ist, so ist das Telegramm als unvollständig zu bewerten und sollte vom Empfänger verworfen werden.  
+Quelle:[Wiki/Modbus](https://de.wikipedia.org/wiki/Modbus)  
+##### Protokollaufbau ASCII
+> Im ASCII-Modus beginnen Nachrichten mit einem vorangestellten Doppelpunkt, das Ende der Nachricht wird durch die Zeichenfolge Carriage return – Line feed (CRLF) markiert.
+Die ersten zwei Bytes enthalten zwei ASCII-Zeichen, die die Adresse des Empfängers darstellen. Der auszuführende Befehl ist auf den nächsten zwei Bytes codiert. Über ein Zeichen folgen die Daten. Über das gesamte Telegramm (ohne Start- und Ende-Markierung) wird zur Fehlerprüfung ein LRC ausgeführt, dessen Paritätsdatenwort in den abschließenden zwei Zeichen untergebracht wird. Tritt während der Übertragung eines Frames eine Pause von > 1s auf, wird der Frame als Fehlerfall bewertet. Der Benutzer kann ein längeres Timeout konfigurieren.  
+Quelle:[Wiki/Modbus](https://de.wikipedia.org/wiki/Modbus)  
+##### Protokollaufbau TCP  
+TCP ist RTU sehr ähnlich, allerdings werden TCP/IP-Pakete verwendet, um die Daten zu übermitteln. Der TCP-Port 502 ist für Modbus-Server standartisiert reserviert. Da die TCP/IP-Pakete verwendet werden, wird grundsätzlich keine zusätzliche Adesse benötigt, weil sie die IP-Adresse und die Portnummer beinhalten.  
+  
+---------------------------------------------------  
+  
+##### Daten-Modell  
+Das Modbus Daten-Modell unterscheidet vier Tabellen (Adressräume) für:  
+* *Discrete Inputs*  
+  * Ein Discrete Input ist ein einzelnes Bit, das nur gelesen werden kann  
+  * Beispiele: ein Taster, ein Endschalter, ...  
+* *Coils*
+Eine Coil ist ein Bit das gelesen und beschrieben werden kann.
+Der Name stammt vermutlich von der Spule eines Relais.
+Beispiele: ein Relais, eine LED, ...
+Input Registers
+Ein Input-Register ist ein 16-Bit Wert der nur gelesen werden kann.
+Beispiele: ein Temperatursensor, ein ADC, die Geräte-ID, ...
+Hold-Registers
+Ein Hold-Register ist ein 16-Bit Wert der gelesen und beschrieben werden kann.
+Beispiele: PWM-Einheit, DAC, ...
 
-
-
-Mit Modbus kann ein Master mit mehreren Slaves verbunden werden. Jeder Teilnehmer des Netzwerkes ist berechtigt Daten zu übertragen, regeln tut dies der Master.
-
-Man unterscheidet zwischen 3 Betriebsarten:
-
-Modbus ASCII (byteweise Übertragung, textuell)
-Modbus RTU (byteweise Übertragung, binär)
-Modbus TCP (Übertragung in TCP-Paketen)
 
