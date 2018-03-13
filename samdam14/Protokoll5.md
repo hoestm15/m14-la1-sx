@@ -62,6 +62,7 @@ Quelle:[Wiki/Modbus](https://de.wikipedia.org/wiki/Modbus)
 ##### Protokollaufbau ASCII
 > Im ASCII-Modus beginnen Nachrichten mit einem vorangestellten Doppelpunkt, das Ende der Nachricht wird durch die Zeichenfolge Carriage return – Line feed (CRLF) markiert.
 Die ersten zwei Bytes enthalten zwei ASCII-Zeichen, die die Adresse des Empfängers darstellen. Der auszuführende Befehl ist auf den nächsten zwei Bytes codiert. Über ein Zeichen folgen die Daten. Über das gesamte Telegramm (ohne Start- und Ende-Markierung) wird zur Fehlerprüfung ein LRC ausgeführt, dessen Paritätsdatenwort in den abschließenden zwei Zeichen untergebracht wird. Tritt während der Übertragung eines Frames eine Pause von > 1s auf, wird der Frame als Fehlerfall bewertet. Der Benutzer kann ein längeres Timeout konfigurieren.  
+[AufbauASCII](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/modbus_serial_ascii_frame.png)  
 Quelle:[Wiki/Modbus](https://de.wikipedia.org/wiki/Modbus)  
 ##### Protokollaufbau TCP  
 TCP ist RTU sehr ähnlich, allerdings werden TCP/IP-Pakete verwendet, um die Daten zu übermitteln. Der TCP-Port 502 ist für Modbus-Server standartisiert reserviert. Da die TCP/IP-Pakete verwendet werden, wird grundsätzlich keine zusätzliche Adesse benötigt, weil sie die IP-Adresse und die Portnummer beinhalten.  
@@ -73,15 +74,55 @@ Das Modbus Daten-Modell unterscheidet vier Tabellen (Adressräume) für:
 * *Discrete Inputs*  
   * Ein Discrete Input ist ein einzelnes Bit, das nur gelesen werden kann  
   * Beispiele: ein Taster, ein Endschalter, ...  
-* *Coils*
-Eine Coil ist ein Bit das gelesen und beschrieben werden kann.
-Der Name stammt vermutlich von der Spule eines Relais.
-Beispiele: ein Relais, eine LED, ...
-Input Registers
-Ein Input-Register ist ein 16-Bit Wert der nur gelesen werden kann.
-Beispiele: ein Temperatursensor, ein ADC, die Geräte-ID, ...
-Hold-Registers
-Ein Hold-Register ist ein 16-Bit Wert der gelesen und beschrieben werden kann.
-Beispiele: PWM-Einheit, DAC, ...
+* *Coils*  
+  * Eine Coil ist ein Bit das gelesen und beschrieben werden kann  
+  * Namensherkunft: Spule eines Relais  
+  * Beispiele: ein Relais, eine LED, ...  
+* *Input Registers*  
+  * Ein Input-Register ist ein 16-Bit Wert, kann nur gelesen werden  
+  * Beispiele: ein Temperatursensor, ein ADC, die Geräte-ID, ...  
+* *Hold-Registers*  
+  * Ein Hold-Register ist ein 16-Bit Wert, kann gelesen und beschrieben werden  
+  * Beispiele: PWM-Einheit, DAC, ...  
+  
+Die Adressen beginnen immer bei 1, anders als üblich mit 0 in der IT.  
 
+###### Function-Code  
+> Der Function-Code in einem Modbus-Frame definiert die Bedeutung des Frames. Für Requests und Non-Error-Responses sind Werte zwischen 1 und 127 zulässig. Dieser Bereich ist in drei Kategorien unterteilt:  
+> User defined Function Codes (65-72, 100-110)  
+> - Das sind Werte die individuell verwenden dürfen.  
+> Reserved Function Codes  
+> 8 (19,21-65535), 9, 10, 13, 14, 41, 42, 90, 91, 125, 126, 127  
+> - Das sind Werte die von einigen Unternehmen für Produkte verwendete wurden.  
+> Public Function Codes  
+> - Alle übrigen Werte. Hier definierte Funktionen werden eindeutig von der Modbus.org community festgelegt.  
+Quelle: [LA1-Skript Modbus](https://lms.at/dotlrn/classes/htl_elektrotechnik/610437.4AHME_LA1.17_18/xolrn/E7BE8C85F66CA/2148F16AC6F2E.symlink?resource_id=0-236827434-257560369&m=view#167572781)  
+(NUR ZUGÄNGLICH FÜR KURSTEILNEHMER!)  
+-------------------------------------------------  
+###### Exceptions  
+>Ist ein Request fehlerhaft, so wird in der Response das Bit-7 im Function-Code Feld gesetzt. Dadurch entsteht aus dem Function-Code 1 bis 127 ein Wert 129 bis 255. Weiters wird im Daten-Bereich ein Exception-Code gesendet. Dieser lässt Rückschlüsse auf die Art des Fehlers zu.  
+Exceptions decken ein breites Feld von Fehlerursachen ab. Welche es genau sind, können im oben genannten Skript nachgelesen werden.  
+  
+------------------------------------------------------  
+  
+##### Java Native Interface JNI  
+Java Native Interface wird dazu benötigt, um eine Verbindung zur Kommunikation zwischen der Java VM und der seriellen Schnittstelle, die in unserem Betriebssystem liegt, herzustellen. Im Gegensatz zu gewöhnlichen Java-Programmen ist ein Java-Programm, das JNI-Aufrufe verwendet, nur dann plattformunabhängig, wenn die native Programmbibliothek auf allen Plattformen verfügbar ist. Diese Programmbibliotheken müüsen dann am richtigen Ort gespeichert werden, damit das JNI sie erkennt. Abhilfe verschafft der Java Simple Serial Connector JSSC, da er plattformabhängige native Bibliotheken von alleine installiert.  
+Auf der Seite der JVM des JNIs befinden sich Methoden mit dem Schlüsselwort **native**.  
+Auf der Seite des Betriebssystem befinden sich die binären Bibliotheken (z.B. bei Windows: .dll).  
+Im Paket javax.comm liegt die Java-Programmier-Schnittstelle *Java Communications API*. Sie dient dazu, im generellen plattformunabhängig auf serielle, parallele und USB-Schnittstellen zuzugreifen. Quelle:[Wiki/JavaCommunicationsAPI](https://de.wikipedia.org/wiki/Java_Communications_API)  
+[Wiki/JavaNativeInterfaces](https://de.wikipedia.org/wiki/Java_Native_Interface)  
+  
+
+|Betriebssystem | Architektur | Wortbreite | Kürzel|
+|-------------- | ----------- | ---------- | ------|
+| Linux | x86 | 32 bit/64 bit | .so |
+| Linux | ARM | 32 bit | .so |
+| MacOS | x86 | 32 bit/64 bit | .jnilib |
+| MacOS | PowerPC | 32 bit/64 bit | .jnilib |
+| Solaris | x86 | 32 bit/64 bit | .so |
+| Windows | x86 | 32 bit/64 bit | .dll |
+
+###### Grafische Erklärung zur Problemzone zwischen JVM und Betriebssystem  
+![FunktionsweiseJNI](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/JNI.png)  
+  
 
