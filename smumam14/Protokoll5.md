@@ -27,5 +27,5 @@ C-Code ausführbar machen:
 #### Temperatursensor
 
 Hier eine grobe Übersicht unseres Vorhabens: 
-![bsb](https://github.com/HTLMechatronics/m14-la1-sx/smumam14/resources/shure_uebersicht.svg)
+![bsb](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/shure_uebersicht.svg)
 >(c) Martin Schmuck
