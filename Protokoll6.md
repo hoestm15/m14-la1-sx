@@ -13,32 +13,14 @@ Zu Beginn der Einheit luden wir den Modbusslave vom [Server](https://www.htl-mec
 
 ##Java
 Grundsätzlich regelt das Betriebssystem z.B. Windows den Zugriff auf serielle Schnittstellen wie z.B. Uart oder USB. Ein C-Programm würde dierekt auf das Betribssystem zugreifen, welches dann mit der Hardware kommuniziert.
-Unter Java wird zur Kommunikation zwischen Programm und Hardware eine Virtuelle Maschine, die sogenannte Java Virtuelle Maschine (JVM) zwischengeschaltet. Die Idee: Java wendet sich an die Virtuelle Machine, diese an das Betriebssystem, und dieses an die Hardware. Das Problem liegt darin, dass die JVM keine seriellen Schnittstellen unterstützt. Früher konnte man sich auf Maschinen des Herstellers Sun mit der Klasse *Java.comm* behelfen. Auch wenn man diese Software noch heute nachinstallieren könnte wird diese nur mehr geringfügig eingesetzt, da sie nur auf einem System lauffähig wäre, würde die Multiplattformfähigkeit und somit eine der essentiellen Eigenschaften Javas verloren gehen.
+Unter Java wird zur Kommunikation zwischen Programm und Hardware eine virtuelle Maschine, die sogenannte **Java Virtuelle Maschine (JVM)** zwischengeschaltet. Die Idee: Java wendet sich an die virtuelle Machine, diese an das Betriebssystem, und dieses an die Hardware. Das Problem liegt darin, dass die JVM keine seriellen Schnittstellen unterstützt. Früher konnte man sich auf Maschinen des Herstellers Sun mit der Klasse **Java.comm** behelfen. Auch wenn man diese Software noch heute nachinstallieren könnte, wird diese nur mehr geringfügig eingesetzt, da sie nur auf einem System lauffähig wäre und dadurch die Multiplattformfähigkeit, eine der essentiellen Eigenschaften Javas verloren gehen.
+Gelöst wird das Problem durch das **Java Native Interface (JNI)** welches innerhalb der virtuellen Maschine eine für Java lesbare .jar Datei erzeugt und außerhalb, eine für das Betriebssystem lesbare binäre Bibliothek aufbaut. **rxtx comm gnu.io** bezeichnet eine aufgrund von verbuggten C-Bibliotheken und schlechter Versionsverwaltung, sowie fehlender Nutzerfreundlichkeit nicht zu empfehlender Variante. **Java Simple Serial Connector (JSSC)** orientiert sich im Gegensatz dazu nicht an java.comm und dem streaming-Konzept. Einer der großen Vorteile liegt darin, das die binären Bibliotheken automatisch an der richtigen Stelle entpackt werden. Zuletzt veröffentlicht wurde die Version JSSC 2.8.1 experimetal. Aus Stabilitätsgründen verwenden wir im Unterricht JSSC 2.8.0. Unter NetBeans konnten wir nach dem Einbinden die Bibliotheken der unterschiedlichen Betriebssysteme erkennen.
+
+##Installation
+Um Nutzern eine ausführbare Datei zur Verfügung stellen zu können, haben wir in unser momentan leeres NetBeans-Projekt, in welchem nur die handler-Methoden enthalten waren, über die Projekt-Properties das Package */usr/java/packages/lib/jssc.jar* eingebunden. Nach dem durchführen eines "Clean&Build" wurde der Ordner lib/jssc-2.8.0.jar angefügt. Um die 
 
 
 
-
-## Java
-Hardware Uart(Serielle Schnittstelle)
-	USB
-Betriebssystem sorgt für Zugriff
-	C-Programm würde auf Betriebssystem zugreifen, welches dann auf Hardware zugreift
-Javavirtuellemachine
-Idee: Java Programm wendet sich an JVM, an OS, an HW
-Problem: JVM unterstützt keine serielle Schnittstelle
-java.comm früher auf sun-machinen, nicht auf anderen Systemen
-	(würde Multiplattformfähigkeit zerstören)
-kann heute unter selben Einschränkungen nachinstalliert werden
-Java native Interface baut binäre Bibliothek außerhalb der JVM und für JVM lesbare Datei jar innerhalb
-rxtxcomm gnu.io
-	Problem: C-Bibliotheken verbuggt, schlechte Versionsorganisation, Dateien mussten händisch positioniert werden
-Java Simple Serial Connector JSSC, orientiert sich nicht an java.comm und streaming-Konzept
-	Vorteil: in jar File sind binäre Bibliotheken enthalten welche automatisch an richtiger Stelle entpackt werden
-JSSC 2.8.0	Files, jar-Datei (2.8.1 experimental)
-jar Datei (zip-Datei) META-INF ordner, Manifest-Datei
-	JVM jar Datei übergeben und damit Programm ausführen
-Class unter jssc
-3.Ordner libs (Bibliotheken für unterschiedliche Betriebssysteme).so Dateien unter linux
 
 ## Installation
 leeres projekt (handler Methoden enthalten)
@@ -174,3 +156,25 @@ Vorlage Java Programm für Modbus Temp mit snapshot speichern
 Projekt mit Netbeans öffnen
 Grafische Oberfläche zur Temperaturmessung erscheint
 Projekt umbenennen ("Vorlage" entfernen)
+
+## Java
+Hardware Uart(Serielle Schnittstelle)
+	USB
+Betriebssystem sorgt für Zugriff
+	C-Programm würde auf Betriebssystem zugreifen, welches dann auf Hardware zugreift
+Javavirtuellemachine
+Idee: Java Programm wendet sich an JVM, an OS, an HW
+Problem: JVM unterstützt keine serielle Schnittstelle
+java.comm früher auf sun-machinen, nicht auf anderen Systemen
+	(würde Multiplattformfähigkeit zerstören)
+kann heute unter selben Einschränkungen nachinstalliert werden
+Java native Interface baut binäre Bibliothek außerhalb der JVM und für JVM lesbare Datei jar innerhalb
+rxtxcomm gnu.io
+	Problem: C-Bibliotheken verbuggt, schlechte Versionsorganisation, Dateien mussten händisch positioniert werden
+Java Simple Serial Connector JSSC, orientiert sich nicht an java.comm und streaming-Konzept
+	Vorteil: in jar File sind binäre Bibliotheken enthalten welche automatisch an richtiger Stelle entpackt werden
+JSSC 2.8.0	Files, jar-Datei (2.8.1 experimental)
+jar Datei (zip-Datei) META-INF ordner, Manifest-Datei
+	JVM jar Datei übergeben und damit Programm ausführen
+Class unter jssc
+3.Ordner libs (Bibliotheken für unterschiedliche Betriebssysteme).so Dateien unter linux
