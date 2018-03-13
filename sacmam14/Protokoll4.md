@@ -82,7 +82,7 @@ Beschreibung der Kommandos:
 
 Kommando | Beschreibung  
 -------- | ------------  
-gcc -o test1 main.o | Compiliervorgang, .o Datei entsteht  
+gcc -o test1 main.o | Compeliervorgang, .o Datei entsteht  
 gcc -c main.c | Linkvorgang, Name der Datei wird vergeben  
 -rm ... | Datei wird gelöscht, durch das `-` wird bei einem Fehler, der Fehler ignoriert und der Löschvorgang wird fortgesetzt  
 
