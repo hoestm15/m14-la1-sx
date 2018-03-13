@@ -24,5 +24,8 @@ C-Code ausführbar machen:
  * make-Tool ruft makefiles auf, Übersetzung wird dadurch gesteuert
  * make-Tool überprüft Zeitstempel und sorgt so dafür, das nicht immer alles neu übersetzt werden muss, sondern gleichbleibende Teile übersprungen werden
  
- 
- 
+#### Temperatursensor
+
+Hier eine grobe Übersicht unseres Vorhabens: 
+![bsb](m14-la1-sx/smumam14/resources/shure_uebersicht.svg)
+>(c) Martin Schmuck
