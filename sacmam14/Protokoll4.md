@@ -44,8 +44,8 @@ Mit dem Kommando `make` wird die Abarbeitung der Makefiles gestartet. Das make-T
 
 Kommando | Beschreibung  
 -------- | ------------  
-make clean | generierte Dateien werden gelöscht  
-make cleanAndBuild | generierte Dateien werden zuerst gelöscht und anschließend neu erzeugt  
+make clean | Dateien werden gelöscht  
+make cleanAndBuild | Dateien werden zuerst gelöscht und anschließend neu erzeugt  
 make main.o | C-Code wird in Maschinensprache übersetzt    
 
 ### Zeitstempel  
