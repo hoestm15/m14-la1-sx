@@ -31,23 +31,37 @@ Hier eine grobe Übersicht unseres Vorhabens:
 
 Der Temperatursensor LM75A sitzt auf unserem SHURE-Board und ist mit dem µC mit I²C verbunden. Der PC, auf dem die Java Swing GUI läuft, greift über die interne Serielle Schnittstelle, den Seriell-USB-Wandler auf die USB-UART-Konvertierung auf dem SHURE-Board zu. Diese ist mit dem µC verbunden, welcher die Daten über I²C vom intelligenten Sensor ausliest. Die Daten sollen zwischen SHURE-Board und PC über einen Feldbus übertragen werden. 
 
-:point_right: Java Swing:  
+:point_right: __Java Swing:__  
 Java Swing ist eine einfache Möglichkeit, um in Java graphische Benutzerschnittstellen zu realisieren (= GUI). Der Vorteil liegt darin, dass es sehr einfach und schnell geht, sich in die Swing-Programmierung einzuarbeiten. Leider wird Java Swing aber seit ca. einem Jahrzehnt nicht mehr wirklich gepflegt. Der Nachfolger und eine alternative Lösung für noch komplexere GUI's wäre Java FX, welches wesentlich komplexer aufgebaut ist und bereits mehrere Wochen bis Monate Einarbeitung benötigt, um benutzt werden zu können. Generell besteht leider im Moment die Situation, dass Java seit der Übernahme vom eigentlichen Entwickler Sun Microsystems durch Oracle nur mehr halbherzig supported wird. 
 
-:point_right: Intelligenter Sensor:  
+:point_right: __Intelligenter Sensor:__  
 Intelligent ist der Sensor deswegen, weil er schon einen fertigen Temperaturwert zurückliefert, das heißt, er muss irgendwie einen eingebauten Prozessor haben, welcher die Werte umrechenen kann. Im Gegensatz dazu würde ein unintelligenter Sensor (zB Pt100) einfach zB eine Spannung zwischen 0 und 10 Volt zurückliefern und mann müsste sich selbst um die Auswertung kümmern.
   
-:point_right: Feldbus:  
+:point_right: __Feldbus:__  
 folgende Felbusse sind unter anderem zur Zeit üblich:
 * Automatisierungstechnik / Industrie:  
        * Powerlink (offen, Basis: Ethernet, echtzeitfähig) [B&R; 2001]  
        * Profibus [1989]  
+       * Modbus [1979]
 * Automobilbereich  
        * CAN-Bus (Controller Area Network): anspruchsvolle Systeme, zB Motor-/Getriebesteuerung [Bosch, Intel; 1983]  
        * LIN (Local Interconnect Network): weniger anspruchsvolle Systeme, zB Fensterheber [Daimler, VW, BMW; 1999]  
        * FlexRay: möglicher Nachfolger von CAN [Daimler, BMW; 2000]
  * Haustechnik  
        * KNX (sehr kostspielig) [2002]  
-       
+
+Unsere Wahl fiel auf den sogennanten Modbus, da er sowohl mit RS485 als auch mit TCP/IP betreibbar ist und offen ist, das heißt man kann alle in alle Normen und Protokolle Einsicht nehmen und muss sich nicht erst Regelwerke um mehrer hundert Euro zulegen, bevor man arbeiten kann. Da wir uns an bestimmte Protokolle hielten, war unsere Vorgehensweise __nicht proprietär__. 
+  
+:point_right: __proprietär:__  
+  Eine proprietäre Vorgehensweise wäre, gängige Standards außer Acht zu lassen und sich alle Protokolle zur Datenübertragung selbst zu "basteln". Dadurch würde die Endlösung zwar unter Umständen günstiger oder schneller zustande kommen, jedoch ist ein solches System nicht mit anderen kompatibel, da man ja eigenen Standards verwendet. Außerdem konnte eine proprietäre Lösung vielleicht auch in Folge schwerer zu warten sein als ein System, welches auf genormten Standards beruht.   
+  
+:point_right: __asynchrone Datenübertragung:__   
+  Asynchron heißt im Grunde nur, dass Daten jederzeit auf der daherkommen können. Dies ist zum Beispiel bei UART (Universal Asynchronous Reciever Transmitter) der Fall. Bei der synchronen Datenübertragung können nur zu gewissen Zeiten Daten gesendet werden. Denkbar wäre, dass das Senden zum Beispiel mit einem ganz bestimmten Takt synchron laufen muss. Ein Beispiel für synchrone Datenübertragung ist SPI.  
+  
+
+
+
+
+
        
 
