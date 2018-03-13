@@ -63,7 +63,7 @@ Im Terminal kann man mit dem Kommando make die Abarbeitung des Makefile's starte
 Der **Zeitstempel** gibt an wann eine Datei das letzte Mal verändert wurde.Der Zeitstempel ist auf Millisekunden genau.  
 
 ### Touch  
-Den zeitstempel von Dateien ann man mit touch ändern(auf die aktuelle Zeit bringen). Falls noch keine Datei vorhanden ist, erzeugt touch eine neue leere Datei.    
+Den Zeitstempel von Dateien kann man mit touch ändern(auf die aktuelle Zeit bringen). Falls noch keine Datei vorhanden ist, erzeugt touch eine neue leere Datei.    
 
 ## Übungen mit _Makefiles_  
 ### Übung 1: Übersetzen eines einfachen C-Programms  
