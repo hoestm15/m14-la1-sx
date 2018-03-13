@@ -55,7 +55,7 @@ Er sagt aus zu welchen Zeitpunkt die Datei geschrieben oder verändert wurde.
 #### Übung 1
 Wir haben ein Programm geschrieben, dass im Terminal "Guten Morgen" ausgeben sollte.  
 **main.c** 
-```  
+```c  
 #include <stdio.h>  
 
 int main()  
@@ -90,7 +90,7 @@ gcc -c main.c | Linkvorgang, Name der Datei wird vergeben
 Es soll ein C-Programm für den Arduino Nano geschrieben und übersetzt werden. Das Programm soll eine Led togglen. Die Funktion toggleLed() soll in util.c programmiert werden.  
 
 **main.c** -> hier wird das eigentliche Programm programmiert  
-```  
+```c  
 #include <avr/io.h>  
 #include <util/delay.h>  
 #include "util.h"  
@@ -108,7 +108,7 @@ int main ()
 ```  
   
 **util.c**  -> hier die Funktion toggleLed() programmiert  
-```  
+```c  
 #include <avr/io.h>  
 
 void toggleLed ()  
