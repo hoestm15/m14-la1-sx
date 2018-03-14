@@ -93,3 +93,33 @@ Function Code | Hex | Name | Typ
 16| 10 | Write Multiple Registers | 16-Bit  
 
 Für weitere, detailiertere Informationen siehe: [Modbus](http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf)  
+
+### Exceptions
+>Ist ein Request fehlerhaft, so wird in der Response das Bit-7 im Function-Code Feld gesetzt. Dadurch entsteht aus dem Function-Code 1 bis 127 ein Wert 129 bis 255. Weiters wird im Daten-Bereich ein Exception-Code gesendet. Dieser lässt Rückschlüsse auf die Art des Fehlers zu. Exceptions decken ein breites Feld von Fehlerursachen ab. Welche es genau sind, können im oben genannten Skript nachgelesen werden.
+
+
+## Java Native Interface (JNI)  
+Java Native Interface ist eine standardisierte Anwendungsprogrammierschnittstelle (API), die die Möglichkeit schafft, aus der Programmiersprache Java heraus Plattform-spezifische Funktionen bzw. Methoden aufzurufen.  
+
+JNI ermöglicht es, native Methoden zu schreiben für Situationen, in denen es nicht möglich ist, ausschließlich Java als Programmiersprache einzusetzen. Dies ist der Fall, wenn beispielsweise die Standard-Java-Klassenbibliothek bestimmte Plattform-abhängige Features oder andere Programmbibliotheken nicht unterstützt. Weiterhin ist es per JNI möglich, eine weitere in einer anderen Programmiersprache programmierte Anwendung für Java zugreifbar zu machen. Viele Klassen der Java-Standardbibliothek basieren auf JNI, um beispielsweise die Datei-Ein- und Ausgabe oder Soundwiedergabe zu ermöglichen. Indem Java Leistungs- und Plattform-abhängige Implementierungen in die Standardbibliothek integriert, kann der Java-Programmierer und -Nutzer diese Features in sicherer und Plattform-unabhängiger Weise nutzen.  
+Quelle: [wikipedia.org](https://de.wikipedia.org/wiki/Java_Native_Interface)  
+
+Wir benötigen das JNI um eine Kommunikationsschnittstelle zwischen unserer Java Virtual Machine und den seriellen Schnittstellen auf die unserer Betriebssystem zugreift, herzustellen.  
+
+### Programmbibliotheken  
+In unseren *AIIT-Templates* unter Netbeans finden sich [Programmbibliotheken](https://de.wikipedia.org/wiki/Programmbibliothek) für JNI.
+Jedes Betriebssystem, bzw. jede [Architektur](https://de.wikipedia.org/wiki/Rechnerarchitektur) benötigt zum Kompilieren seine/ihre eigene Bibliothek.  
+
+Betriebssystem | Architektur | Wortbreite | Kürzel  
+---------------|-------------|------------|-------  
+| Linux | x86 | 32 bit | `.so`    
+| Linux | x86 | 64 bit | `.so`  
+| Linux | ARM | 32 bit | `.so`  
+| macOS | x86 | 32 bit | `.jnilib`  
+| macOS | x86 | 64 bit | `.jnilib`  
+| macOS | PowerPC | 32 bit | `.jnilib`  
+| macOS | PowerPC | 64 bit | `.jnilib`  
+| Solaris | x86 | 32 bit | `.so`  
+| Solaris | x86 | 64 bit | `.so`  
+| Windows | x86 | 32 bit | `.dll`  
+| Windows | x86 | 64 bit | `.dll`  
