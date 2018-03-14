@@ -1,1 +1,1 @@
-This folder contains the resources
+This folder contains the resources for the files.
