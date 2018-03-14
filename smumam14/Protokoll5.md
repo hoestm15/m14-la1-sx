@@ -1,5 +1,5 @@
 # Laborprotokoll  
-Dritte Einheit am 13. März 2018 
+Fünfte Einheit am 13. März 2018  
 Martin Schmuck  
 4AHME  
 Gruppe 3
@@ -61,7 +61,7 @@ Unsere Wahl fiel auf den sogennanten Modbus, da er sowohl mit RS485 als auch mit
 :point_right: __RS-485:__   
 Auch EIA-485 genannt, ist eine klassiche Zwei-Leiter-Übertragungstechnik, siehe auch [Wikipedia](https://de.wikipedia.org/wiki/EIA-485) für weitere Informationen.
   
-#### Der Modbus
+### Der Modbus
 siehe auch [Skript Modbus](https://lms.at/dotlrn/classes/htl_elektrotechnik/610437.4AHME_LA1.17_18/xolrn/E7BE8C85F66CA/2148F16AC6F2E.symlink?resource_id=0-236827434-257560369&m=view#167572556) von DI Manfred Steiner  
   
 Beim Modbus handelt es sich um einen offenen Feldbus, welcher 1979 von Gould-Modicon zur Kommunikation mit deren hauseigenen SPSen vorgestellt wurde. Er verfügt über drei verschiedene Ebenen:
@@ -74,20 +74,24 @@ Hier ist eine Grafik dazu:
 ![modbusprinzip](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/modbus_server_client.png)
 >aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 14.03.2018
   
+   
+   
 #### Modbus-Modi
-* ASCII: hier werden die Daten als ASCII-Zeichen versendet. Die empfohlene Konfiguration der seriellen Schnittstelle ist 7E1 oder 7N2, also nur 7 Datenbits. Dies ist aber Absicht, das die ASCII-Codepage mit 7 Bit auskommt. Im Falle des Falles darf davon jedoch auch abgewichen werden. Eine Übertragung wird mit einem Doppelpunkt eingeleitet, nach Adresse und Function Code kommen bis zu 252 Zeichen, danach eine LRC-Prüfsumme und abgeschlossen wird die Transmission mit einem CR (Wagenrücklauf) und einem LF (Zeilenvorschub).  
-Hier die grafische Darstellung:  
-![ASCII](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/modbus_ascii.png)  
->aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 14.03.2018  
-
-* RTU:  
-* TCP: 
-  
 Ein Modbus-Paket ist wie folgt aufgebaut:  
 ![modbusunit](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/modbus_units.png)  
 >aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 14.03.2018  
   
 Wie hier ersichtlich ist, werden die Daten in einem Modbuspaket verschieden zusammengestellt. Dies hängt von dem Modus ab. Die PDU, Protocol Data Unit, ist immer gleich und besteht aus dem Function Code, welcher die Art der Anfrage angibt und den eigentlichen Daten. Bei den Modi ASCII und RTU kommen noch Bereiche für Adresse und Prüfsumme hinzu, dann ist von einer ADU (Application Data Unit) die Rede. Bei TCP sind diese zusätzlichen Daten nicht erforderlich, das hier TCP/IP-Pakte versendet werden, welche bereits in sich eine Prüfsumme und eine Adresse (in diesem Fall ein Socket) haben.  
+ 
+:point_right: __ASCII:__  
+hier werden die Daten als ASCII-Zeichen versendet. Die empfohlene Konfiguration der seriellen Schnittstelle ist 7E1 oder 7N2, also nur 7 Datenbits. Dies ist aber Absicht, das die ASCII-Codepage mit 7 Bit auskommt. Im Falle des Falles darf davon jedoch auch abgewichen werden. Eine Übertragung wird mit einem Doppelpunkt eingeleitet, nach Adresse und Function Code kommen bis zu 252 Zeichen, danach eine LRC-Prüfsumme und abgeschlossen wird die Transmission mit einem CR (Wagenrücklauf) und einem LF (Zeilenvorschub).  
+Hier die grafische Darstellung:  
+![ASCII](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/modbus_ascii.png)  
+>aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 14.03.2018  
+Beispiel einer Übertragung: `:0401000A000868<CR><LF>`
+
+:point_right: __Zwischenfrage: Wie weiß der Modbus-Empfänger, wann beim RTU-Modus die Übertragung beendet ist?__  
+Da der RTU-Modus die Daten bitweise überträgt, kann man nicht so einfach feststellen, wann eine Übertragung beendet ist. Daher wurde festgelegt, dass, wenn auf der Leitung eine Pause von 3,5 Zeichen auftritt, der Empfänger die Übertragung des Pakets als abgeschlossen interpretieren soll. Dies kann jedoch zu einem Problem führen, da 3,5 Zeichen je nach Konfiguration zeitlich gesehen deutlich unter einer Millisekunde sein können und es durch das Betriebssystem des Rechners ohne weiters zu solchen Verzögerungen kommen kann. In diesem Moment würde der Empfänger (zB µC) zwei Pakete bekommen, aber anhand der Prüfsummen sehen, dass etwas nicht stimmt und beide Pakete als korrupt erkennen und verwerfen. An diesem Punkt ist die Abhilfe nur durch "pfuschen" möglich, nämlich in dem man zum Beispiel in der Konfiguration die Wartezeit von 3,5 Zeichen auf 35 oder 70 Zeichen erhöht. Außerdem darf in einer RTU-Übertragung keine Pause von mehr als 1,5 Zeichen sein, da der Empfänger das Paket dann auch verwerfen würde. Gegebenenfalls muss auch diese Zeit angepasst werden. Alternativ wäre nur der Umstieg auf eine anderes Verfahren zu nennen. Außerdem darf in einer RTU-Übertragung keine Pause von mehr als 1,5 Zeichen sein, da der Empfänger das Paket dann auch verwerfen würde. Gegebenenfalls muss auch diese Zeit angepasst werden. 
 
 ##### Modbus-Daten-Modell  
 Das Modbus-Daten-Modell unterscheidet vier verschiedene Bereiche:  
@@ -113,8 +117,38 @@ Code | Zweck
 `15` | mehrere Coils beschreiben
 `16` | mehrere Register beschreiben
   
+#### Beispielübertragung
+entnommen aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 14.03.2018:  
   
+"Lese 8 Coils beginnend bei Coils-Adresse 11 (= 10 = 0x0a in der PDU):"
+```
+Request       | Function Code | Starting Address | Quantity of coils |
+        ------+---------------+------------------+-------------------|
+         Byte |       1       |    2   |    3    |    4    |    5    |
+        ------+---------------+--------+---------+---------+---------|
+         Wert |     0x01      |  0x00  |  0x0a   |  0x00   |  0x08   |
+        --------------------------------------------------------------
+```
+```
+Response      | Function Code | Byte count | coil values |
+        ------+---------------+------------+--------------
+         Byte |       1       |      2     |      3      |
+        ------+---------------+------------+-------------|
+         Wert |     0x01      |    0x01    |    0xc7     |
+        --------------------------------------------------
+```
 
+```  
+Error         | Function Code | Exception code |
+        ------+---------------+----------------|
+         Byte |       1       |        2       |
+        ------+---------------+----------------|
+         Wert |     0x81      |      0x03      |
+        ----------------------------------------
+```
+Hier sind zwei weitere Eigenarten von Modbus ersichtlich:
+1. Egal ob es sich um eine Anfrage (Request), Antwort (Response) oder eine Fehlermeldung (Error) handelt, es wird stets der Function Code mitgesendet, welcher aussagt, welche Art von Anfrage es ursprünglich war.
+1. In der Definition wird mit 1 begonnen zu zählen (dort, wo die Adressen für die Coils usw. festgelegt werden). Diese Vorgehensweise ist eher unüblich, da man in der Informatik traditionell mit 0 zu zählen beginnt. Und hier hat man beide Systeme vermischt, da, wenn man die Adresse 11 ansprechen will, man erst wieder 10 über die Schnittstelle übertragen muss. Das heißt, das erste Coil am Zielsystem hat die Nummer 1 (NICHT 0), wenn man dieses Bit ansprechen will, muss man jedoch die Adresse 0x00 (NICHT 0x01) übertragen. Dies muss man sich unbedingt merken und ständig im Auge behalten, da es sonst beim Entwickeln leicht zu Missverständnissen kommen kann, weil man permanent die falschen Adressen anspricht und so die falschen Daten überträgt. 
 
 
 
