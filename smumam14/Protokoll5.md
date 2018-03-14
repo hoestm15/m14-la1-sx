@@ -43,11 +43,11 @@ folgende Felbusse sind unter anderem zur Zeit üblich:
        * Powerlink (offen, Basis: Ethernet, echtzeitfähig) [B&R; 2001]  
        * Profibus [1989]  
        * Modbus [1979]
-* Automobilbereich  
+* Automobilbereich:  
        * CAN-Bus (Controller Area Network): anspruchsvolle Systeme, zB Motor-/Getriebesteuerung [Bosch, Intel; 1983]  
        * LIN (Local Interconnect Network): weniger anspruchsvolle Systeme, zB Fensterheber [Daimler, VW, BMW; 1999]  
        * FlexRay: möglicher Nachfolger von CAN [Daimler, BMW; 2000]
- * Haustechnik  
+ * Haustechnik:    
        * KNX (sehr kostspielig) [2002]  
 
 Unsere Wahl fiel auf den sogennanten Modbus, da er sowohl mit RS485 als auch mit TCP/IP betreibbar ist und offen ist, das heißt man kann alle in alle Normen und Protokolle Einsicht nehmen und muss sich nicht erst Regelwerke um mehrere hundert Euro zulegen, bevor man arbeiten kann. Da wir uns an bestimmte Protokolle hielten, war unsere Vorgehensweise __nicht proprietär__. 
