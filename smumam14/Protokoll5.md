@@ -74,6 +74,14 @@ Hier ist eine Grafik dazu:
 ![modbusprinzip](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/modbus_server_client.png)
 >aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 14.03.2018
   
+#### Modbus-Modi
+* ASCII: hier werden die Daten als ASCII-Zeichen versendet. Die empfohlene Konfiguration der seriellen Schnittstelle ist 7E1 oder 7N2, also nur 7 Datenbits. Dies ist aber Absicht, das die ASCII-Codepage mit 7 Bit auskommt. Im Falle des Falles darf davon jedoch auch abgewichen werden. Eine Übertragung wird mit einem Doppelpunkt eingeleitet, nach Adresse und Function Code kommen bis zu 252 Zeichen, danach eine LRC-Prüfsumme und abgeschlossen wird die Transmission mit einem CR (Wagenrücklauf) und einem LF (Zeilenvorschub).  
+Hier die grafische Darstellung:  
+![ASCII](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/modbus_ascii.png)  
+>aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 14.03.2018  
+
+* RTU:  
+* TCP: 
   
 Ein Modbus-Paket ist wie folgt aufgebaut:  
 ![modbusunit](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/modbus_units.png)  
