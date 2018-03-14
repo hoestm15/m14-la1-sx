@@ -16,12 +16,12 @@ Wir haben Modbus als Protokoll festgelegt, da es kostenlos, und relativ leicht V
 ## Temperatursensor  
 Der Sensor LM75A ist ein Temperatursensor auf dem Sure-Board und ist mit dem µC mit I²C verbunden. Es ist ein "intelligenter" Sensor, dass bedeutet dass er einen Prozessor eingebaut hat und einen fertigen Temperaturwert zurückliefert. Bei "unintelligenten" Sensoren bekommt man eine Spanung zurückgeliefert und man muss sich seinen Wert selbst ausrechnen.   
 
-## Felbus  
+## Feldbus  
 Es ist ein Bussystem, das in einer Anlage Feldgeräte und Stellglieder zwecks Kommunikation mit einem Automatisierungsgerät verbindet. Es gibt nomierte Protokolle um bei mehrere Kommunikationsteilnehmer ihre Nachrichten über dieselbe Leitung senden zu wissen, wer was wann sagt.  
 
 Die erste Generation der Feldbustechnik wurde in den 1980er Jahren entwickelt, um die bis dahin übliche Parallelverdrahtung binärer Signale sowie die analoge Signalübertragung durch digitale Übertragungstechnik zu ersetzen. Heute sind viele unterschiedliche Feldbussysteme mit unterschiedlichen Eigenschaften am Markt etabliert. Seit 1999 werden Feldbusse in der Norm IEC 61158 weltweit standardisiert. Die zweite Generation der Feldbustechnik basiert auf Echtzeit-Ethernet.  
 
-Folgende Felbusse sind zur Zeit üblich:  
+Folgende Feldbusse sind zur Zeit üblich:  
 * Modbus (Industrie)  
 * Powerlink (Industrie)  
 * Profibus (Industrie)  
