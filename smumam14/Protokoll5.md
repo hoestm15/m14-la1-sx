@@ -50,13 +50,16 @@ folgende Felbusse sind unter anderem zur Zeit üblich:
  * Haustechnik  
        * KNX (sehr kostspielig) [2002]  
 
-Unsere Wahl fiel auf den sogennanten Modbus, da er sowohl mit RS485 als auch mit TCP/IP betreibbar ist und offen ist, das heißt man kann alle in alle Normen und Protokolle Einsicht nehmen und muss sich nicht erst Regelwerke um mehrer hundert Euro zulegen, bevor man arbeiten kann. Da wir uns an bestimmte Protokolle hielten, war unsere Vorgehensweise __nicht proprietär__. 
+Unsere Wahl fiel auf den sogennanten Modbus, da er sowohl mit RS485 als auch mit TCP/IP betreibbar ist und offen ist, das heißt man kann alle in alle Normen und Protokolle Einsicht nehmen und muss sich nicht erst Regelwerke um mehrere hundert Euro zulegen, bevor man arbeiten kann. Da wir uns an bestimmte Protokolle hielten, war unsere Vorgehensweise __nicht proprietär__. 
   
 :point_right: __proprietär:__  
   Eine proprietäre Vorgehensweise wäre, gängige Standards außer Acht zu lassen und sich alle Protokolle zur Datenübertragung selbst zu "basteln". Dadurch würde die Endlösung zwar unter Umständen günstiger oder schneller zustande kommen, jedoch ist ein solches System nicht mit anderen kompatibel, da man ja eigenen Standards verwendet. Außerdem konnte eine proprietäre Lösung vielleicht auch in Folge schwerer zu warten sein als ein System, welches auf genormten Standards beruht.   
   
 :point_right: __asynchrone Datenübertragung:__   
   Asynchron heißt im Grunde nur, dass Daten jederzeit auf der daherkommen können. Dies ist zum Beispiel bei UART (Universal Asynchronous Reciever Transmitter) der Fall. Bei der synchronen Datenübertragung können nur zu gewissen Zeiten Daten gesendet werden. Denkbar wäre, dass das Senden zum Beispiel mit einem ganz bestimmten Takt synchron laufen muss. Ein Beispiel für synchrone Datenübertragung ist SPI.  
+  
+:point_right: __RS-485:__   
+Auch EIA-485 genannt, ist eine klassiche Zwei-Leiter-Übertragungstechnik, siehe auch [Wikipedia](https://de.wikipedia.org/wiki/EIA-485) für weitere Informationen.
   
 #### Der Modbus
 siehe auch [Skript Modbus](https://lms.at/dotlrn/classes/htl_elektrotechnik/610437.4AHME_LA1.17_18/xolrn/E7BE8C85F66CA/2148F16AC6F2E.symlink?resource_id=0-236827434-257560369&m=view#167572556) von DI Manfred Steiner  
@@ -65,6 +68,11 @@ Beim Modbus handelt es sich um einen offenen Feldbus, welcher 1979 von Gould-Mod
 * Modbus ASCII: Hier kann immer ein ASCII-Zeichen nach dem anderen gesendet werden (rein textuell)  
 * Modbus RTU: Hier werden die Daten Binär übertragen
 * Modbus TCP: Hier werden TCP/IP-Pakete übertragen
+
+Ein Modbus-Paket ist wie folgt aufgebaut:  
+![modbus]()  
+>aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 14.03.2018
+
 
 
 
