@@ -70,7 +70,7 @@ Beim Modbus handelt es sich um einen offenen Feldbus, welcher 1979 von Gould-Mod
 * Modbus TCP: Hier werden TCP/IP-Pakete übertragen
 
 Ein Modbus-Paket ist wie folgt aufgebaut:  
-![modbus]()  
+![modbus](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/modbus_units.png)  
 >aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 14.03.2018
 
 
