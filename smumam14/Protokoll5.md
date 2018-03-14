@@ -69,10 +69,27 @@ Beim Modbus handelt es sich um einen offenen Feldbus, welcher 1979 von Gould-Mod
 * Modbus RTU: Hier werden die Daten Binär übertragen
 * Modbus TCP: Hier werden TCP/IP-Pakete übertragen
 
-Ein Modbus-Paket ist wie folgt aufgebaut:  
-![modbus](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/modbus_units.png)  
+Der Modbus arbeitet nach dem Server-Client-Prinzip, wobei in unserem Fall die Rolle des Servers das SHURE-Boards einnimmt (wartet auf Anfragen) und der PC bzw. unsere Applikation als Client (fragt den Server nach der Temperatur (vereinfacht ausgedrückt)) fungiert. Eventuell findet man analog dazu auch die Bezeichnung Master-Slave-System.  
+Hier ist eine Grafik dazu: 
+![modbusprinzip](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/modbus_server_client.png)
 >aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 14.03.2018
+  
+  
+Ein Modbus-Paket ist wie folgt aufgebaut:  
+![modbusunit](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/modbus_units.png)  
+>aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 14.03.2018  
+  
+Wie hier ersichtlich ist, werden die Daten in einem Modbuspaket verschieden zusammengestellt. Dies hängt von dem Modus ab. Die PDU, Protocol Data Unit, ist immer gleich und besteht aus dem Function Code, welcher die Art der Anfrage angibt und den eigentlichen Daten. Bei den Modi ASCII und RTU kommen noch Bereiche für Adresse und Prüfsumme hinzu, dann ist von einer ADU (Application Data Unit) die Rede. Bei TCP sind diese zusätzlichen Daten nicht erforderlich, das hier TCP/IP-Pakte versendet werden, welche bereits in sich eine Prüfsumme und eine Adresse (in diesem Fall ein Socket) haben.  
 
+##### Modbus-Daten-Modell  
+Das Modbus-Daten-Modell unterscheidet vier verschiedene Bereiche:  
+
+Name | Zweck | Beispiel
+-----|-------|---------
+Discrete Inputs | ein einzelnes Bit, welches nur lesbar ist | Taster am SHURE-Board
+Coils | les- und beschreibbares Bit | LED oder Spule (daher der Name)
+Input Registers | lesbares Register (16-Bit-Wert) | ADC, Temperatursensor
+Hold-Registers | les- und beschreibbares Register (16-Bit) | DAC, Pulsweitenmodulatormodul
 
 
 
