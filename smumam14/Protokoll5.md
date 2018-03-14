@@ -89,7 +89,23 @@ Name | Zweck | Beispiel
 Discrete Inputs | ein einzelnes Bit, welches nur lesbar ist | Taster am SHURE-Board
 Coils | les- und beschreibbares Bit | LED oder Spule (daher der Name)
 Input Registers | lesbares Register (16-Bit-Wert) | ADC, Temperatursensor
-Hold-Registers | les- und beschreibbares Register (16-Bit) | DAC, Pulsweitenmodulatormodul
+Hold-Registers | les- und beschreibbares Register (16-Bit) | DAC, Pulsweitenmodulatormodul  
+  
+##### Funktionscodes
+Function Codes oder (dt. Funktionscodes) werden verwendet, um die Art der Anfrage anzugeben. Hier ein Auszug einiger genormter Codes:  
+
+Code | Zweck
+-----|------
+`1` | Coils lesen
+`2` | Discrete Inputs lesen
+`3` | Hold-Register lesen
+`4` | Input-Register lesen
+`5` | ein Coil beschreiben
+`6` | ein Register beschreiben
+`15` | mehrere Coils beschreiben
+`16` | mehrere Register beschreiben
+  
+  
 
 
 
