@@ -18,4 +18,4 @@ Es soll eine Temperaturmessung über den am SURE-Board integrierten Temperaturse
 
 Die grundsätzliche Struktur sieht folgendermaßen aus:
 
-![https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/BildGrundstruktur.svg](Grundstruktur als SVG)
+! [https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/BildGrundstruktur.svg](Grundstruktur als SVG)
