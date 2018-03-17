@@ -61,11 +61,11 @@ In unserem Fall stellt das SURE-Board den Server und der PC den Client dar. Am f
 
 ![Server/Client Prinzip bei Modbus]()
 
-Es gibt 3 Arten der Datenübertragung:
+**Es gibt 3 Arten der Datenübertragung:**
 
 * Modbus ASCII - Die Daten werden textuell und byteweise übertragen. Frames beginnen mit einem Doppelpunkt
 * Modbus RTU - Die Daten werden byteweise übertragen (= Remote Terminal Unit)
-* Modbus TCP - Die Daten werden in TCP-Paketen übertragen
+* Modbus TCP - Die Daten werden in TCP-Paketen übertragen. Besonderheit: Paketanfang/Paketende werden durch Pausen detektiert, was in auf nicht deterministischen Betriebssystemen wie Windows schnell zu Problemen führen kann.
 
 Ein Modbus Datenpaket muss mindestens aus den Teilen **Function Code** und **Data** bestehen. Bei den Varianten ASCII und RTU kommen zusätzlich noch die Adresse und eine Prüfsumme dazu. Das ist bei Modbus TCP nicht notwendig, da diese Bestandteile bereits im TCP-Standard beinhaltet sind. Folgendes Bild stellt den Unterschied zwischen **ADU**(Application Data Unit) und **PTU**(Protocoll Data Units):
 
@@ -80,4 +80,21 @@ Beim Modbus Daten-Modell wird in vier verschiedene Adressräume unterschieden:
 * Coils (ein Bit, welches gelesen und beschrieben werden kann) zum Beispiel: eine LED
 * Input Registers (ein 16-Bit Wert der nur gelesen werden kann) zum Beispiel: ein Temperatursensor
 * Hold-Registers (ein 16-Bit Wert der gelesen und beschrieben werden kann) zum Beispiel: die Anzeige am Sure-Board
+
+**Function Codes**
+
+Die  bereits oben erwähnten Function-Codes defineren ein Modbus-Frame. Für Requests sind Werte zwischen 1 und 127 zulässig. Dabei können Function Codes in den Bereichen 65-72 und 100-110 vom Benutzer selber vergeben werden. Der Großteil der restlichen Function Codes werden von der Modbus.org Community eindeutig definiert (**Public Function Codes**).
+Einige wichtigte Public Function Codes sind hier zusammengefasst:
+
+Function Code | Hex | Name | Typ
+--------------- | --------- | --------- | ---
+1 | 01 | Read Coils | Bit
+2 | 02 | Read Discrete Inputs | Bit
+3 | 03 | Read Holding Registers | 16-Bit
+4 | 04 | Read Input Register | 16-Bit
+5 | 05 | Write Single Coil | Bit
+6 | 06 | Write Single Register | 16-Bit 
+15| 0F | Write Multiple Coils |	Bit
+16| 10 | Write Multiple Registers | 16-Bit
+
 
