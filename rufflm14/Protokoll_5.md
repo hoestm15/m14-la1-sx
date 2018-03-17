@@ -41,6 +41,7 @@ JAVA Swing ist seit 1998 Bestandteil der JAVARuntime und weit verbreitet. Als de
 
 ### Feldbusse
 
+
 Ein Feldbus ist ein Bussystem, das in einer Anlage Sensoren und Aktoren mit einem Automatisierungsgerät verbindet. Welches Bussystem sivoll ist  hängt stark von der Anwendung ab. Folgende Feldbusse sind stark verbreitet:
 
 * **[POWERLINK](https://de.wikipedia.org/wiki/Ethernet_Powerlink)** - basiert auf Ethernet, das für Echtzeitanwendungen erweitert wurde. Hauptsächlich für Maschinen- und Anlagenbau. 
@@ -66,6 +67,14 @@ In unserem Fall stellt das SURE-Board den Server und der PC den Client dar. Am f
 * Modbus ASCII - Die Daten werden textuell und byteweise übertragen. Frames beginnen mit einem Doppelpunkt
 * Modbus RTU - Die Daten werden byteweise übertragen (= Remote Terminal Unit)
 * Modbus TCP - Die Daten werden in TCP-Paketen übertragen. Besonderheit: Paketanfang/Paketende werden durch Pausen detektiert, was in auf nicht deterministischen Betriebssystemen wie Windows schnell zu Problemen führen kann.
+
+**ASCII Transmission Mode**
+Die Übertragung der Frames erfolgt hier wie bereits bekannt als ASCII-Text. Die serielle Schnittstelle wird standardmäßig 7E1 oder 7N2 konfigueriert, also nur 7 Daten-Bits! Im Bedarfsfall darf aber auch eine davon abweichende Festlegung verwendet werden.
+
+Ein Modbus ASCII-Frame hat somit folgenden Aufbau:
+![Modbus ASCII Frame]()
+
+**Modbus Datenpaket**
 
 Ein Modbus Datenpaket muss mindestens aus den Teilen **Function Code** und **Data** bestehen. Bei den Varianten ASCII und RTU kommen zusätzlich noch die Adresse und eine Prüfsumme dazu. Das ist bei Modbus TCP nicht notwendig, da diese Bestandteile bereits im TCP-Standard beinhaltet sind. Folgendes Bild stellt den Unterschied zwischen **ADU**(Application Data Unit) und **PTU**(Protocoll Data Units):
 
@@ -97,4 +106,13 @@ Function Code | Hex | Name | Typ
 15| 0F | Write Multiple Coils |	Bit
 16| 10 | Write Multiple Registers | 16-Bit
 
+[Mehr Infos in der Spezifikation](http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf)
 
+**Fehlerbehandlung** 
+Kommt es bei einem Request zu einem Fehler, wird im Response das Bit 7 im Function-Code Field gesetzt. Deswegen sind auch nur Funktion Codes von 1-127 für den benutzer verfügbar. Des Weiteren wird im Daten-Bereich ein Exception-Code gesendet. Dieser gibt die Art des Fehlers nach folgendem Prinzip an:
+
+![Modbus Exception]()
+
+[Mehr Infos in der Modbus-Spezifikation](http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf)
+
+### Java Native Interface
