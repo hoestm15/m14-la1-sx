@@ -148,9 +148,16 @@ Error         | Function Code | Exception code |
 ```
 Hier sind zwei weitere Eigenarten von Modbus ersichtlich:
 1. Egal ob es sich um eine Anfrage (Request), Antwort (Response) oder eine Fehlermeldung (Error) handelt, es wird stets der Function Code mitgesendet, welcher aussagt, welche Art von Anfrage es ursprünglich war.
-1. In der Definition wird mit 1 begonnen zu zählen (dort, wo die Adressen für die Coils usw. festgelegt werden). Diese Vorgehensweise ist eher unüblich, da man in der Informatik traditionell mit 0 zu zählen beginnt. Und hier hat man beide Systeme vermischt, da, wenn man die Adresse 11 ansprechen will, man erst wieder 10 über die Schnittstelle übertragen muss. Das heißt, das erste Coil am Zielsystem hat die Nummer 1 (NICHT 0), wenn man dieses Bit ansprechen will, muss man jedoch die Adresse 0x00 (NICHT 0x01) übertragen. Dies muss man sich unbedingt merken und ständig im Auge behalten, da es sonst beim Entwickeln leicht zu Missverständnissen kommen kann, weil man permanent die falschen Adressen anspricht und so die falschen Daten überträgt. 
+1. In der Definition wird mit 1 begonnen zu zählen (dort, wo die Adressen für die Coils usw. festgelegt werden). Diese Vorgehensweise ist eher unüblich, da man in der Informatik traditionell mit 0 zu zählen beginnt. Und hier hat man beide Systeme vermischt, da, wenn man die Adresse 11 ansprechen will, man erst wieder 10 über die Schnittstelle übertragen muss. Ein Beispiel: Das erste Coil am Zielsystem hat die Nummer 1 (NICHT 0), wenn man jedoch dieses Bit ansprechen will, ist die Adresse 0x00 (NICHT 0x01) zu übertragen. Dies muss man sich unbedingt merken und ständig im Auge behalten, da es sonst beim Entwickeln leicht zu Missverständnissen kommen kann, weil man permanent die falschen Adressen anspricht und so die falschen Daten überträgt. 
 
+### Erstellung der Programme
 
+Zuerst nahmen wir das fertige Programm für unseren µC vom [SVN-Server in Arnfels](https://www.htl-mechatronik.at/svn/modbus). Danach haben wir mithilfe des Bootloaders die fertigen IntelHex-Dateien auf unsere SHURE-Boards geladen. Bei manchen war jedoch kein Bootloader installiert und bei wiederum anderen konnte keine Schnittstelle geöffnet werden, was sich jedoch durch einen Neustart relativ unkompliziert reparieren ließ. Anschließen holten wir uns die Java-Swing-Vorlage vom LMS-Download-Bereich. Herr Prof. DI Steiner hatte die GUI bereits für uns fertiggestellt, damit wir unsere ohnehin schon knappe Zeit sparen konnten. Bevor wir mit dem Programmieren loslegen konnten, wendeten wir uns noch einem Problem in Java zu, nämlich der Kommunikation über die serielle Schnittstelle.
+
+#### Serielle Schnittstelle in Java
+Hier eine Abbildung, wie Java grundsätzlich funktioniert:
+!(Java-Prinzip)[https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/java_uebersicht.png]
+> (c) Martin Schmuck
 
        
 
