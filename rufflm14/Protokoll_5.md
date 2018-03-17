@@ -2,7 +2,7 @@
 
 *von Florian Ruffenacht*
 
-Datum: 16.03.2017 (Gruppe 3)
+Datum: 13.03.2017 (Gruppe 3)
 
 Ort: AUT-Labor
 
@@ -12,7 +12,7 @@ Abwesend: keiner
 
 ## **Beschreibung der Aufgabenstellung**
 
-Es soll eine Temperaturmessung über den am SURE-Board integrierten Temperatursensor erfolgen. Die Messdaten sollen am PC über ein **JAVA-Programm** ausgegeben werden. Dafür steht bereits eine vorgefertigte GUI (JAVASwing) zur Verfügung. Auch für den µC ist das Programm bereits vorgegeben.  müssen über ein Bussystem ausgetauscht.
+Es soll eine Temperaturmessung über den am SURE-Board integrierten Temperatursensor erfolgen. Die Messdaten sollen am PC über ein **JAVA-Programm** ausgegeben werden. Dafür steht bereits eine vorgefertigte GUI (JAVASwing) zur Verfügung. Auch für den µC ist das Programm bereits vorgegeben.
 
 ## **Realisierung**
 
@@ -23,6 +23,7 @@ Die grundsätzliche Struktur sieht folgendermaßen aus:
 Der  **Temperaturensor LM75** gibt die Messdaten an das Rechenzentrum des Mikrocontrollers über I²C weiter. Während der LM75 hier als _unintelligenter_ Sensor agiert, kann das **SURE-Board** als Ganzes durchaus als _intelligenter_ Sensor bezeichnet werden. Der Mikorcontroller gibt die Messdaten über UART weiter. Die Verbindung zwischen dem SURE-Board und dem PC (MiniUSB/USB) ist in diesem Fall ein **Feldbus**.
 
 [Weitere Informationen zum LM75](http://www.franksteinberg.de/lm75.htm)
+
 
 ### UART
 
@@ -37,6 +38,7 @@ Die grafische Benutzeroberfläche (**GUI**) wurde mittels JAVA Swing programmier
 JAVA Swing ist seit 1998 Bestandteil der JAVARuntime und weit verbreitet. Als designierter Nachfolger kam 2014 JavaFX heraus, der Lücken im Bereich Medien und Animation schließen sollte. JavaFX wurde bisher aber nicht so stark angenommen wie erhofft.
 
 [Weitere Informationen zu JAVA Swing](https://de.wikipedia.org/wiki/JavaFX)
+
 [Weitere Informationen zu JAVA FX](https://de.wikipedia.org/wiki/Swing_(Java))
 
 ### Feldbusse
@@ -48,14 +50,15 @@ Ein Feldbus ist ein Bussystem, das in einer Anlage Sensoren und Aktoren mit eine
 * **[LIN](https://de.wikipedia.org/wiki/Local_Interconnect_Network)** - für wenig komplexe Anwendungen in der Automobilindustrie
 * **[CAN](https://de.wikipedia.org/wiki/Controller_Area_Network)** - für mittel-komplexe Anwendungen in der Automibilindustrie
 * **[Flexray](https://de.wikipedia.org/wiki/FlexRay)** - für komplexe Anwendungen in der Automobilindustrie
-* **[Profibus](https://de.wikipedia.org/wiki/Profibus)**- für z.B. Roboter, Maschinenbau, Anlagenbaun
-* **[KNX](https://de.wikipedia.org/wiki/KNX-Standard)** - für die Gebäudeautomatisierung* **[Modbus](https://de.wikipedia.org/wiki/Modbus)** - freier Standard für unterschiedlichste Anwendungen in der Industrie
+* **[Profibus](https://de.wikipedia.org/wiki/Profibus)**- für z.B. Roboter, Maschinenbau, Anlagenbau
+* **[KNX](https://de.wikipedia.org/wiki/KNX-Standard)** - für die Gebäudeautomatisierung
+* **[Modbus](https://de.wikipedia.org/wiki/Modbus)** - freier Standard für unterschiedlichste Anwendungen in der Industrie
 
 Wir verwenden Modbus, da dies ein frei verfügbarer Standard ist und nicht zu komplex ist.
 
 ### Modbus
 
-Das offen zugänglich Kommunikationsprotokoll Modbus wurde 1979 von Gould-Modicon ins Leben gerufen. Die Anwendungsgebiete sind die Hausautomatisierung und die Industrien. Es basiert auf dem **Server/Client** Prinzip. 
+Das offen zugänglich Kommunikationsprotokoll Modbus wurde 1979 von Gould-Modicon ins Leben gerufen. Die Anwendungsgebiete sind die Hausautomatisierung und die Industrie. Es basiert auf dem **Server/Client** Prinzip. 
 
 In unserem Fall stellt das SURE-Board den Server und der PC den Client dar. Am folgenden Bild lässt sich das gut erkennen:
 
@@ -68,20 +71,22 @@ In unserem Fall stellt das SURE-Board den Server und der PC den Client dar. Am f
 * Modbus TCP - Die Daten werden in TCP-Paketen übertragen. Besonderheit: Paketanfang/Paketende werden durch Pausen detektiert, was in auf nicht deterministischen Betriebssystemen wie Windows schnell zu Problemen führen kann.
 
 **ASCII Transmission Mode**
-!Die Übertragung der Frames erfolgt hier wie bereits bekannt als ASCII-Text. Die serielle Schnittstelle wird standardmäßig 7E1 oder 7N2 konfigueriert, also nur 7 Daten-Bits! Im Bedarfsfall darf aber auch eine davon abweichende Festlegung verwendet werden.
+
+Die Übertragung der Frames erfolgt hier wie bereits bekannt als ASCII-Text. Die serielle Schnittstelle wird standardmäßig 7E1 oder 7N2 konfigueriert, also nur 7 Daten-Bits! Im Bedarfsfall darf aber auch eine davon abweichende Festlegung verwendet werden.
 
 Ein Modbus ASCII-Frame hat somit folgenden Aufbau:
 ![Modbus ASCII Frame](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusASCII.png)
 
 **Modbus Datenpaket**
 
-Ein Modbus Datenpaket muss mindestens aus den Teilen **Function Code** und **Data** bestehen. Bei den Varianten ASCII und RTU kommen zusätzlich noch die Adresse und eine Prüfsumme dazu. Das ist bei Modbus TCP nicht notwendig, da diese Bestandteile bereits im TCP-Standard beinhaltet sind. Folgendes Bild stellt den Unterschied zwischen **ADU**(Application Data Unit) und **PTU**(Protocoll Data Units):
+Ein Modbus Datenpaket muss mindestens aus den Teilen **Function Code** und **Data** bestehen. Bei den Varianten ASCII und RTU kommen zusätzlich noch die Adresse und eine Prüfsumme dazu. Das ist bei Modbus TCP nicht notwendig, da diese Bestandteile bereits im TCP-Standard beinhaltet sind. Folgendes Bild stellt den Unterschied zwischen **ADU**(Application Data Unit) und **PTU**(Protocoll Data Unit):
 
 ![ADU/PTU Modbus](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusADUPDU.png)
 
 Die maximale Größe einer ADU liegt bei Modbus ASCII/RTU bei 256 Bytes und bei Modbus TCP bei 260 Bytes.
 
 **Daten-Modell**
+
 Beim Modbus Daten-Modell wird in vier verschiedene Adressräume unterschieden:
 
 * Discrete Inputs (ein einzelnes Bit, welches nur gelesen werden kann) zum Beispiel: ein Taster
@@ -108,9 +113,10 @@ Function Code | Hex | Name | Typ
 [Mehr Infos in der Spezifikation](http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf)
 
 **Fehlerbehandlung** 
+
 Kommt es bei einem Request zu einem Fehler, wird im Response das Bit 7 im Function-Code Field gesetzt. Deswegen sind auch nur Funktion Codes von 1-127 für den benutzer verfügbar. Des Weiteren wird im Daten-Bereich ein Exception-Code gesendet. Dieser gibt die Art des Fehlers nach folgendem Prinzip an:
 
-![Modbus Exception]()
+![Modbus Exception](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusException%20Code.png)
 
 [Mehr Infos in der Modbus-Spezifikation](http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf)
 
@@ -122,7 +128,7 @@ Das fertige Programm für den µC wurde vom [SVN-Server](https://www.htl-mechatr
 
 Wie bereits allgemein bekannt sein sollte, wird ein Java Code nicht in eine übers Betriebssystem direkt ausführbare Datei kompiliert sondern in einen Zwischencode übersetzt (Endung **.class**). Dieser Zwischencode kann von jeder JAVA-Virtual Machine unabhängig vom Betriebssystem ausgeführt werden. Werden mehrere Datein vom Typ .class zusammengefasst lautet die Endung .jar. 
 
-Die von standardmäßig Angebotene Lösung [JAVA Communication API](http://www.oracle.com/technetwork/java/index-jsp-141752.html)ist veraltet und funktioniert auf Windows-System nicht. Möchte man nun eine serielle Schnittstelle betreiben, muss die Java Virtual Machine überbrückt werden. Das ist durch JNI (Java  Native Interface) möglich und sieht folgendermaßen aus:
+Die von standardmäßig Angebotene Lösung [JAVA Communication API](http://www.oracle.com/technetwork/java/index-jsp-141752.html) ist veraltet und funktioniert auf Windows-System nicht. Möchte man nun eine serielle Schnittstelle betreiben, muss die Java Virtual Machine überbrückt werden. Das ist durch JNI (Java  Native Interface) möglich und sieht folgendermaßen aus:
 
 ![JNI](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/JNI.svg)
 
