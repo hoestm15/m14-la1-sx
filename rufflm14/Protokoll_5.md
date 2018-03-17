@@ -59,7 +59,7 @@ Das offen zugänglich Kommunikationsprotokoll Modbus wurde 1979 von Gould-Modico
 
 In unserem Fall stellt das SURE-Board den Server und der PC den Client dar. Am folgenden Bild lässt sich das gut erkennen:
 
-![Server/Client Prinzip bei Modbus]()
+![Server/Client Prinzip bei Modbus](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusServerClient.png)
 
 **Es gibt 3 Arten der Datenübertragung:**
 
@@ -71,13 +71,13 @@ In unserem Fall stellt das SURE-Board den Server und der PC den Client dar. Am f
 Die Übertragung der Frames erfolgt hier wie bereits bekannt als ASCII-Text. Die serielle Schnittstelle wird standardmäßig 7E1 oder 7N2 konfigueriert, also nur 7 Daten-Bits! Im Bedarfsfall darf aber auch eine davon abweichende Festlegung verwendet werden.
 
 Ein Modbus ASCII-Frame hat somit folgenden Aufbau:
-![Modbus ASCII Frame]()
+![Modbus ASCII Frame](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusADUPDU.png)
 
 **Modbus Datenpaket**
 
 Ein Modbus Datenpaket muss mindestens aus den Teilen **Function Code** und **Data** bestehen. Bei den Varianten ASCII und RTU kommen zusätzlich noch die Adresse und eine Prüfsumme dazu. Das ist bei Modbus TCP nicht notwendig, da diese Bestandteile bereits im TCP-Standard beinhaltet sind. Folgendes Bild stellt den Unterschied zwischen **ADU**(Application Data Unit) und **PTU**(Protocoll Data Units):
 
-![ADU/PTU Modbus]()
+![ADU/PTU Modbus](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusADUPDU.png)
 
 Die maximale Größe einer ADU liegt bei Modbus ASCII/RTU bei 256 Bytes und bei Modbus TCP bei 260 Bytes.
 
@@ -124,7 +124,7 @@ Wie bereits allgemein bekannt sein sollte, wird ein Java Code nicht in eine übe
 
 Die von standardmäßig Angebotene Lösung [JAVA Communication API](http://www.oracle.com/technetwork/java/index-jsp-141752.html)ist veraltet und funktioniert auf Windows-System nicht. Möchte man nun eine serielle Schnittstelle betreiben, muss die Java Virtual Machine überbrückt werden. Das ist durch JNI (Java  Native Interface) möglich und sieht folgendermaßen aus:
 
-[JNI]()
+[JNI](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/JNI.svg)
 
 Die binären Dateien unterscheiden sich logischerweise abhängig vom Betriebystem und der Wortbreite.
 
