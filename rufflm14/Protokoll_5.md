@@ -49,8 +49,7 @@ Ein Feldbus ist ein Bussystem, das in einer Anlage Sensoren und Aktoren mit eine
 * **[CAN](https://de.wikipedia.org/wiki/Controller_Area_Network)** - für mittel-komplexe Anwendungen in der Automibilindustrie
 * **[Flexray](https://de.wikipedia.org/wiki/FlexRay)** - für komplexe Anwendungen in der Automobilindustrie
 * **[Profibus](https://de.wikipedia.org/wiki/Profibus)**- für z.B. Roboter, Maschinenbau, Anlagenbaun
-* **[KNX](https://de.wikipedia.org/wiki/KNX-Standard)** - für die Gebäudeautomatisierung
-* **[Modbus](https://de.wikipedia.org/wiki/Modbus)** - freier Standard für unterschiedlichste Anwendungen in der Industrie
+* **[KNX](https://de.wikipedia.org/wiki/KNX-Standard)** - für die Gebäudeautomatisierung* **[Modbus](https://de.wikipedia.org/wiki/Modbus)** - freier Standard für unterschiedlichste Anwendungen in der Industrie
 
 Wir verwenden Modbus, da dies ein frei verfügbarer Standard ist und nicht zu komplex ist.
 
@@ -115,4 +114,21 @@ Kommt es bei einem Request zu einem Fehler, wird im Response das Bit 7 im Functi
 
 [Mehr Infos in der Modbus-Spezifikation](http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf)
 
-### Java Native Interface
+### Erstellung des Programmes
+
+Das fertige Programm für den µC wurde vom [SVN-Server](https://www.htl-mechatronik.at/svn/modbus) der Mechatronik bezogen. Diese fertigen IntelHex-Dateien wurden dann mithilfe des Bootloaders auf die SHURE-Boards geladen. Die JAVA Swing Vorlage steht uns auf LMS zur Verfügung.
+
+#### Serielle Schniittstelle in JAVA
+
+Wie bereits allgemein bekannt sein sollte, wird ein Java Code nicht in eine übers Betriebssystem direkt ausführbare Datei kompiliert sondern in einen Zwischencode übersetzt (Endung **.class**). Dieser Zwischencode kann von jeder JAVA-Virtual Machine unabhängig vom Betriebssystem ausgeführt werden. Werden mehrere Datein vom Typ .class zusammengefasst lautet die Endung .jar. 
+
+Die von standardmäßig Angebotene Lösung [JAVA Communication API](http://www.oracle.com/technetwork/java/index-jsp-141752.html)ist veraltet und funktioniert auf Windows-System nicht. Möchte man nun eine serielle Schnittstelle betreiben, muss die Java Virtual Machine überbrückt werden. Das ist durch JNI (Java  Native Interface) möglich und sieht folgendermaßen aus:
+
+[JNI]()
+
+Die binären Dateien unterscheiden sich logischerweise abhängig vom Betriebystem und der Wortbreite.
+
+Für serielle Schnitstellen sind zwei Bibliotheken gebräuchlich:
+
+* [JSSC](https://github.com/scream3r/java-simple-serial-connector) (Java Simple Serial connector) - Wir verwenden diese Bibliothek, da sie aktueller als RXTX ist
+* [RTXT](http://rxtx.qbang.org/wiki/index.php/Main_Page) - Beinhaltet Bugs 
