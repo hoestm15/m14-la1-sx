@@ -68,7 +68,7 @@ In unserem Fall stellt das SURE-Board den Server und der PC den Client dar. Am f
 * Modbus TCP - Die Daten werden in TCP-Paketen übertragen. Besonderheit: Paketanfang/Paketende werden durch Pausen detektiert, was in auf nicht deterministischen Betriebssystemen wie Windows schnell zu Problemen führen kann.
 
 **ASCII Transmission Mode**
-Die Übertragung der Frames erfolgt hier wie bereits bekannt als ASCII-Text. Die serielle Schnittstelle wird standardmäßig 7E1 oder 7N2 konfigueriert, also nur 7 Daten-Bits! Im Bedarfsfall darf aber auch eine davon abweichende Festlegung verwendet werden.
+!Die Übertragung der Frames erfolgt hier wie bereits bekannt als ASCII-Text. Die serielle Schnittstelle wird standardmäßig 7E1 oder 7N2 konfigueriert, also nur 7 Daten-Bits! Im Bedarfsfall darf aber auch eine davon abweichende Festlegung verwendet werden.
 
 Ein Modbus ASCII-Frame hat somit folgenden Aufbau:
 ![Modbus ASCII Frame](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusADUPDU.png)
@@ -124,7 +124,7 @@ Wie bereits allgemein bekannt sein sollte, wird ein Java Code nicht in eine übe
 
 Die von standardmäßig Angebotene Lösung [JAVA Communication API](http://www.oracle.com/technetwork/java/index-jsp-141752.html)ist veraltet und funktioniert auf Windows-System nicht. Möchte man nun eine serielle Schnittstelle betreiben, muss die Java Virtual Machine überbrückt werden. Das ist durch JNI (Java  Native Interface) möglich und sieht folgendermaßen aus:
 
-[JNI](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/JNI.svg)
+![JNI](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/JNI.svg)
 
 Die binären Dateien unterscheiden sich logischerweise abhängig vom Betriebystem und der Wortbreite.
 
