@@ -32,13 +32,52 @@ Der UART ist eine einfache **serielle Schnittstelle**, die in Bezug auf Datenüb
 
 ### JAVA Swing 
 
-Die grafische Benutzeroberfläche (**GUI**) wurde mittels JAVA Swing programmiert. JAVA Swing ist unter Java die standardmäßige Lösung für GUIs. Die Einarbeitungszeit hält sich in Grenzen und im Normalfall reicht die zu Verfügung stehenden  Controls zur Darstellung aus. JAVA Swing ist seit 1998 Bestandteil der JAVARuntime und weit verbreitet. Als designierter Nachfolger kam 2014 JavaFX heraus, der Lücken im Bereich Medien und Animation schließen sollte. JavaFX wurde bisher aber nicht so stark angenommen wie erhofft.
+Die grafische Benutzeroberfläche (**GUI**) wurde mittels JAVA Swing programmiert. JAVA Swing ist unter Java die standardmäßige Lösung für GUIs. Die Einarbeitungszeit hält sich in Grenzen und im Normalfall reicht die zu Verfügung stehenden  Controls zur Darstellung aus. 
+
+JAVA Swing ist seit 1998 Bestandteil der JAVARuntime und weit verbreitet. Als designierter Nachfolger kam 2014 JavaFX heraus, der Lücken im Bereich Medien und Animation schließen sollte. JavaFX wurde bisher aber nicht so stark angenommen wie erhofft.
 
 [Weitere Informationen zu JAVA Swing](https://de.wikipedia.org/wiki/JavaFX)
 [Weitere Informationen zu JAVA FX](https://de.wikipedia.org/wiki/Swing_(Java))
 
-### Feldbus
+### Feldbusse
 
+Ein Feldbus ist ein Bussystem, das in einer Anlage Sensoren und Aktoren mit einem Automatisierungsgerät verbindet. Welches Bussystem sivoll ist  hängt stark von der Anwendung ab. Folgende Feldbusse sind stark verbreitet:
 
+* **[POWERLINK](https://de.wikipedia.org/wiki/Ethernet_Powerlink)** - basiert auf Ethernet, das für Echtzeitanwendungen erweitert wurde. Hauptsächlich für Maschinen- und Anlagenbau. 
+* **[LIN](https://de.wikipedia.org/wiki/Local_Interconnect_Network)** - für wenig komplexe Anwendungen in der Automobilindustrie
+* **[CAN](https://de.wikipedia.org/wiki/Controller_Area_Network)** - für mittel-komplexe Anwendungen in der Automibilindustrie
+* **[Flexray](https://de.wikipedia.org/wiki/FlexRay)** - für komplexe Anwendungen in der Automobilindustrie
+* **[Profibus](https://de.wikipedia.org/wiki/Profibus)**- für z.B. Roboter, Maschinenbau, Anlagenbaun
+* **[KNX](https://de.wikipedia.org/wiki/KNX-Standard)** - für die Gebäudeautomatisierung
+* **[Modbus](https://de.wikipedia.org/wiki/Modbus)** - freier Standard für unterschiedlichste Anwendungen in der Industrie
 
+Wir verwenden Modbus, da dies ein frei verfügbarer Standard ist und nicht zu komplex ist.
+
+### Modbus
+
+Das offen zugänglich Kommunikationsprotokoll Modbus wurde 1979 von Gould-Modicon ins Leben gerufen. Die Anwendungsgebiete sind die Hausautomatisierung und die Industrien. Es basiert auf dem **Server/Client** Prinzip. 
+
+In unserem Fall stellt das SURE-Board den Server und der PC den Client dar. Am folgenden Bild lässt sich das gut erkennen:
+
+![Server/Client Prinzip bei Modbus]()
+
+Es gibt 3 Arten der Datenübertragung:
+
+* Modbus ASCII - Die Daten werden textuell und byteweise übertragen. Frames beginnen mit einem Doppelpunkt
+* Modbus RTU - Die Daten werden byteweise übertragen (= Remote Terminal Unit)
+* Modbus TCP - Die Daten werden in TCP-Paketen übertragen
+
+Ein Modbus Datenpaket muss mindestens aus den Teilen **Function Code** und **Data** bestehen. Bei den Varianten ASCII und RTU kommen zusätzlich noch die Adresse und eine Prüfsumme dazu. Das ist bei Modbus TCP nicht notwendig, da diese Bestandteile bereits im TCP-Standard beinhaltet sind. Folgendes Bild stellt den Unterschied zwischen **ADU**(Application Data Unit) und **PTU**(Protocoll Data Units):
+
+![ADU/PTU Modbus]()
+
+Die maximale Größe einer ADU liegt bei Modbus ASCII/RTU bei 256 Bytes und bei Modbus TCP bei 260 Bytes.
+
+**Daten-Modell**
+Beim Modbus Daten-Modell wird in vier verschiedene Adressräume unterschieden:
+
+* Discrete Inputs (ein einzelnes Bit, welches nur gelesen werden kann) zum Beispiel: ein Taster
+* Coils (ein Bit, welches gelesen und beschrieben werden kann) zum Beispiel: eine LED
+* Input Registers (ein 16-Bit Wert der nur gelesen werden kann) zum Beispiel: ein Temperatursensor
+* Hold-Registers (ein 16-Bit Wert der gelesen und beschrieben werden kann) zum Beispiel: die Anzeige am Sure-Board
 
