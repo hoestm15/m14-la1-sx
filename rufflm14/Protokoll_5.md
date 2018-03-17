@@ -71,7 +71,7 @@ In unserem Fall stellt das SURE-Board den Server und der PC den Client dar. Am f
 !Die Übertragung der Frames erfolgt hier wie bereits bekannt als ASCII-Text. Die serielle Schnittstelle wird standardmäßig 7E1 oder 7N2 konfigueriert, also nur 7 Daten-Bits! Im Bedarfsfall darf aber auch eine davon abweichende Festlegung verwendet werden.
 
 Ein Modbus ASCII-Frame hat somit folgenden Aufbau:
-![Modbus ASCII Frame](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusADUPDU.png)
+![Modbus ASCII Frame](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusASCII.png)
 
 **Modbus Datenpaket**
 
