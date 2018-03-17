@@ -70,7 +70,7 @@ Beim Modbus handelt es sich um einen offenen Feldbus, welcher 1979 von Gould-Mod
 * Modbus TCP: Hier werden TCP/IP-Pakete übertragen
 
 Der Modbus arbeitet nach dem Server-Client-Prinzip, wobei in unserem Fall die Rolle des Servers das SHURE-Boards einnimmt (wartet auf Anfragen) und der PC bzw. unsere Applikation als Client (fragt den Server nach der Temperatur (vereinfacht ausgedrückt)) fungiert. Eventuell findet man analog dazu auch die Bezeichnung Master-Slave-System.  
-Hier ist eine Grafik dazu: 
+Hier ist eine Grafik dazu:   
 ![modbusprinzip](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/modbus_server_client.png)
 >aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 14.03.2018
   
@@ -156,7 +156,7 @@ Zuerst nahmen wir das fertige Programm für unseren µC vom [SVN-Server in Arnfe
 
 #### Serielle Schnittstelle in Java
 Hier eine Abbildung, wie Java grundsätzlich funktioniert:
-!(Java-Prinzip)[https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/java_uebersicht.png]
+![Java-Prinzip](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/java_uebersicht.png)
 > (c) Martin Schmuck
 
        
