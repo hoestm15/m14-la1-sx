@@ -68,8 +68,7 @@ In unserem Fall stellt das SURE-Board den Server und der PC den Client dar. Am f
 
 * Modbus ASCII - Die Daten werden textuell und byteweise übertragen. Frames beginnen mit einem Doppelpunkt
 * Modbus RTU - Die Daten werden byteweise übertragen (= Remote Terminal Unit)
-* Modbus TCP - Die Daten werden in TCP-Paketen übertragen. Besonderheit: Paketanfang/Paketende werden durch Pausen detektiert, was in auf nicht deterministischen Betriebssystemen wie Windows schnell zu Problemen führen kann.
-
+* Modbus TCP - Die Daten werden in TCP-Paketen übertragen. Besonderheit: Paketanfang/Paketende werden durch Pausen detektiert, was in auf nicht deterministischen Betriebssystemen wie Windows schnell zu Problemen führen kann
 **ASCII Transmission Mode**
 
 Die Übertragung der Frames erfolgt hier wie bereits bekannt als ASCII-Text. Die serielle Schnittstelle wird standardmäßig 7E1 oder 7N2 konfigueriert, also nur 7 Daten-Bits! Im Bedarfsfall darf aber auch eine davon abweichende Festlegung verwendet werden.
@@ -126,9 +125,9 @@ Das fertige Programm für den µC wurde vom [SVN-Server](https://www.htl-mechatr
 
 #### Serielle Schniittstelle in JAVA
 
-Wie bereits allgemein bekannt sein sollte, wird ein Java Code nicht in eine übers Betriebssystem direkt ausführbare Datei kompiliert sondern in einen Zwischencode übersetzt (Endung **.class**). Dieser Zwischencode kann von jeder JAVA-Virtual Machine unabhängig vom Betriebssystem ausgeführt werden. Werden mehrere Datein vom Typ .class zusammengefasst lautet die Endung .jar. 
+Wie bereits allgemein bekannt sein sollte, wird ein Java Code nicht in eine übers Betriebssystem direkt ausführbare Datei kompiliert sondern in einen Zwischencode übersetzt (Endung **.class**). Dieser Zwischencode kann von jeder JAVA-Virtual Machine unabhängig vom Betriebssystem ausgeführt werden. Werden mehrere Datein vom Typ _.class_ zusammengefasst lautet die Endung _.jar_
 
-Die von standardmäßig Angebotene Lösung [JAVA Communication API](http://www.oracle.com/technetwork/java/index-jsp-141752.html) ist veraltet und funktioniert auf Windows-System nicht. Möchte man nun eine serielle Schnittstelle betreiben, muss die Java Virtual Machine überbrückt werden. Das ist durch JNI (Java  Native Interface) möglich und sieht folgendermaßen aus:
+Die von standardmäßig Angebotene Lösung [JAVA Communication API](http://www.oracle.com/technetwork/java/index-jsp-141752.html) ist veraltet und funktioniert auf Windows-System nicht. Möchte man nun eine serielle Schnittstelle betreiben, muss die Java Virtual Machine überbrückt werden. Das ist durch **JNI** (Java  Native Interface) möglich und sieht folgendermaßen aus:
 
 ![JNI](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/JNI.svg)
 
