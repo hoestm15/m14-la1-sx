@@ -115,7 +115,7 @@ Wenn bei einem Request ein Fehler auftritt, dann wird in der Response das Bit-7 
 
 ![](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacrom14/sacrom14/ModbusException%20Code.png)  
 
-**Function Codes**
+## **Function Codes**
 
 Function Code | Hex | Name | Typ
 --------------- | --------- | --------- | ---
@@ -130,6 +130,6 @@ Function Code | Hex | Name | Typ
 
 ## Serielle Schniittstelle in JAVA
 
-
+![](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacrom14/sacrom14/lb5.1.png)  
 
 
