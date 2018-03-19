@@ -165,6 +165,7 @@ Aus diesem Schaubild ist ersichtilch, dass man vom Java Native Code (unserem Pro
 Aus diesem Grund gibt es das Java Native Interface, kurz JNI. Das JNI besteht aus zwei Komponenten:  
 * Auf Betriebssystemseite: Binäre Bibliotheken werden dem Betriebssystem zur Verfügung gestellt, dies sind Funktionen, welche in C/C++ geschrieben wurden (Windows: DLL-Datei, Linux: SO-Datei)  
 * Auf Java-Seite: eine oder mehrere .java-Dateien werden zur Verfügung gestellt  
+  
 Diese beiden Komponenten schaffen es dann zusammen, eine Kommunikation über die serielle Schnittstelle zu ermöglichen.  
 Hierfür gibt es eine fertig implementierte Lösung, welche sich Java Simple Serial Connector nennt (kurz JSSC). Diese werden wir in dieser und der darauffolgenden Übung verwenden. In diese Richtung waren keine weiteren Konfigurationen mehr nötig, da unsere Vorlage alle notwendigen Klassen und Bibliotheken schon eingebunden hatte. 
 
