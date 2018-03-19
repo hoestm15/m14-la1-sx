@@ -71,7 +71,7 @@ Es gibt drei unterschiedliche Übertragungsvarianten:
 
 Die Übertragung der Frames erfolgt  als ASCII-Text. Die serielle Schnittstelle wird standardmäßig nur als 7 Daten-Bits(7E1 oder 7N2)  konfigueriert. 
 
-Aufbau eines Modbus ASCII-Frame: 
+**Aufbau eines Modbus ASCII-Frame: **  
 
 ![](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacrom14/sacrom14/ModbusASCII.png)  
 
@@ -79,4 +79,31 @@ Aufbau eines Modbus ASCII-Frame:
 Im ASCII-Modus beginnt eine Nachricht mit einem Doppelpunkt.Die ersten zwei Bytes enthalten zwei ASCII-Zeichen(stellen die Adressen des Empfängers dar).Der auszuführende Befehl ist auf den nächsten zwei Bytes codiert.Das Ende der Nachricht wird durch die Zeichenfolge Carriage return – Line feed markiert.  
 
 Wenn während der Übertragung eines Frames eine Pause von mind. 1s auftritt, wird der Frame als Fehlerfall bewertet. Man kann als benutzer ein längeres Timeout konfigurieren.  
+
+
+
+
+## Modbus-Daten-Modell  
+Vier verschiedenen Bereiche:    
+
+Name | Funktion  
+---- | --------   
+Coils |   ein Bit,kann gelesen und beschrieben werden
+Input Registers |  ein 16 Bit, kann nur gelesen werden  
+Discrete Inputs |  ein einzelnes Bit, kann nur gelesen werden  
+Hold Registers |  ist ein 16 Bit Wert, kann gelesen und beschrieben werden   
+
+
+
+**Modbus Datenpaket**
+
+Aus mindestens den zwei Teilen **Function Code** und **Data** muss ein Modbus Datenpaket bestehen.  
+Bei  ASCII und RTU, zusätzlich noch die Adresse und eine Prüfsumme .
+Bei Modbus TCP nicht notwendig.  
+
+Unterschied zwischen **ADU** und **PTU**:  
+
+![](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacrom14/sacrom14/ModbusADUPDU.png)  
+
+
 
