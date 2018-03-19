@@ -42,11 +42,11 @@ Feldbussystem | Andwendungsgebiet | Details
 
 ### JAVA Swing 
 
-JAVA Swing ist unter Java die standardmäßige Lösung für GUIs, womit auch die grafische Benutzeroberfläche programmiert wurde.Keine lange Einarbeitungszeit und normal reicht die zu Verfügung stehenden  Controls zur Darstellung aus.Das GUIToolkit Java FX(Nachfolger von Java Swing) gibt es für komplexe GUIs. Seit 1998 ist es Bestandteil der JAVARuntime.  
+JAVA Swing ist unter Java die standardmäßige Lösung für GUIs, womit auch die grafische Benutzeroberfläche programmiert wurde. Keine lange Einarbeitungszeit und normal reicht die zu Verfügung stehenden  Controls zur Darstellung aus. Das GUIToolkit Java FX(Nachfolger von Java Swing) gibt es für komplexe GUIs. Seit 1998 ist es Bestandteil der JAVARuntime.  
 [weitere Infos](https://www.java-tutorial.org/swing.html)  
 
 ### Asynchrone Datenübertragung  
-Daten die jderzeit übertragen werden können,werden Daten asynchron übertragen.Diejenigen die nur zu gewissen Zeiten übertragen werden können werden synchron übertragen.
+Daten die jederzeit übertragen werden können,werden Daten asynchron übertragen. Diejenigen die nur zu gewissen Zeiten übertragen werden können, werden synchron übertragen.
 
 ### UART
 Universal Asynchronous Reciever Transmitter steht für die Abkürzung UART und ist eine **serielle Schnittstelle**. Haufige Anwendung bei µCs.  
