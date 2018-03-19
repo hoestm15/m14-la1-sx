@@ -24,12 +24,12 @@ CAN | Automobilindustrie, mittel komplexe Systeme
 Flexray | Automobilindustrie, sehr komplexe Systeme  
 
 ### Java Swing
-Java Swing ist ein GUI-Toolkit für die Programmiersprache Java und ist eine unkomplizierte Lösung für das erstellen von GUIs. Java Swing benötigt keine große Einarbeitungszeit und besitzt im normalfall alle benötigten Controls. Für komplexere GUIs gibt es das GUI-Toolkit Java FX, dieses ist der desiginierte Nachfolger von Java Swing. Es benötigt, aber ermöglicht auch komplexere GUIs. 
-(weitere Infos zu Java Swing)[https://www.java-tutorial.org/swing.html]
+Java Swing ist ein GUI-Toolkit für die Programmiersprache Java und ist eine unkomplizierte Lösung für das erstellen von GUIs. Java Swing benötigt keine große Einarbeitungszeit und besitzt im normalfall alle benötigten Controls. Für komplexere GUIs gibt es das GUI-Toolkit Java FX, dieses ist der desiginierte Nachfolger von Java Swing. Es benötigt, aber ermöglicht auch komplexere GUIs.  
+[weitere Infos zu Java Swing](https://www.java-tutorial.org/swing.html)
 
 ### UART
-UART steht für *Universal Asynchronous Reciever Transmitter* und ist eine **serielle Schnittstelle**. Sie wird häufig bei µCs verwendet. 
-(weitere Infos zu UART)[https://www.mikrocontroller.net/articles/UART]
+UART steht für *Universal Asynchronous Reciever Transmitter* und ist eine **serielle Schnittstelle**. Sie wird häufig bei µCs verwendet.   
+[weitere Infos zu UART](https://www.mikrocontroller.net/articles/UART)
 ### Asynchrone Datenübertragung
 Wenn Daten asynchron übertragen werden, bedeutet das, dass die Daten jederzeit übertragen werden können. Hingegen zur synchronen Übertragung, bei dieser können Daten nur zu gewissen Zeiten übertragen werden.
 
@@ -41,9 +41,12 @@ Ein nicht-intelligenter Sensor hingegen erfasst nur die Messgrößen und liefert
   * LM75 mit SURE Board  
 * nicht-intelligneter Sensor:  
   * LM75 ohne SURE Board
-  * PT100
-(weitere Infos zu intelligenten Sensoren)[https://de.wikipedia.org/wiki/Smart-Sensor]
+  * PT100  
+  
+[weitere Infos zu intelligenten Sensoren](https://de.wikipedia.org/wiki/Smart-Sensor)
 
 ## Modbus
-Bei der Auswahl eines Feldbusses viel unsere Wahl auf Modbus, da Modbus ein vergleichsweise einfacher offener Standard ist. Offen bedeutet das man diesen Standard nicht kaufen muss um Einsicht in die Protokolle zu bekommen.
+Bei der Auswahl eines Feldbusses viel unsere Wahl auf Modbus, da Modbus ein einfacher offener Standard ist. Offen bedeutet das man diesen Standard nicht kaufen muss um Einsicht in die Protokolle zu bekommen. 
+Das Modbus Protokoll wurde 1979 für die Kommunikation zwischen zwei Speicherprogrammierbaren Steuerungen entwickelt. Heutzutage wird es meist für die Automatisierung in der Industrie und für Privatanwendungen verwenden. 
+Modbus arbeitet nach dem **Server/Client-Prinzip**
 
