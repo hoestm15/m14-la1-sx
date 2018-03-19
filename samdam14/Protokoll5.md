@@ -14,6 +14,16 @@
 Eine UART-Schnittstelle dient zum Senden umd zum Empfangen von Daten über Datenleitungen. Die Übertragung erfolgt Byteweise (Bitweise seriell). Asynchron bedeutet, dass zu jedem beliebigen Zeitpunkt Daten übertragen werden können. Die Datenübertragung beginnt mit einem Start-Bit, gefolgt von den Daten und endet mit einem eventuellen Parity-Bit und 1, 1.5 oder 2 Stopp-Bits.  
 ![UART-Datenübertragung](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/uart.png)  
   
+#### LM75  
+>Der LM75 ist ein Temperatursensor, Delta-Sigma Analog/Digital Wandler und digitaler Übertemperaturdetektor mit I2C Interface.  
+
+Quelle: [LM75](https://www.reichelt.de/ICs-LM-10-LM-999/LM-75-SMD/3/index.html?ACTION=3&GROUPID=5464&ARTICLE=49349)  
+  
+#### Java Swing  
+>Swing ist ein GUI-Toolkit für die Programmiersprache Java von Sun Microsystems. Seit Java-Version 1.2 (1998) ist es Bestandteil der Java-Runtime. Swing gehört zu den Java Foundation Classes (JFC), die eine Sammlung von Bibliotheken zur Programmierung von grafischen Benutzerschnittstellen bereitstellen.  
+
+Quelle: [Wiki/Swing(Java)](https://de.wikipedia.org/wiki/Swing_(Java))  
+  
 ----------------------------------------------------------  
 #### Projekt: Temperaturmessung  
 ![UART/Feldbus](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/feldbus.png)  
