@@ -123,7 +123,7 @@ Code | Zweck | Datenmenge
 `16` | mehrere Register beschreiben | min. 16 Bit  
   
 #### Fehlerbehandlung
-Tritt ein Fehler auf, wird das Bit 7 im Function Code wird gesetzt und im Datenbereich wird eine Exception Code mitgesendet. Dies passiert wie folgt:  
+Tritt ein Fehler auf, wird das Bit 7 im Function Code wird gesetzt und im Datenbereich wird eine Exception Code mitgesendet. Dies passiert, wie es im folgenden Zustandsdiagramm dargestellt wird:  
 ![excepitonhandling](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/modbus_exception.png)  
 >aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 19.03.2018  
   
@@ -172,7 +172,7 @@ Hier eine Abbildung, wie Java grundsätzlich funktioniert:
 ![Java-Prinzip](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/java_uebersicht.svg)
 > (c) Martin Schmuck  
   
-Aus diesem Schaubild ist ersichtilch, dass man vom Java Native Code (unserem Programm) nicht direkt auf Hardware- oder Betriebssystemressourcen zugreifen kann. Da jedoch die serielle Schnittstelle eine solche Ressource ist, bereitet Sie in Java Probleme. In Java 1 wurde eine Lösung, welche hierzu verwendet werden konnte, mitgeliefert, sie nannte sich Serial JavaComm. Doch leider funktionierte dies nur unter Linux und Sun, unter Windows lief diese Lösung nicht. Da jedoch der Java-Wahlspruch "write once - run anywhere" lautet und diese Vorgehensweise diesem Motto wiedersprach, verwarf man diese Lösung auch wieder. Es gibt zwar Nachbildungen dieser Bibliotheken (zB RxTxComm), diese sind aber auch nicht optimal. Aus diesem Grund verwenden wir das Java Native Interface, kurz JNI. 
+Aus diesem Schaubild ist ersichtilch, dass man vom Java Native Code (unserem Programm) nicht direkt auf Hardware- oder Betriebssystemressourcen zugreifen kann. Da jedoch die serielle Schnittstelle eine solche Ressource ist, bereitet Sie in Java Probleme. In Java 1 wurde eine Lösung, welche hierzu verwendet werden konnte, mitgeliefert, sie nannte sich Java Communications API. Doch leider funktionierte dies nur unter Linux und Sun, unter Windows lief diese Lösung nicht. Da jedoch der Java-Wahlspruch "write once - run anywhere" lautet und diese Vorgehensweise diesem Motto wiedersprach, verwarf man diese Lösung auch wieder. Es gibt zwar Nachbildungen dieser Bibliotheken (zB RxTxComm, jSerialComm), diese sind aber auch nicht optimal, da sie zumeist veraltet oder verbugt sind. Aus diesem Grund verwenden wir das Java Native Interface, kurz JNI, welches eine Alternative darstellt. 
   
 ##### Java Native Interface  
 ![JNI](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/java_jni.svg)  
