@@ -55,7 +55,7 @@ Universal Asynchronous Reciever Transmitter steht für die Abkürzung UART und i
 
 
 
-# Modbus  
+## **Modbus**  
  Modbus wurde 1979 für die Kommunikation zwischen zwei SPS Geräten entwickelt. Heutzutage sieht man es häufig in der Haustechnik und in der Industrie, weil es ein offenes Protokoll ist und sich Lösungen mit TCP/IP-,RS232- und RS482- Verbindungen realisieren lässt. Die Version Modbus TCP ist seit 2007 ein Teil der IEC 61158. Es lassen sich RS-232- und TCP/IP-Netzwerke aufbauen. Es basiert auf dem Server/Client Prinzip.
   
 
@@ -71,7 +71,7 @@ Es gibt drei unterschiedliche Übertragungsvarianten:
 
 Die Übertragung der Frames erfolgt  als ASCII-Text. Die serielle Schnittstelle wird standardmäßig nur als 7 Daten-Bits(7E1 oder 7N2)  konfigueriert. 
 
-**Aufbau eines Modbus ASCII-Frame: **  
+**Aufbau eines Modbus ASCII-Frame:**    
 
 ![](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacrom14/sacrom14/ModbusASCII.png)  
 
@@ -95,7 +95,7 @@ Hold Registers |  ist ein 16 Bit Wert, kann gelesen und beschrieben werden
 
 
 
-**Modbus Datenpaket**
+## **Modbus Datenpaket**
 
 Aus mindestens den zwei Teilen **Function Code** und **Data** muss ein Modbus Datenpaket bestehen.  
 Bei  ASCII und RTU, zusätzlich noch die Adresse und eine Prüfsumme .
@@ -104,6 +104,32 @@ Bei Modbus TCP nicht notwendig.
 Unterschied zwischen **ADU** und **PTU**:  
 
 ![](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacrom14/sacrom14/ModbusADUPDU.png)  
+
+
+
+
+## **Exceptions**  
+Tritt beim Request ein Fehler auf, so wird in der darauffolgenden Response das Bit-7 gesetzt. Dies hat die Funktion, dass sich der Function Code ändert und im Daten-Bereich wird ein Exception-Code generiert. Mithilfe dieses Exception-Codes, kann man den vorliegenden Fehler kategorisieren.
+
+Wenn bei einem Request ein Fehler auftritt, dann wird in der Response das Bit-7 im Function-Code Feld gesetzt.Aus dem Function-Code 1 bis 127 entsteht ein Wert 129-255.Weiteres wird ein Exception Code gesendet.Mithilfe dieses Exception Code, kann man den vorliegenden Fehler kategorisieren.
+
+![](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacrom14/sacrom14/ModbusException%20Code.png)  
+
+**Function Codes**
+
+Function Code | Hex | Name | Typ
+--------------- | --------- | --------- | ---
+1 | 01 | Read Coils | Bit
+2 | 02 | Read Discrete Inputs | Bit
+3 | 03 | Read Holding Registers | 16-Bit
+4 | 04 | Read Input Register | 16-Bit
+5 | 05 | Write Single Coil | Bit
+6 | 06 | Write Single Register | 16-Bit 
+15| 0F | Write Multiple Coils |	Bit
+16| 10 | Write Multiple Registers | 16-Bit  
+
+## Serielle Schniittstelle in JAVA
+
 
 
 
