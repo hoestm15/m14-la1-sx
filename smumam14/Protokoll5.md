@@ -63,6 +63,10 @@ Auch EIA-485 genannt, ist eine klassiche Zwei-Leiter-Übertragungstechnik, siehe
   
 ### Der Modbus
 siehe auch [Skript Modbus](https://lms.at/dotlrn/classes/htl_elektrotechnik/610437.4AHME_LA1.17_18/xolrn/E7BE8C85F66CA/2148F16AC6F2E.symlink?resource_id=0-236827434-257560369&m=view#167572556) von DI Manfred Steiner  
+siehe auch folgende offizielle Dokumente:  
+* [Modbus Application Protocol](http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf)  
+* [Modbus Over Serial Line](http://www.modbus.org/docs/Modbus_over_serial_line_V1_02.pdf)  
+* [Modbus Messaging Implementation Guide](http://www.modbus.org/docs/Modbus_Messaging_Implementation_Guide_V1_0b.pdf)  
   
 Beim Modbus handelt es sich um einen offenen Feldbus, welcher 1979 von Gould-Modicon zur Kommunikation mit deren hauseigenen SPSen vorgestellt wurde. Er verfügt über drei verschiedene Ebenen:
 * Modbus ASCII: Hier kann immer ein ASCII-Zeichen nach dem anderen gesendet werden (rein textuell)  
@@ -107,19 +111,27 @@ Hold-Registers | les- und beschreibbares Register (16-Bit) | DAC, Pulsweitenmodu
 ##### Funktionscodes
 Function Codes oder (dt. Funktionscodes) werden verwendet, um die Art der Anfrage anzugeben. Hier ein Auszug einiger genormter Codes:  
 
-Code | Zweck
------|------
-`1` | Coils lesen
-`2` | Discrete Inputs lesen
-`3` | Hold-Register lesen
-`4` | Input-Register lesen
-`5` | ein Coil beschreiben
-`6` | ein Register beschreiben
-`15` | mehrere Coils beschreiben
-`16` | mehrere Register beschreiben
+Code | Zweck | Datenmenge
+-----|------ |----------
+`1` | Coils lesen | 1 Bit
+`2` | Discrete Inputs lesen | 1 Bit
+`3` | Hold-Register lesen | 16 Bit
+`4` | Input-Register lesen | 16 Bit
+`5` | ein Coil beschreiben | 1 Bit
+`6` | ein Register beschreiben | 16 Bit
+`15` | mehrere Coils beschreiben | min. 1 Bit
+`16` | mehrere Register beschreiben | min. 16 Bit  
+  
+#### Fehlerbehandlung
+Tritt ein Fehler auf, wird das Bit 7 im Function Code wird gesetzt und im Datenbereich wird eine Exception Code mitgesendet. Dies passiert wie folgt:  
+![excepitonhandling](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/modbus_exception.png)  
+>aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 19.03.2018  
+  
+Wie man hier sieht, gibt es nicht sehr viele verschiedene Fehlercodes. Das ist auch nicht notwendig, da es ja auch nicht sehr viele Fehlerfälle gibt.
+
   
 #### Beispielübertragung
-entnommen aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 14.03.2018:  
+entnommen aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 15.03.2018:  
   
 "Lese 8 Coils beginnend bei Coils-Adresse 11 (= 10 = 0x0a in der PDU):"
 ```
