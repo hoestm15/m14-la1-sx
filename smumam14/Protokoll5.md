@@ -172,17 +172,20 @@ Hier eine Abbildung, wie Java grundsätzlich funktioniert:
 ![Java-Prinzip](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/java_uebersicht.svg)
 > (c) Martin Schmuck  
   
-Aus diesem Schaubild ist ersichtilch, dass man vom Java Native Code (unserem Programm) nicht direkt auf Hardware- oder Betriebssystemressourcen zugreifen kann. Da jedoch die serielle Schnittstelle eine solche Ressource ist, bereitet Sie in Java Probleme. In Java 1 wurde eine Lösung, welche hierzu verwendet werden konnte, mitgeliefert, sie nannte sich Serial JavaComm. Doch leider funktionierte dies nur unter Linux und Sun, unter Windows lief diese Lösung nicht. Da jedoch der Java-Wahlspruch "write once - run anywhere" lautet und diese Vorgehensweise diesem Motto wiedersprach, verwarf man diese Lösung auch wieder. Es gibt zwar Nachbildungen dieser Bibliotheken (zB RxTxComm), diese sind aber auch nicht optimal.  
+Aus diesem Schaubild ist ersichtilch, dass man vom Java Native Code (unserem Programm) nicht direkt auf Hardware- oder Betriebssystemressourcen zugreifen kann. Da jedoch die serielle Schnittstelle eine solche Ressource ist, bereitet Sie in Java Probleme. In Java 1 wurde eine Lösung, welche hierzu verwendet werden konnte, mitgeliefert, sie nannte sich Serial JavaComm. Doch leider funktionierte dies nur unter Linux und Sun, unter Windows lief diese Lösung nicht. Da jedoch der Java-Wahlspruch "write once - run anywhere" lautet und diese Vorgehensweise diesem Motto wiedersprach, verwarf man diese Lösung auch wieder. Es gibt zwar Nachbildungen dieser Bibliotheken (zB RxTxComm), diese sind aber auch nicht optimal. Aus diesem Grund gibt es das Java Native Interface, kurz JNI. 
   
-Aus diesem Grund gibt es das Java Native Interface, kurz JNI. Das JNI besteht aus zwei Komponenten:  
+##### Java Native Interface  
+![JNI](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/java_jni.svg)  
+> (c) Martin Schmuck  
+  
+  
+Das JNI besteht aus zwei Komponenten:  
 * Auf Betriebssystemseite: Binäre Bibliotheken werden dem Betriebssystem zur Verfügung gestellt, dies sind Funktionen, welche in C/C++ geschrieben wurden (Windows: DLL-Datei, Linux: SO-Datei)  
 * Auf Java-Seite: eine oder mehrere .java-Dateien werden zur Verfügung gestellt  
-  
+
 Diese beiden Komponenten schaffen es dann zusammen, eine Kommunikation über die serielle Schnittstelle zu ermöglichen.  
 Hierfür gibt es eine fertig implementierte Lösung, welche sich Java Simple Serial Connector nennt (kurz JSSC). Diese werden wir in dieser und der darauffolgenden Übung verwenden. In diese Richtung waren keine weiteren Konfigurationen mehr nötig, da unsere Vorlage alle notwendigen Klassen und Bibliotheken schon eingebunden hatte. 
 
 Weiter wie bis hierher kamen wir leider nicht mehr, da die Mittagspause schon vor der Tür stand, und wir demgemäß unsere Arbeiten einstellen mussten.  
   
 Obwohl dies Stunde fast nur aus Theorie bestand, war es insofern spannend, als dass wir viel über die Geschichte der verschiedenen Bussysteme lernten, diese Wissen wir uns sicher noch da oder dort zugute kommen.
-       
-
