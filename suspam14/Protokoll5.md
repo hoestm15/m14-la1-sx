@@ -48,5 +48,46 @@ Ein nicht-intelligenter Sensor hingegen erfasst nur die Messgrößen und liefert
 ## Modbus
 Bei der Auswahl eines Feldbusses viel unsere Wahl auf Modbus, da Modbus ein einfacher offener Standard ist. Offen bedeutet das man diesen Standard nicht kaufen muss um Einsicht in die Protokolle zu bekommen. 
 Das Modbus Protokoll wurde 1979 für die Kommunikation zwischen zwei Speicherprogrammierbaren Steuerungen entwickelt. Heutzutage wird es meist für die Automatisierung in der Industrie und für Privatanwendungen verwenden. 
-Modbus arbeitet nach dem **Server/Client-Prinzip**
+Modbus arbeitet nach dem **Server/Client-Prinzip**  
+![](https://github.com/suspam14/la1/blob/master/modbus_transaction_error_free_png.png)
+### Die 3 Varianten der Übertragung:
+Variante | Beschreibung  
+--- | ---  
+ASCII | Rein textuelee Übertragung von Daten  
+RTU (Remote Terminal Unit)  | binäre byteweise Übertragung von Daten  
+TCP |  Übertragung der Daten in TCP Paketen  
+
+Die *RTU* Variante hat den Nachteil, dass Paketende und Paketanfang durch Pausen detektiert werden, was zu Problemen mit diversen Betriebssystemen führen kann. Hierfür gibt es keine Lösung, mit der man nicht vom Protokoll abweichen würde.
+
+### ASCII Transmission Mode
+Im ASCII Transmission Mode werden die Daten als ASCII-Zeichen versendet. Als Übertragungskonfiguration für die serielle wird hier 7E1 oder 7N2 empfohlen. Es werden nur 7 Datenbits benötigt da ein ASCII-Zeichen nur 7 Bits braucht. Bei Bedarf ist es auch möglich von der empfohlenen Konfiguration abzuweichen.
+#### Datenpaket im ASCII Transmission Mode
+![](https://github.com/suspam14/la1/blob/master/modbus_ascii.png)
+Die Übertragung wird mit einem `:` eingeleitet.
+
+### Aufbau eines Pakets in Modbus
+![](https://github.com/suspam14/la1/blob/master/modbus_units.png)
+Ein Paket in Modbus beginnt mit der Adresse des Gerätes welches das paket empfangen soll. Die Adressen werden beim Konfigurieren des Bussystems festgelegt. Danach folgt der Kernbestandteil des Datenpakets, der Funktionscode und die Daten. Diesen Kernbestandteil nennt man **PTU** (Protocoll Data Unit). Das ganze Paket nennt man **ADU** (Application Data Unit). Im ASCII oder RTU Mode ist am Ende des Pakets noch eine Prüfsumme dabei. Im TCP Mode wird diese nicht benötigt, da das TCP Protokoll eine eigene Prüfsumme besitzt.
+
+### Daten-Modell
+Das Daten-Modell von Modbus unterscheidet sich in 4 Bereiche:
+Name | Verwendung 
+--- | ---  
+Discrete Inputs | einzelnes bit, nur lesbar  
+Coils | einzelnes bit, les- und beschreibbar  
+Input Registers | 16-bit Register, nur lesbar   
+Hold Registers | 16-bit Register, les- und beschreibbar  
+
+### Funktionscodes
+In jeder Anfrage über Modbus befindet sich ein Funktionscode, der die Art der Anfrage wiederspiegelt. Es sind Werte zwischen 1 und 127 zulässig. 
+Code | Zweck | Typ  
+--- | --- | ---  
+1 | Coil auslesen | 1 Bit  
+2 | Discrete Inputs lesen | 1 Bit  
+3 | Hold Register lesen | 16 Bit  
+4 | Input Register lesen | 16 Bit 
+5 | einzelnes Coil beschreiben | 1 Bit  
+6 | einzelnes Hold Register beschreiben | 16 Bit  
+15 | mehrere Coils beschreiben | min. 1 Bit
+16 | mehrere Hold Register beschreiben | min. 16 Bit  
 
