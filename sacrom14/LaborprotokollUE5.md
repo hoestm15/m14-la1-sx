@@ -43,15 +43,40 @@ Feldbussystem | Andwendungsgebiet | Details
 ### JAVA Swing 
 
 JAVA Swing ist unter Java die standardmäßige Lösung für GUIs, womit auch die grafische Benutzeroberfläche programmiert wurde.Keine lange Einarbeitungszeit und normal reicht die zu Verfügung stehenden  Controls zur Darstellung aus.Das GUIToolkit Java FX(Nachfolger von Java Swing) gibt es für komplexe GUIs. Seit 1998 ist es Bestandteil der JAVARuntime.  
-[weitere Infos zu Java Swing](https://www.java-tutorial.org/swing.html)  
+[weitere Infos](https://www.java-tutorial.org/swing.html)  
 
 ### Asynchrone Datenübertragung  
 Daten die jderzeit übertragen werden können,werden Daten asynchron übertragen.Diejenigen die nur zu gewissen Zeiten übertragen werden können werden synchron übertragen.
 
 ### UART
 Universal Asynchronous Reciever Transmitter steht für die Abkürzung UART und ist eine **serielle Schnittstelle**. Haufige Anwendung bei µCs.  
-[weitere Infos zu UART](https://www.mikrocontroller.net/articles/UART)
+[weitere Infos](https://www.mikrocontroller.net/articles/UART)
 
 
 
+
+# Modbus  
+ Modbus wurde 1979 für die Kommunikation zwischen zwei SPS Geräten entwickelt. Heutzutage sieht man es häufig in der Haustechnik und in der Industrie, weil es ein offenes Protokoll ist und sich Lösungen mit TCP/IP-,RS232- und RS482- Verbindungen realisieren lässt. Die Version Modbus TCP ist seit 2007 ein Teil der IEC 61158. Es lassen sich RS-232- und TCP/IP-Netzwerke aufbauen. Es basiert auf dem Server/Client Prinzip.
+  
+
+![](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacrom14/sacrom14/ModbusServerClient.png)  
+
+
+
+Es gibt drei unterschiedliche Übertragungsvarianten:  
+* **Modbus RTU**  Datenübertragung: binär byteweise   
+* **Modbus ASCII**  Datenübertragung: textuell byteweise Datenpakete   
+* **Modbus TCP** Datenübertragung: über ein TCP Pakete 
+
+
+Die Übertragung der Frames erfolgt  als ASCII-Text. Die serielle Schnittstelle wird standardmäßig nur als 7 Daten-Bits(7E1 oder 7N2)  konfigueriert. 
+
+Aufbau eines Modbus ASCII-Frame: 
+
+![](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacrom14/sacrom14/ModbusASCII.png)  
+
+
+Im ASCII-Modus beginnt eine Nachricht mit einem Doppelpunkt.Die ersten zwei Bytes enthalten zwei ASCII-Zeichen(stellen die Adressen des Empfängers dar).Der auszuführende Befehl ist auf den nächsten zwei Bytes codiert.Das Ende der Nachricht wird durch die Zeichenfolge Carriage return – Line feed markiert.  
+
+Wenn während der Übertragung eines Frames eine Pause von mind. 1s auftritt, wird der Frame als Fehlerfall bewertet. Man kann als benutzer ein längeres Timeout konfigurieren.  
 
