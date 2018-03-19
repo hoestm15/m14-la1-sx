@@ -186,6 +186,9 @@ Das JNI besteht aus zwei Komponenten:
 Diese beiden Komponenten schaffen es dann zusammen, eine Kommunikation über die serielle Schnittstelle zu ermöglichen.  
 Hierfür gibt es eine fertig implementierte Lösung, welche sich Java Simple Serial Connector nennt (kurz JSSC). Diese werden wir in dieser und der darauffolgenden Übung verwenden. In diese Richtung waren keine weiteren Konfigurationen mehr nötig, da unsere Vorlage alle notwendigen Klassen und Bibliotheken schon eingebunden hatte. 
 
+:point_right: __.jar-Dateien:__  
+Dabei handelt es sich um ein Wortspiel (jar = englisch für Krug). Eigentlich die Abkürzung für Java-Archiv. Sie besteht aus mehreren Klassen, welche hier in einer Datei zusammengepackt sind (könnte man mit einem .zip-Archiv, welches aus mehreren .class-Dateien besteht vergleichen), und einer MANIFEST-Datei, welche im META-INF-Verzeichnis liegt. Hier können zusätliche Informationen gespeichert werden. Eigentlich wurde das Format entwickelt, um dem Endnutzer das Programm immer nur als eine Datei zur Verfügung stellen zu können, selbst wenn das Programm aus mehreren Dateien besteht.  
+
 Weiter wie bis hierher kamen wir leider nicht mehr, da die Mittagspause schon vor der Tür stand, und wir demgemäß unsere Arbeiten einstellen mussten.  
   
 Obwohl dies Stunde fast nur aus Theorie bestand, war es insofern spannend, als dass wir viel über die Geschichte der verschiedenen Bussysteme lernten, diese Wissen wir uns sicher noch da oder dort zugute kommen.
