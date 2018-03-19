@@ -14,7 +14,7 @@
 # Aufgabenstellung
 
 
-Mithilfe eine Temeratursensors soll eine Temperaturmessung am Sure Board erfolgen, welche die Messergebnisse über ein Java Visulisierung ausgeben werden soll. Es steht bereits eine vorgefertigte GUI und für den µC ein Programm bereits zur Verfügung.
+Mithilfe eine Temeratursensors soll eine Temperaturmessung am Sure Board erfolgen, welche die Messergebnisse über ein Java Visulisierung ausgeben werden soll. Es steht bereits eine vorgefertigte GUI und für den µC ein Programm zur Verfügung.
 
 
 ## **Realisierung**  
