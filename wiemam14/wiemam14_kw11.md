@@ -41,4 +41,11 @@
   ein Clean and Build durchgeführt und die build.xml bearbeitet. Dies machten wir um die Datei 
   wirklich aufzunehmen.
   
+  ## Temperaturmessung
   
+  Am Anfang luden wir den Modbusslave von unserem Server herunter und führten die sure.elf.hex
+  Datei mit Hilfe des EasyProgrammer aus. Die GUI luden wir von einem Link auf LMS herunter
+  und konnten diese anschließend einfach in NetBeans öffnen.
+
+
+
