@@ -47,5 +47,6 @@
   Datei mit Hilfe des EasyProgrammer aus. Die GUI luden wir von einem Link auf LMS herunter
   und konnten diese anschließend einfach in NetBeans öffnen.
 
+  ![Display](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/GUI.PNG)
 
 
