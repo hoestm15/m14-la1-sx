@@ -22,7 +22,7 @@
   * Modbus RTU     (Remote Terminal Unit, binäre byteweise Übertragung)      
   * Modbus TCP     (Übertragung in TCP Paketen)   
 
-  ## Java
+  ## Serielle Schnittstelle Java
  
   Um unter Java zwischen Programm und Hardware zu kommunizieren, muss die JVM (Java Virtuelle Maschine)
   zwischengeschalten werden. Hierbei greift Java auf die virtuelle Maschine zu, dieses dann auf das
@@ -33,3 +33,12 @@
   Vorteil davon liegt darin, dass die Bibliotheken automatisch richtig entpackt und verwendet werden.
   Früher gab es auch noch die Java.comm. Diese könnte man zwar heute auch noch installieren, jedoch
   ist die nur auf einem System lauffähig, was natürlich ein großer Nachteil ist.
+  
+  ## Installation
+  
+  Bei der Installation haben wir in der Schule in ein leeres Projekt, in welchem nur Handler Methoden
+  zur Verfügung standen, das Package /usr/java/packages/lib/jssc.jar eingebunden. Danach haben wir
+  ein Clean and Build durchgeführt und die build.xml bearbeitet. Dies machten wir um die Datei 
+  wirklich aufzunehmen.
+  
+  
