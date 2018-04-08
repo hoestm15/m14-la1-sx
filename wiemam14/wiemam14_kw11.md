@@ -77,3 +77,15 @@
     }
   }
 
+```
+
+  ## Exception
+  
+  Exception ist eine Klasse welche von Throwable abgeleitet wird, welche wiederum von der Klasse Object abgeleitet wird.
+  Bei schweren Fehlern wird in der JVM ein Error erzeugt, welcher zum Absturz des Programmes führt. Die Errors, welche
+  von JSSC geworfen werden, müssen weitergeworfen werden, wenn nur Exceptions abgefangen werden. Hierfür gibt es zwei
+  Lösungen. Entweder wird ein Multicatch verwendet oder es werden alle Throwables abgefangen. Mit beiden Varianten kann man 
+  Errors und die Exceptions behandeln.
+  
+  
+
