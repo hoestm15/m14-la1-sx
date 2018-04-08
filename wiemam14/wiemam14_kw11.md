@@ -48,5 +48,32 @@
   und konnten diese anschließend einfach in NetBeans öffnen.
 
   ![Display](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/GUI.PNG)
-
+  
+  Steuerung der Buttons:
+  
+  ```java
+    private void updateSwingControls () {
+    jcbSerialDevice.setEnabled(false);
+    jbutRefresh.setEnabled(true);
+    jbutConnect.setEnabled(false);
+    jbutDisconnect.setEnabled(false);
+    jbutSingleMeasurement.setEnabled(false);
+    jbutContinousMeasurement.setEnabled(false);
+    jbutStopMeasurement.setEnabled(false);
+    
+    if (jcbSerialDevice.getModel().getSize() > 0) {
+      jcbSerialDevice.setEnabled(true);
+      jbutConnect.setEnabled(true);
+    }
+    
+    if (serialPort != null) {
+      jbutConnect.setEnabled(false);
+      jbutDisconnect.setEnabled(true);
+      jbutRefresh.setEnabled(false);
+      jcbSerialDevice.setEnabled(false);
+    } else {
+      jbutConnect.setEnabled(true);
+      jbutDisconnect.setEnabled(false);
+    }
+  }
 
