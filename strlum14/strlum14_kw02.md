@@ -32,6 +32,18 @@ Das Messergebnis soll über eine Java Visualisierung am PC ausgegeben werden.
   Gearbeitet wird beim Modbus nach dem Server-Client Prinzip. Bei uns ist also der Server das Sure-Board einnimmt und 
   der PC bzw. unsere Applikation als Client arbeitet.
   
+  ## Serielle Schnittstelle in Java
+ 
+   Es ist garnicht so einfach in Java zwischen Hardware und Software zu kommunizieren. Dazu ist es nötig, das die 
+   JVM --> Java Virtual Machine zwischengeschaltet wird. Hierbei greift Java auf die virtuelle Maschine zu, welche
+   dann auf das Betriebssystem zugreift und anschließend greift das Betriebssystem auf die Hardware zu. 
+   Jetzt ist es allerdings so, dass die JVM keine seriellen Schnittstellen unterstützt. Deshalb wird das
+   Java Native Interface untertützt kurz JNI !
+   Es wird eine für JAVA lesbare .jar Datei erzeugt und somit auch eine lesbare Bibliothek. Außerdem verwenden wir
+   in der Schule den JSSC --> Java Simple Serial Connector (JJSC). Der größte Vorteil ist darin zu finden, dass die
+   Bibliotheken automatisch richtig entpackt werden. 
+  
+  
   
   
  
