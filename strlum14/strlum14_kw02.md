@@ -13,3 +13,5 @@
 Es soll eine Temperaturmessung mit dem integrierten Temperatursensor am Sure Board erfolgen. 
 Das Messergebnis soll über eine Java Visualisierung am PC ausgegeben werden.
 
+
+
