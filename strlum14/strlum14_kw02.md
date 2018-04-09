@@ -13,6 +13,7 @@
 
 Es soll eine Temperaturmessung mit dem integrierten Temperatursensor am Sure Board erfolgen. 
 Das Messergebnis soll über eine Java Visualisierung am PC ausgegeben werden.
+![Display](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum14/strlum14/GUI.PNG)
 
 
 
