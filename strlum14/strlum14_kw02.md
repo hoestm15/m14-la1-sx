@@ -19,7 +19,7 @@ Das Messergebnis soll über eine Java Visualisierung am PC ausgegeben werden.
   Feldebene miteinander verbinden.So erfolgt also der Datenaustausch über Sensoren(Messfühler) und Aktoren(Stellglieder).
   Häufig verwendet man Feldbusse in verbindung mit SPSen und das häufig in der Gebäudeautomatisierung.
   
-  Bei dem Modbus handelt es sich um einen sogennanten offenen eldbus, der 1979 von Gould-Modicon zur Kommunikation mit Ihren      
+  Bei dem Modbus handelt es sich um einen sogennanten offenen eldbus, der 1979 von Gould-Modicon zur Kommunikation mit Ihren  
   eigenen SPSen gemacht wurde.Man unterscheidet zwischen 3 verschiedenen Ebenen:  
   
    :point_right:  Modbus ASCII: Hier kann immer ein ASCII-Zeichen nach dem anderen gesendet werden (rein textuell)  
