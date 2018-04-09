@@ -10,8 +10,23 @@
  
  
  # Aufgabenstellung
+
 Es soll eine Temperaturmessung mit dem integrierten Temperatursensor am Sure Board erfolgen. 
 Das Messergebnis soll über eine Java Visualisierung am PC ausgegeben werden.
+
+
+
+## Exceptions in JAVA
+
+Exception ist eine Klass3, die von Throwable abgeleitet wird. Diese wird wiederrum von der Klasse Object abgeleitet. Bei schweren Fehler wird in der Java Virtual Machine ein Fehler (Error) erzeugt, der zum Absturz des Programms führt.
+
+Diese Errors werden von JSSC geworfen und müssen wieder weiter geworfen werden, wenn nur Exception abgefangen werden.
+
+Throw new exception --> throws Exception
+Es gibt 2 Möglichkeiten wie man Errors und oder exceptions behandeln kann. Entweder wird ein Multicatch verwendet oder es werden alle Throwables abgefangen.
+
+
+
 
 ## Feldbussysteme bzw Modbus WH
   
@@ -42,6 +57,11 @@ Das Messergebnis soll über eine Java Visualisierung am PC ausgegeben werden.
    Es wird eine für JAVA lesbare .jar Datei erzeugt und somit auch eine lesbare Bibliothek. Außerdem verwenden wir
    in der Schule den JSSC --> Java Simple Serial Connector (JJSC). Der größte Vorteil ist darin zu finden, dass die
    Bibliotheken automatisch richtig entpackt werden. 
+   Man muss sich das so vorsstellen, das Java in einer Art Kreisform aufgabaut ist: Von außen nach Innen -->
+   Hardware--  
+   Betriebssystem--  
+   JAVA VM --  
+   Java Native Code
   
   
   
