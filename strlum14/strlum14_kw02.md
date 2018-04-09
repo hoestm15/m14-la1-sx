@@ -56,8 +56,9 @@ Es gibt 2 Möglichkeiten wie man Errors und oder exceptions behandeln kann. Entw
    
    Jetzt ist es allerdings so, dass die JVM keine seriellen Schnittstellen unterstützt. Deshalb wird das
    Java Native Interface untertützt kurz JNI !
-   Es wird eine für JAVA lesbare .jar Datei erzeugt und somit auch eine lesbare Bibliothek. Außerdem verwenden wir
-   in der Schule den JSSC --> Java Simple Serial Connector (JJSC).  
+   Es wird eine für JAVA lesbare .jar Datei erzeugt und somit auch eine lesbare Bibliothek.   
+   
+   Außerdem verwenden wir in der Schule den JSSC --> Java Simple Serial Connector (JJSC).  
    Der größte Vorteil ist darin zu finden, dass die Bibliotheken automatisch richtig entpackt werden. 
    Man muss sich das so vorsstellen, das Java in einer Art Kreisform aufgabaut ist: Von außen nach Innen -->  
    Hardware--  
