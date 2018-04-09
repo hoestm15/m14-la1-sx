@@ -11,3 +11,4 @@
 ## Einheit 5, 19.12.2017  
 Krank
 ## Einheit 6, 09.01.2018
+[KW02](https://github.com/HTLMechatronics/m14-la1-sx/blob/zitkam13/zitkam13/zitkam13_kw02.md)
