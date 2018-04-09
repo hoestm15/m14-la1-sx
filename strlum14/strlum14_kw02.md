@@ -15,7 +15,33 @@ Es soll eine Temperaturmessung mit itnegriertem Temperatursensor am Sure Board r
 Das Messergebnis soll über eine Java Visualisierung am PC ausgegeben werden.
 ![Display](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum14/strlum14/GUI.PNG)
 
-
+**Quellcode für die Buttons**  
+```java
+    private void updateSwingControls () {
+    jcbSerialDevice.setEnabled(false);
+    jbutRefresh.setEnabled(true);
+    jbutConnect.setEnabled(false);
+    jbutDisconnect.setEnabled(false);
+    jbutSingleMeasurement.setEnabled(false);
+    jbutContinousMeasurement.setEnabled(false);
+    jbutStopMeasurement.setEnabled(false);
+    
+    if (jcbSerialDevice.getModel().getSize() > 0) {
+      jcbSerialDevice.setEnabled(true);
+      jbutConnect.setEnabled(true);
+    }
+    
+    if (serialPort != null) {
+      jbutConnect.setEnabled(false);
+      jbutDisconnect.setEnabled(true);
+      jbutRefresh.setEnabled(false);
+      jcbSerialDevice.setEnabled(false);
+    } else {
+      jbutConnect.setEnabled(true);
+      jbutDisconnect.setEnabled(false);
+    }
+  }
+```
 
 ## Exceptions in JAVA
 
