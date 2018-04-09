@@ -48,6 +48,8 @@ Es gibt 2 Möglichkeiten wie man Errors und oder exceptions behandeln kann. Entw
   Gearbeitet wird beim Modbus nach dem Server-Client Prinzip. Bei uns ist also der Server das Sure-Board einnimmt und 
   der PC bzw. unsere Applikation als Client arbeitet.
   
+  ![Display](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum14/strlum14/modbus.png)
+  
   ## Serielle Schnittstelle in Java
  
    Es ist garnicht so einfach in Java zwischen Hardware und Software zu kommunizieren. Dazu ist es nötig, das die 
