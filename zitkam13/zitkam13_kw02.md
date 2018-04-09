@@ -24,4 +24,40 @@ Jedes Betriebssystem, bzw. jede [Architektur](https://de.wikipedia.org/wiki/Rech
 | [Windows](https://de.wikipedia.org/wiki/Microsoft_Windows) | [x86](https://de.wikipedia.org/wiki/X86-Prozessor) | 64 bit | `.dll` |
 
 ## Programm   
-Wir setzten das Program der Einheit 5 (19.12.2017) fort. Bei diesem Programm wurde die Temperatur visualisiert. Gemessen wurde diese mit dem Sure-Board und danach mit Modbus übertragen. 
+Wir setzten das Program der Einheit 5 (19.12.2017) fort. Bei diesem Programm wurde die Temperatur visualisiert. Gemessen wurde diese mit dem Sure-Board und danach mit Modbus übertragen.  
+Dabei programmierten wir unter anderem die Steurung der Buttons der GUI.  
+
+**Quellcode der Buttons**  
+```java
+    private void updateSwingControls () {
+    jcbSerialDevice.setEnabled(false);
+    jbutRefresh.setEnabled(true);
+    jbutConnect.setEnabled(false);
+    jbutDisconnect.setEnabled(false);
+    jbutSingleMeasurement.setEnabled(false);
+    jbutContinousMeasurement.setEnabled(false);
+    jbutStopMeasurement.setEnabled(false);
+    
+    if (jcbSerialDevice.getModel().getSize() > 0) {
+      jcbSerialDevice.setEnabled(true);
+      jbutConnect.setEnabled(true);
+    }
+    
+    if (serialPort != null) {
+      jbutConnect.setEnabled(false);
+      jbutDisconnect.setEnabled(true);
+      jbutRefresh.setEnabled(false);
+      jcbSerialDevice.setEnabled(false);
+    } else {
+      jbutConnect.setEnabled(true);
+      jbutDisconnect.setEnabled(false);
+    }
+  }
+
+```  
+**GUI des Programms**  
+![Display](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/GUI.PNG)  
+
+
+## Exceptions in JAVA  
+Die Klasse **Exception** wird von **Throwable** abgeleitet. Diese wiederum wird vom der Klasse Object abgelditet. Bei schweren Fehlern wir in der **JVM(Java Virtual Machine)** ein Error erzeugt, welcher zu einem Absturz des Programms führt. Alle Errors die von **JSSC** geworfen werden, ,üssen weitergeworfen werden, wenn nur Exceptions abgefangen werden. Für die Lösung dieses Problems gibt es zwei Lösungen. Entweder wird ein **Multicatch** verwendet oder es werden alle **Throwables** abgefangen. Mit beiden Varianten können **Errors* und **Exceptions** behandelt werden. 
