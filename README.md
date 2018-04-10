@@ -11,4 +11,4 @@ Link zur [4. Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum1
 ## 5. Einheit,19.12.2017
       Sporttag
 ## 6. Einheit,09.01.2018
-Link zur [6. Einheit]
+Link zur [6. Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum14/strlum14/strlum14_kw02.md)
