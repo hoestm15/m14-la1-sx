@@ -1,8 +1,8 @@
-# *Protokoll KW 11*
+# *Protokoll KW 02*
 
   Name: Markus Wieser   
   Klasse: 4AHME   
-  Datum: 13.03.2018   
+  Datum: 09.01.2018   
   Anwesend: Strauß Lukas, Strutz Sebastian, Tuttner Raphael, Uhl Christian, Waltl Kilian, Wieser Markus, Zitz Karlheinz    
   Abwesend: -
   
