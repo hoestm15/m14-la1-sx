@@ -54,4 +54,5 @@ Sollte ein schwerer Fehler auftretten, wird ein ERROR in der JVM erzeugt. Dieser
 Die von dem JSSC geworfenen ERROR's müssen weitergeworfen werden, wenn nur Exceptions abfangen werden sollten. In einem solchen Fall gibt es **zwei Lösungen**:  
 * ein Multicatche
 * oder alle Throwables abfangen.  
+
 Mit beiden Varianten kann anfallende Exceptions und ERROR's behandeln.
