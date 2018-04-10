@@ -23,4 +23,4 @@ gefehlt, schriftlich abgegeben
 
 ## Einheit 6, 09.01.2018
 
-[Protokoll](m14-la1-sx/uhlchm14/uhlchm14_kw02.md)
+[Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/uhlchm14/uhlchm14/uhlchm14_kw02.md)
