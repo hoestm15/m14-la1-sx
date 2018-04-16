@@ -23,3 +23,7 @@ Handschriftlich nachgebracht
 ## Einheit 6, 09.01.2018
 
 Wird handschriftlich nachgebracht
+
+## Einheit 7, 10.04.2018
+
+[Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/walkim14/walkim14/walkim14_kw15.md)
