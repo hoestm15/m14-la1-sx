@@ -26,8 +26,7 @@ Dies hat den Vorteil, dass es nicht zu verwirrung kommen kann, wenn man zwei Met
 
 ### JSSC
 
-Um unter Java zwischen Programm und Hardware zu kommunizieren, muss die JVM (Java Virtuelle Maschine)
-  zwischengeschalten werden. Hierbei greift Java auf die virtuelle Maschine zu, dieses dann auf das Betriebystem und das Betriebssystem anschließend auf die Hardware. Jedoch unterstützt die JVM eine seriellen Schnittstellen. Deshalb benötigt man das Java Native Interface (JNI), welches eine für Java lesbare .jar Datei erzeugt und eine lesbare Bibliothek erzeugt. Außerdem haben wir in der Schule den Java Simple Serial Connector (JJSC) verwendet. Ein großer Vorteil davon liegt darin, dass die Bibliotheken automatisch richtig entpackt und verwendet werden. Früher gab es auch noch die Java.comm. Diese könnte man zwar heute auch noch installieren, jedoch ist die nur auf einem System lauffähig, was natürlich ein großer Nachteil ist.
+Um unter Java zwischen Programm und Hardware zu kommunizieren, muss die JVM (Java Virtuelle Maschine) zwischengeschalten werden. Hierbei greift Java auf die virtuelle Maschine zu, diese dann auf das Betriebsystem und das Betriebssystem anschließend auf die Hardware. Jedoch unterstützt die JVM eine seriellen Schnittstellen. Deshalb benötigt man das Java Native Interface (JNI), welches eine für Java lesbare .jar Datei erzeugt und eine lesbare Bibliothek erzeugt. Außerdem haben wir in der Schule den Java Simple Serial Connector (JJSC) verwendet. Ein großer Vorteil davon liegt darin, dass die Bibliotheken automatisch richtig entpackt und verwendet werden. Früher gab es auch noch die Java.comm. Diese könnte man zwar heute auch noch installieren, jedoch ist die nur auf einem System lauffähig, was natürlich ein großer Nachteil ist.
 
 
 ## Temperaturmessung
