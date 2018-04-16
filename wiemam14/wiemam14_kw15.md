@@ -6,6 +6,17 @@
   Anwesend: Strauß Lukas, Tuttner Raphael, Uhl Christian, Waltl Kilian, Wieser Markus, Zitz Karlheinz    
   Abwesend: Sebastian Strutz
   
+  ## Java Theorie
+  
+  ### Klassen in Java
+  
+  * Abstrakte Klasse: Dies ist eine unfertige Klasse, welche verwendet wird um weitere Klassen dieser Art zu erstellen.
+                      Hier müssen dann nur einige Funktionen ausimplementiert werden.
+  * Interface:        Ist eine Sammlung von Methoden.
+  * Interne Klasse:   In einer internen Klasse können alle Attribute von einer äußeren Klasse übernommen werden.
+  * Anonyme Klasse:   Sie hat keinen eigenen Klassennamen und ist die einfachste Klasse in Java.
+  
+  
   ## Temperaturmessung mit I²C
   
   ### jbutSingleMeasurementActionPerformed
@@ -88,4 +99,5 @@ public class SingleMeasurementWorker extends SwingWorker<Double, Object>
 
 }
 ```
-  
+
+
