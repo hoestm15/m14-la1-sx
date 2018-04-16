@@ -10,12 +10,18 @@
   
   ### Klassen in Java
   
+   Einfach erklärt ist eine Klasse ein "Bauplan" für ein Programm. Ein Klasse besteht aus Attributen und Methoden.
+  
   * Abstrakte Klasse: Dies ist eine unfertige Klasse, welche verwendet wird um weitere Klassen dieser Art zu erstellen.
                       Hier müssen dann nur einige Funktionen ausimplementiert werden.
   * Interface:        Ist eine Sammlung von Methoden.
   * Interne Klasse:   In einer internen Klasse können alle Attribute von einer äußeren Klasse übernommen werden.
   * Anonyme Klasse:   Sie hat keinen eigenen Klassennamen und ist die einfachste Klasse in Java.
   
+  ### Vererbungen
+  
+   Bei Java gibt es immer nur eine Einfachvererbung. Eine Elternklasse kann mehrere Kindklassen haben, 
+   aber eine Kindklasse kann nur eine Elternklasse haben.
   
   ## Temperaturmessung mit I²C
   
