@@ -22,3 +22,7 @@ Gefehlt aufgrund der Sturmschäden
 ## Einheit 6, 09.01.2018
 
 [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/wiemam14_kw02.md)
+
+## Einheit 7, 10.04.2018
+
+
