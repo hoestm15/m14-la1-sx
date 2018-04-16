@@ -39,6 +39,11 @@
   ```
   
   ### Worker Klasse SingleMeasurementWorker
+  
+  Die hier zu sehende Worker Klasse lässt die Abfrage der GUI in einem anderen Threat ablaufen.
+  Die Methode doInBackground schickt eine Anfrage an das SureBoard, wobei wir das nächste Mal jedoch ein Feld verwenden
+  wollen.
+  
 ```java
 package workers;
 
