@@ -7,6 +7,17 @@
   Abwesend: Sebastian Strutz
   
   ## Temperaturmessung mit I²C
+  
+  ### jbutSingleMeasurementActionPerformed
+  
+  Hier wird von der Klasse MySingleMeasurementWorker ein Objekt erstellt. Dies wird mithilfe von execute() gemacht.
+  
+  ```java
+  private void jbutSingleMeasurementActionPerformed(java.awt.event.ActionEvent evt)                       
+  {                                                          
+    new MySingleMeasurementWorker(serialPort).execute();
+  }                                                     
+```
 
   ### MySingleMeasurementWorker
   
