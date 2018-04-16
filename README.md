@@ -22,4 +22,4 @@ Handschriftlich nachgebracht
 
 ## Einheit 6, 09.01.2018
 
-[Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/walkim14/walkim14/walkim14_kw02.md)
+Wird handschriftlich nachgebracht
