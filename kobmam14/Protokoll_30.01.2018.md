@@ -13,7 +13,7 @@
 ## Temperaturmessung
 Ziel ist es einen Temperatursensor mittls eines Sure-Boards zu realisieren. <br>
 Daten zwischen Board und PC werden mit Hilfe von Modbus übertragen. <br>
-Die Ausagbe der temperatur erfolg über eine bereits vorgefertigte Java-GUI. <br>
+Die Ausagbe der Temperatur erfolgt über eine bereits vorgefertigte Java-GUI. <br>
 
 
 ## Ablauf
@@ -103,7 +103,7 @@ private void refrehPorts ()
     
 }
 ```
-Es wird eine Variable "ports" mit dem dem Datentyp String erstellet, welche die Namen aller angezeigten Ports enthält. <br>
+Es wird eine Variable "ports" mit dem dem Datentyp String erstellt, welche die Namen aller angezeigten Ports enthält. <br>
 Die For-Each-Schleife durchläuft die Variable und wird die Folge "USB" gefunden, so wird dieser Port als "preferedPort" gesetzt und wird somit standardmäßig in der Combobox angezeigt.
 
 
@@ -124,7 +124,7 @@ private void showThrowable (Throwable th)
 }
 ```
 Tritt ein Fehler auf, so wird dieser über ein Fenster ausgegeben. <br>
-Enthält das Throwable th eine Nachricht, so wird diese zusätzlich mit Hilfe der Variable "msg" im Fesnter augegeben. <br>
+Enthält das Throwable "th" eine Nachricht, so wird diese zusätzlich mit Hilfe der Variable "msg" im Fesnter augegeben. <br>
 Ist dies nicht der Fall, so wird der Name der Klasse, in welcher der Fahler aufgetreten ist, ausgegeben.
 
 
