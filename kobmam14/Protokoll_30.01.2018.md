@@ -130,17 +130,17 @@ Ist dies nicht der Fall, so wird der Name der Klasse, in welcher der Fahler aufg
 ```java
   private void jbutConnectActionPerformed(java.awt.event.ActionEvent evt) 
   {                                                
-      connectPort((String) jcbSerialDevice.getSelectedItem());//Typecast, da Objekt, welches ein String sein muss
+    connectPort((String) jcbSerialDevice.getSelectedItem());//Typecast, da Objekt, welches ein String sein muss
   }                                           
 
   private void jbutDisconnectActionPerformed(java.awt.event.ActionEvent evt) 
   {                                                   
-      disconnectPort();
+    disconnectPort();
   }                                              
 
   private void jbutRefreshActionPerformed(java.awt.event.ActionEvent evt) 
   {                                                
-      refreshPorts();
+    refreshPorts();
   }
 ```
 
