@@ -139,7 +139,7 @@ private void jbutConnectActionPerformed(java.awt.event.ActionEvent evt)
 
   private void jbutRefreshActionPerformed(java.awt.event.ActionEvent evt) 
   {                                                
-      refrehPorts();
+      refreshPorts();
   }
 ```
 
