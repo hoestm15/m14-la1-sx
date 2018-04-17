@@ -5,3 +5,4 @@
 * 3.Einheit, 24.10.2017 [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/knarom14/Protokolle/Protokoll_24-10-17.md)
 * 4.Einheit, 16.01.2018 [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/knarom14/Protokolle/Protokoll_16-01-18.md)
 * 5.Einheit, 23.01.2018 [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/knarom14/Protokolle/Protokoll_23-01-18.md)
+* 6.Einheit, 30.01.2018 [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/knarom14/Protokolle/Protokoll_30-01-18.md)
