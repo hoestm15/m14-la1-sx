@@ -7,7 +7,7 @@
  Klasse: 4AHME  
  Datum: 30.01.2018  
  Anwesend: Berger Emil, Böcksteiner Jakob, Ehmann Julian, Knappitsch Robert, Kobor Markus <br>
- Abwesend: Bullner Jeremy, Enzi Gert
+ Abwesend: Bullner Jeremy, Enzi Gert <br> <br> <br>
  
   
 ## Temperaturmessung
