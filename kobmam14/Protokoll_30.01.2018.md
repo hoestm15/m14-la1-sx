@@ -9,13 +9,13 @@
  
   
 ## Temperaturmessung
-Ziel ist es einen Temperatursensor mittls eines Sure-Boards zu realisieren.
-Daten zwischen Board und PC werden mit Hilfe von Modbus übertragen.
-Die Ausagbe der temperatur erfolg über eine bereits vorgefertigte Java-GUI.
+Ziel ist es einen Temperatursensor mittls eines Sure-Boards zu realisieren. <br>
+Daten zwischen Board und PC werden mit Hilfe von Modbus übertragen. <br>
+Die Ausagbe der temperatur erfolg über eine bereits vorgefertigte Java-GUI. <br>
 
 
 ## Ablauf
-Als erstes wurde die fertige GUI vom Server heuntergeladen und geöffnet.
+Als erstes wurde die fertige GUI vom Server heuntergeladen und geöffnet. <br>
 Um überprüfen zu können, welcher Port geöffnet ist, wurde eine Variable erstellt .
  
 ```java
@@ -62,10 +62,10 @@ private void updateSwingControls() {
         }
     }
 ```
-Wird das Programm gestartet, so wird der Text "--" ausgegebn.
-Der Button "Aktualisieren" ist drückbar, während die Buttons "Verbinden" und "Trennen" nicht drückbar sind.
-Die Combobox "SerialDevice" ist ausgegraut.
-Die Buttons "Einzelmessung", "Laufend messen" und "Stop" sind nicht drückbar.
+Wird das Programm gestartet, so wird der Text "--" ausgegebn. <br>
+Der Button "Aktualisieren" ist drückbar, während die Buttons "Verbinden" und "Trennen" nicht drückbar sind. <br>
+Die Combobox "SerialDevice" ist ausgegraut. <br>
+Die Buttons "Einzelmessung", "Laufend messen" und "Stop" sind nicht drückbar. <br>
 
 Wenn ein Port geöffnet wurde, so werden die Buttons "Aktualisieren" und "Verbinden" ausgegraut,
 während der Button "Trennen" drückbar wird.
@@ -100,9 +100,8 @@ private void refrehPorts ()
     
   }
 ```
-Es wird eine Variable "ports" mit dem dem Datentyp String erstellet, welche die Namen aller angezeigten Ports enthält.
-Die For-Each-Schleife durchläuft die Variable und wird die Folge "USB" gefunden, so wird dieser Port als "preferedPort"
-gesetzt, und wird somit standardmäßig in der Combobox angezeigt.
+Es wird eine Variable "ports" mit dem dem Datentyp String erstellet, welche die Namen aller angezeigten Ports enthält. <br>
+Die For-Each-Schleife durchläuft die Variable und wird die Folge "USB" gefunden, so wird dieser Port als "preferedPort" gesetzt und wird somit standardmäßig in der Combobox angezeigt.
 
 
 ### showThrowable
@@ -121,8 +120,8 @@ private void showThrowable (Throwable th)
                                   JOptionPane.ERROR_MESSAGE);
   }
 ```
-Tritt ein Fehler auf, so wird dieser über ein Fenster ausgegeben.
-Enthält das Throwable th eine Nachricht, so wird diese zusätzlich mit Hilfe der Variable "msg" im Fesnter augegeben.
+Tritt ein Fehler auf, so wird dieser über ein Fenster ausgegeben. <br>
+Enthält das Throwable th eine Nachricht, so wird diese zusätzlich mit Hilfe der Variable "msg" im Fesnter augegeben. <br>
 Ist dies nicht der Fall, so wird der Name der Klasse, in welcher der Fahler aufgetreten ist, ausgegeben.
 
 
@@ -165,7 +164,7 @@ private void connectPort(String port)
         }
     }
 ```
-Mit Hilfe von ".openPort()" wird der in der Variable "serialPort" enthaltene Port geöffnet.
+Mit Hilfe von ".openPort()" wird der in der Variable "serialPort" enthaltene Port geöffnet. <br>
 Da es zu Fehlern kommen kann, welche nicht unter die Kategorie "Exception" fallen, wird ein Throwable gefangen,
 welches die Überklasse dieser darstellt.
 
@@ -196,6 +195,6 @@ private void disconnectPort()
     }
     
 ```
-Zu erst wird überprüft ob die Variable SerialPort leer ist oder kein Port geöffnet ist.
+Zu erst wird überprüft ob die Variable SerialPort leer ist oder kein Port geöffnet ist. <br>
 So wird sichergegangen, dass ein Port nur geschlossen werden kann, wenn einer geöffnet ist.
 Mit ".closePort()" wird der geöffnete Port geschlossen.
