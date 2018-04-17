@@ -30,14 +30,15 @@ public SureModbusGui ()
     setLocationRelativeTo(null);
     updateSwingControls();
     refreshPorts();
-  }
+}
 ```
 Im Konstruktor werden die später Beschriebenen Funktionen `updateSwingControls();` und `refreshPorts();` aufgerufen.
 
 
 ### updateSwingControls
 ```java
-private void updateSwingControls() {
+private void updateSwingControls() 
+{
         jlaTemperatur.setText("--");
         jbutRefresh.setEnabled(true);
         jbutConnect.setEnabled(false);
@@ -60,7 +61,7 @@ private void updateSwingControls() {
             jcbSerialDevice.setEnabled(true);
             jbutConnect.setEnabled(true);
         }
-    }
+}
 ```
 Wird das Programm gestartet, so wird der Text "--" ausgegebn. <br>
 Der Button "Aktualisieren" ist drückbar, während die Buttons "Verbinden" und "Trennen" nicht drückbar sind. <br>
@@ -98,7 +99,7 @@ private void refrehPorts ()
     
     updateSwingControls();
     
-  }
+}
 ```
 Es wird eine Variable "ports" mit dem dem Datentyp String erstellet, welche die Namen aller angezeigten Ports enthält. <br>
 Die For-Each-Schleife durchläuft die Variable und wird die Folge "USB" gefunden, so wird dieser Port als "preferedPort" gesetzt und wird somit standardmäßig in der Combobox angezeigt.
@@ -118,7 +119,7 @@ private void showThrowable (Throwable th)
                                   msg,
                                   "Fehler aufgetreten...",
                                   JOptionPane.ERROR_MESSAGE);
-  }
+}
 ```
 Tritt ein Fehler auf, so wird dieser über ein Fenster ausgegeben. <br>
 Enthält das Throwable th eine Nachricht, so wird diese zusätzlich mit Hilfe der Variable "msg" im Fesnter augegeben. <br>
@@ -127,7 +128,7 @@ Ist dies nicht der Fall, so wird der Name der Klasse, in welcher der Fahler aufg
 
 ### ActionPerformed
 ```java
-private void jbutConnectActionPerformed(java.awt.event.ActionEvent evt) 
+  private void jbutConnectActionPerformed(java.awt.event.ActionEvent evt) 
   {                                                
       connectPort((String) jcbSerialDevice.getSelectedItem()); //Typecast, da Objekt, welches ein String sein muss
   }                                           
@@ -162,7 +163,7 @@ private void connectPort(String port)
         {
             updateSwingControls();
         }
-    }
+}
 ```
 Mit Hilfe von ".openPort()" wird der in der Variable "serialPort" enthaltene Port geöffnet. <br>
 Da es zu Fehlern kommen kann, welche nicht unter die Kategorie "Exception" fallen, wird ein Throwable gefangen,
