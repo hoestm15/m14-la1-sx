@@ -6,7 +6,7 @@
  Name: Markus Kobor  
  Klasse: 4AHME  
  Datum: 30.01.2018  
- Anwesend: Berger Emil, Böcksteiner Jakob, Ehmann Julian, Knappitsch Robert, Kobor Markus
+ Anwesend: Berger Emil, Böcksteiner Jakob, Ehmann Julian, Knappitsch Robert, Kobor Markus <br>
  Abwesend: Bullner Jeremy, Enzi Gert
  
   
