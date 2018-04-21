@@ -179,5 +179,5 @@ Zur Überprüfung unseres Quelltextes haben wir zum Schluss versucht uns mit uns
 ![Kein Port gefunden](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Kein_Port_Gefunden.png)
 ##### GUI wenn Ports gefunden wurden
 ![Port gefunden](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Port_Gefunden.png)
-##### GUI wenn Verbinfung mit Port besteht
+##### GUI wenn Verbindung mit Port besteht
 ![Port verbunden](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Port_Verbunden.png)
