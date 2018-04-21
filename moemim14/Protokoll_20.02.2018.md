@@ -173,6 +173,8 @@ Mit der Methode `serialPort.closePort();` wird der aktuell geöffnete Port gesch
   }                                           
 ```
 #### Ende der Einheit
+Zur Überprüfung unseres Quelltextes haben wir zum Schluss versucht uns mit unseren Arduino zu verbinden. Die Ergebnisse sind unterhalb zu sehen.
+
 ##### GUI wenn keine Ports gefunden wurden
 ![Kein Port gefunden](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Kein_Port_Gefunden.png)
 ##### GUI wenn Ports gefunden wurden
