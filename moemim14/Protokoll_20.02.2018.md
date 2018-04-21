@@ -25,7 +25,7 @@ Zu Beginn wurden zwei Variablen erstellt. Das Feld aus Strings mit dem Variablen
   private jssc.SerialPort serialPort;
 ```
 #### Konstruktor
-Im Konstruktur rufen wir die Funktion `refresh();` auf, dies hat den einfachen Grund, dass beim Start des Programmes bereits verfügbare Ports angezeigt werden. Da wir zum derzeitigen Zeitpunkt noch keine Messung durchführen können, setzten wir den Text von  `jLabel` mit dem Befehl auf `? °C`. Außerdem wird mit dem Befehl `setLocationRelativeTo(null);` das GUI Fenster in der Mitte des Bildschirms angezeigt.
+Im Konstruktur rufen wir die Funktion `refresh();` auf, dies hat den einfachen Grund, dass beim Start des Programmes bereits verfügbare Ports angezeigt werden. Da wir zum derzeitigen Zeitpunkt noch keine Messung durchführen können, setzten wir den Text von  `jLabel` mit dem Befehl `jlaTemperatur.setText("? °C");` auf `? °C`. Außerdem wird mit dem Befehl `setLocationRelativeTo(null);` das GUI Fenster in der Mitte des Bildschirms angezeigt.
 ```java
 public SureModbusGui ()
   {
@@ -35,3 +35,19 @@ public SureModbusGui ()
     refresh();
   }
 ```
+#### Die Methode showThrowable
+Diese Methode dient zur Fehlerausgabe. Wenn ein Fehler auftritt, wird der Fehler in einem Pop-Up Fenster ausgegeben. Die Fehlernachricht `msg` wird bei Fehlerauftritt im Fenster ausgegeben.
+
+```java
+private void showThrowable (String msg, Throwable th)
+  {
+    th.printStackTrace(System.err);
+    JOptionPane.showMessageDialog(
+      this,
+      msg,
+      "Fehler aufgetreten", 
+      JOptionPane.ERROR_MESSAGE
+    );
+  }
+  ```
+  
