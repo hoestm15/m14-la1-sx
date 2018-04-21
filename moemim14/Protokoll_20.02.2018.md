@@ -133,3 +133,26 @@ private void connect()
 
 ##### Warum wird bei catch ein Throwable gefangen?
 Wenn mann in Java mit Schnittstellen arbeitet, werden JNI-Fehler geworfen. Diese Art von Fehler wird von der Klasse `Error` und nicht von der Klasse `Exception` abgeleitet. Deswegen wird die Elternklasse (`Throwable`) beider gefangen, um jegliche Art von Fehler fangen zu können. Genauere Information kann man in der [Javadoc](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html) nachlesen.
+
+#### Die Methode disconnect
+Mit der Methode `serialPort.closePort();` wird der aktuell geöffnete Port geschlossen. Hier wird `finally` benötigt, um sicherzustellen, dass der aktuelle Port auch bei Fehlerauftritt auf `null` gesetzt wird.
+
+```java
+  private void disconnect()
+  {
+    try
+    {
+      serialPort.closePort();
+    }
+    catch (Exception e)
+    {
+      showThrowable("Fehler beim Schließen der Schnittstelle", e);
+    }
+    finally
+    {
+      serialPort = null;
+      updateSwingControlles();
+    }
+  }
+```
+
