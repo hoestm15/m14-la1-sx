@@ -155,4 +155,24 @@ Mit der Methode `serialPort.closePort();` wird der aktuell geöffnete Port gesch
     }
   }
 ```
+#### Die ActionPerformed Methoden
+```java
+  private void jbutConnectActionPerformed(java.awt.event.ActionEvent evt)                                            
+  {                                                
+    connect();
+  }                                           
 
+  private void jbutDisconnectActionPerformed(java.awt.event.ActionEvent evt)                                               
+  {                                                   
+    disconnect();
+  }                                              
+
+  private void jbutRefreshActionPerformed(java.awt.event.ActionEvent evt)                                            
+  {                                                
+    refresh();
+  }                                           
+```
+#### Ende der Einheit
+##### GUI wenn keine Ports gefunden wurden
+##### GUI wenn Ports gefunden wurden
+##### GUI wenn Verbinfung mit Port besteht
