@@ -97,3 +97,17 @@ private void showThrowable (String msg, Throwable th)
       jbutRefresh.setEnabled(true);
   }
   ```
+
+#### Die Methode refresh
+Zu erst werden in die zuvor angelegte Variable `ports` die Namen der gefundenen Ports gespeichert. Anschließend werden die Namen der gefunden Ports mit `jcbSerialDevice.setModel(model);` in der GUI angezeigt.
+
+```java
+  private void refresh()
+  {
+    ports = jssc.SerialPortList.getPortNames(); //Vorhande Ports speichern
+    DefaultComboBoxModel<String> model = 
+            new DefaultComboBoxModel<>(ports); 
+    jcbSerialDevice.setModel(model); //Vorhandene Ports implementieren
+    updateSwingControlles(); //Buttons aktualisieren
+  }
+  ```
