@@ -50,4 +50,22 @@ private void showThrowable (String msg, Throwable th)
     );
   }
   ```
-  
+  #### Die Methode updateSwingControlles
+  ##### Buttons beim Start des Programmes
+  * Der Button `Aktualisieren` soll eingeblendet sein.
+  * Der Button `Verbinden` soll ausgeblendet sein
+  * Der Button `Trennen` soll ausgeblendet sein
+  * Die ComboBox soll ausgeblendet sein
+  * Die Combobox soll ausgeblendet werden.
+  * Der Button `Einzelmessung` soll ausgeblendet werden.
+  * Der Button `Laufend messen` soll ausgeblendet werden.
+  * Der Button `Stop` soll ausgeblendet werden.
+
+  ##### Wenn ein Port geöffnet wurde
+  * Der Button `Aktualisieren` soll ausgeblendet werden.
+  * Der Button `Trennen` soll eingeblendet werden.
+  * Der Button `Verbinden` soll ausgeblendet werden.
+
+  ##### Wenn Ports gefunden wurden
+  * Die Combobox soll eingeblendet werden
+  * Der Button `Verbinden` soll eingeblendet werden.
