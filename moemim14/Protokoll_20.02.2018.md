@@ -174,5 +174,8 @@ Mit der Methode `serialPort.closePort();` wird der aktuell geöffnete Port gesch
 ```
 #### Ende der Einheit
 ##### GUI wenn keine Ports gefunden wurden
+![Kein Port gefunden](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Kein_Port_Gefunden.png)
 ##### GUI wenn Ports gefunden wurden
+![Port gefunden](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Port_Gefunden.png)
 ##### GUI wenn Verbinfung mit Port besteht
+![Port verbunden](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Port_Verbunden.png)
