@@ -14,4 +14,4 @@ In der heutigen Stunde wandten wir das Wissen der letzten Stunde über den Modbu
 
 ### GUI Vorlage
 Zu Beginn mussten wir uns die Vorlage der GUI vom Server in Arnfels downloaden.
-
+![GUI-Vorlage](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/GUI-Temperaturmessung.png)
