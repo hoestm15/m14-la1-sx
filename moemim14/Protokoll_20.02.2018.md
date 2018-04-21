@@ -99,7 +99,7 @@ private void showThrowable (String msg, Throwable th)
   ```
 
 #### Die Methode refresh
-Zu erst werden in die zuvor angelegte Variable `ports` die Namen der gefundenen Ports gespeichert. Anschließend werden die Namen der gefunden Ports mit `jcbSerialDevice.setModel(model);` in der GUI angezeigt.
+Zu erst werden in die zuvor angelegte Variable `ports` die Namen der gefundenen Ports gespeichert. Anschließend werden die Namen der gefunden Ports mit `jcbSerialDevice.setModel(model);` in der GUI angezeigt. Abschließend werden die Buttons aktualisiert.
 
 ```java
   private void refresh()
@@ -111,3 +111,25 @@ Zu erst werden in die zuvor angelegte Variable `ports` die Namen der gefundenen 
     updateSwingControlles(); //Buttons aktualisieren
   }
   ```
+#### Methode connect
+Zuerst wird der Variable `port` der aktuell gewählte Port aus der ComboBox übergeben. Mit der Methode `.openPort();` wird der Port anschließend geöffnet. 
+
+```java
+private void connect()
+  {
+    try
+    {
+      String port = (String) jcbSerialDevice.getSelectedItem();
+      serialPort = new jssc.SerialPort(port);
+      serialPort.openPort();
+      updateSwingControlles();
+    }
+    catch (Throwable th)
+    {
+      showThrowable("Serielle Schnittstelle kann nicht geöffnet werden", th);
+    }    
+  }
+  ```
+
+##### Warum wird bei catch ein Throwable gefangen?
+Wenn mann in Java mit Schnittstellen arbeitet, werden JNI-Fehler geworfen. Diese Art von Fehler wird von der Klasse `Error` und nicht von der Klasse `Exception` abgeleitet. Deswegen wird die Elternklasse (`Throwable`) beider gefangen, um jegliche Art von Fehler fangen zu können. Genauere Information kann man in der [Javadoc](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html) nachlesen.
