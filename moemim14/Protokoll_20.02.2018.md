@@ -24,3 +24,14 @@ Zu Beginn wurden zwei Variablen erstellt. Das Feld aus Strings mit dem Variablen
   private String [] ports;
   private jssc.SerialPort serialPort;
 ```
+#### Konstruktor
+Im Konstruktur rufen wir die Funktion `refresh();` auf, dies hat den einfachen Grund, dass beim Start des Programmes bereits verfügbare Ports angezeigt werden. Da wir zum derzeitigen Zeitpunkt noch keine Messung durchführen können, setzten wir den Text von  `jLabel` mit dem Befehl auf `? °C`. Außerdem wird mit dem Befehl `setLocationRelativeTo(null);` das GUI Fenster in der Mitte des Bildschirms angezeigt.
+```java
+public SureModbusGui ()
+  {
+    initComponents();
+    setLocationRelativeTo(null);
+    jlaTemperatur.setText("? °C");
+    refresh();
+  }
+```
