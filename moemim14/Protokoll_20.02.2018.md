@@ -55,7 +55,6 @@ private void showThrowable (String msg, Throwable th)
   * Der Button `Aktualisieren` soll eingeblendet sein.
   * Der Button `Verbinden` soll ausgeblendet sein
   * Der Button `Trennen` soll ausgeblendet sein
-  * Die ComboBox soll ausgeblendet sein
   * Die Combobox soll ausgeblendet werden.
   * Der Button `Einzelmessung` soll ausgeblendet werden.
   * Der Button `Laufend messen` soll ausgeblendet werden.
@@ -69,3 +68,32 @@ private void showThrowable (String msg, Throwable th)
   ##### Wenn Ports gefunden wurden
   * Die Combobox soll eingeblendet werden
   * Der Button `Verbinden` soll eingeblendet werden.
+
+  ```java
+  public void updateSwingControlles()
+  {
+    jcbSerialDevice.setEnabled(false);
+    jbutConnect.setEnabled(false);
+    jbutContinousMeasurement.setEnabled(false);
+    jbutDisconnect.setEnabled(false);
+    jbutRefresh.setEnabled(false);
+    jbutSingleMeasurement.setEnabled(false);
+    jbutStopMeasurement.setEnabled(false);
+    
+    if(serialPort != null && serialPort.isOpened()) //Es wurde eine Verbindung mit einem Port erstellt -> Trennen möglich
+    {
+      jbutDisconnect.setEnabled(true);
+      return;
+    }
+      
+    
+    if(ports != null && ports.length > 0) //Verbinden mit einem Port möglich
+    {
+      jcbSerialDevice.setEnabled(true);
+      jbutConnect.setEnabled(true);
+      jbutRefresh.setEnabled(true);
+    }
+    else if(ports != null && ports.length == 0)
+      jbutRefresh.setEnabled(true);
+  }
+  ```
