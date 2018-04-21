@@ -15,3 +15,12 @@ In der heutigen Stunde wandten wir das Wissen der letzten Stunde über den Modbu
 ### GUI Vorlage
 Zu Beginn mussten wir uns die Vorlage der GUI vom Server in Arnfels downloaden.
 ![GUI-Vorlage](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/GUI-Temperaturmessung.png)
+
+### Der Quellcode
+
+#### Verwendete Variablen
+Zu Beginn wurden zwei Variablen erstellt. Das Feld aus Strings mit dem Variablennamen `ports` dient dazu, alle Namen der gefundenen Ports zu speichern. Mit der Variable `serialPort` können wir anschließend abfragen, ob der Port geöffnet ist.
+```java
+  private String [] ports;
+  private jssc.SerialPort serialPort;
+```
