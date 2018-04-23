@@ -9,7 +9,7 @@ Gruppe:   2
 Anwesend: Köhler Marcel, Mandl Gerhard, Martinak Moritz, Mörth Michael, Muri Lorenz, Nabernik Mario, Nebel Florian, Platzer Andreas  
 Abwesend: ---
 
-Zu Beginn der Einheit luden wir den Modbusslave vom [Server](https://www.htl-mechatronik.at/svn/modbus/) herunter und führten die *sure.elf.hex*-Datei mit dem EasyProgrammer aus. Das Template zur grafische Oberfläche für die Temperaturanzeige konnten vom Server über einen am LMS liegenden Link herunterladen und mit NetBeans öffnen.
+Zu Beginn der Einheit luden wir den Modbusslave vom [Server](https://www.htl-mechatronik.at/svn/modbus/) herunter und führten die *sure.elf.hex*-Datei mit dem EasyProgrammer aus. Das Template zur grafische Oberfläche für die Temperaturanzeige konnte vom Server über einen am LMS liegenden Link herunterladen und mit NetBeans geöffnet werden.
 ![Display](https://github.com/HTLMechatronics/m14-la1-sx/blob/nebflm14/nebflm14/Oberfläche.JPG)
 
 ## Java
