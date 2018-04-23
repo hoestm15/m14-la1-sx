@@ -73,14 +73,14 @@ private void showThrowable (String msg, Throwable th)
     jbutSingleMeasurement.setEnabled(false);
     jbutStopMeasurement.setEnabled(false);
     
-    if(serialPort != null && serialPort.isOpened()) //Es wurde eine Verbindung mit einem Port erstellt -> Trennen möglich
+    if(serialPort != null && serialPort.isOpened()) //Mit Port verbunden -> trennen jetzt möglich
     {
       jbutDisconnect.setEnabled(true);
       return;
     }
       
     
-    if(ports != null && ports.length > 0) //Verbinden mit einem Port möglich
+    if(ports != null && ports.length > 0) //Verbinden mit Port möglich
     {
       jcbSerialDevice.setEnabled(true);
       jbutConnect.setEnabled(true);
@@ -98,10 +98,10 @@ Die Namen der gefundenen Ports werden zuerst in die Variable `ports` gespeichert
 ```java
   private void refresh()
   {
-    ports = jssc.SerialPortList.getPortNames(); //Vorhande Ports speichern
+    ports = jssc.SerialPortList.getPortNames(); //Ports speichern
     DefaultComboBoxModel<String> model = 
             new DefaultComboBoxModel<>(ports); 
-    jcbSerialDevice.setModel(model); //Vorhandene Ports implementieren
+    jcbSerialDevice.setModel(model); //Ports implementieren
     updateSwingControlles(); //Buttons aktualisieren
   }
   ```  
