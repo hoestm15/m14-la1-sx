@@ -23,7 +23,7 @@ Unter NetBeans konnten wir nach dem Einbinden die Bibliotheken der unterschiedli
 ## Installation
 Um Nutzern eine ausführbare Datei zur Verfügung stellen zu können, haben wir in unser momentan leeres NetBeans-Projekt, in welchem nur die handler-Methoden enthalten waren, über die Projekt-Properties das Package */usr/java/packages/lib/jssc.jar* eingebunden. Nach dem durchführen eines "Clean&Build" wurde die Datei jssc-2.8.0.jar dem Ordner angefügt. Um die Datei tatsächlich in SureModbusTempG2.jar aufzunehmen bearbeiteten wir die build.xml-Datei.
 
-## Temperaturmessung
+## Programm
 Um Logikfehler im Programm zu vermeiden steuern wir die Aktivierung bzw. Deaktivierung aller Buttons in einer zentralen Methode:
 ```java
 public void updateSwingControls () {
@@ -74,7 +74,7 @@ Als nächstes wurde die lokale Variable String [] ports durch eine globale Varia
 private String [] ports;
 private jssc.SerialPort serialPort;
 ```
-Als nächstes werden die Methoden zum Verbinden und Trennen der Verbindung, welche beim betätigen der jeweiligen Buttons aufgerufen werden, realisiert.
+Danach werden die Methoden zum Verbinden und Trennen der Verbindung, welche beim betätigen der jeweiligen Buttons aufgerufen werden, realisiert.
 ```java
 private void connect () {
     try{
@@ -113,6 +113,6 @@ private showThrowable (String msg, Throwable th) {
 }
 ```
 
-## Exception
+## Fehlerbehandlung
 ![Ableitungsbaum](https://github.com/HTLMechatronics/m14-la1-sx/blob/nebflm14/nebflm14/Exception.jpg)  
-Die Klasse [Exception](https://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html) wird von der Klasse [Throwable](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html) abgeleitet, welche von der Klasse [Object](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html) abgeleitet wird. Eine weiter Ableitung von Throwable ist der [Error](https://docs.oracle.com/javase/7/docs/api/java/lang/Error.html). Ein solcher wird unter anderem bei schwerwiegenden Fehlern in der JVM erzeugt, nach welchen das Programm beendet wird. JSSC wirft Errors, welche weitergeworfen werden würden wenn nur Exeptions abgefangen werden würden und das Programm würde ohne Fehlermeldung auf GUI-Ebene schließen. Als Lösung bieten sich zwei Möglichkeiten an. Entweder es werden alle Throwables abgefangen, oder es wird ein Multicatch realisiert. In beiden Fällen könnten sowohl Errors, als auch Exceptions behandelt werden.
+Die Klasse [Exception](https://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html) wird von der Klasse [Throwable](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html) abgeleitet, welche von der Klasse [Object](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html) abgeleitet wird. Eine weiter Ableitung von Throwable ist der [Error](https://docs.oracle.com/javase/7/docs/api/java/lang/Error.html). Ein solcher wird unter anderem bei schwerwiegenden Fehlern in der JVM erzeugt, nach welchen das Programm beendet wird. JSSC wirft Errors, welche weitergeworfen werden würden, wenn nur Exeptions abgefangen werden würden. Dann würde das Programm ohne Fehlermeldung auf GUI-Ebene schließen. Als Lösung bieten sich zwei Möglichkeiten an. Entweder es werden alle Throwables abgefangen, oder es wird ein Multicatch realisiert. In beiden Fällen könnten sowohl Errors, als auch Exceptions behandelt werden.
