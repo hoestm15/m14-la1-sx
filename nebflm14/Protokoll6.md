@@ -1,4 +1,4 @@
-# Protokoll der 6. Einheit (27.02.2018)
+# Protokoll der 6. Einheit (27.02.2018) 
 
 ## Thema: 
 
