@@ -84,3 +84,78 @@ private void showThrowable (String msg, Throwable th)
       jbutRefresh.setEnabled(true);
   }
   ```
+
+### refresh  
+
+```java
+  private void refresh()
+  {
+    ports = jssc.SerialPortList.getPortNames(); //Vorhande Ports speichern
+    DefaultComboBoxModel<String> model = 
+            new DefaultComboBoxModel<>(ports); 
+    jcbSerialDevice.setModel(model); //Vorhandene Ports implementieren
+    updateSwingControlles(); //Buttons aktualisieren
+  }
+  ```  
+  
+  ### connect  
+  
+  ```java
+private void connect()
+  {
+    try
+    {
+      String port = (String) jcbSerialDevice.getSelectedItem();
+      serialPort = new jssc.SerialPort(port);
+      serialPort.openPort();
+      updateSwingControlles();
+    }
+    catch (Throwable th)
+    {
+      showThrowable("Serielle Schnittstelle kann nicht geöffnet werden", th);
+    }    
+  }
+  ```  
+  
+  ### disconnect  
+  
+  ```java
+  private void disconnect()
+  {
+    try
+    {
+      serialPort.closePort();
+    }
+    catch (Exception e)
+    {
+      showThrowable("Fehler beim Schließen der Schnittstelle", e);
+    }
+    finally
+    {
+      serialPort = null;
+      updateSwingControlles();
+    }
+  }
+```  
+
+### ActionPerfomed  
+
+```java
+  private void jbutConnectActionPerformed(java.awt.event.ActionEvent evt)                                            
+  {                                                
+    connect();
+  }                                           
+
+  private void jbutDisconnectActionPerformed(java.awt.event.ActionEvent evt)                                               
+  {                                                   
+    disconnect();
+  }                                              
+
+  private void jbutRefreshActionPerformed(java.awt.event.ActionEvent evt)                                            
+  {                                                
+    refresh();
+  }                                           
+```  
+
+### Testen des Programms  
+
