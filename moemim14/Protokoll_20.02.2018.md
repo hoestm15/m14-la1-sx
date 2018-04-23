@@ -1,7 +1,5 @@
 # Protokoll 6 20.02.2018
 
-## Thema: Atmel Studio
-
 Name: Michael Mörth  
 Klasse: 4AHME  
 Gruppe: 2  
