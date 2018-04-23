@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="Hardwarezugriff.svg">
+  <defs
+     id="defs2">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker4901"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path4899"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#0000ff;stroke-width:1pt;stroke-opacity:1;fill:#0000ff;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4577"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4559"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path4562"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="274.4579"
+     inkscape:cy="767.60509"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       id="rect3699"
+       width="85.076721"
+       height="60.151592"
+       x="47.029037"
+       y="52.042431"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.20659301;stroke-opacity:1" />
+    <rect
+       id="rect3699-9"
+       width="69.655411"
+       height="47.033966"
+       x="58.87566"
+       y="61.541214"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.16529888;stroke-opacity:1" />
+    <rect
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.12564647;stroke-opacity:1"
+       y="70.437134"
+       x="69.970535"
+       height="34.587505"
+       width="54.727791"
+       id="rect4521" />
+    <rect
+       id="rect4523"
+       width="41.001266"
+       height="22.714979"
+       x="80.041031"
+       y="78.511559"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.08813358;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="50.45982"
+       y="59.252972"
+       id="text4527"><tspan
+         sodipodi:role="line"
+         id="tspan4525"
+         x="50.45982"
+         y="59.252972"
+         style="font-size:7.05555534px;stroke-width:0.26458332">Hardware</tspan></text>
+    <text
+       id="text4531"
+       y="68.702377"
+       x="61.610119"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-size:7.05555534px;stroke-width:0.26458332"
+         y="68.702377"
+         x="61.610119"
+         id="tspan4529"
+         sodipodi:role="line">Betriebssystem</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="72.382439"
+       y="77.017853"
+       id="text4535"><tspan
+         sodipodi:role="line"
+         id="tspan4533"
+         x="72.382439"
+         y="77.017853"
+         style="font-size:7.05555534px;stroke-width:0.26458332">JVM</tspan></text>
+    <text
+       id="text4539"
+       y="85.522316"
+       x="82.020828"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-size:7.05555534px;stroke-width:0.26458332"
+         y="85.522316"
+         x="82.020828"
+         id="tspan4537"
+         sodipodi:role="line">Programm</tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:0;stroke:#ff0000;stroke-width:0.19027619;stroke-opacity:1"
+       id="rect4541"
+       width="17.461212"
+       height="7.299407"
+       x="47.020882"
+       y="77.358673" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="48.380951"
+       y="82.876488"
+       id="text4545"><tspan
+         sodipodi:role="line"
+         id="tspan4543"
+         x="48.380951"
+         y="82.876488"
+         style="font-size:5.64444447px;stroke-width:0.26458332;fill:#ff0000;fill-opacity:1">UART</tspan></text>
+    <rect
+       y="87.021889"
+       x="62.623581"
+       height="8.3552647"
+       width="17.447992"
+       id="rect4547"
+       style="fill:#000000;fill-opacity:0;stroke:#00ff00;stroke-width:0.2034962;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       x="67.686005"
+       y="92.67244"
+       id="text4551"><tspan
+         sodipodi:role="line"
+         id="tspan4549"
+         x="67.686005"
+         y="92.67244"
+         style="stroke-width:0.26458332;fill:#00ff00;fill-opacity:1;">JNI</tspan></text>
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#marker4901)"
+       d="M 37.217281,81.31349 H 46.93921"
+       id="path4557"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       x="23.340031"
+       y="78.577011"
+       id="text4977"><tspan
+         sodipodi:role="line"
+         id="tspan4975"
+         x="23.340031"
+         y="78.577011"
+         style="stroke-width:0.26458332;fill:#0000ff;fill-opacity:1;">Modbus</tspan><tspan
+         sodipodi:role="line"
+         x="23.340031"
+         y="85.632568"
+         style="stroke-width:0.26458332;fill:#0000ff;fill-opacity:1;"
+         id="tspan4979" /></text>
+  </g>
+</svg>
