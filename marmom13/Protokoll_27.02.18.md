@@ -10,6 +10,17 @@ Gruppe: 2
 Übungsdatum: 27.02.2018  
 Abwesend: 
 
-# Aufgabenstellung  
+# Temperatursensor  
+
+## Aufgabenstellung  
 
 Wir mussten mit Hilfe eines SureBoards einen Intelligenten Temperatursensor programieren der die Daten via einen Feldbus auf den Computer überträgt. Diese sollten anschließend verarbeitet werden und in einer vorgegebenen Java-Swing GUI visualisiert werden.  
+
+## GUI  
+Zuerst galt es die vorgefertigte GUI vom Server zu downloaden.  
+
+## Quellcode  
+
+### Der gesamte Code: 
+
+
