@@ -19,7 +19,7 @@ Wir mussten mit Hilfe eines SureBoards einen Intelligenten Temperatursensor prog
 ## GUI  
 Zuerst galt es die vorgefertigte GUI vom Server zu downloaden.  
 
-https://github.com/HTLMechatronics/m14-la1-sx/blob/marmom13/marmom13/GUI.png  
+![GUI](https://github.com/HTLMechatronics/m14-la1-sx/blob/marmom13/marmom13/GUI.png)  
 
 ## Quellcode  
 
