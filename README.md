@@ -5,4 +5,4 @@
 * Gruppe 2: [3. Einheit, 14.11.2017](https://github.com/HTLMechatronics/m14-la1-sx/blob/mangem13/mangem13/3.Protokoll%2014.11.2017.md)
 * Gruppe 2: [4. Einheit, 06.02.2018](https://github.com/HTLMechatronics/m14-la1-sx/blob/mangem13/mangem13/4.Protokoll_6.2.2018.md)
 * Gruppe 2: [5. Einheit, 13.02.2018](https://github.com/HTLMechatronics/m14-la1-sx/blob/mangem13/mangem13/5.Protokoll_13.02.2018.md)
-* Gruppe 2: [5. Einheit, 13.02.2018](https://github.com/HTLMechatronics/m14-la1-sx/blob/mangem13/mangem13/6.Protokoll_20.02.2018.md)
+* Gruppe 2: [6. Einheit, 20.02.2018](https://github.com/HTLMechatronics/m14-la1-sx/blob/mangem13/mangem13/6.Protokoll_20.02.2018.md)
