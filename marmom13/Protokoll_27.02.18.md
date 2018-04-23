@@ -24,12 +24,16 @@ Zuerst galt es die vorgefertigte GUI vom Server zu downloaden.
 ## Quellcode  
 
 ### Variablen  
+
+In `ports` werden die Namen der gefundenen Ports gespeichert, über `serialPort` wird abgefragt of der Port geöffnet ist.
+
 ```java
   private String [] ports;
   private jssc.SerialPort serialPort;
 ```  
 
 ### Konstruktor  
+
 
 ```java
 public SureModbusGui ()
@@ -89,6 +93,8 @@ private void showThrowable (String msg, Throwable th)
 
 ### refresh  
 
+Die Namen der gefundenen Ports werden zuerst in die Variable `ports` gespeichert. Sie werden dann mit `jcbSerialDevice.setModel(model);` in der GUI angezeigt. 
+
 ```java
   private void refresh()
   {
@@ -101,6 +107,8 @@ private void showThrowable (String msg, Throwable th)
   ```  
   
   ### connect  
+  
+  Der ausgewählte Port wird mit `serialPort.openPort();` geöffnet.  
   
   ```java
 private void connect()
@@ -120,6 +128,9 @@ private void connect()
   ```  
   
   ### disconnect  
+  
+  Der aktuelle Port wird mit `serialPort.closePort();` geschlossen.  
+  
   
   ```java
   private void disconnect()
@@ -158,6 +169,4 @@ private void connect()
     refresh();
   }                                           
 ```  
-
-### Testen des Programms  
 
