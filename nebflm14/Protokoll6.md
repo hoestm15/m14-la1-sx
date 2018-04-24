@@ -13,7 +13,7 @@ Zu Beginn der Einheit luden wir den Modbusslave vom [Server](https://www.htl-mec
 ![Display](https://github.com/HTLMechatronics/m14-la1-sx/blob/nebflm14/nebflm14/Oberfläche.JPG)
 
 ## Java
-![Hardwarezugriff](https://github.com/HTLMechatronics/m14-la1-sx/blob/nebflm14/nebflm14/Hardwarezugriff.svg)
+![Hardwarezugriff](https://github.com/HTLMechatronics/m14-la1-sx/blob/nebflm14/nebflm14/Hardwarezugriff.svg)  
 Grundsätzlich regelt das Betriebssystem z.B. Windows den Zugriff auf serielle Schnittstellen wie z.B. Uart oder USB. Ein C-Programm würde dierekt auf das Betribssystem zugreifen, welches dann mit der Hardware kommuniziert.
 Unter Java wird zur Kommunikation zwischen Programm und Hardware eine virtuelle Maschine, die sogenannte **Java Virtuelle Maschine (JVM)** zwischengeschaltet.  
 Die Idee: Java wendet sich an die virtuelle Machine, diese an das Betriebssystem, und dieses an die Hardware. Das Problem liegt darin, dass die JVM keine seriellen Schnittstellen unterstützt. Früher konnte man sich auf Maschinen des Herstellers Sun mit der Klasse **Java.comm** behelfen. Auch wenn man diese Software noch heute nachinstallieren könnte, wird diese nur mehr geringfügig eingesetzt, da sie nur auf einem System lauffähig wäre und dadurch die Multiplattformfähigkeit, eine der essentiellen Eigenschaften Javas verloren gehen würden.  
