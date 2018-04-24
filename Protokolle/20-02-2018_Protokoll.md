@@ -143,7 +143,7 @@ Anschließend wird mit dem Befehl `serialPort.openPort();` der gewählte Port ge
 
 #### Methode: disconnect
 
-´´´java
+```java
   private void disconnect()
   {
     try
@@ -160,7 +160,7 @@ Anschließend wird mit dem Befehl `serialPort.openPort();` der gewählte Port ge
       updateSwingControlles();
     }
   }
-´´´
+```
 In dieser methode schließen wir den aktuellen Port. Da es aber auch hier zu Exceptions kommen kann (kein Port angeschlossen) müssen wir erneut ein Try-Catch benutzen aber auch dazu noch ein finally damit der aktuelle Port bei auftreten eines Fehlers auf `null` gesetzt wird.
 
 #### Methoden: ActionPerformed
