@@ -15,6 +15,8 @@ Aufgabe ist es, einen Temperatursensor mit Hilfe des SureBoards zu bauen, welche
 Die Daten sollen über eine Java Swing, welche schon ein vorgefertigtes Model war, ausgegeben werden.
 Wichtig bei der ganzen Aufgabe war es, unser Wissen über modbus zu nutzen, welches wir in der vorherigen Stunde angesammelt haben.
 
+![Gui](https://github.com/HTLMechatronics/m14-la1-sx/blob/nabmam14/Protokoll/GUI-Temperaturmessung.png)
+
 ## Arbeitsschritte
 * Download der GUI Vorlage von unserem Server (Arnfels)
 * Schreiben des Quellcodes
@@ -98,7 +100,7 @@ private void showThrowable (String msg, Throwable th)
   _jcbSerialDevice.setModel(model)_ listet die Portnamen.
   _updateSwingControlles_ aktualisiert wieder die Buttons.
   
-    ```java
+  ```java
 private void connect()
   {
     try
@@ -112,10 +114,15 @@ private void connect()
     {
       showThrowable("Serielle Schnittstelle kann nicht geöffnet werden", th);
     }    
-  } 
+  }
   ```
   
  * In dieser Methode stellen wir Verbindung mit dem gewünschten Port her.
+ 
+ siehe GUI:
+ 
+ ![Gui](https://github.com/HTLMechatronics/m14-la1-sx/blob/nabmam14/Protokoll/Port_Verbunden.png)
+
  
  ```java
   private void disconnect()
