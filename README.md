@@ -5,3 +5,4 @@
 * Gruppe 2: 3. Einheit, 14.11.2017  [Drittes Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/koemam13/Protokolle/14-11-17_Protokoll.md)
 * Gruppe 2: 4. Einheit, 6.2.2018
 * Gruppe 2: 5. Einheit, 13.2.2018   Krankheitsbedingte Abwesenheit 
+* Gruppe 2: 6. Einheit, 20.2.2018   [Sechstes Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/koemam13/Protokolle/20-02-2018_Protokoll.md) 
