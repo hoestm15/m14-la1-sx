@@ -17,6 +17,7 @@ In der letzten Einheit beschäftigten wir uns mit den Modbus, welches in dieser 
 
 Diese fertige GUI war unsere Vorlage für die visualisierung,die auf dem Arnfelsserver zum Download bereit stand.  
 
+  ![GUI](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacrom14/sacrom14/Temperatur_GUI.PNG)
   ## Die verwendeten Methoden     
 
 
