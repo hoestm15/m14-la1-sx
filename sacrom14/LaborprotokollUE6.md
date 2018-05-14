@@ -18,5 +18,28 @@ In der letzten Einheit beschäftigten wir uns mit den Modbus, welches in dieser 
 Diese fertige GUI war unsere Vorlage für die visualisierung,die auf dem Arnfelsserver zum Download bereit stand.  
 
 ##Die verwendeten Methoden   
+
+
+###showThrowable()  
+Diese Methode sit für die Fehlerausgbe zuständig.Tritt ein Fehler auf, wird der Fehler in einem Pop-Up Fenster ausgegeben.Die Fehlermeldung 'msg' wird im Fenster ausgegeben.
+
+
+
+###refresh () 
+Zuerst werden in die zuvor angelegte Variable 'ports' die Namen der gefundenen Ports gespeichert. Dannach werden die Namen der gefunden Ports in der GUI angezeigt.  
+Abschließend werden die Buttons aktualisiert.  
+
+
+###connect()
+Zuerst wird 'port' der aktuell gewählten Port aus der Combobox übergeben und anschließend mit der Methode  '.openPort();' geöffnet.  
+
+###disconnect()  
+Der aktuelle Port wird mit 'serialPort.closePort();' geschlossen.  
+Hier benötigen wir 'finally' um sicherzugehen ob der aktuelle Port auch bei Fehlerauftritt auf null gesetzt wird.  
+
+
 ### updateSwingControls()  
+
+
+
 
