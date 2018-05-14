@@ -13,3 +13,6 @@
 
 * ## 5. Einheit: 13.03.2018  
   [5. Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacmam14/sacmam14/Protokoll5.md)  
+  
+* ## 6. Einheit: 20.03.2018  
+  krank
