@@ -170,10 +170,11 @@ Diese Methode ist eine Worker Methode die dazu dient die Temperaturdaten vom Sur
 ## Fehlerbehandlung in Java
 ![](https://camo.githubusercontent.com/44de9326ae31c832041c5e7a88572f3f111bdda4/68747470733a2f2f7170682e65632e71756f726163646e2e6e65742f6d61696e2d71696d672d35656364646366316536373632376563333733306465343032303034316332322d63)
 ### Exception
-Eine Exception ist ein Fehler im Programm, durch eine Exception kann (muss aber nicht) das Programm abstürzen, die JVm aber nicht.
+Eine Exception ist ein Fehler im Programm, durch eine Exception kann (muss aber nicht) das Programm abstürzen, die JVM aber nicht. Sie können behandelt werden. Es gibt sowohl *checked* als auch *unchecked* Exceptions. 
 ### Error
-Ein Error ist ein schwerwiegender Fehler in der JVM, ein Error kann zum Absturz der gesamten JVM führen. 
+Ein Error ist ein schwerwiegender Fehler in der JVM, ein Error kann zum Absturz der gesamten JVM führen. Ein Error ist immer unchecked und kann auch nicht behnadelt werden.
 ### checked - unchecked
 *checked* bedeutet das diese Exception gefangen werden muss, eine *unchecked Exception* muss hingegen nicht gefangen werden.
+
 
   
