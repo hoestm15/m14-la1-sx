@@ -44,7 +44,7 @@ Hier benötigen wir `finally` um sicherzugehen ob der aktuelle Port auch bei Feh
   * Der Button `Aktualisieren` soll eingeblendet sein.
   * Der Button `Verbinden` soll ausgeblendet sein.
   * Der Button `Trennen` soll ausgeblendet sein.  
-    * Der Button `Stop` soll ausgeblendet werden.  
+  * Der Button `Stop` soll ausgeblendet werden.  
   * Der Button `Einzelmessung` soll ausgeblendet werden.
   * Der Button `Laufend messen` soll ausgeblendet werden.
 
