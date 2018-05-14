@@ -234,16 +234,32 @@ Schließen der Verbindung über die serielle Schnittstelle, inklusive der Behand
 
 ```  
   
-  #### U
-D
+  ### Swing Worker
+Da Messungen in der Regel etwas dauern und es nicht angenehm ist, wenn in dieser Zeit die GUI einfriert, wird der eigentliche Messvorgang (also die Kommunikation mit µC) in einen eigenen Thread ausgelagert, hier mithilfe des Swing Workers. Nachfolgend die Klasse, in welcher zu Testzwecken eine delay-Funktion und die Rückgabe eines Festwertes eingebaut wurden. 
 ```java
+public class SingleMeasurementWorker extends SwingWorker <Double, String>
+{
 
+  @Override
+  protected Double doInBackground () throws Exception
+  {
+    TimeUnit.SECONDS.sleep(3);
+    return 12.4;
+  }
+  
+}
 ```  
   
-  #### U
-D
+  ### Dokumentationskommentare
+TODO: add description
 ```java
-
+/**
+* Eine sinnbefreite Methode
+*
+public static int getFive()
+{
+  return 5;
+}
 ```  
   
 
