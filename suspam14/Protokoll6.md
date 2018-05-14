@@ -12,7 +12,7 @@ Es soll eine Java Swing GUI zur Visualisierung eines Temperatursensors erstellt 
 Das Programm für das Sureboard, dass den Temperatursensor ausliest und als Modbus-Slave agiert, wurde vom Server in Arnfels bezogen. Wir haben es mit dem EasyProgrammer auf das SureBoard gespielt.
 
 ## GUI 
-Um Zeit zu sparen haben wir die GUI-Vorlage vom Server in Arnfels bezogen. In dieser ist der visuelle Teil der GUI bereits fertig. Die einzelnen Methoden für die Datenübertragung und Verbindung mussten noch ausprogrammiert werden.
+Um Zeit zu sparen haben wir die GUI-Vorlage vom Server in Arnfels bezogen. In dieser ist der visuelle Teil der GUI bereits fertig. Die Handler-Methoden mussten noch ausprogrammiert werden.
 ![](https://github.com/suspam14/la1/blob/master/GUI-Temperaturmessung.png)
 
 ### Quelltext
