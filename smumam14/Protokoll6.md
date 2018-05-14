@@ -243,18 +243,27 @@ public class SingleMeasurementWorker extends SwingWorker <Double, String>
   @Override
   protected Double doInBackground() throws Exception
   {
-    TimeUnit.SECONDS.sleep(3);
-    return 12.4;
+    TimeUnit.SECONDS.sleep(3);  // Delay-funktion um Messzeit zu simulieren
+    return 12.4; // Rückgabe eines Festwertes, um eine Gemessene Temperatur zu simulieren
   }
   
 }
 ```  
   
   ### Dokumentationskommentare
-TODO: add description 
+Der Dokumentationskommentar wurden Java eingeführt, um beim Dokumentieren mehr Komfort zu erzielen. Dieser wird statt mit einem normalen `/*` mit einem `/**` eingeleitet und direkt vor den Methoden- bzw. Klassenkopf geschrieben. Dadurch werden zwei Effekte erreicht: 
+1. man sieht bei der Auto-Vervollständigung (`CTRL + SPACE`) auch gleich die Beschreibung der Methode und
+1. man kann sich über die Funktion `Generate Javadoc` im Netbeans-Menü `Run` eine Dokumentationsseite zu seinem Projekt automatisch erstellen lassen, die man zum Beispiel dem Programm beilegen oder auch für spätere Änderungen am Programm archivieren kann. 
 ```java
+/**
+* Dieser Kommentar soll eine Sinnbefreite Klasse kommentieren
+*/
 public class SinnloseKlasse
 {
+  /**
+  * Methode zur Rückgabe der Zahl 5
+  * @return Zahl 5.0
+  */
   protected Double getFive()
   {
     return Math.sqrt(4)*2.5;
