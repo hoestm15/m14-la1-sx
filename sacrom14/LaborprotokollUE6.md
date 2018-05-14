@@ -48,7 +48,7 @@ Hier benötigen wir `finally` um sicherzugehen ob der aktuelle Port auch bei Feh
   * Der Button `Einzelmessung` soll ausgeblendet werden.
   * Der Button `Laufend messen` soll ausgeblendet werden.
 
-    * Die Combobox soll ausgeblendet werden.
+  * Die Combobox soll ausgeblendet werden.
 
   **Wenn ein Port geöffnet wurde:**  
   * Der Button `Aktualisieren` soll ausgeblendet werden.
@@ -58,7 +58,7 @@ Hier benötigen wir `finally` um sicherzugehen ob der aktuelle Port auch bei Feh
   **Wenn Ports gefunden wurden:**
 
   * Der Button `Verbinden` soll eingeblendet werden.  
-    * Die Combobox soll eingeblendet werden.  
+  * Die Combobox soll eingeblendet werden.  
 
 
 
