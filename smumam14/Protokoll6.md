@@ -241,7 +241,7 @@ public class SingleMeasurementWorker extends SwingWorker <Double, String>
 {
 
   @Override
-  protected Double doInBackground () throws Exception
+  protected Double doInBackground() throws Exception
   {
     TimeUnit.SECONDS.sleep(3);
     return 12.4;
@@ -251,15 +251,15 @@ public class SingleMeasurementWorker extends SwingWorker <Double, String>
 ```  
   
   ### Dokumentationskommentare
-TODO: add description  
-
+TODO: add description 
 ```java
-/**
-* Eine sinnbefreite Methode
-*
-public static int getFive()
+public class SinnloseKlasse
 {
-  return 5;
+  protected Double getFive()
+  {
+    return Math.sqrt(4)*2.5;
+  }
+  
 }
 ```  
   
