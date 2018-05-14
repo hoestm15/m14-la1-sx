@@ -131,13 +131,13 @@ Damit man nicht durcheinanderkommt, wann man welches Control deaktivieren und wi
   }
 ```  
 #### showThroable
-Hier ein Schaubild zur Fehlerbehandlung in Java:  
+Ein Schaubild zur Fehlerbehandlung in Java:  
 ![err](https://lh5.googleusercontent.com/WqqNoyFEkZXfmZBBQjgIutY72_BUV6_By_BAe7Ih9u36HfelS3nTWQEYtdRUkQS32Tuhg9P9CUXo-jgvOpkO84vLm2viI4Od0BNustwONdMm7DKZnKC6kyVHyRJbsESLIPV4uBU)
 > abgerufen von [JavaMadeSoEasy.com](http://www.javamadesoeasy.com/2015/05/exception-handling-exception-hierarchy.html) am 14.05.2018  
   
   
-Hier sieht man, warum man RuntimeExceptions nicht unbedingt fangen muss: Sie gehören der Gruppe der "unchecked" - Fehler an, welche nicht zwingend behandelt werden muss.  
-Von Throwable abgeleitet werden die Klassen Exception und Error, wobei man im Normalfall nur Exceptions fangen sollte (Laufzeit-Programm-Fehler), da Errors wirklich schwerwiegende Fehler in der JVM sind, auf die man eigentlich nicht mehr reagieren kann. Deshalb ist es auch sinnentleert, derartige Errors zu fangen. An dieser Stelle muss jedoch eine Ausnahme gemacht werden, da JSSC (siehe [Protokoll der 5. Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/Protokoll5.md#java-native-interface)) Errors wirft, welche aber wie Exceptions behandelt werden müssen. 
+Hier sieht man, warum man RuntimeExceptions nicht unbedingt fangen muss: Sie gehören der Gruppe der "unchecked" - Fehler an, welche nicht zwingend behandelt werden müssen. Von Throwable abgeleitet werden die Klassen Exception und Error, wobei man im Normalfall nur Exceptions fangen sollte (Laufzeit-Programm-Fehler), da Errors wirklich schwerwiegende Fehler in der JVM sind, auf die man eigentlich nicht mehr reagieren kann. Deshalb ist es auch sinnentleert, derartige Errors zu fangen.  
+An dieser Stelle muss jedoch eine Ausnahme gemacht werden, da JSSC (siehe [Protokoll der 5. Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/Protokoll5.md#java-native-interface)) Errors wirft, welche aber wie Exceptions behandelt werden müssen. 
 ```java
   /**
    * Methode zum Ausgeben von Throwables (Errors und Exceptions)
