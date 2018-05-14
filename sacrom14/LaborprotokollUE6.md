@@ -23,7 +23,22 @@ Diese fertige GUI war unsere Vorlage für die visualisierung,die auf dem Arnfels
 
   ### showThrowable()        
 Diese Methode sit für die Fehlerausgbe zuständig.Tritt ein Fehler auf, wird der Fehler in einem Pop-Up Fenster ausgegeben.Die Fehlermeldung `msg` wird im Fenster ausgegeben.
-
+```java
+private void showThrowable (Throwable th)
+  {
+    th.printStackTrace(System.err);
+    String msg = th.getMessage(); 
+    if(msg == null || msg.isEmpty())
+    {
+      msg = th.getClass().getSimpleName();  
+    }
+    JOptionPane.showMessageDialog(
+            this, 
+            msg, 
+            "Fehler aufgetreten", 
+            JOptionPane.ERROR_MESSAGE);
+  }  
+  ```  
 
 
 ### refresh ()   
@@ -34,10 +49,72 @@ Abschließend werden die Buttons aktualisiert.
 ### connect()  
 Zuerst wird `port` der aktuell gewählten Port aus der Combobox übergeben und anschließend mit der Methode  `.openPort();` geöffnet.   
 
+```java  
+    private void connect ()
+  {
+    try
+    {
+      final String port = (String) jcbSerialDevice.getSelectedItem();
+      serialPort = new jssc.SerialPort(port);
+      if(serialPort.openPort()==false){
+        throw new Exception("openPort() returns false");
+      }
+      if(serialPort.setParams( SerialPort.BAUDRATE_57600,
+                               SerialPort.DATABITS_8,
+                               SerialPort.PARITY_NONE,
+                               SerialPort.STOPBITS_2
+                             ) == false)
+      {
+        throw new Exception("setParams returns false");
+      }
+    }
+    catch (Throwable th)  // Ausnahme durch JNI
+    {
+      showThrowable(new Exception("Kann nicht verbinden", th));
+      if(serialPort != null)
+      {
+      try{
+        serialPort.closePort();
+      }
+      catch(Throwable th2){
+        //th2.printStackTrace(System.err);
+        th.addSuppressed(th2);  // besser
+      }
+      serialPort = null;
+      }
+    }
+    finally
+    {
+      updateSwingControls();
+    }
+  }
+  ```  
 ### disconnect()    
 Der aktuelle Port wird mit `serialPort.closePort();` geschlossen.   
 Hier benötigen wir `finally` um sicherzugehen ob der aktuelle Port auch bei Fehlerauftritt auf null gesetzt wird.  
 
+ ```java  
+    private void disconnect()  
+    {
+    try  
+    {  
+      if(serialPort.closePort() == false)
+      {
+        throw new Exception("closePort() return false");
+      }
+    }
+    catch(Throwable th)  
+    {  
+      showThrowable(th);
+    }
+    finally  
+    {  
+      serialPort = null;
+      updateSwingControls();
+    }
+  }
+
+ ```   
 
 ### updateSwingControls()  
 
@@ -62,8 +139,76 @@ Hier benötigen wir `finally` um sicherzugehen ob der aktuelle Port auch bei Feh
   * Die Combobox soll eingeblendet werden.  
 
 
+```java 
+private void updateSwingControls ()
+  {
+
+    jbutConnect.setEnabled(false);
+    jbutContinousMeasurement.setEnabled(false);
+    jbutDisconnect.setEnabled(false);
+    jbutRefresh.setEnabled(false);
+    jbutSingleMeasurement.setEnabled(false);
+    jbutStopMeasurement.setEnabled(false);
+    jcbSerialDevice.setEnabled(false);
+
+    if(activeWorker != null)
+    {
+      setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+      return;
+    }
+    else
+    {
+      setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+    }
+    
+    
+    
+    jbutRefresh.setEnabled(true);
+    if (jcbSerialDevice.getModel().getSize() > 0)
+    {
+      jcbSerialDevice.setEnabled(true);
+      jbutConnect.setEnabled(true);
+    }
+
+    if(serialPort != null && serialPort.isOpened())
+    {
+      jcbSerialDevice.setEnabled(false);
+      jbutConnect.setEnabled(false);
+      jbutRefresh.setEnabled(false);
+      jbutDisconnect.setEnabled(true);
+      jbutSingleMeasurement.setEnabled(true);
+    }
+  }
+```
+
+
 ### GUISingleMeasurementWorker  
 Die Temperaturmessung wird im Hintergrund die Temperaturmessung durchgeführt. Der SingleMeasurementWorker abgeleitet von GUISingleMeasurementWorker findet jede Sekunde ein Ereignis statt. In unseren Fall ist noch keine Temeraturmessung programmiert also wird jedes Mal 24.5°C aübergeben.  
+
+ 
+ ```java  
+   private class GuiSingleMeasurementWorker extends SingleMeasurementWorker{
+
+    @Override
+    protected void done ()
+    {
+      try
+      {
+        double temp = get();
+        jlaTemperatur.setText(String.format("%.1f °C", temp));
+      }
+      catch(Exception ex)
+      {
+        showThrowable(new Exception("Einzelmessung gescheitert", ex));
+      }
+      finally
+      {
+        activeWorker = null;
+        updateSwingControls();
+      }
+    }
+```
+
 
 
 
