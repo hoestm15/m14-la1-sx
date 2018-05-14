@@ -21,42 +21,44 @@ Diese fertige GUI war unsere Vorlage für die visualisierung,die auf dem Arnfels
 
 
   ### showThrowable()        
-Diese Methode sit für die Fehlerausgbe zuständig.Tritt ein Fehler auf, wird der Fehler in einem Pop-Up Fenster ausgegeben.Die Fehlermeldung 'msg' wird im Fenster ausgegeben.
+Diese Methode sit für die Fehlerausgbe zuständig.Tritt ein Fehler auf, wird der Fehler in einem Pop-Up Fenster ausgegeben.Die Fehlermeldung `msg` wird im Fenster ausgegeben.
 
 
 
 ### refresh ()   
-Zuerst werden in die zuvor angelegte Variable 'ports' die Namen der gefundenen Ports gespeichert. Dannach werden die Namen der gefunden Ports in der GUI angezeigt.  
+Zuerst werden in die zuvor angelegte Variable `ports` die Namen der gefundenen Ports gespeichert. Dannach werden die Namen der gefunden Ports in der GUI angezeigt.  
 Abschließend werden die Buttons aktualisiert.    
 
 
 ### connect()  
-Zuerst wird 'port' der aktuell gewählten Port aus der Combobox übergeben und anschließend mit der Methode  '.openPort();' geöffnet.   
+Zuerst wird `port` der aktuell gewählten Port aus der Combobox übergeben und anschließend mit der Methode  `.openPort();` geöffnet.   
 
 ### disconnect()    
-Der aktuelle Port wird mit 'serialPort.closePort();' geschlossen.   
-Hier benötigen wir 'finally' um sicherzugehen ob der aktuelle Port auch bei Fehlerauftritt auf null gesetzt wird.  
+Der aktuelle Port wird mit `serialPort.closePort();` geschlossen.   
+Hier benötigen wir `finally` um sicherzugehen ob der aktuelle Port auch bei Fehlerauftritt auf null gesetzt wird.  
 
 
 ### updateSwingControls()  
 
-**Buttons beim Start des Programmes:**  
- Der Button   
- - 'Aktualisieren' soll eingeblendet sein.  
-            - 'Verbinden' soll ausgeblendet sein  
-            - 'Trennen' soll ausgeblendet sein  
-            - 'Einzelmessung' soll ausgeblendet werden.  
-            - 'Laufend' messen soll ausgeblendet werden.  
-            - 'Stop' soll ausgeblendet werden.  
-Die Combobox soll ausgeblendet werden.  
-**Wenn ein Port geöffnet wurde:**  
-Der Button   
--'Aktualisieren' soll ausgeblendet werden.  
-           -'Trennen' soll eingeblendet werden.  
-           -'Verbinden' soll ausgeblendet werden.  
-Wenn Ports gefunden wurden  
-Der Button 'Verbinden' soll eingeblendet werden.  
-Die Combobox soll eingeblendet werden.  
+ **Buttons beim Start des Programmes:**
+  * Der Button `Aktualisieren` soll eingeblendet sein.
+  * Der Button `Verbinden` soll ausgeblendet sein.
+  * Der Button `Trennen` soll ausgeblendet sein.  
+    * Der Button `Stop` soll ausgeblendet werden.  
+  * Der Button `Einzelmessung` soll ausgeblendet werden.
+  * Der Button `Laufend messen` soll ausgeblendet werden.
+
+    * Die Combobox soll ausgeblendet werden.
+
+  **Wenn ein Port geöffnet wurde:**  
+  * Der Button `Aktualisieren` soll ausgeblendet werden.
+  * Der Button `Trennen` soll eingeblendet werden.
+  * Der Button `Verbinden` soll ausgeblendet werden.
+
+  **Wenn Ports gefunden wurden:**
+
+  * Der Button `Verbinden` soll eingeblendet werden.  
+    * Die Combobox soll eingeblendet werden.  
 
 
 
