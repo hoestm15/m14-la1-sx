@@ -61,6 +61,9 @@ Hier benötigen wir `finally` um sicherzugehen ob der aktuelle Port auch bei Feh
   * Die Combobox soll eingeblendet werden.  
 
 
+### GUISingleMeasurementWorker  
+Die Temperaturmessung wird im Hintergrund die Temperaturmessung durchgeführt. Der SingleMeasurementWorker abgeleitet von GUISingleMeasurementWorker findet jede Sekunde ein Ereignis statt. In unseren Fall ist noch keine Temeraturmessung programmiert also wird jedes Mal 24.5°C aübergeben.  
+
 
 
 
