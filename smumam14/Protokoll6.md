@@ -150,12 +150,101 @@ Von Throwable abgeleitet werden die Klassen Exception und Error, wobei man im No
   }
 ```  
   
+  #### refreshSerialPorts
+Diese Methode wird aufgerufen, um die Combobox mit verfügbaren Schnittstellen zu aktualisieren
+```java
+
+  /**
+   * Methode zum Aktualisieren der Combobox mit seriellen Ports
+   */
+  private void refreshSerialPorts ()
+  {
+    final String[] ports = jssc.SerialPortList.getPortNames(); // Liste von vefügbaren Ports erhalten
+    ComboBoxModel<String> m = new DefaultComboBoxModel<>(ports); // Combobox-Model erzeugen
+    jcbSerialDevice.setModel(m); // Model setzen
+```  
+
+  #### connect
+Öffnen der Verbindung über die serielle Schnittstelle, inklusive der Behandlung aller möglichen Fehlerfälle.
+```java
+
+  /**
+   * Methode zum Verbinden mit dem µC
+   */
+  private void connect ()
+  {
+    try
+    {
+      final String port = (String) jcbSerialDevice.getSelectedItem(); // Gewählten Port auslesen aus Combobox
+      serialPort = new jssc.SerialPort(port); // Öffnen des Ports
+      if (serialPort.openPort() == false) //Laufzeitfehlerbehandlung 1 (Öffnen) 
+        throw new Exception("open port returns false");
+      if (serialPort.setParams(serialPort.BAUDRATE_57600,
+                               serialPort.DATABITS_8,
+                               serialPort.PARITY_NONE,
+                               serialPort.STOPBITS_2) == false) // Laufzeitfehlerbehandlung 2 (Konfigurieren)
+        throw new Exception("set params returns false");
+    }
+    catch (Throwable th) //Normalerweise nicht erlaubt, man muss hier wegen JNI eine Ausnahme machen
+    {
+      showThrowable(new Exception("Kann Port nicht öffnen", th)); // Ausgeben am Bildschirm
+      if (serialPort != null) // Im Fehlerfall Port schließen
+        try
+        {
+          serialPort.closePort();
+        }
+        catch (Throwable th2) // Wenn dies nicht möglich ist, dann dies melden
+        {
+          th.addSuppressed(th2);
+        }
+      serialPort = null;
+    }
+    finally // finally-Block wird in jedem Fall ausgeführt
+    {
+      updateSwingControl(); 
+    }
+  }
+```  
+  
+  
+ #### disconnect
+Schließen der Verbindung über die serielle Schnittstelle, inklusive der Behandlung aller möglichen Fehlerfälle.
+```java
+
+  /**
+   * Methode zum trennen der Verbindung zum µC
+   */
+  private void disconnect ()
+  {
+    try
+    {  
+      if (serialPort.closePort() == false)
+        throw new Exception("close port returns false");
+    }
+    catch (Throwable th) //Fehlerbehandlung beim Schließen mit entsprechende Meldung
+    {
+      showThrowable(new Exception("Kann nicht trennen", th));
+    }
+    finally
+    {
+      serialPort = null;
+      updateSwingControl();
+    }
+  }
+
+```  
+  
   #### U
 D
 ```java
 
 ```  
   
+  #### U
+D
+```java
+
+```  
   
 
 
