@@ -13,32 +13,49 @@
 
 In der letzten Einheit beschäftigten wir uns mit den Modbus, welches in dieser Einheit vorgesetzt wurde. in dieser Einheit ist unsere Aufgabe mittels einen SureBoard einen Temperatursensor zu bauen. Die Daten des Sensors sollen über einen Feldbus an den Computer übertragen und anschließend verarbeitet werden. Außerdem mit einer Java-Swing-realisiereten GUI visualisiert werden.  
 
-##Vorlage GUI  
+ ## Vorlage GUI     
 
 Diese fertige GUI war unsere Vorlage für die visualisierung,die auf dem Arnfelsserver zum Download bereit stand.  
 
-##Die verwendeten Methoden   
+  ## Die verwendeten Methoden     
 
 
-###showThrowable()  
+  ### showThrowable()        
 Diese Methode sit für die Fehlerausgbe zuständig.Tritt ein Fehler auf, wird der Fehler in einem Pop-Up Fenster ausgegeben.Die Fehlermeldung 'msg' wird im Fenster ausgegeben.
 
 
 
-###refresh () 
+### refresh ()   
 Zuerst werden in die zuvor angelegte Variable 'ports' die Namen der gefundenen Ports gespeichert. Dannach werden die Namen der gefunden Ports in der GUI angezeigt.  
-Abschließend werden die Buttons aktualisiert.  
+Abschließend werden die Buttons aktualisiert.    
 
 
-###connect()
-Zuerst wird 'port' der aktuell gewählten Port aus der Combobox übergeben und anschließend mit der Methode  '.openPort();' geöffnet.  
+### connect()  
+Zuerst wird 'port' der aktuell gewählten Port aus der Combobox übergeben und anschließend mit der Methode  '.openPort();' geöffnet.   
 
-###disconnect()  
-Der aktuelle Port wird mit 'serialPort.closePort();' geschlossen.  
+### disconnect()    
+Der aktuelle Port wird mit 'serialPort.closePort();' geschlossen.   
 Hier benötigen wir 'finally' um sicherzugehen ob der aktuelle Port auch bei Fehlerauftritt auf null gesetzt wird.  
 
 
 ### updateSwingControls()  
+
+**Buttons beim Start des Programmes:**  
+ Der Button * Aktualisieren soll eingeblendet sein.
+            * Verbinden soll ausgeblendet sein
+            Trennen soll ausgeblendet sein
+            Einzelmessung soll ausgeblendet werden.
+            Laufend messen soll ausgeblendet werden.
+            Stop soll ausgeblendet werden.
+Die Combobox soll ausgeblendet werden.
+**Wenn ein Port geöffnet wurde:**  
+Der Button Aktualisieren soll ausgeblendet werden.
+           Trennen soll eingeblendet werden.
+           Verbinden soll ausgeblendet werden.
+Wenn Ports gefunden wurden
+Die Combobox soll eingeblendet werden
+Der Button Verbinden soll eingeblendet werden.
+
 
 
 
