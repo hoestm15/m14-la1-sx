@@ -17,9 +17,9 @@ Hier sieht man den grundsätzlichen Aufbau der GUI:
 ![jframe form swing](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/gui1.png)
 >(c) Martin Schmuck  
 
-Folgende Methoden wurden bis jetzt implementiert:  
+Folgende Methoden wurden bis jetzt implementiert (Beschreibung der Einzelschritte siehe Kommentare):  
   
-#### Datenelemente + Konstruktor + Handler-Methoden
+#### Konstruktor + Handler-Methoden
 Wie allgemein bekannt sein sollte, wird der Konstruktor stets beim Erzeugen eines Objekts ausgeführt. Deshalb bringen wir hier alle Befehle unter, welche beim Start ausgeführt werden sollen. Anschließend sind noch die Handler-Methoden für die Buttons zu sehen, aus Gründen der Übersichtlichkeit und vor allem des Fehlerschutzes werden die eigentlichen Handlermethoden in seperate Methoden ausgelagert.
 ```java
 public class SureModbusGui extends javax.swing.JFrame
@@ -79,14 +79,83 @@ public class SureModbusGui extends javax.swing.JFrame
 
   private void jbutContinousMeasurementActionPerformed(java.awt.event.ActionEvent evt)                                                         
   {                                                             
-    // TODO add your handling code here:
+    // Noch nicht ausprogrammiert
   }                                                        
 
   private void jbutStopMeasurementActionPerformed(java.awt.event.ActionEvent evt)                                                    
   {                                                        
-    // TODO add your handling code here:
+    // Noch nicht ausprogrammiert
   }                                                  
   
   }
 
 ```
+#### updateSwingControls
+Damit man nicht durcheinanderkommt, wann man welches Control deaktivieren und wieder aktivieren muss, erfolg die Steuerung dies Controls zentral in einer Methode, in der eine Art Zustandsmaschine realisiert ist.
+```java
+/**
+   * Methode mit Zustandsmaschine zum Aktualisieren der Swing Controls abhähnig vom Programmzustand
+   */
+  private void updateSwingControl ()
+  {
+    // Zuerst einmal alle Controls deaktivieren
+    jbutConnect.setEnabled(false);
+    jbutContinousMeasurement.setEnabled(false);
+    jbutDisconnect.setEnabled(false);
+    jbutRefresh.setEnabled(false);
+    jbutSingleMeasurement.setEnabled(false);
+    jbutStopMeasurement.setEnabled(false);
+
+    if (activeWorker != null) // Hiermit wird der Cursor geändert, sobald gemssen wird
+    {
+      setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+      return;
+    }
+    else  // Wenn fertig gemessen, wird es wieder zurückgesetzt
+      setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+
+    jbutRefresh.setEnabled(true); // Aktualisieren-Button aktivieren
+    if (jcbSerialDevice.getModel().getSize() > 0) // Wenn serielle Schnittstellen vorhanden, 
+    { //                                      werden  Verbinden und die Combobox aktiviert
+      jbutConnect.setEnabled(true);
+      jcbSerialDevice.setEnabled(true);
+    }
+    if (serialPort != null && serialPort.isOpened()) // Wenn die Verbindung zum µC steht, passiert folgendes
+    {
+      jbutConnect.setEnabled(false); // Verbinden, Combobox und aktualisieren deaktivieren
+      jbutRefresh.setEnabled(false);
+      jcbSerialDevice.setEnabled(false);
+      jbutDisconnect.setEnabled(true); // Trennen und Einzelmessung aktivierung
+      jbutSingleMeasurement.setEnabled(true);
+    }
+  }
+```  
+#### showThroable
+Von Throwable abgeleitet werden die Klassen Exception und Error, wobei man im Normalfall nur Exceptions fangen sollte (Laufzeit-Programm-Fehler), da Errors wirklich schwerwiegende Fehler in der JVM sind, auf die man eigentlich nicht mehr reagieren kann. Deshalb ist es auch sinnentleert, derartige Errors zu fangen. An dieser Stelle muss jedoch eine Ausnahme gemacht werden, da JSSC (siehe [Protokoll der 5. Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/Protokoll5.md)) Errors wirft, welche aber wie Exceptions behandelt werden müssen.
+```java
+  /**
+   * Methode zum Ausgeben von Throwables (Errors und Exceptions)
+   *
+   * @param th Zu werfendes Throwable-Object
+   */
+  private void showThrowable (Throwable th)
+  {
+    th.printStackTrace(System.err);  // Stacktrace auf den Error-Output-Stream loggen
+    String message = th.getMessage(); // Fehlermeldung erhalten
+    if (message == null || message.isEmpty()) // Wenn man keine Fehlermeldung erhält, gibt man 
+      message = "Unbekannter Fehler: " + getClass().getSimpleName(); // die Klasse aus, um zumindest 
+    // rudimentär etwas über den Fehler in Erfahrung bringen zu können
+    JOptionPane.showMessageDialog(this, message, "Fehler aufgetreten", JOptionPane.ERROR_MESSAGE);
+    // Fehlermeldung im passenden Fenster ausgeben
+  }
+```  
+  
+  #### U
+D
+```java
+
+```  
+  
+  
+
+
