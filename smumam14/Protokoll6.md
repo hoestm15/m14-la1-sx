@@ -251,7 +251,8 @@ public class SingleMeasurementWorker extends SwingWorker <Double, String>
 ```  
   
   ### Dokumentationskommentare
-TODO: add description
+TODO: add description  
+
 ```java
 /**
 * Eine sinnbefreite Methode
