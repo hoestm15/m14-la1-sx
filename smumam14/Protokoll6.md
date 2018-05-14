@@ -131,7 +131,7 @@ Damit man nicht durcheinanderkommt, wann man welches Control deaktivieren und wi
   }
 ```  
 #### showThroable
-Von Throwable abgeleitet werden die Klassen Exception und Error, wobei man im Normalfall nur Exceptions fangen sollte (Laufzeit-Programm-Fehler), da Errors wirklich schwerwiegende Fehler in der JVM sind, auf die man eigentlich nicht mehr reagieren kann. Deshalb ist es auch sinnentleert, derartige Errors zu fangen. An dieser Stelle muss jedoch eine Ausnahme gemacht werden, da JSSC (siehe [Protokoll der 5. Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/Protokoll5.md)) Errors wirft, welche aber wie Exceptions behandelt werden müssen.
+Von Throwable abgeleitet werden die Klassen Exception und Error, wobei man im Normalfall nur Exceptions fangen sollte (Laufzeit-Programm-Fehler), da Errors wirklich schwerwiegende Fehler in der JVM sind, auf die man eigentlich nicht mehr reagieren kann. Deshalb ist es auch sinnentleert, derartige Errors zu fangen. An dieser Stelle muss jedoch eine Ausnahme gemacht werden, da JSSC (siehe [Protokoll der 5. Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/Protokoll5.md#java-native-interface)) Errors wirft, welche aber wie Exceptions behandelt werden müssen.
 ```java
   /**
    * Methode zum Ausgeben von Throwables (Errors und Exceptions)
