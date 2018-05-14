@@ -232,7 +232,9 @@ Schließen der Verbindung über die serielle Schnittstelle, inklusive der Behand
     }
   }
 
-```  
+```
+_____________________________  
+
   
   ### Swing Worker
 Da Messungen in der Regel etwas dauern und es nicht angenehm ist, wenn in dieser Zeit die GUI einfriert, wird der eigentliche Messvorgang (also die Kommunikation mit µC) in einen eigenen Thread ausgelagert, hier mithilfe des Swing Workers. Nachfolgend die Klasse, in welcher zu Testzwecken eine delay-Funktion und die Rückgabe eines Festwertes eingebaut wurden. 
@@ -249,6 +251,8 @@ public class SingleMeasurementWorker extends SwingWorker <Double, String>
   
 }
 ```  
+__________________________________________  
+
   
   ### Dokumentationskommentare
 Der Dokumentationskommentar wurden Java eingeführt, um beim Dokumentieren mehr Komfort zu erzielen. Dieser wird statt mit einem normalen `/*` mit einem `/**` eingeleitet und direkt vor den Methoden- bzw. Klassenkopf geschrieben. Dadurch werden zwei Effekte erreicht: 
@@ -271,6 +275,10 @@ public class SinnloseKlasse
   
 }
 ```  
-  
+_____________________________
+Abschließend noch ein Thema, welches bei unserem Projekt nicht von Relevanz ist, jedoch nicht unerwähnt bleiben sollte:  
+#### Testumgebung
+Software, welche kommerziell vermarktet wird und insbesondere jene, die zur gewerblichen Nutzung vorgesehen ist, muss vor der Auslieferung getestet werden. Damit versucht man möglichst viele Bugs und anderer Probleme schon im vorhinein abzufangen, da eine Problembehebung beim Kunden immer ungünstig ist. Daher ist es ratsam, für Software, welche man eventuell irgendwann verkaufen möchte, gleich eine Testumgebung zu bauen.   
+In großen Softwareentwicklungsunternehmen gibt es dafür eigene Abteilungen, welche ausschließlich mit dem Testen der hauseigenen Programme betraut sind.
 
 
