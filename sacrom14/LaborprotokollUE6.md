@@ -41,20 +41,20 @@ Hier benötigen wir 'finally' um sicherzugehen ob der aktuelle Port auch bei Feh
 ### updateSwingControls()  
 
 **Buttons beim Start des Programmes:**  
- Der Button * Aktualisieren soll eingeblendet sein.
-            * Verbinden soll ausgeblendet sein
-            Trennen soll ausgeblendet sein
-            Einzelmessung soll ausgeblendet werden.
-            Laufend messen soll ausgeblendet werden.
-            Stop soll ausgeblendet werden.
-Die Combobox soll ausgeblendet werden.
+ Der Button - Aktualisieren soll eingeblendet sein.  
+            - Verbinden soll ausgeblendet sein  
+            - Trennen soll ausgeblendet sein  
+            - Einzelmessung soll ausgeblendet werden.  
+            - Laufend messen soll ausgeblendet werden.  
+            - Stop soll ausgeblendet werden.  
+Die Combobox soll ausgeblendet werden.  
 **Wenn ein Port geöffnet wurde:**  
-Der Button Aktualisieren soll ausgeblendet werden.
-           Trennen soll eingeblendet werden.
-           Verbinden soll ausgeblendet werden.
-Wenn Ports gefunden wurden
-Die Combobox soll eingeblendet werden
-Der Button Verbinden soll eingeblendet werden.
+Der Button Aktualisieren soll ausgeblendet werden.  
+           Trennen soll eingeblendet werden.  
+           Verbinden soll ausgeblendet werden.  
+Wenn Ports gefunden wurden  
+Die Combobox soll eingeblendet werden  
+Der Button Verbinden soll eingeblendet werden.  
 
 
 
