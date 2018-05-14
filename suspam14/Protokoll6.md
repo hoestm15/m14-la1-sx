@@ -6,7 +6,7 @@ Anwesend: Reinbacher, Sackl R.,  Schmuck, Schuster
 Abwesend: Ruffenacht, Sammer, Sackl M.
 
 # Aufgabenstellung
-Es soll eine Java Swibng GUI zur Visualisierung eines Temperatursensors erstellt werden. Mit Hilfe der GUi soll man sich mit dem Sure Board verbinden können und die Messdaten des Temperatursensors auslesen können. Für die Verbindung zwischen Java GUI und PC soll das Feldbussystem Modbus verwendet werden. Dieser wurde bereits in der vorigen Einheit besprochen. [Protokoll zu Modbus]( m14-la1-sx/suspam14/Protokoll5.md )
+Es soll eine Java Swing GUI zur Visualisierung eines Temperatursensors erstellt werden. Mit Hilfe der GUi soll man sich mit dem Sure Board verbinden können und die Messdaten des Temperatursensors auslesen können. Für die Verbindung zwischen Java GUI und PC soll das Feldbussystem Modbus verwendet werden. Dieser wurde bereits in der vorigen Einheit besprochen. [Protokoll zu Modbus]( m14-la1-sx/suspam14/Protokoll5.md )
 
 ## SureBoard Programm
 Das Programm für das Sureboard, dass den Temperatursensor ausliest und als Modbus-Slave agiert, wurde vom Server in Arnfels bezogen. Wir haben es mit dem EasyProgrammer auf das SureBoard gespielt.
@@ -167,4 +167,13 @@ Diese Methode ist eine Worker Methode die dazu dient die Temperaturdaten vom Sur
 
   }
   ```
+## Fehlerbehandlung in Java
+![](https://camo.githubusercontent.com/44de9326ae31c832041c5e7a88572f3f111bdda4/68747470733a2f2f7170682e65632e71756f726163646e2e6e65742f6d61696e2d71696d672d35656364646366316536373632376563333733306465343032303034316332322d63)
+### Exception
+Eine Exception ist ein Fehler im Programm, durch eine Exception kann (muss aber nicht) das Programm abstürzen, die JVm aber nicht.
+### Error
+Ein Error ist ein schwerwiegender Fehler in der JVM, ein Error kann zum Absturz der gesamten JVM führen. 
+### checked - unchecked
+*checked* bedeutet das diese Exception gefangen werden muss, eine *unchecked Exception* muss hingegen nicht gefangen werden.
+
   
