@@ -5,8 +5,8 @@ Martin Schmuck
 Gruppe 3
 
 Automatisierungslabor HTL Kaindorf  
-Anwesend: Reinbacher, Sackl M., Sackl R., Schmuck, Schuster  
-Abwesend: Ruffenacht, Sammer
+Anwesend: Reinbacher, Sackl R., Schmuck, Schuster  
+Abwesend: Ruffenacht, Sackl M., Sammer
 
 ## Thema der Einheit: Visualisirung eines Temperatursensors
 In dieser Einheit schließen wir direkt an die letzte Einheit an.
