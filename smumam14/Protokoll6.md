@@ -91,7 +91,7 @@ public class SureModbusGui extends javax.swing.JFrame
 
 ```
 #### updateSwingControls
-Damit man nicht durcheinanderkommt, wann man welches Control deaktivieren und wieder aktivieren muss, erfolg die Steuerung dies Controls zentral in einer Methode, in der eine Art Zustandsmaschine realisiert ist.
+Damit man nicht durcheinanderkommt, wann man welches Control deaktivieren und wieder aktivieren muss, erfolgt die Steuerung dieser Controls zentral in einer Methode, in der eine Art Zustandsmaschine realisiert ist.
 ```java
 /**
    * Methode mit Zustandsmaschine zum Aktualisieren der Swing Controls abhähnig vom Programmzustand
