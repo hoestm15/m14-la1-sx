@@ -27,5 +27,6 @@
 
   * *nicht anwesend*
   
-* Gruppe3: 7.Einheit, 15.05.2018
+* Gruppe3:  7.Einheit, 15.05.2018
+
   *[Protokoll 7]()
