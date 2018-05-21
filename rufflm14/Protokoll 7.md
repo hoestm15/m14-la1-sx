@@ -22,7 +22,7 @@ Der SingleMeasurementWorker ist eine JAVAl-Klasse, die in einem eigenen Thread d
 
 Nach einer Wartezeit von 100ms wird die Antwort abgefragt und auf Herz und Nieren geprüft. Gegebenenfalls wird eine Exception geworfen. Sie soll aus 9 Bytes bestehen und die Werte der Temperaturmessung befinden sich an der 3. und der 4. Stelle. Löst die Antwort keine Exception aus, wird die Temperatur in Grad ausgerechet und zurückgegeben.
 
-´´´java
+```java
 
 public class SingleMeasurementWorker extends SwingWorker<Double, String>
 {
@@ -77,5 +77,5 @@ public class SingleMeasurementWorker extends SwingWorker<Double, String>
     }
   
 }
+```
 
-´´´
