@@ -1,2 +1,40 @@
 
-# *hallo*
+# *Protokoll KW 15*
+
+  Name: Strauß Lukas   
+  Klasse: 4AHME   
+  Datum: 10.04.2018   
+  Anwesend: Strauß Lukas, Tuttner Raphael, Uhl Chrstian, Waltl Kilian, Wieser Markus,Zitz Karlheinz    
+  Abwesend: Sebastian Strutz
+  
+  ## 1. Theorie
+  ### LM75A :point_right: Ein intelligenter Sensor ?
+  
+Ein Sensor ist dann intelligent, wenn er ein Rechenwerk besitzt. Das heißt also es muss einen eingebauten Prozessor geben.   Bei einem unintelligenten Sensor bekommt man nur einen Spannungswert zurück , diesen muss man dann selbst in einen Temperaturwert umrechnen. Beim dem intelligenten Sensor passiert das bereits im Rechenwerk. Der LM75A ist eigentlich ein unintelligenter Sensor, allerdings benutzen wir ihn zusammen mit einem Sureboard, welches unser Rechenwerk ist. Somit ist es in unserem Fall ein intelligenter Sensor.      
+  
+### JNI :point_right: Java Native Interface
+
+JNI besteht aus zwei Komponenten:
+
+Betriebssystemebene--> Binäre Bibliotheken werden dem Betriebssystem zu Verfügung gestellt. Das sind Funktionen die man in C/C++ geschrieben hat. Bei Windows --> DLL-Datei, Bei Linux: SO-Datei
+
+Jacva-Ebene--> ein oder mehrere .java Dateien sind zur Verfügung gestellt
+
+Beide zusammen schaffen es alos, eine Kommunikation über die serielle Schnitstelle zu ermöglichen. Es gibt hierfür eine schon fertig implementierte Lösung. Diese nennt sich *JSSC* = Java Simple Serial Connector. Diese Lösung benutzen wir auch in unserer Übung. Somit ist keine Konfiguration mehr möglich, da wir alle notwendigen Klassen und Bibliotheken bereits eingebunden haben.
+
+Im Java Simple Serial Connector findet man .jar Dateien. Dateien können aus .jar Dateien extrahiert werden , so muss es der Benutzer nicht mehr machen.
+    
+
+### Klassen in Java
+
+Unter einer Klasse versteht man in Java vereinfacht gesagt den Bauplan für ein Programm. Die Klasse besteht aus Objekten und Methoden. Objekt=Attribut.  
+  
+Eine Abstrakte Klasse ist wenn man es so will eine unfertige Klasse die man verwendet um weitere solche Klassen zu erstellen.
+Unter Interface versteht man in Java eine Sammlung von Methoden. Eine sogenannte Interne Klasse kann alle Attribute von einer äußeren Klasse übernehmen. 
+Eine anonyme Klasse hat keinen eigenen Klassennamen und ist so auch die einfachste Klasse in Java. Ansonsten ist sie der internen Klasse sehr ähnlich. Mit ihr ist es möglich einiges an Zeit zu sparen , da sie ja nicht einmal einem eigenen Klassennamen hat.
+  
+  
+  Swi Wo,Verer,Seri Schn Jav
+  
+  
+  
