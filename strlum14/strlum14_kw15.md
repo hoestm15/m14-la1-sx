@@ -34,7 +34,27 @@ Unter Interface versteht man in Java eine Sammlung von Methoden. Eine sogenannte
 Eine anonyme Klasse hat keinen eigenen Klassennamen und ist so auch die einfachste Klasse in Java. Ansonsten ist sie der internen Klasse sehr ähnlich. Mit ihr ist es möglich einiges an Zeit zu sparen , da sie ja nicht einmal einem eigenen Klassennamen hat.
   
   
-  Swi Wo,Verer,Seri Schn Jav
+### Vererbungen 
+
+In Java gibt es nur Einfachvererbungen. Eine Kindklasse kann nur eine Elternklasse haben aber eine Elternklasse kann mehrere Kindklassen haben.
+
+
+
+## Temperaturmessung
+
+Nach den Widerholungen der letzten Einheit machten wir bei unserer Temperaturmessung weiter.
+
+### jbutSingleMeasurementActionPerformed
+  Von der Klasse MySingleMeasurementWorker wird ein Objekt erstellt, das wir mithilfe von execute() gemacht.
+  
+  ```java
+  private void jbutSingleMeasurementActionPerformed(java.awt.event.ActionEvent evt)                       
+  {                                                          
+    new MySingleMeasurementWorker(serialPort).execute();
+  }                                                     
+```
+
+
   
   
   
