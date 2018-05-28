@@ -49,6 +49,8 @@ Damit man in Java mit einem Programm mit der Hardware kommunizieren kann benöti
     }
  }  
  
+```
+ 
  #### SingleMeasurementWorker Worker-Klasse  
 Die Abfrage der GUI läuft mittels Swing Worker in einem anderen Thread  ab. In der Methode **doInBackground** wird eine Anfrage auf das SureBoard gesendet. 
   
