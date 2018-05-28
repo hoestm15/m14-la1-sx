@@ -120,7 +120,8 @@ public class SingleMeasurementWorker extends SwingWorker<Double, Object>
  }  
  
 ```  
-  
- 
+## Swing Worker 
+
+Da Swing nicht threadsicher ist, kann es Probleme bereiten, wenn man aus anderen Threads auf die GUI zugreifen will, um zb einen Fortschrittsbalken zu aktualisieren. Die Klasse Swing Worker hilft, um solche GUI Updates leichter darstellen zu können. 
   
   
