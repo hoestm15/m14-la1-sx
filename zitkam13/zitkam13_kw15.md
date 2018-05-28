@@ -87,9 +87,7 @@ public class SingleMeasurementWorker extends SwingWorker<Double, Object>
 
 }
 ```
-
-  
-  ```  
+ 
   #### jbutSingleMeasurementActionPerformed  
    In dieser Methode wird von der Klasse **MySingleMeasurementWorker**  ein Objekt erstellt. Dies wird mittels **execute()** gemacht.  
    
