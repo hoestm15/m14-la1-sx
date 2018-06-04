@@ -10,3 +10,5 @@
 [4.Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/edit/buljem14/Protokolle/4.Einheit.md)
 * Gruppe 1: 5. Einheit, 23.01.2018
 [5.Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/buljem14/Protokolle/5.Einheit.md)
+* Gruppe 1: 6. Einheit, 30.01.2018
+Krankheitsbedingt nicht anwesend
