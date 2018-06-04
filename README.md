@@ -13,4 +13,4 @@
 * Gruppe 1: 6. Einheit, 30.01.2018
 Krankheitsbedingt nicht anwesend
 * Gruppe 1: 7. Einheit, 17.04.2018
-[6.Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/buljem14/Protokolle/7.Einheit.md)
+[7.Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/buljem14/Protokolle/7.Einheit.md)
