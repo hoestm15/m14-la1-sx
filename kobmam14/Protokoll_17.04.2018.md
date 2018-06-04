@@ -10,11 +10,11 @@
  Abwesend: Niemand <br> <br> <br>
  
 ## Fortsetzen des Projekts "Temperaturmessung"
-In dieser einheit wurde das Projekt "Temperaturmessung fortgesetzt.
-Dabei wurden bereits bestehende Methoden erweitert sowie neue Klassen erstellt.
+In dieser einheit wurde das Projekt "Temperaturmessung fortgesetzt. <br>
+Dabei wurden bereits bestehende Methoden erweitert sowie neue Klassen erstellt. <br> <br>
 
-Bis dato war unser Programm dazu in der Lage die am PC verfügabren Ports aufzulisten.
-Außerdem war es bereits möglich sich mit dem Sure-Board, welches für die Temperaturmessung verwendet werden soll, zu verbinden.
+Bis dato war unser Programm dazu in der Lage die am PC verfügabren Ports aufzulisten. <br>
+Außerdem war es bereits möglich sich mit dem Sure-Board, welches für die Temperaturmessung verwendet werden soll, zu verbinden. <br>
 
 ## Erweiterungen vorhandener Methoden
 
@@ -64,9 +64,9 @@ private void updateSwingControls()
         }
     }
 ```
-Die Methode "updateSwingControls()" wurde um eine if-else Anweisung erweitert. (if (activeWorker != null))
-Dadurch ist es während eine Messung durchgeführt wird nun nicht mehr möglich mit der GUI zu interagieren, da alle Swing-controls deaktiviert werden.
-Der Cursor wird auf "Wait" gesetzt.
+Die Methode "updateSwingControls()" wurde um eine if-else Anweisung erweitert. (if (activeWorker != null)) <br>
+Dadurch ist es während eine Messung durchgeführt wird nun nicht mehr möglich mit der GUI zu interagieren, da alle Swing-controls deaktiviert werden. <br>
+Der Cursor wird auf "Wait" gesetzt. <br>
  
 ### `connectPort()`
 ```java
@@ -98,22 +98,22 @@ private void connectPort(String port)
 ```
 Die Methode "connectPort()" wurde um die für die Übertragung der daten notwendigen Parameter erweitert:
 
- * BAUDRATE -> Die Symbolrate oder Baudrate ist in der digitalen Übertragungstechnik und Nachrichtentechnik die Anzahl der übertragenen Symbole pro Zeitspanne. Die Einheit „pro Sekunde“ dieser Rate wird als Baud bezeichnet, abgekürzt Bd, um sie z. B. von der Bitrate zu unterscheiden.
+ * BAUDRATE: >Die Symbolrate oder Baudrate ist in der digitalen Übertragungstechnik und Nachrichtentechnik die Anzahl der übertragenen Symbole pro Zeitspanne. Die Einheit „pro Sekunde“ dieser Rate wird als Baud bezeichnet, abgekürzt Bd, um sie z. B. von der Bitrate zu unterscheiden.
 Außerdem wurde eine Fehlerbehandlung miteingebaut, die, wenn ein Fehler aufritt, eine "SerialPortException" wirft.
-Quelle: Wikipeda
+*Quelle: [Wikipedia, BAUDRATE](https://de.wikipedia.org/wiki/Symbolrate)*
 
 In unserem Fall beträgt diese 57600.
 
-* DATABITS -> Bei Datenbits handelt es sich um die eigentlich zu übertragenden Informationseinheiten bei der Datenübertragung.
+* DATABITS: Bei Datenbits handelt es sich um die eigentlich zu übertragenden Informationseinheiten bei der Datenübertragung.
 
 Wir übertragen 8 Databits.
 
-* STOPBITS -> Stoppbits trennen die jeweilige Zeiteinheit von Daten auf einer asynchronen seriellen Verbindung.
-Quelle: msdn.microsoft
+* STOPBITS: >Stoppbits trennen die jeweilige Zeiteinheit von Daten auf einer asynchronen seriellen Verbindung.
+*Quelle: [msdn.microsoft, Stopbit](https://msdn.microsoft.com/de-de/library/system.io.ports.stopbits(v=vs.110).aspx)*
 
 Wir verwenden 2 Stopbits.
 
-* PARITYBIT -> Ein Paritätsbit ist ein zeichendiskretes Prüfbit, das zur Fehlererkennung in der Paritätsprüfung eingesetzt wird. Das Paritätsbit wird zu den Datenbits hinzugefügt, wodurch die Bitsumme gerade oder ungerade wird. Empfangsseitig wird die Bitsumme überprüft. Entspricht die Bitsumme nicht der vorgegebenen Parität, - die beispielsweise gerade sein muss - dann liegt ein Übertragungsfehler vor.
-Quelle: itwissen.info
+* PARITYBIT: >Ein Paritätsbit ist ein zeichendiskretes Prüfbit, das zur Fehlererkennung in der Paritätsprüfung eingesetzt wird. Das Paritätsbit wird zu den Datenbits hinzugefügt, wodurch die Bitsumme gerade oder ungerade wird. Empfangsseitig wird die Bitsumme überprüft. Entspricht die Bitsumme nicht der vorgegebenen Parität, - die beispielsweise gerade sein muss - dann liegt ein Übertragungsfehler vor.
+*Quelle: [IT-Wissen, Paritätsbit](https://www.itwissen.info/Paritaetsbit-parity-bit-PY.html)*
 
 In unserem Fall wird kein Paritybit verwendet.
