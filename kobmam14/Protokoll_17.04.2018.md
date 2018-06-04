@@ -117,3 +117,119 @@ Wir verwenden 2 Stopbits.
 *Quelle: [IT-Wissen, Paritätsbit](https://www.itwissen.info/Paritaetsbit-parity-bit-PY.html)*
 
 In unserem Fall wird kein Paritybit verwendet.
+
+
+## Neue Methoden
+
+### `singleMeasurement()`
+```java
+private void singleMeasurement() 
+{
+        activeWorker = new MySingleMeasurementWorker(serialPort);
+        activeWorker.execute();
+        updateSwingControls();
+    }
+```
+Die Methode "singleMeasurement()" ist dafür zuständig den SwingWorker zu starten.
+
+* SwingWorker: Der SwingWorker ist eine Utility-Klasse, die die ordnungsgemäße Verwendung des Event-Dispatch-Threads ermöglicht. <br>
+-> Multithreading
+SwingWorker ist nützlich, wenn nach einem Benutzerinteraktionsereignis eine zeitraubende Aufgabe ausgeführt werden muss. <br>
+Mit dem SwingWorker gehen neue Mehoden einher:
+* "doInBackground()": Berechnet ein Ergebnis oder gibt eine Exception aus, wenn dies nicht möglich ist.
+
+* "done()": Wird im Ereignis-Dispatch-Thread ausgeführt, nachdem die doInBackground-Methode beendet wurde.
+
+* "execute()": Plant diesen SwingWorker für die Ausführung in einem Arbeitsthread.
+
+* "get()": Wartet, wenn die Berechnung abgeschlossen werden muss, und ruft dann das Ergebnis ab.
+
+* "process()": Empfängt Datenblöcke aus der Publish-methode asynchron im Event Dispatch-Thread.
+
+* "publish()": Sendet Datenblöcke an die Process-Methode.
+
+
+* Multithreading: Multithreading bezeichnet in der Informatik das gleichzeitige Abarbeiten mehrerer Threads (Ausführungsstränge) innerhalb eines einzelnen Prozesses oder eines Tasks (ein Anwendungsprogramm). <br>
+*Quelle: [Wikipedia, Multithreading](https://de.wikipedia.org/wiki/Multithreading)* 
+
+
+## Erstellte Klassen
+
+### Worker-Klasse
+```java
+package workers;
+
+import java.util.concurrent.TimeUnit;
+import javax.swing.SwingWorker;
+import jssc.SerialPort;
+
+/**
+ *
+ * @author emil
+ */
+public class SingleMeasurementWorker extends SwingWorker<Double, String> {
+    
+    private final SerialPort serialPort;
+
+    public SingleMeasurementWorker(SerialPort serialPort) {
+        this.serialPort = serialPort;
+    }
+       
+    
+    @Override
+    protected Double doInBackground() throws Exception {
+        
+        publish("Einzelmessung gestartet");
+        
+        //Read LM75: 02 04 00 30 00 01 31 f6 (Modbus-Konfiguration aus README)
+        byte [] frame = {0x02, 0x04, 0x00, 0x30, 0x00, 0x01, 0x31, (0xf6-256)};
+        //Weil "writeBytes" nur von -128 bis +127 geht.
+        
+        if (serialPort.writeBytes(frame) == false) {
+            throw new Exception("cannot send frame");
+        }
+                
+        TimeUnit.SECONDS.sleep(2);
+        byte [] response = serialPort.readBytes();
+        System.out.println(response.length);
+        byte hb = response[3];
+        byte lb = response[4];
+        int t = (hb < 0 ? hb+256 : hb) * 256 + (lb < 0 ? lb+256 : lb);
+        
+        return t/256.0;
+    }
+    
+}
+```
+Da der Wert die 256 möglichen Werte übersteigen kann, wird die *response* in zwei Bytes aufgeteilt, ein **l**ow**b**yte und ein **h**igh**b**yte. Die Konfigurationen stammen aus der README des Projektes, vom SVN-Server Arnfels.
+
+#### Innere Klasse in `public class SureModbusGui`
+```java
+private class MySingleMeasurementWorker extends SingleMeasurementWorker {
+
+        public MySingleMeasurementWorker(SerialPort serialPort) {
+            super(serialPort);
+        }
+
+        @Override
+        protected void done() {
+            try {
+                double temp = get();
+                jlaTemperatur.setText(String.format("%.1f °C", temp));
+                jtfStatus.setText(null);
+            } catch (Exception e) {
+                showThrowable(new Exception("Einzemessung gescheitert", e));
+            } finally {
+                activeWorker = null;
+                updateSwingControls();
+            }
+        }
+
+        @Override
+        protected void process(List<String> chunks) {
+            jtfStatus.setText(chunks.get(chunks.size()-1)); //String aus Publish
+        }
+        
+    }
+```
+Die gemessenen Werte werden über `get()` vom Worker gelesen und in das Label geschrieben. Mit process wird der Text aus `publish()` in das Status-Textfeld geschrieben.
