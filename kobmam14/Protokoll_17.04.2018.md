@@ -62,7 +62,7 @@ private void updateSwingControls()
             setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
             jlaTemperatur.setEnabled(true);
         }
-    }
+}
 ```
 Die Methode "updateSwingControls()" wurde um eine if-else Anweisung erweitert. (if (activeWorker != null)) <br>
 Dadurch ist es während eine Messung durchgeführt wird nun nicht mehr möglich mit der GUI zu interagieren, da alle Swing-controls deaktiviert werden. <br>
@@ -94,7 +94,7 @@ private void connectPort(String port)
         {
             updateSwingControls();
         }
-    }
+}
 ```
 Die Methode "connectPort()" wurde um die für die Übertragung der daten notwendigen Parameter erweitert:
 
@@ -128,7 +128,7 @@ private void singleMeasurement()
         activeWorker = new MySingleMeasurementWorker(serialPort);
         activeWorker.execute();
         updateSwingControls();
-    }
+}
 ```
 Die Methode "singleMeasurement()" ist dafür zuständig den SwingWorker zu starten.
 
@@ -165,19 +165,22 @@ import jssc.SerialPort;
 
 /**
  *
- * @author emil
+ * @author kobi
  */
-public class SingleMeasurementWorker extends SwingWorker<Double, String> {
+public class SingleMeasurementWorker extends SwingWorker<Double, String>
+{
     
     private final SerialPort serialPort;
 
-    public SingleMeasurementWorker(SerialPort serialPort) {
+    public SingleMeasurementWorker(SerialPort serialPort)
+    {
         this.serialPort = serialPort;
     }
        
     
     @Override
-    protected Double doInBackground() throws Exception {
+    protected Double doInBackground() throws Exception 
+    {
         
         publish("Einzelmessung gestartet");
         
@@ -185,7 +188,8 @@ public class SingleMeasurementWorker extends SwingWorker<Double, String> {
         byte [] frame = {0x02, 0x04, 0x00, 0x30, 0x00, 0x01, 0x31, (0xf6-256)};
         //Weil "writeBytes" nur von -128 bis +127 geht.
         
-        if (serialPort.writeBytes(frame) == false) {
+        if (serialPort.writeBytes(frame) == false) 
+        {
             throw new Exception("cannot send frame");
         }
                 
