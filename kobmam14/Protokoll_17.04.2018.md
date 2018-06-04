@@ -7,4 +7,4 @@
  Klasse: 4AHME  
  Datum: 30.01.2018  
  Anwesend: Berger Emil, Böcksteiner Jakob, Bullner Jeremy, Ehmann Julian, Enzi Gert, Knappitsch Robert, Kobor Markus <br>
- Abwesend:  <br> <br> <br>
+ Abwesend: Niemand <br> <br> <br>
