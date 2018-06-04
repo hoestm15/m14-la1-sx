@@ -18,3 +18,6 @@
 
 * 6. Einheit, 30.01.2018
   [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/ehmjum14/ehmjum14/6.Protokoll.md)
+
+* 7. Einheit, 17.04.2018
+  [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/ehmjum14/ehmjum14/7.Protokoll.md)
