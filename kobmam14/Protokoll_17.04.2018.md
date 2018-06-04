@@ -98,8 +98,8 @@ private void connectPort(String port)
 ```
 Die Methode "connectPort()" wurde um die für die Übertragung der daten notwendigen Parameter erweitert:
 
- * BAUDRATE: >Die Symbolrate oder Baudrate ist in der digitalen Übertragungstechnik und Nachrichtentechnik die Anzahl der übertragenen Symbole pro Zeitspanne. Die Einheit „pro Sekunde“ dieser Rate wird als Baud bezeichnet, abgekürzt Bd, um sie z. B. von der Bitrate zu unterscheiden.
-Außerdem wurde eine Fehlerbehandlung miteingebaut, die, wenn ein Fehler aufritt, eine "SerialPortException" wirft.
+ * BAUDRATE: > Die Symbolrate oder Baudrate ist in der digitalen Übertragungstechnik und Nachrichtentechnik die Anzahl der übertragenen Symbole pro Zeitspanne. Die Einheit „pro Sekunde“ dieser Rate wird als Baud bezeichnet, abgekürzt Bd, um sie z. B. von der Bitrate zu unterscheiden.
+Außerdem wurde eine Fehlerbehandlung miteingebaut, die, wenn ein Fehler aufritt, eine "SerialPortException" wirft. <br>
 *Quelle: [Wikipedia, BAUDRATE](https://de.wikipedia.org/wiki/Symbolrate)*
 
 In unserem Fall beträgt diese 57600.
@@ -108,12 +108,12 @@ In unserem Fall beträgt diese 57600.
 
 Wir übertragen 8 Databits.
 
-* STOPBITS: >Stoppbits trennen die jeweilige Zeiteinheit von Daten auf einer asynchronen seriellen Verbindung.
+* STOPBITS: > Stoppbits trennen die jeweilige Zeiteinheit von Daten auf einer asynchronen seriellen Verbindung. <br>
 *Quelle: [msdn.microsoft, Stopbit](https://msdn.microsoft.com/de-de/library/system.io.ports.stopbits(v=vs.110).aspx)*
 
 Wir verwenden 2 Stopbits.
 
-* PARITYBIT: >Ein Paritätsbit ist ein zeichendiskretes Prüfbit, das zur Fehlererkennung in der Paritätsprüfung eingesetzt wird. Das Paritätsbit wird zu den Datenbits hinzugefügt, wodurch die Bitsumme gerade oder ungerade wird. Empfangsseitig wird die Bitsumme überprüft. Entspricht die Bitsumme nicht der vorgegebenen Parität, - die beispielsweise gerade sein muss - dann liegt ein Übertragungsfehler vor.
+* PARITYBIT: > Ein Paritätsbit ist ein zeichendiskretes Prüfbit, das zur Fehlererkennung in der Paritätsprüfung eingesetzt wird. Das Paritätsbit wird zu den Datenbits hinzugefügt, wodurch die Bitsumme gerade oder ungerade wird. Empfangsseitig wird die Bitsumme überprüft. Entspricht die Bitsumme nicht der vorgegebenen Parität, - die beispielsweise gerade sein muss - dann liegt ein Übertragungsfehler vor. <br>
 *Quelle: [IT-Wissen, Paritätsbit](https://www.itwissen.info/Paritaetsbit-parity-bit-PY.html)*
 
 In unserem Fall wird kein Paritybit verwendet.
