@@ -19,6 +19,6 @@
 * 6. Einheit, 30.01.2018
   [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/Protokoll_30.01.2018.md)
   
-* 7. Einheit, 08.05.2018
+* 7. Einheit, 17.04.2018
   [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/Protokoll_17.04.2018.md)
 
