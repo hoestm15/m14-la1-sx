@@ -104,6 +104,7 @@ Die Methode "connectPort()" wurde um die für die Übertragung der daten notwend
  > Bd, um sie z. B. von der Bitrate zu unterscheiden.
  > Außerdem wurde eine Fehlerbehandlung miteingebaut, die, wenn ein Fehler aufritt, eine "SerialPortException" 
  > wirft. <br>
+ 
 *Quelle: [Wikipedia, BAUDRATE](https://de.wikipedia.org/wiki/Symbolrate)*
 
 In unserem Fall beträgt diese 57600.
@@ -117,7 +118,12 @@ Wir übertragen 8 Databits.
 
 Wir verwenden 2 Stopbits.
 
-* **PARITYBIT:** > Ein Paritätsbit ist ein zeichendiskretes Prüfbit, das zur Fehlererkennung in der Paritätsprüfung eingesetzt wird. Das Paritätsbit wird zu den Datenbits hinzugefügt, wodurch die Bitsumme gerade oder ungerade wird. Empfangsseitig wird die Bitsumme überprüft. Entspricht die Bitsumme nicht der vorgegebenen Parität, - die beispielsweise gerade sein muss - dann liegt ein Übertragungsfehler vor. <br>
+* **PARITYBIT:** 
+> Ein Paritätsbit ist ein zeichendiskretes Prüfbit, das zur Fehlererkennung in der Paritätsprüfung eingesetzt wird. 
+> Das Paritätsbit wird zu den Datenbits hinzugefügt, wodurch die Bitsumme gerade oder ungerade wird. Empfangsseitig 
+> wird die Bitsumme überprüft. Entspricht die Bitsumme nicht der vorgegebenen Parität, - die beispielsweise gerade 
+> sein muss - dann liegt ein Übertragungsfehler vor. <br>
+
 *Quelle: [IT-Wissen, Paritätsbit](https://www.itwissen.info/Paritaetsbit-parity-bit-PY.html)*
 
 In unserem Fall wird kein Paritybit verwendet.
@@ -139,7 +145,7 @@ Die Methode "singleMeasurement()" ist dafür zuständig den SwingWorker zu start
 * **SwingWorker:** Der SwingWorker ist eine Utility-Klasse, die die ordnungsgemäße Verwendung des Event-Dispatch-Threads ermöglicht. <br>
 -> Multithreading <br>
 SwingWorker ist nützlich, wenn nach einem Benutzerinteraktionsereignis eine zeitraubende Aufgabe ausgeführt werden muss. <br>
-Mit dem SwingWorker gehen neue Mehoden einher:
+Mit dem SwingWorker gehen neue Methoden einher: <br>
 * *"doInBackground()":* Berechnet ein Ergebnis oder gibt eine Exception aus, wenn dies nicht möglich ist.
 
 * *"done()":* Wird im Ereignis-Dispatch-Thread ausgeführt, nachdem die doInBackground-Methode beendet wurde.
