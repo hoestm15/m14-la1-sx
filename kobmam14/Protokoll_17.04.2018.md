@@ -158,7 +158,7 @@ Mit dem SwingWorker gehen neue Methoden einher: <br>
 
 * *"publish()":* Sendet Datenblöcke an die Process-Methode. <br> <br>
 
-Zur veranschaulichung:
+Zur Veranschaulichung:
 
 ![](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/SwingWorker.gif) <br>
 
