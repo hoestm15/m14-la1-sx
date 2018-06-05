@@ -98,8 +98,12 @@ private void connectPort(String port)
 ```
 Die Methode "connectPort()" wurde um die für die Übertragung der daten notwendigen Parameter erweitert:
 
- * **BAUDRATE:** > Die Symbolrate oder Baudrate ist in der digitalen Übertragungstechnik und Nachrichtentechnik die Anzahl der übertragenen Symbole pro Zeitspanne. Die Einheit „pro Sekunde“ dieser Rate wird als Baud bezeichnet, abgekürzt Bd, um sie z. B. von der Bitrate zu unterscheiden.
-Außerdem wurde eine Fehlerbehandlung miteingebaut, die, wenn ein Fehler aufritt, eine "SerialPortException" wirft. <br>
+ * **BAUDRATE:** 
+ > Die Symbolrate oder Baudrate ist in der digitalen Übertragungstechnik und Nachrichtentechnik die Anzahl der  
+ > übertragenen Symbole pro Zeitspanne. Die Einheit „pro Sekunde“ dieser Rate wird als Baud bezeichnet, abgekürzt 
+ > Bd, um sie z. B. von der Bitrate zu unterscheiden.
+ > Außerdem wurde eine Fehlerbehandlung miteingebaut, die, wenn ein Fehler aufritt, eine "SerialPortException" 
+ > wirft. <br>
 *Quelle: [Wikipedia, BAUDRATE](https://de.wikipedia.org/wiki/Symbolrate)*
 
 In unserem Fall beträgt diese 57600.
