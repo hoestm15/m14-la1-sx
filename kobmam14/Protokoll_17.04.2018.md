@@ -142,9 +142,9 @@ private void singleMeasurement()
 ```
 Die Methode "singleMeasurement()" ist dafür zuständig den SwingWorker zu starten.
 
-* **SwingWorker:** Der SwingWorker ist eine Utility-Klasse, die die ordnungsgemäße Verwendung des Event-Dispatch-Threads ermöglicht. <br>
--> Multithreading <br>
-SwingWorker ist nützlich, wenn nach einem Benutzerinteraktionsereignis eine zeitraubende Aufgabe ausgeführt werden muss. <br>
+* **SwingWorker:** Der SwingWorker ist eine Utility-Klasse, die die ordnungsgemäße Verwendung des Event-Dispatch-Threads ermöglicht. <br> <br>
+-> Multithreading <br> <br>
+SwingWorker ist nützlich, wenn nach einem Benutzerinteraktionsereignis eine zeitraubende Aufgabe ausgeführt werden muss. <br> <br>
 Mit dem SwingWorker gehen neue Methoden einher: <br>
 * *"doInBackground()":* Berechnet ein Ergebnis oder gibt eine Exception aus, wenn dies nicht möglich ist.
 
