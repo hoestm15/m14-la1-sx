@@ -156,7 +156,7 @@ Mit dem SwingWorker gehen neue Methoden einher: <br>
 
 * *"process()":* Empfängt Datenblöcke aus der Publish-methode asynchron im Event Dispatch-Thread.
 
-* *"publish()":* Sendet Datenblöcke an die Process-Methode.
+* *"publish()":* Sendet Datenblöcke an die Process-Methode. <br>
 
 
 * **Multithreading:** Multithreading bezeichnet in der Informatik das gleichzeitige Abarbeiten mehrerer Threads (Ausführungsstränge) innerhalb eines einzelnen Prozesses oder eines Tasks (ein Anwendungsprogramm). <br>
