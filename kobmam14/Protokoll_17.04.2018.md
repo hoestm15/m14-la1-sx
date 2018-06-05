@@ -158,6 +158,8 @@ Mit dem SwingWorker gehen neue Methoden einher: <br>
 
 * *"publish()":* Sendet Datenblöcke an die Process-Methode. <br>
 
+![](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/SwingWorker.png)
+
 
 * **Multithreading:** Multithreading bezeichnet in der Informatik das gleichzeitige Abarbeiten mehrerer Threads (Ausführungsstränge) innerhalb eines einzelnen Prozesses oder eines Tasks (ein Anwendungsprogramm). <br>
 *Quelle: [Wikipedia, Multithreading](https://de.wikipedia.org/wiki/Multithreading)* 
