@@ -7,3 +7,13 @@ Gruppe: 2
 Anwesend: Nebel Florian, Mandl Gerhard, Michael Mörth, Moritz Martinak, Mario Nabernik, Muri Lorenz, Platzer Andreas, Marcel Köhler    
 Abwesend: -
 
+## Kurze Wiederholung der letzten Einheit
+### Java Native Interface ([JNI](https://de.wikipedia.org/wiki/Java_Native_Interface))
+> Java Native Interface (JNI) ist eine standardisierte **Anwendungsprogrammierschnittstelle** (API), die die Möglichkeit schafft, aus der Programmiersprache Java heraus Plattform-spezifische Funktionen bzw. Methoden aufzurufen.
+Im Gegensatz zu gewöhnlichen Java-Programmen ist ein Java-Programm, das JNI-Aufrufe verwendet, nur dann plattformunabhängig, wenn die native **Programmbibliothek auf allen Plattformen verfügbar ist**. <
+
+> JNI ermöglicht es, native Methoden zu schreiben für Situationen, in denen es **nicht möglich ist**, **ausschließlich Java** als Programmiersprache einzusetzen. Dies ist der Fall, wenn beispielsweise die Standard-Java-Klassenbibliothek bestimmte Plattform-abhängige Features oder andere Programmbibliotheken nicht unterstützt. Weiterhin ist es per JNI möglich, eine weitere **in einer anderen Programmiersprache programmierte Anwendung für Java zugreifbar zu machen**. Viele Klassen der Java-Standardbibliothek basieren auf JNI, um beispielsweise die Datei-Ein- und Ausgabe oder Soundwiedergabe zu ermöglichen. Indem Java Leistungs- und Plattform-abhängige Implementierungen in die Standardbibliothek integriert, kann der Java-Programmierer und -Nutzer diese Features in sicherer und Plattform-unabhängiger Weise nutzen. <
+
+> Gelegentlich wird JNI als **Fluchttür** ("escape hatch") für Java-Entwickler bezeichnet, da es ihnen den Zugriff auf Funktionalitäten ermöglicht, der andernfalls über die Standard-Java-API nicht möglich wäre. Es stellt die Schnittstelle zu anderen Programmiersprachen wie C oder C++ dar. <
+
+*Quelle: [Wikipedia](https://de.wikipedia.org/wiki/Java_Native_Interface)*
