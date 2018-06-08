@@ -12,3 +12,5 @@
   * Abwesend
 * Gruppe 2: 6. Einheit, 20.02.2018
   * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll_20.02.2018.md)
+* Gruppe 2: 7. Einheit, 24.04.2018
+  * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll_24.04.2018.md)
