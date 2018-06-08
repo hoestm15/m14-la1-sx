@@ -70,6 +70,13 @@ Für genaure Informationen zu den Methoden kann das [Protokoll der letzten Einhe
 ```
 Die Funktion `connect()` wurde im Laufe der Stunde erweitert. Unter anderem wurden die Parameter für die serielle Schnittstelle festgelegt. Für den Fall das ein Fehler auftritt, wurde zur richtigen Behandlung des Fehlers ein weiteres try-catch eingebaut.
 
+| Parameter | Beschreibung |
+| --------- | ------------ |
+| `SerialPort.BAUDRATE_57600` | Legt die Baudrate fest --> 57600 |
+| `SerialPort.DATABITS_8` | Legt die Anzahl der Databits auf 8 fest |
+| `SerialPort.STOPBITS_2` | Legt die Anzahl der Stoppbits auf 2 fest  |
+| `SerialPort.PARITY_NONE` | Legt die Art der Parity fest (ODD, EVEN, NONE) |
+
 Sollte beim Verbinden mit der seriellen Schnittstelle, ein Fehler auftreten, so fangt das erste catch ein Object vom Typ `Throwable` und versucht den Port, falls einer geöffnet wurde wieder zu schließen. Sollte dabei wieder ein Fehler auftreten, wird im zweiten catch wieder ein Object vom Typ `Throwable` gefangen. Im zweiten catch wird dann der Cause des zweiten Fehlers an den Cause des ersten Fehlers angehänt und anschließend wird die Methode `showThrowable()` aufgerufen und die Variable `serialPort` wird wieder auf `null` gesetzt.
 
 #### Der Befehl addSupressed()
