@@ -72,7 +72,7 @@ Die Funktion `connect()` wurde im Laufe der Stunde erweitert. Unter anderem wurd
 
 | Parameter | Beschreibung |
 | --------- | ------------ |
-| `SerialPort.BAUDRATE_57600` | Legt die Baudrate fest --> 57600 |
+| `SerialPort.BAUDRATE_57600` | Legt die Baudrate auf 57600 fest |
 | `SerialPort.DATABITS_8` | Legt die Anzahl der Databits auf 8 fest |
 | `SerialPort.STOPBITS_2` | Legt die Anzahl der Stoppbits auf 2 fest  |
 | `SerialPort.PARITY_NONE` | Legt die Art der Parity fest (ODD, EVEN, NONE) |
@@ -84,3 +84,45 @@ Sollte beim Verbinden mit der seriellen Schnittstelle, ein Fehler auftreten, so 
 
 *Quelle: [Javadoc](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html#addSuppressed(java.lang.Throwable))*
 
+### Die Methode updateSwingControlles()
+```java
+  public void updateSwingControlles()
+  {
+    jcbSerialDevice.setEnabled(false);
+    jbutConnect.setEnabled(false);
+    jbutContinousMeasurement.setEnabled(false);
+    jbutDisconnect.setEnabled(false);
+    jbutRefresh.setEnabled(false);
+    jbutSingleMeasurement.setEnabled(false);
+    jbutStopMeasurement.setEnabled(false);
+    jlaTemperatur.setEnabled(false);
+    
+    if(activeWorker != null)
+    {
+      setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+      return;
+    }
+    
+    setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+    jlaTemperatur.setEnabled(true);
+    
+    if(serialPort != null && serialPort.isOpened()) //Es wurde eine Verbindung mit einem Port erstellt -> Trennen möglich
+    {
+      jbutDisconnect.setEnabled(true);
+      jbutSingleMeasurement.setEnabled(true);
+      return;
+    } 
+
+    if(ports != null && ports.length > 0) //Verbinden mit einem Port möglich
+    {
+      jcbSerialDevice.setEnabled(true);
+      jbutConnect.setEnabled(true);
+      jbutRefresh.setEnabled(true);
+    }
+    else if(ports != null && ports.length == 0)
+      jbutRefresh.setEnabled(true); 
+  }
+```
+Erweiter wurde diese Methode mit einer Weiteren `if-Verzweigung`. Mit `if(activeWorker) != null` wird überprüft, ob ein Worker aktiv ist. Wenn ein Worker aktiv ist, soll der Standard Cursor durch den `WAIT_CURSOR` ersetzt werden, die GUI soll aber weiterhin benutzbar sein.
+
+### Handler Methoden
