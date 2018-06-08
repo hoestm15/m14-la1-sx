@@ -80,7 +80,7 @@ Die Funktion `connect()` wurde im Laufe der Stunde erweitert. Unter anderem wurd
 Sollte beim Verbinden mit der seriellen Schnittstelle, ein Fehler auftreten, so fangt das erste catch ein Object vom Typ `Throwable` und versucht den Port, falls einer geöffnet wurde wieder zu schließen. Sollte dabei wieder ein Fehler auftreten, wird im zweiten catch wieder ein Object vom Typ `Throwable` gefangen. Im zweiten catch wird dann der Cause des zweiten Fehlers an den Cause des ersten Fehlers angehänt und anschließend wird die Methode `showThrowable()` aufgerufen und die Variable `serialPort` wird wieder auf `null` gesetzt.
 
 #### Der Befehl addSupressed()
-> Appends the specified exception to the exceptions that were suppressed in order to deliver this exception. This method is thread-safe and typically called (automatically and implicitly) by the try-with-resources statement. <
+> Appends the specified exception to the exceptions that were suppressed in order to deliver this exception. This method is thread-safe and typically called (automatically and implicitly) by the try-with-resources statement. 
 
 *Quelle: [Javadoc](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html#addSuppressed(java.lang.Throwable))*
 
