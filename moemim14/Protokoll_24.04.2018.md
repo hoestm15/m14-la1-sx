@@ -125,4 +125,48 @@ Sollte beim Verbinden mit der seriellen Schnittstelle, ein Fehler auftreten, so 
 ```
 Erweiter wurde diese Methode mit einer Weiteren `if-Verzweigung`. Mit `if(activeWorker) != null` wird überprüft, ob ein Worker aktiv ist. Wenn ein Worker aktiv ist, soll der Standard Cursor durch den `WAIT_CURSOR` ersetzt werden, die GUI soll aber weiterhin benutzbar sein.
 
-### Handler Methoden
+### Neue Methode startSingleMeasurement()
+```java
+  private void startSingleMeasurement()
+  {
+    activeWorker = new MySingleMeasurementWorker(serialPort);
+    activeWorker.execute();
+    updateSwingControlles();
+  }
+```
+Diese Methode starte den SwingWorker. Hierführ wird der aktuelle Port benötigt, welcher in der Variable `serialPort` gespeichert ist.
+
+## Die SwingWorker Klasse SingleMeasurementWorker
+```java
+package workers;
+import java.util.concurrent.TimeUnit;
+import javax.swing.SwingWorker;
+import jssc.SerialPort;
+
+
+/**
+ *
+ * @author michael
+ */
+public class SingleMeasurementWorker extends SwingWorker<Double,String>
+{
+  private final jssc.SerialPort serialPort;
+
+  public SingleMeasurementWorker (SerialPort serialPort)
+  {
+    this.serialPort = serialPort;
+  }
+  
+  @Override
+  protected Double doInBackground () throws Exception
+  {
+    int [] frame = {0x02,0x04,0x00,0x30,0x00,0x01,0x31,0xf6};
+    serialPort.writeIntArray(frame);
+    TimeUnit.SECONDS.sleep(1);
+    int [] response = serialPort.readIntArray();
+    System.out.println(response.length);
+    double temp = response[3]+response[4] / 256.0;
+    return temp;
+  } 
+}
+```
