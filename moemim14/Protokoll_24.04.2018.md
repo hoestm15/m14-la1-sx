@@ -8,7 +8,7 @@ Anwesend: Nebel Florian, Mandl Gerhard, Michael Mörth, Moritz Martinak, Mario N
 Abwesend: -
 
 ## Kurze Wiederholung der letzten Einheit
-### Java Native Interface ([JNI](https://de.wikipedia.org/wiki/Java_Native_Interface))
+### Java Native Interface
 > Java Native Interface (JNI) ist eine standardisierte **Anwendungsprogrammierschnittstelle** (API), die die Möglichkeit schafft, aus der Programmiersprache Java heraus Plattform-spezifische Funktionen bzw. Methoden aufzurufen.
 Im Gegensatz zu gewöhnlichen Java-Programmen ist ein Java-Programm, das JNI-Aufrufe verwendet, nur dann plattformunabhängig, wenn die native **Programmbibliothek auf allen Plattformen verfügbar ist**. 
 
