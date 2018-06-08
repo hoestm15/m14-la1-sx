@@ -125,6 +125,12 @@ Sollte beim Verbinden mit der seriellen Schnittstelle, ein Fehler auftreten, so 
 ```
 Erweitert wurde diese Methode mit einer Weiteren `if-Verzweigung`. Mit `if(activeWorker) != null` wird überprüft, ob ein Worker aktiv ist. Wenn ein Worker aktiv ist, soll der Standard Cursor durch den `WAIT_CURSOR` ersetzt werden, die GUI soll aber weiterhin benutzbar sein.
 
+### Neue Klassenvariable `activeWorker`
+```java
+  private SwingWorker activeWorker;
+```
+Diese Klassenvariable wird in der GUI-Klasse angelegt und wid in der Methode `startSingleMeasurement()` dazu verwendet, den Worker zu starten. Außerdem wird die Variable in der Methode `updateSwingControlls()` verwendet, um zu erkennen, ob ein Worker gestartet wurde oder nicht.
+
 ### Neue Methode startSingleMeasurement()
 ```java
   private void startSingleMeasurement()
