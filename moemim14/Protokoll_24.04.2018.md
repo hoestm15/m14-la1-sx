@@ -224,7 +224,8 @@ Da der Wert die 256 eines Integer Wertes übersteigen kann, wird die `response` 
     @Override
     protected void process (List<String> chunks)
     {
-      
+
     }  
   }
 ```
+In der Methode `done()` wird nach dem Beenden der Methode `doInBackground()` mit Hilfe der Methode `get()` der Rückgabewert in die Variable `temp` gespeichert und anschließen im Label formatiert ausgegeben.
