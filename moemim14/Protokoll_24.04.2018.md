@@ -84,7 +84,7 @@ Sollte beim Verbinden mit der seriellen Schnittstelle, ein Fehler auftreten, so 
 
 *Quelle: [Javadoc](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html#addSuppressed(java.lang.Throwable))*
 
-### Die Methode updateSwingControlles()
+### Die Methode `updateSwingControlles()`
 ```java
   public void updateSwingControlles()
   {
@@ -131,7 +131,7 @@ Erweitert wurde diese Methode mit einer Weiteren `if-Verzweigung`. Mit `if(activ
 ```
 Diese Klassenvariable wird in der GUI-Klasse angelegt und wid in der Methode `startSingleMeasurement()` dazu verwendet, den Worker zu starten. Außerdem wird die Variable in der Methode `updateSwingControlls()` verwendet, um zu erkennen, ob ein Worker gestartet wurde oder nicht.
 
-### Neue Methode startSingleMeasurement()
+### Neue Methode `startSingleMeasurement()`
 ```java
   private void startSingleMeasurement()
   {
