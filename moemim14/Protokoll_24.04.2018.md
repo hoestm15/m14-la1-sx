@@ -10,11 +10,11 @@ Abwesend: -
 ## Kurze Wiederholung der letzten Einheit
 ### Java Native Interface ([JNI](https://de.wikipedia.org/wiki/Java_Native_Interface))
 > Java Native Interface (JNI) ist eine standardisierte **Anwendungsprogrammierschnittstelle** (API), die die Möglichkeit schafft, aus der Programmiersprache Java heraus Plattform-spezifische Funktionen bzw. Methoden aufzurufen.
-Im Gegensatz zu gewöhnlichen Java-Programmen ist ein Java-Programm, das JNI-Aufrufe verwendet, nur dann plattformunabhängig, wenn die native **Programmbibliothek auf allen Plattformen verfügbar ist**. <
+Im Gegensatz zu gewöhnlichen Java-Programmen ist ein Java-Programm, das JNI-Aufrufe verwendet, nur dann plattformunabhängig, wenn die native **Programmbibliothek auf allen Plattformen verfügbar ist**. 
 
-> JNI ermöglicht es, native Methoden zu schreiben für Situationen, in denen es **nicht möglich ist**, **ausschließlich Java** als Programmiersprache einzusetzen. Dies ist der Fall, wenn beispielsweise die Standard-Java-Klassenbibliothek bestimmte Plattform-abhängige Features oder andere Programmbibliotheken nicht unterstützt. Weiterhin ist es per JNI möglich, eine weitere **in einer anderen Programmiersprache programmierte Anwendung für Java zugreifbar zu machen**. Viele Klassen der Java-Standardbibliothek basieren auf JNI, um beispielsweise die Datei-Ein- und Ausgabe oder Soundwiedergabe zu ermöglichen. Indem Java Leistungs- und Plattform-abhängige Implementierungen in die Standardbibliothek integriert, kann der Java-Programmierer und -Nutzer diese Features in sicherer und Plattform-unabhängiger Weise nutzen. <
+> JNI ermöglicht es, native Methoden zu schreiben für Situationen, in denen es **nicht möglich ist**, **ausschließlich Java** als Programmiersprache einzusetzen. Dies ist der Fall, wenn beispielsweise die Standard-Java-Klassenbibliothek bestimmte Plattform-abhängige Features oder andere Programmbibliotheken nicht unterstützt. Weiterhin ist es per JNI möglich, eine weitere **in einer anderen Programmiersprache programmierte Anwendung für Java zugreifbar zu machen**. Viele Klassen der Java-Standardbibliothek basieren auf JNI, um beispielsweise die Datei-Ein- und Ausgabe oder Soundwiedergabe zu ermöglichen. Indem Java Leistungs- und Plattform-abhängige Implementierungen in die Standardbibliothek integriert, kann der Java-Programmierer und -Nutzer diese Features in sicherer und Plattform-unabhängiger Weise nutzen. 
 
-> Gelegentlich wird JNI als **Fluchttür** ("escape hatch") für Java-Entwickler bezeichnet, da es ihnen den Zugriff auf Funktionalitäten ermöglicht, der andernfalls über die Standard-Java-API nicht möglich wäre. Es stellt die Schnittstelle zu anderen Programmiersprachen wie C oder C++ dar. <
+> Gelegentlich wird JNI als **Fluchttür** ("escape hatch") für Java-Entwickler bezeichnet, da es ihnen den Zugriff auf Funktionalitäten ermöglicht, der andernfalls über die Standard-Java-API nicht möglich wäre. Es stellt die Schnittstelle zu anderen Programmiersprachen wie C oder C++ dar. 
 
 *Quelle: [Wikipedia](https://de.wikipedia.org/wiki/Java_Native_Interface)*
 
@@ -136,13 +136,13 @@ Erweitert wurde diese Methode mit einer Weiteren `if-Verzweigung`. Mit `if(activ
 ```
 Diese Methode starte den SwingWorker. Hierführ wird der aktuelle Port benötigt, welcher in der Variable `serialPort` gespeichert ist.
 
-## SwingWorker
+## [SwingWorker](https://docs.oracle.com/javase/7/docs/api/javax/swing/SwingWorker.html)
 ### Was ist Multithreading?
-> Multithreading (auch Nebenläufigkeit, Mehrsträngigkeit oder Mehrfädigkeit genannt) bezeichnet in der Informatik das gleichzeitige (oder quasi-gleichzeitige) Abarbeiten mehrerer Threads (Ausführungsstränge) innerhalb eines einzelnen Prozesses oder eines Tasks (ein Anwendungsprogramm). <
+> Multithreading (auch Nebenläufigkeit, Mehrsträngigkeit oder Mehrfädigkeit genannt) bezeichnet in der Informatik das gleichzeitige (oder quasi-gleichzeitige) Abarbeiten mehrerer Threads (Ausführungsstränge) innerhalb eines einzelnen Prozesses oder eines Tasks (ein Anwendungsprogramm). 
 
-> Im Gegensatz zum Multitasking, bei dem mehrere unabhängige Programme voneinander abgeschottet quasi-gleichzeitig ausgeführt werden, sind die Threads eines Anwendungsprogramms nicht voneinander abgeschottet und können somit durch sogenannte Race Conditions Fehler verursachen, die durch Synchronisation vermieden werden müssen. <
+> Im Gegensatz zum Multitasking, bei dem mehrere unabhängige Programme voneinander abgeschottet quasi-gleichzeitig ausgeführt werden, sind die Threads eines Anwendungsprogramms nicht voneinander abgeschottet und können somit durch sogenannte Race Conditions Fehler verursachen, die durch Synchronisation vermieden werden müssen. 
 
-> Sowohl Multithreading als auch Multitasking können entweder auf nur einem Prozessorkern ausgeführt werden, als auch zusätzlich mit Multiprocessing kombiniert werden (echt-parallele Ausführung durch mehrere Prozessorkerne). <
+> Sowohl Multithreading als auch Multitasking können entweder auf nur einem Prozessorkern ausgeführt werden, als auch zusätzlich mit Multiprocessing kombiniert werden (echt-parallele Ausführung durch mehrere Prozessorkerne). 
 
 *Quelle: [Wikipedia](https://de.wikipedia.org/wiki/Multithreading)*
 
@@ -156,7 +156,6 @@ Diese Methode starte den SwingWorker. Hierführ wird der aktuelle Port benötigt
 | `done()` | Innere Klasse | Wird sofort aufgerufen nachdem `doInBackground()` beendet oder abgebrochen wurde, oder ein Fehler aufgetreten ist. |
 | `execute()` | *über Objekt aufgerufen* | Startet den WorkerThread |
 | `cancel()` | *über Objekt aufgerufen* | Versucht den WorkerThread zu beenden |
-
 
 ### Die Klasse SingleMeasurementWorker
 ```java
@@ -191,4 +190,41 @@ public class SingleMeasurementWorker extends SwingWorker<Double,String>
     return temp;
   } 
 }
+```
+Da der Wert die 256 eines Integer Wertes übersteigen kann, wird die `response` in zwei Bytes aufgeteilt, ein `lowbyte` und ein `highbyte`. Die Konfigurationen für den Aufbau des Frames stammen aus der README des Projektes, vom SVN-Server Arnfels.
+
+### Die innere Klasse MySingleMeasurementWorker
+```java
+  private class MySingleMeasurementWorker extends SingleMeasurementWorker
+  {
+    public MySingleMeasurementWorker (SerialPort serialPort)
+    {
+      super(serialPort);
+    }
+
+    @Override
+    protected void done ()
+    {
+      try
+      {
+        double temp = get();
+        jlaTemperatur.setText(String.format("%.01f °C", temp));
+      }
+      catch (Exception ex)
+      {
+        showThrowable("Einzelmessung gescheitert", ex);
+      }
+      finally
+      {
+        activeWorker = null;
+        updateSwingControlles();
+      }
+    }
+
+    @Override
+    protected void process (List<String> chunks)
+    {
+      
+    }  
+  }
 ```
