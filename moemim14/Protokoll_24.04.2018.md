@@ -123,7 +123,7 @@ Sollte beim Verbinden mit der seriellen Schnittstelle, ein Fehler auftreten, so 
       jbutRefresh.setEnabled(true); 
   }
 ```
-Erweiter wurde diese Methode mit einer Weiteren `if-Verzweigung`. Mit `if(activeWorker) != null` wird überprüft, ob ein Worker aktiv ist. Wenn ein Worker aktiv ist, soll der Standard Cursor durch den `WAIT_CURSOR` ersetzt werden, die GUI soll aber weiterhin benutzbar sein.
+Erweitert wurde diese Methode mit einer Weiteren `if-Verzweigung`. Mit `if(activeWorker) != null` wird überprüft, ob ein Worker aktiv ist. Wenn ein Worker aktiv ist, soll der Standard Cursor durch den `WAIT_CURSOR` ersetzt werden, die GUI soll aber weiterhin benutzbar sein.
 
 ### Neue Methode startSingleMeasurement()
 ```java
@@ -136,7 +136,29 @@ Erweiter wurde diese Methode mit einer Weiteren `if-Verzweigung`. Mit `if(active
 ```
 Diese Methode starte den SwingWorker. Hierführ wird der aktuelle Port benötigt, welcher in der Variable `serialPort` gespeichert ist.
 
-## Die SwingWorker Klasse SingleMeasurementWorker
+## SwingWorker
+### Was ist Multithreading?
+> Multithreading (auch Nebenläufigkeit, Mehrsträngigkeit oder Mehrfädigkeit genannt) bezeichnet in der Informatik das gleichzeitige (oder quasi-gleichzeitige) Abarbeiten mehrerer Threads (Ausführungsstränge) innerhalb eines einzelnen Prozesses oder eines Tasks (ein Anwendungsprogramm). <
+
+> Im Gegensatz zum Multitasking, bei dem mehrere unabhängige Programme voneinander abgeschottet quasi-gleichzeitig ausgeführt werden, sind die Threads eines Anwendungsprogramms nicht voneinander abgeschottet und können somit durch sogenannte Race Conditions Fehler verursachen, die durch Synchronisation vermieden werden müssen. <
+
+> Sowohl Multithreading als auch Multitasking können entweder auf nur einem Prozessorkern ausgeführt werden, als auch zusätzlich mit Multiprocessing kombiniert werden (echt-parallele Ausführung durch mehrere Prozessorkerne). <
+
+*Quelle: [Wikipedia](https://de.wikipedia.org/wiki/Multithreading)*
+
+### Wichtige Methoden im Umgang mit dem SwingWorker
+| Methode | Klasse | Beschreibung |
+| ------- | ------ | ------------ |
+| `doInBackground()` | Worker-Klasse | Alle Befehle in dieser Methode werden im zweiten Thread ausgeführt. |
+| `publish()` | Worker-Klasse | Wird verwendet um mit dem [EDT-Thread](https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html) zu kommunizieren. |
+| `process()` | Innere Klasse | Diese Methode übernimmt die Aufgaben im EDT-Thread, während der zweite Thread arbeitet. |
+| `get()` | Innere Klasse | Liefert den Rückgabewert von `doInBackground()` |
+| `done()` | Innere Klasse | Wird sofort aufgerufen nachdem `doInBackground()` beendet oder abgebrochen wurde, oder ein Fehler aufgetreten ist. |
+| `execute()` | *über Objekt aufgerufen* | Startet den WorkerThread |
+| `cancel()` | *über Objekt aufgerufen* | Versucht den WorkerThread zu beenden |
+
+
+### Die Klasse SingleMeasurementWorker
 ```java
 package workers;
 import java.util.concurrent.TimeUnit;
