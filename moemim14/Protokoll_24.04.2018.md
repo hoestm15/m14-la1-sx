@@ -17,3 +17,16 @@ Im Gegensatz zu gewöhnlichen Java-Programmen ist ein Java-Programm, das JNI-Auf
 > Gelegentlich wird JNI als **Fluchttür** ("escape hatch") für Java-Entwickler bezeichnet, da es ihnen den Zugriff auf Funktionalitäten ermöglicht, der andernfalls über die Standard-Java-API nicht möglich wäre. Es stellt die Schnittstelle zu anderen Programmiersprachen wie C oder C++ dar. <
 
 *Quelle: [Wikipedia](https://de.wikipedia.org/wiki/Java_Native_Interface)*
+
+### Beschrechen der programmierten Methoden in der letzten Einheit
+Nach der kurzen Wiederholung über JNI, haben wir damit begonnen, die Methoden, welche wir in der letzten Einheit programmiert hatten, noch einmal kurz durchzusprechen. 
+Folgende Mehtoden wurden bereits realisiert:
+  * Konstruktor
+  * `showThrowable()`
+  * `updateSwingControlls()`
+  * `refresh()`
+  * `connect()`
+  * `disconnect()`
+  * ActionPerformed Methoden
+  
+Für genaure Informationen zu den Methoden kann das [Protokoll der letzten Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll_20.02.2018.md#der-quellcode) verwendet werden.
