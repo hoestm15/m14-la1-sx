@@ -30,3 +30,42 @@ Folgende Mehtoden wurden bereits realisiert:
   * ActionPerformed Methoden
   
 Für genaure Informationen zu den Methoden kann das [Protokoll der letzten Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll_20.02.2018.md#der-quellcode) verwendet werden.
+
+## Erweiterungen und Verbessereungen des Quellcodes
+### Die Methode `connect()`
+```java
+  private void connect()
+  {
+    try //erstes try
+    {
+      String port = (String) jcbSerialDevice.getSelectedItem();
+      serialPort = new jssc.SerialPort(port);
+      serialPort.openPort();
+      serialPort.setParams(
+              SerialPort.BAUDRATE_57600,
+              SerialPort.DATABITS_8,
+              SerialPort.STOPBITS_2,
+              SerialPort.PARITY_NONE);
+      updateSwingControlles();
+    }
+    catch (Throwable th)
+    {
+      try //zweites try
+      {
+        if(serialPort != null && serialPort.isOpened())
+          serialPort.closePort();
+      }
+      catch(Throwable th2)
+      {
+        th.addSuppressed(th2);
+      }
+      finally
+      {
+        updateSwingControlles();
+      }
+      showThrowable("Serielle Schnittstelle kann nicht geöffnet werden", th);
+      serialPort = null;
+    }    
+  }
+```
+Die Funktion `connect()` wurde im Laufe der Stunde erweitert. Unter anderem wurden die Parameter für die serielle Schnittstelle 
