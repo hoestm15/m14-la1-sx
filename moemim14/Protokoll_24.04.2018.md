@@ -75,4 +75,5 @@ Sollte beim Verbinden mit der seriellen Schnittstelle, ein Fehler auftreten, so 
 #### Der Befehl addSupressed()
 > Appends the specified exception to the exceptions that were suppressed in order to deliver this exception. This method is thread-safe and typically called (automatically and implicitly) by the try-with-resources statement. <
 
-*Quelle: [Javadoc](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html)*
+*Quelle: [Javadoc](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html#addSuppressed(java.lang.Throwable))*
+
