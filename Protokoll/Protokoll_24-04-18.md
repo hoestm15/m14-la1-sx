@@ -1,11 +1,11 @@
-# Protokoll 7 24.04.2018
-
-Name: Mario Nabernik
-Klasse: 4AHME  
-Gruppe: 2  
-
-Anwesend: Nebel Florian, Mandl Gerhard, Michael Mörth, Moritz Martinak, Mario Nabernik, Muri Lorenz, Platzer Andreas, Marcel Köhler    
-Abwesend: -
+# Protokoll der 1.Einheit
+* Name: Mario Nabernik
+* Klasse: 4AHME
+* Datum: 24.04.2018
+* Gruppe: 2
+* Anwesend: Marcel Köhler, Michael Mörth, Florian Nebel, Lorenz Muri, Moritz Martinak, Andreas Platzer, Mario Nabernik, Gerhard Mandl  
+* Abwesend: -
+* Thema: SwingWorker
 
 ## Wiederholung der [letzten Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/moemim14/Protokoll_20.02.2018.md#der-quellcode)
 ### Java Native Interface
@@ -26,11 +26,11 @@ Die Methoden, die wir bereits in der letzten Einheit realisiert haben:
   
   * `updateSwingControlls()`
   * `disconnect()`
-  * Konstruktor
+  * `Konstruktor`
   * `refresh()`
   * `connect()`
   * `showThrowable()`
-  * ActionPerformed Methoden
+  * `ActionPerformed Methoden`
 
 ## Geschriebener Code in dieser Einheit
 ### Die Methode `connect()`
@@ -233,4 +233,3 @@ in ein `lowbyte` und ein `highbyte` aufgeteilt.
     }  
   }
 ```
-In der Methode `done()` wird nach dem Beenden der Methode `doInBackground()` mit Hilfe der Methode `get()` der Rückgabewert in die Variable `temp` gespeichert und anschließen im Label formatiert ausgegeben.
