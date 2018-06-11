@@ -112,7 +112,7 @@ Diese Methode startet eine einen neuen Thread. Dazu wird der port benötigt welc
     }                                                                          //
   }
 ```
-Dieser Methode wurden Parameter für die Serielle Schnittstelle hinzugefügt sowie ein weiteres `try-catch` für den fall des ein Fehler auftreten soll, das dieser auch passend behandelt wird. Sollte beim versuch eine verbindung aufzubauen ein Fehler auftreten wird dieser beim ersten catch behandelt. In diesem wird versucht den Port zu schließen. Tritt dort wieder ein Fehler auf wird dieser im zweiten catch behandelt. Dort wir die Ursache des ersten Fehlers + die des zweitens mit der funktion `showThrowable()`ausgegeben und der port auf `null`gesetzt.
+Dieser Methode wurden Parameter für die Serielle Schnittstelle hinzugefügt sowie ein weiteres `try-catch` für den fall des ein Fehler auftritt, dass dieser auch passend behandelt wird. Sollte beim Versuch eine verbindung aufzubauen ein Fehler auftreten wird dieser beim ersten catch behandelt. In diesem wird versucht den Port zu schließen. Tritt dort wieder ein Fehler auf wird dieser im zweiten catch behandelt. Dort wir die Ursache des ersten Fehlers + die des zweitens mit der funktion `showThrowable()`ausgegeben und der port auf `null`gesetzt.
 
 ```java
               SerialPort.BAUDRATE_57600,        //  stellt die bautrate auf 57600 ein
