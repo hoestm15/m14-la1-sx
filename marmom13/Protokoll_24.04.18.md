@@ -20,4 +20,13 @@ Zu beginn der Stunde besprachen wir das Programm welches wir in der letzen Einhe
 
 >Um diese Schnittstelle zwischen Java und konkreter Plattform kümmert sich das Java Native Interface (JNI). Mithilfe von JNI können aus der JVM heraus plattformspezifische Funktionen verwendet werden. Die native Funktion – wir gehen im Folgenden von einer Funktion in C aus – kann aber auch wieder die JVM steuern und Objekte erfragen, Ausnahmen auslösen, neue Klassen laden usw. 
 
-*Quelle: [Java 7: Mehr als eine Insel](http://openbook.rheinwerk-verlag.de/java7/1507_21_001.html)*
+*Quelle: [Java 7: Mehr als eine Insel](http://openbook.rheinwerk-verlag.de/java7/1507_21_001.html)*  
+
+## Programmieren  
+
+### startSingleMeasurement()  
+
+Diese neue Methode dient dazu den SwingWorker zu starten:
+
+```java
+```
