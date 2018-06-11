@@ -2,7 +2,7 @@
 ## 7.Einheit
 ## Thema: Verbesserung/Erweiterung des Quellcodes
 Klasse: 4AHME  
-Anwesend:Nebel Florian, Mandl Gerhard, Michael Mörth, Moritz Martinak, Mario Nabernik, Muri Lorenz, Platzer Andreas, Marcel Köhler 
+Anwesend:Nebel Florian, Mandl Gerhard, Michael Mörth, Moritz Martinak, Mario Nabernik, Muri Lorenz, Platzer Andreas, Marcel Köhler  
 Abwesend: niemand  
 
 ### Neue Variable
