@@ -20,6 +20,7 @@ Am Beginn der Einheit haben wir das Programm der letzten Einheit besprochen und 
 <br>
 
 ## Erweiterterungen des Quellcodes
+### connect()
 ```java
 private void connect ()
   {
@@ -58,5 +59,8 @@ private void connect ()
     }
   } 
 ```
-  
+### updateSwingControlles
 
+
+## SwingWorker
+### SingleMeasurementWorker
