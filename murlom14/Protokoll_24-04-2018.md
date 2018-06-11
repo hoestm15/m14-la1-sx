@@ -20,7 +20,8 @@ Am Beginn der Einheit haben wir das Programm der letzten Einheit besprochen und 
 <br>
 
 ## Erweiterterungen des Quellcodes
-` private void connect ()
+```java
+private void connect ()
   {
     try
     {
@@ -55,6 +56,6 @@ Am Beginn der Einheit haben wir das Programm der letzten Einheit besprochen und 
     {
       updateSwingControls();
     }
-  } `
+  } ```
   
 
