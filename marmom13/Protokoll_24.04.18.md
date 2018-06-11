@@ -29,4 +29,10 @@ Zu beginn der Stunde besprachen wir das Programm welches wir in der letzen Einhe
 Diese neue Methode dient dazu den SwingWorker zu starten:
 
 ```java
+private void startSingleMeasurement()
+  {
+    activeWorker =  new MySingleMeasurementWorker(serialPort);
+    activeWorker.execute();
+    updateSwingControls();
+  }
 ```
