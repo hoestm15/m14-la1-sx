@@ -12,8 +12,12 @@ Für die Verbindung zwischen Java GUI und PC soll das Feldbussystem Modbus verwe
 Das Programm wurde bereits in der vorherigen Einheit begonnen, konnte aber nicht fertig gestellt werden.
 [Protokoll der vorherigen Einheit]( m14-la1-sx/suspam14/Protokoll6.md)
 
-# Swing Worker
-## GuiSingleMeasurmentWorker
+# SwingWorker
+Der Swingworker ist eine Klasse zur Verwendung von Multithreading in einer Java Swing-Gui.
+## Multithreading
+Multithreading ist das parallele arbeiten von mehreren Threads innerhalb eines einzigen Programms. Das Programm wird somit auf mehrere CPU-Threads aufgeteilt. Es kommt somit zu keinen Verzögerungen durch z.B. Ladevorgänge oder komplexe Rechenvorgänge da diese im Hintergrund ausgeführt werden.
+## SingleMeasurmentWorker
+Der SingleMeasurementWorker soll an den Modbus-Slave (Sureboard) eine Anfrage senden, dass dieser den ausgelesenen Wert des Temperatursensors and die JAVA-Gui übermittelt. Dazu senden wir eine Anfrage mit 8 Bytes und warten 100ms auf eine Antwort. Falls kein Paket angekommen ist oder das Paket ungültig ist wird durch die Fehlerbehandlung eine Exception geworfen. Der empfangene Temperaturwert besteht aus zwei Bytes, einem High-Byte und einem Low-Byte. Das muss beim auslesen beachtet werden. Der aus den zwei Bytes zusammengerechnte Wert (zwischen 0 und 256) wird danach in Grad Celsius umgewandelt und zurückgegeben.
 ```java
 public class SingleMeasurementWorker extends SwingWorker<Double, String> {
 
