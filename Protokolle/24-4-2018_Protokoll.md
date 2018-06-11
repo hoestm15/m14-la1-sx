@@ -15,6 +15,7 @@ Diese wird für Multithreading benötigt um später einen neuen Thread zu starte
 ```java
   public void updateSwingControlles()
   {
+  
     jcbSerialDevice.setEnabled(false);
     jbutConnect.setEnabled(false);
     jbutContinousMeasurement.setEnabled(false);
@@ -33,20 +34,25 @@ Diese wird für Multithreading benötigt um später einen neuen Thread zu starte
     setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
     jlaTemperatur.setEnabled(true);
     
-    if(serialPort != null && serialPort.isOpened()) //Es wurde eine Verbindung mit einem Port erstellt -> Trennen möglich
+    if(serialPort != null && serialPort.isOpened()) 
     {
+    
       jbutDisconnect.setEnabled(true);
       jbutSingleMeasurement.setEnabled(true);
       return;
-    } 
+      
+    }
 
-    if(ports != null && ports.length > 0) //Verbinden mit einem Port möglich
+    if(ports != null && ports.length > 0)
     {
+    
       jcbSerialDevice.setEnabled(true);
       jbutConnect.setEnabled(true);
       jbutRefresh.setEnabled(true);
+      
     }
     else if(ports != null && ports.length == 0)
+    
       jbutRefresh.setEnabled(true); 
   }
 ```
@@ -57,9 +63,11 @@ Es wurde eine weitere `if-Verzweigung` hinzugefügt in der wird mit dem ausdruck
 ```java
   private void startSingleMeasurement()
   {
+  
     activeWorker = new MySingleMeasurementWorker(serialPort);
     activeWorker.execute();
     updateSwingControlles();
+    
   }
 ```
 
@@ -73,6 +81,7 @@ Diese Methode startet eine einen neuen Thread. Dazu wird der port benötigt welc
   {
     try //erstes try
     {
+    
       String port = (String) jcbSerialDevice.getSelectedItem();
       serialPort = new jssc.SerialPort(port);
       serialPort.openPort();
@@ -134,9 +143,10 @@ public class SingleMeasurementWorker extends SwingWorker<Double,String>
   protected Double doInBackground () throws Exception
   {
     int [] frame = {0x02,0x04,0x00,0x30,0x00,0x01,0x31,0xf6};
+    int [] response = serialPort.readIntArray();
+    
     serialPort.writeIntArray(frame);
     TimeUnit.SECONDS.sleep(1);
-    int [] response = serialPort.readIntArray();
     System.out.println(response.length);
     double temp = response[3]+response[4] / 256.0;
     return temp;
