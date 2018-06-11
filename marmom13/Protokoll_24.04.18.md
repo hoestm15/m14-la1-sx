@@ -26,13 +26,95 @@ Zu beginn der Stunde besprachen wir das Programm welches wir in der letzen Einhe
 
 ### startSingleMeasurement()  
 
-Diese neue Methode dient dazu den SwingWorker zu starten:
+Diese neue Methode dient dazu den SwingWorker zu starten, dazu verwenden wir die neue Klassenvariable *activeWorker*:
 
 ```java
 private void startSingleMeasurement()
   {
     activeWorker =  new MySingleMeasurementWorker(serialPort);
-    activeWorker.execute();
+    activeWorker.execute(); //die Klassenvariable 
     updateSwingControls();
+  }
+```
+
+## updateSwingControlls()  
+
+Wir haben die Methode mit ```java if(activeWorker != null)``` erweitert. Diese if-Verzweigung überprüft ob ein Worker aktiv ist. Ist dies der fall wird der Cursor durch den *WAIT_CURSOR* ersetzt, die GUI soll aber weiterhin responsive bleiben.
+
+```java
+ public void updateSwingControls()
+  {
+    jcbSerialDevice.setEnabled(false);
+    jbutConnect.setEnabled(false);
+    jbutDisconnect.setEnabled(false);
+    jbutRefresh.setEnabled(false);
+    jbutSingleMeasurement.setEnabled(true);
+    jbutContinousMeasurement.setEnabled(false);
+    jbutStopMeasurement.setEnabled(false);
+    jlaTemperatur.setEnabled(false);
+    if (activeWorker != null)
+    {
+      setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+      return;
+    }
+    setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+    jlaTemperatur.setEnabled(true);
+    
+    if (serialPort != null && serialPort.isOpened())
+    {
+      jbutDisconnect.setEnabled(true);
+      //jbutSingleMeasurement.setEnabled(true);
+      return;
+    }
+    
+    if(ports == null || ports.length == 0)
+    {
+      jbutRefresh.setEnabled(true);
+    }
+    
+    else if(ports != null && ports.length > 0); 
+    {
+      jcbSerialDevice.setEnabled(true);
+      jbutConnect.setEnabled(true);
+      jbutRefresh.setEnabled(true);
+    }
+  }
+```
+
+## connect() 
+
+Wir haben die Parameter für die serielle Schnittstelle festgelegt(Baudrate = 57600, 8 Datenbits usw.)
+
+```java
+private void connect ()
+  {
+    try{
+      String port = (String)jcbSerialDevice.getSelectedItem();
+      
+      serialPort.openPort();
+      serialPort.setParams(SerialPort.BAUDRATE_57600, //legt Baudrate fest 
+                           SerialPort.DATABITS_8, //legt Anzahl der Datenbits fest
+                           SerialPort.STOPBITS_2, //legt Anzahl der Stopbits fest
+                           SerialPort.PARITY_NONE); //legt Parity fest
+      updateSwingControls();
+    }
+    catch (Throwable th)
+    {
+      showThrowable("Serielle Schnittstelle kann nicht geöffntet werden", th);
+      try {
+        if (serialPort != null && serialPort.isOpened())
+        {
+          serialPort.closePort();
+        }
+      }
+        catch (Throwable th2)
+        {
+          th.addSuppressed(th2);
+        }
+      showThrowable("Serielle Schnitt", th);
+        serialPort = null;
+    } finally {
+      updateSwingControls();
+    }
   }
 ```
