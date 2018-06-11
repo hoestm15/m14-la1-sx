@@ -202,11 +202,11 @@ SwingWorker wird benötigt um Multithreading nutzen zu können.
 
 | Methode | Beschreibung |
 | ------- | ------------ |
-| doInBackground() | Alle Funktionen uned Befehler in dieser Methode werden in einem anderen Thread ausgeführt. |
-| get() | holt den Rückgabewert doInBackground() |
+| doInBackground() | Alle Funktionen und Befehle in dieser Methode werden in einem anderen Thread ausgeführt. |
+| get() | holt den Rückgabewert von doInBackground() |
 | done() | Wird aufgerufen wenn doInBackground() mit der Aufgabe fertig ist, dieser gestoppt wird oder wenn ein Fehler auftritt. |
 | publish() | Sendet eine Liste von Chunks zur publish Methode in den Event-Dispatch-Thread. |
-| process() | Mit dieser Meethode erhält mann eine Liste von Chunks von der publish() Methode im Event-Dispatch-Thread. |
+| process() | Mit dieser Meethode erhält mann eine Liste von Chunks, von der publish() Methode, im Event-Dispatch-Thread. |
 | execute() | Startet einen neuen Worker-Thread |
 | cancel() | Setzt das cancel Flag des Threads und versucht somit den Thread zu beenden |
 
