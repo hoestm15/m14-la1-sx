@@ -11,7 +11,7 @@ Abwesend: niemand
 ```
 Diese wird für Multithreading benötigt um später einen neuen Thread zu starten.
 
-### Die Methode `updateSwingControlles()`
+### Die Methode updateSwingControlles()
 ```java
   public void updateSwingControlles()
   {
@@ -56,10 +56,10 @@ Diese wird für Multithreading benötigt um später einen neuen Thread zu starte
       jbutRefresh.setEnabled(true); 
   }
 ```
-Es wurde eine weitere `if-Verzweigung` hinzugefügt in der wird mit dem ausdruck `activeWroker != null` überpruft ob ein Worker aktiv ist. Wenn dies der fall ist soll der Cursor durch einen `WAIT_CURSOR`ersetzt werden wobei die GUI bedienbar bleiben soll. 
+Es wurde eine weitere `if-Verzweigung` hinzugefügt in der wird mit dem ausdruck `activeWroker != null` überprüft ob ein Worker aktiv ist. Wenn dies der fall ist soll der Cursor durch einen `WAIT_CURSOR`ersetzt werden wobei die GUI bedienbar bleiben soll. 
 
 
-### Neue Methode `startSingleMeasurement()`
+### Neue Methode startSingleMeasurement()
 ```java
   private void startSingleMeasurement()
   {
@@ -75,7 +75,7 @@ Diese Methode startet eine einen neuen Thread. Dazu wird der port benötigt welc
 
 
 
-### Erweiterungen der Methode `connect()`
+### Erweiterungen der Methode connect()
 ```java
   private void connect()
   {
