@@ -79,7 +79,7 @@ Diese Methode startet eine einen neuen Thread. Dazu wird der port benötigt welc
 ```java
   private void connect()
   {
-    try //erstes try
+    try
     {
     
       String port = (String) jcbSerialDevice.getSelectedItem();
