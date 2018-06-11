@@ -18,3 +18,41 @@ Am Beginn der Einheit haben wir das Programm der letzten Einheit besprochen und 
 * `connect()`
 * `disconnect()`
 <br>
+
+## Erweiterterungen des Quellcodes
+`  private void connect ()
+  {
+    try
+    {
+      String port = (String) jcbSerialDevice.getSelectedItem();
+      serialPort = new jssc.SerialPort(port);
+      serialPort.openPort();
+      serialPort.setParams(
+              SerialPort.BAUDRATE_57600,
+              SerialPort.DATABITS_8,
+              SerialPort.STOPBITS_2,
+              SerialPort.PARITY_NONE);
+      updateSwingControls();
+    }
+    catch (Throwable th)
+    {
+
+      try
+      {
+        if (serialPort != null && serialPort.isOpened())
+        {
+          serialPort.closePort();
+        }
+      }
+      catch (Throwable th2)
+      {
+        th.addSuppressed(th2);
+      }
+      showThrowable("Serielle Schnittstelle kann nicht geöffnet werden!", th);
+      serialPort = null;
+    }
+    finally
+    {
+      updateSwingControls();
+    }
+  } `
