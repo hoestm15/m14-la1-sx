@@ -31,7 +31,7 @@ private void connect ()
       serialPort.openPort();
       serialPort.setParams(
               SerialPort.BAUDRATE_57600,                            // Legt die Baudrate fest (57600)
-              SerialPort.DATABITS_8,                                // Legt die Anzahl der Databits fest (8)
+              SerialPort.DATABITS_8,                                // Legt die Anzahl der Datenbits fest (8)
               SerialPort.STOPBITS_2,                                // Legt die Anzahl der Stoppbits fest (2)
               SerialPort.PARITY_NONE);                              // Legt fest, ob eine EVEN, ODD oder keine Parity besteht (keine)
       updateSwingControls();
