@@ -32,7 +32,7 @@ Diese neue Methode dient dazu den SwingWorker zu starten, dazu verwenden wir die
 private void startSingleMeasurement()
   {
     activeWorker =  new MySingleMeasurementWorker(serialPort);
-    activeWorker.execute(); //die Klassenvariable 
+    activeWorker.execute(); //die Klassenvariable des Workers
     updateSwingControls();
   }
 ```
