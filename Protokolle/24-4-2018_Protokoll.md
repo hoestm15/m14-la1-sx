@@ -56,7 +56,7 @@ Diese wird für Multithreading benötigt um später einen neuen Thread zu starte
       jbutRefresh.setEnabled(true); 
   }
 ```
-Es wurde eine weitere `if-Verzweigung` hinzugefügt in der wird mit dem ausdruck `activeWroker != null` überprüft ob ein Worker aktiv ist. Wenn dies der fall ist soll der Cursor durch einen `WAIT_CURSOR`ersetzt werden wobei die GUI bedienbar bleiben soll. 
+Es wurde eine weitere `if-Verzweigung` hinzugefügt in der wird mit dem Ausdruck `activeWroker != null` überprüft, ob ein Worker aktiv ist. Wenn dies der Fall ist soll der Cursor durch einen `WAIT_CURSOR`ersetzt werden wobei die GUI bedienbar bleiben soll. 
 
 
 ### Neue Methode startSingleMeasurement()
@@ -71,7 +71,7 @@ Es wurde eine weitere `if-Verzweigung` hinzugefügt in der wird mit dem ausdruck
   }
 ```
 
-Diese Methode startet eine einen neuen Thread. Dazu wird der port benötigt welcher in der Variable `serialPort` gespeichert ist.
+Diese Methode startet eine einen neuen Thread. Dazu wird der Port benötigt welcher in der Variable `serialPort` gespeichert ist.
 
 
 
@@ -112,7 +112,7 @@ Diese Methode startet eine einen neuen Thread. Dazu wird der port benötigt welc
     }                                                                          //
   }
 ```
-Dieser Methode wurden Parameter für die Serielle Schnittstelle hinzugefügt sowie ein weiteres `try-catch` für den fall des ein Fehler auftritt, dass dieser auch passend behandelt wird. Sollte beim Versuch eine verbindung aufzubauen ein Fehler auftreten wird dieser beim ersten catch behandelt. In diesem wird versucht den Port zu schließen. Tritt dort wieder ein Fehler auf wird dieser im zweiten catch behandelt. Dort wir die Ursache des ersten Fehlers + die des zweitens mit der funktion `showThrowable()`ausgegeben und der port auf `null`gesetzt.
+Dieser Methode wurden Parameter für die Serielle Schnittstelle hinzugefügt sowie ein weiteres `try-catch` für den Fall das ein Fehler auftritt, dass dieser auch passend behandelt wird. Sollte beim Versuch eine verbindung aufzubauen ein Fehler auftreten wird dieser beim ersten catch behandelt. In diesem wird versucht den Port zu schließen. Tritt dort wieder ein Fehler auf wird dieser im zweiten catch behandelt. Dort wir die Ursache des ersten Fehlers und die des zweiten Fehlers mit der funktion `showThrowable()`ausgegeben und der Port auf `null`gesetzt.
 
 ```java
               SerialPort.BAUDRATE_57600,        //  stellt die bautrate auf 57600 ein
@@ -153,7 +153,7 @@ public class SingleMeasurementWorker extends SwingWorker<Double,String>
   } 
 }
 ```
-Da die Werte die größe eines Integer Wertes übersteigen können, werden diese in zwei Bytes aufgeteilt, in ein `low-` und ein `highbyte`. Die Konfigurationen für den Aufbau stammt aus der README des Projektes, vom SVN-Server in Arnfels.
+Da die Werte die Größe eines Integer Wertes übersteigen können, werden diese in zwei Bytes aufgeteilt, in ein `low-` und ein `highbyte`. Die Konfigurationen für den Aufbau stammt aus der README des Projektes, vom SVN-Server in Arnfels.
 
 ### Innere Klasse MySingleMeasurementWorker
 ```java
