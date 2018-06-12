@@ -144,7 +144,7 @@ public class SingleMeasurementWorker extends SwingWorker<Double,String>
   @Override
   protected Double doInBackground () throws Exception
   {
-    int [] frame = {0x02,0x04,0x00,0x30,0x00,0x01,0x31,0xf6};
+    int [] frame = {0x02,0x04,0x00,0x30,0x00,0x01,0x31,0xf6};                 // Modbus Konfiguration
     serialPort.writeIntArray(frame);
     TimeUnit.SECONDS.sleep(1);
     int [] response = serialPort.readIntArray();
