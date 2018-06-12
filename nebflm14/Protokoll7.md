@@ -150,7 +150,7 @@ public class SingleMeasurementWorker extends SwingWorker<Double,String>
   } 
 }
 ```
-Da die maximalgröße des Integer-Wertes überschritten werden könnte wird der Rückgabewert in zwei Bytes geteilt, dem *highbyte* und dem *lowbyte*. Die für die Zusammensetzung des Frames notwendigen Konfigurationen stammen aus der readme-Datei des Projekts, am SVN-Server Arnfels.  
+Da die Maximalgröße des Integer-Wertes überschritten werden könnte wird der Rückgabewert in zwei Bytes geteilt, dem *highbyte* und dem *lowbyte*. Die für die Zusammensetzung des Frames notwendigen Konfigurationen stammen aus der readme-Datei des Projekts, am SVN-Server Arnfels.  
 
 ### MySingleMeasurementWorker
 ```java
