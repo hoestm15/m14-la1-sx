@@ -149,7 +149,7 @@ SwingWorker wird gestartet. Hierführ benötigen wir den aktuellen Port, welcher
 
 Multithreading bedeutet, dass innerhalb eines Prozesses oder eines Tasks verschiedene Arbeitsstränge gleichzeitig abgearbeitet werden.
 Multithreading kann auf einem Prozesskern ausgeführt werden, als auch auf mehreren Prozesskernen (echte Parallel-Ausführung).
-![]()
+![Multithreading](https://github.com/HTLMechatronics/m14-la1-sx/blob/nabmam14/Protokoll/1200px-Multithreaded_process.svg.png)
 
 ### Methoden, die wir beim Arbeiten mit dem SwingWorker benötigen
 | Methode | Beschreibung |
