@@ -14,7 +14,7 @@ Die Idee: Java wendet sich an die virtuelle Machine, diese an das Betriebssystem
 Gelöst wird das Problem durch das **Java Native Interface (JNI)** welches innerhalb der virtuellen Maschine eine für Java lesbare \*.jar Datei erzeugt und außerhalb, eine für das Betriebssystem lesbare binäre Bibliothek aufbaut. **rxtx comm gnu.io** bezeichnet eine aufgrund von verbuggten C-Bibliotheken und schlechter Versionsverwaltung, sowie fehlender Nutzerfreundlichkeit nicht zu empfehlende Variante. **Java Simple Serial Connector (JSSC)** orientiert sich im Gegensatz dazu nicht an java.comm und dem streaming-Konzept. Einer der großen Vorteile liegt darin, das die binären Bibliotheken automatisch an der richtigen Stelle entpackt werden.  
 
 ## [SwingWorker](https://docs.oracle.com/javase/7/docs/api/javax/swing/SwingWorker.html)
-Multithreading bzw. Mehrsträngigkeit bezeichnet in der Informatik das "gleichzeitige" abarbeiten mehrerer Aufgaben(Threads) innerhalb eines einzelnen Prozesses/Tasks.
+Multithreading bzw. Mehrsträngigkeit bezeichnet in der Informatik das "gleichzeitige" abarbeiten mehrerer Aufgaben(Threads) innerhalb eines einzelnen Prozesses/Tasks.  
 siehe [wikipedia.org](https://de.wikipedia.org/wiki/Multithreading)
 
 ## Das Programm
