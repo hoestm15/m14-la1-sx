@@ -127,11 +127,6 @@ import java.util.concurrent.TimeUnit;
 import javax.swing.SwingWorker;
 import jssc.SerialPort;
 
-/**
- *
- * @author muri
- */
- 
 public class SingleMeasurementWorker extends SwingWorker<Double,String>
 {
   private final jssc.SerialPort serialPort;
@@ -147,9 +142,9 @@ public class SingleMeasurementWorker extends SwingWorker<Double,String>
     int [] frame = {0x02,0x04,0x00,0x30,0x00,0x01,0x31,0xf6};                 // Modbus Konfiguration
     serialPort.writeIntArray(frame);
     TimeUnit.SECONDS.sleep(1);
-    int [] response = serialPort.readIntArray();
+    int [] response = serialPort.readIntArray();                              // Antwort des SureBoards
     System.out.println(response.length);
-    double temp = response[3]+response[4] / 256.0;
+    double temp = response[3]+response[4] / 256.0;                            // die Bits drei und vier sind Datenbits
     return temp;
   } 
 }
