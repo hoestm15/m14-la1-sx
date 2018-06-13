@@ -88,6 +88,7 @@ if(response[2] != 2) | Hat das Paket die richtige Anzahl an Datenbits?
 ##### Programmieren einer eigenen Exception  
 Java bietet die Möglichkeit eigene Exceptions zu programmieren. Die Klasse Exception ist die Superklasse aller Exceptions, deshalb muss man von dieser Klasse ableiten, damit man eine eigene Exception erstellen kann.  
 Da uns die Exception möglichst genau unseren Fehler zeigen soll, müssen wir mehrere Konstruktor machen.  
+Die weitere Anwendung einer selbst programmierten Exception ist gleich wie bei jeder anderen.  
   
 ###### Listing: ModbusException  
 ```java
