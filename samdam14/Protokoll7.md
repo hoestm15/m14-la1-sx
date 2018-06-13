@@ -19,9 +19,7 @@ siehe: [Protokoll Einheit 6, Patrick Schuster](https://github.com/HTLMechatronic
 Eine SwingWorker-Klasse ist eine abstrakte Klasse (innere Klasse), mit der man länger andauernde GUI-Interaktionen in einem Background-Thread ablaufen lassen kann. Es können mehrere Background-Threads zum Ausführen solcher Aufgaben verwendet werden, da heutzutage Computer mehrere Prozessor-Kerne besitzt (siehe: [SwingWorker](https://docs.oracle.com/javase/8/docs/api/javax/swing/SwingWorker.html). Somit wird Multi-Tasking möglich und Multi-Threading ab hier zu einem sehr wichtigen Thema.  
   
 ###### Multi-Threading  
-Mutli-Threading kann auch als Mehrsträngigkeit bezeichnet werden. Damit ist in der Informatik gemeint, dass das Abarbeiten mehrerer Threads quasi gleichzeitig stattfinden kann. 
-
-Multithreading (auch Nebenläufigkeit, Mehrsträngigkeit oder Mehrfädigkeit genannt) bezeichnet in der Informatik das gleichzeitige (oder quasi-gleichzeitige) Abarbeiten mehrerer Threads (Ausführungsstränge) innerhalb eines einzelnen Prozesses oder eines Tasks (ein Anwendungsprogramm). Da hier die einzelnen Threads nicht voneinander abgeschottet sind (im Gegensatz zum Multi-Tasking), können diese sogenannten *Race-Conditiones* verursachen. Diese sollen durch Synchronisation vermieden werden.  
+Mutli-Threading kann auch als Mehrsträngigkeit bezeichnet werden. Damit ist in der Informatik gemeint, dass das Abarbeiten mehrerer Threads quasi gleichzeitig stattfinden kann. Da hier die einzelnen Threads nicht voneinander abgeschottet sind (im Gegensatz zum Multi-Tasking), können diese sogenannten *Race-Conditiones* verursachen. Diese sollen durch Synchronisation vermieden werden.  
 [Wiki/Mulithreading](https://de.wikipedia.org/wiki/Multithreading)  
 [Wiki/Race-Conditions](https://de.wikipedia.org/wiki/Race_Condition)  
 
