@@ -96,7 +96,7 @@ public class ModbusException extends Exception
  
  
      public ModbusException (String message) {
-         super(message);
+         super(message); //message ist die String-Message, die beim Werfen der Exception eingegeben werden muss
          request = null;
          response = null;
      }
