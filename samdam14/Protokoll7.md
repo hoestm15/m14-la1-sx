@@ -46,6 +46,7 @@ public class SingleMeasurementWorker extends SwingWorker<Double, String> {
     TimeUnit.MILLISECONDS.sleep(100);
     int [] response = serialport.readIntArray();
     
+    //Beginn der Fehlerbehandlung
     if(response == null || response.length == 0) {
       throw new ModbusException("Keine Antwort erhalten",request);
     }
