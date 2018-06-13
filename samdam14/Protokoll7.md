@@ -32,6 +32,7 @@ public class SingleMeasurementWorker extends SwingWorker<Double, String> {
 
   private final SerialPort serialport;
   
+  //Konstruktor
   public SingleMeasurementWorker (SerialPort serialport)
   {
     this.serialport = serialport;
@@ -69,6 +70,8 @@ public class SingleMeasurementWorker extends SwingWorker<Double, String> {
   }
 }
 ```  
+  
+###### Fehlerbehandlung  
 
 
 
