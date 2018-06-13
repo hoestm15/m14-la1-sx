@@ -24,10 +24,53 @@ Mutli-Threading kann auch als Mehrsträngigkeit bezeichnet werden. Damit ist in 
 [Wiki/Race-Conditions](https://de.wikipedia.org/wiki/Race_Condition)  
   
 ##### SingleMeasurementWorker  
-Die Klasse *SingleMeasurementWorker* ist dafür da, damit in einem Background-Thread die Temperatur über die seriellen Schnittstelle abgefragt werden soll. Dafür soll die Klasse an das SureBoard (Slave -> Modbus) eine Anfrage senden.  
+Die Klasse *SingleMeasurementWorker* ist dafür da, damit in einem Background-Thread die Temperatur über die seriellen Schnittstelle abgefragt werden soll. Dafür soll die Klasse an das SureBoard (Slave -> Modbus) eine Anfrage senden. Die Anfrage (*request*) beinhaltet 8 Byte (2,4,0,0x30,0,1,0x31,0xf6). In den nächsten 100 ms wird auf eine Antwort (*response*) gewartet. Löst die erhaltene Antwort keine Exception aus, so wird der Temperaturwert, der sich an der 3ten und 4ten Stelle der 9 Byte großen *response* befindet, in Grad Celsius umgewandelt und zurückgegeben (Da sich der Temmperaturwert aus zwei Bytes ergibt, ist dies bei den Umrechnungen zu beachten).  
+  
+###### Listing  
+```java
+public class SingleMeasurementWorker extends SwingWorker<Double, String> {
 
-Der SingleMeasurementWorker soll an den Modbus-Slave (Sureboard) eine Anfrage senden, dass dieser den ausgelesenen Wert des Temperatursensors and die JAVA-Gui übermittelt. Dazu senden wir eine Anfrage mit 8 Bytes und warten 100ms auf eine Antwort. Falls kein Paket angekommen ist oder das Paket ungültig ist wird durch die Fehlerbehandlung eine Exception geworfen. Der empfangene Temperaturwert besteht aus zwei Bytes, einem High-Byte und einem Low-Byte. Das muss beim auslesen beachtet werden. Der aus den zwei Bytes zusammengerechnte Wert (zwischen 0 und 256) wird danach in Grad Celsius umgewandelt und zurückgegeben.
+  private final SerialPort serialport;
 
-Der SingleMeasurementWorker ist eine JAVAl-Klasse, die in einem eigenen Thread die Temperatur über die serielle Schnitstelle einmalig abfragen soll. Ihm wird im Konstruktor die serielle Schnitstelle (serialPort) übergeben. Die Modbus-Anfrage besteht aus folgenden 8 Bytes: 2,4,0,0x30,0,1,0x31,0xf6.
+  public SingleMeasurementWorker (SerialPort serialport)
+  {
+    this.serialport = serialport;
+  }
+  
+  @Override
+  protected Double doInBackground () throws Exception
+  {
+    publish("sende Request an Modbus Server");
+    int [] request = {02, 04, 00, 0x30, 00, 01, 0x31, 0xf6 };
+    serialport.writeIntArray(request);
+    TimeUnit.MILLISECONDS.sleep(100);
+    int [] response = serialport.readIntArray();
+    
+    if(response == null || response.length == 0) {
+      throw new ModbusException("Keine Antwort erhalten",request);
+    }
+    if(response.length < 7 ) {
+      throw new ModbusException("Antwort zu kurz",request,response);
+    }
+    if(response[0] != 2) {
+      throw new ModbusException("Antwort vom falschem Gerät",request,response);
+    }
+    if(response[1] != 4) {
+      throw new ModbusException("Antwort mit falschen Funktioncode",request,response);
+    }
+    if(response[2] != 2) {
+      throw new ModbusException("Antwort mit falscher Antwort von Bytes",request,response);
+    }
+    
+    publish("response eingetroffen");
+    
+    double temp = (response[3] *256.0 + response[4]) / 256.0;
+    
+    return temp;
+  }
+  
+}
+```  
 
-Nach einer Wartezeit von 100ms wird die Antwort abgefragt und auf Herz und Nieren geprüft. Gegebenenfalls wird eine Exception geworfen. Sie soll aus 9 Bytes bestehen und die Werte der Temperaturmessung befinden sich an der 3. und der 4. Stelle. Löst die Antwort keine Exception aus, wird die Temperatur in Grad ausgerechet und zurückgegeben.
+
+
