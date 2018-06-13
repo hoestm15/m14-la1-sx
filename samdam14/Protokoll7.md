@@ -31,7 +31,7 @@ Die Klasse *SingleMeasurementWorker* ist dafür da, damit in einem Background-Th
 public class SingleMeasurementWorker extends SwingWorker<Double, String> {
 
   private final SerialPort serialport;
-
+  
   public SingleMeasurementWorker (SerialPort serialport)
   {
     this.serialport = serialport;
@@ -40,7 +40,7 @@ public class SingleMeasurementWorker extends SwingWorker<Double, String> {
   @Override
   protected Double doInBackground () throws Exception
   {
-    publish("sende Request an Modbus Server");
+    publish("Sende Anfrage/Request an Modbus Server");
     int [] request = {02, 04, 00, 0x30, 00, 01, 0x31, 0xf6 };
     serialport.writeIntArray(request);
     TimeUnit.MILLISECONDS.sleep(100);
@@ -56,19 +56,16 @@ public class SingleMeasurementWorker extends SwingWorker<Double, String> {
       throw new ModbusException("Antwort vom falschem Gerät",request,response);
     }
     if(response[1] != 4) {
-      throw new ModbusException("Antwort mit falschen Funktioncode",request,response);
+      throw new ModbusException("Antwort mit falschem Funktionscode",request,response);
     }
     if(response[2] != 2) {
-      throw new ModbusException("Antwort mit falscher Antwort von Bytes",request,response);
+      throw new ModbusException("Antwort mit falscher Anzahl von Bytes",request,response);
     }
-    
-    publish("response eingetroffen");
-    
+    publish("Response mit " + response.length + "Bytes eingetroffen");
     double temp = (response[3] *256.0 + response[4]) / 256.0;
     
     return temp;
   }
-  
 }
 ```  
 
