@@ -74,4 +74,12 @@ public class SingleMeasurementWorker extends SwingWorker<Double, String> {
 ###### Fehlerbehandlung  
 ![ASCII message frame](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/modbus_serial_ascii_frame.png)  
 Bei der Fehlerbehandlung beschäftigen wir uns mit der Gültigkeit des Antwort-Pakets. Wir überprüfen, ob im richtigen Paket der richtige Wert steht. Ist dies nicht der Fall, so soll eine Exception geworfen werden. In unserem Fall haben wir dafür eine eigene Exception entworfen: ModbusException (siehe weiter unten im Protokoll!).  
-
+  
+Abfrage | Fehler, der überprüft wird  
+------- | ------  
+if(response == null) | Wurde überhaupt eine Anwort empfangen, bzw. ist diese leer?  
+if(response.length < 7) | Handelt es sich um eine gültige Antwort, bzw. enthält die Antwort genug Bytes?  
+if(response[0] != 2) | Handelt es sich um den richtigen Absender der Antwort?  
+if(response[1] != 4) | Beinhaltet das Paket den richtigen Functin Code?  
+if(response[2] != 2) | Hat das Paket die richtige Anzahl an Datenbits?  
+  
