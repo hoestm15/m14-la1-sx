@@ -13,4 +13,4 @@
 * Gruppe 3: 6. Einheit, 20.03.2018  
   * *Nicht anwesend* 
 * Gruppe 3: 7. Einheit, 15.05.2018  
-  * [Protokoll Einheit 7]()  
+  * [Protokoll Einheit 7](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/Protokoll7.md)  
