@@ -26,7 +26,9 @@ Der SingleMeasurementWorker ist eine JAVAl-Klasse, die in einem eigenen Thread d
 
 Der grundsätzliche Aufbau eines Modbus-Datenpakets:
 ![Modbus Aufbau] (https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusADUPDU.png)
+
 ![Infos über Mosbus im 5. Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/edit/rufflm14/rufflm14/Protokoll_5.md)
+
 ![Link zur Modbus-Dokumentation](http://modbus.org/specs.php)
 
 
