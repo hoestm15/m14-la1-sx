@@ -96,7 +96,7 @@ Die Antwort des Sure-Boards wird auf unterschiedliche Eigenschaften untersucht u
 
 code | Abfrage  
 --- | ---  
-```java if (response == null || response.length==0) ``` | Hier wird überprüft, ob das Paket vorhanden ist 
+```java if (response == null ... response.length==0) ``` | Hier wird überprüft, ob das Paket vorhanden ist 
 ```java if (response.length <7) ``` | Hier wird überprüft, ob das Paket lang genug ist
 ```java if (response[0]!= 2) ``` | Hier wird überprüft, ob das Paket vom richtigen Slave kommt (2 ist die richtige Slave - Adresse)
 ```java if (response[1]!= 4) ``` | Hier wird überprüft, ob das Paket den richitgen Function-Code enthält 
