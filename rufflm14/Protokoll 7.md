@@ -25,11 +25,11 @@ Zur Erinnerung ist hier noch einmal der schematische Aufbau skizziert:
 Der SingleMeasurementWorker ist eine JAVAl-Klasse, die in einem eigenen Thread die Temperatur über die serielle Schnitstelle einmalig abfragen soll. Dazu wird an den Mikroprozesser (Modbus-Slave) eine Anfrage geschickt. Dem SingleMeasurementWorker wird im Konstruktor die serielle Schnitstelle (serialPort) übergeben. Die Modbus-Anfrage besteht aus folgenden 8 Bytes: 2,4,0,0x30,0,1,0x31,0xf6.
 
 Der grundsätzliche Aufbau eines Modbus-Datenpakets:
-![Modbus Aufbau] (https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusADUPDU.png)
+![Modbus Aufbau](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusADUPDU.png)
 
-![Infos über Mosbus im 5. Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/edit/rufflm14/rufflm14/Protokoll_5.md)
+[Infos über Mosbus im 5. Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/edit/rufflm14/rufflm14/Protokoll_5.md)
 
-![Link zur Modbus-Dokumentation](http://modbus.org/specs.php)
+[Link zur Modbus-Dokumentation](http://modbus.org/specs.php)
 
 
 Nach einer Wartezeit von 100ms wird die Antwort ausgelesen und auf Herz und Nieren geprüft. Sie soll aus 9 Bytes bestehen und die Werte der Temperaturmessung befinden sich an der 3. und der 4. Stelle.  Gegebenenfalls wird eine Exception geworfen. Löst die Antwort keine Exception aus, wird die Temperatur in Grad ausgerechet und an GUI zurückgegeben.
