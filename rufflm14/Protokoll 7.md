@@ -12,7 +12,11 @@ Abwesend: -
 
 ## Wiederholung der letzten Einheit(en)
 
-Zu Beginn der Einheit wiederholten wir ausführlich die den bereits besprochenen Stoff zum Projekt Temperaturmessung mittels Mikroprozessor. Zum Beispiel wurde uns der Hardwareaufbau wieder ins Gedächtnis gerufen. 
+Zu Beginn der Einheit wiederholten wir ausführlich den bereits besprochenen Stoff zum Projekt Temperaturmessung mittels Mikroprozessor. In diesem Projekt soll eine Temperaturmessung über den am SURE-Board integrierten Temperatursensor erfolgen. Die Messdaten sollen am PC über ein JAVA-Programm ausgegeben werden. Dafür steht bereits eine vorgefertigte GUI (JAVASwing) zur Verfügung. Auch für den µC ist das Programm bereits vorgegeben. 
+
+Zur Erinnerung ist hier noch einmal der schematische Aufbau dargestellt:
+
+![Grundstruktur als SVG](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/BildGrundstruktur.svg)
 
 [Link zum Protokoll der 5.Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/Protokoll_5.md)
 
