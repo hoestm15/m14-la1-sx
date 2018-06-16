@@ -31,7 +31,6 @@ Der grundsätzliche Aufbau eines Modbus-Datenpakets:
 
 [Link zur Modbus-Dokumentation](http://modbus.org/specs.php)
 
-
 Nach einer Wartezeit von 100ms wird die Antwort ausgelesen und auf Herz und Nieren geprüft. Sie soll aus 9 Bytes bestehen und die Werte der Temperaturmessung befinden sich an der 3. und der 4. Stelle.  Gegebenenfalls wird eine Exception geworfen. Löst die Antwort keine Exception aus, wird die Temperatur in Grad ausgerechet und an GUI zurückgegeben.
 
 ```java
@@ -91,3 +90,14 @@ public class SingleMeasurementWorker extends SwingWorker<Double, String>
 }
 ```
 
+## Fehlerbehandlung
+
+Die Antwort des Sure-Boards wird auf unterschiedliche Eigenschaften untersucht um Fehler zu erkennen und Exceptions werfen zu können.
+
+code | Abfrage  
+--- | ---  
+```java if (response == null || response.length==0) ``` | Hier wird überprüft, ob das Paket vorhanden ist 
+```java if (response.length <7) ``` | Hier wird überprüft, ob das Paket lang genug ist
+```java if (response[0]!= 2) ``` | Hier wird überprüft, ob das Paket vom richtigen Slave kommt (2 ist die richtige Slave - Adresse)
+```java if (response[1]!= 4) ``` | Hier wird überprüft, ob das Paket den richitgen Function-Code enthält 
+```java if (response[2]!= 2) ``` | Hier wird überprüft, ob das Paket die richtige Anzahl an Datenbytes enthält
