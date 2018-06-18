@@ -1,14 +1,14 @@
 # Laborprotokoll  
-Sechste Einheit am 20. März 2018  
+Siebente Einheit am 15. Mai 2018  
 Martin Schmuck  
 4AHME  
 Gruppe 3
 
 Automatisierungslabor HTL Kaindorf  
-Anwesend: Reinbacher, Ruffenacht, Sackl M., Sackl R., Sammer, Schmuck, Schuster
+Anwesend: Reinbacher, Ruffenacht, Sackl M., Sackl R., Sammer, Schmuck, Schuster (vollzählig)
 
 ## Thema der Einheit: Visualisirung eines Temperatursensors
-In dieser Einheit schließen wir nach einer kurzen Wiederholung der Einheiten 5 und 6 direkt an die letzte Einheit an. Dies war notwendig, da seit der letzten Einheit bereits einige Wochen ins Land gezogen waren, und damit wir unser Wissen wieder auffrischen konnten.
+In dieser Einheit schließen wir nach einer kurzen Wiederholung der Einheiten [5](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/Protokoll5.md) und [6](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/Protokoll6.md) direkt an die letzte Einheit an. Dies war notwendig, da seit der letzten Einheit bereits einige Wochen ins Land gezogen waren, und damit wir unser Wissen wieder auffrischen konnten.
 
 ### Multithreading
 Unter Multithreading versteht man im Allgemeinen, dass man bei einem Programm nicht einen Befehl nach dem anderen ausführt, sondern mehrere "Programmpfade" zeitgleich ausgeführt werden.  Dies ist nicht mit dem Begriff Multitasking zu verwechseln, welcher bedeutet, dass meherere Programme (Tasks) sich gemeinsame Ressourcen (CPU, Speicher, etc.) teilen. Dabei handelt es sich um eine Eigenschaft des Betriebssystems. Multithreading geht hier weiter, es erweitert die Grundsätze des Multitasking auf die Programmebene, so werden zum Beispiel Rechenoperationen in mehrere Threads unterteilt, die dann wirklich parallel ablaufen. Somit verteilt das Betriebssystem die Ressource nicht mehr nur auf alle Anwendungen, sonder auch auf die Threads in den Anwendungen.
