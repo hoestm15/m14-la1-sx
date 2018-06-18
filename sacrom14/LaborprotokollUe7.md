@@ -76,4 +76,69 @@ Kann als Mehrsträngigkeit bezeichnet werden. Heißt, dass das Abarbeiten mehrer
 [Wiki/Mulithreading](https://de.wikipedia.org/wiki/Multithreading)  
 
 
+## Fehlerbehandlung
+Wird überprüft, ob im richtigen Paket der richtige Wert steht. Wenn das nicht Erfüllt wird, so soll eine Exception geworfen werden.  
+
+
+Code | Abfrage  
+--- | ---  
+```java if (response.length <7) ``` |  Paket lang genug ?
+```java if (response[0]!= 2) ``` |  Kommt Paket vom richtigen Slave ?
+```java if (response[2]!= 2) ``` |  Enthält Paket die richtige Anzahl an Datenbytes?
+```java if (response[1]!= 4) ``` |  Enthält Paket den richitgen Function-Code?
+```java if (response == null ... response.length==0) ``` | Paket vorhanden oder nicht ? 
+
+
+
+## Programmieren einer eigenen Exception  
+Mit Java ist es möglich selbst eine Excepion zu programmieren.Die Exception Klasse ist die Superklasse aller Exceptions, deshalb wird von dieser Klasse abgeleitet sodas man eine eigene Exception erstellen kann.
+
+```java
+public class ModbusException extends Exception
+ {
+     private final int [] request;
+     private final int [] response;
+ 
+ 
+     public ModbusException (String message) 
+     {
+         super(message); //message ist die String-Message, die beim Werfen der Exception eingegeben werden muss
+         request = null;
+         response = null;
+     }
+   
+     public ModbusException (String message, Throwable cause) 
+     {
+         super(message, cause);
+         request = null;
+         response = null;
+     }
+     
+     public ModbusException (String message, int [] request) 
+     {
+         super(message);
+         this.request = request;
+         response = null;
+     }
+     
+     public ModbusException (String message, int [] request, int [] response) 
+     {
+         super(message);
+         this.request = request;
+         this.response = response;
+     }
+  
+     public int[] getRequest () 
+     {
+         return request;
+     }
+  
+     public int[] getResponse () 
+     {
+         return response;
+     }     
+  }
+```
+
+
 
