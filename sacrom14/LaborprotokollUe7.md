@@ -71,7 +71,7 @@ public class SingleMeasurementWorker extends SwingWorker<Double, String>
 
 ### Swingworker  
 Ist eine Java-Klasse, mit der man länger andauernde GUI-Interaktionen in einem Background-Thread ablaufen lassen kann. Können mehrere Treads zum Ausführen solcher Aufgaben verwendet werden.Muti-Tasking und MultiThreading wird möglich. 
-#### Multi-Threading  
+### Multi-Threading  
 Kann als Mehrsträngigkeit bezeichnet werden. Heißt, dass das Abarbeiten mehrerer Threads quasi gleichzeitig stattfinden kann.Da im Gegensatz zum Multi-Tasking die einzelnen Threads nicht voneinander abgeschottet sind
 [Wiki/Mulithreading](https://de.wikipedia.org/wiki/Multithreading)  
 
@@ -82,11 +82,11 @@ Wird überprüft, ob im richtigen Paket der richtige Wert steht. Wenn das nicht 
 
 Code | Abfrage  
 --- | ---  
-```java if (response.length <7) ``` |  Paket lang genug ?
-```java if (response[0]!= 2) ``` |  Kommt Paket vom richtigen Slave ?
-```java if (response[2]!= 2) ``` |  Enthält Paket die richtige Anzahl an Datenbytes?
-```java if (response[1]!= 4) ``` |  Enthält Paket den richitgen Function-Code?
-```java if (response == null ... response.length==0) ``` | Paket vorhanden oder nicht ? 
+```java if (response.length <7) ``` | Ist das Paket lang genug ?
+```java if (response[0]!= 2) ``` |  Kommt das Paket von demrichtigen Slave ?
+```java if (response[2]!= 2) ``` |  Enthält das Paket die richtige Anzahl an Datenbytes?
+```java if (response[1]!= 4) ``` |  Enthält das Paket den richitgen Function-Code?
+```java if (response == null ... response.length==0) ``` | Ist das Paket vorhanden oder nicht ? 
 
 
 
