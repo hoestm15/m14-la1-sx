@@ -15,3 +15,7 @@ __Turnus 2:__
     * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/Protokoll5.md)
 * Gruppe 3: 6. Einheit, 20.03.2018
     * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/Protokoll6.md)
+
+__Turnus 3:__
+* Gruppe 3: 7. Einheit, 15.05.2018
+    * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/Protokoll7.md)
