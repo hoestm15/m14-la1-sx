@@ -45,7 +45,20 @@ public class SingleMeasurementWorker extends SwingWorker<Double, String> {
 
 ### Fehlerhandling
 #### Plausibilitätskontrolle der Antwort  
-In diesem Abschnitt kontroliieren wir, ob die Antwort plausibel ist, das heißt, ob sie den Erwartungen entspricht
+In diesem Abschnitt kontroliieren wir, ob die Antwort plausibel ist, das heißt, ob sie den Erwartungen entspricht. Dies geschieht im nachfolgenden Fehlerhandlingblock, welcher aus dem obigen Listing entfernt wurde (Der Sinn der Abfragen ergibt sich aus dem Exception-Text9:
+```java
+    if (response == null || response.length == 0)
+      throw new ModbusException("keine Antwort", request);
+    if (response.length < 7)
+      throw new ModbusException("Antwort zu kurz", request, response);
+    if (response[0] != 2)
+      throw new ModbusException("Antwort vom Falschen Gerät", request, response);
+    if (response[1] != 4)
+      throw new ModbusException("Falscher Function Code", request, response);
+    if (response[2] != 2)
+      throw new ModbusException("Falsche Anzahl an Bytes", request, response);
+```
+
 #### Eigene Exception erstellen
 Es ist ratsam, für mehrere ähnliche Fehlerfälle eigene Exception zu erstellen. Dies erleichert die Fehlersuche erheblich. Also erstellten wir eine eigene Exception für Fehler, die im Zuge einer Modbus-Übertragung auftreten können. Dies geschieht, in dem man die Klasse Exception ableitet. Hier ist das Listing der Klasse ModbusException:
 
