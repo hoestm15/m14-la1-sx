@@ -101,3 +101,48 @@ code | Abfrage
 ```java if (response[0]!= 2) ``` | Hier wird überprüft, ob das Paket vom richtigen Slave kommt (2 ist die richtige Slave - Adresse)
 ```java if (response[1]!= 4) ``` | Hier wird überprüft, ob das Paket den richitgen Function-Code enthält 
 ```java if (response[2]!= 2) ``` | Hier wird überprüft, ob das Paket die richtige Anzahl an Datenbytes enthält
+
+## Programmieren von Exceptions
+
+Hier werden eigene Exceptions definiert. Dafür muss die Klasse ModbusException von der Superklasse Exception abgeleitet werden. Das Ziel ist es unterschiedliche Fehler zu erkennen und diese unterschiedlich behandeln zu können. Ansonsten funktioniert die Fehlerbehandlung gleich wie bei einer normalen Exception.
+
+```java
+public class ModbusException extends Exception
+ {
+     private final int [] request;
+     private final int [] response;
+ 
+ 
+     public ModbusException (String message) {
+         super(message); //message ist die String-Message, die beim Werfen der Exception eingegeben werden muss
+         request = null;
+         response = null;
+     }
+   
+     public ModbusException (String message, Throwable cause) {
+         super(message, cause);
+         request = null;
+         response = null;
+     }
+     
+     public ModbusException (String message, int [] request) {
+         super(message);
+         this.request = request;
+         response = null;
+     }
+     
+     public ModbusException (String message, int [] request, int [] response) {
+         super(message);
+         this.request = request;
+         this.response = response;
+     }
+  
+     public int[] getRequest () {
+         return request;
+     }
+  
+     public int[] getResponse () {
+         return response;
+     }     
+  }
+```
