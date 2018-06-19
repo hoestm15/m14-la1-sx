@@ -7,7 +7,7 @@ Anwesend: Reinbacher, Ruffenacht, Sackl M., Sackl R., Sammer, Schmuck, Schuster
 Abwesend: -  
 *******************************************************************************************************************************************  
 ## Wiederholung der letzten beiden Einheiten  
-Die Schüler die in der 6. Einheit nicht anwesend waren wurden über den Stoff der letzten beiden einheiten überprüft. So wiederholten wir die Themen Serielle Schnittstellen in Java, UART, MODBUS und Feldbus.  
+Die Schüler die in der 6. Einheit nicht anwesend waren wurden über den Stoff der letzten beiden einheiten überprüft. So wiederholten wir die Themen Serielle Schnittstellen in Java, UART, Modbus und Feldbus.  
 Link: [6. Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacrom14/sacrom14/LaborprotokollUE6.md), [5. Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacmam14/sacmam14/Protokoll5.md)  
 *******************************************************************************************************************************************  
 ## Fortsetzung Projekt: Temperatur Messung  
