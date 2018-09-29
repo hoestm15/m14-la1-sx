@@ -12,5 +12,5 @@
   
 *********************************************************************************************************************************  
 ## Rest Server  
-Dieser Server ist dazu da, um HTTP-Statusabfragen durchführen lässt. Weiter Infos (hier)[https://de.wikipedia.org/wiki/Representational_State_Transfer]
+Dieser Server ist dazu da, um HTTP-Statusabfragen durchführen lässt. Weiter Infos: (Representational State Transfer)(https://de.wikipedia.org/wiki/Representational_State_Transfer)
 *********************************************************************************************************************************
