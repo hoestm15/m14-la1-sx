@@ -23,6 +23,17 @@ Um Systeme aus der Ferne zu steuern, gibt es einige Möglichkeiten.
 ### über Netzwerk mit HTTP-Technik   
 ![Netzwerk2](/reibem14/Netzwerk2.PNG)   
 * *  einfach, da nur mit HTTP gearbeitet wird und diese Bibliotheken bereitsvorhanden sind  
-     die Sicherheit leidet etwas darunter  
+     die Sicherheit leidet etwas darunter    
+     *********************************************************************************************************************************   
+## HTTP  
+... ist ein Übertragungsprotokoll, das textbasiert funktioniert.  
+### Aufbau  
+Im Header befinden sich Informationen über den Server, dem Body und der Codierung. Es werden Informationen ausgetauscht über:   
+* die Verbindungsqualität  
+* ob der Server HTTP spricht  
+* die Länge der folgenden Nachricht  
+* die Codierung des Body  
+* Body Beginn und Ende  
+
     
 
