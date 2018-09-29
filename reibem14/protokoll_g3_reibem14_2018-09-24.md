@@ -52,8 +52,28 @@ nc heißt Networt Client und ist ein Programm, zum Aufbauen von Verbindungen zu 
   
       
 Nach dem Aufruf von *nc www.htl-mechatronik.at 80* bekommt man Informationen über die zuvor beschriebenen HTTP-Verbindung. Wichtig hierbei ist, das man die URL korrekt eingibt und die dazugehörige Portnummer.  
+```
+ bernhard@bernhard-vm:~$ nc www.htl-mechatronik.at 80
 
-![Terminalns](/reibem14/Terminal1.PNG)
+HTTP/1.1 400 Bad Request
+Date: Sat, 29 Sep 2018 12:17:46 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Content-Length: 313
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at www.htl-mechatronik.at Port 80</address>
+</body></html>
+
+´´´
 
 
 
