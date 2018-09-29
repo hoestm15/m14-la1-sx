@@ -43,7 +43,14 @@ Der Client schickt eine Anfrage(SYN Paket) an den Server, der währenddessen auf
 * Anfrage | Bedeutung  
   ------- | ---------  
   GET | Cliet fordert Ressource von Server an  
-  
+  POST | Client schickt Daten an Server, jedoch muss die URL bereits am Server existieren  
+  PUT | Client schickt Daten an Server, jedoch kann die URL bereits am Server erstellt werden  
+  DELETE | Client löscht Daten am Server  
+********************************************************************************************************************************  
+## nc Tool  
+nc heißt Networt Client und ist ein Programm, zum Aufbauen von Verbindungen zu einem Server. Man arbeitet hierbei aus dem Terminal heraus und alles was darin geschrieben wird, wird sofort an den Server geschickt. Alle Daten die vom Server empfangen werden, werden im Terminal ausgegeben.  
+
+
 
     
 
