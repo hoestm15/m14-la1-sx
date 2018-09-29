@@ -55,8 +55,59 @@ Statuscode | Bedeutung
 4xx | Client-Fehler
 5xx | Server-Fehler
   
-
-
-
-
 Weitere Informationen zu HTTP: ![Wikipedia/HTTP](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)  
+  
+-----------------------------------------------------------------------  
+  
+##### Praktische Übungen mit nc  
+Mittels *nc* konnten wir eine Verbindung zu einem Server herstellen. Diese Übung diente dazu, uns mit dem Inhalt von HTTP-Anfragen und Server-Responses vertraut zu machen.  
+  
+###### NC-Verbindungsaufbau zu Server  
+``
+daniel@daniel-VirtualBox:~$ nc www.htl-mechatronik.at 80
+``
+###### HTTP-Anfrage  
+``
+GET / HTTP/1.1
+``
+###### Server-Antwort  
+```
+HTTP/1.1 400 Bad Request              //Statuscode
+Date: Mon, 24 Sep 2018 06:54:24 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Content-Length: 313
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at www.htl-mechatronik.at Port 80</address>
+</body></html>
+```
+  
+###### NC-Verbindungsaufbau zu Localhost  
+``
+daniel@daniel-VirtualBox:~$ nc -l 4711
+``
+###### HTTP-Anfrage  
+``
+GET / HTTP/1.1
+``
+###### Response  
+```
+Host: localhost:4711
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0	welcher Browser steckt dahinter?
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8				was akzeptiert der Browser?
+Accept-Language: de,en-US;q=0.7,en;q=0.3							akzeptierte Sprachen
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+```
+
