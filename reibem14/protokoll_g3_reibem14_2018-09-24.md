@@ -11,3 +11,6 @@
  **Anwesend:** Bernhard Reinbacher, Ruffenacht Florian, Sackl Martin, Sackl Roland, Sammer Daniel, Schmuck Martin, Schuster Patrick  
   
 *********************************************************************************************************************************  
+## Rest Server  
+Dieser Server ist dazu da, um HTTP-Statusabfragen durchführen lässt. Weiter Infos (hier)[https://de.wikipedia.org/wiki/Representational_State_Transfer]
+*********************************************************************************************************************************
