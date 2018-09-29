@@ -78,14 +78,23 @@ Wenn man den lokalen Host kontakiert bekommt man folgende Informationen:
 ```bernhard@bernhard-vm:~$ nc -l 4711
 
 GET / HTTP/1.1
-Host: localhost:4711		mein Lokaler Host = 4711
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0	welcher Browser steckt dahinter?	
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8		was akzeptiert der Browser?
-Accept-Language: de,en-US;q=0.7,en;q=0.3		Akzeptierte Sprachen
-Accept-Encoding: gzip, deflate		Client kann binäre Daten schicken, aber dann 		müssen diese richtig gezipt sein
-Connection: keep-alive		Wenn die Anfrage kommt, soll Verbindung offen 		bleiben
+
+Host: localhost:4711		                                                                    
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0	  	
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8		                  
+Accept-Language: de,en-US;q=0.7,en;q=0.3	                                                  
+Accept-Encoding: gzip, deflate	                                                                                                                                                                          
+Connection: keep-alive		         
 Upgrade-Insecure-Requests: 1  
 ```  
+Information | Bedeutung  
+----------- | ---------  
+1.Zeile | mein lokaler Host = 4711  
+2.Zeile | welcher Browser steckt dahinter?  
+3.Zeile | was akzepiert der Browser?  
+4.Zeile | welche Sprachen werden akzeptiert?  
+5.Zeile | Client kann binäre Daten schicken, aber dann müssen diese richtig gezipt sein  
+6.Zeile | Wenn die Anfrage kommt, soll Verbindung offen bleiben  
 
 
 
