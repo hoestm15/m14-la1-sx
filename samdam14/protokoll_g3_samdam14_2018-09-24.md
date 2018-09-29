@@ -55,7 +55,7 @@ Statuscode | Bedeutung
 4xx | Client-Fehler
 5xx | Server-Fehler
   
-Weitere Informationen zu HTTP: ![Wikipedia/HTTP](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)  
+Weitere Informationen zu HTTP: [Wikipedia/HTTP](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)  
   
 -----------------------------------------------------------------------  
   
