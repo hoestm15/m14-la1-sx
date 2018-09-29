@@ -51,7 +51,7 @@ Der Client schickt eine Anfrage(SYN Paket) an den Server, der währenddessen auf
 nc heißt Networt Client und ist ein Programm, zum Aufbauen von Verbindungen zu einem Server. Man arbeitet hierbei aus dem Terminal heraus und alles was darin geschrieben wird, wird sofort an den Server geschickt. Alle Daten die vom Server empfangen werden, werden im Terminal ausgegeben.       
   
       
-Nach dem Aufruf von `nc www.htl-mechatronik.at 80*` bekommt man Informationen über die zuvor beschriebenen HTTP-Verbindung. Wichtig hierbei ist, das man die URL korrekt eingibt und die dazugehörige Portnummer.  
+Nach dem Aufruf von `nc www.htl-mechatronik.at 80*` bekommt man eine Antwort vom Server mitInformationen über die zuvor beschriebene HTTP-Verbindung. Wichtig hierbei ist, das man die URL korrekt eingibt und die dazugehörige Portnummer.  
 ```
  bernhard@bernhard-vm:~$ nc www.htl-mechatronik.at 80
 
@@ -72,6 +72,19 @@ Content-Type: text/html; charset=iso-8859-1
 <hr>
 <address>Apache/2.4.7 (Ubuntu) Server at www.htl-mechatronik.at Port 80</address>
 </body></html>
+```  
+  
+Wenn man den lokalen Host kontakiert bekommt man folgende Informationen:  
+```bernhard@bernhard-vm:~$ nc -l 4711
+
+GET / HTTP/1.1
+Host: localhost:4711		mein Lokaler Host = 4711
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0	welcher Browser steckt dahinter?	
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8		was akzeptiert der Browser?
+Accept-Language: de,en-US;q=0.7,en;q=0.3		Akzeptierte Sprachen
+Accept-Encoding: gzip, deflate		Client kann binäre Daten schicken, aber dann 		müssen diese richtig gezipt sein
+Connection: keep-alive		Wenn die Anfrage kommt, soll Verbindung offen 		bleiben
+Upgrade-Insecure-Requests: 1  
 ```  
 
 
