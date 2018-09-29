@@ -13,4 +13,9 @@
 *********************************************************************************************************************************  
 ## Rest Server  
 Dieser Server ist dazu da, um HTTP-Statusabfragen durchführen lässt. Weiter Infos: [Representational State Transfer](https://de.wikipedia.org/wiki/Representational_State_Transfer)
-*********************************************************************************************************************************
+*********************************************************************************************************************************  
+## Systemsteuerung aus der Ferne  
+Um Systeme aus der Ferne zu steuern, gibt es einige Möglichkeiten.  
+* über Feldbus/Gateway/Netzwerk  
+* über Netzwerk mit HTTP-Technik  
+
