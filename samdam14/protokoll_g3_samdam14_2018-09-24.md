@@ -33,3 +33,13 @@ Antwortet der Client ebenfalls mit einer ACK-Package, steht die Verbindung. Grun
 Zum Beenden der Verbindung schickt zuerst einer der beiden ein FIN-Package, der andere antwortet mit einem FIN-ACK-Package.  
   
 ##### Anfragemethoden  
+Der Client legt bei seiner Request (*Anfrage*) fest, was er vom Server möchte.  
+  
+Methode | Erklärung
+------- | ---------
+GET | Daten vom Server abrufen
+POST | Daten zum Server zum Weiterverarbeiten schicken
+PUT | Daten auf den Server hochladen
+DELETE | Daten vom Server löschen
+  
+
