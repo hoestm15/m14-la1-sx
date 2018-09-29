@@ -51,7 +51,7 @@ Der Client schickt eine Anfrage(SYN Paket) an den Server, der währenddessen auf
 nc heißt Networt Client und ist ein Programm, zum Aufbauen von Verbindungen zu einem Server. Man arbeitet hierbei aus dem Terminal heraus und alles was darin geschrieben wird, wird sofort an den Server geschickt. Alle Daten die vom Server empfangen werden, werden im Terminal ausgegeben.       
   
       
-Nach dem Aufruf von *nc www.htl-mechatronik.at 80* bekommt man Informationen über die zuvor beschriebenen HTTP-Verbindung. Wichtig hierbei ist, das man die URL korrekt eingibt und die dazugehörige Portnummer.  
+Nach dem Aufruf von `nc www.htl-mechatronik.at 80*` bekommt man Informationen über die zuvor beschriebenen HTTP-Verbindung. Wichtig hierbei ist, das man die URL korrekt eingibt und die dazugehörige Portnummer.  
 ```
  bernhard@bernhard-vm:~$ nc www.htl-mechatronik.at 80
 
@@ -72,8 +72,8 @@ Content-Type: text/html; charset=iso-8859-1
 <hr>
 <address>Apache/2.4.7 (Ubuntu) Server at www.htl-mechatronik.at Port 80</address>
 </body></html>
+```  
 
-´´´
 
 
 
