@@ -42,4 +42,21 @@ POST | Daten zum Server zum Weiterverarbeiten schicken
 PUT | Daten auf den Server hochladen
 DELETE | Daten vom Server löschen
   
+Natürlich gibt es noch weitere Methoden, diese sind jedoch auf Wikipedia selbst nachzulesen.  
+  
+##### Statuscodes  
+Bei jeder HTTP-Anfrage antwortet der Server mit einem HTTP-Statuscode. Dieser gibt Auskunft, ob die Anfrage erfolgreich bearbeitet wurde oder ob es zu Umleitungen oder Störungen kam.  
 
+Statuscode | Bedeutung
+---------- | ---------
+1xx | Informationen, dient zur Antwort, falls die Bearbeitung länger andauert
+2xx | Erfolgreiche Operation
+3xx | Es kam zu einer Umleitung, bzw. sind noch weitere Schritte des Clients notwendig
+4xx | Client-Fehler
+5xx | Server-Fehler
+  
+
+
+
+
+Weitere Informationen zu HTTP: ![Wikipedia/HTTP](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)  
