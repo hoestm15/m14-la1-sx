@@ -96,7 +96,8 @@ Information | Bedeutung
 5.Zeile | Client kann binäre Daten schicken, aber dann müssen diese richtig gezipt sein  
 6.Zeile | Wenn die Anfrage kommt, soll Verbindung offen bleiben  
 
-
+## HTTPs Verbindung   
+![HTTPS](/reibem14/HTTPS.PNG)
 
 
     
