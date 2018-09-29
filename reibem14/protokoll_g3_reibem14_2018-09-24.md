@@ -16,6 +16,6 @@ Dieser Server ist dazu da, um HTTP-Statusabfragen durchführen lässt. Weiter In
 *********************************************************************************************************************************  
 ## Systemsteuerung aus der Ferne  
 Um Systeme aus der Ferne zu steuern, gibt es einige Möglichkeiten.  
-* über Feldbus/Gateway/Netzwerk ![Netzwerk1]()  
-* über Netzwerk mit HTTP-Technik ![Netzwerk2]()   
+* über Feldbus/Gateway/Netzwerk ![Netzwerk1](/reibem14/Netzwerk1.png)  
+* über Netzwerk mit HTTP-Technik ![Netzwerk2](/reibem14/Netzwerk1.png)   
 
