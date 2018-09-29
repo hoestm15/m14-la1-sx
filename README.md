@@ -14,3 +14,11 @@
   * *Nicht anwesend* 
 * Gruppe 3: 7. Einheit, 15.05.2018  
   * [Protokoll Einheit 7](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/Protokoll7.md)  
+  
+-------------------------------------------------------------  
+  
+# Labor 5AHME (2018/19) - SX  
+  
+* Gruppe 3: 1. Einheit, 24.09.2018  
+  * [protokoll_g3_samdam14_2018-09-24](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/protokoll_g3_samdam14_2018-09-24.md)  
+  
