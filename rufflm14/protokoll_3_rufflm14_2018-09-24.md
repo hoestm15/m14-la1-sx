@@ -31,7 +31,7 @@ Für den Request stehen folgende Schlüsselwörter zur Verfügung:
 * **GET**     -> Inhalte vom Server fordern
 * **POST**    -> Übermitteln von Inhalten
 * **PUT**     -> Erstellen von neuen Inhalten auf dem Server
-* **DELETE**  -> Löschen von Inahlten
+* **DELETE**  -> Löschen von Inhalten
 
 Das Protokoll ist so einfach gehalten, dass man es sogar eigenhändig in der Konsole probieren kann. Neben dem GET-Befehl sind znoch weitere Informationen in der Anfrage nötig. Außerdem muss darauf geachtet werde, die richitgen ENTER zu verwenden. An folgendem Beispiel kann man sehen, wie eine HTTP-Anfrage in der Konsole aussieht:
 ```
@@ -83,5 +83,21 @@ Die Verbindung wird duch ein "Final Flag" im TCP-Protokoll beendet.
 [Mehr zum HTTP-Protokoll](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
 
 ## Typescript
+Die von Microsoft entwickelte Programmiersprache Typescript basiert auf JavaScript. Der TypeScript-Code wird vor dem Ausführen in einen JavaScript-Code "transpiliert". Der Hauptunterschied zwischen den beiden Sprachen liegt darin, dass in TypeScript jeder Variable ein eindeutiger Datentyp zugeweisen wird. Dadurch können Fehler leichter gleich beim Programmieren in der IDE gefunden werden.
 
+[Mehr Informationen zu TypeScript](https://msdn.microsoft.com/de-de/magazine/dn890374.aspx)
 
+Um eine TypeScript Programm zu schreiben, muss TypeScript im jeweiligen Projektordner installiert werden. Dazu wird zuerst mit ```npm init``` eine Datei mit dem Namen **package.json** ersteltt. Darin sind grundsätzliche Informationen zum Projekt enthalten:
+```
+npm init
+package name: (rest-server) 
+version: (1.0.0) 0.0.1
+description: 5AHME LA1 G3 Rest Server
+entry point: (index.js) main.js
+test command: 
+git repository: 
+keywords: 
+author: Florian Ruffenacht
+license: (ISC) "MIT"
+```
+Mit dem Kommando ```npm install --save-dev typescript``` kann TypeScript installiert werden. Das sollte immer im Projekt und nicht global erfolgen, da sich der Standard schnell ändern kann und das Programm dann möglicherweise fehlerhaft ist. Beim Hochladen auf ein Repository sollte die Datei node.modules ausgeschlossen werden, um die Datenmenge zu reduzieren.
