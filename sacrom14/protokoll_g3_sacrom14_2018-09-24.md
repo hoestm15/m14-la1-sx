@@ -109,4 +109,10 @@ Accept-Language: de,en-US;q=0.7,en;q=0.3
 Accept-Encoding: gzip, deflate
 Connection: keep-alive
 Upgrade-Insecure-Requests: 1
-``
+```
+
+# Anlegen eines Javascript/Typescript-Projektes
+Auch noch Thema in der Einheit war, wie man ein Projekt anlegt und die benötigten Komponenten dafür installiert.
+Dafür wurde ein Ordner angelegt und dort führten wir den Befehl `npm init` aus. Alle wichtigen Daten kann man nach der Ausführung des Befehls eingeben. Um Typscript zu installieren führten wir den Befehl `npm install --save-dev typescript` aus.Das Typesscript wird im Projektordner fürs entwickelt installiert und es wird nicht das fertige Programm verwendet.
+Hilfreiche Werkzeuge für die Programmierung haben wir mithilfe des Framework *Express* mit dem Befehl `npm install --save express`.
+
