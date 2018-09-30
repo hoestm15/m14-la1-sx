@@ -18,9 +18,9 @@ Maschine-zu-Maschine-Kommunikation in Werbsevices verwendet wird.HTTP ist das ve
 # HTTP
 HTTP steht für **H**yper**T**ext **T**ransfer **P**rotokoll. Das Protkoll ist zustandslos und die Übertragung findet textuell statt.Das Protokoll überträgt Daten auf der Anwendungsschicht.  
 
-![HTTP](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacrom14/sacrom14/HTTPProtokollSchema.png)
+![HTTP](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacrom14/sacrom14/HTTP Protokoll Schema.png)
      
-    
+   
   
 ## Aufbau  
 **Header**   
