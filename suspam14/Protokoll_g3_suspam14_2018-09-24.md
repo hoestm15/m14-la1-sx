@@ -168,7 +168,19 @@ Content-Type: text/html
 # Anlegen eines Javascript/Typescript-Projektes
 Das zweite Thema der Einheit war, wie man ein Projekt anlegt und die benötigten Komponenten dafür installiert.
 Dafür legten wir einen Ordner an und gingen mit `cd` in diesen.  
-Dort führten wir den Befehl `npm init` aus. Nach der Ausführung dieses Befehls kann man alle wichtigen Daten für das Projekt eingeben, diese werden in die Datei *package.json* geschrieben.   
+Dort führten wir den Befehl `npm init` aus. Nach der Ausführung dieses Befehls kann man alle wichtigen Daten für das Projekt eingeben, diese werden in die Datei *package.json* geschrieben.  Die Datei *package-json* hat folgenden Inhalt:  
+```
+npm init
+package name: (rest-server) 
+version: (1.0.0) 0.0.1
+description: 5AHME LA1 G3 Rest Server
+entry point: (index.js) main.js
+test command: 
+git repository: 
+keywords: 
+author: Schuster
+license: (ISC) "MIT"
+```
 Um Typscript zu installieren führten wir den Befehl `npm install --save-dev typescript` aus. Durch diesen Befehl wird Typescript im Projektordner fürs entwickeln installiert und wird nicht für das fertige Programm verwendet (Typescript wird zu Javascript übersetzt. Javascript wird zu Ausführung benötigt). 
 > Von einer globalen Installation ist abzuraten, da man in verschiedenen Projekten durchaus verschiedene Javascript und Typescript Versionen verwendet was zu Problemen führen kann.  
 
