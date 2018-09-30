@@ -78,6 +78,19 @@ Content-Type: text/html
 </p>
 </body></html>
 ```
+
+### Statuscodes
+Die Antwort des  Servers enthält immer einen der folgenden Statuscodes:
+
+Statuscode | Bedeutung
+---------- | ---------
+1xx | Die Bearbeitung der Anfrage dauert noch an
+2xx | Erfolgreiche Operation
+3xx | Es sind noch weitere Schritte des Clients notwendig zur erfolgreichen Operation notwendig
+4xx | Fehler des Clients
+5xx | Fehler des Servers
+
+
 Die Verbindung wird duch ein "Final Flag" im TCP-Protokoll beendet.
 
 [Mehr zum HTTP-Protokoll](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
