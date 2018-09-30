@@ -26,7 +26,7 @@ Um Systeme aus der Ferne zu steuern, gibt es einige Möglichkeiten.
      die Sicherheit leidet etwas darunter    
      *********************************************************************************************************************************   
 ## HTTP  
-... ist ein Übertragungsprotokoll, das textbasiert funktioniert.  
+HTTP(Hypertext Transfer Protocol) ist ein Übertragungsprotokoll, das textbasiert funktioniert und für die Übertragung von Daten zwischen Server und Client dient. 
 ### Aufbau  
 Im **Header** befinden sich Informationen über den Server, dem Body und der Codierung. Es werden Informationen ausgetauscht über:   
 * die Verbindungsqualität  
@@ -94,10 +94,18 @@ Information | Bedeutung
 3.Zeile | was akzepiert der Browser?  
 4.Zeile | welche Sprachen werden akzeptiert?  
 5.Zeile | Client kann binäre Daten schicken, aber dann müssen diese richtig gezipt sein  
-6.Zeile | Wenn die Anfrage kommt, soll Verbindung offen bleiben  
+6.Zeile | Wenn die Anfrage kommt, soll Verbindung offen bleiben   
+********************************************************************************************************************************
 
-## HTTPs Verbindung   
-![HTTPS](/reibem14/HTTPS.PNG)
+## HTTPs Verbindung    
+HTTPs ist eine Erweiterung des HTTP Protokolls. HTTPs ist mit einer Transportverschlüsselung versehen um die Daten sicher übertragen zu können. Deshalb müssen Server und Client jeweils eine Encode und Decode Stelle besitzen.
+![HTTPS](/reibem14/HTTPS.PNG)  
+********************************************************************************************************************************  
+## JavaScript  
+JavaScript ist eine Sprache mit der man die Möglichkeit hat, HTML und Webbasiert zu programmieren. Obwohl man glauben könnte Java und JavaScript sind sich sehr änhlich, sind sie grundverschieden. Weitere Informationen: [JavaScriptTutorial](https://www.w3schools.com/js/default.asp)  
+  
+### Rest-Server anlegen  
+
 
 
     
