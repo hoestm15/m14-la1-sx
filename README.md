@@ -18,4 +18,8 @@
   krank  
   
 * ## 7. Einheit: 15.05.2018  
-  [7. Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacmam14/sacmam14/Protokoll6.md) 
+  [7. Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacmam14/sacmam14/Protokoll6.md)  
+  
+# Labor 5AHME (2018/19) - SX  
+* ## 1. Einheit: 24.09.2018. 
+  [1. Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacmam14/sacmam14/protokoll_g3_sacmam14_2018-09-24.md)
