@@ -24,6 +24,7 @@ Um Daten verschlüsselt zu Übertragen gibt es das Protokoll HTTPS.
 ### Verbindungsaufbau
 Im Grundzustand des Servers ist der *Listen-Zustand*, in diesem wartet er auf eine Anfrage von einem CLient durch durch ein *SYN-Package*. Erhält der Server eine Anfrage so sendet er ein *ACK-Package*, damit der Client weiß das die Anfrage angekommen ist. Sobald der Client diese *ACK-Package* empfangen hat sendet er auch ein *ACK-Package* zurück. Wenn der Server diese empfängt steht die Verbindung.
 ![REST-Server](https://github.com/suspam14/la1/blob/master/REST-Server.svg)
+> &copy Patrick Schuster 2018
 ### Beenden der Verbindung
 Will einer der beiden Hosts die Verbindung beenden, so sendet er ein *FIN-Package*, der andere Host antwortet mit einem *FIN-ACK-Package*.
 ### Keep-Alive Pakete
@@ -113,27 +114,7 @@ Der Server "behauptete" wieder die Anfrage nicht verstehen zu können.
 Der Fehler in der Anfrage war, dass unsere Anfrage einen normalen *line feed* verwendete. Der Server hingegen erwartete eine combination aus *line feed* und *carriage return*. 
 Diesen Fehler konnten wir beheben indem wir beim *nc*-Tool eine Option (-C) auswälhten, die den *line feed* umwandelte, so dass der Server die zeilenumbrüche erkannte.  
 ```patrick@Patrick-XMG-A705:~$ nc -C www.htl-mechatronik.at 80```  
-Wir schickten die gleiche Anfrage und bekamen eine merkwürdige Antwort.  
-```HTTP/1.1 200 OK
-Date: Mon, 24 Sep 2018 07:39:11 GMT
-Server: Apache/2.4.7 (Ubuntu)
-Last-Modified: Tue, 06 Jan 2015 08:13:36 GMT
-ETag: "1e9-50bf76235166b-gzip"
-Accept-Ranges: bytes
-Vary: Accept-Encoding
-Content-Encoding: gzip
-Content-Length: 328
-Keep-Alive: timeout=10, max=100
-Connection: Keep-Alive
-Content-Type: text/html
-
-���n�0
-        ��}
-/�`�-�Th�V+��l�NS�)�(-
-���~�@��+�/��l����]��:��3�ʃP�%��/ѫ �E�d��z_J�L�_�z�l��5�
-                                                             zGl���n���OY���)�[������\[���v@a�ͧ6�����������6���KArM}���T�X�=�]�-G�8�b��{5��:�`��R�G�V�L�mU��ɵ�ش�M���mV&�xs)H`��xq$"��
-�"_�b2�@(� T�v4��"�e*�.����Pjy�F����{�N�ӠĚ�.�
-```
+Wir schickten die gleiche Anfrage und bekamen eine merkwürdige Antwort, in welcher die Nutzdaten nicht lesbar waren.  
 Das lag daran, dass in der Anfrage die falsche Codierung angaben und der Server uns somit eine gezipte Datei schickte.
 Um dieses Problem zu beheben schickten wir eine Anfrage ohne *gzip* als Codierung.
 Der Server gab uns die erwünschte Antwort.
@@ -168,7 +149,7 @@ Content-Type: text/html
 # Anlegen eines Javascript/Typescript-Projektes
 Das zweite Thema der Einheit war, wie man ein Projekt anlegt und die benötigten Komponenten dafür installiert.
 Dafür legten wir einen Ordner an und gingen mit `cd` in diesen.  
-Dort führten wir den Befehl `npm init` aus. Nach der Ausführung dieses Befehls kann man alle wichtigen Daten für das Projekt eingeben, diese werden in die Datei *package.json* geschrieben.  Die Datei *package-json* hat folgenden Inhalt:  
+Dort führten wir den Befehl `npm init` aus. Nach der Ausführung dieses Befehls kann man alle wichtigen Daten für das Projekt eingeben, diese werden in die Datei *package.json* geschrieben.  Die Datei *package.json* hat folgenden Inhalt:  
 ```
 npm init
 package name: (rest-server) 
