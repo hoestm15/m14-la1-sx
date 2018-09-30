@@ -39,7 +39,7 @@ Der Body enthält die Nutzdaten.
 Eine  Anfrage(SYN Paket) wird von Client an den Server geschickt,währenddessen der Server auf die Anfragen wartet.War die Anfrage korrekt antwortet der Server mit einem ACK-Paket,welches wiederum auch der Client zurückschickt.Danach sind zwei Datenröhren für den Datentranfer bereitgestellt. Zum Beenden der Verbindung schickt zuerst einer der beiden ein FIN-Package darauf der andere mit einem FIN-ACK-Package antwortet.
 
 
-  **Anfrage | Bedeutung** 
+  Anfrage | Bedeutung 
   ------- | ---------  
   GET | Cliet fordert Ressource von Server an  
   DELETE | Client löscht Daten am Server  
