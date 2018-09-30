@@ -5,11 +5,11 @@ Gruppe: 3
 Anwesend: Reinbacher, Ruffenacht, Sackl M., Sackl R., Sammer, Schmuck, Schuster  
 Abwesend: -
 
-# Bestandteile einer Webseite  
-* HTTP: Übertragungsprotokoll  
-* HTML: Struktur der Website  
-* Javascript: clientseitige Programmierung  
-* CSS: Aussehen der Website  
+# Kommunikation in der Automatisierungstechnik
+Der klassische Ansatz Daten von einem Gerät (z.B. SPS oder Feldgerät) über eine weitere Distanz zu einem PC zu übertragen war über einen Feldbus und einem Netzwerk. Dieser Ansatz bringt einige Probleme mit sich, wie z.B. die Notwendigkeit von zusätzlicher Hardware und wird heutzutage zunehmend weniger verwendet. 
+![klassischer Ansatz](https://github.com/suspam14/la1/blob/master/%C3%9Cbertragung_klassisch.svg)  
+Stattdessen wird heutzutage der Ansatz verfolgt direkt über das Netzwerk zu arbeiten. Das geschieht über HTTP-Server und HTTP-Clients. Das HTTP-Protkoll wird auch im WWW verwendet, was aber nicht zwingend heißt es nur dort funktioniert. HTTP kann auch abgeschottet vom WWW verwendet werden, da es nur ein Übertragungsprotkoll ist. SPSen oder Feldgeräte im "freien" Internet zu verwendet stellt nämlich einige Sicherheitsrisiken dar.
+![HTTP Ansatz](https://github.com/suspam14/la1/blob/master/%C3%9Cbertragung_http.svg)
 
 # REST-Server  
 Der Name REST-Server steht für **RE**presentational **S**tate **T**ransfer Server und wird meist für die 
@@ -24,7 +24,6 @@ Um Daten verschlüsselt zu Übertragen gibt es das Protokoll HTTPS.
 ### Verbindungsaufbau
 Im Grundzustand des Servers ist der *Listen-Zustand*, in diesem wartet er auf eine Anfrage von einem CLient durch durch ein *SYN-Package*. Erhält der Server eine Anfrage so sendet er ein *ACK-Package*, damit der Client weiß das die Anfrage angekommen ist. Sobald der Client diese *ACK-Package* empfangen hat sendet er auch ein *ACK-Package* zurück. Wenn der Server diese empfängt steht die Verbindung.
 ![REST-Server](https://github.com/suspam14/la1/blob/master/REST-Server.svg)
-> &copy Patrick Schuster 2018
 ### Beenden der Verbindung
 Will einer der beiden Hosts die Verbindung beenden, so sendet er ein *FIN-Package*, der andere Host antwortet mit einem *FIN-ACK-Package*.
 ### Keep-Alive Pakete
