@@ -81,7 +81,7 @@ Nummernbereich | Bedeutung
 HTTPS ist die Erweiterung des HTTP-Protokolls um eine Möglichkeit der Verschlüsselung. Dabei werden zwei verschlüsselte Datenröhren aufgebaut, Server und Client müssen je über eine Encrypt- als auch eine Decryptfunktion und -stelle verfügen. Dabei werden die Daten sowohl gegen unbefugte Lese- als auch Schreibzugriffe geschützt.  
   
 #### JavaScript  
-JavaScript ist, anders als man vermuten möchte, in der Bedienung nicht mit Java zu vergleichen. Bei JavaScript handelt es sich um ein Programmiersprache, welche man primär für die clientseitige Programmierung verwendet. Seit einiger Zeit kann man diese jedoch auch für Server verwenden. JavaScript verfügt über eine schwache, dynamische Typisierung, was bedeutet, dass der Typ einer Variable erst durch den Inhalt festgelegt wird. Dies ist für manche Programmierer ein rotes Tuch, da dies zwar praktisch aber auch sehr fehleranfällig ist. Wir verwenden den Microsoft-Abkömmling dieser Sprache, der TypeScript genannt wird, dort werden viele Dinge (unter anderem die Typisierung) besser umgesetzt. 
+JavaScript ist, anders als man vermuten möchte, in der Bedienung nicht mit Java zu vergleichen. Bei JavaScript handelt es sich um ein Programmiersprache, welche man primär für die clientseitige Programmierung verwendet. Seit einiger Zeit kann man diese jedoch auch für Server verwenden. JavaScript verfügt über eine schwache, dynamische Typisierung, was bedeutet, dass der Typ einer Variable erst durch den Inhalt festgelegt wird. Dies ist für manche Programmierer ein rotes Tuch, da dies zwar praktisch, aber auch sehr fehleranfällig ist. Wir verwenden den Microsoft-Abkömmling dieser Sprache, der TypeScript genannt wird, dort werden viele Dinge (unter anderem die Typisierung) besser umgesetzt. 
 ___________________________
   
   
@@ -154,7 +154,7 @@ Da beim Kompilieren eines TypeScript-Projekts der Code zunächst in einen JavaSc
 martin@schmuck:~$   node --version              // Die installierte node.js-Version prüfen (sollte min. V7 sein)
 v7.10.1
 
-martin@schmuck:~$   npm init                    // Package (Projekt) anlegen
+martin@schmuck:~/rest-server1$  npm init                    // Package (Projekt) anlegen
 
 This utility will walk you through creating a package.json file.
 It only covers the most common items, and tries to guess sensible defaults.
@@ -198,7 +198,7 @@ Anschließend werden TypeScript und Express (= Paket mit nützlichen Tools) mit 
 Werfen wir abschließend noch einen Blick in die Datei `package.json`, wo sämtliche das Projekt betreffenden Informationen gespeichert werden.
 
 ```
-cpt-kirk@xubuntu-n:~/rest-server1$ cat package.json 
+martin@schmuck:~/rest-server1$ cat package.json 
 {
   "name": "rest-server1",
   "version": "0.0.1",
