@@ -16,7 +16,15 @@ Man nehme an, man möchte mit einem PC auf eine SPS zugreifen, Zustände abfrage
 ![mit Feldbus](/smumam14/resources/fb.png)    
 > &copy; 2018, Martin Schmuck  
 
-hier benötigt man Zusatzbibliotheken, die Programmierung wird ebenfalls verkomtpliziert
+Hier benötigt man Zusatzbibliotheken, die Programmierung wird ebenfalls verkompliziert.   
+  
+________________________________
+
+In letzter Zeit wird versucht, sich mehr in Richtung des folgenden Konzepts zu bewegen: 
+![HTTP](/smumam14/resources/http.png)    
+> &copy; 2018, Martin Schmuck  
+
+Diese Lösung verspricht eine einfachrer Realisierung, dafür kann die Sicherheit hier leiden.  
 
 
 #### Was ist ein REST-Server?
