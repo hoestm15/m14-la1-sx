@@ -165,7 +165,7 @@ Content-Type: text/html
 </p>
 </body></html>
 ```
-# anlegen eines Javascript/Typescript-Projektes
+# Anlegen eines Javascript/Typescript-Projektes
 Das zweite Thema der Einheit war, wie man ein Projekt anlegt und die benötigten Komponenten dafür installiert.
 Dafür legten wir einen Ordner an und gingen mit `cd` in diesen.  
 Dort führten wir den Befehl `npm init` aus. Nach der Ausführung dieses Befehls kann man alle wichtigen Daten für das Projekt eingeben, diese werden in die Datei *package.json* geschrieben.   
