@@ -126,8 +126,6 @@ Um in JavaScript ein Programm schreiben zu können, muss man es sich im Projekto
   }
 }  
 
-```
-
 
     
 
