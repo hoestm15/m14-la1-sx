@@ -54,8 +54,8 @@ Der Server wartet im Ausgangszustand auf Anfragen vom Client. Der Client sendet 
 ###### Keep-alive-Pakete  
 Logischerweise werden nicht ununterbrochen zwischen Server und Client Pakete hin- und herübertragen. Es kann z.B. im Falle eines Stromausfalls dazu kommen, dass ein Client nicht mehr sendet, die Verbindug bleibt dennoch vorerst offen (vom Server aus gesehen). Um "tote" Verbindugen nicht unnötig lange offen lassen zu müssen, wartet der Server meist ein Timeout im Bereich von bis zu zwei Minuten ab und schließt dann die Verbindung von selbst. Wenn der Client dies verhindern will, muss er in regelmäßigen Abständen `Keep-alive`-Pakete an den Server senden.  
   
-##### HTTP-Befehle
-Das HTTP-Protocol sieht eine Vielzahl an verschiedenen Befehlen vor. Die wichtigsten vier sind:
+##### HTTP-Befehle  
+Das HTTP-Protocol sieht eine Vielzahl an verschiedenen Befehlen vor. Die wichtigsten vier sind:  
 Befehl (Methode) | Zweck  
 -----------------|------  
 `GET` | Daten vom Server abrufen.  
@@ -63,10 +63,10 @@ Befehl (Methode) | Zweck
 `PUT` | Daten an den Server senden, die es dort noch nicht gibt (neue Inhalte erstellen).  
 `DELETE` | Daten vom Server löschen.  
   
-##### Statuscodes
-HTTP sieht dreistellige Nummern zur Statusmeldung vor.
-Nummernbereich | Bedeutung
----------------|----------
+##### Statuscodes  
+HTTP sieht dreistellige Nummern zur Statusmeldung vor.  
+Nummernbereich | Bedeutung  
+---------------|----------  
 `1xx` | Die Abarbeitung der Anfrage dauert noch an.  
 `2xx` | Erfolgreich
 `3xx` | Weitere Schritte des Clients notwendig
