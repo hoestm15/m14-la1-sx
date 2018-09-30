@@ -6,4 +6,5 @@
 Anwesend: Reinbacher, Ruffenacht, Sackl M., Sackl R., Sammer, Schmuck, Schuster   
 Abwesend: -  
 *******************************************************************************************************************************************  
-## Wiederholung der letzten beiden Einheiten  
+## REST-Server  
+REST steht für die Abkürzung **R**epresentational **S**tate **T**ransfer
