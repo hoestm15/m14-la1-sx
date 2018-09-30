@@ -80,3 +80,34 @@ Nummernbereich | Bedeutung
   
 #### JavaScript  
 JavaScript ist, anders als man vermuten möchte, in der Bedienung nicht mit Java zu vergleichen. Bei JavaScript handelt es sich um ein Programmiersprache, welche man primär für die clientseitige Programmierung verwendet. Seit einiger Zeit kann man diese jedoch auch für Server verwenden. JavaScript verfügt über eine schwache, dynamische Typisierung, was bedeutet, dass der Typ einer Variable erst durch den Inhalt festgelegt wird. Dies ist für manche Programmierer ein rotes Tuch, da dies zwar praktisch aber auch sehr fehleranfällig ist. Wir verwenden den Microsoft-Abkömmling dieser Sprache, der TypeScript genannt wird, dort werden viele Dinge (unter anderem die Typisierung) besser umgesetzt. 
+___________________________
+  
+  
+### Praktische Übungen  
+Wir öffneten eine Konsole unter Ubuntu und versuchten, zu einem Server eine Verbindung aufzubauen. Die Syntax lautet:  
+  
+  `nc <Server-URL> <Portnummer>`  
+    
+ Dank der Einfachheit des HTTP-Protokolls kann man nun mit dem Terminal einen HTTP-Client interpretieren. So könnte eine einfache Anfrage aussehen:  
+   
+   ```
+martin@schmuck:~$ nc www.htl-mechatronik.at 80
+
+HTTP/1.1 400 Bad Request
+Date: Sun, 30 Sep 2018 18:07:58 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Content-Length: 313
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at www.htl-mechatronik.at Port 80</address>
+</body></html>```
+
