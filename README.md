@@ -1,3 +1,16 @@
+# Labor 5AHME (2018/19) - SX
+
+__Turnus 1:__ 
+* Gruppe 3: 1. Einheit, 24.09.2018  
+    * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/protokoll_g3_smumam14_2018-09-24.md)
+* Gruppe 3: 2. Einheit, 01.10.2018 
+    * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/protokoll_g3_smumam14_2018-10-01.md)
+* Gruppe 3: 3. Einheit, 08.10.2018
+    * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/protokoll_g3_smumam14_2018-10-08.md)
+
+_______________________
+
+
 # Labor 4AHME (2017/18) - SX
 
 __Turnus 1:__ 
