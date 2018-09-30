@@ -33,7 +33,7 @@ Für den Request stehen folgende Schlüsselwörter zur Verfügung:
 * **PUT**     -> Erstellen von neuen Inhalten auf dem Server
 * **DELETE**  -> Löschen von Inhalten
 
-Das Protokoll ist so einfach gehalten, dass man es sogar eigenhändig in der Konsole probieren kann. Neben dem GET-Befehl sind znoch weitere Informationen in der Anfrage nötig. Außerdem muss darauf geachtet werde, die richitgen ENTER zu verwenden. An folgendem Beispiel kann man sehen, wie eine HTTP-Anfrage in der Konsole aussieht:
+Das Protokoll ist so einfach gehalten, dass man es sogar eigenhändig in der Konsole probieren kann. Neben dem GET-Befehl sind znoch weitere Informationen in der Anfrage nötig. Außerdem muss darauf geachtet werde, das richitge ENTER zu verwenden. An folgendem Beispiel kann man sehen, wie eine HTTP-Anfrage in der Konsole aussieht:
 ```
 florian@florian:~$ nc -c www.htl-mechatronik.at 80
 GET /infotext.html HTTP/1.1
