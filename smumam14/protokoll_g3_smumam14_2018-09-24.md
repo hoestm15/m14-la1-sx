@@ -76,7 +76,9 @@ Nummernbereich | Bedeutung
 `3xx` | Weitere Schritte des Clients notwendig
 `4xx` | Clientseitiger Fehler, z. B. `403` für unberechtigter Zugriff oder `404` für ein Dokument das nicht existiert
 `5xx` | Serverseitiger Fehler  
-
+  
+#### HTTPS-Verbindung  
+HTTPS ist die Erweiterung des HTTP-Protokoll um eine Möglichkeit der Verschlüsselung. Dabei werden zwei verschlüsselte Datenröhren aufgebaut, Server und Client müssen je über eine Encrypt- als auch eine Decryptfunktion / Stelle verfügen. Dabei werden die Daten sowohl gegen unbefugte Lese- als auch Schreibzugriffe geschützt.  
   
 #### JavaScript  
 JavaScript ist, anders als man vermuten möchte, in der Bedienung nicht mit Java zu vergleichen. Bei JavaScript handelt es sich um ein Programmiersprache, welche man primär für die clientseitige Programmierung verwendet. Seit einiger Zeit kann man diese jedoch auch für Server verwenden. JavaScript verfügt über eine schwache, dynamische Typisierung, was bedeutet, dass der Typ einer Variable erst durch den Inhalt festgelegt wird. Dies ist für manche Programmierer ein rotes Tuch, da dies zwar praktisch aber auch sehr fehleranfällig ist. Wir verwenden den Microsoft-Abkömmling dieser Sprache, der TypeScript genannt wird, dort werden viele Dinge (unter anderem die Typisierung) besser umgesetzt. 
@@ -92,6 +94,8 @@ Wir öffneten eine Konsole unter Ubuntu und versuchten, zu einem Server eine Ver
    
    ```
 martin@schmuck:~$ nc www.htl-mechatronik.at 80
+
+GET HTTP/1.1
 
 HTTP/1.1 400 Bad Request
 Date: Sun, 30 Sep 2018 18:07:58 GMT
@@ -109,5 +113,56 @@ Content-Type: text/html; charset=iso-8859-1
 </p>
 <hr>
 <address>Apache/2.4.7 (Ubuntu) Server at www.htl-mechatronik.at Port 80</address>
-</body></html>```
-
+</body></html>
+```  
+  
+Wie man sieht, hat das noch nicht funktioniert. Also sehen wir uns an, wie es der Broser macht:
+``` 
+GET / HTTP/1.1
+Host: www.htl-mechatronik.at
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/69.0.3497.81 Chrome/69.0.3497.81 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: de-DE,de;q=0.9,en-US;q=0.8,en;q=0.7
+If-None-Match: "1e9-50bf76235166b-gzip"
+If-Modified-Since: Tue, 06 Jan 2015 08:13:36 GMT
+  
+HTTP/1.1 200 OK
+Date: Sun, 30 Sep 2018 18:13:42 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Last-Modified: Tue, 06 Jan 2015 08:13:36 GMT
+ETag: "1e9-50bf76235166b-gzip"
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Length: 328
+Keep-Alive: timeout=10, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+```  
+  
+Man sieht, dass hier noch einige andere Information mitgesendet werden, wie zum Beispiel in Zeile 6-8 der verwendete Browrser, die Sprache oder welche Art von Inhalten der Client unterstützt bzw. erwartert. Wenn wir jetzt diese Anfrage genau so ins Terminal kopieren, müssen wir beim Aufruf von `nc` noch die Option `-C` hinzufügen, da sonst die falschen Art von Zeilenvorschub mitgesendet werden (zum Beispiel `LF` statt `CR LF`).  Dann kommt auch ein brauchbare Antwort zurück. Wenn man jetzt noch die Zeile 7 mit Accept-Encoding weglässt, bekommt man wirklich in Plain Text im Terminal die Antwort des Servers, ansonsten würde diese mit gzip komprimiert werden und man sähe nur kryptische Zeichen am Schrim.  
+  
+#### Anlegen eines TypeScript-Projektes  
+Da beim Kompilieren eines TypeScript-Projekts der Code zunächst in einen JavaScript-Code übersetzt wird, braucht man am Client TypeScript nicht zu installieren. Auf dem Entwicklungsrechner muss man es installieren, jedoch sollte dies immer im Projektverzeichnis erfolgen und niemals global. Das hat den Grund, dass es oft Updates gibt und sich Standards sehr schnell ändern. Dann hätte man mit verschiedenen Projekten, welche auf unterschiedlichen Versionen der Plattform basieren, schnell Probleme. Also erstellen wir uns ein leere Projektverzeichnis, in welches wir uns mit dem Terminal hineinnavigieren. Der Befehl `npm init` erstellt nach der Abfrage von einigen grundlegenden Infos zum Projekt eine Dateistruktur im Projektordner. 
+  
+  
+```  
+martin@schmuck:~$   npm init
+package name: (rest-server) 
+version: (1.0.0) 0.0.1
+description: 5AHME LA1 G3 REST-Server
+entry point: (index.js) main.js
+test command: 
+git repository: 
+keywords: 
+author: Martin Schmuck
+license: (ISC) "GPL-3.0"
+  ```  
+Anschließend werden TypeScript und Express mit `npm install --save-dev typescript` und  `npm install --save-dev express` installiert. Die Option `--save-dev` gibt an, dass diese beiden Pakete praktisch ins Projekt "eingeschrieben" werden. Daher muss man sich, falls man das Projekt zum Beispiel von einem Kollegen übernimmt, nicht alle Abhängigkeiten wie zB TypeScript mühsam nachinstallieren. Dies geschieht einfach mit `npm install`.  
+  
+Werfen wir abschließend noch einen Blick in die Datei 
+  
