@@ -165,6 +165,14 @@ Content-Type: text/html
 </p>
 </body></html>
 ```
+# anlegen eines Javascript/Typescript-Projektes
+Das zweite Thema der Einheit war, wie man ein Projekt anlegt und die benötigten Komponenten dafür installiert.
+Dafür legten wir einen Ordner an und gingen mit `cd` in diesen.  
+Dort führten wir den Befehl `npm init` aus. Nach der Ausführung dieses Befehls kann man alle wichtigen Daten für das Projekt eingeben, diese werden in die Datei *package.json* geschrieben.   
+Um Typscript zu installieren führten wir den Befehl `npm install --save-dev typescript` aus. Durch diesen Befehl wird Typescript im Projektordner fürs entwickeln installiert und wird nicht für das fertige Programm verwendet (Typescript wird zu Javascript übersetzt. Javascript wird zu Ausführung benötigt). 
+> Von einer globalen Installation ist abzuraten, da man in verschiedenen Projekten durchaus verschiedene Javascript und Typescript Versionen verwendet was zu Problemen führen kann.  
+
+Weiters haben wir das Framework *Express* mit dem Befehl `npm install --save express` welches uns hilfreiche Werkzeuge für die Programmierung zu verfügung stellt.
 
 
 
