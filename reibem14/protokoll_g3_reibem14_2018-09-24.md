@@ -104,8 +104,28 @@ HTTPs ist eine Erweiterung des HTTP Protokolls. HTTPs ist mit einer Transportver
 ## JavaScript  
 JavaScript ist eine Sprache mit der man die Möglichkeit hat, HTML und Webbasiert zu programmieren. Obwohl man glauben könnte Java und JavaScript sind sich sehr änhlich, sind sie grundverschieden. Weitere Informationen: [JavaScriptTutorial](https://www.w3schools.com/js/default.asp)  
   
-### Rest-Server anlegen  
+#### Rest-Server anlegen  
+Um in JavaScript ein Programm schreiben zu können, muss man es sich im Projektordner installieren. Dies muss man machen, da es fast täglich neue Versionen gibt. Erstens wird ein package.json erstellt, das wichtige Informationen enthält.(json ist hier der Datentyp, welcher dank seiner Formatierung leicht zu lesen ist)  
+```` 
 
+  "name": "rest-server1",
+  "version": "0.0.1",
+  "description": "5 AHME LA GR3 Rest Server 1",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bernhard Reinbacher",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "save": "^2.3.2"
+  }
+}
+```
 
 
     
