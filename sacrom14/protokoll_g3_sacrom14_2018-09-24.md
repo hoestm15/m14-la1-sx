@@ -18,7 +18,6 @@ Maschine-zu-Maschine-Kommunikation in Werbsevices verwendet wird.HTTP ist das ve
 # HTTP
 HTTP steht für **H**yper**T**ext **T**ransfer **P**rotokoll. Das Protkoll ist zustandslos und die Übertragung findet textuell statt.Das Protokoll überträgt Daten auf der Anwendungsschicht.  
 
-(https://www.google.at/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiLtqmSgePdAhVEyqQKHQpFCWIQjRx6BAgBEAU&url=http%3A%2F%2Fsoftware-technik.blogspot.com%2F2010%2F12%2Fnachtrag-zum-http-protokoll.html&psig=AOvVaw3-wkuOu2HArXh_8BLbm14K&ust=1538406536324789)
   
 ## Aufbau  
 **Header**   
