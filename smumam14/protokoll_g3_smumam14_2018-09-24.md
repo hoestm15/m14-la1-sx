@@ -151,18 +151,70 @@ Da beim Kompilieren eines TypeScript-Projekts der Code zunächst in einen JavaSc
   
   
 ```  
-martin@schmuck:~$   npm init
-package name: (rest-server) 
+martin@schmuck:~$   node --version              // Die installierte node.js-Version prüfen (sollte min. V7 sein)
+v7.10.1
+
+martin@schmuck:~$   npm init                    // Package (Projekt) anlegen
+
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg> --save` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+
+name: (rest-server1) 
 version: (1.0.0) 0.0.1
-description: 5AHME LA1 G3 REST-Server
+description: 5m la1 rest server 1
 entry point: (index.js) main.js
 test command: 
 git repository: 
 keywords: 
 author: Martin Schmuck
-license: (ISC) "GPL-3.0"
+license: (ISC) GPL-3.0
+About to write to /home/cpt-kirk/rest-server1/package.json:
+
+{
+  "name": "rest-server1",
+  "version": "0.0.1",
+  "description": "5m la1 rest server 1",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martin Schmuck",
+  "license": "GPL-3.0"
+}
+
+
+Is this ok? (yes) 
   ```  
-Anschließend werden TypeScript und Express mit `npm install --save-dev typescript` und  `npm install --save-dev express` installiert. Die Option `--save-dev` gibt an, dass diese beiden Pakete praktisch ins Projekt "eingeschrieben" werden. Daher muss man sich, falls man das Projekt zum Beispiel von einem Kollegen übernimmt, nicht alle Abhängigkeiten wie zB TypeScript mühsam nachinstallieren. Dies geschieht einfach mit `npm install`.  
+Anschließend werden TypeScript und Express (= Paket mit nützlichen Tools) mit `npm install --save-dev typescript` und  `npm install --save express` installiert. Die Option `--save-dev` bzw. `--save` gibt an, dass diese beiden Pakete in der Konfigurationsdatei des Projekts vermerkt werden (siehe weiter unten). Daher muss man sich, falls man das Projekt zum Beispiel von einem Kollegen übernimmt, nicht alle Abhängigkeiten wie zB TypeScript mühsam nachinstallieren. Dies geschieht einfach mit `npm install`.  
   
-Werfen wir abschließend noch einen Blick in die Datei 
+Werfen wir abschließend noch einen Blick in die Datei `package.json`, wo sämtliche das Projekt betreffenden Informationen gespeichert werden.
+
+```
+cpt-kirk@xubuntu-n:~/rest-server1$ cat package.json 
+{
+  "name": "rest-server1",
+  "version": "0.0.1",
+  "description": "5m la1 rest server 1",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martin Schmuck",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "typescript": "^3.0.3"  // ^ bedeutet, dass man eine Version verwenden kann, welche ungefähr der genannten entspricht.
+  },
+  "dependencies": {
+    "express": "^4.16.3" 
+  }
+}
+```
   
