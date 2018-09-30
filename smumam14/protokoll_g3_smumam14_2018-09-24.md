@@ -49,7 +49,7 @@ Bei HTTP handelt es sich um ein textbasiertes, zustandsloses (siehe oben) Übert
 Die HTTP-Pakete werden in Header und Body (Kopf und Rumpf) eingeteilt. Im Header verbergen sich Informationen über die verwendete HTTP-Version, die verwendete Codierung, die Größe des Bodys, etc., während im Body die eigentlichen Nutzdaten untergebracht werden. 
 
 ##### Ablauf einer Anfrage  
-Der Server wartet im Ausgangszustand auf Anfragen vom Client. Der Client sendet an den Server ein sogenanntes `SYN`-Paket. Wird dieses Paket vom Server registriert, antwortet dieser mit einem `ACK`-Paket. Sobald der Client dies der Client erhält, sendet er ebenfalls ein `ACK`-Paket. Dann steht die Verbindung zwischen Server und Client.  Möchte einer der beiden Teilnehmer die Verbindung beenden sendet er ein `FIN`-Paket, der andere antwortet mit einem `FIN-ACK`-Paket.
+Der Server wartet im Ausgangszustand auf Anfragen vom Client. Der Client sendet an den Server ein sogenanntes `SYN`-Paket. Wird dieses Paket vom Server registriert, antwortet dieser mit einem `ACK`-Paket. Sobald der Client dieses erhält, sendet er ebenfalls ein `ACK`-Paket. Dann steht die Verbindung zwischen Server und Client.  Möchte einer der beiden Teilnehmer die Verbindung beenden sendet er ein `FIN`-Paket, der andere antwortet mit einem `FIN-ACK`-Paket.
 
 ###### Keep-alive-Pakete  
 Logischerweise werden nicht ununterbrochen zwischen Server und Client Pakete hin- und herübertragen. Es kann z.B. im Falle eines Stromausfalls dazu kommen, dass ein Client nicht mehr sendet, die Verbindug bleibt dennoch vorerst offen (vom Server aus gesehen). Um "tote" Verbindugen nicht unnötig lange offen lassen zu müssen, wartet der Server meist ein Timeout im Bereich von bis zu zwei Minuten ab und schließt dann die Verbindung von selbst. Wenn der Client dies verhindern will, muss er in regelmäßigen Abständen `Keep-alive`-Pakete an den Server senden.  
@@ -60,10 +60,10 @@ Das HTTP-Protokoll sieht eine Vielzahl an verschiedenen Befehlen vor. Die wichti
   
 Befehl (Methode) | Zweck  
 -----------------|------  
-`GET` | Daten vom Server abrufen.  
-`POST` | Daten an den Server senden, die es dort schon gibt, also Daten ändern.  
-`PUT` | Daten an den Server senden, die es dort noch nicht gibt (neue Inhalte erstellen).  
-`DELETE` | Daten vom Server löschen.  
+`GET` | Daten vom Server abrufen 
+`POST` | Daten an den Server senden, die es dort schon gibt, also Daten ändern  
+`PUT` | Daten an den Server senden, die es dort noch nicht gibt (neue Inhalte erstellen) 
+`DELETE` | Daten vom Server löschen
   
 ##### Statuscodes  
 HTTP sieht dreistellige Nummern zur Statusmeldung vor.  
