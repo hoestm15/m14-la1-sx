@@ -98,10 +98,6 @@ Content-Type: text/html; charset=iso-8859-1
 ``
 roland@roland-VirtualBox:~$ nc -l 4711
 ``
-## HTTP-Anfrage  
-``
-GET / HTTP/1.1
-``
 ## Response  
 ``
 Host: localhost:4711
