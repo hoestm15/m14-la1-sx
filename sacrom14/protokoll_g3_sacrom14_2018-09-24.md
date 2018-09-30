@@ -64,15 +64,15 @@ Statuscode | Beschreibung
  nc heißt Networt Client. Mit diesen Programm können wir eine Verbindungenzu einem Server aufbauen.
    
   
-###### NC-Verbindungsaufbau zu Server  
+## NC-Verbindungsaufbau zu Server  
 ``
 roland@roland-VirtualBox:~$ nc -l 4711 nc www.htl-mechatronik.at 80
 ``
-###### HTTP-Anfrage  
+## HTTP-Anfrage  
 ``
 GET / HTTP/1.1
 ``
-###### Server-Antwort  
+## Server-Antwort  
 ```
 HTTP/1.1 400 Bad Request
 Date: Mon, 24 Sep 2018 06:54:08 GMT
@@ -94,15 +94,15 @@ Content-Type: text/html; charset=iso-8859-1
 
 ```
   
-###### NC-Verbindungsaufbau zu Localhost  
+## NC-Verbindungsaufbau zu Localhost  
 ``
 roland@roland-VirtualBox:~$ nc -l 4711
 ``
-###### HTTP-Anfrage  
+## HTTP-Anfrage  
 ``
 GET / HTTP/1.1
 ``
-###### Response  
+## Response  
 ``
 Host: localhost:4711
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:58.0) Gecko/20100101 Firefox/58.0
