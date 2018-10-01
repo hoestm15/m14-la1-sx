@@ -35,7 +35,9 @@ Im **Header** befinden sich Informationen über den Server, dem Body und der Cod
 * die Codierung des Body  
 * Body Beginn und Ende    
   
-Im **Body** sind die restlichen Daten vorhanden.  
+Im **Body** sind die restlichen Daten vorhanden.    
+  
+Wichtig: zwischen **Header** und **Body** muss es eine Leerzeile geben.
   
 ### Funktionsweise  
 Der Client schickt eine Anfrage(SYN Paket) an den Server, der währenddessen auf Anfragen wartet. Wenn die Anfrage korrekt war, antwortet der Server mit einem ACK-Paket, welches wiederum auch der Client zurückschickt. Danach sind zwei Datenröhren für den Datentranfer bereitgestellt.  
