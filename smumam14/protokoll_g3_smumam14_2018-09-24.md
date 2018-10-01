@@ -46,7 +46,7 @@ REST (=Representational State Transfer) - Server sind Programme, welche für ein
 Bei HTTP handelt es sich um ein textbasiertes, zustandsloses (siehe oben) Übertragungsprotokoll, welches für die Übertragung von Webseiten zwischen Server und Client zuständig ist. 
 
 ##### Aufbau eines HTTP-Pakets
-Die HTTP-Pakete werden in Header und Body (Kopf und Rumpf) eingeteilt. Im Header verbergen sich Informationen über die verwendete HTTP-Version, die verwendete Codierung, die Größe des Bodys, etc., während im Body die eigentlichen Nutzdaten untergebracht werden. 
+Die HTTP-Pakete werden in Header und Body (Kopf und Rumpf) eingeteilt. Im Header verbergen sich Informationen über die verwendete HTTP-Version, die verwendete Codierung, die Größe des Bodys, etc., während im Body die eigentlichen Nutzdaten untergebracht werden. Die beiden werden durch eine Leerzeile getrennt.
 
 ##### Ablauf einer Anfrage  
 Der Server wartet im Ausgangszustand auf Anfragen vom Client. Der Client sendet an den Server ein sogenanntes `SYN`-Paket. Wird dieses Paket vom Server registriert, antwortet dieser mit einem `ACK`-Paket. Sobald der Client dieses erhält, sendet er ebenfalls ein `ACK`-Paket. Dann steht die Verbindung zwischen Server und Client.  Möchte einer der beiden Teilnehmer die Verbindung beenden sendet er ein `FIN`-Paket, der andere antwortet mit einem `FIN-ACK`-Paket.
