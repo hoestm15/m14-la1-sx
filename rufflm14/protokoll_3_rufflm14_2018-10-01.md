@@ -1,8 +1,8 @@
-# 1.Laborprotokoll 
+# 3.Laborprotokoll 
 
 *von Florian Ruffenacht*
 
-Datum: 24.09.2018 (Gruppe 3)
+Datum: 01.10.2018 (Gruppe 3)
 
 Ort: AUT-Labor
 
@@ -11,7 +11,7 @@ Lehrkraft: SX
 Abwesend: -
 
 ## Warum ist HTTP noch relevant?
-Der HTTP-Standard gilt allgemein als unsicher und wird überwiegend durch die verschlüsselte Weiternentwicklung HTTPs ersetzt. Doch in manchen Fällen wird HTTP durchaus verwendet. Das soll das folgende Beispiel zeigen:
+Der HTTP-Standard gilt allgemein als unsicher und wird überwiegend durch die verschlüsselte Weiterentwicklung HTTPs ersetzt. Doch in manchen Fällen wird HTTP durchaus verwendet. Das soll das folgende Beispiel zeigen:
 
 ![HTTP in der Firewall](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/HttpInFirewall.svg)
 
@@ -26,7 +26,7 @@ Swift, TypeScript, Visual Basic und XML unterstützt. Visual Studio Code kann mi
 kann das Programm mit ```code . ``` im Projektordner geöffnet werden, wobei man sich dann gleich im jeweiligen Projekt befindet. 
 
 ### Schnellstartleiste
-Auf der unten ersichtlichen Abbildung ist die Schnellstartleiste von Code abgebildet. An oberster Stelle findet man den **Dateiexplorer**. Es folgen die **Suchfunktion**, die **Versionsverwaltung**, der Menüpunkt für **Debugging** und der Menüpunkt für **externe Plug-ins**. Die stehen für Visual Studio Code zahlreich zur Verfügung, können den Quelltexteditor im schlimmsten Fall aber auch lahmlegen. Deswegen gibt es auch die Möglichkeit, Code ohne Plug-ins zu starten. Werden Datein nur mit einem einfachen Klick geöffnet, verschwinden sie beim Öffnen der nächsten Datei wieder. Das kann beim Suchen nach Codestellen hilfreiche sein. Um Datein dauerhauft zu öffnen, ist ein Doppelklick notwendig.
+Auf der unten ersichtlichen Abbildung ist die Schnellstartleiste von Code abgebildet. An oberster Stelle findet man den **Dateiexplorer**. Es folgen die **Suchfunktion**, die **Versionsverwaltung**, der Menüpunkt für **Debugging** und der Menüpunkt für **externe Plug-ins**. Die stehen für Visual Studio Code zahlreich zur Verfügung, können den Quelltexteditor im schlimmsten Fall aber auch lahmlegen. Deswegen gibt es auch die Möglichkeit, Code ohne Plug-ins zu starten. Werden Datein nur mit einem einfachen Klick geöffnet, verschwinden sie beim Öffnen der nächsten Datei wieder. Das kann beim Suchen nach Codestellen hilfreich sein. Um Datein dauerhauft zu öffnen, ist ein Doppelklick notwendig.
 
 ![Code Schnellstartleiste](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/Bildschirmfoto%20vom%202018-10-02%2020-47-41.png)
 
