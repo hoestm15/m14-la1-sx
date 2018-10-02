@@ -107,4 +107,4 @@ Um den TypeScript-Compiler zu konfigurieren, wird die Datei **tsconfig.json** er
     ]
 }
 ```
-Hier können Einstellungen am Compiler, wie zum Beispiel die JavaScript Version, in die transpeliert werden soll, verändert werden. Um die Einstellungen aktiv werden zu lassen, ist das Kommando node node_modules/typescript/bin/tsc/ -p tsconfig.json
+Hier können Einstellungen am Compiler, wie zum Beispiel die JavaScript Version, in die transpeliert werden soll, verändert werden. Um die Einstellungen aktiv werden zu lassen, ist der Befehl ```node node_modules/typescript/bin/tsc/ -p tsconfig.json``` im Projektverzeichnis auszuführen.  
