@@ -26,10 +26,9 @@ Swift, TypeScript, Visual Basic und XML unterstützt. Visual Studio Code kann mi
 kann das Programm mit ```code . ``` im Projektordner geöffnet werden, wobei man sich dann gleich im jeweiligen Projekt befindet. 
 
 ### Schnellstartleiste
-Auf der unten ersichtlichen Abbildung ist die Schnellstartleiste von Code abgebildet. An oberster Stelle findet man den **Dateiexplorer**.
-Es folgen die **Suchfunktion**, die **Versionsverwaltung**, der Menüpunkt für **Debugging** und der Menüpunkt für **externe Plug-ins**. 
-Die stehen für Visual Studio Code zahlreich zur Verfügung, können den Quelltexteditor im schlimmsten Fall aber auch lahmlegen. Deswegen 
-gibt es auch die Möglichkeit, Code ohne Plug-ins zu starten. Werden Datein nur mit einem einfachen Klick geöffnet, verschwinden sie beim Öffnen der nächsten Datei wieder. Das kann beim Suchen nach Codestellen hilfreiche sein. Um Datein dauerhauft zu öffnen, ist ein Doppelklick notwendig.
+Auf der unten ersichtlichen Abbildung ist die Schnellstartleiste von Code abgebildet. An oberster Stelle findet man den **Dateiexplorer**. Es folgen die **Suchfunktion**, die **Versionsverwaltung**, der Menüpunkt für **Debugging** und der Menüpunkt für **externe Plug-ins**. Die stehen für Visual Studio Code zahlreich zur Verfügung, können den Quelltexteditor im schlimmsten Fall aber auch lahmlegen. Deswegen gibt es auch die Möglichkeit, Code ohne Plug-ins zu starten. Werden Datein nur mit einem einfachen Klick geöffnet, verschwinden sie beim Öffnen der nächsten Datei wieder. Das kann beim Suchen nach Codestellen hilfreiche sein. Um Datein dauerhauft zu öffnen, ist ein Doppelklick notwendig.
+
+![Code Schnellstartleiste]()
 
 ### Verbergen von Datein
 Beim Programmieren möchte man manchmal nicht alle Datein im Projektordner auch im Quelltexteditor sehen. Um Datein auszublenden, legt man im Projektverzeichnis mit ```mkdir .vscode``` ein neues Verzeichnis an und erstellt mit ```nano settings.json``` eine neue Datei. In dieser können folgendermaßen gewisse Datein für Code "unsichtbar" gemacht werden:
@@ -40,5 +39,8 @@ Beim Programmieren möchte man manchmal nicht alle Datein im Projektordner auch 
 
 [Weitere Informationen zu Visual Studio Code](https://flaviocopes.com/vscode/)
 
-## express-Modul
-Mit Node.js werden die Module "http" und "https" zur Erstellung von Web-Servern mitgeliefert. Diese sind eher mühsam zu bedienen und bedürfen Einarbeitungszeit. Deswegen verwenden wir das 
+## Express-Modul
+Mit Node.js werden die Module "http" und "https" zur Erstellung von Web-Servern mitgeliefert. Diese sind eher mühsam zu bedienen und bedürfen Einarbeitungszeit. Deswegen verwenden wir das externe Modul "Express", welches auf "http" und "https" von Node.js aufbauen. Express ermöglicht ein sehr komfortables Arbeiten. 
+
+##Programmieren des Rest-Servers
+
