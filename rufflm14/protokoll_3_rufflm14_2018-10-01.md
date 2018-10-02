@@ -89,3 +89,22 @@ Die Methode "handleGet" sieht wie folgend dargestellt aus. Mit **resp.send();** 
         resp.end();
     }
 ```
+### Konfigurieren des tsc
+Um den TypeScript-Compiler zu konfigurieren, wird die Datei **tsconfig.json** erstellt:
+```json
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "target": "es2017"
+    },
+    
+    "include": [
+        "**/*.ts"
+    ]
+}
+```
+Hier können Einstellungen am Compiler, wie zum Beispiel die JavaScript Version, in die transpeliert werden soll, verändert werden. Um die Einstellungen aktiv werden zu lassen, ist das Kommando node node_modules/typescript/bin/tsc/ -p tsconfig.json
