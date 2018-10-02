@@ -47,7 +47,8 @@ Beim Programmieren möchte man manchmal nicht alle Datein im Projektordner auch 
 Mit Node.js werden die Module "http" und "https" zur Erstellung von Web-Servern mitgeliefert. Diese sind eher mühsam zu bedienen und bedürfen Einarbeitungszeit. Deswegen verwenden wir das externe Modul "Express", welches auf "http" und "https" von Node.js aufbauen. Express ermöglicht ein sehr komfortables Arbeiten. 
 
 ## Programmieren des Rest-Servers
-Um vom Server überhaupt einmal eine Antwort zu bekommne, schrieben wir folgendes TypeScript-Datei:
+## Grundaufbau
+Um vom Server überhaupt einmal eine Verbindung herstellen zu können, schrieben wir folgendes TypeScript-Datei:
 
 ```TypeScript
 import * as express from 'express';
@@ -68,5 +69,10 @@ let main = new Main(8080);
 
 ```
 Die Datei start mit dem "import"-Aufruf, bei dem Express importiert wird.Dem Konstruktor der Main-Klasse wird nur die Port-Nummer übergeben. Diese Variable wird vor dem Konstruktor als Nummer deklariert. Die Variable express.Express wird mit dem Datentyp "server" deklariert. Damit hier keine Fehler entsteht, müssen zuerst die Datentypen von Express mit folgendem Befehl nachinstalliert werden:
+
 ```npm install --save-dev @types/express```
+
+Mit dem Aufruf ```this.server.listen(this.port);``` wird der Server gestartet.  Wenn man jetzt in einem Explorer die Adresse 127.0.0.1 und den Port 80 eingiebt erkennt man, dass eine Verbindung aufgebaut werden kann. Es kommt aber noch keine sinnvolle Antwort vom Server zurück.
+
+## GET-Kommando
 
