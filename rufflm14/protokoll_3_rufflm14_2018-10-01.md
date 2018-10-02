@@ -34,7 +34,11 @@ Auf der unten ersichtlichen Abbildung ist die Schnellstartleiste von Code abgebi
 Beim Programmieren möchte man manchmal nicht alle Datein im Projektordner auch im Quelltexteditor sehen. Um Datein auszublenden, legt man im Projektverzeichnis mit ```mkdir .vscode``` ein neues Verzeichnis an und erstellt mit ```nano settings.json``` eine neue Datei. In dieser können folgendermaßen gewisse Datein für Code "unsichtbar" gemacht werden:
 
 ```
-
+"files.exclude": {
+		"**/node_modules/": true,
+		"**/.vscode/": true,
+		"**/package-lock.json": true
+	}
 ```
 
 [Weitere Informationen zu Visual Studio Code](https://flaviocopes.com/vscode/)
