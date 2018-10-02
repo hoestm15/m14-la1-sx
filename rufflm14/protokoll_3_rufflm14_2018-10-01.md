@@ -11,7 +11,7 @@ Lehrkraft: SX
 Abwesend: -
 
 ## Warum ist HTTP noch relevant?
-Der HTTP-Standard gilt allgemein als unsicher und wird überwiegend durch die verschlüsselte Weiternentwicklung HTTPs ersetzt. Doch in manchen Fällen wird ist HTTP durchaus präsent. Das soll das folgende Beispiel zeigen:
+Der HTTP-Standard gilt allgemein als unsicher und wird überwiegend durch die verschlüsselte Weiternentwicklung HTTPs ersetzt. Doch in manchen Fällen wird HTTP durchaus verwendet. Das soll das folgende Beispiel zeigen:
 
 ![HTTP in der Firewall](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/HttpInFirewall.svg)
 
@@ -29,6 +29,16 @@ kann das Programm mit ```code . ``` im Projektordner geöffnet werden, wobei man
 Auf der unten ersichtlichen Abbildung ist die Schnellstartleiste von Code abgebildet. An oberster Stelle findet man den **Dateiexplorer**.
 Es folgen die **Suchfunktion**, die **Versionsverwaltung**, der Menüpunkt für **Debugging** und der Menüpunkt für **externe Plug-ins**. 
 Die stehen für Visual Studio Code zahlreich zur Verfügung, können den Quelltexteditor im schlimmsten Fall aber auch lahmlegen. Deswegen 
-gibt es auch die Möglichkeit, Code ohne Plug-ins zu starten.
+gibt es auch die Möglichkeit, Code ohne Plug-ins zu starten. Werden Datein nur mit einem einfachen Klick geöffnet, verschwinden sie beim Öffnen der nächsten Datei wieder. Das kann beim Suchen nach Codestellen hilfreiche sein. Um Datein dauerhauft zu öffnen, ist ein Doppelklick notwendig.
+
+### Verbergen von Datein
+Beim Programmieren möchte man manchmal nicht alle Datein im Projektordner auch im Quelltexteditor sehen. Um Datein auszublenden, legt man im Projektverzeichnis mit ```mkdir .vscode``` ein neues Verzeichnis an und erstellt mit ```nano settings.json``` eine neue Datei. In dieser können folgendermaßen gewisse Datein für Code "unsichtbar" gemacht werden:
+
+```
+
+```
 
 [Weitere Informationen zu Visual Studio Code](https://flaviocopes.com/vscode/)
+
+## express-Modul
+Mit Node.js werden die Module "http" und "https" zur Erstellung von Web-Servern mitgeliefert. Diese sind eher mühsam zu bedienen und bedürfen Einarbeitungszeit. Deswegen verwenden wir das 
