@@ -13,7 +13,7 @@ Abwesend: -
 ## Warum ist HTTP noch relevant?
 Der HTTP-Standard gilt allgemein als unsicher und wird überwiegend durch die verschlüsselte Weiternentwicklung HTTPs ersetzt. Doch in manchen Fällen wird ist HTTP durchaus präsent. Das soll das folgende Beispiel zeigen:
 
-![HTTP in der Firewall]()
+![HTTP in der Firewall](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/HttpInFirewall.svg)
 
 Hier werden über das Internet Daten an einen Webserver übertragen. Die Datenübertragung läuft aber nur bis zum Proxy-Server verschlüsselt über HTTPs. In der Umgebung der Firewall, in der der Proxy-Server die Daten an den eigentlichen Server  vermittelt, läuft die Kommunikation nur über HTTP.
 
