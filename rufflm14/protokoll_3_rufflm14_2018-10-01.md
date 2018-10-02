@@ -1,4 +1,21 @@
+# 1.Laborprotokoll 
 
+*von Florian Ruffenacht*
+
+Datum: 24.09.2018 (Gruppe 3)
+
+Ort: AUT-Labor
+
+Lehrkraft: SX
+
+Abwesend: -
+
+## Warum ist HTTP noch relevant?
+Der HTTP-Standard gilt allgemein als unsicher und wird überwiegend durch die verschlüsselte Weiternentwicklung HTTPs ersetzt. Doch in manchen Fällen wird ist HTTP durchaus präsent. Das soll das folgende Beispiel zeigen:
+
+![HTTP in der Firewall]()
+
+Hier werden über das Internet Daten an einen Webserver übertragen. Die Datenübertragung läuft aber nur bis zum Proxy-Server verschlüsselt über HTTPs. In der Umgebung der Firewall, in der der Proxy-Server die Daten an den eigentlichen Server  vermittelt, läuft die Kommunikation nur über HTTP.
 
 
 ## Visual Studio Code
