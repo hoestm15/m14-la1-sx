@@ -67,3 +67,6 @@ class Main{
 let main = new Main(8080);
 
 ```
+Die Datei start mit dem "import"-Aufruf, bei dem Express importiert wird.Dem Konstruktor der Main-Klasse wird nur die Port-Nummer übergeben. Diese Variable wird vor dem Konstruktor als Nummer deklariert. Die Variable express.Express wird mit dem Datentyp "server" deklariert. Damit hier keine Fehler entsteht, müssen zuerst die Datentypen von Express mit folgendem Befehl nachinstalliert werden:
+```npm install --save-dev @types/express```
+
