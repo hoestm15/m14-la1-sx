@@ -2,4 +2,3 @@
 
   * [Protokoll_3_rufflm14_2018-09-24](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/protokoll_3_rufflm14_2018-09-24.md)
   
-  * [Protokoll_3_rufflm14_2018_10_01](https://github.com/HTLMechatronics/m14-la1-sx/edit/rufflm14/rufflm14/protokoll_3_rufflm14_2018-10-01.md)
