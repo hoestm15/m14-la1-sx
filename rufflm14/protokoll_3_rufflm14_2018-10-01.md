@@ -46,5 +46,24 @@ Beim Programmieren möchte man manchmal nicht alle Datein im Projektordner auch 
 ## Express-Modul
 Mit Node.js werden die Module "http" und "https" zur Erstellung von Web-Servern mitgeliefert. Diese sind eher mühsam zu bedienen und bedürfen Einarbeitungszeit. Deswegen verwenden wir das externe Modul "Express", welches auf "http" und "https" von Node.js aufbauen. Express ermöglicht ein sehr komfortables Arbeiten. 
 
-##Programmieren des Rest-Servers
+## Programmieren des Rest-Servers
+Um vom Server überhaupt einmal eine Antwort zu bekommne, schrieben wir folgendes TypeScript-Datei:
 
+```TypeScript
+import * as express from 'express';
+
+class Main{
+
+    private port : number;
+    private server : express.Express;
+
+    constructor (port : number) {
+        this.port=port;
+        this.server= express();
+        this.server.listen(this.port);
+    }
+}
+
+let main = new Main(8080);
+
+```
