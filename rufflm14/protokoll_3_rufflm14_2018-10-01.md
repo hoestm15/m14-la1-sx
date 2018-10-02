@@ -80,7 +80,8 @@ Um bei einer GET-Anfrage passend zu antworten, wird der Konstruktor um den unten
 ``` typescript
 this.server.get('*', (req,resp) => this.handleGet(req,resp))
 ```
-Die Methode "handleGet" sieht wie folgend dargestellt aus. 
+Die Methode "handleGet" sieht wie folgend dargestellt aus. Mit **resp.send();** wird die Antwort auf die GET-Anfrage festgelegt. Der Aufruf von **resp.end()** signalisiert das Ende der Antwort und ohne diesen Aufruf würde keine Antwort gesendet werden. Die auskommentierte Zeile zeigt, wie ein Fehlercode zurückgegeben werden kann. 
+
 ```typescript
  private handleGet (req: express.Request, resp: express.Response) {
         //resp.status(400);
