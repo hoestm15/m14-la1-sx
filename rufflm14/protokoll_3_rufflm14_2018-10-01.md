@@ -28,7 +28,7 @@ kann das Programm mit ```code . ``` im Projektordner geöffnet werden, wobei man
 ### Schnellstartleiste
 Auf der unten ersichtlichen Abbildung ist die Schnellstartleiste von Code abgebildet. An oberster Stelle findet man den **Dateiexplorer**. Es folgen die **Suchfunktion**, die **Versionsverwaltung**, der Menüpunkt für **Debugging** und der Menüpunkt für **externe Plug-ins**. Die stehen für Visual Studio Code zahlreich zur Verfügung, können den Quelltexteditor im schlimmsten Fall aber auch lahmlegen. Deswegen gibt es auch die Möglichkeit, Code ohne Plug-ins zu starten. Werden Datein nur mit einem einfachen Klick geöffnet, verschwinden sie beim Öffnen der nächsten Datei wieder. Das kann beim Suchen nach Codestellen hilfreiche sein. Um Datein dauerhauft zu öffnen, ist ein Doppelklick notwendig.
 
-![Code Schnellstartleiste]()
+![Code Schnellstartleiste](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/Bildschirmfoto%20vom%202018-10-02%2020-47-41.png)
 
 ### Verbergen von Datein
 Beim Programmieren möchte man manchmal nicht alle Datein im Projektordner auch im Quelltexteditor sehen. Um Datein auszublenden, legt man im Projektverzeichnis mit ```mkdir .vscode``` ein neues Verzeichnis an und erstellt mit ```nano settings.json``` eine neue Datei. In dieser können folgendermaßen gewisse Datein für Code "unsichtbar" gemacht werden:
