@@ -43,10 +43,11 @@ Beim Programmieren möchte man manchmal nicht alle Datein im Projektordner auch 
 
 [Weitere Informationen zu Visual Studio Code](https://flaviocopes.com/vscode/)
 
-## Express-Modul
+## Programmieren des Rest-Servers
+
+### Express-Modul
 Mit Node.js werden die Module "http" und "https" zur Erstellung von Web-Servern mitgeliefert. Diese sind eher mühsam zu bedienen und bedürfen Einarbeitungszeit. Deswegen verwenden wir das externe Modul "Express", welches auf "http" und "https" von Node.js aufbauen. Express ermöglicht ein sehr komfortables Arbeiten. 
 
-## Programmieren des Rest-Servers
 ### Grundaufbau
 Um vom Server überhaupt einmal eine Verbindung herstellen zu können, schrieben wir folgendes TypeScript-Datei:
 
@@ -74,5 +75,16 @@ Die Datei start mit dem "import"-Aufruf, bei dem Express importiert wird.Dem Kon
 
 Mit dem Aufruf ```this.server.listen(this.port);``` wird der Server gestartet.  Wenn man jetzt in einem Explorer die Adresse 127.0.0.1 und den Port 80 eingiebt erkennt man, dass eine Verbindung aufgebaut werden kann. Es kommt aber noch keine sinnvolle Antwort vom Server zurück.
 
-### GET-Kommando
-
+### Response auf GET-Anfrage
+Um bei einer GET-Anfrage passend zu antworten, wird der Konstruktor um den unten dargestellten Befehl erweitert. Im ersten Parameter wird angegeben, auf welcher URL dieser Befehl antwortet. Hier wurde ein Stern gesetzt, weil auf alle URLs gleich geantwortet werden soll. Im zweiten Pararmeter wird die funktionale Programmierung angewendet. Mit den Pararmetern "req" und "res" soll die Handlermethode **handleGet** aufgerufen werden.
+``` typescript
+this.server.get('*', (req,resp) => this.handleGet(req,resp))
+```
+Die Methode "handleGet" sieht wie folgend dargestellt aus. 
+```typescript
+ private handleGet (req: express.Request, resp: express.Response) {
+        //resp.status(400);
+        resp.send('Hallo');
+        resp.end();
+    }
+```
