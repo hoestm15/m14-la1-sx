@@ -15,8 +15,7 @@
 # Visual Studio Code
 Visual Studio Code ist von der Firma Microsoft ist Open-Source, basiert auf dem Framework ELectron und ist plattformübergreifend verfügbar. 
 Es werden Sprachen wie Java, PHP,C++, CSS, HTML, SQL, Typescript, usw. unterstützt und durch das Plug-ins kann es beliebig erweitert werden. Visual Studio hat Funktionen wie z.B. Syntaxvorhebung, Autovervollständigung Debugging und Versionsverwaltung.
-Trotz des ähnlichen Namen hat dsas Visual Studio Code nichts mit Visual Studio zu tun. Sie sind von der gleichen Firma Microsoft aber von einer anderen Teams entwickelt.
-werden aber von unterschiedlichen Teams entwickelt. Einer großer Unterschied in der Handhabung zwischen den Visual Studio und Visual Studio Code ist, dass Visual Studio Code mit Quelltextdateien und Ordnern arbeitet.  
+Trotz des ähnlichen Namen hat dsas Visual Studio Code nichts mit Visual Studio zu tun. Sie sind von der gleichen Firma Microsoft aber von einer anderen Teams entwickelt. Werden aber von unterschiedlichen Teams entwickelt. Einer großer Unterschied in der Handhabung zwischen den Visual Studio und Visual Studio Code ist, dass Visual Studio Code mit Quelltextdateien und Ordnern arbeitet.  
 
 
 ## Arbeiten mit Code
