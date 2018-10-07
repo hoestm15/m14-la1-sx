@@ -1,4 +1,4 @@
-# Protokoll 2: Java Server
+# Protokoll 2: VS Code und Typescript Server
 Name: Patrick Schuster  
 Klasse: 5AHME  
 Gruppe: 3    
