@@ -24,7 +24,8 @@ In der Datei **settings.json** sind die Einstellungen, welche man zu ein- und au
   
 #### tsconfig.json  
 In dieser Datei werden die Optionen für den Compiler gespeichert.   
-![tsconfig.json](/reibem14/tsconfig.PNG)  
+![tsconfig.json](/reibem14/tsconfig.PNG)    
+
 Code | Bedeutung  
 ---- | ---------    
   
