@@ -86,5 +86,19 @@ let main = new Main(8080);
 Beginnend mit dem Schlüsselwort *import* wird das Express-Tool implementiert. Der Konstruktor erhält als Parameter die Port-Nummer übergeben. Auffallend ist, dass der Konstruktor nicht wie die Klasse selbst heißt, sonder mit dem Schlüsselwort `constructor` beginnt. 
 Mit `this.server.listen(this.port);` wird der Server gestartet. Würde man nun mit ihm Kontakt aufnehmen, wäre es zwar möglich, aber er würde noch keine vernünftige Antwort liefern.  
 Das Schlüsselwort `var` wird so behandelt, als hätte die Deklaration bereits ganz am Anfang stattgefunden. Will man dies nicht, verwendet man `let`.  
-
-
+  
+##### Antworten auf GET-Anfragen  
+Damit man GET-Requests beantworten kann, muss zunächst die Handler-Methode *handleGet* erstellt werden. *HandleGet* legt fest, wie der Server auf GET-Anfragen reagieren soll. Mit `resp.send` kann mit einer Textnachricht auf eine Anfrage reagiert werden, Mit `resp.status()` kann man einen Statuscode ausgeben. Mit `resp.end` wird das Ende der Server-Response signalisiert.  
+ ```TypeScript
+ private handleGet (req: express.Request, resp: express.Response) {
+        //resp.status(400);
+        resp.send('Hallo');
+        resp.end();
+    }
+```
+  
+Damit eine GET-Anfrage tatsächlich vom Server beantwortet wird, muss der Konstruktor der Main Klasse um eine Zeile Code erweitert werden:
+```TypeScript
+this.server.get('*', (req,resp) => this.handleGet(req,resp))
+```
+Der erste Parameter sagt aus, auf welche Art von GET-Anfragen geantwortet werden soll. `*` bedeutet, dass auf alle reagiert werden soll.  Der zweite Parameter beinhaltet funktionalem Code. Dieser sagt aus, dass die Methoden *handleGet* aufgerufen werden soll.
