@@ -24,7 +24,26 @@ In der Datei **settings.json** sind die Einstellungen, welche man zu ein- und au
   
 #### tsconfig.json  
 In dieser Datei werden die Optionen für den Compiler gespeichert.   
-![tsconfig.json](/reibem14/tsconfig.PNG)    
+```javascript  
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "target": "es2017",
+        //"typeRoots": [
+        //    "node_modules/@types"
+        //]
+           
+
+    },
+        "include": [
+            "**/*.ts"
+        ],
+}  
+```
 
 Code | Bedeutung  
 ---- | ---------  
