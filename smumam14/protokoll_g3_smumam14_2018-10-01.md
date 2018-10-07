@@ -18,6 +18,7 @@ Siehe dazu das [Protokoll der letzten Einheit](/smumam14/protokoll_g3_smumam14_2
 #### Einsatzgebiet http  
 Gibt es überhaupt noch Use-Cases, bei denen man über das Netzwerk unter Verzicht auf Verschlüsselung übertragen möchte? Ja, man betrachte dazu folgende Skizze:  
 ![without-ssl](/smumam14/resources/http-use-case.png)  
+Als erstes wird eine verschlüsselte Anfrage über https z. B. an die Domain eines Unternehmens gesendet. Die Firewall bekommt diese Anfrage und leitet sie wiederum verschlüsselt an einen Webserver, hier als Apache bezeichnet, weiter. Dieser Server erkennt, dass er die Anfrage abermals weiterleiten muss und sendet sie __unverschlüsselt__ an den eigentlichen Zielrechner. Warum ist ab hier unter Umständen keine weitere Verschlüsselung mehr notwendig? Weil diese beiden Geräte meist räumlich nicht weit voneinander entfernt sind (zum Beispiel im gleichen Rack, eventuell laufen beide auch als VM's auf der gleichen physikalischen Maschine). Solche Voraussetzungen könnten eine Verschlüsselung redundant machen. 
 
 #### Visual Studio Code (kurz VS Code) 
 Dabei handelt es sich um eine freie IDE, welche von Microsoft angeboten wird ([MIT-Lizenz](https://de.wikipedia.org/wiki/MIT-Lizenz)). Diese wird in der Schweiz entwickelt und hat, anders als wir zuerst vermuteten, mit ihrer Namensschwester "Visual Studio"  nicht wirklich viel gemeinsam. Dies fällt allein schon beim ersten Anblick auf, der sich wie folgt darbietet:   
