@@ -29,3 +29,13 @@ Visual Studio Code ist ein plattformunabhängiger Quelltext-Editor von Microsoft
 Die Schnellstartleiste in VS Code beinhaltet einen Dateiexplorer, eine Suchfunktion, eine Versionsverwaltung, einen Punkt, um in den Debug-Mode zu gelangen und die Möglichkeit, externe Plug-ins einzufügen. Externe Plug-ins können dazu führen, dass das komplette System lahm gelegt wird. Um diese Problemzone zu umgehen, kann man den geschriebenen Code auch ohne Verwendung der Plug-ins starten.  
 Wenn man im Dateiexplorer eine Datei mit einem einfachen Mausklick öffnet, dann wird der Dateiname kursiv dargestellt. Klickt man nun auf eine andere Datei, verschwindet der Tab der ersteren. Mit einem Doppelklick öffnet man Dateien dauerhaft.  
 ![Schnellstartleiste](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/startleiste.jpg)  
+  
+#### Dateiexplorer übersichtlicher gestalten  
+Um den Dateiexplorer übersichtlicher zu gestalten, legt man im Projektverzeichnis einen neuen Ordner `.vscode` an. In diesem Ordner erstellt man die Datei `settings.json`. Dort kann man alle für die Programmierung irrelevanten Dateien ausblenden lassen (z.B. main.js, damit man nicht fälschlicherweise dort neuen Code erzeugt, welcher beim transpilieren verloren gehen würde).  
+```
+"files.exclude": {
+		"**/node_modules/": true,
+		"**/.vscode/": true,
+		"**/package-lock.json": true
+	}
+```
