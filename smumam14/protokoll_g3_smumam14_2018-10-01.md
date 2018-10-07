@@ -25,5 +25,34 @@ Gestartet wird das Studio so, dass man sich den Projektordner mit dem Terminal h
 ##### Aufbau  
 Die Menüleiste im klassischen Sinne wird standardmäßig ausgeblendet. Um sie anzuzeigen, genügt ein Druck auf die `ALT`-Taste. Ganz links sieht man 6 Icons in einer Leiste. Das erste ist der normale File-Explorer, mit dem man durch das Projekt navigieren kann. Das zweite Symbol bietet die Möglichkeit, nach bestimmten Begriffen zu suchen. Der dritte Menüpunkt offeriert die Möglichkeit der Integration einer Versionsverwaltung, zum Beispiel [Git](smumam14/Protokoll1.md). Der vierte Punkt ist für den Debugger vorgesehen, der fünfte zur Verwaltung der Erweiterungen gedacht. Als sechstes Menü im linken unteren Eck findet man die Einstellungen. Eine sehr praktisches Feature von VS Code ist, dass man in der IDE eine vollwertige Bash zur Verfügung hat (im Bild oben ersichtlich). Dank dieser großartigen Funktion wird das nervenraubende Hin- und Herspringen zwischen zwei Fenstern obsolet. Eine weitere Besonderheit ist der File-Explorer. Durch einmaliges Anklicken einer Datei wird diese als neue Lasche (Tab) geöffnet. Klickt man dann eine andere Datei an, wird in diese geöffnet und die vorher angeklicke automatisch geschlossen. Dies ermöglicht ein flinkes Durchsichten, auch wenn dabei dutzende Dateien geöffnet werden müssen. Wenn man eine Datei dauerhaft offen haben möchte, muss man sie mit einem Doppelklick öffnen.  
 
-##### Konfiguration 
+##### Konfiguration  
+Die Konfiguration der IDE erfolgt nicht über eine GUI, sondern im Wesentlichen über zwei `.json`-Dateien. Anpassungen sind notwendig, da man mit der IDE im Auslieferungszustand noch nicht effizient arbeiten kann.  
+```json
+martin@schmuck:~/rest-server1$ cat .vscode/settings.json 
+{
+  "files.exclude":{                       //sorgt dafür, dass im File-Explore in VS Code Übersicht herrscht, indem alle für die 
+     "**/node_modules/": true,            //Entwicklung irrelevanten Dateien und Verzeichnisse ausgeblendet werden.
+     "**/.vscode/": true,
+     "**/package-lock.json" :true 
+  }
+}
+martin@schmuck:~/rest-server1$ cat tsconfig.json 
+{
+    "compilerOptions":
+   {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "target": "es6"
+	    //"typeRoots": "node_modules/@types"
+    },
+    "include": [
+        "**/*.ts"
+    ]
+   
+}
+
+
 
