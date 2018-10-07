@@ -27,7 +27,7 @@ Die Menüleiste im klassischen Sinne wird standardmäßig ausgeblendet. Um sie a
 
 ##### Konfiguration  
 Die Konfiguration der IDE erfolgt nicht über eine GUI, sondern im Wesentlichen über zwei `.json`-Dateien. Anpassungen sind notwendig, da man mit der IDE im Auslieferungszustand noch nicht effizient arbeiten kann.  
-```json
+```
 martin@schmuck:~/rest-server1$ cat .vscode/settings.json 
 {
   "files.exclude":{                       //sorgt dafür, dass im File-Explore in VS Code Übersicht herrscht, indem alle für die 
@@ -40,19 +40,20 @@ martin@schmuck:~/rest-server1$ cat tsconfig.json
 {
     "compilerOptions":
    {
-        "module": "commonjs",
-        "noImplicitAny": true,
-        "removeComments": true,
-        "preserveConstEnums": true,
-        "sourceMap": true,
-        "target": "es6"
-	    //"typeRoots": "node_modules/@types"
-    },
-    "include": [
+        "module": "commonjs",		// Stellt die Module zur Quellcode-Generierung ein
+        "noImplicitAny": true, 		// Soll bei einer Deklaraion mit Any ein Fehler geworfen werden?
+        "removeComments": true,		// Werden Kommentare entfernd
+        "preserveConstEnums": true,	// Konstante Enum-Deklaration im generierten Code werden nicht gelöscht
+        "sourceMap": true,		// Soll eine .map-Datei erstellt werden?
+        "target": "es6"			// Spezifiziert die Zielversion nach dem Transpilieren (hier ECMAS Version 6)
+	},
+    "include": [			// Bindet alle .ts-Dateien ein
         "**/*.ts"
     ]
    
 }
+ ```  
+ Kommentare sind normalerweise in `.json`-Dateien nicht vorgesehen, an dieser Stelle jedoch ausnahmsweise erlaubt.  
 
 
 
