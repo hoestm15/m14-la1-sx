@@ -87,7 +87,7 @@ Im Programm wird dem Server gesagt, dass er solange zuhören soll, bis er eine A
 *******************************************************************************************************************************  
 ## http und https  
 Man muss sich nicht immer auf ein Übertragungsprotokoll fixieren. Es kann auch gemischt werden wenn man von außerhalb einer Firma über die Firewall in das Intranet gelangen will.   
-![Intranet](reibem14/Intranet.PNG)
+![Intranet](/reibem14/Intranet.PNG)
   
   
 
