@@ -20,4 +20,11 @@ Um mit der Entwicklungsumgebung gleich bequem arbeiten zu können wie mit Netbea
   
 #### .vscode  
 In der Datei **settings.json** sind die Einstellungen, welche man zu ein- und ausblenden von Dateien im Explorer benötigt. Wie im Bild gezeigt, werden code_modules, .vscode und package-lock.json im Visual Studio Code ausgeblendet.  
-![settings.json](/reibem14/settings.json.PNG)
+![settings.json](/reibem14/settings.json.PNG)  
+  
+#### tsconfig.json  
+In dieser Datei werden die Optionen für den Compiler gespeichert.   
+![tsconfig.json](/reibem14/tsconfig.json)  
+Code | Bedeutung  
+---- | ---------  
+
