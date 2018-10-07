@@ -62,32 +62,31 @@ martin@schmuck:~/rest-server1$ cat tsconfig.json
  
  #### Programm  
  ```typescript  
-   import * as express from 'express';
+import * as express from 'express';
 
 class Main 
 {
     private port: number;
     private server: express.Express;
-    constructor (port: number)
+
+    constructor(port: number)
     {
         this.port = port;
         this.server = express();
-        this.server.get("*",)
+        this.server.get('*', (req, resp) => this.handleGet(req, resp)); // Weitergabe der Aufgaben einer Methode an eine andere
+        this.server.listen(this.port);
+    }
 
-        this.server.listen('*',(req, resp) => this.handleGet(req,resp));
-
-
-    }   
-    private handleGet(req: express.Request, resp: express.Response)
+    private handleGet(req: express.RequestHandler, resp:express.Response) 
     {
-        req.send("Hallo lieber Client! Schönen Guten Morgén!");
-        req.acceptsEncodings()
+        resp.send('Hallo');
+        resp.end;
     }
 }
 
-let main = new Main(8080);
+let main = new Main(8080); 
 ```  
-Zur Erklärung: das Schlüsselwort `var` bewirkt, dass, egal wo im Quelltext die Variable deklariert / definiert wird, sie vom Compiler so behandelt wird, wie wenn am Beginn des Blocks die Deklaration durchgeführt wird. Will man das nicht, verwendet man `let`. Gebaut wird übrigens mit folgendem Befehl im Terminal: `node node_modules/typescript/bin/tsc -p tsconfig.json`  
+Zur Erklärung: das Schlüsselwort `var` bewirkt, dass, egal wo im Quelltext die Variable deklariert / definiert wird, sie vom Compiler so behandelt wird, wie wenn am Beginn des Blocks die Deklaration durchgeführt wird. Will man das nicht, verwendet man `let`. Was noch auffält ist, dass hier der Konstruktor nicht gleich heißt wie die dazugehörige Klasse, sondern mit dem Schlüsselwort `constructor` eingeleitet wird. Die Erklärung für den Operator `=>` ist im Kommentar oben untergebracht. Gebaut (bzw. transpiliert) wird übrigens mit folgendem Befehl im Terminal: `node node_modules/typescript/bin/tsc -p tsconfig.json`  
   
   
 Der transpilierte Text sieht je nach in der `tsconfig.json` (siehe oben) eingestellten JavaScript anders aus. Hier für Version 6:  
@@ -104,8 +103,8 @@ var Main = (function () {
         this.server.listen('*', function (req, resp) { return _this.handleGet(req, resp); });
     }
     Main.prototype.handleGet = function (req, resp) {
-        req.send("Hallo lieber Client! Schönen Guten Morgén!");
-        req.acceptsEncodings();
+        resp.send("Hallo");
+        resp.end();
     };
    return Main;
 }());
