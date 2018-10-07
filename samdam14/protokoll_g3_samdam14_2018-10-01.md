@@ -17,6 +17,6 @@ In Java ist die Realisierung eines Servers einfacher. Es gibt z.B. die ausprogra
 
 ### Gibt es noch Anwendungen, in denen man in einem Netzwerk auf Verschlüsselungen verzichtet?  
 JA!  
-![Use-Case http-Technologie]()  
+![](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/http%20Anwendung.PNG)  
 Der Client schickt eine Anfrage an die Domain eines Unternehmen, verschlüsselt mittels https. Die Firewall erhält die Anfrage zuerst und leitet sie verschlüsselt an einen Web-Server. Dieser erkennt, dass er die Request wieder weiterleiten muss und sendet sie aber nun unverschlüsselt an den Ziel-Rechner. Das diese Übertragung unverschlüsselt stattfinden kann, kann unterschiedliche Gründe haben. Die Häufigste aber ist, dass sich die beiden Geräte örtlich nicht weit voneinander entfernt liegen.  
 
