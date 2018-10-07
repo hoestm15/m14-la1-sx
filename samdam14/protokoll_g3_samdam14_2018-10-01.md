@@ -11,4 +11,6 @@
   
 -----------------------------------------------------------
   
-###
+### Server in Java und Node.js  
+In Node.js gibt es die Klassen http und https, aber diese sind in der Anwendung eher unbequemm umständlich. Aufgrunddessen kommt bei uns das Tool *Express* zum Einsatz. Express ermöglicht eine im Vergleich leichte Anwendung beider Protokolle, http und https. Damit dieses Tool funktioniert, muss es am Entwicklungsrechner und am Zielsystem installiert sein. Express steht deswegen in der Datei package.json in den *Dependencies*.  
+In Java ist die Realisierung eines Servers einfacher. Es gibt z.B. die ausprogrammierte Klasse ServerSocket, welche einfach als Bibliothek eingebunden werden können.  
