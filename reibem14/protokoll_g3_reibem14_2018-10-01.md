@@ -23,7 +23,7 @@ In der Datei **settings.json** sind die Einstellungen, welche man zu ein- und au
 ![settings.json](/reibem14/settings.json.PNG)  
   
 #### tsconfig.json  
-In dieser Datei werden die Optionen für den Compiler gespeichert.   
+In dieser Datei werden die Optionen für den Compiler(tsc) gespeichert.    
 ```javascript  
 {
     "compilerOptions": {
