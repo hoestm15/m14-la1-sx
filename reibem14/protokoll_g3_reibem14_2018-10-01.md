@@ -26,7 +26,10 @@ In der Datei **settings.json** sind die Einstellungen, welche man zu ein- und au
 In dieser Datei werden die Optionen für den Compiler gespeichert.   
 ![tsconfig.json](/reibem14/tsconfig.PNG)  
 Code | Bedeutung  
----- | ---------  
+---- | ---------    
+  
+    
+    
 module | Code generation  
 noImplicitAny | erzeut Error bei einer Deklaration mit any  
 removeComments | löscht alle Kommentare die mit /* beginnen  
