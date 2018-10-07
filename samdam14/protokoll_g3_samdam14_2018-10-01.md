@@ -39,3 +39,52 @@ Um den Dateiexplorer übersichtlicher zu gestalten, legt man im Projektverzeichn
 		"**/package-lock.json": true
 	}
 ```
+  
+#### TSC konfigurieren  
+Die Konfiguration des TypeScript-Compilers findet in der Datei `tsconfig.json` statt:  
+```TypeScript
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "target": "es2017"
+    },
+    
+    "include": [
+        "**/*.ts"
+    ]
+}
+```
+In dieser Datei können Einstellungen für den Compiler getroffen werden. Beispielsweise kann man die Sprache, in die der Compiler transpilieren soll, einstellen. Der Compiler lässt sich in der Konsole mit `node node_modules/typescript/bin/tsc/ -p tsconfig.json` starten.  
+  
+#### Programm  
+Es soll ein Programm in TypeScript in VS Code erstellt werden. Das Programm soll einen Server realisieren, der auf Requests wartet und dann mit *Hallo* antwortet.  
+  
+##### Verbindung herstellen  
+Um wie im nacholgendem Listing das Express-Tool zu verwenden, muss man zuerst die Datentypen von Express nachinstallieren:  
+`npm install --save-dev @types/Express` (*--saved-dev*, da es nur für den Entwickler benötigt wird)  
+
+```TypeScript
+import * as express from 'express';
+
+class Main{
+
+    private port : number;
+    private server : express.Express;
+
+    constructor (port : number) {
+        this.port=port;
+        this.server= express();
+        this.server.listen(this.port);
+    }
+}
+let main = new Main(8080);
+```
+Beginnend mit dem Schlüsselwort *import* wird das Express-Tool implementiert. Der Konstruktor erhält als Parameter die Port-Nummer übergeben. Auffallend ist, dass der Konstruktor nicht wie die Klasse selbst heißt, sonder mit dem Schlüsselwort `constructor` beginnt. 
+Mit `this.server.listen(this.port);` wird der Server gestartet. Würde man nun mit ihm Kontakt aufnehmen, wäre es zwar möglich, aber er würde noch keine vernünftige Antwort liefern.  
+Das Schlüsselwort `var` wird so behandelt, als hätte die Deklaration bereits ganz am Anfang stattgefunden. Will man dies nicht, verwendet man `let`.  
+
+
