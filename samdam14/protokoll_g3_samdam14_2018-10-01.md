@@ -21,7 +21,7 @@ Ja!
 Der Client schickt eine Anfrage an die Domain eines Unternehmen, verschlüsselt mittels https. Die Firewall erhält die Anfrage zuerst und leitet sie verschlüsselt an einen Web-Server. Dieser erkennt, dass er die Request wieder weiterleiten muss und sendet sie aber nun unverschlüsselt an den Ziel-Rechner. Das diese Übertragung unverschlüsselt stattfinden kann, kann unterschiedliche Gründe haben. Die Häufigste aber ist, dass sich die beiden Geräte örtlich nicht weit voneinander entfernt liegen.  
 
 ## Visual Studio Code  
-[VS Code](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/VS%20Code.png)  
+![VS Code](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/VS%20Code.png)  
 #### Allgemeines  
 Visual Studio Code ist ein plattformunabhängiger Quelltext-Editor von Microsoft, der viele verschiedene Programmiersprachen unterstützt (C, C++, HTML, Java, Javascript, TypeScript, ...). Es lässt sich zwar wie jede andere Applikation öffnen, aber man kann auch komfortabel über den Konsolenbefehl `code` einsteigen. Mit `code .` gelangt man direkt in das aktuelle Projektverzeichnis.  
   
