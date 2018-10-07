@@ -36,7 +36,7 @@ sourceMap | generiert dazugehörige .map Files
 target | welche Version wird verwendet   
 ********************************************************************************************************************************  
 ## Programm  
-```  
+```javascript  
 import * as express from 'express';
 
 class Main {
