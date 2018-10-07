@@ -63,4 +63,35 @@ preserveConstEnums | gibt an das ConstEnums nicht gelöscht werden sollen
 sourceMap |   gibt an ob Map-Dateien generiert werden sollen
 target | gibt an welche Version verwendet wird
 
-# programm
+# Server
+```typescript  
+import * as express from 'express';
+
+class Main {
+
+    private port: number;
+    private server: express.Express;
+
+    constructor(port: number) {
+        this.port = port;
+        this.server = express();
+
+        this.server.get('*', (req, resp) => this.handleGet(req, resp));
+
+
+        this.server.listen(this.port);
+    }
+
+    private handleGet(req: express.RequestHandler, resp:express.Response) {
+        resp.send('Hallo');
+        resp.end;
+     
+    }
+}
+
+let main = new Main(8080);  
+```
+Das Server-Programm hört so lange zu bis eine Anfrage kommt. Dann schickt der Server eine Antwort mit "Hallo" zurück und schließt die Verbindung.
+## Express 
+Express ist eine Framework für das Arbeiten mit HTTP und HTTPS und bietet eine vielzahl von nützlichen Funktionen für das Gestalten von Webanwendungen.
+# HTTP und HTTPS
