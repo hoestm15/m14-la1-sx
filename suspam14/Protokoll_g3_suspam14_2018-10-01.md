@@ -110,4 +110,5 @@ let main = new Main(8080);
 Das Server-Programm hört so lange zu bis eine Anfrage kommt. Dann schickt der Server eine Antwort mit "Hallo" zurück und schließt die Verbindung.
 ## Express 
 Express ist eine Framework für das Arbeiten mit HTTP und HTTPS und bietet eine vielzahl von nützlichen Funktionen für das Gestalten von Webanwendungen.
-
+## Arrow Function =>
+Die sogenannte Arrow Funtion dient dazu die Aufgabe einer Methode an eine andere weiterzugeben. Sie ist somit eine Syntaxverkürzung, damit man keine eigene Klasse schreiben muss.
