@@ -56,7 +56,7 @@ da *.json* Dateien eigentlich keine Kommentare vorsehen. Man kann diese aber tro
 
 Option | Bedeutung  
 ---- | ---------  
-module | spezifiziert die Code  Generation der Module  
+module | spezifiziert die Quellcode generierung der Module  
 noImplicitAny | gibt an ob eine Deklaration mit any einen Error erzeugen soll  
 removeComments | gibt an ob Kommentare gelöscht werden sollen  
 preserveConstEnums | gibt an das ConstEnums nicht gelöscht werden sollen 
