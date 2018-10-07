@@ -15,8 +15,15 @@ ________
 In Java gibt es beispielsweise Klassen wie ServerSocket, welche fertig ausprogrammiert sind und als Bibliotheken eingebunden und verwendet werden können. Dies erleichtert die Arbeit beim Erstellen eines Servers in dieser Sprache erheblich. Bei Node.js als Plattform bzw. TypeScript als Sprache gibt es zwar die Klassen http und https, diese sind jedoch unbequem in der Handhabung. Deshalb verwenden wir das Tool __Express__. Dieses Tool bietet eine komfortabele Möglichkeit, die beiden Protokolle zu verwenden. Dabei muss es jedoch sowohl am Entwicklungsrechner als auch am Zielsystem installiert sein, weshalb bei der Installation von diesem Tool die Option `save`und nicht `save-dev` angegeben werden muss, was eine entsprechende Eintragung in die Datei `package.json` im Abschnitt Dependencies bewirkt.  
 Siehe dazu das [Protokoll der letzten Einheit](/smumam14/protokoll_g3_smumam14_2018-09-24.md#anlegen-eines-typescript-projektes).  
 
-#### Visual Studio Code  
+#### Visual Studio Code (kurz VS Code) 
 Dabei handelt es sich um eine freie IDE, welche von Microsoft angeboten wird ([MIT-Lizenz](https://de.wikipedia.org/wiki/MIT-Lizenz)). Diese wird in der Schweiz entwickelt und hat, anders als wir zuerst vermuteten, mit ihrer Namensschwester "Visual Studio"  nicht wirklich viel gemeinsam. Dies fällt allein schon beim ersten Anblick auf, der sich wie folgt darbietet:   
-![Programmstart](/smumam14/resources/scrsht1.png)
+![Programmstart](/smumam14/resources/scrsht1.png)  
 
+##### Programmstart
+Gestartet wird das Studio so, dass man sich den Projektordner mit dem Terminal hineinnavigiert und dann den Befehl `code .` eingibt. Das hat den Vorteil, dass man sofort im Projektordner arbeitet und diesen nicht erst umständlich einstellen muss. Sobald die IDE gestartet ist, sieht man das oben eingefügte Startbild. 
+
+##### Aufbau  
+Die Menüleiste im klassischen Sinne wird standardmäßig ausgeblendet. Um sie anzuzeigen, genügt ein Druck auf die `ALT`-Taste. Ganz links sieht man 6 Icons in einer Leiste. Das erste ist der normale File-Explorer, mit dem man durch das Projekt navigieren kann. Das zweite Symbol bietet die Möglichkeit, nach bestimmten Begriffen zu suchen. Der dritte Menüpunkt offeriert die Möglichkeit der Integration einer Versionsverwaltung, zum Beispiel [Git](smumam14/Protokoll1.md). Der vierte Punkt ist für den Debugger vorgesehen, der fünfte zur Verwaltung der Erweiterungen gedacht. Als sechstes Menü im linken unteren Eck findet man die Einstellungen. Eine sehr praktisches Feature von VS Code ist, dass man in der IDE eine vollwertige Bash zur Verfügung hat (im Bild oben ersichtlich). Dank dieser großartigen Funktion wird das nervenraubende Hin- und Herspringen zwischen zwei Fenstern obsolet. Eine weitere Besonderheit ist der File-Explorer. Durch einmaliges Anklicken einer Datei wird diese als neue Lasche (Tab) geöffnet. Klickt man dann eine andere Datei an, wird in diese geöffnet und die vorher angeklicke automatisch geschlossen. Dies ermöglicht ein flinkes Durchsichten, auch wenn dabei dutzende Dateien geöffnet werden müssen. Wenn man eine Datei dauerhaft offen haben möchte, muss man sie mit einem Doppelklick öffnen.  
+
+##### Konfiguration 
 
