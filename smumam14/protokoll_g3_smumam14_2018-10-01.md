@@ -61,6 +61,7 @@ martin@schmuck:~/rest-server1$ cat tsconfig.json
  Kommentare sind normalerweise in `.json`-Dateien nicht vorgesehen, an dieser Stelle jedoch ausnahmsweise erlaubt.  
  
  #### Programm  
+ Es war ein Programm zu erstellen, welches einen Server realisiert, der auf Requests wartet und dann mit "Hallo" antwortet (sehr rudimentär).
  ```typescript  
 import * as express from 'express';
 
@@ -111,4 +112,4 @@ var Main = (function () {
 var main = new Main(8080);
 //# sourceMappingURL=main.js.map 
 ```  
-
+Falls es Probleme mit der Typisierung geben sollte, muss man sich, wie bei unserer Laborübung, die Typen nachinstallieren. Das geschieht mit `npm install --save-dev @types/node@7`.
