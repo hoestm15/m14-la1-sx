@@ -32,7 +32,8 @@ noImplicitAny | erzeut Error bei einer Deklaration mit any
 removeComments | löscht alle Kommentare die mit /* beginnen  
 preserveConstEnums | löscht keine constEnums Deklarationen im Code  
 sourceMap | generiert dazugehörige .map Files  
-target | welche Version wird verwendet  
+target | welche Version wird verwendet   
+
   
   
 
