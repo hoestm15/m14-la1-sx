@@ -17,6 +17,6 @@ Siehe dazu das [Protokoll der letzten Einheit](/smumam14/protokoll_g3_smumam14_2
 
 #### Visual Studio Code  
 Dabei handelt es sich um eine freie IDE, welche von Microsoft angeboten wird ([MIT-Lizenz](https://de.wikipedia.org/wiki/MIT-Lizenz)). Diese wird in der Schweiz entwickelt und hat, anders als wir zuerst vermuteten, mit ihrer Namensschwester "Visual Studio"  nicht wirklich viel gemeinsam. Dies fällt allein schon beim ersten Anblick auf, der sich wie folgt darbietet:   
-![Programmstart](/resources/scrsht1.png)
+![Programmstart](/smumam14/resources/scrsht1.png)
 
 
