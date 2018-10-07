@@ -82,7 +82,11 @@ class Main {
 
 let main = new Main(8080);  
 ```
-
+Im Programm wird dem Server gesagt, dass er solange zuhören soll, bis er eine Anfrage bekommt. Dann soll er als Antwort Hallo zurückschicken und die Antwort schließen.   
+**Express** ist ein externes Modul und dazu da um auf http und https zuzugreifen. Wir verwenden es, da es ein komfortables Arbeiten ermöglicht.   
+*******************************************************************************************************************************  
+## http und https  
+Man muss sich nicht immer auf ein Übertragungsprotokoll fixieren. Es kann auch gemischt werden wenn man von außerhalb einer Firma über die Firewall in das Intranet gelangen will. ![Intranet](reibem14/Intranet.PNG)
   
   
 
