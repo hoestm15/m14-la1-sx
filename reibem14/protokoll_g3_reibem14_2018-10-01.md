@@ -34,6 +34,35 @@ removeComments | löscht alle Kommentare die mit /* beginnen
 preserveConstEnums | löscht keine constEnums Deklarationen im Code  
 sourceMap | generiert dazugehörige .map Files  
 target | welche Version wird verwendet   
+********************************************************************************************************************************  
+## Programm  
+```  
+import * as express from 'express';
+
+class Main {
+
+    private port: number;
+    private server: express.Express;
+
+    constructor(port: number) {
+        this.port = port;
+        this.server = express();
+
+        this.server.get('*', (req, resp) => this.handleGet(req, resp));
+
+
+        this.server.listen(this.port);
+    }
+
+    private handleGet(req: express.RequestHandler, resp:express.Response) {
+        resp.send('Hallo');
+        resp.end;
+     
+    }
+}
+
+let main = new Main(8080);  
+```
 
   
   
