@@ -69,7 +69,6 @@ Hier werden die Optionen für den Compiler/Transpiler (TSC) angegeben.
 
 Option | Bedeutung  
 ---- | ---------  
- 
 preserveConstEnums | das ConstEnums werden nicht gelöscht 
 sourceMap |   Map-Dateien werden generiert
 removeComments | gibt an ob Kommentare gelöscht werden  
