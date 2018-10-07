@@ -15,6 +15,10 @@ ________
 In Java gibt es beispielsweise Klassen wie ServerSocket, welche fertig ausprogrammiert sind und als Bibliotheken eingebunden und verwendet werden können. Dies erleichtert die Arbeit beim Erstellen eines Servers in dieser Sprache erheblich. Bei Node.js als Plattform bzw. TypeScript als Sprache gibt es zwar die Klassen http und https, diese sind jedoch unbequem in der Handhabung. Deshalb verwenden wir das Tool __Express__. Dieses Tool bietet eine komfortabele Möglichkeit, die beiden Protokolle zu verwenden. Dabei muss es jedoch sowohl am Entwicklungsrechner als auch am Zielsystem installiert sein, weshalb bei der Installation von diesem Tool die Option `save`und nicht `save-dev` angegeben werden muss, was eine entsprechende Eintragung in die Datei `package.json` im Abschnitt Dependencies bewirkt.  
 Siehe dazu das [Protokoll der letzten Einheit](/smumam14/protokoll_g3_smumam14_2018-09-24.md#anlegen-eines-typescript-projektes).  
 
+#### Einsatzgebiet http  
+Gibt es überhaupt noch Use-Cases, bei denen man über das Netzwerk unter Verzicht auf Verschlüsselung übertragen möchte? Ja, man betrachte dazu folgende Skizze:  
+![without-ssl](/smumam14/resources/http-use-case.png)  
+
 #### Visual Studio Code (kurz VS Code) 
 Dabei handelt es sich um eine freie IDE, welche von Microsoft angeboten wird ([MIT-Lizenz](https://de.wikipedia.org/wiki/MIT-Lizenz)). Diese wird in der Schweiz entwickelt und hat, anders als wir zuerst vermuteten, mit ihrer Namensschwester "Visual Studio"  nicht wirklich viel gemeinsam. Dies fällt allein schon beim ersten Anblick auf, der sich wie folgt darbietet:   
 ![Programmstart](/smumam14/resources/scrsht1.png)  
@@ -30,8 +34,8 @@ Die Konfiguration der IDE erfolgt nicht über eine GUI, sondern im Wesentlichen 
 ```
 martin@schmuck:~/rest-server1$ cat .vscode/settings.json 
 {
-  "files.exclude":{                       //sorgt dafür, dass im File-Explore in VS Code Übersicht herrscht, indem alle für die 
-     "**/node_modules/": true,            //Entwicklung irrelevanten Dateien und Verzeichnisse ausgeblendet werden.
+  "files.exclude":{                // sorgt dafür, dass im File-Explore in VS Code Übersicht herrscht, indem alle für die 
+     "**/node_modules/": true,     // Entwicklung irrelevanten Dateien und Verzeichnisse ausgeblendet werden.
      "**/.vscode/": true,
      "**/package-lock.json" :true 
   }
