@@ -74,6 +74,7 @@ class Main {
 
 const main = new Main(8080);  
 ```  
-### Konstruktor  
-Der Server wird darin auf *listen(zuhören)* geschalten. Somit wartet er bis ein *Request(Anfrage)* eintrifft. Wenn ```typescript this.server.get('/status', (req, resp) => this.handleGetStatus(req, resp)); ```
+### Konstruktor und Handlermethode  
+Der Server wird darin auf *listen(zuhören)* geschalten. Somit wartet er bis ein *Request* eintrifft. Die Zeile ```typescript this.server.get('/status', (req, resp) => this.handleGetStatus(req, resp)); ``` bewirkt, dass wenn man */status* in der URL eingibt, wird die Handlermethode *HandleGetStatus* aufgerufen wird. Die Handlermethode selbst bewirkt, dass als *Response* "Server is running" zurückgegeben wird.   
+Nach dem gleichen Prinzip arbeiten die restlichen Handlermethoden, je nach dem was als URL eingegeben wird.
 
