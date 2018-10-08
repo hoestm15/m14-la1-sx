@@ -37,6 +37,8 @@ Compileroptionen sind hier hinterlegt
 Hier kann man Einstellen welche Dateien man ein- bzw. ausblenden möchte. Mit **true** werden die Dateien ausgeblendet und mit **false** werden sie eingeblendet.  
 ******************************************************************************************  
 # Programm  
+Hier wird dem Server gesagt, dass er solange zuhören (listen) soll, bis eine Anfrage kommt. Als Antwort wird dann "Hallo" zurückgeschickt, anschließend wird die Antwort geschlossen.  
+Mit **express** kann man auf **HTTP** und **HTTPS** zugreifen, da es ein externes Modul ist. Mit diesem Modul ist ein komfortables Arbeiten möglich. Da man sich eben nicht immer auf ein Übertragungsprotokoll fixieren möchte, kann man eben **HTTP** und **HTTPS** verwenden.  
 ```javascript  
 import * as express from 'express';  
 
@@ -60,5 +62,4 @@ class Main {
 
 let main = new Main(8080);   //mit let, wird die Variable erst definiert, wenn man diese Zeile abarbeitet  
 ```  
-Hier wird dem Server gesagt, dass er solange zuhören (listen) soll, bis eine Anfrage kommt. Als Antwort wird dann "Hallo" zurückgeschickt, anschließend wird die Antwort geschlossen.  
-Mit **express** kann man auf **HTTP** und **HTTPS** zugreifen, da es ein externes Modul ist. Mit diesem Modul ist ein komfortables Arbeiten möglich. Da man sich eben nicht immer auf ein Übertragungsprotokoll fixieren möchte, kann man eben **HTTP** und **HTTPS** verwenden.  
+
