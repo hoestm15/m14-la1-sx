@@ -16,7 +16,10 @@ Je nach Programmiersprache gibt es andere Anforderungen an den Compiler und desh
 
 Typescript | Java | Java(unter Android) | C  
 ---------- | ---- | ------------------- | -  
-gulp | make | gradle | make  
+gulp | javac | gradle | make  
+[Gulp](https://de.wikipedia.org/wiki/Gulp.js) | [javac](https://en.wikipedia.org/wiki/Javac) | [gradle](https://de.wikipedia.org/wiki/Gradle) | [make](https://de.wikipedia.org/wiki/Make)    
+
+
 
 
 ## Rest-Server anlegen  
