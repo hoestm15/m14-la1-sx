@@ -23,4 +23,57 @@ gulp | javac | gradle | make
 
 
 ## Rest-Server anlegen  
-Dieser Rest-Server unterscheidet sich grundsätzlich nur wenig zum Vorhergegangenen. Auch hier wird mittels HTTP Technik gearbeitet. In unserem Fall soll durch aufrufen einer URL eine Meldung bzw. Informationen über Schüler zurückgegeben werden.
+Dieser Rest-Server unterscheidet sich grundsätzlich nur wenig zum Vorhergegangenen. Auch hier wird mittels HTTP Technik gearbeitet. In unserem Fall soll durch aufrufen einer URL eine Meldung bzw. Informationen über Schüler zurückgegeben werden.  
+```  typescript  
+import * as express from 'express';
+import * as bodyParser from 'body-parser';
+
+class Main {
+
+    private port: number;
+    private server: express.Express;
+
+    constructor(port: number) {
+        this.port = port;
+        this.server = express();
+        this.server.use(bodyParser.urlencoded({extended: false}));
+        this.server.get('/status', (req, resp) => this.handleGetStatus(req, resp));
+        this.server.get('/student', (req, resp) => this.handleGetStudent(req, resp));
+        this.server.get('*', (req, resp) => this.handleGet(req, resp));
+
+
+        this.server.listen(this.port);
+    }
+
+    private handleGet(req: express.Request, resp: express.Response) {
+        resp.status(400);
+        resp.send('Error');
+        resp.end();
+    }
+
+    private handleGetStatus(req: express.Request, resp: express.Response) {
+        resp.send('Server is running');
+        resp.end();
+    }
+
+    private handleGetStudent(req: express.Request, resp: express.Response) {
+        switch (req.query.htlid) {
+            case 'suspam14':
+                resp.json({htlid: 'suspam14', sirname: 'Schuster', firstname: 'Patrick'});
+                break;
+            case 'reibem14':
+                resp.json({htlid: 'reibem14', sirname: 'Reinbacher', firstname: 'Bernhard'});
+                break;
+            default:
+                resp.status(400);
+                resp.send(req.query.htlid + ' not found');
+                break;
+
+        }
+        resp.end();
+    }
+}
+
+const main = new Main(8080);  
+```
+
