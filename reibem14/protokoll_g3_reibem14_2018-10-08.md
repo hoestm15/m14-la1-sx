@@ -40,8 +40,6 @@ class Main {
         this.server.get('/status', (req, resp) => this.handleGetStatus(req, resp));
         this.server.get('/student', (req, resp) => this.handleGetStudent(req, resp));
         this.server.get('*', (req, resp) => this.handleGet(req, resp));
-
-
         this.server.listen(this.port);
     }
 
@@ -75,5 +73,7 @@ class Main {
 }
 
 const main = new Main(8080);  
-```
+```  
+### Konstruktor  
+Der Server wird darin auf *listen(zuhören)* geschalten. Somit wartet er bis ein *Request(Anfrage)* eintrifft. Wenn ```typescript this.server.get('/status', (req, resp) => this.handleGetStatus(req, resp)); ```
 
