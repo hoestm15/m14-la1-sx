@@ -15,8 +15,7 @@
 Je nach Programmiersprache gibt es andere Anforderungen an den Compiler und deshalb gibt es auch verschiedene.   
 
 Typescript | Java | Java(unter Android) | C  
----------- | ---- | ------------------- | -   
-
+---------- | ---- | ------------------- | -  
 gulp | make | gradle | make  
 
 
