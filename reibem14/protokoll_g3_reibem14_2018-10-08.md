@@ -22,12 +22,113 @@ gulp | javac | gradle | make
 ## Konfigurartionsdateien  
 
 ### tslint.json    
-* Plug In tslint muss installiert sein
+* dieses Plug In tslint muss installiert sein
 * verantwortlich für die Optik des Code z.B maximale Länge einer Zeile  
 ```javascript  
 "max-line-length": [
             true,
             140  
+```  
+### tsconfig.json  
+* steuert den Übersetztungsvorgang  
+* speichert somit Einstellungen für tsc(Compiler)  
+```javascript  
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "target": "ES2016",
+        "experimentalDecorators": true,
+        "noEmitOnError": true,
+        "mapRoot": "./",
+        "outDir": "./dist",
+        "typeRoots": [ "node_modules/@types" ]
+    },
+    "include": [ "src/**/*.ts" ]
+}
+```  
+### settings.json  
+* zum Ausblenden von unerwünschten Dateien in der Programmierumgebung  
+* kann auch während des Programmierens geschehen  
+```javascript  
+{
+        "files.exclude": {
+                "**/node_modules": true,
+                "**/.vscode": true,
+                "**/package-lock.json": true,
+                "**/gulpfile.js" : true,
+                "**tslint.json": true,
+                "**/dist": true,
+                "**/tsconfig.json": true
+        }
+}
+```  
+### tasks.json 
+* hier wird festgelegt was alles passieren soll    
+```javascript  
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "gulp",
+            "type": "shell",
+            "args": [
+                "--gulpfile",
+                "gulpfile.js",
+                "build"
+            ],
+            "group": "build",
+            "presentation" : { "reveal": "silent" },     
+            ......
+```  
+### launch.json  
+* speichert Einstellungen zum Debugging  
+* z.B. * smartStep: true -> springt von Typescript Programm zu Typecript Programm  
+       * preLaunchTask: "build" -> bei jedem Start wird build aktiviert  
+```javascript  
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceRoot}/src/main.ts",
+            "cwd": "${workspaceRoot}/dist",
+            "console": "integratedTerminal",
+            "outFiles": [ "${workspaceRoot}/dist/*.js" ],
+            //"trace": "all",
+            "sourceMaps": true,
+            "preLaunchTask": "build",
+            "smartStep": true
+        }
+    ]
+}  
+```  
+### keybindings.json  
+* speichert Tastenkürzel für gewissen Vorgänge  
+```javascript  
+[
+    {
+        "key": "ctrl+alt+v",
+        "command": "workbench.action.tasks.runTask",
+        "args": "cleanAndBuild"
+    },{
+        "key": "ctrl+alt+b",
+        "command": "workbench.action.tasks.runTask",
+        "args": "build"
+    },
+    {
+        "key": "ctrl+alt+c",
+        "command": "workbench.action.tasks.runTask",
+        "args": "clean"
+    }
+]
 ```  
 
 ## Rest-Server anlegen  
