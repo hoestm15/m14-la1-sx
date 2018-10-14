@@ -187,3 +187,9 @@ const main = new Main(8080);
 Der Server wird darin auf *listen(zuhören)* geschalten. Somit wartet er bis ein *Request* eintrifft. Die Zeile ```typescript this.server.get('/status', (req, resp) => this.handleGetStatus(req, resp)); ``` bewirkt, dass wenn man */status* in der URL eingibt, wird die Handlermethode *HandleGetStatus* aufgerufen wird. Die Handlermethode selbst bewirkt, dass als *Response* "Server is running" zurückgegeben wird.   
 Nach dem gleichen Prinzip arbeiten die restlichen Handlermethoden, je nach dem was als URL eingegeben werden die Handlermethoden *handleGetStudent* oder *handleGet* aufgerufen. Diese geben dann einen Schüler bzw. Error als Response am Bildschirm erscheint.   
 
+### Anwenden des Rest-Servers  
+Durch aufrufen von *http://localhost:8080/student?htlid=reibem14* wird durch die Handlermethoden der Student *reibem14* mit den dazugehörigen Informationen ausgegeben.  
+![8080](/reibem14/8080.PNG)  
+  
+Die einzelnen Teile der URL heißen:  
+![URL](/reibem14/URL.PNG)  
