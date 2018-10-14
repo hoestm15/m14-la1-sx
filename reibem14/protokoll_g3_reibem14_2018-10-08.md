@@ -18,9 +18,17 @@ Typescript | Java | Java(unter Android) | C
 ---------- | ---- | ------------------- | -  
 gulp | javac | gradle | make  
 [Gulp](https://de.wikipedia.org/wiki/Gulp.js) | [javac](https://en.wikipedia.org/wiki/Javac) | [gradle](https://de.wikipedia.org/wiki/Gradle) | [make](https://de.wikipedia.org/wiki/Make)    
+*************************************************************************************************************************  
+## Konfigurartionsdateien  
 
-
-
+### tslint.json    
+* Plug In tslint muss installiert sein
+* verantwortlich für die Optik des Code z.B maximale Länge einer Zeile  
+```javascript  
+"max-line-length": [
+            true,
+            140  
+```  
 
 ## Rest-Server anlegen  
 Dieser Rest-Server unterscheidet sich grundsätzlich nur wenig zum Vorhergegangenen. Auch hier wird mittels HTTP Technik gearbeitet. In unserem Fall soll durch aufrufen einer URL eine Meldung bzw. Informationen über Schüler zurückgegeben werden.  
