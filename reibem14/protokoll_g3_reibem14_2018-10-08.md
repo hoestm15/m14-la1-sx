@@ -192,4 +192,10 @@ Durch aufrufen von *http://localhost:8080/student?htlid=reibem14* wird durch die
 ![8080](/reibem14/8080.PNG)  
   
 Die einzelnen Teile der URL heißen:  
-![URL](/reibem14/URL.PNG)  
+![URL](/reibem14/URL.PNG)    
+  
+## Vorschau  
+* Klasse für Personen und Personenverwaltung  
+* PUT für das Anlegen einer Person  
+* POST für das Ändern einer Person  
+* DELETE für das Löschen einer Person
