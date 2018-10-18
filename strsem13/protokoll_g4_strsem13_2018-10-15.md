@@ -54,10 +54,11 @@ Wenn eine Verbinndung zwischen Server und Client besteht werden nicht dauerhaft 
 HTTP Pakete werden in Header und Body (Kopf und Rumpf) eingeteilt. . Im Header verbergen sich Informationen über die verwendete HTTP-Version, die verwendete Codierung, die Größe des Bodys, etc., während im Body die eigentlichen Nutzdaten untergebracht werden. Die beiden werden durch eine Leerzeile getrennt.
   
 ### HTTP-Befehle  
+Das HTTP-Protokoll sieht eine Vielzahl an verschiedenen Befehlen vor. Die wichtigsten vier sind:
+* GET:     Daten vom Server abrufen    
+* POST:    Daten zum Server schicken   
+* PUT:     Daten auf den Server laden  
+* DELETE:  Datem vom Server löschen    
 
-|Methode  |Beschreibung                |
-|---------|:--------------------------:|
-| GET     |Daten vom Server abrufen    |
-| POST    |Daten zum Server schicken   |
-| PUT     |Daten auf den Server laden  |
-| DELETE  |Datem vom Server löschen    |
+### Statuscodes  
+Wenn vom Client eine Anfrage kommt muss der Server diese interpretieren und bearbeiten. Sowohl bei der Interpretation, als auch bei der Bearbeitung können Fehler auftreten. Um dem Client mitzuteilen, was vorgefallen ist bzw. was gerade passiert sieht HTTP verschiedene Statuscodes vor.
