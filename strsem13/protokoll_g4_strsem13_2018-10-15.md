@@ -8,4 +8,8 @@ Ort: Automatisierungslabor, Htbla Kaindorf
 Anwesend: Strauß, Strutz, Tuttner, Uhl, Waltl, Wieser, Zitz  
 Abwesend: -  
 ## Thema: REST-Server  
-Der Name **REST**-Server steht für **RE**presentational **S**tate **T**ransfer Server und wird meist für die Maschine-zu-Maschine-Kommunikation in Websevices verwendet. Das HTTP Protokoll wird als Sprache zwischen Server und Client verwendet. 
+Der Name **REST**-Server steht für **RE**presentational **S**tate **T**ransfer Server und wird meist für die Maschine-zu-Maschine-Kommunikation in Websevices verwendet. Das HTTP Protokoll wird als Sprache zwischen Server und Client verwendet. Rest Server werden häufig zur Abfrage von Zuständen, z.B. an einem entferntem System eingesetzt.
+Der Architekturstil eines REST - Servers weist 6 Eigenschaften auf:  
+* Zustandslosigkeit: Die REST-nachricht enthält alle Informationen, dei für den Server/Client notwendig sind, um die Nachricht zu verstehen. Weder Server noch Client speichert Zustandsinformationen.  
+* Client/Server Prinzip: Client-Server-Architektur  
+* Catching: Ist eine Technik um Ressourcen anhand bestimmter Kriterien in einem Chache zwischenzuspeichern, um unötige Datenübetragungen oder Serveranfragen zu vermeiden.
