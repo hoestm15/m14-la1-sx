@@ -21,14 +21,22 @@ Besteht aus weitern 3 Eigenschaften:
 5. Mehrschichtige Systeme: Durch Mehrschichtige Systeme, wird die Architektur vereinfacht.  
 6. Code on Demand: Unter Code on Demand ist zu verstehen, dass erst im Bedarfsfall an den Client, Code zur lokalen Ausführung übertragen werden kann.  
 
-### Kommunikation in der Automatisierungstechnik  
+## Kommunikation in der Automatisierungstechnik  
 Der klassische Ansatz Daten voon einem System(z.B. SPS) über eine kürzer Distanz zu einem PC zu übetragen, war über einen Feldbus. Dieser Ansatz bringt einige Probleme mitsich, z.B. zusätzliche Hardware. 
   
 ![Feldbus](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/Feldbus.png)
   
 Stattdessen wird heutzutage direkt über das Netzwerk gearbeitet. Das geschieht über HTTP-Server und HTTP-Clients. Das Problem an dieser Variante ist das Sicherheitsriskio.  
   
-![Netzwerk über HTTP](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/Netzwerk%20%C3%BCber%20HTTP.png)
+![Netzwerk über HTTP](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/Netzwerk%20%C3%BCber%20HTTP.png)  
+
+## TCP/IP
+
+Transmission Control Protocol/ Internet Protocol ist eine Familie von Netzwerkprotokollen, die im OSI Schichten Modell auf Layer 4 (Transport Layer) arbeitet. Die Identifizierung erfolgt über IP-Adressen. Die Aufgabe des TCP/IP Protokolles ist die Datenübertragung innerhalb eines dezentralen Netzwerks. 
+
+### Verbindungsaufbau: 
+
+
   
 
 
