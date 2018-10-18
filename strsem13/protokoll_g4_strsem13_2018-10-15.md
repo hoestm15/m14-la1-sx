@@ -21,3 +21,5 @@ Besteht aus weitern 3 Eigenschaften:
 5. Mehrschichtige Systeme: Durch Mehrschichtige Systeme, wird die Architektur vereinfacht.  
 6. Code on Demand: Unter Code on Demand ist zu verstehen, dass erst im Bedarfsfall an den Client, Code zur lokalen Ausführung übertragen werden kann.  
 
+### Kommunikation in der Automatisierungstechnik  
+Der klassische Ansatz Daten voon einem System(z.B. SPS) über eine kürzer Distanz zu einem PC zu übetragen, war über einen Feldbus. Dieser Ansatz bringt einige Probleme mitsich, z.B. zusätzliche Hardware. 
