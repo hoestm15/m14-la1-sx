@@ -43,8 +43,21 @@ Der Client sendet dem Server ein SYN-Paket, der Server empfägt das Paket. Falls
 **HTTP** (**H**ypter**T**ext **T**ransfer **P**rotocol) ist ein Protokoll zur Übertragung von Daten auf der der Anwendungsschicht(OSI Schicht 7). Das Protkoll ist zustandslos, dass bedeutet das Informationen aus früheren Anforderungen verloren gehen, deshalb ist ein mitführen von Sitzungsdaten erforderlich. Um Daten verschlüsselt zu Übertragen gibt es das HTTPS Protokoll. Weiteres erfolgt die Übetragung textuell. 
 
 ### Verbindugsaufbau 
-Die Kommunikation zwischen Slient und Server erfolgt durch Austausch von HTTP-Nachrichten. Dadurch das HTTP nicht auf Hyptertext beschrnkt ist, sondern auch zum Austausch von Daten verwendet wird, ist es auf ein weiteres Protokoll angewiesen. Für dieses Protokoll wird üblicherweise TCP eingesetzt.
+Die Kommunikation zwischen Slient und Server erfolgt durch Austausch von HTTP-Nachrichten. Dadurch das HTTP nicht auf Hyptertext beschrnkt ist, sondern auch zum Austausch von Daten verwendet wird, ist es auf ein weiteres Protokoll angewiesen. Für dieses Protokoll wird üblicherweise TCP eingesetzt.  
+  
 ![HTTP](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/Verbindungsaufbau%20HTTP.png)
-
+  
+### Keep-Alive Paket
+Wenn eine Verbinndung zwischen Server und Client besteht werden nicht dauerhaft Pakete übertragen. Um zu verhindern, dass der Server die Verbindung aufgrund einer Überschreitung der Zeit abbricht kann der Client sogennante Keep-Alive-Pakete schicken um dem Server mitzuteilen, dass er immernoch "lebt" und die Verbindung aufrecht erhalten will. 
+  
 ### Paketaufbau
+HTTP Pakete werden in Header und Body (Kopf und Rumpf) eingeteilt. . Im Header verbergen sich Informationen über die verwendete HTTP-Version, die verwendete Codierung, die Größe des Bodys, etc., während im Body die eigentlichen Nutzdaten untergebracht werden. Die beiden werden durch eine Leerzeile getrennt.
+  
+### HTTP-Befehle  
 
+|Methode  |Beschreibung                |
+|---------|:--------------------------:|
+| GET     |Daten vom Server abrufen    |
+| POST    |Daten zum Server schicken   |
+| PUT     |Daten auf den Server laden  |
+| DELETE  |Datem vom Server löschen    |
