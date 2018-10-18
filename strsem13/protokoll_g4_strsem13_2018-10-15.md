@@ -23,3 +23,4 @@ Besteht aus weitern 3 Eigenschaften:
 
 ### Kommunikation in der Automatisierungstechnik  
 Der klassische Ansatz Daten voon einem System(z.B. SPS) über eine kürzer Distanz zu einem PC zu übetragen, war über einen Feldbus. Dieser Ansatz bringt einige Probleme mitsich, z.B. zusätzliche Hardware. 
+![Feldbus]()
