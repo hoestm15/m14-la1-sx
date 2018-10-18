@@ -24,7 +24,7 @@ Besteht aus weitern 3 Eigenschaften:
 ### Kommunikation in der Automatisierungstechnik  
 Der klassische Ansatz Daten voon einem System(z.B. SPS) über eine kürzer Distanz zu einem PC zu übetragen, war über einen Feldbus. Dieser Ansatz bringt einige Probleme mitsich, z.B. zusätzliche Hardware. 
   
-![Feldbus](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/Felbus.png)
+![Feldbus](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/Feldbus.png)
   
 Stattdessen wird heutzutage direkt über das Netzwerk gearbeitet. Das geschieht über HTTP-Server und HTTP-Clients. Das Problem an dieser Variante ist das Sicherheitsriskio.  
   
