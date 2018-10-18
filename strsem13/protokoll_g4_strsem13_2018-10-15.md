@@ -61,4 +61,10 @@ Das HTTP-Protokoll sieht eine Vielzahl an verschiedenen Befehlen vor. Die wichti
 * DELETE:  Datem vom Server löschen    
 
 ### Statuscodes  
-Wenn vom Client eine Anfrage kommt muss der Server diese interpretieren und bearbeiten. Sowohl bei der Interpretation, als auch bei der Bearbeitung können Fehler auftreten. Um dem Client mitzuteilen, was vorgefallen ist bzw. was gerade passiert sieht HTTP verschiedene Statuscodes vor.
+Wenn vom Client eine Anfrage kommt muss der Server diese interpretieren und bearbeiten. Sowohl bei der Interpretation, als auch bei der Bearbeitung können Fehler auftreten. Um dem Client mitzuteilen, was vorgefallen ist bzw. was gerade passiert sieht HTTP verschiedene Statuscodes vor. Dreitstellige Nummern sieht HTTP zur Statusmeldung vor:
+
+* 1xx:	Die Abarbeitung der Anfrage dauert noch an.
+* 2xx:	Erfolgreich
+* 3xx:	Weitere Schritte des Clients notwendig
+* 4xx:	Clientseitiger Fehler, z. B. 403 für unberechtigter Zugriff oder 404 für ein Dokument das nicht existiert
+* 5xx	Serverseitiger Fehler
