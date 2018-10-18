@@ -41,3 +41,6 @@ Der Client sendet dem Server ein SYN-Paket, der Server empfägt das Paket. Falls
   
 ## HTTP  
 **HTTP** (**H**ypter**T**ext **T**ransfer **P**rotocol) ist ein Protokoll zur Übertragung von Daten auf der der Anwendungsschicht(OSI Schicht 7). Das Protkoll ist zustandslos, dass bedeutet das Informationen aus früheren Anforderungen verloren gehen, deshalb ist ein mitführen von Sitzungsdaten erforderlich. Um Daten verschlüsselt zu Übertragen gibt es das HTTPS Protokoll. Weiteres erfolgt die Übetragung textuell. 
+
+### Verbindugsaufbau 
+![HTTP]()
