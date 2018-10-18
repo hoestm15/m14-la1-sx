@@ -34,14 +34,10 @@ Stattdessen wird heutzutage direkt über das Netzwerk gearbeitet. Das geschieht 
 
 Transmission Control Protocol/ Internet Protocol ist eine Familie von Netzwerkprotokollen, die im OSI Schichten Modell auf Layer 4 (Transport Layer) arbeitet. Die Identifizierung erfolgt über IP-Adressen. Die Aufgabe des TCP/IP Protokolles ist die Datenübertragung innerhalb eines dezentralen Netzwerks. 
 
-### Verbindungsaufbau
+#### Verbindungsaufbau
 Der Client sendet dem Server ein SYN-Paket, der Server empfägt das Paket. Falls der Port geschlossen ist, antwortet er mit einem TCP_RST Paket um zu signalisieren das keine Verbindung aufgebaut werden kann. Falls der Port geöffnet ist, sendet der Server ein SYN/ACK Paket zurück. Der Client sendet, nach Erhalt des SYN/ACK-Paketes, ein ACk-Packet an dem Server, um zu signalisieren, dass die Verbindung aufgebaut ist.
 
 ![TCP/IP](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/Verbindungsaufbau%20TCPIP.png)
-
-
   
-
-
-
-
+## HTTP  
+**HTTP** (**H**ypter**T**ext **T**ransfer **P**rotocol) ist ein Protokoll zur Übertragung von Daten auf der der Anwendungsschicht(OSI Schicht 7). Das Protkoll ist zustandslos, dass bedeutet das Informationen aus früheren Anforderungen verloren gehen, deshalb ist ein mitführen von Sitzungsdaten erforderlich. Um Daten verschlüsselt zu Übertragen gibt es das HTTPS Protokoll. Weiteres erfolgt die Übetragung textuell. 
