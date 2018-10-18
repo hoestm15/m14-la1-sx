@@ -26,6 +26,11 @@ Der klassische Ansatz Daten voon einem System(z.B. SPS) über eine kürzer Dista
   
 ![Feldbus](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/Felbus.png)
   
-Stattdessen wird heutzutage direkt über das Netzwerk gearbeitet. Das geschieht über HTTP-Server und HTTP-Clients. Das Problem an dieser Variante ist das Sicherheitsriskio.
+Stattdessen wird heutzutage direkt über das Netzwerk gearbeitet. Das geschieht über HTTP-Server und HTTP-Clients. Das Problem an dieser Variante ist das Sicherheitsriskio.  
+  
+![Netzwerk über HTTP](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/Netzwerk%20%C3%BCber%20HTTP.png)
+  
+
+
 
 
