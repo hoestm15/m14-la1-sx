@@ -140,7 +140,7 @@ Content-Type: text/html
 ```
 ### Rest-Client
 Wir haben uns auch verschiedene Rest-Clients angeschaut und, über welche Funktionen diese Verfügen.  
-[Rested](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/Rested.png)
+![Rested](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/Rested.png)
 #### Installation Datein 
 Zum Schluss der Einheit haben wir den Code von Linux geupdatet.   
 [Link Code Update](https://code.visualstudio.com/docs/?dv=linux64_deb)  
