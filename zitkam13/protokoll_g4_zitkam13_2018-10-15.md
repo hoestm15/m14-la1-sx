@@ -75,4 +75,9 @@ Statuscode | Bedeutung
 
 
 Weitere Informationen kan man unter dem folgenden [Link](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol) nachlesen. 
-## Typescript
+# Typescript
+Typeskript ist eine von Microsoft entwickelte Programmiersprache und basiert auf JavaScript. Der TypeScript-Code wird daher vor dem Ausführen in einem JavaScript-Code **transpiliert**.   
+Weitere Informationen kann man unter folgendem [Link](https://msdn.microsoft.com/de-de/magazine/dn890374.aspx) nachlesen.  
+# Program  
+Am Ende der Einheit,bevor wir mit den Wahlen de Schulsprechers begannen, ladeten wir uns das Programm der Gruppe 3 vom Gitweb-Repository herunter und löschten alle Inhalte in der **main.ts** Datei.  
+[Link zum Gitweb- Repository](https://www.htl-mechatronik.at/gitweb/m14/?p=sx-la1.git;a=summary)
