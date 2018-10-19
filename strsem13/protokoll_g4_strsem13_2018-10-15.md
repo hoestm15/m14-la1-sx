@@ -60,11 +60,29 @@ Das HTTP-Protokoll sieht eine Vielzahl an verschiedenen Befehlen vor. Die wichti
 * PUT:     Daten auf den Server laden  
 * DELETE:  Datem vom Server löschen    
 
-### Statuscodes  
-Wenn vom Client eine Anfrage kommt muss der Server diese interpretieren und bearbeiten. Sowohl bei der Interpretation, als auch bei der Bearbeitung können Fehler auftreten. Um dem Client mitzuteilen, was vorgefallen ist bzw. was gerade passiert sieht HTTP verschiedene Statuscodes vor. Dreitstellige Nummern sieht HTTP zur Statusmeldung vor:
+## Praktische Übung
+Zuerst wollten wir Daten vom Server abrufen, dies geschiet mit dem GET-Befehl. Zuerst musss aber eine Verbindung zu dem Server aufgebaut werden, dies funktioniert mit dem Befehl:
+```nc www.htl-mechatronik.at 80```
+Danach haben wir eine HTTP Anfrage gesendet:  
+```GET / HTTP/1.1```  
+Der Server hat mit einem Bad Request geantwortet:  
+```
+HTTP/1.1 400 Bad Request
+Date: Fri, 19 Oct 2018 07:26:28 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Content-Length: 313
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
 
-* 1xx:	Die Abarbeitung der Anfrage dauert noch an.
-* 2xx:	Erfolgreich
-* 3xx:	Weitere Schritte des Clients notwendig
-* 4xx:	Clientseitiger Fehler, z. B. 403 für unberechtigter Zugriff oder 404 für ein Dokument das nicht existiert
-* 5xx	Serverseitiger Fehler
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at www.htl-mechatronik.at Port 80</address>
+</body></html>
+```` 
+
