@@ -61,7 +61,7 @@ Das HTTP-Protokoll sieht eine Vielzahl an verschiedenen Befehlen vor. Die wichti
 * DELETE:  Datem vom Server löschen    
 
 ## Praktische Übung
-Zuerst wollten wir Daten vom Server abrufen, dies geschiet mit dem GET-Befehl. Zuerst musss aber eine Verbindung zu dem Server aufgebaut werden, dies funktioniert mit dem Befehl:
+Zuerst wollten wir Daten vom Server abrufen, dies geschiet mit dem GET-Befehl. Zuerst musss aber eine Verbindung zu dem Server aufgebaut werden, dies funktioniert mit dem Befehl:  
 ```nc www.htl-mechatronik.at 80```  
 Danach haben wir eine HTTP Anfrage gesendet:    
 ```GET / HTTP/1.1```  
@@ -87,7 +87,7 @@ Content-Type: text/html; charset=iso-8859-1
 ```` 
 Um herauszufinden wieso der Server eine Fehlermeldung ausgegeben hat, haben wir einen Verbindung mit dem Local Host aufgebaut, und haben dann wieder eine HTTP-Anfrage gesendet. Um das auszuprobieren muss auf einem Browser ein Server erstellt werden, dazu muss man einen Browse starten, un den Folgenden URL eingeben:  
 ```http://localhost:4711/```  
-Danach kann man das folgende in die Linux Konle eingeben:  
+Danach kann man das folgende in die Linux Konsole eingeben:  
 ```
 nc -l 4711
 GET / HTTP/1.1
@@ -102,4 +102,39 @@ Accept-Encoding: gzip, deflate
 Connection: keep-alive
 Upgrade-Insecure-Requests: 1
 Cache-Control: max-age=0
+```
+Der Fehler in der Anfrage war, dass unsere Anfrage einen normalen line feed verwendete. Der Server hingegen erwartete eine Kombination aus line feed und carriage return. Diesen Fehler konnten wir beheben indem wir beim nc-Tool eine Option (-C) auswählten, die den line feed umwandelte, so dass der Server die Zeilenumbrüche erkannte.  
+Danach haben wir den nc-Befehl mit dem -C probiert:  
+```
+nc -C www.htl-mechatronik-at 80 
+GET / HTTP/1.1
+```  
+Danach kam die gewünschte Antwort vom Server:  
+``` 
+Date: Mon, 24 Sep 2018 07:43:03 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Last-Modified: Tue, 06 Jan 2015 08:13:36 GMT
+ETag: "1e9-50bf76235166b"
+Accept-Ranges: bytes
+Content-Length: 489
+Vary: Accept-Encoding
+Keep-Alive: timeout=10, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+
+<html>
+<head>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+<title>HTBLA Kaindorf Abteilung Mechatronik - Server Arnfels</title>
+<body LANG="de-DE" DIR="LTR">
+</head>
+<h1>HTBLA Kaindorf<h1>
+<h2> Abteilung Mechatronik - Server Arnfels</h2>
+<p>
+<!--
+<IMG SRC="gif/under_construction.gif" NAME="Grafik1" ALIGN=LEFT WIDTH=404 HEIGHT=312 BORDER=0><BR><BR>
+-->
+<a href="http://www.htl-kaindorf.at/mechatronik">http://www.htl-kaindorf.at/mechatronik</a>
+</p>
+</body></html>
 ```
