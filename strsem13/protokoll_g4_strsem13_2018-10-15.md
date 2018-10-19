@@ -141,7 +141,7 @@ Content-Type: text/html
 #### Installation Datein 
 Zum Schluss der Einheit haben wir den Code von Linux geupdatet.   
 
-[Link Code Update][https://code.visualstudio.com/docs/?dv=linux64_deb]  
+[Link Code Update](https://code.visualstudio.com/docs/?dv=linux64_deb)  
 
-Danach haben wir noch einen Ordner, vom Mechatronik Server heruntergeladen:  
-[Link Mechatronik Server][https://www.htl-mechatronik.at/gitweb/m14/?p=sx-la1.git;a=tree;f=5AHME/g3/rest-server1/src;h=7db76bd7654e762a352c2182386aa541feca6f97;hb=a4385316c2cee94cc5348ec8be6a3fb0022d5d41]
+Danach haben wir noch einen Ordner, vom Mechatronik Server heruntergeladen:    
+[Link Mechatronik Server](https://www.htl-mechatronik.at/gitweb/m14/?p=sx-la1.git;a=tree;f=5AHME/g3/rest-server1/src;h=7db76bd7654e762a352c2182386aa541feca6f97;hb=a4385316c2cee94cc5348ec8be6a3fb0022d5d41)
