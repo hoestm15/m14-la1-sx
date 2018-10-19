@@ -16,4 +16,61 @@ Ein REST-Server hat einige Prinzipien. Die wichtigsten sind :
 
 # HTTP Server/Client  
 HTTP steht für **H**yper**T**ext **T**ransfer **P**rotokoll. Die Übertragung zwischen Server und Client findet textuell statt und das Protokoll ist zustandslos. Das Protokoll überträgt Daten auf der Anwendungsschicht. Die Übertragung kan  man im folgenden Bild sehen.  
-![HTTP](https://github.com/HTLMechatronics/m14-la1-sx/blob/zitkam13/zitkam13/http.png)  
+![HTTP](https://github.com/HTLMechatronics/m14-la1-sx/blob/zitkam13/zitkam13/http.png)  7
+
+## Protokoll  
+Das Übertragungsprotokoll ist textuell aufgebaut und basiert auf einem Server-Client Prinzip. Der Client sendet daher eine Anfrage, den sogenannten Request, und der Server sendet danach eine Antwort, den sogenannten Rsponse. Für den Request vom Client gibt es einige Schlüsselwörter:  
+* **GET** -> Fordert Inhalte vom Server  
+* **POST** -> Mit diesem SChlüsselwort kann man Daten ändern  
+* **PUT** -> Neue Dateien können erstellt werden  
+* **DELETE** -> Löscht Inhalte  
+Mit einer Kosole kann man dieses Protokoll ausprobieren. Dafür benötigt man daś **nc** Tool. Wie eine solche Anfrage aussieht sieht man im follgenden Beispiel:  
+```   
+karlheinz@karlheinz-Aspire-E5-571G:~$ nc htl-mechatronik.at 80 -C
+GET /infotext.html HTTP/1.1
+Host: www.htl-mechatronik.at
+```  
+Bekommt ein Server eine Anfrage von einem Client schickt der Server eine Antwort zum Client zurück.   
+Ein Beispiel einer Antwort ist zum Beispiel:  
+
+```
+HTTP/1.1 200 OK
+Date: Mon, 15 Oct 2018 08:48:04 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Last-Modified: Tue, 06 Jan 2015 08:13:36 GMT
+ETag: "1e9-50bf76235166b"
+Accept-Ranges: bytes
+Content-Length: 489
+Vary: Accept-Encoding
+Keep-Alive: timeout=10, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+
+<html>
+<head>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf->
+<title>HTBLA Kaindorf Abteilung Mechatronik - Server Arnfels</title>
+<body LANG="de-DE" DIR="LTR">
+</head>
+<h1>HTBLA Kaindorf<h1>
+<h2> Abteilung Mechatronik - Server Arnfels</h2>
+<p>
+<!--
+<IMG SRC="gif/under_construction.gif" NAME="Grafik1" ALIGN=LEFT WIDTH=404 HEIGHT=312 BORDER=0><BR><BR>
+-->
+<a href="http://www.htl-kaindorf.at/mechatronik">http://www.htl-kaindorf.at/mechatronik</a>
+</p>
+</body></html>  
+```  
+### Statuscode  
+Der Response vom Server enthält immer einen der folgenden Statuscodes:  
+
+Statuscode | Bedeutung
+---------- | ---------
+1xx | Die Bearbeitung der Anfrage dauert noch an
+2xx | Erfolgreiche Operation
+3xx | Es sind noch weitere Schritte des Clients notwendig zur erfolgreichen Operation notwendig
+4xx | Fehler des Clients
+5xx | Fehler des Servers  
+Weitere Informationen kan man unter dem folgenden [Link](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
+ nachlesen. 
