@@ -62,8 +62,8 @@ Das HTTP-Protokoll sieht eine Vielzahl an verschiedenen Befehlen vor. Die wichti
 
 ## Praktische Übung
 Zuerst wollten wir Daten vom Server abrufen, dies geschiet mit dem GET-Befehl. Zuerst musss aber eine Verbindung zu dem Server aufgebaut werden, dies funktioniert mit dem Befehl:
-```nc www.htl-mechatronik.at 80```
-Danach haben wir eine HTTP Anfrage gesendet:  
+```nc www.htl-mechatronik.at 80```  
+Danach haben wir eine HTTP Anfrage gesendet:    
 ```GET / HTTP/1.1```  
 Der Server hat mit einem Bad Request geantwortet:  
 ```
@@ -85,4 +85,21 @@ Content-Type: text/html; charset=iso-8859-1
 <address>Apache/2.4.7 (Ubuntu) Server at www.htl-mechatronik.at Port 80</address>
 </body></html>
 ```` 
-
+Um herauszufinden wieso der Server eine Fehlermeldung ausgegeben hat, haben wir einen Verbindung mit dem Local Host aufgebaut, und haben dann wieder eine HTTP-Anfrage gesendet. Um das auszuprobieren muss auf einem Browser ein Server erstellt werden, dazu muss man einen Browse starten, un den Folgenden URL eingeben:  
+```http://localhost:4711/```  
+Danach kann man das folgende in die Linux Konle eingeben:  
+```
+nc -l 4711
+GET / HTTP/1.1
+```` 
+Anschließend hat der Server wie folgt geantwortet: 
+```
+Host: localhost:4711
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0
+```
