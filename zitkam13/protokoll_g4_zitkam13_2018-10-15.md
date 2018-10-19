@@ -71,6 +71,8 @@ Statuscode | Bedeutung
 2xx | Erfolgreiche Operation
 3xx | Es sind noch weitere Schritte des Clients notwendig zur erfolgreichen Operation notwendig
 4xx | Fehler des Clients
-5xx | Fehler des Servers  
-Weitere Informationen kan man unter dem folgenden [Link](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
- nachlesen. 
+5xx | Fehler des Servers    
+
+
+Weitere Informationen kan man unter dem folgenden [Link](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol) nachlesen. 
+## Typescript
