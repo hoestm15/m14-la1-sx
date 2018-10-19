@@ -138,6 +138,9 @@ Content-Type: text/html
 </p>
 </body></html>
 ```
+### Rest-Client
+Wir haben uns auch verschiedene Rest-Clients angeschaut und, über welche Funktionen diese Verfügen.
+
 #### Installation Datein 
 Zum Schluss der Einheit haben wir den Code von Linux geupdatet.   
 [Link Code Update](https://code.visualstudio.com/docs/?dv=linux64_deb)  
