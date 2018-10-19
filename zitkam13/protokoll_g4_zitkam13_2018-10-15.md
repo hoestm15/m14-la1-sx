@@ -14,3 +14,6 @@ Ein REST-Server hat einige Prinzipien. Die wichtigsten sind :
 * Client/Server  
 * Einheitliche Schnittstelle  
 
+# HTTP Server/Client  
+HTTP steht für **H**yper**T**ext **T**ransfer **P**rotokoll. Die Übertragung zwischen Server und Client findet textuell statt und das Protokoll ist zustandslos. Das Protokoll überträgt Daten auf der Anwendungsschicht. Die Übertragung kan  man im folgenden Bild sehen.  
+![HTTP](https://github.com/HTLMechatronics/m14-la1-sx/blob/zitkam13/zitkam13/http.png)  
