@@ -1,1 +1,15 @@
 
+# 1.Protokoll: REST-Server
+Name: Strauß Lukas 
+Klasse: 5AHME  
+Gruppe: 4  
+Anwesend: Strauß,Strutz,Tuttner,Uhl,Waltl,Wieser,Zitz
+Abwesend: niemand
+
+# Wir wird in der Automatisierungstechnik kommuniziert ?
+
+Will man Daten von einem Feldgerät oder einer SPS über eine weitere Entfernung übertragen, geschah das meißt mit einem
+Feldbus(Modbus,Kenbus) und einem Netzwerk oder mit einer seriellen Schnittstelle. Das bringt aber einige Probleme,
+wie zb. die Notwendigkeit von zusätzlicher Hardware mitsich.Die Grafik soll zeigen,wie dieser Vorgang aussieht. 
+
+
