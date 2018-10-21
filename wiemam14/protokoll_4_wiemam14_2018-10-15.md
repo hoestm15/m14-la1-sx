@@ -53,8 +53,8 @@
   
   -> Hypermedia as the Engine of Application State
   
-  * Mehrschichtige Systeme:
-  * Code on Demand:
+  * Mehrschichtige Systeme: Durch diese System wird die Architektur vereinfacht.
+  * Code on Demand: Diese Forderung von Fielding ist optional. Unter Code on Demand ist zu verstehen, dass erst im Bedarfsfall an den Client Code zur lokalen Ausführung übertragen werden kann.
   
   
   
