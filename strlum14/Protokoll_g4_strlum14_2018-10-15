@@ -103,8 +103,12 @@ Content-Type: text/html; charset=iso-8859-1
 <address>Apache/2.4.7 (Ubuntu) Server at www.htl-mechatronik.at Port 80</address>
 </body></html>
 
+Hier wird versucht, mit dem nc-Tool eine Verbindung zu unserem Mechatronik Server aufzubauen. Wie man unschwer 
+erkennen kann, ist die Anfrage fehlerhaft. Nun muss eine Verbindung zum Local-Host aufgebaut werden, um herauszufinden,
+wie eine korrekte Anfrage aussieht. Das funktioniert mit nc -l 4711 ! 
 
-Richtiger Ablauf:
+
+So würde nun ein korrekter Ablauf aussehen --> 
 
 ```   
 luki@luki-htl-vm:~$ nc htl-mechatronik.at 80 -C
@@ -144,7 +148,14 @@ Content-Type: text/html
 </body></html>  
 ```  
 
+Keep alive: 
 
+Besteht eine Verbindung zwischen Server und dem Client , werden nicht dauerhaft Pakete übertragen.
+
+Um zu verhindern, dass der Server die Verbindung aufgrund einer Überschreitung der Zwit abbricht kann
+der Client sogennante Keep-Alive-Pakete schicken um dem Server damit mitzuteilen, dass er immernoch "lebt" und die
+Verbindung aufrecht erhalten will. Typische Zeiten für eine Überschreitung sind, je nach Server, zwischen 30 und 120 Sekunden.
+Nach dieser Zeit ohne empfangene/gesendete Pakete bricht der Server die Verbindung ab.
 
 
 
