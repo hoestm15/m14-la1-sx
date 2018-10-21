@@ -106,7 +106,43 @@ Content-Type: text/html; charset=iso-8859-1
 
 Richtiger Ablauf:
 
+```   
+luki@luki-htl-vm:~$ nc htl-mechatronik.at 80 -C
+GET /infotext.html HTTP/1.1
+Host: www.htl-mechatronik.at
+```  
+Bekommt ein Server eine Anfrage von einem Client schickt der Server eine Antwort zum Client zurück.   
+Ein Beispiel einer Antwort ist zum Beispiel:  
 
+```
+HTTP/1.1 200 OK
+Date: Sun, 21 Oct 2018 12:08:05 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Last-Modified: Tue, 06 Jan 2015 08:13:36 GMT
+ETag: "1e9-50bf76235166b"
+Accept-Ranges: bytes
+Content-Length: 489
+Vary: Accept-Encoding
+Keep-Alive: timeout=10, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+
+<html>
+<head>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf->
+<title>HTBLA Kaindorf Abteilung Mechatronik - Server Arnfels</title>
+<body LANG="de-DE" DIR="LTR">
+</head>
+<h1>HTBLA Kaindorf<h1>
+<h2> Abteilung Mechatronik - Server Arnfels</h2>
+<p>
+<!--
+<IMG SRC="gif/under_construction.gif" NAME="Grafik1" ALIGN=LEFT WIDTH=404 HEIGHT=312 BORDER=0><BR><BR>
+-->
+<a href="http://www.htl-kaindorf.at/mechatronik">http://www.htl-kaindorf.at/mechatronik</a>
+</p>
+</body></html>  
+```  
 
 
 
