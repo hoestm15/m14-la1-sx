@@ -1,4 +1,4 @@
-# *1. Labororotokoll*
+# *1. Laborprotokoll*
 
   Name: Markus Wieser   
   Klasse: 5AHME   
@@ -41,9 +41,18 @@
   Der Begriff Rest-Server steht für Representational State Transfer. Ein Rest-Server wird häufig zur Abfrage von Zuständen verwendet. Diese Abfragen erfolgen meist über HTTP und sind zudem zustandslos. Ein REST-Server hat 6 bestimmte Eigenschaften:
   
   * Zustandslos:  Jede REST-Nachricht enthält alle Informationen, die für den Server bzw. Client notwendig sind, um die Nachricht zu verstehen. Weder der Server noch die Anwendung soll Zustandsinformationen zwischen zwei Nachrichten speichern. 
-  * Client/Server Prinzip:
-  * Caching:
-  * Einheitliche Schnittstelle:
+  * Client/Server Prinzip:  Grundsätzlich gilt die Client-Server-Architektur
+  * Caching:  Hiermit werden bestimmte Ressourcen gespeichert und unnötige Datenübertragungen vermieden.
+  * Einheitliche Schnittstelle: Dies ist ein Hautpunterscheidungsmerkmal. Sie besteht aus vier Eigenschaften:
+  
+  -> Adressierbarkeit von Ressourcen
+  
+  -> Repräsentationen zur Veränderung von Ressourcen
+  
+  -> Selbstbeschreibende Nachrichten
+  
+  -> Hypermedia as the Engine of Application State
+  
   * Mehrschichtige Systeme:
   * Code on Demand:
   
