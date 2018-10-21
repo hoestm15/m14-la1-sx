@@ -136,6 +136,7 @@ Content-Type: text/html
 </body></html>
 ````
   
+  Am Ende der Einheit haben wir uns noch das Programm der letzten Gruppe heruntergeladen und alles aus der main.ts gelöscht.
   
   
   
