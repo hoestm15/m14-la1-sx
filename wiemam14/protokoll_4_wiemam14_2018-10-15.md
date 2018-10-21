@@ -23,4 +23,10 @@
   
   ![HTTP(s) Datenaustausch](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/requestResponse.png)
   
+  ### Schlüsselwörter für den Request
   
+* **GET**     -> Inhalte vom Server ansehen
+* **POST**    -> Inhalte ändern
+* **DELETE**  -> Inhalte löschen
+* **PUT**     -> Neue Inhalte anlegen
+
