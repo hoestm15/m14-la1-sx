@@ -13,12 +13,14 @@ Will man Daten von einem Feldgerät oder einer SPS über eine weitere Entfernung
 Feldbus(Modbus,Kenbus) und einem Netzwerk oder mit einer seriellen Schnittstelle. Das bringt aber einige Probleme,
 wie zb. die Notwendigkeit von zusätzlicher Hardware mitsich. Die Grafik soll zeigen,wie dieser Vorgang aussieht.
 
-
+[veraltete Übertragung](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum14/strlum14/Daten%C3%BCbertragung.svg)
 
  Besser funktioniert es wenn man direkt über das Netzwerk arbeitet. Dass funktioniert über HTTP-Server und HTTP-Client.
  Die meisten werden das HTTP Protokoll vom WWW kennen. Es wird dort verwendet, trotzdem funktioniert es auch, wenn es nicht
   im Zusammenhang mit dem WWW ist. Es ist ein Übertragungsprotokoll, dazu aber weiter unten mehr! Man muss dazu sagen, dass
   Geräte im freien Internet zu verwenden, auch ein Sicherheitsrisiko darstellt.
+  
+[HTTP-Übertragung](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum14/strlum14/Daten%C3%BCbertragungHTTP.svg)
   
   
 #REST-Server     
@@ -62,6 +64,8 @@ Die wichtigsten Prinzipien sind: --> Zustandslos
  beiden Fällen Textnachrichten , wobei beim Response die Textnachrichten auch in komprimierter Form gesendet bzw. empfangen 
  werden können. Grundsätzlich funktioniert der Vorgang auch wenn Server und Client vertauscht sind, das ist in der Praxis
  allerdings selten bis nie der Fall. 
+ 
+ [REST-Server](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum14/strlum14/Restserver.svg)
  
  Für den Request stehen folgende Schlüsselwörter zur Verfügung:
 
