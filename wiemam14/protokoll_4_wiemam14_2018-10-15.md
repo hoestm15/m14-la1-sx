@@ -70,7 +70,7 @@
   
   Für den Serveraufbau verwendeten wir diesen Befehl:
   
-  ` nc -C htl-mechatronik.at 80 `
+  ` nc www.htl-mechatronik.at 80 `
   
   Mithilfe von GET wird die Anfrage gesendet:
   
@@ -97,6 +97,13 @@ Content-Type: text/html; charset=iso-8859-1
 <address>Apache/2.4.7 (Ubuntu) Server at www.htl-mechatronik.at Port 80</address>
 </body></html>
 ```` 
+  
+  Der Bad-Request entstand dadurch, dass wir einen falschen Zeilenumbruch (line feed) verwendet haben. Der Fehler wurde einfach behoben, indem wir dem nc-Tool -C hinzufügten. Hiermit kann der Server auch die Zeilenumbrüche richtig erkennen.
+  
+  `
+  nc -C www.htl-mechatronik-at 80 
+  GET / HTTP/1.1
+  `
   
   
   
