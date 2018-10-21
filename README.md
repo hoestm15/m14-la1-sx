@@ -26,6 +26,6 @@ Protokoll
 [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/uhlchm14/uhlchm14/uhlchm14_kw02.md)
 
 
-# Labor 4AHME
+# Labor 5AHME
 
 ## Einheit 1, 15.10.2018
