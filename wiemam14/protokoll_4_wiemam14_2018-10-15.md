@@ -40,7 +40,7 @@
   
   Der Begriff Rest-Server steht für Representational State Transfer. Ein Rest-Server wird häufig zur Abfrage von Zuständen verwendet. Diese Abfragen erfolgen meist über HTTP und sind zudem zustandslos. Ein REST-Server hat 6 bestimmte Eigenschaften:
   
-  * Zustandslos:
+  * Zustandslos:  Jede REST-Nachricht enthält alle Informationen, die für den Server bzw. Client notwendig sind, um die Nachricht zu verstehen. Weder der Server noch die Anwendung soll Zustandsinformationen zwischen zwei Nachrichten speichern. 
   * Client/Server Prinzip:
   * Caching:
   * Einheitliche Schnittstelle:
