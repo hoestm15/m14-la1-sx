@@ -60,5 +60,10 @@
   
   Das Transmission Control Protocol/Internet Protocol ist eine Familie von Netzwerkprotokollen. Die Identifizierung der Rechner geschieht über die IP-Adresse. Für TCP/IP gibt es verschiedene Hilfs- und Anwendungsprotokolle, wie zum Beispiel DHCP.
   
+  Beim Verbindungsaufbau sendet der Client dem Server ein SYN-Paket. Ist der Port geöffnet, wird ein SYN/ACK Paket zurückgesendet. Kommt auch dieses Paket vom Server beim Client an, sendet der Client ein ACK-Paket um einen erfolgreichen Verbindungsaufbau zu signalisieren. Um eine Verbindung zu trennen, muss ein FIN-Paket gesendet werden.
+  
+  ![Verbindungsaufbau](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/Verbindungsaufbau.png)
+  
+  
   
   
