@@ -30,7 +30,7 @@
 * **DELETE**  -> Inhalte löschen
 * **PUT**     -> Neue Inhalte anlegen
 
-  ### Aufbau eines Pakets
+ ### Aufbau eines Pakets
   
   Hier sieht man, dass ein HTTP Paket immer in Header und Body aufgeteilt sind. Im Header sind Informationen über das Protokoll (die verwendete Version), über den Client und über den Server. Im Body sind die Daten enthalten.
   
