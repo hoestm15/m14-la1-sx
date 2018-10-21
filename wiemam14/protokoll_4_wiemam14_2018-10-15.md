@@ -36,5 +36,7 @@
   
   ![Paketaufbau](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/paketaufbau.jpg)
   
+  ## REST-Server
   
+  Der Begriff Rest-Server steht für Representational State Transfer. Ein Rest-Server wird häufig zur Abfrage von Zuständen verwendet. Diese Abfragen erfolgen meist über HTTP und sind zudem zustandslos. 
   
