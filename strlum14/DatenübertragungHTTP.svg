@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="190mm"
+   height="50mm"
+   viewBox="0 0 190 50"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="Übertragung_http.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="255.65913"
+     inkscape:cy="53.8849"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-247)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.36500001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect815"
+       width="28.348213"
+       height="24.568453"
+       x="11.015986"
+       y="259.38644" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.36500001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect819"
+       width="33.141422"
+       height="24.856066"
+       x="144.91246"
+       y="254.87656" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.49325073;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect821"
+       width="40.763985"
+       height="6.5534887"
+       x="141.20834"
+       y="281.32013" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Semi-Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="158.32736"
+       y="269.32809"
+       id="text825"><tspan
+         sodipodi:role="line"
+         id="tspan823"
+         x="158.32736"
+         y="269.32809"
+         style="stroke-width:0.26458332">PC</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Semi-Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="20.375031"
+       y="273.44785"
+       id="text829"><tspan
+         sodipodi:role="line"
+         id="tspan827"
+         x="20.375031"
+         y="273.44785"
+         style="stroke-width:0.26458332">SPS</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.16224015;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 39.660037,272.6156 144.0636,272.99357"
+       id="path855"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g841"
+       transform="matrix(0.08112986,0,0,0.06795777,66.220973,256.96717)">
+      <title
+         id="title837">Layer 1</title>
+      <g
+         id="layer1-3">
+        <path
+           d="M 426.77982,49.792053 C 390.7916,41.366752 354.3718,51.00869 329.22934,71.955169 316.09348,58.159843 298.30676,47.512664 276.97232,42.518363 222.06593,29.664401 165.50259,58.197009 150.79041,106.16969 c -1.0811,3.52503 -1.36574,7.06985 -1.94553,10.59548 -49.445862,-4.49083 -96.757774,22.55453 -110.03146,65.83718 -13.152391,42.88662 11.666843,86.73957 56.27544,104.77021 -2.424828,4.59417 -4.685715,9.32715 -6.234657,14.37723 -14.711983,47.97268 17.977347,97.2868 72.883847,110.14074 26.89333,6.29694 54.07129,2.59943 76.63219,-8.37646 12.43397,23.24099 35.61642,41.94644 66.17673,49.10043 43.6029,10.20819 87.84887,-5.9624 111.7363,-36.95612 9.6762,5.98505 20.4317,10.9358 32.54715,13.77268 54.9064,12.85391 111.34805,-15.70767 126.06033,-63.68036 7.39807,-24.12311 2.82037,-48.5354 -10.53443,-68.54285 13.21692,-11.01129 23.56244,-24.95938 28.63141,-41.4882 14.71216,-47.97327 -17.97723,-97.28739 -72.8836,-110.14137 -5.77991,-1.35253 -11.56958,-2.11446 -17.33426,-2.57674 3.41662,-42.12756 -27.57224,-81.874149 -75.99005,-93.209487 z"
+           id="path4952"
+           stroke-miterlimit="4"
+           inkscape:connector-curvature="0"
+           style="fill:#ffffff;stroke:#000000;stroke-width:14.79046059;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Semi-Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="79.996628"
+       y="272.04861"
+       id="text859"><tspan
+         sodipodi:role="line"
+         id="tspan857"
+         x="79.996628"
+         y="272.04861"
+         style="stroke-width:0.26458332">Netzwerk</tspan><tspan
+         sodipodi:role="line"
+         x="79.996628"
+         y="279.10416"
+         style="stroke-width:0.26458332"
+         id="tspan863">über HTTP</tspan></text>
+  </g>
+</svg>
