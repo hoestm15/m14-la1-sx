@@ -38,5 +38,14 @@
   
   ## REST-Server
   
-  Der Begriff Rest-Server steht für Representational State Transfer. Ein Rest-Server wird häufig zur Abfrage von Zuständen verwendet. Diese Abfragen erfolgen meist über HTTP und sind zudem zustandslos. 
+  Der Begriff Rest-Server steht für Representational State Transfer. Ein Rest-Server wird häufig zur Abfrage von Zuständen verwendet. Diese Abfragen erfolgen meist über HTTP und sind zudem zustandslos. Ein REST-Server hat 6 bestimmte Eigenschaften:
+  
+  * Zustandslos:
+  * Client/Server Prinzip:
+  * Caching:
+  * Einheitliche Schnittstelle:
+  * Mehrschichtige Systeme:
+  * Code on Demand:
+  
+  
   
