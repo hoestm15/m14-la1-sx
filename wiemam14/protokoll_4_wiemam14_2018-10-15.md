@@ -80,7 +80,7 @@
   
   ```
 HTTP/1.1 400 Bad Request
-Date: Mon, 15 Oct 2018 09:32:47 GMIT
+Date: , 15 Oct 2018 09:32:47 GMIT
 Server: Apache/2.4.7 (Ubuntu)
 Content-Length: 313
 Connection: close
@@ -104,6 +104,37 @@ Content-Type: text/html; charset=iso-8859-1
   nc -C www.htl-mechatronik-at 80 
   GET / HTTP/1.1
   `
+  
+  Mit diesem Befehl kam dann die erwartete Antwort:
+  
+```
+Date: Mon, 15 Sep 2018 09:38:12 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Last-Modified: Tue, 06 Jan 2015 08:13:36 GMT
+ETag: "1e9-50bf76235166b"
+Accept-Ranges: bytes
+Content-Length: 489
+Vary: Accept-Encoding
+Keep-Alive: timeout=10, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+
+<html>
+<head>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+<title>HTBLA Kaindorf Abteilung Mechatronik - Server Arnfels</title>
+<body LANG="de-DE" DIR="LTR">
+</head>
+<h1>HTBLA Kaindorf<h1>
+<h2> Abteilung Mechatronik - Server Arnfels</h2>
+<p>
+<!--
+<IMG SRC="gif/under_construction.gif" NAME="Grafik1" ALIGN=LEFT WIDTH=404 HEIGHT=312 BORDER=0><BR><BR>
+-->
+<a href="http://www.htl-kaindorf.at/mechatronik">http://www.htl-kaindorf.at/mechatronik</a>
+</p>
+</body></html>
+````
   
   
   
