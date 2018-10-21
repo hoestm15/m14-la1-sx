@@ -16,7 +16,6 @@ wie zb. die Notwendigkeit von zusätzlicher Hardware mitsich. Die Grafik soll ze
 
 
 
-
  Besser funktioniert es wenn man direkt über das Netzwerk arbeitet. Dass funktioniert über HTTP-Server und HTTP-Client.
  Die meisten werden das HTTP Protokoll vom WWW kennen. Es wird dort verwendet, trotzdem funktioniert es auch, wenn es nicht
   im Zusammenhang mit dem WWW ist. Es ist ein Übertragungsprotokoll, dazu aber weiter unten mehr! Man muss dazu sagen, dass
