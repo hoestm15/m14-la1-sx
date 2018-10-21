@@ -56,5 +56,9 @@
   * Mehrschichtige Systeme: Durch diese System wird die Architektur vereinfacht.
   * Code on Demand: Diese Forderung von Fielding ist optional. Unter Code on Demand ist zu verstehen, dass erst im Bedarfsfall an den Client Code zur lokalen Ausführung übertragen werden kann.
   
+  ## TCP/IP
+  
+  Das Transmission Control Protocol/Internet Protocol ist eine Familie von Netzwerkprotokollen. Die Identifizierung der Rechner geschieht über die IP-Adresse. Für TCP/IP gibt es verschiedene Hilfs- und Anwendungsprotokolle, wie zum Beispiel DHCP.
+  
   
   
