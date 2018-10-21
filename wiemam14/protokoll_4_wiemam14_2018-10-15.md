@@ -64,6 +64,40 @@
   
   ![Verbindungsaufbau](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/Verbindungsaufbau.png)
   
+  ## Übung
+  
+  Zu Beginn versuchten wir mit einem Server eine Verbindung aufzubauen. Dies kann einfach über die Konsole erfolgen.
+  
+  Für den Serveraufbau verwendeten wir diesen Befehl:
+  
+  ` nc -C htl-mechatronik.at 80 `
+  
+  Mithilfe von GET wird die Anfrage gesendet:
+  
+  ` GET / HTTP/1.1 `
+  
+  Darauf erfolgte ein Bad Request:
+  
+  ```
+HTTP/1.1 400 Bad Request
+Date: Mon, 15 Oct 2018 09:32:47 GMIT
+Server: Apache/2.4.7 (Ubuntu)
+Content-Length: 313
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at www.htl-mechatronik.at Port 80</address>
+</body></html>
+```` 
+  
   
   
   
