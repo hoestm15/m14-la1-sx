@@ -1,6 +1,5 @@
 
-
-# Protokoll 1: REST-Server  
+#Protokoll: REST Server 
 Name: Strauß Lukas 
 Klasse: 5AHME  
 Gruppe: 4  
@@ -22,7 +21,7 @@ wie zb. die Notwendigkeit von zusätzlicher Hardware mitsich. Die Grafik soll ze
   Geräte im freien Internet zu verwenden, auch ein Sicherheitsrisiko darstellt.
   
   
-#REST-Server 
+#REST-Server     
 
 REST steht für Represential State Transfer und wird in den meisten Fällen für die Maschine zu Maschine Kommunikation in Web-
 Services verwendet, mit dem Ziel , einen Architekturstil zu schaffen, das die Anforderungen eines modernen Web besser darstellt.
@@ -83,6 +82,33 @@ Diese Daten nennt man Nutzdaten.
   
 
 #Übung am Computer 
+
+luki@luki-htl-vm:~$ nc htl-mechatronik.at 80 -C
+
+HTTP/1.1 400 Bad Request
+Date: Sun, 21 Oct 2018 09:48:34 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Content-Length: 313
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at www.htl-mechatronik.at Port 80</address>
+</body></html>
+
+
+Richtiger Ablauf:
+
+
+
+
 
 
 
