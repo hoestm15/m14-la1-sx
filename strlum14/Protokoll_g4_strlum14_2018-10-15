@@ -1,5 +1,5 @@
 
-#Protokoll: REST Server 
+#Protokoll: REST-Server
 Name: Strauß Lukas 
 Klasse: 5AHME  
 Gruppe: 4  
@@ -82,7 +82,7 @@ Diese Daten nennt man Nutzdaten.
   
 
 #Übung am Computer 
-
+```
 luki@luki-htl-vm:~$ nc htl-mechatronik.at 80 -C
 
 HTTP/1.1 400 Bad Request
@@ -102,7 +102,7 @@ Content-Type: text/html; charset=iso-8859-1
 <hr>
 <address>Apache/2.4.7 (Ubuntu) Server at www.htl-mechatronik.at Port 80</address>
 </body></html>
-
+```
 Hier wird versucht, mit dem nc-Tool eine Verbindung zu unserem Mechatronik Server aufzubauen. Wie man unschwer 
 erkennen kann, ist die Anfrage fehlerhaft. Nun muss eine Verbindung zum Local-Host aufgebaut werden, um herauszufinden,
 wie eine korrekte Anfrage aussieht. Das funktioniert mit nc -l 4711 ! 
@@ -148,7 +148,7 @@ Content-Type: text/html
 </body></html>  
 ```  
 
-Keep alive: 
+##Keep alive: 
 
 Besteht eine Verbindung zwischen Server und dem Client , werden nicht dauerhaft Pakete übertragen.
 
