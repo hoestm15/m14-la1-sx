@@ -16,4 +16,5 @@ Zuerst haben wir durchbesprochen welche Datein wir in der letzten Einheit von de
   * keybindings.json: In dieser Datei befinden sich verschiedene Tastenkombinationen, für die Entwicklungsumgebung.  
   * launch.json: Hier wird fest gelegt wie ein Programm gestartet wird.  
   * settings.json: In der Settings Datei befinden sich Projektspezifische Einstellungen.   
-  * tasks.json: 
+  * tasks.json: In der Tasks.json Datei stehen bestimmte Aufgaben für Programme (clean, build ..)  
+  
