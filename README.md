@@ -24,4 +24,4 @@ Gefehlt
 # Labor 5AHME
   
 ## 1.Einheit, 15.10.2018
-Link zur [1.Einheit][https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/protokoll_g4_strsem13_2018-10-15.md]
+Link zur [1.Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/protokoll_g4_strsem13_2018-10-15.md)
