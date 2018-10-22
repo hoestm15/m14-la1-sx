@@ -23,7 +23,7 @@ wie zb. die Notwendigkeit von zusätzlicher Hardware mitsich. Die Grafik soll ze
 [HTTP-Übertragung](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum14/strlum14/Daten%C3%BCbertragungHTTP.svg)
   
   
-#REST-Server     
+# REST-Server     
 
 REST steht für Represential State Transfer und wird in den meisten Fällen für die Maschine zu Maschine Kommunikation in Web-
 Services verwendet, mit dem Ziel , einen Architekturstil zu schaffen, das die Anforderungen eines modernen Web besser darstellt.
@@ -50,7 +50,7 @@ Die wichtigsten Prinzipien sind: --> Zustandslos
  Eigenschaften. Ziel ist die Einheitlichkeit der Schnittstelle und somit ihre einfache Nutzung.
  
  
- #HTTP
+ # HTTP
  
  Der Name HTTP steht für HyperText Transfer Protokoll. HTTP ist ein Protkoll zur Übertragung von Daten auf der
  Anwendungsschicht (Application Layer). Das Protkoll ist zustandslos, dass bedeutet das Informationen aus früheren
@@ -69,10 +69,10 @@ Die wichtigsten Prinzipien sind: --> Zustandslos
  
  Für den Request stehen folgende Schlüsselwörter zur Verfügung:
 
-* **GET**     -> Inhalte vom Server fordern
-* **POST**    -> Übermitteln von Inhalten
-* **PUT**     -> Erstellen von neuen Inhalten auf dem Server
-* **DELETE**  -> Löschen von Inhalten
+* **GET**     -> Inhalte werden vom Server angefordert
+* **POST**    -> Inhalte werden übermittelt
+* **PUT**     -> Inhalte werden am neuen Server gespeichert
+* **DELETE**  -> Inhalte werden gelöscht
 
 Das für uns wichtigste Schlüsselwort ist am Anfang **GET** !
 
@@ -85,7 +85,7 @@ Im Body befinden sich die eigentlichen Daten, also die Daten die auch übertrage
 Diese Daten nennt man Nutzdaten. 
   
 
-#Übung am Computer 
+# Übung am Computer 
 ```
 luki@luki-htl-vm:~$ nc htl-mechatronik.at 80 -C
 
@@ -112,7 +112,7 @@ erkennen kann, ist die Anfrage fehlerhaft. Nun muss eine Verbindung zum Local-Ho
 wie eine korrekte Anfrage aussieht. Das funktioniert mit nc -l 4711 ! 
 
 
-So würde nun ein korrekter Ablauf aussehen --> 
+ So würde nun ein korrekter Ablauf aussehen --> 
 
 ```   
 luki@luki-htl-vm:~$ nc htl-mechatronik.at 80 -C
