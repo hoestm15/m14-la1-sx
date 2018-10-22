@@ -19,3 +19,4 @@ Krank
 # Labor 5AHME  
 ## Einheit 1: 15.10.2018 
 [protokoll_g4_zitkam13_2018-10-15](https://github.com/HTLMechatronics/m14-la1-sx/blob/zitkam13/zitkam13/protokoll_g4_zitkam13_2018-10-15.md)
+# Einheit 2: 22.10.1018  
