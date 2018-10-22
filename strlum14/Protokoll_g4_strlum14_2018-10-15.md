@@ -152,7 +152,7 @@ Content-Type: text/html
 </body></html>  
 ```  
 
-##Keep alive: 
+## Keep alive: 
 
 Besteht eine Verbindung zwischen Server und dem Client , werden nicht dauerhaft Pakete übertragen.
 
