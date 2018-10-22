@@ -1,10 +1,10 @@
 
 # Protokoll: REST-Server
-Name: Strauß Lukas 
-Klasse: 5AHME  
-Gruppe: 4  
-Anwesend: Strauß,Strutz,Tuttner,Uhl,Waltl,Wieser,Zitz
-Abwesend: niemand
+Name: Strauß Lukas   
+Klasse: 5AHME    
+Gruppe: 4    
+Anwesend: Strauß,Strutz,Tuttner,Uhl,Waltl,Wieser,Zitz  
+Abwesend: niemand  
 
   
 # Wie wird in der Automatisierungstechnik kommuniziert ?  
