@@ -9,5 +9,11 @@ Anwesend: Strauß, Strutz, Tuttner, Uhl, Wieser, Zitz
 Abwesend: Waltl  
 
 # Thema: Typescript Server mit Visual Studio Code  
-Zuerst haben wir durchbesprochen welche Datein wir in der letzten Einheit von dem [Mechatronik Server](https://www.htl-mechatronik.at/gitweb/m14/?p=sx-la1.git;a=tree;f=5AHME/g3/rest-server1/src;h=7db76bd7654e762a352c2182386aa541feca6f97;hb=a4385316c2cee94cc5348ec8be6a3fb0022d5d41) gedwonloadet haben:  
-* 
+Zuerst haben wir durchbesprochen welche Datein wir in der letzten Einheit von dem [Mechatronik Server](https://www.htl-mechatronik.at/gitweb/m14/?p=sx-la1.git;a=tree;f=5AHME/g3/rest-server1/src;h=7db76bd7654e762a352c2182386aa541feca6f97;hb=a4385316c2cee94cc5348ec8be6a3fb0022d5d41) gedownloadet haben:  
+* src      -> In dem Ordner stehen die typescript-Datein    
+* .vscode/ -> Is diesem Ordner befinden sich 4 Konfiguration-Datein:  
+  Der Vorteil an Json Dateien ist das sie Textuell sind, und somit einfach zu lesen sind.  
+  * keybindings.json: In dieser Datei befinden sich verschiedene Tastenkombinationen, für die Entwicklungsumgebung.  
+  * launch.json: Hier wird fest gelegt wie ein Programm gestartet wird.  
+  * settings.json: In der Settings Datei befinden sich Projektspezifische Einstellungen.   
+  * tasks.json: 
