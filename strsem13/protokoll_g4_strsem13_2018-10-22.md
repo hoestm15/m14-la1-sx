@@ -24,6 +24,14 @@ Zuerst haben wir durchbesprochen welche Datein wir in der letzten Einheit von de
     
 * package-lock.json -> In dieser Datei befinden sich die verschiedene Versionen.  
 
-* gulpfile.json     -> Gulp ist das Übersetzungstool für Typescript. In der Guplfile steht die Stuerung der Übersetzung. Andere Übersetzungstools: make (C), ant (Netbeans), gradle (Android studio)
+* gulpfile.json     -> Gulp ist das Übersetzungstool für Typescript. In der Guplfile steht die Stuerung der Übersetzung. Andere Übersetzungstools: make (C), ant (Netbeans), gradle (Android studio)  
+
+* tsconfig.json     -> In dieser Jason Datei befindet sich die Konfiguration für den Transpiler. Der Transpiler wandelt das Programm von Typescript in Javascript um.  
+
+* tslint.json       -> Der tslint ist für die Überprüfung für das Designe verantwortlich, in der Datei befindet sich die Designevorlage.  
+
+
+
+
 
 
