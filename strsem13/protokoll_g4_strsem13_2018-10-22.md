@@ -9,6 +9,8 @@ Anwesend: Strauß, Strutz, Tuttner, Uhl, Wieser, Zitz
 Abwesend: Waltl  
 
 # Thema: Typescript Server mit Visual Studio Code  
+
+## Theorie
 Zuerst haben wir durchbesprochen welche Datein wir in der letzten Einheit von dem [Mechatronik Server](https://www.htl-mechatronik.at/gitweb/m14/?p=sx-la1.git;a=tree;f=5AHME/g3/rest-server1/src;h=7db76bd7654e762a352c2182386aa541feca6f97;hb=a4385316c2cee94cc5348ec8be6a3fb0022d5d41) gedownloadet haben:  
 * src               -> In dem Ordner stehen die typescript-Datein    
 * .vscode/          -> Is diesem Ordner befinden sich 4 Konfiguration-Datein:  
@@ -29,3 +31,7 @@ Zuerst haben wir durchbesprochen welche Datein wir in der letzten Einheit von de
 * tsconfig.json     -> In dieser Jason Datei befindet sich die Konfiguration für den Transpiler. Der Transpiler wandelt das Programm von Typescript in Javascript um.  
 
 * tslint.json       -> Der tslint ist für die Überprüfung für das Design verantwortlich, in der Datei befindet sich die Designkonfiguration.  
+
+## Visual Studio
+Um Visual Studio zu öffnen, muss man nur in seinem Projektverzeichnis sein, und dann den Befehl ``` code .```eingeben. Entwicklerumgebung:  
+![Visual Studio]()
