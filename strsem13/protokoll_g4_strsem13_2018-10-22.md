@@ -43,5 +43,7 @@ Die klassische Menüleiste wird standartgemäß ausgeblendet. Stattdessen, hat m
 
 ### Programmstart
 
+Um Visual Studio zu öffnen gibt es 2 Möglichkeiten:  
+* Entweder man startet die IDE über den File Explorer, danach muss man jedoch erst das gewünschte Projektverzeichnis öffnen.  
+* Die 2 einfachere Möglichkeit wäre, man muss im Terminal sich in das gewünschte Verzeichnis navigieren (```cd Schreibtisch/Labor/rest-server1/```) und danach muss man nurmehr den Befehl: ```code .``` eingeben, und VS Code öffnet sich automatisch im gewünschten Projektverzeichnis.  
 
-Um Visual Studio zu öffnen, muss man nur in seinem Projektverzeichnis sein, und dann den Befehl ``` code .```eingeben. Entwicklerumgebung: 
