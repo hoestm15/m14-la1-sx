@@ -49,18 +49,19 @@ Um Visual Studio zu öffnen gibt es 2 Möglichkeiten:
 
 ### Konfiguration
 
-Die Konfiguration der IDE erfolgt im Wesentlichen über zwei Json Datein: 
+Die Konfiguration der IDE erfolgt im Wesentlichen über eine Json Datein: 
 * .vscode/settings.json   
 In dieser Datei können diverse Einstellungen geänderet werden, z.B: das Ausblenden von Datein und Ordnern in der IDE.  
 
-```{
+```
+{
   "files.exclude":
       {
         "**/code_modules/": true,
         "**/.vscode/": true,
         "**/package-lock.json/": true
        }
-    }
+ }
  ```  
- * tsconfig.json
-    
+
+ 
