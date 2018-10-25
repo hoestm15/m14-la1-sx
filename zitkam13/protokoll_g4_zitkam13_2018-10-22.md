@@ -1,2 +1,2 @@
 **Anwesend**: Strauß,Strutz, Tuttner, Uhl, Wieser, Zitz
-**Abwesend: Waltl
+**Abwesend**: Waltl
