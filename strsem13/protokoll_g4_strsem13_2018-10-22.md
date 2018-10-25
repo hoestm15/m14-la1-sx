@@ -32,6 +32,8 @@ Zuerst haben wir durchbesprochen welche Datein wir in der letzten Einheit von de
 
 * tslint.json       -> Der tslint ist für die Überprüfung für das Design verantwortlich, in der Datei befindet sich die Designkonfiguration.  
 
-## Visual Studio
+## Visual Studio Code
+Dabei handelt es sich um eine freie IDE, welche von Microsoft angeboten wird. Vs Code hat mit ihrer Namensschwester "Visual Studio" nicht wirklich viel gemeinsam.  
+
 Um Visual Studio zu öffnen, muss man nur in seinem Projektverzeichnis sein, und dann den Befehl ``` code .```eingeben. Entwicklerumgebung:  
 ![Visual Studio]()
