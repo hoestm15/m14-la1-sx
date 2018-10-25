@@ -34,6 +34,8 @@ Zuerst haben wir durchbesprochen welche Datein wir in der letzten Einheit von de
 
 ## Visual Studio Code
 Dabei handelt es sich um eine freie IDE, welche von Microsoft angeboten wird. Vs Code hat mit ihrer Namensschwester "Visual Studio" nicht wirklich viel gemeinsam.  
+Entwicklungsumgebung:  
+![Visual Studio](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/VS%20Code.png)   
+Auf der 
 
-Um Visual Studio zu öffnen, muss man nur in seinem Projektverzeichnis sein, und dann den Befehl ``` code .```eingeben. Entwicklerumgebung:  
-![Visual Studio]()
+Um Visual Studio zu öffnen, muss man nur in seinem Projektverzeichnis sein, und dann den Befehl ``` code .```eingeben. Entwicklerumgebung: 
