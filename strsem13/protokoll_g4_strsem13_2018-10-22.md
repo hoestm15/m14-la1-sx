@@ -34,8 +34,14 @@ Zuerst haben wir durchbesprochen welche Datein wir in der letzten Einheit von de
 
 ## Visual Studio Code
 Dabei handelt es sich um eine freie IDE, welche von Microsoft angeboten wird. Vs Code hat mit ihrer Namensschwester "Visual Studio" nicht wirklich viel gemeinsam.  
-Entwicklungsumgebung:  
-![Visual Studio](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/VS%20Code.png)   
-Auf der 
+### Entwicklungsumgebung
+![Visual Studio](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/VS%20Code.png)  
+
+### Aufbau  
+Die klassische Menüleiste wird standartgemäß ausgeblendet. Stattdessen, hat man auf der linken Seite eine Leiste in der sich 6 Icons befinden. Der erste Menüpunkt ist der File-Explorer. Am 2. Menüpunkt hat man eine Suchleiste, wo man nach bestimmten Begriffen suchen kann. Der 3. Menüpunkt bietet die Möglichekit eine Versionsverwaltung (in unserem Falle Git) einzubinden. Der vierte Punkt ist der Debugger, und der fünfte Punkt ist zur Verwaltung von Erweiterungen gedacht. Der letzte Punkt ist im linken unteren Eck der Seite, heir befinden sich die Einstellungen. Eine Besonderheit dieser Entwicklungsumgebung ist der File - Explorer. Wenn man eine Datei dauerhaft öffnen will, muss man sie mit einem Doppelklick öffnen. Wenn man eine Datei mit nur einem Klick öffnet, und dann eine neue Datei mit einem Klick öffnet, wird die vorherige automatische geschlossen.  
+
+
+### Programmstart
+
 
 Um Visual Studio zu öffnen, muss man nur in seinem Projektverzeichnis sein, und dann den Befehl ``` code .```eingeben. Entwicklerumgebung: 
