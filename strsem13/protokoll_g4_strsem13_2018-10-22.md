@@ -45,5 +45,22 @@ Die klassische Menüleiste wird standartgemäß ausgeblendet. Stattdessen, hat m
 
 Um Visual Studio zu öffnen gibt es 2 Möglichkeiten:  
 * Entweder man startet die IDE über den File Explorer, danach muss man jedoch erst das gewünschte Projektverzeichnis öffnen.  
-* Die 2 einfachere Möglichkeit wäre, man muss im Terminal sich in das gewünschte Verzeichnis navigieren (```cd Schreibtisch/Labor/rest-server1/```) und danach muss man nurmehr den Befehl: ```code .``` eingeben, und VS Code öffnet sich automatisch im gewünschten Projektverzeichnis.  
+* Die 2 einfachere Möglichkeit wäre, man muss im Terminal sich in das gewünschte Verzeichnis navigieren (```cd Schreibtisch/Labor/rest-server1/```) und danach muss man nurmehr den Befehl: ```code .``` eingeben, und VS Code öffnet sich automatisch im gewünschten Projektverzeichnis.    
 
+### Konfiguration
+
+Die Konfiguration der IDE erfolgt im Wesentlichen über zwei Json Datein: 
+* .vscode/settings.json   
+In dieser Datei können diverse Einstellungen geänderet werden, z.B: das Ausblenden von Datein und Ordnern in der IDE.  
+
+```{
+  "files.exclude":
+      {
+        "**/code_modules/": true,
+        "**/.vscode/": true,
+        "**/package-lock.json/": true
+       }
+    }
+ ```  
+ * tsconfig.json
+    
