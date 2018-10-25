@@ -28,10 +28,4 @@ Zuerst haben wir durchbesprochen welche Datein wir in der letzten Einheit von de
 
 * tsconfig.json     -> In dieser Jason Datei befindet sich die Konfiguration für den Transpiler. Der Transpiler wandelt das Programm von Typescript in Javascript um.  
 
-* tslint.json       -> Der tslint ist für die Überprüfung für das Designe verantwortlich, in der Datei befindet sich die Designevorlage.  
-
-
-
-
-
-
+* tslint.json       -> Der tslint ist für die Überprüfung für das Design verantwortlich, in der Datei befindet sich die Designkonfiguration.  
