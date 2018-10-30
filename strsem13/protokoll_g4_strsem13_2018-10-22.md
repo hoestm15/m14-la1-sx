@@ -142,7 +142,7 @@ export class Server {
     }
 }
 ```  
-Nun konnten wir erschiedene Anfragen senden, z.B. wenn man in einem Browser folgendes eingab : ``` ``` antwortete der Server mit:   
+Nun konnten wir erschiedene Anfragen senden, z.B. wenn man in einem Browser folgendes eingab : ```localhost:4711/student?tutram12 ``` antwortete der Server mit:   
   
 surname: Tuttner  
 firstname: Raphael  
