@@ -97,3 +97,46 @@ export class Server {
 Der Serer horcht auf den Client, wenn er dann eine Anfrage erhält, sendet der Server eine Antwort mit *Hallo* zurück.  
 ## Prgoramm Nr.2  
 Wir haben das 1. Programm erweitert, und haben ein Switch-Case eingebaut. Bei verscheidenen Anfragen sendet nun der Server verschiedene Antworten zurück.  
+import * as express from 'express';
+import * as bodyParser from 'body-parser';
+
+export class Server {
+
+    private _server: express.Express;
+
+    constructor (port: number) {
+        this._server = express();
+
+        this._server.use(bodyParser.urlencoded({extended: false}));
+
+        // this._server.get('/student', this.handleGetStudent.bind(this));
+        this._server.get('/student', (req, resp, next) => this.handleGetStudent(req, resp, next));
+
+        this._server.listen(port);
+        console.log('HTTP server gestartet auf Port ' + port);
+    }
+
+    private handleGetStudent (req: express.Request, resp: express.Response, next: express.NextFunction) {
+        console.log('Abfrage');
+        resp.send('Antwort');
+        console.log(req.query.htlid);
+        switch (req.query.htlid) {
+            case 'tutram12':
+            resp.json({surname: 'Tuttner', fistname: 'Raphael'});
+            break;
+
+            case 'zitkam13':
+            resp.json({surname: 'Zitz', fistname: 'Karlheinz'});
+            break;
+
+            case 'strlum14':
+            resp.json({surname: 'Strauß', fistname: 'Lukas'});
+            break;
+
+            default:
+            resp.status(404);
+            resp.end();
+        }
+        resp.send('Anwort: ' + req.query.htlid);
+    }
+}
