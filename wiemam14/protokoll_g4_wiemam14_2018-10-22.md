@@ -25,3 +25,18 @@ In der letzten Einhalt haben wir verschiedene Dateien vom Mechatronik-Server her
 
 Die verschiedenen Dateien und ihre Anwendungszwecke:
 
+* src -> Ordner für die Quelltextdateien.
+
+* .vscode -> Ordner für die Konfigurationsdateien:
+
+    * keybindings.json: Hier befinden sich verschiedene Tastenkombinationen, welche das Programmieren in der Entwicklungsumgebung erleichtern.
+    
+    * launch.json: Hier wird eingestellt, wie ein Programm gestartet wird.
+    
+    * settings.json:  Hier kann man verschiedene Einstellungen treffen wie z. B. node js ausblenden.
+    
+    * tasks.json: Hier wid Gulp aufgerufen.
+    
+* package.json:
+   
+   
