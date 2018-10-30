@@ -97,6 +97,7 @@ export class Server {
 Der Serer horcht auf den Client, wenn er dann eine Anfrage erhält, sendet der Server eine Antwort mit *Hallo* zurück.  
 ## Prgoramm Nr.2  
 Wir haben das 1. Programm erweitert, und haben ein Switch-Case eingebaut. Bei verscheidenen Anfragen sendet nun der Server verschiedene Antworten zurück.  
+```
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 
@@ -140,3 +141,6 @@ export class Server {
         resp.send('Anwort: ' + req.query.htlid);
     }
 }
+```  
+Nun konnten wir erschiedene Anfragen senden, z.B. wenn man in einem Browser folgendes eingab : ``` ``` antwortete der Server mit: surname: Tuttner  
+Firstname: Raphael  
