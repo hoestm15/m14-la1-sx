@@ -19,3 +19,9 @@ Beginnt der Code jedoch mit der Zahl 4**, geht man von einem Client Fehler aus.
 
 403 -> Forbidden (Mangelnde Berechtigung)
 
+## Typescript Dateien
+
+In der letzten Einhalt haben wir verschiedene Dateien vom Mechatronik-Server heruntergeladen
+
+Die verschiedenen Dateien und ihre Anwendungszwecke:
+
