@@ -67,3 +67,7 @@ Visual Studio Code ist ein freier Quelltext-Editor von Microsoft. Außerdem ist 
 
 6. Einstellungen (ganz links unten/am Bild nicht sichtbar)
 
+# Programm
+Wir erstellten zu unserer Klasse **Main.ts** auch eine Klasse **Server.ts**. Der Server soll auf eine Anfrage warten und mit Hallo antworten.
+
+
