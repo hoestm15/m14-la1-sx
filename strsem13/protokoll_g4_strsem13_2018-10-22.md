@@ -70,3 +70,46 @@ In Java gibt es für die Realisierung eines Servers fertige Klassen und Biblioth
 
 ## Programm Nr.1  
 Es sollte ein Programm erstellt werden, welches einen einfachen Server realisiert. Der Server soll auf einen Anfrage warten, und dann mit einem *Hallo* antworten. Um Objektorientiert zu arbeiten haben wir zusätzlich zu der **Main.ts** eine weitere Klasse **Server.ts** erstellt.  
+import * as express from 'express';
+import * as bodyParser from 'body-parser';
+
+export class Server {
+
+    private _server: express.Express;
+
+    constructor (port: number) {
+        this._server = express();
+
+        this._server.use(bodyParser.urlencoded({extended: false}));
+
+        // this._server.get('/student', this.handleGetStudent.bind(this));
+        this._server.get('/student', (req, resp, next) => this.handleGetStudent(req, resp, next));
+
+        this._server.listen(port);
+        console.log('HTTP server gestartet auf Port ' + port);
+    }
+
+    private handleGetStudent (req: express.Request, resp: express.Response, next: express.NextFunction) {
+        console.log('Abfrage');
+        resp.send('Antwort');
+        console.log(req.query.htlid);
+        switch (req.query.htlid) {
+            case 'tutram12':
+            resp.json({surname: 'Tuttner', fistname: 'Raphael'});
+            break;
+
+            case 'zitkam13':
+            resp.json({surname: 'Zitz', fistname: 'Karlheinz'});
+            break;
+
+            case 'strlum14':
+            resp.json({surname: 'Strauß', fistname: 'Lukas'});
+            break;
+
+            default:
+            resp.status(404);
+            resp.end();
+        }
+        resp.send('Anwort: ' + req.query.htlid);
+    }
+}
