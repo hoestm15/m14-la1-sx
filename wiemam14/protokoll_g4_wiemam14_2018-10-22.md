@@ -55,4 +55,15 @@ Visual Studio Code ist ein freier Quelltext-Editor von Microsoft. Außerdem ist 
 
 ![Icons](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/Icons.png)
 
+1. File explorer
+
+2. Suchleiste
+
+3. Versionsverwaltung (wie zum Beispiel GIT)
+
+4. Debugger
+
+5. Extensions (Erweiterungen)
+
+6. Einstellungen (ganz links unten)
 
