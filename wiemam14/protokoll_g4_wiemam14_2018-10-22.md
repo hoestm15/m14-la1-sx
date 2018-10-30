@@ -65,5 +65,5 @@ Visual Studio Code ist ein freier Quelltext-Editor von Microsoft. Außerdem ist 
 
 5. Extensions (Erweiterungen)
 
-6. Einstellungen (ganz links unten)
+6. Einstellungen (ganz links unten/am Bild nicht sichtbar)
 
