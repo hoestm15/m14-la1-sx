@@ -50,4 +50,9 @@ Die verschiedenen Dateien und ihre Anwendungszwecke:
 Visual Studio Code ist ein freier Quelltext-Editor von Microsoft. Außerdem ist er Plattformübergreifend verfügbar.
 
 ![Umgebung vs](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/umgebung_vs.png)  
-   
+
+## Visual Studio Code Icons
+
+![Icons](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/Icons.png)
+
+
