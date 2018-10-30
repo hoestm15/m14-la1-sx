@@ -142,5 +142,7 @@ export class Server {
     }
 }
 ```  
-Nun konnten wir erschiedene Anfragen senden, z.B. wenn man in einem Browser folgendes eingab : ``` ``` antwortete der Server mit: surname: Tuttner  
-Firstname: Raphael  
+Nun konnten wir erschiedene Anfragen senden, z.B. wenn man in einem Browser folgendes eingab : ``` ``` antwortete der Server mit:   
+  
+surname: Tuttner  
+firstname: Raphael  
