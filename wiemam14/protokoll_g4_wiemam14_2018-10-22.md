@@ -70,4 +70,24 @@ Visual Studio Code ist ein freier Quelltext-Editor von Microsoft. Außerdem ist 
 # Programm
 Wir erstellten zu unserer Klasse **Main.ts** auch eine Klasse **Server.ts**. Der Server soll auf eine Anfrage warten und mit Hallo antworten.
 
+```  
+import * as express from 'express';
+import * as bodyParser from 'body-parser';
 
+export class Server {
+
+    private port: number;
+    private server: express.Express;
+    constructor(port: number) {
+    
+        this.port = port;
+        this.server = express();
+        this.server.get('*', (req, resp) => this.handleGet(req, resp));
+        this.server.listen(this.port);
+    }
+    
+    private handleGet(req: express.RequestHandler, resp:express.Response) {
+        resp.send('Hallo');
+        resp.end;
+}
+```  
