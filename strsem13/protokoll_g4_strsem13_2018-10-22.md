@@ -76,21 +76,24 @@ import * as bodyParser from 'body-parser';
 
 export class Server {
 
-    private _server: express.Express;
+    private port: number;
+    private server: express.Express;
 
-    constructor (port: number) {
-        this._server = express();
+    constructor(port: number) {
+        this.port = port;
+        this.server = express();
 
-        this._server.use(bodyParser.urlencoded({extended: false}));
-        
         this.server.get('*', (req, resp) => this.handleGet(req, resp));
 
-        this._server.listen(port);
-        console.log('HTTP server gestartet auf Port ' + port);
+
+        this.server.listen(this.port);
     }
 
-  private handleGet(req: express.RequestHandler, resp:express.Response) {
+    private handleGet(req: express.RequestHandler, resp:express.Response) {
         resp.send('Hallo');
         resp.end;
 }
-```
+```  
+Der Serer horcht auf den Client, wenn er dann eine Anfrage erhält, sendet der Server eine Antwort mit *Hallo* zurück.  
+## Prgoramm Nr.2  
+Wir haben das 1. Programm erweitert, und haben ein Switch-Case eingebaut. Bei verscheidenen Anfragen sendet nun der Server verschiedene Antworten zurück.  
