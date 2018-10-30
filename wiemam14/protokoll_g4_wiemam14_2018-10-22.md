@@ -44,5 +44,10 @@ Die verschiedenen Dateien und ihre Anwendungszwecke:
 * tslint.json: Hier wird die Überprüfung für das gewünschte Design des Quelltextes bestimmt. (Vor allem in Firmen sehr wichtig)
 
 * tsconfig.json:  Hier wird mit Hilfe eines Transpilers aus einer Typescriptdatei eine Javascriptdatei gemacht.
-   
+
+# Visual Studio Code
+
+Visual Studio Code ist ein freier Quelltext-Editor von Microsoft. Außerdem ist er Plattformübergreifend verfügbar.
+
+![Umgebung vs](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/umgebung_vs.png)  
    
