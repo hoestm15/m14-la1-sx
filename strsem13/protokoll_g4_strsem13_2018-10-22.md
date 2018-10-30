@@ -63,5 +63,9 @@ In dieser Datei können diverse Einstellungen geänderet werden, z.B: das Ausble
        }
  }
  ```  
+ 
+ ### Unterschied zwischen Server in java und in Typescript  
+ 
+In Java gibt es für die Realisierung eines Servers fertige Klassen und Bibliotheken wie z.B. ServerSocket. Mit dieser Klasse kann man einfach zu arbeiten und erleichtert das erstellen eines Servers erheblich. In Javascript/Typescript hingegen gibt es keine leicht anzuwendenten Klassen wie in Java. Es gibt zwar die Klassenhttp und https, aber der umgang mit diesen erweißt sich als recht unbequem. Um die Programmierung eines Servers mit Typescript zu erleichtern greifen wir auf das Toll **Express** zurück. Dieses stellt eine komfortable Möglichkeit dar einen Server zu realisieren und bietet viele hilfreiche Funktionen im Webbereich.
 
  
