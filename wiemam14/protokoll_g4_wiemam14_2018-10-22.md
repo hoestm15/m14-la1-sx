@@ -25,9 +25,9 @@ In der letzten Einhalt haben wir verschiedene Dateien vom Mechatronik-Server her
 
 Die verschiedenen Dateien und ihre Anwendungszwecke:
 
-* src -> Ordner für die Quelltextdateien.
+* src: Ordner für die Quelltextdateien.
 
-* .vscode -> Ordner für die Konfigurationsdateien:
+* .vscode: Ordner für die Konfigurationsdateien:
 
     * keybindings.json: Hier befinden sich verschiedene Tastenkombinationen, welche das Programmieren in der Entwicklungsumgebung erleichtern.
     
@@ -37,6 +37,12 @@ Die verschiedenen Dateien und ihre Anwendungszwecke:
     
     * tasks.json: Hier wid Gulp aufgerufen.
     
-* package.json:
+* package.json: Projektinfos und Abhängigkeiten
+
+* gulpfile.js: Hier steht die Steuerung der Übersetzung. (make in C, gradle in Android Studio, ant in Netbeans)
+
+* tslint.json: Hier wird die Überprüfung für das gewünschte Design des Quelltextes bestimmt. (Vor allem in Firmen sehr wichtig)
+
+* tsconfig.json:  Hier wird mit Hilfe eines Transpilers aus einer Typescriptdatei eine Javascriptdatei gemacht.
    
    
