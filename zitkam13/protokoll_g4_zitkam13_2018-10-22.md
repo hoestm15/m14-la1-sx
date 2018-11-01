@@ -21,7 +21,23 @@ Hier befinden sich alle TypeScript Dateien.
 
 * .vscode  
 In diesem Ordner findet man alle Dateien die nicht angezeigt werden. Deswegen beginnt der Dateiname mit                  einem Punkt.  
+
 Im Ordner **.vscode** gibt es noch 4 Dateien die sogenannten **Steuerdateien** für Visual Studio Code.
 * keybindings.json:  
 In dieser Datei können Tastenkombinationen für Aktivitäten (z:B. Build) im Programm erstellt werden.  
 * launch.json:  
+Die Datei **launch.json** legt fest wie ein Program gestartet werden soll.  
+* settings.json  
+In dieser Datei stehen alle Dateien die Bei VSCode nicht im Dateiexplorer angezeigt werden sollen. Bei unserem Program ist es zum Beispiel:  
+```
+{
+	"files.exclude": {
+		"**/node_modules": true,
+		"**/.vscode/": true,
+		"**/package-lock.json": true
+		"**/dist/": true 
+	}
+}
+```  
+* tasks.json  
+
