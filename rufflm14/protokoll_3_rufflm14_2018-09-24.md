@@ -1,4 +1,4 @@
-# 1.Laborprotokoll 
+# 1. Laborprotokoll 
 
 *von Florian Ruffenacht*
 
