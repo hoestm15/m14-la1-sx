@@ -8,8 +8,6 @@ Ort: AUT-Labor
 
 Lehrkraft: SX
 
-Abwesend: -
-
 ## HTTP-Kommunikation
 
 ### Ansatz von HTTP
