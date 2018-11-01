@@ -121,5 +121,49 @@ Der Quelltexteditor Visual Studio Code von Microsoft ist **plattformunabhängig*
 
 ### Schnellstartleiste  
 Auf der unten ersichtlichen Abbildung ist die **Schnellstartleiste** von Visual Studio Code abgebildet. An oberster Stelle findet man den **Dateiexplorer**. Es folgen die **Suchfunktion**, die **Versionsverwaltung** ,der **Menüpunkt für Debugging** und der **Menüpunkt für externe Plug-ins**. Werden Datein nur mit einem einfachen Klick geöffnet, verschwinden sie beim Öffnen der nächsten Datei wieder. Das kann beim Suchen nach Codestellen hilfreich sein. Um Datein dauerhauft zu öffnen, ist ein Doppelklick notwendig.  
-[Schnellestartleiste](https://github.com/HTLMechatronics/m14-la1-sx/blob/zitkam13/zitkam13/Bildschirmfoto%20vom%202018-11-01%2018-33-20.png)  
 
+![Schnellestartleiste](https://github.com/HTLMechatronics/m14-la1-sx/blob/zitkam13/zitkam13/Bildschirmfoto%20vom%202018-11-01%2018-33-20.png)  
+
+Damit man im **Dateiexplorer** die unwichtigen Dateien nicht sieht kann wie schon weiter oben aufgelistet im Ordner **.vscode** eine Datei mit dem Namen **settings.json** erstellen und alle Dateien oder Order die man nicht sehen will hinein schreiben. Die werden dann für den Benutzer "unsichtbar" gemacht.  
+
+# Programmieren des Rest-Servers  
+Für die Programmierung unseres Rest-Servers erstellten wir 2 Klassen. Die erste war **main.ts** und die zweiter war **server.ts**.  
+Für einen Web-Server bekommt man von Node.js 2 Module mitgeliefert. Das **http** und das **https** Modul. Diese beiden Module sind nicht einfach zu bedienen und benötigen Einarbeitungszeit. Deswegen verwenden wir im Unterricht ein externes Modul mit dem Namen **Express**. Dieses Modul baut auf das "http" udn "https" Modul auf und ermöglicht komfortables Arbeiten.  
+
+### Server Klasse  
+```  
+import * as express from 'express';
+import * as bodyParser from 'body-parser';
+export class  Server {
+   private _server: express.Express;
+    constructor ( port: number) {
+        this._server = express();
+        this._server.use(bodyParser.urlencoded({extended: false}));
+        this._server.get('/student', (req, resp, next) 
+        this._server.listen(port);
+        console.log('HTTP server gestartet auf Port ' + port);
+    }
+    private handleGetStudent (req: express.Request,
+                              resp: express.Response,
+                              next: express.NextFunction) {
+        console.log('Abfrage');
+        console.log(req.query.htlid);
+        switch (req.query.htlid) {
+            case 'tutram12':
+            resp.json({surname: 'Tuttner', firstname: 'Raphael'}); break;
+            case 'zitkam13':
+            resp.json({surname: 'Zitz', firstname: 'Karlheinz'}); break;
+            case 'strlum14':
+            resp.json({surname: 'Strauß', firstname: 'Lukas'}); break;
+
+            default:
+                resp.status(404);
+                resp.end();
+
+        }
+        resp.send('Antwort' + req.query.htlid);
+    }
+}
+```  
+Im ersten Schritt werden 2 Pakete eingebunden. Das Paket **Express** und das Paket **Body-Parser**.  
+Wir erstellten auch eine Methode für einen GET request von einem Client. Diese Methode heißt **handleGetStudent**.  
