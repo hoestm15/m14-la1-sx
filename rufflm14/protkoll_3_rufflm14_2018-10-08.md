@@ -127,8 +127,8 @@ Gegenüber der letzten Einheit wurde der Server so verändert, dass bereits eine
 
 Nach dem Starten des Servers wird der body parser angewendet. Die Zeile ```typescript this.server.get('/status', (req, resp) => this.handleGetStatus(req, resp));``` bewirkt das Aufrufen der Handlermethode **handleGetStatus**, die das Laufen des Servers bestätigt. Nach dem gleichen Prinzip wird die Handlermethode **handleGetStudent** aufgerufen, in welcher eine switch/case-Verzweigung zwischen den unterschiedlichen Anfragen unterscheidet. Wird weder ```/student``` noch ```/status``` in der URL angegeben, wird die Handlermethode **handleGet** aufgerufen, welche einen Fehlercode zurückgibt.
 
-Wird jetzt zum Beispiel im Browser die URL *http://localhost:8080/student?htlid=suspam14* eingegeben, antwortet der Rest-Server mit:
-```json {htlid: 'suspam14', surname: 'Schuster', firstname: 'Patrick'}```
+Wird jetzt zum Beispiel im Browser die URL http://localhost:8080/student?htlid=suspam14 eingegeben, antwortet der Rest-Server mit:
+```{htlid: 'suspam14', surname: 'Schuster', firstname: 'Patrick'}```
 
 ```typescript
 import * as express from 'express';
