@@ -122,3 +122,7 @@ In dieser Datei lassen sich Tastenkombinationen für Tasks definieren:
     }
 ]
 ```
+## Rest-Server
+Gegenüber der letzten Einheit wurde der Server so verändert, dass bereits eine sinnvolle Antwort auf unterschiedliche Anfragen gesendet wird. In unserem Fall werden, abhängig von der URL der Anfrage, Informationen zum jeweiligen Schüler zurückgesendet. 
+
+Nach dem Starten des Servers wird der body parser angewendet. Die Zeile typescript this.server.get('/status', (req, resp) => this.handleGetStatus(req, resp)); bewirkt das Aufrufen der Handlermethode handleGetStatus, die das Laufen des Servers bestätigt. Nach dem gleichen Prinzip wird die Handlermethode handleGetStudent aufgerufen, in welcher eine switch/case-Verzweigung zwischen den unterschiedlichen Anfragen unterscheidet. Wird weder ```/student``` noch ```/status``` in der URL angegeben, wird die Handlermethode handleGet aufgerufen, welche einen Fehlercode zurückgibt.
