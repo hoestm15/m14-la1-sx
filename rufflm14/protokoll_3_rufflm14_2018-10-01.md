@@ -8,8 +8,6 @@ Ort: AUT-Labor
 
 Lehrkraft: SX
 
-Abwesend: -
-
 ## Warum ist HTTP noch relevant?
 Der HTTP-Standard gilt allgemein als unsicher und wird überwiegend durch die verschlüsselte Weiterentwicklung HTTPs ersetzt. Doch in manchen Fällen wird HTTP durchaus verwendet. Das soll das folgende Beispiel zeigen:
 
