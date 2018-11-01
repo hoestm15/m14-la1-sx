@@ -121,3 +121,5 @@ Der Quelltexteditor Visual Studio Code von Microsoft ist **plattformunabhängig*
 
 ### Schnellstartleiste  
 Auf der unten ersichtlichen Abbildung ist die **Schnellstartleiste** von Visual Studio Code abgebildet. An oberster Stelle findet man den **Dateiexplorer**. Es folgen die **Suchfunktion**, die **Versionsverwaltung** ,der **Menüpunkt für Debugging** und der **Menüpunkt für externe Plug-ins**. Werden Datein nur mit einem einfachen Klick geöffnet, verschwinden sie beim Öffnen der nächsten Datei wieder. Das kann beim Suchen nach Codestellen hilfreich sein. Um Datein dauerhauft zu öffnen, ist ein Doppelklick notwendig.  
+[Schnellestartleiste](https://github.com/HTLMechatronics/m14-la1-sx/blob/zitkam13/zitkam13/Bildschirmfoto%20vom%202018-11-01%2018-33-20.png)  
+
