@@ -8,8 +8,8 @@ Ort: AUT-Labor
 
 Lehrkraft: SX
 
-## Überblick über die verwendeten Tools zur Programmierung des Rest-Servers
-Um den Rest-Server in Typescript angenehm progrmmieren zu können, wurden die folgenden Tools verwendet bzw. Dateien erstellt.
+## Verwendete Tools zur Programmierung in TypeScript
+Um den Rest-Server in Typescript angenehm progrmmieren zu können, wurden die folgenden Tools verwendet bzw. Dateien erstellt:
 
 ### TSLint-tool
 Dieses Plug-in unterstützt den Programmierer bei der übersichtlichen und optisch anprechenden Gestaltung seines Codes. In der Datei 
@@ -79,7 +79,7 @@ Hier werden die Taks im Quelltextmanager mit denen des gulp-tools verknüpft. Di
             "group": "build",
 ```
 ### launch.json
-Die Datei launch.json definiert die Einstellungen beim debuggen und ist ebenfalls im **.vscode**-Ordner zu finden.
+Die Datei launch.json definiert die Einstellungen beim Debuggen und ist ebenfalls im **.vscode**-Ordner zu finden.
 
 ```
 {
@@ -103,7 +103,7 @@ Die Datei launch.json definiert die Einstellungen beim debuggen und ist ebenfall
 }  
 ```
 ### keybindings.json
-In dieser Datei lassen sich Tastenkombinationen für Tasks definieren:
+In dieser Datei lassen sich Tastenkombinationen für das schnelle Aufrufen von Tasks in Code definieren:
  ```
  [
     {
@@ -125,4 +125,55 @@ In dieser Datei lassen sich Tastenkombinationen für Tasks definieren:
 ## Rest-Server
 Gegenüber der letzten Einheit wurde der Server so verändert, dass bereits eine sinnvolle Antwort auf unterschiedliche Anfragen gesendet wird. In unserem Fall werden, abhängig von der URL der Anfrage, Informationen zum jeweiligen Schüler zurückgesendet. 
 
-Nach dem Starten des Servers wird der body parser angewendet. Die Zeile typescript this.server.get('/status', (req, resp) => this.handleGetStatus(req, resp)); bewirkt das Aufrufen der Handlermethode handleGetStatus, die das Laufen des Servers bestätigt. Nach dem gleichen Prinzip wird die Handlermethode handleGetStudent aufgerufen, in welcher eine switch/case-Verzweigung zwischen den unterschiedlichen Anfragen unterscheidet. Wird weder ```/student``` noch ```/status``` in der URL angegeben, wird die Handlermethode handleGet aufgerufen, welche einen Fehlercode zurückgibt.
+Nach dem Starten des Servers wird der body parser angewendet. Die Zeile ```typescript this.server.get('/status', (req, resp) => this.handleGetStatus(req, resp));``` bewirkt das Aufrufen der Handlermethode handleGetStatus, die das Laufen des Servers bestätigt. Nach dem gleichen Prinzip wird die Handlermethode handleGetStudent aufgerufen, in welcher eine switch/case-Verzweigung zwischen den unterschiedlichen Anfragen unterscheidet. Wird weder ```/student``` noch ```/status``` in der URL angegeben, wird die Handlermethode handleGet aufgerufen, welche einen Fehlercode zurückgibt.
+
+```typescript
+import * as express from 'express';
+import * as bodyParser from 'body-parser';
+
+class Main {
+
+    private port: number;
+    private server: express.Express;
+
+    constructor(port: number) {
+        this.port = port;
+        this.server = express();
+        this.server.use(bodyParser.urlencoded({extended: false}));
+        this.server.get('/status', (req, resp) => this.handleGetStatus(req, resp));
+        this.server.get('/student', (req, resp) => this.handleGetStudent(req, resp));
+        this.server.get('*', (req, resp) => this.handleGet(req, resp));
+        this.server.listen(this.port);
+    }
+
+    private handleGet(req: express.Request, resp: express.Response) {
+        resp.status(400);
+        resp.send('Error');
+        resp.end();
+    }
+
+    private handleGetStatus(req: express.Request, resp: express.Response) {
+        resp.send('Server is running');
+        resp.end();
+    }
+
+    private handleGetStudent(req: express.Request, resp: express.Response) {
+        switch (req.query.htlid) {
+            case 'suspam14':
+                resp.json({htlid: 'suspam14', surname: 'Schuster', firstname: 'Patrick'});
+                break;
+            case 'reibem14':
+                resp.json({htlid: 'reibem14', surname: 'Reinbacher', firstname: 'Bernhard'});
+                break;
+            default:
+                resp.status(400);
+                resp.send(req.query.htlid + ' not found');
+                break;
+
+        }
+        resp.end();
+    }
+}
+
+const main = new Main(8080);  
+```
