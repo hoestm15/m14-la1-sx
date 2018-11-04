@@ -1,8 +1,8 @@
 # 2.Protokoll
-**Name:** Uhl Christian 
-**Datum:** 13.10.2018 
-**Gruppe:** 4 
-**Anwesend**: Strauß Lukas,Strutz Sebastian, Tuttner Raphael, Uhl Christan, Wieser Markus, Zitz Karlheinz  
+**Name:** Uhl Christian
+**Datum:** 13.10.2018
+**Gruppe:** 4
+**Anwesend**: Strauß Lukas,Strutz Sebastian, Tuttner Raphael, Uhl Christan, Wieser Markus, Zitz Karlheinz
 **Abwesend**: Waltl Kilian  
 
 ## Dateien im Projektordner  
