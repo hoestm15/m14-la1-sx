@@ -89,7 +89,7 @@ Dabei gibt es 2 Möglichkeiten um **gulp** zu installieren.
 * Lokale Installation: node_modules/gulp/bin/gulp.js  
 * Globale Installation: sudo npm install -g gulp  
 Das **-g** nach npm install steht für eine **globale INstallation**.  
-Damit man **gulp** updaten kann benötigt man statt dem Schlüsselwort **install** das SChlüsselwort **update**. Der Berfehl lautet daher danach **sudo npm update -g gulp**.  
+Damit man **gulp** updaten kann benötigt man statt dem Schlüsselwort **install** das Schlüsselwort **update**. Der Berfehl lautet daher danach **sudo npm update -g gulp**.  
 
 ### tsconfig.json  
 In der Datei **tsconfig.json** befindet sich die Konfiguration für den Transpieler. Der Transpieler transpeliert eine TypeScript Datei in eine JavaScript Datei.  
@@ -124,7 +124,7 @@ Der Quelltexteditor Visual Studio Code von Microsoft ist **plattformunabhängig*
 ### Schnellstartleiste  
 Auf der unten ersichtlichen Abbildung ist die **Schnellstartleiste** von Visual Studio Code abgebildet. An oberster Stelle findet man den **Dateiexplorer**. Es folgen die **Suchfunktion**, die **Versionsverwaltung** ,der **Menüpunkt für Debugging** und der **Menüpunkt für externe Plug-ins**. Werden Datein nur mit einem einfachen Klick geöffnet, verschwinden sie beim Öffnen der nächsten Datei wieder. Das kann beim Suchen nach Codestellen hilfreich sein. Um Datein dauerhauft zu öffnen, ist ein Doppelklick notwendig.  
 
-![Schnellestartleiste]()  
+![Schnellestartleiste](m14-la1-sx/uhlchm14/schnellstartleiste.jpg)  
 
 Damit man im **Dateiexplorer** die unwichtigen Dateien nicht sieht kann wie schon weiter oben aufgelistet im Ordner **.vscode** eine Datei mit dem Namen **settings.json** erstellen und alle Dateien oder Order die man nicht sehen will hinein schreiben. Die werden dann für den Benutzer "unsichtbar" gemacht.  
 
