@@ -124,7 +124,7 @@ Der Quelltexteditor Visual Studio Code von Microsoft ist **plattformunabhängig*
 ### Schnellstartleiste  
 Auf der unten ersichtlichen Abbildung ist die **Schnellstartleiste** von Visual Studio Code abgebildet. An oberster Stelle findet man den **Dateiexplorer**. Es folgen die **Suchfunktion**, die **Versionsverwaltung** ,der **Menüpunkt für Debugging** und der **Menüpunkt für externe Plug-ins**. Werden Datein nur mit einem einfachen Klick geöffnet, verschwinden sie beim Öffnen der nächsten Datei wieder. Das kann beim Suchen nach Codestellen hilfreich sein. Um Datein dauerhauft zu öffnen, ist ein Doppelklick notwendig.  
 
-![Schnellestartleiste](https://github.com/HTLMechatronics/m14-la1-sx/blob/uhlchm14/uhlchm14/schnellstartleiste.jpg)  
+![Schnellestartleiste](https://github.com/HTLMechatronics/m14-la1-sx/blob/uhlchm14/uhlchm14/schnellstartleiste1.jpg)  
 
 Damit man im **Dateiexplorer** die unwichtigen Dateien nicht sieht kann wie schon weiter oben aufgelistet im Ordner **.vscode** eine Datei mit dem Namen **settings.json** erstellen und alle Dateien oder Order die man nicht sehen will hinein schreiben. Die werden dann für den Benutzer "unsichtbar" gemacht.  
 
