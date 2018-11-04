@@ -1,6 +1,6 @@
 # 2.Protokoll
 **Name:** Uhl Christian
-**Datum:** 13.10.2018   
+**Datum:** 13.10.2018
 **Gruppe:** 4  
 **Anwesend**: Strauß Lukas,Strutz Sebastian, Tuttner Raphael, Uhl Christan, Wieser Markus, Zitz Karlheinz  
 **Abwesend**: Waltl Kilian  
@@ -29,6 +29,7 @@ In dieser Datei können Tastenkombinationen für Aktivitäten (z:B. Build) im Pr
 Die Datei **launch.json** legt fest wie ein Program gestartet werden soll.  
 * settings.json  
 In dieser Datei stehen alle Dateien die Bei VSCode nicht im Dateiexplorer angezeigt werden sollen. Bei unserem Program ist es zum 
+* tasks.json
 
 Beispiel:  
 ```
@@ -41,7 +42,6 @@ Beispiel:
 	}
 }
 ```  
-* tasks.json  
 
 ### package.json
 Eine weitere wichtige Datei ist die **package.json** Datei. In dieser Dtei stehen alle Projektinformationen und deren Abhängigkeiten. Wie zum Beispiel:  
