@@ -9,6 +9,18 @@
 
 **Abwesend**: Waltl Kilian  
 
+## Visual Studio Code
+
+### Allgemeines  
+Der Quelltexteditor Visual Studio Code von Microsoft ist **plattformunabhängig** auf Windows, Linux und MacOS erhältlich. Es werden viele Programmiersprachen wie C#, C++, CoffeeScript, F#, HTML, Ini, Java, JavaScript, Makefile, Markdown, Objective-C, Python, R, Ruby, SQL, Swift, TypeScript, Visual Basic und XML unterstützt. Visual Studio Code kann mit dem Konsolenbefehl code gestartet werden. Optional kann das Programm mit code . im Projektordner geöffnet werden, wobei man sich dann gleich im jeweiligen Projekt befindet.  
+
+### Schnellstartleiste  
+Auf der unten ersichtlichen Abbildung ist die **Schnellstartleiste** von Visual Studio Code abgebildet. An oberster Stelle findet man den **Dateiexplorer**. Es folgen die **Suchfunktion**, die **Versionsverwaltung** ,der **Menüpunkt für Debugging** und der **Menüpunkt für externe Plug-ins**. Werden Datein nur mit einem einfachen Klick geöffnet, verschwinden sie beim Öffnen der nächsten Datei wieder. Das kann beim Suchen nach Codestellen hilfreich sein. Um Datein dauerhauft zu öffnen, ist ein Doppelklick notwendig.  
+
+![Schnellestartleiste](https://github.com/HTLMechatronics/m14-la1-sx/blob/uhlchm14/uhlchm14/schnellstartleiste1.jpg)  
+
+Damit man im **Dateiexplorer** die unwichtigen Dateien nicht sieht kann wie schon weiter oben aufgelistet im Ordner **.vscode** eine Datei mit dem Namen **settings.json** erstellen und alle Dateien oder Order die man nicht sehen will hinein schreiben. Die werden dann für den Benutzer "unsichtbar" gemacht.  
+
 ## Dateien im Projektordner  
 Am Beginn der Einheit besprachen wir alle einzelnen Dateien in unserem Projektordner.
 Im Projektordner befinden sich weitere 4 Ordner. Die Ordner lauten:  
@@ -92,7 +104,7 @@ Die Datei **gulpfile.js** steuert die Übersetzung mit dem Übersetzungstool **g
 Dabei gibt es 2 Möglichkeiten um **gulp** zu installieren.  
 * Lokale Installation: node_modules/gulp/bin/gulp.js  
 * Globale Installation: sudo npm install -g gulp  
-Das **-g** nach npm install steht für eine **globale INstallation**.  
+Das **-g** nach npm install steht für eine **globale Installation**.  
 Damit man **gulp** updaten kann benötigt man statt dem Schlüsselwort **install** das Schlüsselwort **update**. Der Berfehl lautet daher danach **sudo npm update -g gulp**.  
 
 ### tsconfig.json  
@@ -120,17 +132,6 @@ In unseren Beispiel sieht diese Datei folgendermaßen aus:
 ### tslint  
 Tslint is ein Tool, welches während des codieren auf die Schönheit des programmierten Codes achtet. Damit Tslint funktioniert benötigt es die Datei **tslint.json**.  
 
-## Visual Studio Code
-
-### Allgemeines  
-Der Quelltexteditor Visual Studio Code von Microsoft ist **plattformunabhängig** auf Windows, Linux und MacOS erhältlich. Es werden viele Programmiersprachen wie C#, C++, CoffeeScript, F#, HTML, Ini, Java, JavaScript, Makefile, Markdown, Objective-C, Python, R, Ruby, SQL, Swift, TypeScript, Visual Basic und XML unterstützt. Visual Studio Code kann mit dem Konsolenbefehl code gestartet werden. Optional kann das Programm mit code . im Projektordner geöffnet werden, wobei man sich dann gleich im jeweiligen Projekt befindet.  
-
-### Schnellstartleiste  
-Auf der unten ersichtlichen Abbildung ist die **Schnellstartleiste** von Visual Studio Code abgebildet. An oberster Stelle findet man den **Dateiexplorer**. Es folgen die **Suchfunktion**, die **Versionsverwaltung** ,der **Menüpunkt für Debugging** und der **Menüpunkt für externe Plug-ins**. Werden Datein nur mit einem einfachen Klick geöffnet, verschwinden sie beim Öffnen der nächsten Datei wieder. Das kann beim Suchen nach Codestellen hilfreich sein. Um Datein dauerhauft zu öffnen, ist ein Doppelklick notwendig.  
-
-![Schnellestartleiste](https://github.com/HTLMechatronics/m14-la1-sx/blob/uhlchm14/uhlchm14/schnellstartleiste1.jpg)  
-
-Damit man im **Dateiexplorer** die unwichtigen Dateien nicht sieht kann wie schon weiter oben aufgelistet im Ordner **.vscode** eine Datei mit dem Namen **settings.json** erstellen und alle Dateien oder Order die man nicht sehen will hinein schreiben. Die werden dann für den Benutzer "unsichtbar" gemacht.  
 
 ## Programmieren des Rest-Servers  
 Für die Programmierung unseres Rest-Servers erstellten wir 2 Klassen. Die erste war **main.ts** und die zweiter war **server.ts**.  
