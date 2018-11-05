@@ -15,24 +15,24 @@
 Der Quelltexteditor Visual Studio Code von Microsoft ist **plattformunabhängig** auf Windows, Linux und MacOS erhältlich. Es werden viele Programmiersprachen wie C#, C++, CoffeeScript, F#, HTML, Ini, Java, JavaScript, Makefile, Markdown, Objective-C, Python, R, Ruby, SQL, Swift, TypeScript, Visual Basic und XML unterstützt. Visual Studio Code kann mit dem Konsolenbefehl code gestartet werden. Optional kann das Programm mit code . im Projektordner geöffnet werden, wobei man sich dann gleich im jeweiligen Projekt befindet.  
 
 ### Schnellstartleiste  
-Auf der unten ersichtlichen Abbildung ist die **Schnellstartleiste** von Visual Studio Code abgebildet. An oberster Stelle findet man den **Dateiexplorer**. Es folgen die **Suchfunktion**, die **Versionsverwaltung** ,der **Menüpunkt für Debugging** und der **Menüpunkt für externe Plug-ins**. Werden Datein nur mit einem einfachen Klick geöffnet, verschwinden sie beim Öffnen der nächsten Datei wieder. Das kann beim Suchen nach Codestellen hilfreich sein. Um Datein dauerhauft zu öffnen, ist ein Doppelklick notwendig.  
+Auf der Abbildung, die unten ersichtlich ist, ist die **Schnellstartleiste** von Visual Studio Code abgebildet. Das erste Icon ist der **Dateiexplorer**. Es folgen die Icons für die **Suchfunktion**, die **Versionsverwaltung** ,der **Menüpunkt für Debugging** und der **Menüpunkt für externe Plug-ins**. Werden Datein nur mit einem einfachen Klick geöffnet, verschwinden sie beim Öffnen der nächsten Datei wieder. Das kann beim Suchen nach Codestellen hilfreich sein. Um Datein dauerhauft zu öffnen, ist ein Doppelklick notwendig.  
 
 ![Schnellestartleiste](https://github.com/HTLMechatronics/m14-la1-sx/blob/uhlchm14/uhlchm14/schnellstartleiste1.jpg)  
 
-Damit man im **Dateiexplorer** die unwichtigen Dateien nicht sieht kann wie schon weiter oben aufgelistet im Ordner **.vscode** eine Datei mit dem Namen **settings.json** erstellen und alle Dateien oder Order die man nicht sehen will hinein schreiben. Die werden dann für den Benutzer "unsichtbar" gemacht.  
+Damit man im **Dateiexplorer** nur die wichtigsten Dateien sieht, kann man wie schon weiter oben aufgelistet im Ordner **.vscode** eine Datei mit dem Namen **settings.json** erstellen und alle Dateien oder Order die man ausblenden will hinein schreiben. Die werden dann für den Benutzer "unsichtbar" gemacht.  
 
 ## Dateien im Projektordner  
-Am Beginn der Einheit besprachen wir alle einzelnen Dateien in unserem Projektordner.
-Im Projektordner befinden sich weitere 4 Ordner. Die Ordner lauten:  
+Es gibt viele Dateien in unserem Projektordner und jede ist für einen Zweck bestimmt und in diesem Kapitel versuche ich die wichtigsten aufzuschlüsseln.
+Im Projektordner befinden sich weitere 4 Ordner.  
   
 * dist   
-Hier befinden sich alle die transpilierten Programmen. Das heißt die von TypeScript umgewandet wurden in JavaScript. 
+Hier befinden sich alle die transpilierten Programmen. Das heißt die von TypeScript in JavaScript umgewandelt wurden. 
 
 * node_Modules   
 Hier befinden sich alle Packete, welche das Programm für die Ausführung benötigt. 
 
 * src   
-Hier befinden sich alle TypeScript Dateien. 
+Hier befinden sich unsere Quelltextdateien d.h. alle TypeScript Dateien. 
 
 * .vscode  
 In diesem Ordner findet man alle Dateien die nicht angezeigt werden. Deswegen beginnt der Dateiname mit einem Punkt.  
@@ -44,20 +44,8 @@ In dieser Datei können Tastenkombinationen für Aktivitäten (z:B. Build) im Pr
 * launch.json:  
 Die Datei **launch.json** legt fest wie ein Program gestartet werden soll.  
 * settings.json  
-In dieser Datei stehen alle Dateien die Bei VSCode nicht im Dateiexplorer angezeigt werden sollen. Bei unserem Program ist es zum 
+In dieser Datei stehen alle Dateien die Bei VSCode nicht im Dateiexplorer angezeigt werden sollen. Bei unserem Programm haben wir .vscode, node_modules und den dist Ordner ausgeblendet.
 * tasks.json
-
-Beispiel:  
-```
-{
-	"files.exclude": {
-		"**/node_modules": true,
-		"**/.vscode/": true,
-		"**/package-lock.json": true
-		"**/dist/": true 
-	}
-}
-```  
 
 ### package.json
 Eine weitere wichtige Datei ist die **package.json** Datei. In dieser Dtei stehen alle Projektinformationen und deren Abhängigkeiten. Wie zum Beispiel:  
@@ -134,8 +122,8 @@ Tslint is ein Tool, welches während des codieren auf die Schönheit des program
 
 
 ## Programmieren des Rest-Servers  
-Für die Programmierung unseres Rest-Servers erstellten wir 2 Klassen. Die erste war **main.ts** und die zweiter war **server.ts**.  
-Für einen Web-Server bekommt man von Node.js 2 Module mitgeliefert. Das **http** und das **https** Modul. Diese beiden Module sind nicht einfach zu bedienen und benötigen Einarbeitungszeit. Deswegen verwenden wir im Unterricht ein externes Modul mit dem Namen **Express**. Dieses Modul baut auf das "http" udn "https" Modul auf und ermöglicht komfortables Arbeiten.  
+Für die Programmierung unseres Rest-Servers erstellten wir 2 Klassen. **main.ts** und **server.ts**.  
+Für einen Web-Server bekommt man von Node.js. Mit dem HTT - Protokoll ist es schwierig zu arbeiten, deswegen verwenden wir im Unterricht ein externes Modul mit dem Namen **Express**. Dieses Modul baut auf das "http" und "https" Modul auf und ermöglicht komfortables Arbeiten.  
 
 ### Server Klasse  
 ```  
