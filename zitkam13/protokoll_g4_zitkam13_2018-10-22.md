@@ -1,4 +1,4 @@
-# 1.Protokoll
+# 2.Protokoll
 **Name:** Zitz Karlheinz   
 **Datum:** 13.10.2018  
 **Uhrzeit:** 8:00-10:30  
@@ -167,3 +167,5 @@ export class  Server {
 ```  
 Im ersten Schritt werden 2 Pakete eingebunden. Das Paket **Express** und das Paket **Body-Parser**.  
 Wir erstellten auch eine Methode für einen GET request von einem Client. Diese Methode heißt **handleGetStudent**.  
+Am Beginn schrieben wir ein Programm das der Server auf einen Request von einem Client ein einfaches "Hallo" an den Client zurücksendet. Am Ende der Einheit erweiterten wir das Programm soweit, dass  mit unterschiedlichen **GET** Anfrage unterschiedliche Antworten an den Client geschickt werden. Damit dies funktionierte erstellten wir die oben genannte Methode **handleGetStudent**. Der gesamte Code der **server.ts** Datei ist im vorigen Beispiel anzufinden. 
+
