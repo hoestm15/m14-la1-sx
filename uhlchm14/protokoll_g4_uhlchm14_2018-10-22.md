@@ -15,7 +15,7 @@
 Der Quelltexteditor Visual Studio Code von Microsoft ist **plattformunabhängig** auf Windows, Linux und MacOS erhältlich. Es werden viele Programmiersprachen wie C#, C++, CoffeeScript, F#, HTML, Ini, Java, JavaScript, Makefile, Markdown, Objective-C, Python, R, Ruby, SQL, Swift, TypeScript, Visual Basic und XML unterstützt. Visual Studio Code kann mit dem Konsolenbefehl code gestartet werden. Optional kann das Programm mit code . im Projektordner geöffnet werden, wobei man sich dann gleich im jeweiligen Projekt befindet.  
 
 ### Schnellstartleiste  
-Auf der Abbildung, die unten ersichtlich ist, ist die **Schnellstartleiste** von Visual Studio Code abgebildet. Das erste Icon ist der **Dateiexplorer**. Es folgen die Icons für die **Suchfunktion**, die **Versionsverwaltung** ,der **Menüpunkt für Debugging** und der **Menüpunkt für externe Plug-ins**. Werden Datein nur mit einem einfachen Klick geöffnet, verschwinden sie beim Öffnen der nächsten Datei wieder. Das kann beim Suchen nach Codestellen hilfreich sein. Um Datein dauerhauft zu öffnen, ist ein Doppelklick notwendig.  
+Auf der Abbildung, die unten links ersichtlich ist, ist die **Schnellstartleiste** von Visual Studio Code abgebildet. Das erste Icon ist der **Dateiexplorer**. Es folgen die Icons für die **Suchfunktion**, die **Versionsverwaltung** ,der **Menüpunkt für Debugging** und der **Menüpunkt für externe Plug-ins**. Werden Datein nur mit einem einfachen Klick geöffnet, verschwinden sie beim Öffnen der nächsten Datei wieder. Das kann beim Suchen nach Codestellen hilfreich sein. Um Datein dauerhauft zu öffnen, ist ein Doppelklick notwendig.  
 
 ![Schnellestartleiste](https://github.com/HTLMechatronics/m14-la1-sx/blob/uhlchm14/uhlchm14/schnellstartleiste1.jpg)  
 
