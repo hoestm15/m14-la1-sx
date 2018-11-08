@@ -160,5 +160,18 @@ export class  Server {
     }
 }
 ```  
+### Main Klasse  
+```  
+console.log('Hallo1');
+// tslint:disable-next-line:quotemark
+console.log("Hallo2");
+
+import * as http from 'http';
+
+import { Server } from './server';
+
+
+const server = new Server(4711);
+```  
 Im ersten Schritt werden 2 Pakete eingebunden. Das Paket **Express** und das Paket **Body-Parser**.  
 Wir erstellten auch eine Methode für einen GET request von einem Client. Diese Methode heißt **handleGetStudent**.  
