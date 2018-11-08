@@ -21,7 +21,7 @@ Auf der Abbildung, die unten links ersichtlich ist, ist die **Schnellstartleiste
 
 Damit man im **Dateiexplorer** nur die wichtigsten Dateien sieht, kann man wie schon weiter oben aufgelistet im Ordner **.vscode** eine Datei mit dem Namen **settings.json** erstellen und alle Dateien oder Order die man ausblenden will hinein schreiben. Die werden dann für den Benutzer "unsichtbar" gemacht.  
 
-## Dateien im Projektordner  
+## Dateien der IDE 
 Es gibt viele Dateien in unserem Projektordner und jede ist für einen Zweck bestimmt und in diesem Kapitel versuche ich die wichtigsten aufzuschlüsseln.
 Im Projektordner befinden sich weitere 4 Ordner.  
   
