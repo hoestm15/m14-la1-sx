@@ -46,8 +46,14 @@ Wir haben am Anfang der Stunde die von der letzen Einheit gedownloadeten Dateien
                          * **launch.json** --> Hier wird festgelegt wie ein Programm gestartet wird.  
                          * **settings.json** --> In der settings Datei befinden sich projektspezifische Eigenschaften.  
                          * **tasks.json** -->  Hier findet man bestimmte Aufgaben für die Programme(zb. build,clean)  
+                         
+ ## Aufbau Visual Studio Code                       
+
+ Links findet man eine Leiste mit 5 Icons. Der Reihe nach --> File-Explorer, Suchleiste, Versionsverwaltung(zb. Git),Debugger, 
+ Verwaltung von Erweiterungen. Der File Explorer bwirkt folgendes--> Datei Dauerhaft öffen --> Doppelklick
+ Wird nur einmal geklickt, und dann eine neue Datei mit einem Klick geöffnet, wir die vorherige automatisch geschlossen.
   
-  
+ 
     
     
 
