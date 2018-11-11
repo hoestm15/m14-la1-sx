@@ -32,20 +32,20 @@ Wir haben am Anfang der Stunde die von der letzen Einheit gedownloadeten Dateien
 
 :point_right: package-lock.json: Hier befinden sich die unterschiedlichen Versionen
 
-:point_right: gulpfile.json: Gulp ist das Übersetzungstool für Typescript. In der Gulpfile steht die Steuerung von
+:point_right: gulpfile.json: Gulp ist das Übersetzungstool für Typescript. In der Gulpfile steht die Steuerung von  
                              der Übersetzung. Andere Übersetzungstools --> make(C), ant(Netbeans), gradle(Android Studio)
 
-:point_right: tslint.json: tslint ist für die überprüfung des Designs veantwortlich. In der Datei befindet sichg die Design
+:point_right: tslint.json: tslint ist für die überprüfung des Designs veantwortlich. In der Datei befindet sichg die Design  
                            Konfiguration.
                            
-:point_right: tsconfig.json:  Hier befindet sich die Konfiguration für den Transpiler. Umwandlung von Typescript in Jacascript 
+:point_right: tsconfig.json:  Hier befindet sich die Konfiguration für den Transpiler. Umwandlung von Typescript in Jacascript  
                               wird mit dem Transpiler vorgenommen. 
 
-:point_right: .vscode: Hier befinden sie die 4 Konfigurations-Dateien ! Alles ist textuell und somit leicht zu lesen.
-                         * keybindings.json --> verschiedene Tastenkombinationen für die Entwicklungsumgebung
-                         * launch.json --> Hier wird festgelegt wie ein Programm gestartet wird.
-                         * settings.json --> In der settings Datei befinden sich projektspezifische Eigenschaften.
-                         * tasks.json -->  Hier findet man bestimmte Aufgaben für die Programme(zb. build,clean)
+:point_right: .vscode: Hier befinden sie die 4 Konfigurations-Dateien ! Alles ist textuell und somit leicht zu lesen.  
+                         * keybindings.json --> verschiedene Tastenkombinationen für die Entwicklungsumgebung  
+                         * launch.json --> Hier wird festgelegt wie ein Programm gestartet wird.  
+                         * settings.json --> In der settings Datei befinden sich projektspezifische Eigenschaften.  
+                         * tasks.json -->  Hier findet man bestimmte Aufgaben für die Programme(zb. build,clean)  
   
   
     
