@@ -22,7 +22,7 @@ Link zur [7. Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum1
 Link zur [1.Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum14/strlum14/Protokoll_g4_strlum14_2018-10-15.md)
 
 ## 2. Einheit, 22.10.2018
-Link zur [2.Einheit]()
+Link zur [2.Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum14/strlum14/Protokoll_g4_strlum14_2018-10-22.md)
 
 ## 3. Einheit, 29.10.2018
       Entfällt aufgrund des Maturanten-Infotag !
