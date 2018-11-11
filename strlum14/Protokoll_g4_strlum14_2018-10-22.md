@@ -53,7 +53,9 @@ Wir haben am Anfang der Stunde die von der letzen Einheit gedownloadeten Dateien
  Verwaltung von Erweiterungen. Der File Explorer bwirkt folgendes--> Datei Dauerhaft öffen --> Doppelklick
  Wird nur einmal geklickt, und dann eine neue Datei mit einem Klick geöffnet, wir die vorherige automatisch geschlossen.
   
- ![https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum14/strlum14/VS%20Code.png]
+ ![Schnellstartleiste](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum14/strlum14/VS%20Code.png)
+ 
+ 
  
  
     
