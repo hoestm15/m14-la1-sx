@@ -24,7 +24,7 @@ Um die Hauptfunktionen aufrufen zu können befindet sich links eine Leiste mit m
 ## Theorieteil der Stunde
 Wir haben am Anfang der Stunde die von der letzen Einheit gedownloadeten Dateien und Ordner besprochen.
 
-:point_right: src: In diesem Ordner findet man die typescript-Dateien
+:point_right: *src*: In diesem Ordner findet man die typescript-Dateien
 
 :point_right: package.json: Projektinfos und Abhängigkeiten sind hier zu finden
                             *Abhängigkeiten --> depencies
