@@ -56,11 +56,75 @@ Wir haben am Anfang der Stunde die von der letzen Einheit gedownloadeten Dateien
  ![Schnellstartleiste](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum14/strlum14/VS%20Code.png)
  
  
- 
+ ## Unterschied zwischen Server in Java und Javascript/Typescript
+
+In Java gibt es für die Realisierung eines Servers fertige Klassen und Bibliotheken wie z.B. ServerSocket. Mit dieser Klasse kann man einfach zu arbeiten und erleichtert das erstellen eines Servers erheblich. In Javascript/Typescript hingegen gibt es keine leicht anzuwendenten Klassen wie in Java. Es gibt zwar die Klassen http und https, aber der umgang mit diesen ist recht unbequem. Um die Programmierung eines Servers mit Typescript zu erleichtern greifen wir auf das Express Framework zurück. Dieses stellt eine komfortable Möglichkeit dar einen Server zu realisieren und bietet viele hilfreiche Funktionen im Webbereich.
  
     
+## Programm 1   
+
+Wir erstelleten die Klassse **Server.ts**. Der Server soll auf die Anfrage mit Hallo arbeiten. 
+
+```  
+import * as express from 'express';
+import * as bodyParser from 'body-parser';
+
+export class Server {
+
+    private port: number;
+    private server: express.Express;
+    constructor(port: number) {
     
+        this.port = port;
+        this.server = express();
+        this.server.get('*', (req, resp) => this.handleGet(req, resp));
+        this.server.listen(this.port);
+    }
+    
+    private handleGet(req: express.RequestHandler, resp:express.Response) {
+        resp.send('Hallo');
+        resp.end;
+}
+```  
 
+## Programm 2 
 
+Mithilfe eines Switch-Case sendet der Server nun bei verschiedenen Anfrsagen, verschiedene Antworten zurück.
+Es werden die 2 Pakete **express** und **bodyParser** eingebunden. Mit dem erweiterten Programm erhalten wir auf unterschiedliche GET-Anfragen untershiedliche Antworten an den Client. Mit der **handleGetStudent** Methode ist das möglich.
+
+```  
+import * as express from 'express';
+import * as bodyParser from 'body-parser';
+export class  Server {
+   private _server: express.Express;
+    constructor ( port: number) {
+        this._server = express();
+        this._server.use(bodyParser.urlencoded({extended: false}));
+        this._server.get('/student', (req, resp, next) 
+        this._server.listen(port);
+        console.log('HTTP server gestartet auf Port ' + port);
+    }
+    private handleGetStudent (req: express.Request,
+                              resp: express.Response,
+                              next: express.NextFunction) {
+        console.log('Abfrage');
+        console.log(req.query.htlid);
+        switch (req.query.htlid) {
+            case 'tutram12':
+            resp.json({surname: 'Tuttner', firstname: 'Raphael'}); break;
+            case 'zitkam13':
+            resp.json({surname: 'Zitz', firstname: 'Karlheinz'}); break;
+            case 'strlum14':
+            resp.json({surname: 'Strauß', firstname: 'Lukas'}); break;
+
+            default:
+                resp.status(404);
+                resp.end();
+
+        }
+        resp.send('Antwort' + req.query.htlid);
+    }
+}
+```  
 
 
