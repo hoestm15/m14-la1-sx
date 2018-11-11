@@ -42,10 +42,10 @@ Wir haben am Anfang der Stunde die von der letzen Einheit gedownloadeten Dateien
                               wird mit dem Transpiler vorgenommen. 
 
 :point_right: .vscode: Hier befinden sie die 4 Konfigurations-Dateien ! Alles ist textuell und somit leicht zu lesen.
-                       * keybindings.json --> verschiedene Tastenkombinationen für die Entwicklungsumgebung
-                       * launch.json --> Hier wird festgelegt wie ein Programm gestartet wird.
-                       * settings.json --> In der settings Datei befinden sich projektspezifische Eigenschaften.
-                       * tasks.json -->  Hier findet man bestimmte Aufgaben für die Programme(zb. build,clean)
+                         * keybindings.json --> verschiedene Tastenkombinationen für die Entwicklungsumgebung
+                         * launch.json --> Hier wird festgelegt wie ein Programm gestartet wird.
+                         * settings.json --> In der settings Datei befinden sich projektspezifische Eigenschaften.
+                         * tasks.json -->  Hier findet man bestimmte Aufgaben für die Programme(zb. build,clean)
   
   
     
