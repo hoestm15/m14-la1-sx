@@ -34,7 +34,7 @@ Kein Protokoll nötig
 [Link zur Makrdown-Datei](https://github.com/HTLMechatronics/m14-la1-sx/blob/tutram12/tutram12/5AHME/tutram12_2018_kw44.md)
 
 ## Einheit 3: 29.10.2018
-Entfallen wegen Maturanteninfotag.
+Entfallen wegen Maturanten-Infotag
 
 ## Einheit 4: 12.11.2018
 [Link zur Markdown-Datei]()
