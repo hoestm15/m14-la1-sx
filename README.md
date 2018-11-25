@@ -11,4 +11,4 @@
 
 # Labor 5AHME (2018/19) - SX
 
-* 1. Einheit: 19.11.2018 [Protokoll](boejam13/protokoll_g1_boejam13_19.11.2018.md)
+* 1. Einheit: 19.11.2018 [Protokoll](boejam13/protokoll_g1_boejam13_19-11-2018.md)
