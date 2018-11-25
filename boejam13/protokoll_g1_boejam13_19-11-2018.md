@@ -79,6 +79,6 @@ Weitere Infos zu HTTP: [Link](https://de.wikipedia.org/wiki/Hypertext_Transfer_P
 
 ## Typescript
 
-Typeskript ist eine von Microsoft entwickelte Programmiersprache und basiert auf JavaScript. Der TypeScript-Code wird daher vor dem Ausführen in einem JavaScript-Code **transpiliert**. Der hauptgrund für die verwendung von Typescript ist, dass es in Javascript ansich keine Datentypen gibt, dadurch wird die Fehlersuche erschwert.
+Typescript ist eine von Microsoft entwickelte Programmiersprache und basiert auf Javascript. Der Typescript-Code wird vor dem Ausführen in einen JavaScript-Code **transpiliert**. Der Hauptgrund für die verwendung von Typescript ist, dass es in Javascript ansich keine Datentypen gibt, dadurch wird die Fehlersuche in Typescript erleichtert.
 
 Weitere Infos zu Typescript: [Link](https://de.wikipedia.org/wiki/TypeScript)
