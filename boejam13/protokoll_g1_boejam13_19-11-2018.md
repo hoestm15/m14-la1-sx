@@ -70,3 +70,10 @@ Statuscode | Bedeutung
 3xx | Weitere Schritte des Clients nötig
 4xx | Fehler des Clients
 5xx | Fehler des Servers    
+
+
+Weitere Informationen zu HTTP kann man hier nachlesen. [Link](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
+
+##Typescript
+
+
