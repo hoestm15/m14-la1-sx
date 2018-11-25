@@ -11,7 +11,7 @@
  
 ## Was ist ein REST-Server?
 
->Representational State Transfer (abgekürzt REST) bezeichnet ein Programmierparadigma für verteilte Systeme, insbesondere für Webservices. >REST ist eine Abstraktion der Struktur und des Verhaltens des World Wide Web. REST hat das Ziel, einen Architekturstil zu schaffen, der >die Anforderungen des modernen Web besser darstellt. Dabei unterscheidet sich REST vor allem in der Forderung nach einer einheitlichen >Schnittstelle von anderen Architekturstilen.
+>Representational State Transfer (abgekürzt REST) bezeichnet ein Programmierparadigma für verteilte Systeme, insbesondere für Webservices. >REST ist eine Abstraktion der Struktur und des Verhaltens des World Wide Web. REST hat das Ziel, einen Architekturstil zu schaffen, der >die Anforderungen des modernen Web besser darstellt. Dabei unterscheidet sich REST vor allem in der Forderung nach einer einheitlichen Schnittstelle von anderen Architekturstilen.
 
 >Der Zweck von REST liegt schwerpunktmäßig auf der Maschine-zu-Maschine-Kommunikation.
 
@@ -34,3 +34,4 @@ Der Client bestätigt zuletzt den Erhalt des SYN/ACK-Pakets durch das Senden ein
 Die Verbindung ist damit aufgebaut.
 
 Einmal aufgebaut, ist die Verbindung für beide Kommunikationspartner gleichberechtigt, das heißt man kann der Verbindung nicht ansehen, wer der Server und wer der Client ist. Daher hat eine Unterscheidung dieser beiden Rollen in der weiteren Betrachtung keine Bedeutung mehr.
+
