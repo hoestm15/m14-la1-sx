@@ -27,12 +27,18 @@ REST-Server finden oft Gebrauch in der Web-Technologie, wo über HTTP kommunizie
 
 *[HTTP, Wikipedia](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)*
 
+#### Funktionsweise
+
 In HTTP kommuniziert ein **Client** mit einem **Server** über Nachrichten, von denen es zwei unterschiedliche Arten gibt:
 Die Anfrage (**Request**) vom Client und die Antwort (**Response**) als Reaktion darauf vom Server.
+
+#### Paketaufbau
 
 Eine Nachricht besteht bdabei aus zwei Teilen:
 Dem Nachrichtenkopf (**Header**) und dem Nachrichtenrumpf (**Body**).
 Im Header sind Informationen über den Body, wie zum Beispiel verwendete Kodierungen enthalten, während sich im Body der eigentliche Inhalt befindet.
+
+#### Verbindungsaufabu
 
 Für den Aufbau einer Verbindung sendet der Client, der eine Verbindung aufbauen will,dem Server ein SYN-Paket (von englisch synchronize).
 Der Server empfängt das Paket, bestätitgt den Erhalt des ersten SYN-Pakets und stimmt dem Verbindungsaufbau zu, indem er ein SYN/ACK-Paket zurückschickt (ACK von engl. acknowledgement ‚Bestätigung‘).
@@ -43,6 +49,8 @@ Die Verbindung ist damit aufgebaut.
 
 Einmal aufgebaut, ist die Verbindung für beide Kommunikationspartner gleichberechtigt, das heißt man kann der Verbindung nicht ansehen, wer der Server und wer der Client ist. Daher hat eine Unterscheidung dieser beiden Rollen in der weiteren Betrachtung keine Bedeutung mehr.
 
+#### HTTP-Anfragemethoden
+
 Anfragemethode | Erklärung  
 -------------- | ------------ 
 GET | Mit ihr wird eine Ressource vom Server angefordert
@@ -51,6 +59,8 @@ HEAD | Weist den Server an, die gleichen HTTP-Header wie bei GET, nicht jedoch d
 PUT | Dient dazu, eine Ressource auf einen Webserver hochzuladen. 
 PATCH | Ändert ein bestehendes Dokument ohne dieses wie bei PUT vollständig zu ersetzen.
 DELETE | Löscht die angegebene Ressource auf dem Server.
+
+#### HTTP-Statuscodes
 
 Statuscode | Erklärung  
 ---------- | ------------
@@ -92,9 +102,9 @@ Hallo
 
 *Der Zusatz -l wird verwendet, um anzugeben, dass nc auf eine eingehende Verbindung achten soll, anstatt eine Verbindung zu einem Remote-Host herzustellen.*
 
-*-C wird benötigt um den Server einen regulären Zeilenvorschub als Carriage Return sehen zu lassen.*
+*-C wird benötigt um den Server einen regulären Zeilenvorschub als Carriage Return sehen zu lassen.* <br>
 
-*Als nächstes haben wir eine Verbindung zum HTL-Mechatronik-Server hergestellt:*
+Als nächstes haben wir eine Verbindung zum HTL-Mechatronik-Server hergestellt:
 
 ```
 kobi@MarkusPC:~$ nc -C www.htl-mechatronik.at 80
@@ -151,11 +161,102 @@ Für eine angenehmere Benützung können folgende Verzeichnisse angepasst werden
 #### package.json
 Die package.json-Datei ist eine Art Manifest für ein Projekt. Es kann eine Menge Dinge tun, die völlig unabhängig voneinander sind. Es ist zum Beispiel ein zentrales Konfigurationsrepository für Tools. Dort werden auch die Namen und Versionen des installierten Pakets gespeichert.
 
+```
+{
+  "name": "restserver1",
+  "version": "0.0.1",
+  "description": "Restserver",
+  "main": "main.js",
+  "scripts": {
+    "start": "node dist/main.js",
+    "build": "./node_modules/gulp/bin/gulp.js build",
+    "clean": "./node_modules/gulp/bin/gulp.js clean",
+    "cleanAndBuild": "./node_modules/gulp/bin/gulp.js cleanAndBuild",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Markus Kobor",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-changed": "^3.2.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-typescript": "^5.0.0-alpha.3",
+    "gulp-using": "^0.1.1",
+    "merge-stream": "^1.0.1",
+    "run-sequence": "^2.2.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.1"
+  }
+}
+```
+
 #### tsconfig.json
 Die Datei tsconfig.json ist für die Konfiguration des TypeScript-Compilers zuständig.
+
+```
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "target": "ES2016",
+        "experimentalDecorators": true,
+        "noEmitOnError": true,
+        "mapRoot": "./",
+        "outDir": "./dist",
+        "typeRoots": [ "node_modules/@types" ]
+    },
+    "include": [ "src/**/*.ts" ]
+}
+```
 
 #### gulpfile.json
 Das gulpfile ist für die Übersetzung zuständig.
 
+```
+// Node.js modules
+const path = require('path');
+
+// External modules,
+// npm install --save-dev gulp gulp-changed gulp-typescript gulp-sourcemapsgulp-using 
+// npm install --save-dev typescript del run-sequence merge-stream
+const gulp       = require('gulp'),
+      changed    = require('gulp-changed'),
+      ts         = require('gulp-typescript'),
+      sourcemaps = require('gulp-sourcemaps'),
+      using      = require('gulp-using'),
+      typescript = require('typescript'),
+      del        = require('del'),
+      sequence   = require('run-sequence'),
+      merge      = require('merge-stream');
+      ...
+```
+
 #### tslint.json
 TSLint ist ein erweiterbares statisches Analysewerkzeug, das TypeScript-Code auf Lesbarkeit, Wartbarkeit und Funktionsfehler überprüft. Es wird weitgehend von modernen Editoren und Build-Systemen unterstützt und kann mit Ihren eigenen Fusselregeln, Konfigurationen und Formatierungselementen angepasst werden.
+
+```
+{
+    "rulesDirectory": [],
+    "rules": {
+        "callable-types": true,
+        "class-name": true,
+        "comment-format": [
+            true,
+            "check-space"
+        ],
+        "curly": true,
+        "eofline": true,
+        "forin": true,
+        "import-blacklist": [
+            true,
+            "rxjs"
+        ],
+        ...
+
+```
