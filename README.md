@@ -10,4 +10,4 @@
 
 # Labor 5AHME (2018/19) - knarom14
 
-* 1.Einheit, 19.11.2018 [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/new/knarom14/Protokolle/protokoll_g1_knarom14_2018)
+* 1.Einheit, 19.11.2018 [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/new/knarom14/Protokolle/protokoll_g1_knarom14_2018.md)
