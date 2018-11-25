@@ -56,4 +56,5 @@ Statuscode | Erklärung
 4xx | Client-Fehler (Bei der Bearbeitung der Anfrage ist ein Fehler aufgetreten, der im Verantwortungsbereich des Clients liegt.)
 5xx | Server-Fehler (Es ist ein Fehler aufgetreten, dessen Ursache beim Server liegt.)
 
-Hier noch eine vollständige Liste mit allen *[ HTTP-Statuscodes](https://httpstatuses.com/)*
+Hier noch eine vollständige Liste mit allen *[HTTP-Statuscodes](https://httpstatuses.com/)*.
+
