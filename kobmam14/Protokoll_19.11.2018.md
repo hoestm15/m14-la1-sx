@@ -15,11 +15,15 @@
 
 >Der Zweck von REST liegt schwerpunktmäßig auf der Maschine-zu-Maschine-Kommunikation.
 
+*[REST-Server, Wikipedia](https://de.wikipedia.org/wiki/Representational_State_Transfer)*
+
 REST-Server finden oft Gebrauch in der Web-Technologie, wo über HTTP kommuniziert wird.
 
 ## HTTP
 
 >Das Hypertext Transfer Protocol (HTTP) ist ein zustandsloses Protokoll zur Übertragung von Daten auf der Anwendungsschicht über ein Rechnernetz. Es wird hauptsächlich eingesetzt, um Webseiten (Hypertext-Dokumente) aus dem World Wide Web (WWW) in einen Webbrowser zu laden.
+
+*[HTTP, Wikipedia](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)*
 
 In HTTP kommuniziert ein Client mit einem Server über Nachrichten, von denen es zwei unterschiedliche Arten gibt:
 Die Anfrage (Request) vom Client und die Antwort (Response) als Reaktion darauf vom Server.
@@ -35,3 +39,11 @@ Die Verbindung ist damit aufgebaut.
 
 Einmal aufgebaut, ist die Verbindung für beide Kommunikationspartner gleichberechtigt, das heißt man kann der Verbindung nicht ansehen, wer der Server und wer der Client ist. Daher hat eine Unterscheidung dieser beiden Rollen in der weiteren Betrachtung keine Bedeutung mehr.
 
+Anfragemethode | Erklärung  
+-------------- | ------------ 
+GET | Mit ihr wird eine Ressource vom Server angefordert
+POST | Schickt Daten zur weiteren Verarbeitung zum Server  
+HEAD | Weist den Server an, die gleichen HTTP-Header wie bei GET, nicht jedoch den Nachrichtenrumpf mit dem eigentlichen Dokumentinhalt zu senden
+PUT | Dient dazu, eine Ressource auf einen Webserver hochzuladen. 
+PATCH | Ändert ein bestehendes Dokument ohne dieses wie bei PUT vollständig zu ersetzen.
+DELETE | Löscht die angegebene Ressource auf dem Server.
