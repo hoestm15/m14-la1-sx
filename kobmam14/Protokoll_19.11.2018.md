@@ -102,7 +102,7 @@ Hallo
 
 *Der Zusatz -l wird verwendet, um anzugeben, dass nc auf eine eingehende Verbindung achten soll, anstatt eine Verbindung zu einem Remote-Host herzustellen.*
 
-*-C wird benötigt um den Server einen regulären Zeilenvorschub als Carriage Return sehen zu lassen.* <br>
+*-C wird benötigt um den Server einen regulären Zeilenvorschub als Carriage Return sehen zu lassen.* <br> <br>
 
 Als nächstes haben wir eine Verbindung zum HTL-Mechatronik-Server hergestellt:
 
