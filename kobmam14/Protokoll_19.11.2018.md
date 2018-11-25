@@ -132,3 +132,25 @@ Content-Type: text/html
 </p>
 </body></html>
 ```
+
+## Was ist Typescript?
+>TypeScript ist eine Sprache für JavaScript im Anwendungsmaßstab. TypeScript fügt JavaScript optionale Typen hinzu, die Tools für umfangreiche JavaScript-Anwendungen für jeden Browser, jeden Host und jedes Betriebssystem unterstützen. TypeScript kompiliert zu lesbarem, standardbasiertem JavaScript.
+
+*[Typescript, npm](https://www.npmjs.com/package/typescript)*
+
+### Visual Studio Code
+Microsoft Visual Studio Code ist ein kostenloser, quelloffener Code-Editor zum Entwickeln und Debuggen moderner Cloud- und Webanwendungen. Er läuft unter Windows, Linux sowie macOS und bringt alles mit, was man zur Softwareentwicklung braucht.
+
+Für eine angenehmere Benützung können folgende Verzeichnisse angepasst werden:
+
+**package.json**
+Die package.json-Datei ist eine Art Manifest für ein Projekt. Es kann eine Menge Dinge tun, die völlig unabhängig voneinander sind. Es ist zum Beispiel ein zentrales Konfigurationsrepository für Tools. Dort werden auch die Namen und Versionen des installierten Pakets gespeichert.
+
+**tsconfig.json**
+Die Datei tsconfig.json ist für die Konfiguration des TypeScript-Compilers zuständig.
+
+**gulpfile.json**
+Das gulpfile ist für die Übersetzung zuständig.
+
+**tslint.json**
+TSLint ist ein erweiterbares statisches Analysewerkzeug, das TypeScript-Code auf Lesbarkeit, Wartbarkeit und Funktionsfehler überprüft. Es wird weitgehend von modernen Editoren und Build-Systemen unterstützt und kann mit Ihren eigenen Fusselregeln, Konfigurationen und Formatierungselementen angepasst werden.
