@@ -9,6 +9,7 @@
  Anwesend: Berger Emil, Böcksteiner Jakob, Bullner Jeremy, Ehmann Julian, Knappitsch Robert, Kobor Markus <br>
  Abwesend: Niemand <br> <br> <br>
  
+ 
 ## Was ist ein REST-Server?
 
 >Representational State Transfer (abgekürzt REST) bezeichnet ein Programmierparadigma für verteilte Systeme, insbesondere für Webservices. REST ist eine Abstraktion der Struktur und des Verhaltens des World Wide Web. REST hat das Ziel, einen Architekturstil zu schaffen, der die Anforderungen des modernen Web besser darstellt. Dabei unterscheidet sich REST vor allem in der Forderung nach einer einheitlichen Schnittstelle von anderen Architekturstilen.
@@ -18,6 +19,7 @@
 *[REST-Server, Wikipedia](https://de.wikipedia.org/wiki/Representational_State_Transfer)*
 
 REST-Server finden oft Gebrauch in der Web-Technologie, wo über HTTP kommuniziert wird.
+
 
 ## HTTP
 
@@ -36,6 +38,8 @@ Für den Aufbau einer Verbindung sendet der Client, der eine Verbindung aufbauen
 Der Server empfängt das Paket, bestätitgt den Erhalt des ersten SYN-Pakets und stimmt dem Verbindungsaufbau zu, indem er ein SYN/ACK-Paket zurückschickt (ACK von engl. acknowledgement ‚Bestätigung‘).
 Der Client bestätigt zuletzt den Erhalt des SYN/ACK-Pakets durch das Senden eines eigenen ACK-Pakets.
 Die Verbindung ist damit aufgebaut.
+
+![Aufbau einer Verbindung](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/Tcp-handshake.svg)
 
 Einmal aufgebaut, ist die Verbindung für beide Kommunikationspartner gleichberechtigt, das heißt man kann der Verbindung nicht ansehen, wer der Server und wer der Client ist. Daher hat eine Unterscheidung dieser beiden Rollen in der weiteren Betrachtung keine Bedeutung mehr.
 
@@ -58,9 +62,10 @@ Statuscode | Erklärung
 
 Hier noch eine vollständige Liste mit allen *[HTTP-Statuscodes](https://httpstatuses.com/)*.
 
+
 ## Ablauf der Übung
 
-Unsere erste Aufgabe war es eine Verbindung zu einem Server aufzubauen.
+Unsere erste Aufgabe war es eine Verbindung zu einem Server aufzubauen. <br>
 Dies haben wir zuerst über den Localhost realisiert:  
 
 ```
@@ -143,14 +148,14 @@ Microsoft Visual Studio Code ist ein kostenloser, quelloffener Code-Editor zum E
 
 Für eine angenehmere Benützung können folgende Verzeichnisse angepasst werden:
 
-**package.json**
+#### package.json
 Die package.json-Datei ist eine Art Manifest für ein Projekt. Es kann eine Menge Dinge tun, die völlig unabhängig voneinander sind. Es ist zum Beispiel ein zentrales Konfigurationsrepository für Tools. Dort werden auch die Namen und Versionen des installierten Pakets gespeichert.
 
-**tsconfig.json**
+#### tsconfig.json
 Die Datei tsconfig.json ist für die Konfiguration des TypeScript-Compilers zuständig.
 
-**gulpfile.json**
+#### gulpfile.json
 Das gulpfile ist für die Übersetzung zuständig.
 
-**tslint.json**
+#### tslint.json
 TSLint ist ein erweiterbares statisches Analysewerkzeug, das TypeScript-Code auf Lesbarkeit, Wartbarkeit und Funktionsfehler überprüft. Es wird weitgehend von modernen Editoren und Build-Systemen unterstützt und kann mit Ihren eigenen Fusselregeln, Konfigurationen und Formatierungselementen angepasst werden.
