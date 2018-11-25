@@ -21,3 +21,41 @@ Schlüsselwörter für den Request:
 * **PUT**     -> Erstellen von neuen Inhalten auf dem Server
 * **DELETE**  -> Löschen von Inhalten
 
+Mit dem **nc** Tool kann man eine GET-Anfrage an einen Server senden. Es folgt ein Beispiel in der der Client( in dem Fall wir) eine Anfrage macht und der Server antwortet.
+
+```   
+boecki@boecki_T470s:~$ nc htl-mechatronik.at 80 -C
+GET /infotext.html HTTP/1.1
+Host: www.htl-mechatronik.at
+```  
+Der Server hat die anfrage erhalten so sieht zum Beispiel eine Antwort eines Servers aus.
+
+```
+HTTP/1.1 200 OK
+Date: Mon, 15 Oct 2018 08:48:04 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Last-Modified: Tue, 06 Jan 2015 08:13:36 GMT
+ETag: "1e9-50bf76235166b"
+Accept-Ranges: bytes
+Content-Length: 489
+Vary: Accept-Encoding
+Keep-Alive: timeout=10, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+
+<html>
+<head>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf->
+<title>HTBLA Kaindorf Abteilung Mechatronik - Server Arnfels</title>
+<body LANG="de-DE" DIR="LTR">
+</head>
+<h1>HTBLA Kaindorf<h1>
+<h2> Abteilung Mechatronik - Server Arnfels</h2>
+<p>
+<!--
+<IMG SRC="gif/under_construction.gif" NAME="Grafik1" ALIGN=LEFT WIDTH=404 HEIGHT=312 BORDER=0><BR><BR>
+-->
+<a href="http://www.htl-kaindorf.at/mechatronik">http://www.htl-kaindorf.at/mechatronik</a>
+</p>
+</body></html>  
+```  
