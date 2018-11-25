@@ -24,7 +24,7 @@ Schlüsselwörter für den Request:
 Mit dem **nc** Tool kann man eine GET-Anfrage an einen Server senden. Es folgt ein Beispiel in der der Client( in dem Fall wir) eine Anfrage macht und der Server antwortet.
 
 ```   
-boecki@boecki_T470s:~$ nc htl-mechatronik.at 80 -C
+boecki@boecki-T470s:~$ nc htl-mechatronik.at 80 -C
 GET /infotext.html HTTP/1.1
 Host: www.htl-mechatronik.at
 ```  
