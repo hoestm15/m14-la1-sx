@@ -47,3 +47,13 @@ HEAD | Weist den Server an, die gleichen HTTP-Header wie bei GET, nicht jedoch d
 PUT | Dient dazu, eine Ressource auf einen Webserver hochzuladen. 
 PATCH | Ändert ein bestehendes Dokument ohne dieses wie bei PUT vollständig zu ersetzen.
 DELETE | Löscht die angegebene Ressource auf dem Server.
+
+Statuscode | Erklärung  
+---------- | ------------
+1xx | Informationen (Die Bearbeitung der Anfrage dauert trotz der Rückmeldung noch an.)
+2xx | Erfolgreiche Operation (Die Anfrage wurde bearbeitet und die Antwort wird an den Anfragesteller zurückgesendet.)
+3xx | Umleitung (Um eine erfolgreiche Bearbeitung der Anfrage sicherzustellen, sind weitere Schritte seitens des Clients erforderlich.)
+4xx | Client-Fehler (Bei der Bearbeitung der Anfrage ist ein Fehler aufgetreten, der im Verantwortungsbereich des Clients liegt.)
+5xx | Server-Fehler (Es ist ein Fehler aufgetreten, dessen Ursache beim Server liegt.)
+
+Hier noch eine vollständige Liste mit allen *[ HTTP-Statuscodes](https://httpstatuses.com/)*
