@@ -80,7 +80,7 @@ In dieser Datei wird die Programmierumgebung mit dem gulp-tool verknüpft.
 ```
 ## launch.json
 Diese Datei konfiguriert was bei der Anwendung des Debuggers passieren soll.
-```
+```json
 {
     "version": "0.2.0",
     "configurations": [
@@ -103,7 +103,7 @@ Diese Datei konfiguriert was bei der Anwendung des Debuggers passieren soll.
 ```
 ## keybindings.json
 In dieser Datei können Tastenkützel zu bestimmten Vorgängen zugewiesen werden.
-```
+```json
  [
     {
         "key": "ctrl+alt+v",
@@ -122,6 +122,13 @@ In dieser Datei können Tastenkützel zu bestimmten Vorgängen zugewiesen werden
 ]
 ```
 # REST-Server
+In dieser Einheit wurde der Server soweit erweitert, dass der Server bereits auf verschiedene Anfragen reagieren kann und auf diese sinnvoll antwortet. In unserem Beispiel kann mit der HTL-ID der Name des Schülers angefragt werden.
+## Anwendung
+Um den REST-Server zu verwenden muss er zuerst gestartet werden. Danach kann mit der url http://localhost:8080/student?htlid=suspam14 die Handlermethode für die Ausgabe eines Schülers aufgerufen werden, welche eine Antwort mit den Daten des Schülers an den Browser schickt. Die Antort würde `{htlid: 'suspam14', surname: 'Schuster', firstname: 'Patrick'}` lauten.
+## Funktionsweise
+Nach dem starten des Servers warten dieser auf eine Anfrage. Sobald eine Anfrage kommt wird im Konstruktur die passende Handlermethode aufgerufen. Wenn z.B. eine Anfrage mit `/status` kommt wird mit dieser Zeile Quellcode die Handlermethode aufgerufen `this.server.get('/status', (req, resp) => this.handleGetStatus(req, resp));`. Die Parameter *req* und *resp* werden durch den Arrow Operator an die *handleGetStatus* Methode weitergegeben.
+Wenn eine Anfrage mit `/student` kommt wird die *handleGetStudent* Methode aufgerufen. Wenn eine Anfrage, die keiner Handler Methode zugewiesen werden kann, kommt wird die Methode *HandleGet* aufgerufen die anschließend eine Fehlermeldung zurückgibt.
+## Quelltext
 ```typescript
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
