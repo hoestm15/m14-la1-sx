@@ -58,3 +58,77 @@ Statuscode | Erklärung
 
 Hier noch eine vollständige Liste mit allen *[HTTP-Statuscodes](https://httpstatuses.com/)*.
 
+## Ablauf der Übung
+
+Unsere erste Aufgabe war es eine Verbindung zu einem Server aufzubauen.
+Dies haben wir zuerst über den Localhost realisiert:  
+
+```
+kobi@MarkusPC:~$ nc -l -C 4711
+GET /favicon.ico HTTP/1.1
+Host: localhost:4711
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+HTTP/1.1 200 OK
+Server: Apache/1.3.29
+Content length: 5
+Content-Language: de 
+Connection: close               
+Content-Type: text/html
+
+Hallo
+```
+
+Das Tool nc (oder netcat) kann TCP-Verbindungen öffnen, UDP-Pakete senden, beliebige TCP- und UDP-Ports abhören, Port-Scans durchführen und sowohl mit IPv4 als auch mit IPv6 umgehen.
+
+Der Zusatz -l wird verwendet, um anzugeben, dass nc auf eine eingehende Verbindung achten soll, anstatt eine Verbindung zu einem Remote-Host herzustellen.
+
+-C wird benötigt um den Server einen regulären Zeilenvorschub als Carriage Return sehen zu lassen.
+
+Als nächstes haben wir eine Verbindung zum HTL-Mechatronik-Server hergestellt:
+
+```
+kobi@MarkusPC:~$ nc -C www.htl-mechatronik.at 80
+GET / HTTP/1.1
+Host: www.htl-mechatronik.at:80
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+Accept-Encoding: deflate
+Upgrade-Insecure-Requests: 1
+Hallo
+```
+
+Die erhaltene Antwort sah wie folgt aus:
+
+```
+HTTP/1.1 200 OK
+Date: Mon, 19 Nov 2018 07:59:45 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Last-Modified: Tue, 06 Jan 2015 08:13:36 GMT
+ETag: "1e9-50bf76235166b"
+Accept-Ranges: bytes
+Content-Length: 489
+Vary: Accept-Encoding
+Content-Type: text/html
+
+<html>
+<head>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+<title>HTBLA Kaindorf Abteilung Mechatronik - Server Arnfels</title>
+<body LANG="de-DE" DIR="LTR">
+</head>
+<h1>HTBLA Kaindorf<h1>
+<h2> Abteilung Mechatronik - Server Arnfels</h2>
+<p>
+<!--
+<IMG SRC="gif/under_construction.gif" NAME="Grafik1" ALIGN=LEFT WIDTH=404 HEIGHT=312 BORDER=0><BR><BR>
+-->
+<a href="http://www.htl-kaindorf.at/mechatronik">http://www.htl-kaindorf.at/mechatronik</a>
+</p>
+</body></html>
+```
