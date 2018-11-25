@@ -14,7 +14,7 @@
 
 >Representational State Transfer (abgekürzt REST) bezeichnet ein Programmierparadigma für verteilte Systeme, insbesondere für Webservices. REST ist eine Abstraktion der Struktur und des Verhaltens des World Wide Web. REST hat das Ziel, einen Architekturstil zu schaffen, der die Anforderungen des modernen Web besser darstellt. Dabei unterscheidet sich REST vor allem in der Forderung nach einer einheitlichen Schnittstelle von anderen Architekturstilen.
 
->Der Zweck von REST liegt schwerpunktmäßig auf der Maschine-zu-Maschine-Kommunikation.
+>Der Zweck von REST liegt schwerpunktmäßig auf der **Maschine-zu-Maschine-Kommunikation**.
 
 *[REST-Server, Wikipedia](https://de.wikipedia.org/wiki/Representational_State_Transfer)*
 
@@ -27,11 +27,11 @@ REST-Server finden oft Gebrauch in der Web-Technologie, wo über HTTP kommunizie
 
 *[HTTP, Wikipedia](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)*
 
-In HTTP kommuniziert ein Client mit einem Server über Nachrichten, von denen es zwei unterschiedliche Arten gibt:
-Die Anfrage (Request) vom Client und die Antwort (Response) als Reaktion darauf vom Server.
+In HTTP kommuniziert ein **Client** mit einem **Server** über Nachrichten, von denen es zwei unterschiedliche Arten gibt:
+Die Anfrage (**Request**) vom Client und die Antwort (**Response**) als Reaktion darauf vom Server.
 
 Eine Nachricht besteht bdabei aus zwei Teilen:
-Dem Nachrichtenkopf (Header) und dem Nachrichtenrumpf (Body).
+Dem Nachrichtenkopf (**Header**) und dem Nachrichtenrumpf (**Body**).
 Im Header sind Informationen über den Body, wie zum Beispiel verwendete Kodierungen enthalten, während sich im Body der eigentliche Inhalt befindet.
 
 Für den Aufbau einer Verbindung sendet der Client, der eine Verbindung aufbauen will,dem Server ein SYN-Paket (von englisch synchronize).
@@ -39,7 +39,7 @@ Der Server empfängt das Paket, bestätitgt den Erhalt des ersten SYN-Pakets und
 Der Client bestätigt zuletzt den Erhalt des SYN/ACK-Pakets durch das Senden eines eigenen ACK-Pakets.
 Die Verbindung ist damit aufgebaut.
 
-![Aufbau einer Verbindung](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/Tcp-handshake.svg)
+![Aufbau einer Verbindung](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/Tcp-handshake.png)
 
 Einmal aufgebaut, ist die Verbindung für beide Kommunikationspartner gleichberechtigt, das heißt man kann der Verbindung nicht ansehen, wer der Server und wer der Client ist. Daher hat eine Unterscheidung dieser beiden Rollen in der weiteren Betrachtung keine Bedeutung mehr.
 
@@ -88,13 +88,13 @@ Content-Type: text/html
 Hallo
 ```
 
-Das Tool nc (oder netcat) kann TCP-Verbindungen öffnen, UDP-Pakete senden, beliebige TCP- und UDP-Ports abhören, Port-Scans durchführen und sowohl mit IPv4 als auch mit IPv6 umgehen.
+*Das Tool nc (oder netcat) kann TCP-Verbindungen öffnen, UDP-Pakete senden, beliebige TCP- und UDP-Ports abhören, Port-Scans durchführen und sowohl mit IPv4 als auch mit IPv6 umgehen.*
 
-Der Zusatz -l wird verwendet, um anzugeben, dass nc auf eine eingehende Verbindung achten soll, anstatt eine Verbindung zu einem Remote-Host herzustellen.
+*Der Zusatz -l wird verwendet, um anzugeben, dass nc auf eine eingehende Verbindung achten soll, anstatt eine Verbindung zu einem Remote-Host herzustellen.*
 
--C wird benötigt um den Server einen regulären Zeilenvorschub als Carriage Return sehen zu lassen.
+*-C wird benötigt um den Server einen regulären Zeilenvorschub als Carriage Return sehen zu lassen.*
 
-Als nächstes haben wir eine Verbindung zum HTL-Mechatronik-Server hergestellt:
+*Als nächstes haben wir eine Verbindung zum HTL-Mechatronik-Server hergestellt:*
 
 ```
 kobi@MarkusPC:~$ nc -C www.htl-mechatronik.at 80
