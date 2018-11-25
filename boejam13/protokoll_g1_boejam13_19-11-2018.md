@@ -11,6 +11,9 @@ Wichtigtste prinzipien des REST-Servers:
 * Zustandslos  
 * Client/Server  
 * Einheitliche Schnittstelle 
+* Mehrschichtige Systeme
+
+Weitere Infos zum REST-Server: [Link](https://de.wikipedia.org/wiki/Representational_State_Transfer)
 
 ## HTTP Server/Client
 *HTTP* steht für **H**yper**T**ext **T**ransfer **P**rotokoll. Unter Server/Client versteht man die Aufteilung von Aufgaben auch einem Server-Programm und einem Client-Programm, diese Tauschen Daten über das Netzwerk aus. Der Client sendet einen **Request** an den Server und der Server antwortet mit einem **Respond**. Wichtig Server und CLient sind nicht zwingend zwei verschiedene Rechner!
@@ -72,8 +75,10 @@ Statuscode | Bedeutung
 5xx | Fehler des Servers    
 
 
-Weitere Informationen zu HTTP kann man hier nachlesen. [Link](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
+Weitere Infos zu HTTP: [Link](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
 
 ## Typescript
 
 Typeskript ist eine von Microsoft entwickelte Programmiersprache und basiert auf JavaScript. Der TypeScript-Code wird daher vor dem Ausführen in einem JavaScript-Code **transpiliert**. Der hauptgrund für die verwendung von Typescript ist, dass es in Javascript ansich keine Datentypen gibt, dadurch wird die Fehlersuche erschwert.
+
+Weitere Infos zu Typescript: [Link](https://de.wikipedia.org/wiki/TypeScript)
