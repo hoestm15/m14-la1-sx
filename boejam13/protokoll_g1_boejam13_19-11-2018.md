@@ -59,3 +59,14 @@ Content-Type: text/html
 </p>
 </body></html>  
 ```  
+
+### Statuscodes
+Ein Server Response enthält immer einen Statuscode. 
+
+Statuscode | Bedeutung
+---------- | ---------
+1xx | Bearbeitung der Anfrage in Arbeit
+2xx | Erfolgreiche
+3xx | Weitere Schritte des Clients nötig
+4xx | Fehler des Clients
+5xx | Fehler des Servers    
