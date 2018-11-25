@@ -102,9 +102,9 @@ Hallo
 
 *Der Zusatz **-l** wird verwendet, um anzugeben, dass nc auf eine eingehende Verbindung achten soll, anstatt eine Verbindung zu einem Remote-Host herzustellen.*
 
-**-C** *wird benötigt um den Server einen regulären Zeilenvorschub als Carriage Return sehen zu lassen.* <br> <br>
+**-C** *wird benötigt um den Server einen regulären Zeilenvorschub als Carriage Return sehen zu lassen.*
 
-*Mit **keep-alive** kann der Client dem Server sagen, dass die Verbindung nach der Antwort nicht abgebaut werden soll und weitere Anfragen sequentiell folgen können. Die Verbindung bleibt solange bestehen, bis eine der beiden Seiten die TCP-Verbindung abbaut.
+*Mit **keep-alive** kann der Client dem Server sagen, dass die Verbindung nach der Antwort nicht abgebaut werden soll und weitere Anfragen sequentiell folgen können. Die Verbindung bleibt solange bestehen, bis eine der beiden Seiten die TCP-Verbindung abbaut.* <br> <br>
 
 Als nächstes haben wir eine Verbindung zum HTL-Mechatronik-Server hergestellt:
 
