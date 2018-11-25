@@ -29,6 +29,8 @@ Wir benutzen das **nc**-Tool um eine Anfrage mit GET zu senden.
 
 # Typescript
 Typeskript ist eine von Microsoft entwickelte Programmiersprache und basiert auf JavaScript. Der TypeScript-Code wird daher vor dem Ausführen in einem JavaScript-Code transpiliert.   
-Unter Transpelieren, das Ähnlichkeit mit dem Wort Compelieren hat, versteht man die umwandlung einer **T**ype**S**cript Datei (***.ts**) in eine **J**ava**S**cript Datei (***.js**).
-Um Typscript zu installieren führten wir den Befehl `npm install --save-dev typescript` aus. Durch diesen Befehl wird Typescript im Projektordner fürs entwickeln installiert und wird nicht für das fertige Programm verwendet (Typescript wird zu Javascript übersetzt. Javascript wird zu Ausführung benötigt). 
+Unter Transpelieren, das Ähnlichkeit mit dem Wort Compelieren hat, versteht man die umwandlung einer **T**ype**S**cript Datei (***.ts**) in eine **J**ava**S**cript Datei (***.js**).  
+Da einige von uns nicht bei Herr Prof. Steiner in Fivu sind mussten diese ca. 4-5 Personen noch Visual-Studio und sämtliche andere benötigten Datein und Programme herunterladen.
+Um Typscript zu installieren führten wir den Befehl `npm install --save-dev typescript` aus. Durch diesen Befehl wird Typescript im Projektordner fürs entwickeln installiert und wird nicht für das fertige Programm verwendet (Typescript wird zu Javascript übersetzt. Javascript wird zu Ausführung benötigt).  
+Weiters haben einige Schüler unserer Gruppe das Framework *Express* mit dem Befehl `npm install --save express` installiert. Dieses uns hilfreiche Werkzeuge für die Programmierung zu verfügung stellt. Es mussten deshalb nur einige Schüler installieren, da ein paar wenige diese Arbeiten bereits in Fivu gemacht haben.
 
