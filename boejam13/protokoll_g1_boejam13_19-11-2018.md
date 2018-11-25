@@ -15,3 +15,9 @@ Wichtigtste prinzipien des REST-Servers:
 ## HTTP Server/Client
 *HTTP* steht für **H**yper**T**ext **T**ransfer **P**rotokoll. Unter Server/Client versteht man die Aufteilung von Aufgaben auch einem Server-Programm und einem Client-Programm, diese Tauschen Daten über das Netzwerk aus. Der Client sendet einen **Request** an den Server und der Server antwortet mit einem **Respond**. Wichtig Server und CLient sind nicht zwingend zwei verschiedene Rechner!
 
+Schlüsselwörter für den Request:
+* **GET**     -> Inhalte vom Server fordern
+* **POST**    -> Übermitteln von Inhalten
+* **PUT**     -> Erstellen von neuen Inhalten auf dem Server
+* **DELETE**  -> Löschen von Inhalten
+
