@@ -24,8 +24,50 @@ Für den Request vom Client gibt es einige Schlüsselwörter:
 * **GET** -> Fordert Inhalte vom Serveran  
 * **POST** -> Mit diesem Schlüsselwort kann man Daten ändern  
 * **PUT** -> Hiermit kann man neue Dateien erstellen   
-* **DELETE** -> Löscht Inhalte
-Wir benutzen das **nc**-Tool um eine Anfrage mit GET zu senden.
+* **DELETE** -> Löscht Inhalte  
+
+## Keep-Alive Pakete
+Wenn eine Verbinndung zwischen Server und Client besteht werden nicht dauerhaft Pakete übertragen. Um zu verhindern, dass der Server die Verbindung aufgrund einer Überschreitung der Zeit abbricht kann der Client sogennante *Keep-Alive-Pakete* schicken um dem Server damit mitzuteilen, dass er immernoch "lebt" und die Verbindung aufrecht erhalten will.  
+
+
+Wir benutzen das **nc**-Tool um eine Anfrage mit GET zu senden. Im Folgenden Beispiel wird zuerst die Eingabe des Users (also uns) und dann die Antwort des Servers.
+```   
+aspirev17-julia:~$ nc htl-mechatronik.at 80 -C
+GET /infotext.html HTTP/1.1
+Host: www.htl-mechatronik.at
+```  
+
+Bekommt ein Server eine Anfrage von einem Client schickt der Server eine Antwort zum Client zurück.     
+
+```
+HTTP/1.1 200 OK
+Date: Mon, 19 Nov 2018 08:48:24 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Last-Modified: Tue, 06 Jan 2015 08:13:56 GMT
+ETag: "1e9-50bf76235166b"
+Accept-Ranges: bytes
+Content-Length: 489
+Vary: Accept-Encoding
+Keep-Alive: timeout=10, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+
+<html>
+<head>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf->
+<title>HTBLA Kaindorf Abteilung Mechatronik - Server Arnfels</title>
+<body LANG="de-DE" DIR="LTR">
+</head>
+<h1>HTBLA Kaindorf<h1>
+<h2> Abteilung Mechatronik - Server Arnfels</h2>
+<p>
+<!--
+<IMG SRC="gif/under_construction.gif" NAME="Grafik1" ALIGN=LEFT WIDTH=404 HEIGHT=312 BORDER=0><BR><BR>
+-->
+<a href="http://www.htl-kaindorf.at/mechatronik">http://www.htl-kaindorf.at/mechatronik</a>
+</p>
+</body></html>  
+```  
 
 # Typescript
 Typeskript ist eine von Microsoft entwickelte Programmiersprache und basiert auf JavaScript. Der TypeScript-Code wird daher vor dem Ausführen in einem JavaScript-Code transpiliert.   
