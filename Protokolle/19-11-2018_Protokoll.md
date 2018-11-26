@@ -61,7 +61,7 @@ CONNECT | wird von Proxyservern implementiert, die in der Lage sind, SSL-Tunnel 
 ### Statuscodes
 Statuscode | Beschreibung
 ---------- | ------------
-1xx | Informaton
+1xx | Informationen
 2xx | erfolgreiche Anfrage/Operation
 3xx | Umleitung and eine andere Adresse
 4xx | Client-Fehler
@@ -165,7 +165,7 @@ Content-Type: text/html
   Der unterschied zwischen den beiden sprachen ist das bei Typescript Datentypen verwendet werden und bei Javascript nicht welches dort zu vielen problemen führen kann. Typescript muss in JavaScript Transpiliert werden.
    
    ### Tasks
-   Tasks sind dazu da um die einzelnen Schritte des transpilierens zu automatisieren. In diesen ist definiert was zu tun ist, wenn wie in Visual Studio Code ein Projekt Compilieren oder nur einen build erstellen.
+   Tasks sind dazu da um die einzelnen Schritte des transpilierens zu automatisieren. In diesen ist definiert was zu tun ist, wenn wir in Visual Studio Code ein Projekt Compilieren oder nur einen build erstellen.
    
   ### Lint
   Lint wird dazu verwendet um auf die Formatierung des Codes zu achten. Es weißt einen darauf hin das man zu viele Zeichen in einer Zeile benutzt hat oder anderes. Um dies zu verwenden muss man ein PlugIn installieren.
