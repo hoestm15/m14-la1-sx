@@ -2,7 +2,7 @@
 ## 1.Einheit
 ## Thema: REST Server
 Klasse: 5AHME  
-Anwesend: Berger, Böcksteiner, Bullner, Ehmann, Enzi, Kobor, Knappitsch, Köhler
+Anwesend: Berger, Böcksteiner, Bullner, Ehmann, Kobor, Knappitsch, Köhler  
 Abwesend: niemand
 
 ## Rest Server
