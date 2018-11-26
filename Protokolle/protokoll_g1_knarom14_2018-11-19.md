@@ -146,7 +146,16 @@ Microsoft Visual Studio Code ist ein freier Quelltext-Editor, welcher plattform�
 [Quelle: Wikipedia - Node.js](https://de.wikipedia.org/wiki/Node.js)
 
 ### Projekt
-Vom Git-Server Arnfels haben wir die [Rest-Server-Template](https://www.htl-mechatronik.at/gitweb/m14/?p=sx-la1.git;a=commit;h=a8dbc871d4fee14c3a3551867c334645403a8d5a) geholt und im VSCode geöffnet
+Vom Git-Server Arnfels haben wir die [Rest-Server-Template](https://www.htl-mechatronik.at/gitweb/m14/?p=sx-la1.git) geholt und im VSCode geöffnet. Dort haben wir uns die enthaltenen Dateien angesehen.
+* tslint.json: zuständig für Code-Formatierung
+* tsconfig.json: Konfiguration des TypeScript-Compilers
+* package.json: fungiert als eine Art Manifest
+* gulpfile.json: zuständing für die Übersetzung
+* .vscode:
+  * tasks.json: automatisiert gewisse Vorgänge in VSCode
+  * settings.json: hier werden Einstellungen gespeichert
+  * ...
+
 
 
 
