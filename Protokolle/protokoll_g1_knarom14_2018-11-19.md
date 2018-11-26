@@ -2,7 +2,7 @@
 ## 1. Einheit: REST-Server
 
 * 5AHME (Gruppe 1)
-* 19.11.2018
+* Datum: 19.11.2018
 * Anwesend: Berger Emil, Böcksteiner Jakob, Bullner Jeremy, Ehmann Julian, Knappitsch Robert, Kobor Markus, Köhler Marcel
 * Abwesend: -
 
