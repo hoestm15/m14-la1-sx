@@ -66,3 +66,104 @@ Statuscode | Beschreibung
 3xx | Umleitung and eine andere Adresse
 4xx | Client-Fehler
 5xx | Server-Fehler
+
+
+## Übungen mithilfe des Terminals
+Es soll eine Verbindung mit dem Server in Arnfels hergestellt werden. Dazu haben wir das *nc*-Tool verwendet.
+
+Wir erstellten eine Verbindung im Terminal die wie folgt aussieht:
+`nc www.htl-mechatronik.at 80`
+
+Anschließend machten wir eine GET-Anfrage welche so aussieht:
+`GET / HTTP/1.1`
+
+Als antwort haben wir folgendes bekommen:
+```
+HTTP/1.1 400 Bad Request
+Date: Mon, 26 Nov 2018 05:13:53 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Content-Length: 313
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at www.htl-mechatronik.at Port 80</address>
+</body></html>
+```
+
+Unsere Anfrage war fehlerhaft weswegen wir daraufhin eine Verbindung mit dem localhost hergestellt haben, um zu sehen wie eine korrekte Antwort aussieht.
+`nc -l 4711`
+
+
+
+```
+Host: localhost:4711
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0
+Accept-Language: de-at
+DNT: 1
+Accept-Encoding: gzip, deflate
+```
+Nun haben wir unsere Anfrage zum HTL Server so verändert das auch dieser sie versteht.
+`nc -C www.htl-mechatronik.at 80`
+
+```
+Host: www.htl-mechatronik.at
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: de-at
+DNT: 1
+Accept-Encoding: deflate
+```
+
+Als Antwort haben wir folgendes bekommen:
+  ```
+Date: Sun, 25 Nov 2018 18:41:23 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Last-Modified: Tue, 06 Jan 2015 08:13:36 GMT
+ETag: "1e9-50bf76235166b"
+Accept-Ranges: bytes
+Content-Length: 489
+Vary: Accept-Encoding
+Keep-Alive: timeout=10, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+
+<html>
+<head>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+<title>HTBLA Kaindorf Abteilung Mechatronik - Server Arnfels</title>
+<body LANG="de-DE" DIR="LTR">
+</head>
+<h1>HTBLA Kaindorf<h1>
+<h2> Abteilung Mechatronik - Server Arnfels</h2>
+<p>
+<!--
+<IMG SRC="gif/under_construction.gif" NAME="Grafik1" ALIGN=LEFT WIDTH=404 HEIGHT=312 BORDER=0><BR><BR>
+-->
+<a href="http://www.htl-kaindorf.at/mechatronik">http://www.htl-kaindorf.at/mechatronik</a>
+</p>
+</body></html>
+  ```
+  
+  # Visual Studio Code 
+  
+  # Typescript
+  
+  ## settings.json
+  
+  ## tsconfig.json
+  
+  
+  
