@@ -6,7 +6,7 @@ Anwesend: Berger, Böcksteiner, Bullner, Ehmann, Enzi, Kobor, Knappitsch, Köhle
 Abwesend: niemand
 
 ## Rest Server
-Ein REST-Server ist ein Server der für die Maschine-zu-Maschine Kommunikation verwendet wird. Der Architekturstile verweist auf 6 Einstellungen/Prinzipien die ein Dienst haben muss wobei nicht festgelegt ist wie diese Implementiert werden.
+Ein REST-Server ist ein Server der für die Maschine-zu-Maschine Kommunikation verwendet wird. Der Architekturstiel verweist auf 6 Einstellungen/Prinzipien die ein Dienst haben muss wobei nicht festgelegt ist wie diese Implementiert werden.
 
 ### Die 6 Prinzipien
 #### Client-Server
