@@ -56,10 +56,17 @@ HTTP/1.1 404 Not Found
 
 ### Unterschied zwischen HTTP/1.0 und HTTP/1.1
 * **1.0:** Vor jeder Anfrage wird eine neue Verbindung aufgebaut und danach wieder vom Server geschlossen.
-* **1.1:** Der zusätzlichen Headereintrag(Keepalive) ermöglicht das Wiederverwenden der Verbindung.
+* **1.1:** Der zusätzlichen Headereintrag(Keepalive) ermöglicht das Wiederverwenden der Verbindung.N
+
+## NC(netcat)
+> Netcat, auch nc genannt, ist ein einfaches Werkzeug, um Daten von der Standardein- oder -ausgabe über Netzwerkverbindungen zu transportieren. Es arbeitet als Server oder Client mit den Protokollen TCP und UDP. Die Manpage bezeichnet es als TCP/IP swiss army knife (Schweizer Taschenmesser für TCP/IP).
+[Quelle: Wikipedia - Netcat](https://de.wikipedia.org/wiki/Netcat)
 
 ## Übung
-Mit dem Tool **nc**(netcat) haben wir einen Server über localhost gestartet und mit einem Web-Browser darauf zugegriffen.
+Mit dem Tool **nc** haben wir einen Server über localhost gestartet und mit einem Web-Browser darauf zugegriffen. 
+* -l: legt fest, dass nc die Rolle des Servers übernehmen soll
+* -C: ermöglicht das Lesen regulären Zeilenvorschub als Carriage Return (ansonsten wird die Antwort nach der ersten Zeile abgebrochen)
+* 4711: Port
 ```
 robert@robert-Aspire-E5-771G:~$ nc -l -C 4711
 GET / HTTP/1.1
@@ -83,6 +90,43 @@ Content-Type: text/html
 
 Hallo
 ```
+Als nächstes bauten wir eine Verbindung zu [http://www.htl-mechatronik.at](http://www.htl-mechatronik.at/) aufgebaut.
+```
+robert@robert-Aspire-E5-771G:~$ nc -C www.htl-mechtronik.at 80
+GET / HTTP/1.1
+Host: www.htl-mechatronik.at:80
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36
+Accept: text/html
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+Accept-Encoding: deflate
+```
+Vom Server haben wir folgende Antwort erhalten:
+```
+HTTP/1.1 200 OK
+Date: Mon, 19 Nov 2018 07:59:45 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Last-Modified: Tue, 06 Jan 2015 08:13:36 GMT
+ETag: "1e9-50bf76235166b"
+Accept-Ranges: bytes
+Content-Length: 489
+Vary: Accept-Encoding
+Content-Type: text/html
 
+<html>
+<head>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+<title>HTBLA Kaindorf Abteilung Mechatronik - Server Arnfels</title>
+<body LANG="de-DE" DIR="LTR">
+</head>
+<h1>HTBLA Kaindorf<h1>
+<h2> Abteilung Mechatronik - Server Arnfels</h2>
+<p>
+<!--
+<IMG SRC="gif/under_construction.gif" NAME="Grafik1" ALIGN=LEFT WIDTH=404 HEIGHT=312 BORDER=0><BR><BR>
+-->
+<a href="http://www.htl-kaindorf.at/mechatronik">http://www.htl-kaindorf.at/mechatronik</a>
+</p>
+</body></html>
+```
 
 
