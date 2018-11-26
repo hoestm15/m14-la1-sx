@@ -35,7 +35,7 @@ Unter Code on Demand ist zu verstehen, dass erst im Bedarfsfall an den Client Co
 *[Quelle: Wikipedia HTTP](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
 
 ### Funktionsweise
-HTTP funktioniert nach dem Request-Response-System. Hierbei sendet der Client eine Anfrage zum Server der diese wiederum benatwortet. HTTPS funktioniert auf der selben weiße nur das vor dem senden der Anfrage zuerst mit dem öffintlichen Schlüssel des Server verschlüsselt wird.
+HTTP funktioniert nach dem Request-Response-System. Hierbei sendet der Client eine Anfrage zum Server der diese wiederum beantwortet. 
 
 ### Anfragenaufbau
 HTTP Pakete bestehen aus 2 Teilen, dem **Body**  und dem **Header**.
