@@ -1,7 +1,7 @@
 # Protokoll: Marcel Köhler
 ## 1.Einheit
 ## Thema: REST Server
-Klasse: 4AHME  
+Klasse: 5AHME  
 Anwesend: Berger, Böcksteiner, Bullner, Ehmann, Enzi, Kobor, Knappitsch, Köhler
 Abwesend: niemand
 
