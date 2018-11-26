@@ -56,7 +56,7 @@ HTTP/1.1 404 Not Found
 
 ### Unterschied zwischen HTTP/1.0 und HTTP/1.1
 * **1.0:** Vor jeder Anfrage wird eine neue Verbindung aufgebaut und danach wieder vom Server geschlossen.
-* **1.1:** Der zusätzlichen Headereintrag(Keepalive) ermöglicht das Wiederverwenden der Verbindung.N
+* **1.1:** Der zusätzlichen Header-Eintrag "Keepalive" ermöglicht das Wiederverwenden der Verbindung.N
 
 ## NC(netcat)
 > Netcat, auch nc genannt, ist ein einfaches Werkzeug, um Daten von der Standardein- oder -ausgabe über Netzwerkverbindungen zu transportieren. Es arbeitet als Server oder Client mit den Protokollen TCP und UDP. Die Manpage bezeichnet es als TCP/IP swiss army knife (Schweizer Taschenmesser für TCP/IP).
