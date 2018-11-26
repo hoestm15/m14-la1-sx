@@ -156,14 +156,28 @@ Content-Type: text/html
 </p>
 </body></html>
   ```
+   
+   ## Visual Studio Code
+   Visual Studio Code ist eine IDE welche von Microsoft entwickelt wird. In dieser kann man je nach installierten PlugIns viele verschiedene programmiersprachen verwenden. 
+   
+  ## Typescript
+  Typescript ist eine Skript-Sprache die zur verwendunt von Webanwendungen verwendet wird. Sie stammt von JavaScript.
+  Der unterschied zwischen den beiden sprachen ist das bei Typescript Datentypen verwendet werden und bei Javascript nicht welches dort zu vielen problemen führen kann. Typescript muss in JavaScript Transpiliert werden.
+   
+   ### Tasks
+   Tasks sind dazu da um die einzelnen Schritte des transpilierens zu automatisieren. In diesen ist definiert was zu tun ist, wenn wie in Visual Studio Code ein Projekt Compilieren oder nur einen build erstellen.
+   
+  ### Lint
+  Lint wird dazu verwendet um auf die Formatierung des Codes zu achten. Es weißt einen darauf hin das man zu viele Zeichen in einer Zeile benutzt hat oder anderes. Um dies zu verwenden muss man ein PlugIn installieren.
+  wir verwenden **gulb**
   
-  # Visual Studio Code 
+  ### settings.json
+  die Datei settings.json findet man in dem .vscode Verzeichnis. In dieser Datei kann mann Dateien hinzufügen die man nicht in Visual Studio sehen möchte.
   
-  # Typescript
-  
-  ## settings.json
-  
-  ## tsconfig.json
-  
+  ### tsconfig.json
+  In der tsconfig.json werden optionen für den Compiler festgelegt.
+  Zum transpilieren der .ts-Dateien mithilfe der tsconfig.json muss man folgenden Befehl benutzen:
+  `tsc -p tsconfig.json`
+  * tsc funktioniert nur dann wenn man das tool global installiert hat. wenn dem nicht der fall ist muss man auch den Verzeichnis-Pfad angeben.
   
   
