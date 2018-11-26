@@ -60,9 +60,10 @@ HTTP/1.1 404 Not Found
 
 ## NC(netcat)
 > Netcat, auch nc genannt, ist ein einfaches Werkzeug, um Daten von der Standardein- oder -ausgabe über Netzwerkverbindungen zu transportieren. Es arbeitet als Server oder Client mit den Protokollen TCP und UDP. Die Manpage bezeichnet es als TCP/IP swiss army knife (Schweizer Taschenmesser für TCP/IP).
+
 [Quelle: Wikipedia - Netcat](https://de.wikipedia.org/wiki/Netcat)
 
-## Übung
+## Übung - NC
 Mit dem Tool **nc** haben wir einen Server über localhost gestartet und mit einem Web-Browser darauf zugegriffen. 
 * -l: legt fest, dass nc die Rolle des Servers übernehmen soll
 * -C: ermöglicht das Lesen regulären Zeilenvorschub als Carriage Return (ansonsten wird die Antwort nach der ersten Zeile abgebrochen)
@@ -128,5 +129,25 @@ Content-Type: text/html
 </p>
 </body></html>
 ```
+
+## Typescript
+> TypeScript ist eine von Microsoft entwickelte Programmiersprache, die auf den Vorschlägen zum zukünftigen ECMAScript-6-Standard basiert.
+
+> Der von Microsoft entwickelte TypeScript-Compiler kompiliert TypeScript-Code nach ECMA Script 3 (ES3), optional auch nach ECMA Script 5 (ES5). Jeder JavaScript-Code ist auch gültiger TypeScript-Code, sodass gängige JavaScript-Bibliotheken (wie z. B. jQuery oder AngularJS) auch in TypeScript verwendet werden können.
+
+[Quelle: Wikipedia - Typescript](https://de.wikipedia.org/wiki/TypeScript)
+
+### Visual Studio Code
+Microsoft Visual Studio Code ist ein freier Quelltext-Editor, welcher plattformübergreifend verfügbar ist. 
+
+### node.js
+> Node.js ist eine serverseitige Plattform in der Softwareentwicklung zum Betrieb von Netzwerkanwendungen. Insbesondere lassen sich Webserver damit realisieren. Node.js wird in der JavaScript-Laufzeitumgebung „V8“ ausgeführt, die ursprünglich für Google Chrome entwickelt wurde, und bietet eine ressourcensparende Architektur, die eine besonders große Anzahl gleichzeitig bestehender Netzwerkverbindungen ermöglicht.
+
+[Quelle: Wikipedia - Node.js](https://de.wikipedia.org/wiki/Node.js)
+
+### Projekt
+Vom Git-Server Arnfels haben wir die [Rest-Server-Template](https://www.htl-mechatronik.at/gitweb/m14/?p=sx-la1.git;a=commit;h=a8dbc871d4fee14c3a3551867c334645403a8d5a) geholt und im VSCode geöffnet
+
+
 
 
