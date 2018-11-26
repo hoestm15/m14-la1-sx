@@ -16,14 +16,14 @@ Es sollen alle Eigenschaften des Server-Client Models verwendet werden.
 Jede Anfrage und Antwort ist so in sich geschlossen, dass weder der Server noch Client Zustandsinformationen zwischen zwei Nachrichten speichern muss.
 
 #### Caching
-> HTTP Caching soll genutzt werden, wobei aber gilt: Eine Anfrage, die nicht gestellt werden muss, ist die schnellste Anfrage.
+> HTTP Caching soll genutzt werden, wobei aber gilt: Eine Anfrage, die nicht gestellt werden muss, ist die schnellste Anfrage.  
 *[Quelle: REST-Server Wikipedia](https://de.wikipedia.org/wiki/Representational_State_Transfer#Prinzipien)
 
 #### Einheitliche Schnittstelle
 Ziel ist es eine Einheitliche Schnittstelle zu haben die leicht zu implementieren ist. Diese Schnittstelle hat 4 Eigenschaften.
 
 #### Mehrschichtige Systeme
-> Die Systeme sollen mehrschichtig aufgebaut sein. Dadurch reicht es, dem Anwender lediglich eine Schnittstelle anzubieten. Dahinterliegende Ebenen können verborgen bleiben und somit die Architektur insgesamt vereinfacht werden.
+> Die Systeme sollen mehrschichtig aufgebaut sein. Dadurch reicht es, dem Anwender lediglich eine Schnittstelle anzubieten. Dahinterliegende Ebenen können verborgen bleiben und somit die Architektur insgesamt vereinfacht werden.  
 *[Quelle: REST-Server Wikipedia](https://de.wikipedia.org/wiki/Representational_State_Transfer#Prinzipien)
 
 #### Code on Demand (optional)
@@ -31,7 +31,7 @@ Unter Code on Demand ist zu verstehen, dass erst im Bedarfsfall an den Client Co
 
 
 ## HTTP
-> Das Hypertext Transfer Protocol (HTTP, englisch für Hypertext-Übertragungsprotokoll) ist ein zustandsloses Protokoll zur Übertragung von Daten auf der Anwendungsschicht über ein Rechnernetz. Es wird hauptsächlich eingesetzt, um Webseiten (Hypertext-Dokumente) aus dem World Wide Web (WWW) in einen Webbrowser zu laden. Es ist jedoch nicht prinzipiell darauf beschränkt und auch als allgemeines Dateiübertragungsprotokoll sehr verbreitet.
+> Das Hypertext Transfer Protocol (HTTP, englisch für Hypertext-Übertragungsprotokoll) ist ein zustandsloses Protokoll zur Übertragung von Daten auf der Anwendungsschicht über ein Rechnernetz. Es wird hauptsächlich eingesetzt, um Webseiten (Hypertext-Dokumente) aus dem World Wide Web (WWW) in einen Webbrowser zu laden. Es ist jedoch nicht prinzipiell darauf beschränkt und auch als allgemeines Dateiübertragungsprotokoll sehr verbreitet.  
 *[Quelle: Wikipedia HTTP](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
 
 ### Funktionsweise
@@ -71,13 +71,13 @@ Statuscode | Beschreibung
 ## Übungen mithilfe des Terminals
 Es soll eine Verbindung mit dem Server in Arnfels hergestellt werden. Dazu haben wir das *nc*-Tool verwendet.
 
-Wir erstellten eine Verbindung im Terminal die wie folgt aussieht:
+Wir erstellten eine Verbindung im Terminal die wie folgt aussieht:  
 `nc www.htl-mechatronik.at 80`
 
-Anschließend machten wir eine GET-Anfrage welche so aussieht:
+Anschließend machten wir eine GET-Anfrage welche so aussieht:  
 `GET / HTTP/1.1`
 
-Als antwort haben wir folgendes bekommen:
+Als antwort haben wir folgendes bekommen:  
 ```
 HTTP/1.1 400 Bad Request
 Date: Mon, 26 Nov 2018 05:13:53 GMT
@@ -98,7 +98,7 @@ Content-Type: text/html; charset=iso-8859-1
 </body></html>
 ```
 
-Unsere Anfrage war fehlerhaft weswegen wir daraufhin eine Verbindung mit dem localhost hergestellt haben, um zu sehen wie eine korrekte Antwort aussieht.
+Unsere Anfrage war fehlerhaft weswegen wir daraufhin eine Verbindung mit dem localhost hergestellt haben, um zu sehen wie eine korrekte Antwort aussieht.  
 `nc -l 4711`
 
 
@@ -113,7 +113,7 @@ Accept-Language: de-at
 DNT: 1
 Accept-Encoding: gzip, deflate
 ```
-Nun haben wir unsere Anfrage zum HTL Server so verändert das auch dieser sie versteht.
+Nun haben wir unsere Anfrage zum HTL Server so verändert das auch dieser sie versteht.  
 `nc -C www.htl-mechatronik.at 80`
 
 ```
