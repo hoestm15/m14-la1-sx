@@ -43,4 +43,16 @@ Im Header befinden sich Informationen um die Daten richtig zu interpretieren wie
 Im Body befinden sich die Daten die gesendet werden sollen.
 
 ![HTTP-Anfrage](https://github.com/HTLMechatronics/m14-la1-sx/blob/koemam13/Protokolle/Bilder/HTTP-Anfrage.svg)
-<img src="https://github.com/HTLMechatronics/m14-la1-sx/blob/koemam13/Protokolle/Bilder/HTTP-Anfrage.svg">
+
+
+### Anfragen
+Anfrage | Beschreibung
+GET | Daten vom Server abrufen
+POST | Daten an den Server senden 
+HEAD | zur überprüfung der Gültigkeit von Datem im Cache
+PUT | Daten auf den Server hochladen
+PATCH |  Daten am server verändern ohne sie ganz zu ersetzen
+DELETE | Daten vom Server löschen
+TRACE | liefert Anfragen so zurück wie der Server sie erhalten hat. Sinnvoll für debugging
+OPTIONS | liefert eine Liste der vom Server unterstützten Methoden und Merkmale.
+CONNECT | wird von Proxyservern implementiert, die in der Lage sind, SSL-Tunnel zur Verfügung zu stellen.
