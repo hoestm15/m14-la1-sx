@@ -47,6 +47,7 @@ Im Body befinden sich die Daten die gesendet werden sollen.
 
 ### Anfragen
 Anfrage | Beschreibung
+------- | ------------
 GET | Daten vom Server abrufen
 POST | Daten an den Server senden 
 HEAD | zur überprüfung der Gültigkeit von Datem im Cache
@@ -56,3 +57,12 @@ DELETE | Daten vom Server löschen
 TRACE | liefert Anfragen so zurück wie der Server sie erhalten hat. Sinnvoll für debugging
 OPTIONS | liefert eine Liste der vom Server unterstützten Methoden und Merkmale.
 CONNECT | wird von Proxyservern implementiert, die in der Lage sind, SSL-Tunnel zur Verfügung zu stellen.
+
+### Statuscodes
+Statuscode | Beschreibung
+---------- | ------------
+1xx | Informaton
+2xx | erfolgreiche Anfrage/Operation
+3xx | Umleitung and eine andere Adresse
+4xx | Client-Fehler
+5xx | Server-Fehler
