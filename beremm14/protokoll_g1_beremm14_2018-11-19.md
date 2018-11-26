@@ -2,7 +2,7 @@
   Berger Emil  
   5AHME, Gruppe 1  
   19.11.18  
-  Anwesend: Berger, Böcksteiner, Bullner, Ehmann, Enzi, Kobor, Knappitsch  
+  Anwesend: Berger, Böcksteiner, Bullner, Ehmann, Enzi, Kobor, Köhler, Knappitsch  
   Abwesend: niemand  
     
 # REST Server
