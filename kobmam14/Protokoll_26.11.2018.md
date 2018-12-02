@@ -25,7 +25,20 @@ zwischen den VS und VS Code besteht darin, dass VS Code nicht mit Projektdateien
 Wenn man Code über das Desktop-Icon startet muss man im File Explorer erst das gewählte Projektverzeichnis ausgewählt werden um damit arbeiten zu können. Eine andere Möglichkeit ist es Code über den Terminal zu starten, dort kann man direkt den gewünschten Pfad dazuschreiben, so das Code diesen gleich als Projektverzeichnis nimmt.
 
 ## Anpassen der Programmierumgebung
-Code ist eine sehr leichtgewichtige Programmierumgebung und benötigt einige Modifikationen um damit effizient arbeiten zu können
+Code ist eine sehr leichtgewichtige Programmierumgebung und benötigt einige Modifikationen um damit effizient arbeiten zu können.
+
+### .vscode
+Im Ordner *.vscode* welcher sich im Projektverzeichnis befindet, gibt es eine Datei namens *setting.json*.
+In dieser können diverse Einstellungen getätigt werden, z.B. das Ausblenden von Dateien und Ordnern in der IDE.
+```json
+{
+  "files.exclude":{
+        "**/code_modules/": true,
+        "**/.vscode/": true,
+        "**/package-lock.json/": true
+        }
+}
+```
 
 ## Express 
 Express ist eine Framework für das Arbeiten mit HTTP und HTTPS und bietet eine vielzahl von nützlichen Funktionen für das Gestalten von Webanwendungen.
