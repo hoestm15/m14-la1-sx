@@ -76,17 +76,16 @@ In dieser können diverse Einstellungen getätigt werden, z.B. das Ausblenden vo
         }
 }
 ``` 
-<br>
 
-### Weitere Ordner der Programmierumgebung
+### Weitere Ordner in unserem Projektverzeichnis
 
-**dist**
+**dist**: 
 Im Ordner dist befinden sich alle transpilierten Programme.
 
-**node_Modules**
+**node_Modules**: 
 Hier liegen alle für die Ausführung des Programms notwendigen Pakete.
 
-**src**
+**src**: 
 Hier befinden sich alle programmierten Klassen. <br>
 
 #### package.json
