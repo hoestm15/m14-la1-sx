@@ -75,8 +75,21 @@ In dieser können diverse Einstellungen getätigt werden, z.B. das Ausblenden vo
         "**/package-lock.json/": true
         }
 }
-```
-### package.json
+``` 
+<br>
+
+### Weitere Ordner der Programmierumgebung
+
+**dist**
+Im Ordner dist befinden sich alle transpilierten Programme.
+
+**node_Modules**
+Hier liegen alle für die Ausführung des Programms notwendigen Pakete.
+
+**src**
+Hier befinden sich alle programmierten Klassen. <br>
+
+#### package.json
 Die package.json-Datei ist eine Art Manifest für ein Projekt. Es kann eine Menge Dinge tun, die völlig unabhängig voneinander sind. Es ist zum Beispiel ein zentrales Konfigurationsrepository für Tools. Dort werden auch die Namen und Versionen des installierten Pakets gespeichert.
 
 ```
@@ -111,7 +124,7 @@ Die package.json-Datei ist eine Art Manifest für ein Projekt. Es kann eine Meng
 }
 ```
 
-### tsconfig.json
+#### tsconfig.json
 Die Datei tsconfig.json ist für die Konfiguration des TypeScript-Compilers zuständig.
 
 ```
@@ -133,7 +146,7 @@ Die Datei tsconfig.json ist für die Konfiguration des TypeScript-Compilers zust
 }
 ```
 
-### gulpfile.json
+#### gulpfile.json
 Das gulpfile ist für die Übersetzung zuständig.
 
 ```
@@ -155,7 +168,7 @@ const gulp       = require('gulp'),
       ...
 ```
 
-### tslint.json
+#### tslint.json
 TSLint ist ein erweiterbares statisches Analysewerkzeug, das TypeScript-Code auf Lesbarkeit, Wartbarkeit und Funktionsfehler überprüft. Es wird weitgehend von modernen Editoren und Build-Systemen unterstützt und kann mit Ihren eigenen Fusselregeln, Konfigurationen und Formatierungselementen angepasst werden.
 
 ```
