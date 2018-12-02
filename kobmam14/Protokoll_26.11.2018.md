@@ -28,19 +28,20 @@ Express ist eine Framework für das Arbeiten mit HTTP und HTTPS und bietet eine 
 
 ## Singelton
 > Das Singleton (selten auch Einzelstück genannt) ist ein in der Softwareentwicklung eingesetztes Entwurfsmuster und gehört zur Kategorie der Erzeugungsmuster (engl. creational patterns). Es stellt sicher, dass von einer Klasse genau ein Objekt existiert. Dieses Singleton ist darüber hinaus üblicherweise global verfügbar.  <br>
+
 Quelle: [Wikipedia/Singelton](https://de.wikipedia.org/wiki/Singleton_(Entwurfsmuster))
 
-Das Singleton findet Verwendung, wenn:
-*nur ein Objekt zu einer Klasse existieren darf und ein einfacher Zugriff auf dieses Objekt benötigt wird oder
-*das einzige Objekt durch Unterklassenbildung spezialisiert werden soll.
+Das Singleton findet Verwendung, wenn: <br>
+* nur ein Objekt zu einer Klasse existieren darf und ein einfacher Zugriff auf dieses Objekt benötigt wird oder
+* das einzige Objekt durch Unterklassenbildung spezialisiert werden soll.
 
-Anwendungsbeispiele sind:
-*ein zentrales Protokoll-Objekt, das Ausgaben in eine Datei schreibt.
-*Druckaufträge, die zu einem Drucker gesendet werden, sollen nur in einen einzigen Puffer geschrieben werden.
+Anwendungsbeispiele sind: <br>
+* ein zentrales Protokoll-Objekt, das Ausgaben in eine Datei schreibt.
+* Druckaufträge, die zu einem Drucker gesendet werden, sollen nur in einen einzigen Puffer geschrieben werden.
 
-Das Sinigelton:
-*erzeugt und verwaltet das einzige Objekt der Klasse
-*bietet globalen Zugriff auf dieses Objekt über eine Instanzoperation (getInstance()). <br> <br>
+Das Sinigelton: <br>
+* erzeugt und verwaltet das einzige Objekt der Klasse
+* bietet globalen Zugriff auf dieses Objekt über eine Instanzoperation (getInstance()). <br> <br>
 
 
 ## Arbeiten mit Code
