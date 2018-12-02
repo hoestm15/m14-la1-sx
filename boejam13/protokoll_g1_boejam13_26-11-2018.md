@@ -153,9 +153,13 @@ export class Database {
         this.data.splice(index, 1);
     }
 
-    // Neues Feld mit dem Inhalt des alten Feldes
     public getAll (): Value [] {
         return [].concat(this.data);
     }
+```
+
+### Singleton
+
+  > Das Singleton (selten auch Einzelstück genannt) ist ein in der Softwareentwicklung eingesetztes Entwurfsmuster und gehört zur Kategorie der Erzeugungsmuster (engl. creational patterns). Es stellt sicher, dass von einer Klasse genau ein Objekt existiert.[1] Dieses Singleton ist darüber hinaus üblicherweise global verfügbar. Das Muster ist eines der von der sogenannten Viererbande (GoF) publizierten Muster. 
 
 
