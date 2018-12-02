@@ -159,6 +159,10 @@ class Main {
 Main.main();
 
 ```
+
+In der Klasse main.ts wird zuerst die Klasse server importiert.
+In der public static void main wird ein Server am Port 4711 gestartet nachdem sie über Main.main() aufgerufen wurde.
+
 ```
 import * as express from 'express';
 import { Database } from './database';
@@ -200,6 +204,15 @@ export class Server {
     }
 }
 ```
+
+In server.ts wird das oben erwähnte **express** verwendet indem es importiert wurde.
+Außerdem importieren wir die Klasse **database**.
+Hier sehen wir das erste Mal das Schlüsselwort **export**, welches immer dann verwendet werden muss, wenn eine Klasse in eine andere importiert wird.
+In der Klasse werden zuerst die beiden privaten Variablen *number* und *port* erstellt.
+Im Konstruktor der Klasse wird die Portnummer sowie die beiden Methoden **handleGetData** und **handleGetDataSet** übergeben.
+Diese Methoden regeln das Vorgehen des Servers bei einer Anfrage.
+Die Methode **start** startet den Server.
+
 ```
 export class Value {
     time: Date;
@@ -217,6 +230,10 @@ export class Value {
     }
 }
 ```
+
+In value.ts finden wir unsere Datenerhaltungsklasse.
+Hier werden für einen Messwert der Zeitpunkt, die Temperatur und die Leistung erhoben.
+
 ```
 import { Value } from './value';
 
