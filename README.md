@@ -10,5 +10,5 @@
 
 # Labor 5AHME (2018/19) - SX
 
-Gruppe 1: 1.Einheit, 19.11.2018     [1. Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/koemam13/Protokolle/protokoll_g1_koemam13_2018-11-19.md)
+Gruppe 1: 1.Einheit, 19.11.2018     [1. Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/koemam13/Protokolle/protokoll_g1_koemam13_2018-11-19.md)  
 Gruppe 1: 2.Einheit, 26.11.2018     [2.Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/koemam13/Protokolle/protokoll_g1_koemam13_2018-11-26.md)
