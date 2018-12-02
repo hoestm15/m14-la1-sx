@@ -17,29 +17,15 @@ Wenn man im Dateiexplorer eine Datei mit einem einfachen Mausklick öffnet, dann
 Um den Dateiexplorer übersichtlicher zu gestalten, legt man im Projektverzeichnis einen neuen Ordner `.vscode` an. In diesem Ordner erstellt man die Datei `settings.json`. Dort kann man alle für die Programmierung irrelevanten Dateien ausblenden lassen.
 
 ```
-"files.exclude": {
-		"**/node_modules/": true,
-		"**/.vscode/": true,
-		"**/package-lock.json": true
-	}
-```
-  
-### TSC konfigurieren  
-Die Konfiguration des TypeScript-Compilers findet in der Datei `tsconfig.json` statt:  
-```TypeScript
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "noImplicitAny": true,
-        "removeComments": true,
-        "preserveConstEnums": true,
-        "sourceMap": true,
-        "target": "es2017"
-    },
-    
-    "include": [
-        "**/*.ts"
-    ]
+	"files.exclude": {
+	    "**/node_modules": true,
+	    "**/dist": true,
+	    "package-lock.json": true,
+	    ".vscode": true
+	}
 }
 ```
-In dieser Datei können Einstellungen für den Compiler getroffen werden. Beispielsweise kann man die Sprache, in die der Compiler transpilieren soll, einstellen. Der Compiler lässt sich in der Konsole mit `node node_modules/typescript/bin/tsc/ -p tsconfig.json` starten.  
+  
+### Lint
+Lint ist dazu da, dass man eine Schönere formatierung hat, es zeigt Fehler an wie zb das man ein Leerzeichen zu viel hat. Die Datei tslint.json beschreibt welche Fehler gemeldet werden und welche nicht.
