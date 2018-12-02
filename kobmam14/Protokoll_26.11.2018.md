@@ -21,6 +21,9 @@ werden aber von unterschiedlichen Teams entwickelt und folgen einer anderen Phil
 zwischen den VS und VS Code besteht darin, dass VS Code nicht mit Projektdateien sondern mit Quelltextdateien und Ordnern arbeitet.  
 [Website von VS Code](https://code.visualstudio.com/)
 
+## Express 
+Express ist eine Framework für das Arbeiten mit HTTP und HTTPS und bietet eine vielzahl von nützlichen Funktionen für das Gestalten von Webanwendungen.
+
 ## Arbeiten mit Code
 Wenn man Code über das Desktop-Icon startet muss man im File Explorer erst das gewählte Projektverzeichnis ausgewählt werden um damit arbeiten zu können. Eine andere Möglichkeit ist es Code über den Terminal zu starten, dort kann man direkt den gewünschten Pfad dazuschreiben, so das Code diesen gleich als Projektverzeichnis nimmt.
 
@@ -39,7 +42,7 @@ In dieser können diverse Einstellungen getätigt werden, z.B. das Ausblenden vo
         }
 }
 ```
-#### package.json
+### package.json
 Die package.json-Datei ist eine Art Manifest für ein Projekt. Es kann eine Menge Dinge tun, die völlig unabhängig voneinander sind. Es ist zum Beispiel ein zentrales Konfigurationsrepository für Tools. Dort werden auch die Namen und Versionen des installierten Pakets gespeichert.
 
 ```
@@ -74,7 +77,7 @@ Die package.json-Datei ist eine Art Manifest für ein Projekt. Es kann eine Meng
 }
 ```
 
-#### tsconfig.json
+### tsconfig.json
 Die Datei tsconfig.json ist für die Konfiguration des TypeScript-Compilers zuständig.
 
 ```
@@ -96,7 +99,7 @@ Die Datei tsconfig.json ist für die Konfiguration des TypeScript-Compilers zust
 }
 ```
 
-#### gulpfile.json
+### gulpfile.json
 Das gulpfile ist für die Übersetzung zuständig.
 
 ```
@@ -118,7 +121,7 @@ const gulp       = require('gulp'),
       ...
 ```
 
-#### tslint.json
+### tslint.json
 TSLint ist ein erweiterbares statisches Analysewerkzeug, das TypeScript-Code auf Lesbarkeit, Wartbarkeit und Funktionsfehler überprüft. Es wird weitgehend von modernen Editoren und Build-Systemen unterstützt und kann mit Ihren eigenen Fusselregeln, Konfigurationen und Formatierungselementen angepasst werden.
 
 ```
@@ -142,6 +145,119 @@ TSLint ist ein erweiterbares statisches Analysewerkzeug, das TypeScript-Code auf
 
 ```
 
+## Programmieren des Servers
 
-## Express 
-Express ist eine Framework für das Arbeiten mit HTTP und HTTPS und bietet eine vielzahl von nützlichen Funktionen für das Gestalten von Webanwendungen.
+```
+import { Server } from './server';
+
+class Main {
+    public static main () {
+        new Server(4711).start();
+    }
+}
+
+Main.main();
+
+```
+```
+import * as express from 'express';
+import { Database } from './database';
+
+export class Server {
+    private _port: number;
+    private _server: express.Express;
+
+    constructor (port: number) {
+        this._port = port;
+        this._server = express();
+        // this._server.get('/data', this.handleGetData.bind(this));
+        this._server.get('/data',
+            (req, res, next) => this.handleGetData(req, res, next)
+        );
+        this._server.get('/dataset',
+            (req, res, next) => this.handleGetDataSet(req, res, next)
+        );
+    }
+
+    start () {
+        this._server.listen(this._port);
+        console.log('Server auf Port ' + this._port + ' gestartet.');
+    }
+
+    private handleGetData (req: express.Request,
+                           res: express.Response,
+                           next: express.NextFunction
+    ) {
+        console.log('this = ' + this);
+        console.log('Server ' + this._port);
+        res.json({ temp: 23.4, power: 120, unit: 'W' });
+    }
+
+    private handleGetDataSet ( req: express.Request,
+                               res: express.Response,
+                               next: express.NextFunction) {
+        res.json(Database.getInstance().getAll());
+    }
+}
+```
+```
+export class Value {
+    time: Date;
+    temp: number;
+    power: number;
+    powerUnit: string;
+    tempUnit: string;
+
+    constructor (tempCelsius: number, powerWatt: number) {
+        this.time ;= new Date();
+        this.temp = tempCelsius;
+        this.tempUnit = '°C';
+        this.power = powerWatt;
+        this.powerUnit = 'W';
+    }
+}
+```
+```
+import { Value } from './value';
+
+export class Database {
+
+    public static getInstance(): Database {
+        if (!this.Instance) {
+            this.instance = new Database();
+        }
+        return this.instance;
+    }
+
+    private static instance: Database;
+
+    private data: Value [] = [];
+
+    private constructor () {
+        this.add(new Value(23.4, 100));
+        this.add(new Value(23.5, 120));
+        this.add(new Value(23.6, 150));
+        this.add(new Value(23.7, 200));
+    }
+
+    public size (): number {
+        return this.data.length;
+    }
+
+    public get (index: number): Value {
+        return this.data[index];
+    }
+
+    public add (value: Value) {
+        this.data.push(value);
+    }
+
+    public remove (index: number) {
+        this.data.splice(index, 1);
+    }
+
+    public getAll (): Value [] {
+        return [].concat(this.data);
+    }
+}
+```
