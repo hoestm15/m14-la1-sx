@@ -29,3 +29,7 @@ Um den Dateiexplorer übersichtlicher zu gestalten, legt man im Projektverzeichn
   
 ### Lint
 Lint ist dazu da, dass man eine Schönere formatierung hat, es zeigt Fehler an wie zb das man ein Leerzeichen zu viel hat. Die Datei tslint.json beschreibt welche Fehler gemeldet werden und welche nicht.
+
+## Projekt Rest-Server
+
+
