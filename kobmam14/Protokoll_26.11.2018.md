@@ -27,6 +27,20 @@ Express ist eine Framework für das Arbeiten mit HTTP und HTTPS und bietet eine 
 ## Arbeiten mit Code
 Wenn man Code über das Desktop-Icon startet muss man im File Explorer erst das gewählte Projektverzeichnis ausgewählt werden um damit arbeiten zu können. Eine andere Möglichkeit ist es Code über den Terminal zu starten, dort kann man direkt den gewünschten Pfad dazuschreiben, so das Code diesen gleich als Projektverzeichnis nimmt.
 
+## Visual Studio Code Icons
+
+![Icons](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/5AHME/vs.png)
+
+1. File explorer
+
+2. Suchleiste
+
+3. Versionsverwaltung
+
+4. Debugger
+
+5. Extensions (Erweiterungen)
+
 ## Anpassen der Programmierumgebung
 Code ist eine sehr leichtgewichtige Programmierumgebung und benötigt einige Modifikationen um damit effizient arbeiten zu können.
 
@@ -147,6 +161,8 @@ TSLint ist ein erweiterbares statisches Analysewerkzeug, das TypeScript-Code auf
 
 ## Programmieren des Servers
 
+### main.ts
+
 ```
 import { Server } from './server';
 
@@ -162,6 +178,8 @@ Main.main();
 
 In der Klasse main.ts wird zuerst die Klasse server importiert.
 In der public static void main wird ein Server am Port 4711 gestartet nachdem sie über Main.main() aufgerufen wurde.
+
+### server.ts
 
 ```
 import * as express from 'express';
@@ -213,6 +231,8 @@ Im Konstruktor der Klasse wird die Portnummer sowie die beiden Methoden **handle
 Diese Methoden regeln das Vorgehen des Servers bei einer Anfrage.
 Die Methode **start** startet den Server.
 
+### value.ts
+
 ```
 export class Value {
     time: Date;
@@ -233,6 +253,8 @@ export class Value {
 
 In value.ts finden wir unsere Datenerhaltungsklasse.
 Hier werden für einen Messwert der Zeitpunkt, die Temperatur und die Leistung erhoben.
+
+### database.ts
 
 ```
 import { Value } from './value';
