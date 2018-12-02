@@ -12,6 +12,8 @@
  
 # Visual Studio Code
 
+![Icons](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/vscode.png)
+
 ## Informationen zu Code
 Visual Studio Code ist eine Programmierumgebung der Firma Microsoft und ist plattformübergreifend verfügbar. 
 Es ist Open-Source, basiert auf dem Framework ELectron und hat Funktionen wie z.B. Syntaxvorhebung, Debugging, Autovervollständigung und Versionsverwaltung. 
@@ -29,7 +31,7 @@ Wenn man Code über das Desktop-Icon startet muss man im File Explorer erst das 
 
 ## Visual Studio Code Icons
 
-![Icons](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/5AHME/vs.png)
+![Icons](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/vs.png)
 
 1. File explorer
 
