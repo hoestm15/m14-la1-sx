@@ -21,33 +21,30 @@ Es werden Sprachen wie C++, CSS, HTML, Java, PHP, SQL, Typescript, etc. unterst�
 Trotz des Namens hat Visual Studio Code nicht viel mit Visual Studio zu tun. Beide sind von der Firma Microsoft, 
 werden aber von unterschiedlichen Teams entwickelt und folgen einer anderen Philosophie. Ein großer Unterschied in der Handhabung der Projekte
 zwischen den VS und VS Code besteht darin, dass VS Code nicht mit Projektdateien sondern mit Quelltextdateien und Ordnern arbeitet.  
-[Website von VS Code](https://code.visualstudio.com/)
+[Website von VS Code](https://code.visualstudio.com/) <br> <br>
 
 ## Express 
-Express ist eine Framework für das Arbeiten mit HTTP und HTTPS und bietet eine vielzahl von nützlichen Funktionen für das Gestalten von Webanwendungen.
+Express ist eine Framework für das Arbeiten mit HTTP und HTTPS und bietet eine vielzahl von nützlichen Funktionen für das Gestalten von Webanwendungen. <br> <br>
 
 ## Singelton
-> Das Singleton (selten auch Einzelstück genannt) ist ein in der Softwareentwicklung eingesetztes Entwurfsmuster und gehört zur Kategorie der Erzeugungsmuster (engl. creational patterns). Es stellt sicher, dass von einer Klasse genau ein Objekt existiert. Dieses Singleton ist darüber hinaus üblicherweise global verfügbar. 
+> Das Singleton (selten auch Einzelstück genannt) ist ein in der Softwareentwicklung eingesetztes Entwurfsmuster und gehört zur Kategorie der Erzeugungsmuster (engl. creational patterns). Es stellt sicher, dass von einer Klasse genau ein Objekt existiert. Dieses Singleton ist darüber hinaus üblicherweise global verfügbar.  <br>
 Quelle: [Wikipedia/Singelton](https://de.wikipedia.org/wiki/Singleton_(Entwurfsmuster))
 
 Das Singleton findet Verwendung, wenn:
-
 *nur ein Objekt zu einer Klasse existieren darf und ein einfacher Zugriff auf dieses Objekt benötigt wird oder
-das einzige Objekt durch Unterklassenbildung spezialisiert werden soll.
-Anwendungsbeispiele sind
+*das einzige Objekt durch Unterklassenbildung spezialisiert werden soll.
 
+Anwendungsbeispiele sind:
 *ein zentrales Protokoll-Objekt, das Ausgaben in eine Datei schreibt.
-Druckaufträge, die zu einem Drucker gesendet werden, sollen nur in einen einzigen Puffer geschrieben werden.
+*Druckaufträge, die zu einem Drucker gesendet werden, sollen nur in einen einzigen Puffer geschrieben werden.
 
 Das Sinigelton:
-
 *erzeugt und verwaltet das einzige Objekt der Klasse
-
-*bietet globalen Zugriff auf dieses Objekt über eine Instanzoperation (getInstance()).
+*bietet globalen Zugriff auf dieses Objekt über eine Instanzoperation (getInstance()). <br> <br>
 
 
 ## Arbeiten mit Code
-Wenn man Code über das Desktop-Icon startet muss man im File Explorer erst das gewählte Projektverzeichnis ausgewählt werden um damit arbeiten zu können. Eine andere Möglichkeit ist es Code über den Terminal zu starten, dort kann man direkt den gewünschten Pfad dazuschreiben, so das Code diesen gleich als Projektverzeichnis nimmt.
+Wenn man Code über das Desktop-Icon startet muss man im File Explorer erst das gewählte Projektverzeichnis ausgewählt werden um damit arbeiten zu können. Eine andere Möglichkeit ist es Code über den Terminal zu starten, dort kann man direkt den gewünschten Pfad dazuschreiben, so das Code diesen gleich als Projektverzeichnis nimmt.  <br> <br>
 
 ## Visual Studio Code Icons
 
@@ -61,10 +58,10 @@ Wenn man Code über das Desktop-Icon startet muss man im File Explorer erst das 
 
 4. Debugger
 
-5. Extensions (Erweiterungen)
+5. Extensions (Erweiterungen)  <br> <br>
 
 ## Anpassen der Programmierumgebung
-Code ist eine sehr leichtgewichtige Programmierumgebung und benötigt einige Modifikationen um damit effizient arbeiten zu können.
+Code ist eine sehr leichtgewichtige Programmierumgebung und benötigt einige Modifikationen um damit effizient arbeiten zu können.  <br> <br>
 
 ### .vscode
 Im Ordner *.vscode* welcher sich im Projektverzeichnis befindet, gibt es eine Datei namens *setting.json*.
@@ -180,7 +177,7 @@ TSLint ist ein erweiterbares statisches Analysewerkzeug, das TypeScript-Code auf
         ...
 
 ```
-
+ <br> <br>
 ## Programmieren des Servers
 
 ### main.ts
