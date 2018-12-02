@@ -208,7 +208,7 @@ Main.main();
 
 ```
 
-In der Klasse main.ts wird zuerst die Klasse server importiert.
+In der Klasse main.ts wird zuerst die Klasse server importiert. <br>
 In der public static void main wird ein Server am Port 4711 gestartet nachdem sie über Main.main() aufgerufen wurde.
 
 ### server.ts
@@ -255,12 +255,12 @@ export class Server {
 }
 ```
 
-In server.ts wird das oben erwähnte Framework **express** verwendet indem es importiert wurde.
-Außerdem importieren wir die Klasse **database**.
-Hier sehen wir das erste Mal das Schlüsselwort **export**, welches immer dann verwendet werden muss, wenn eine Klasse in eine andere importiert wird.
-In der Klasse werden zuerst die beiden privaten Variablen *number* und *port* erstellt.
-Im Konstruktor der Klasse wird die Portnummer sowie die beiden Methoden **handleGetData** und **handleGetDataSet** übergeben.
-Diese Methoden regeln das Vorgehen des Servers bei einer Anfrage.
+In server.ts wird das oben erwähnte Framework **express** verwendet indem es importiert wurde. <br>
+Außerdem importieren wir die Klasse **database**.<br>
+Hier sehen wir das erste Mal das Schlüsselwort **export**, welches immer dann verwendet werden muss, wenn eine Klasse in eine andere importiert wird.<br>
+In der Klasse werden zuerst die beiden privaten Variablen *number* und *port* erstellt.<br>
+Im Konstruktor der Klasse wird die Portnummer sowie die beiden Methoden **handleGetData** und **handleGetDataSet** übergeben.<br>
+Diese Methoden regeln das Vorgehen des Servers bei einer Anfrage.<br>
 Die Methode **start** startet den Server.
 
 ### value.ts
@@ -283,7 +283,7 @@ export class Value {
 }
 ```
 
-In value.ts finden wir unsere Datenerhaltungsklasse.
+In value.ts finden wir unsere Datenerhaltungsklasse.<br>
 Hier werden für einen Messwert der Zeitpunkt, die Temperatur und die Leistung erhoben.
 
 ### database.ts
