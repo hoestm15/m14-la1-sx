@@ -68,16 +68,15 @@ Funktionsfehler prüft.
 ``` TypeScript
 import { Server } from './server';
 
-
 class Main {
     public static main() {
         new Server(4711).start();
     }
-
 }
-
 Main.main();
 ```
+
+Als Erstes wird die Klasse Server mit `import` importiert. In der Main-Methode wird ein Objekt der importierten Klasse erzeugt. Als Parameter wird der Port 4711 übergeben. Um den Server zu starten muss man allerdings noch `Main.main()` aufrufen, da die Klasse main(), anders als in java, nicht standartmäßig ausgeführt wird. Der Server ist unter `localhost:4711` erreichbar.
 
 #### server.ts
 ``` TypeScript
@@ -111,6 +110,14 @@ export class Server {
     }
 }
 ```
+Zuerst werden die Klasse Database und das Framework Express importiert. 
+
+Das Schlüsselwort `express` wird verwendet, um die Klasse an einem anderen Ort importieren zu können. 
+
+Zwei private Varialen(port, server) werden erstellt. Im Konstruktor wird `port` der übergebene Wert aus der Klasse `main()` zugewiesen. Außerdem werden die beiden Handler-Methoden für `/data` und `/dataset` aufgerufen. In diesen ist definiert, wie der Server auf gewisse Anfragen reagieren soll. 
+
+Die Methode `start()` start mit Hilfe der Methode `listen()` den Server.
+
 
 #### database.ts
 ``` Typescript
@@ -157,6 +164,15 @@ export class Database {
 }
 ```
 
+Die Klasse Database ist eine Datenbank, welche mehrere Objekte der Klasse Value enthält.
+
+Methoden:
+* size(): gibt die Anzahl der gespeicherten Elemente zurück
+* get(): gibt das Element vom übergebenen Index zurück
+* add(): fügt ein Element hinzu
+* remove(): entfernt ein Element an der Position `index`
+* getAll(): gibt alle gespeicherten Elemente in einem neuen Feld zurück
+
 #### value.ts
 ``` Typescript
 export class Value {
@@ -175,4 +191,6 @@ export class Value {
     }
 }
 ```
+
+Die Klasse Value ist eine einfache Datenhaltungsklasse in der fünf Variablen definiert sind. Anders als in Java werden in Typescript keine Getter-Methoden benötigt. Die Variablen sind `public`.
 
