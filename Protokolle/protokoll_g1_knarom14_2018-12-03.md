@@ -5,3 +5,6 @@
 * Datum: 03.12.2018
 * Anwesend: Berger Emil, Bullner Jeremy, Ehmann Julian, Knappitsch Robert, Köhler Marcel
 * Abwesend: Böcksteiner Jakob, Kobor Markus
+
+## Wiederholung
+### Express
