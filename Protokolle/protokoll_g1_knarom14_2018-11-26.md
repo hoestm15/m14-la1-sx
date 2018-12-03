@@ -170,7 +170,7 @@ Methoden:
 * size(): gibt die Anzahl der gespeicherten Elemente zurück
 * get(): gibt das Element vom übergebenen Index zurück
 * add(): fügt ein Element hinzu
-* remove(): entfernt ein Element an der Position `index`
+* remove(): entfernt das Element an der Position `index`
 * getAll(): gibt alle gespeicherten Elemente in einem neuen Feld zurück
 
 #### value.ts
