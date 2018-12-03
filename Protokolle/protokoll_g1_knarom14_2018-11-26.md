@@ -62,3 +62,117 @@ zu implementieren und damit dann prozedural anstatt objektorientiert zu programm
 * **tslint.json:** Enthält die Konfiguration für das Tool "Lint", welches den Code auf Lesbarkeit und 
 Funktionsfehler prüft.
 
+### Klassen
+
+#### main.ts
+``` TypeScript
+import { Server } from './server';
+
+
+class Main {
+    public static main() {
+        new Server(4711).start();
+    }
+
+}
+
+Main.main();
+```
+
+#### server.ts
+``` TypeScript
+import * as express from 'express';
+import { Database } from './database';
+
+export class Server {
+    private port: number;
+    private server: express.Express;
+
+    constructor (port: number) {
+        this.port = port;
+        this.server = express();
+        // this.server.get('/data', this.handleGetData.bind(this));
+        this.server.get('/data', (req, res, next) => this.handleGetData(req, res, next));
+        this.server.get('/dataset', (req, res, next) => this.handleGetDataSet(req, res, next));
+    }
+
+    start() {
+        this.server.listen(this.port);
+        console.log('Server auf Port ' + this.port + ' gestartet.');
+    }
+
+    private handleGetData(req: express.Request, res: express.Response, next: express.NextFunction) {
+        console.log('Server ' + this.port);
+        res.json({temp: 23.4, power: 120, unit: 'W'});
+    }
+
+    private handleGetDataSet (req: express.Request, res: express.Response, next: express.NextFunction) {
+        res.json(Database.getInstance().getAll());
+    }
+}
+```
+
+#### database.ts
+``` Typescript
+import { Value } from './value';
+
+export class Database {
+    public static getInstance(): Database {
+        if (!this.getInstance) {
+            this.instance = new Database();
+        }
+        return this.instance;
+    }
+
+    private static instance: Database;
+
+    private data: Value [] = [];
+
+    private constructor () {
+        this.add(new Value(23.4, 100));
+        this.add(new Value(23.5, 120));
+        this.add(new Value(23.6, 150));
+        this.add(new Value(23.7, 200));
+    }
+
+    public size (): number {
+        return this.data.length;
+    }
+
+    public get (index: number) {
+        return this.data[index];
+    }
+
+    public add (value: Value) {
+        this.data.push(value);
+    }
+
+    public remove (index: number) {
+        this.data.splice(index, 1);
+    }
+
+    public getAll (): Value [] {
+        return [].concat(this.data);
+    }
+}
+```
+
+#### value.ts
+``` Typescript
+export class Value {
+    time: Date;
+    temp: number;
+    power: number;
+    powerUnit: string;
+    tempUnit: string;
+
+    constructor(tempCelsius: number, powerWatt: number) {
+        this.time = new Date();
+        this.temp = tempCelsius;
+        this.tempUnit = '°C';
+        this.power = powerWatt;
+        this.powerUnit = 'W';
+    }
+}
+```
+
