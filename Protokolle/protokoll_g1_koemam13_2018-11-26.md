@@ -168,7 +168,7 @@ export class Server {
 ```
   In `server.ts` das Modul für vereinfachte HTTP server `express` und unsere Datenbank `database` importiert.
   Um einen Server aufzubauen benötigt mann zwei Variablen: `_port: number` und `_server: express.Express`.
-  Im Konstruktor wird die Portnummer und die Handler-Methoden für `localhost:4711/data` und `localhost:4711/dataset` übergeben.  
+  Im Konstruktor wird die Portnummer und die Handler-Methoden übergeben.  
   Mit der Methode `start();` wird der Server gestartet.   
 
 ### [Singleton](https://de.wikipedia.org/wiki/Singleton_(Entwurfsmuster))
