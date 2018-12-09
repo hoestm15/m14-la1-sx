@@ -69,7 +69,7 @@ Egal welche Möglichkeit mann verwendet mann brauch in beiden Fällen das **Body
 Diese Modul ermöglicht es uns Anfragen automatisch als Variablen zu speichern. Es legt für alle Übermittelten Informationen eine Variable an.  
 Dieses Modul installiert mann mit dem folgenden Konsolen Befehl: `npm install body-parser`  
 Aber gleich wie bei dem Express Modul benötigt mann auch das dazu gehörige Variablen modul welches mann mit dem folgenden Befehl installiert: `npm install --save-dev @types/body-parser`  
-Aber damit dieses Modul verwendet wird muss mann dies dem Server zuerst bekannt geben. Hierbei ist es wichtig die Reihenfolge zu beachten und das Modul möglichst weit oben bekannt zu geben. Dies macht mann mit
+Aber damit dieses Modul verwendet wird muss mann dies dem Server zuerst bekannt geben. Hierbei ist es wichtig die Reihenfolge zu beachten und das Modul möglichst weit oben bekannt zu geben. Dies macht mann mit der folgenden Funktion.
 ```typescript
 this._server.use(bodyParser.function());
 ```
