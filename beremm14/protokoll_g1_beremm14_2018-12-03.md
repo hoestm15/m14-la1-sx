@@ -1,7 +1,7 @@
 # Protokoll
   Berger Emil  
   5AHME, Gruppe 1  
-  19.11.18  
+  03.12.18  
   Anwesend: Berger, Bullner, Ehmann, Enzi, Köhler, Knappitsch  
   Abwesend: Böcksteiner, Kobor  
 
@@ -120,9 +120,6 @@ private handlePutData(req: express.Request, res: express.Response) {
   Dazu muss in der `launch.json` ein neuer Eintrag erfolgen:  
 ```json
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         
