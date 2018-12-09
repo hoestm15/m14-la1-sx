@@ -116,9 +116,9 @@ private handlePutData(req: express.Request, res: express.Response) {
 ```
 In dieser Handler Methode erstellen wir ein Neues **Value** Objekt mit den Daten aus dem Body, welche wir mittels req.body.abc aus der request bekommen. Dieses neue Objekt wird dann anschließend der Datenbank hinzugefügt. Zum abschluss wird eine response im JSON Format zurückgesendet. Diese beinhaltet die ID des neu hinzugefügten Objektes. Für den Fall das etwas bei diesem Vorgang schief läuft wird eine response mit dem Statuscode **400** und der Nachricht "Bad Request" zuruck gesendet.
 
-**[RESTED](https://addons.opera.com/en/extensions/details/rested/)**
+## [RESTED](https://addons.opera.com/en/extensions/details/rested/)
 Um zu testen ob der Server so funktioniert wie wir es möchten benutzen wir die Browser extension **RESTED**. Mit diesem Tool können wir eine Maschine-zu-Maschine Kommunikation aufbauen. 
-![Rested][https://github.com/HTLMechatronics/m14-la1-sx/blob/koemam13/Protokolle/Bilder/rested.svg]
+![Rested](https://github.com/HTLMechatronics/m14-la1-sx/blob/koemam13/Protokolle/Bilder/rested.svg)
 Auf der Linken Seite kann mann die Collections auswählen und auch den Verlauf anzeigen lassen.
 Auf der Rechten Seite kann man auswählen welche art von Request mann machen möchte. In diesem Fall handelt es sich um eine **PUT** request. Diese Request wird automatisch im JSON Format gesendet. Zuerst muss mann die URL eingeben. Dann wählt mann die Request Methode aus und anschließend welchen Wert mann senden möchte.
 Diese Tool zeigt zudem auch direkt die Antwort des Servers.
