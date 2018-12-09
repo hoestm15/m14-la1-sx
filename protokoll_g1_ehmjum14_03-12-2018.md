@@ -33,7 +33,15 @@ Wird wie folgt installiert: `npm install body-parser` `npm install --save-dev @t
    
 `npm install --save-dev @types/body-parser` wird dazu verwendet, um in der `package.json` einzuschreiben was für die Entwicklung(und nur für die Entwicklung)die Typescript-Variante benötigt wird.  
   
-Der Body Parser stellt die übermittelten Informationen über eine Variable zur Verfügung. Um diesen zu benützen, muss folgendes der Server-Klasse übergeben werden: `this._server.use(bodyParser.function());`
+Der Body Parser stellt die übermittelten Informationen über eine Variable zur Verfügung. Um diesen zu benützen, muss folgendes der Server-Klasse übergeben werden: `this._server.use(bodyParser.function());`  
+
+
+## Body  
+Der Arbeitsauftrag lautete einen neuen Wert hinzuzufügen.Der dazu benötigte HTTP-Request lautet **PUT**. Dieser Wert soll sich im Body des HTTP-Paketes befinden und dem JSON-Muster entsprechen.  
+  
+Somit ist es Notwendig eine neue Methode für */data* mit der Request **PUT** zu schreiben :  
+
+Mit `bodyParser.json());` werden Werte, die sich im Body in einer JSON-Codierung vorfinden in Variablen gespeichert, die mit `requ.body.xxx` abgerufen werden können. Diese Werte werden im Objekt *Value* verpackt der Datenbank übergeben. Sollte ein Problem auftreten, wird der Fehlercode *400: Bad Request* zurückgegeben.  
 
 
 ## URL
@@ -56,11 +64,4 @@ private handleGetData(req: express.Request, res: express.Response, next: express
         }
     }
 ```
-Mit **localhost:4711/data?index=** kann nun ein spezieller Wert aus unserer Datenbank abgerufen werden. Sollte diese Zahl kleiner 0 oder größer als die Datenbank sein, wird ein Fehler mit dem Statuscode *400: invalid index* zurückgegeben.
-
-## Informationen im Body
-  Als nächstes möchten wir einen neuen Wert hinzufügen. Dazu benötigen wir die HTTP-Request **PUT**. Dieser Wert soll sich im Body des HTTP-Paketes befinden und dem JSON-Muster entsprechen.  
-  
-  Dementsprechend muss auch eine neue Handler-Methode für */data* mit der Request **PUT** geschrieben werden:  
-
-  Mit `bodyParser.json());` werden Werte, die sich im Body in einer JSON-Codierung vorfinden in Variablen gespeichert, die mit `requ.body.xxx` abgerufen werden können. Diese Werte werden im Objekt *Value* verpackt der Datenbank übergeben. Sollte ein Problem auftreten, wird der Fehlercode *400: Bad Request* zurückgegeben.  
+Nun kann zum Beisppiel mit **localhost:4711/data?index=** ein spezieller Wert aus einer Datenbank entnomen  werden.  Falls der Index kleiner als 0 oder nicht vorhanden ist, wird eine Fehlermeldung zurück gegeben.
