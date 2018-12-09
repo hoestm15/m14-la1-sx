@@ -12,3 +12,4 @@
 
 Gruppe 1: 1.Einheit, 19.11.2018     [1. Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/koemam13/Protokolle/protokoll_g1_koemam13_2018-11-19.md)  
 Gruppe 1: 2.Einheit, 26.11.2018     [2.Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/koemam13/Protokolle/protokoll_g1_koemam13_2018-11-26.md)
+Gruppe 1: 3.Einheit, 03.12.2018     [3.Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/koemam13/Protokolle/protokoll_g1_koemam13_2018-12-03.md)
