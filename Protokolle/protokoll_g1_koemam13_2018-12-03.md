@@ -36,6 +36,14 @@ public static getInstance (): Database {
         }
         return this.instance;
     }
+    
+    
+    private constructor() {
+        this.add(new Value(24.4, 100));
+        this.add(new Value(25.4, 150));
+        this.add(new Value(26.4, 200));
+        this.add(new Value(23.4, 250));
+    }
   ```
   
   Die Methode `getInstance()` erstellt ein neues Objekt aber nur dann wenn es noch kein bestehendes Objekt gibt. Wenn es noch kein existierendes Objekt gibt wird das neu erstellte Objekt in der statischen Variable `instance` abgelegt. Wird die Methode weitere male aufgerufen so wird kein neues Objekt erstellt sondern das bereits bestehende Objekt zurückgegeben. Das wichtigste ist aber, dass der Konstruktor private ist, damit niemand von außen ein neues Objekt erzeugen kann.
