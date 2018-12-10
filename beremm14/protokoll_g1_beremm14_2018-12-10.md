@@ -160,3 +160,40 @@ private handlePostData(req: express.Request, res: express.Response) {
   Auch wenn einer dieser beiden Parameter nicht vorhanden sein sollte, wird einfach **undefined** übergeben und die Methode `edit();` erkennt dies.  
   Das zusätzliche *try-catch* innerhalb der Plausibilitätsüberprüfung der ID ist dazu da um interne Serverfehler, für die der Client nichts kann, nicht als *"400 Bad request"* auszugeben.  
   Sollte ein falscher Index eingegeben werden, wird dieser als neuer *Error* geworfen, am Schluss abgefangen und als *"400 Bad request"* zurückgeschickt.  
+
+### Testen von POST
+
+  Da wir - zumindest nicht alle - in der Unterrichtseinheit mit der Methode *POST* fertig geworden sind, lag es an uns die Funktionalität auszutesten:  
+  
+#### Ausgangszustand
+```json
+[{"time":"2018-12-10T19:11:02.486Z","temp":23.4,"tempUnit":"°C","power":100,"powerUnit":"W"},
+{"time":"2018-12-10T19:11:02.486Z","temp":23.5,"tempUnit":"°C","power":120,"powerUnit":"W"},
+{"time":"2018-12-10T19:11:02.486Z","temp":23.6,"tempUnit":"°C","power":150,"powerUnit":"W"},
+{"time":"2018-12-10T19:11:02.486Z","temp":23.7,"tempUnit":"°C","power":200,"powerUnit":"W"}]
+```
+
+#### Ändern von beiden Werten
+  **Request:**  
+  ![2 Werte](rest_2_werte_ändern.png)
+  **Response:**  
+```json
+[{"time":"2018-12-10T19:07:11.529Z","temp":50,"tempUnit":"°C","power":1000,"powerUnit":"W"},
+{"time":"2018-12-10T19:07:11.529Z","temp":23.5,"tempUnit":"°C","power":120,"powerUnit":"W"},
+{"time":"2018-12-10T19:07:11.529Z","temp":23.6,"tempUnit":"°C","power":150,"powerUnit":"W"},
+{"time":"2018-12-10T19:07:11.529Z","temp":23.7,"tempUnit":"°C","power":200,"powerUnit":"W"}]
+```
+
+#### Ändern eines Wertes 
+  **Request:**  
+  ![1 wert](rest_1_wert_ändern.png)  
+  **Response:**  
+```json
+[{"time":"2018-12-10T19:11:44.008Z","temp":50,"tempUnit":"°C","power":2000,"powerUnit":"W"},
+{"time":"2018-12-10T19:11:02.486Z","temp":23.5,"tempUnit":"°C","power":120,"powerUnit":"W"},
+{"time":"2018-12-10T19:11:02.486Z","temp":23.6,"tempUnit":"°C","power":150,"powerUnit":"W"},
+{"time":"2018-12-10T19:11:02.486Z","temp":23.7,"tempUnit":"°C","power":200,"powerUnit":"W"}]
+```
+
+#### Zusammenfassung
+Alles funktioniert einwandfrei! (Und wie oft kann man das über ein Programm sagen...)
