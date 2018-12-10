@@ -2,7 +2,7 @@
   Berger Emil  
   5AHME, Gruppe 1  
   19.11.18  
-  Anwesend: Berger, Böcksteiner, Ehmann, Enzi, Kobor, Köhler, Knappitsch  
+  Anwesend: Berger, Böcksteiner, Ehmann, Kobor, Köhler, Knappitsch  
   Abwesend: Bullner  
 
 # Visual Studio Code
