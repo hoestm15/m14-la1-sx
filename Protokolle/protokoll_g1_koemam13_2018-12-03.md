@@ -70,7 +70,7 @@ Delete|Daten vom Server löschen
   
 ## Informationsübertragung mittels HTTP-Requests
 Mann kann mittels zwei Möglicheiten Informationen übertragen. Entweder mit der **URL** oder mit dem **Body**.
-Egal welche Möglichkeit mann verwendet mann brauch in beiden Fällen das **Body-Parser** Modul.
+Egal welche Möglichkeit mann verwendet mann braucht in beiden Fällen das **Body-Parser** Modul.
 
 
 ### Das Body-Parser Modul
