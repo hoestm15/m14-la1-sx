@@ -34,19 +34,22 @@ Ein anderes Entwurfsmuster wäre zum Beispiel *immutable* bei dem nur mit Getter
 ```
 Diese Methode der Klasse database.ts gibt, anstatt des originalen Arrays, ein neues mit dem selben Inhalt zurück. Ansonsten hätte man von außen direkten Zugriff auf die Datenbank und könnte Daten verändern.
 
-### Übertragen von Informationen mit HTTP
+### Hinzufügen von neuen Modulen in node.js
+Auf der Website [www.npmjs.com](www.npmjs.com) kann man alle verfügbaren Module heruterladen. Dies erfolgt über den Konsolen-Befehl ```npm install <Modul-Name>```. Doch bevor man ein Modul installiert, sollte man überprüfen, ob die Verwendung sicher ist. Dafür sieht man sich einfach die Anzahl der wöchentlichen Downloads an. Im Falle von *body-parser* liegt diese Zahl zur Zeit bei 7.615.798. Dieses Modul kann man also bedenkenlos verwenden.
 
-#### Body-Parser
+## Übertragen von Informationen mit HTTP
+
+### Body-Parser
 Dieses Modul fügt eine Variable hinzu, mit der man Daten aus der URL oder des Bodys eines HTTP-Requests auslesen kann.
 
 Die Installation erfolgt über den Konsolen-Befehl ```npm install body-parser```. Durch einen Eintrag in der package.json macht der Befehl ```npm install --save-dev @types/body-parser``` das Modul auch für Typescript verfügbar.
 
-##### URL
+#### URL
 Mit einem **?** können Daten direkt in der URL übergeben werden. Mit ```localhost:4711/data?index=2``` fordert man in unserem Fall des dritte Element der Datenbank an und bekommt dieses im .json-Format. Sollte an diesem Index nichts in der Datenbank stehen, bekommt man *Invalid Index* zurück. Bearbeitet werden diese Requests mit ```bodyParser.json()```. 
 
 Diese Möglichkeit der Datenübertragung wird allerdings nur für unsensible Daten verwendet, da diese in der Browser-History gespeichert werden.
 
-##### Body
+#### Body
 Mit Tools wie z.B. RESTed(einfach als Browser-AddOn herunterladen) können bei einer HTTP-Request Daten im Body mitgesendet werden. Dadurch scheinen diese Daten nicht im Verlauf des Browsers auf und die URL wird nicht unnötig lang, wie es z.B. bei mehreren Microsoft Produkten der Fall ist.
 
 Wir verwenden diese Möglichkeit der Datenübertragung um mit dem Schlüsselwort **PUT** Einträge in die Datenbank zu tätigen. Um Daten aus der URL zu lesen verwenden wir ```bodyParser.urlencoded()```
@@ -62,6 +65,6 @@ Wir verwenden diese Möglichkeit der Datenübertragung um mit dem Schlüsselwort
         }
     }
 ```
-Mit dieser Methode behandeln wir PUT-Requests am Server. 
+Mit dieser Methode behandeln wir PUT-Requests am Server. Es wird ein neues Objekt vom Typ *Value* erzeugt und zur Datenbank hinzugefügt.
 
 
