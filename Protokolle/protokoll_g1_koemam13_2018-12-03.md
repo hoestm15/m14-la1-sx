@@ -11,7 +11,7 @@ Abwesend: Böcksteiner, Kobor
 ### Express-Modul
 Dieses Modul vereinfacht die programmierung eines HTTP/HTTPS-Server.
 Es benutzt die bereits vorhandenen HTTP/HTTPS Module von Node.js.  
-Um Express nutzen zu können, muss mann es zuerst installieren. Dies kann mann mit dem Konsolen Befehl `npm install express`. Unter anderem benötigt mann dazu auch noch die zusätzlichen Typen der Variablen für das Modul. Da mann diese aber nur zum Entwickeln der Software braucht, wird dieses Modul mit dem `npm install --save-dev @types/express` installiert. Mann sieht anschließend das beide Module in der `package.json` Datei eingetragen wurden.
+Um Express nutzen zu können, muss man es zuerst installieren. Dies kann man mit dem Konsolen Befehl `npm install express`. Unter anderem benötigt mann dazu auch noch die zusätzlichen Typen der Variablen für das Modul. Da man diese aber nur zum Entwickeln der Software braucht, wird dieses Modul mit dem `npm install --save-dev @types/express` installiert. Man sieht anschließend das beide Module in der `package.json` Datei eingetragen wurden.
 
 ```typescript
 "devDependencies": {
@@ -24,7 +24,7 @@ Um Express nutzen zu können, muss mann es zuerst installieren. Dies kann mann m
   ```
   
   ### Singleton
-  Singleton ist ein Entwurfsmuster für Datenbanken. Es wird dann angewendet wenn ein Datensatz nur einmal vorkommen soll.  
+  Singleton ist ein Entwurfsmuster für Datenbanken. Es wird dann angewendet wenn eine Datenbank nur einmal vorkommen soll.  
   Mit der folgenden Klasse haben wir dieses Entwurfsmuster umgesetzt.
   
   ```typescript
@@ -69,20 +69,20 @@ Delete|Daten vom Server löschen
   
   
 ## Informationsübertragung mittels HTTP-Requests
-Mann kann mittels zwei Möglicheiten Informationen übertragen. Entweder mit der **URL** oder mit dem **Body**.
+Man kann mittels zwei Möglicheiten Informationen übertragen. Entweder mit der **URL** oder mit dem **Body**.
 Egal welche Möglichkeit mann verwendet mann braucht in beiden Fällen das **Body-Parser** Modul.
 
 
 ### Das Body-Parser Modul
 Diese Modul ermöglicht es uns Anfragen automatisch als Variablen zu speichern. Es legt für alle Übermittelten Informationen eine Variable an.  
 Dieses Modul installiert mann mit dem folgenden Konsolen Befehl: `npm install body-parser`  
-Aber gleich wie bei dem Express Modul benötigt mann auch das dazu gehörige Variablen modul welches mann mit dem folgenden Befehl installiert: `npm install --save-dev @types/body-parser`  
-Aber damit dieses Modul verwendet wird muss mann dies dem Server zuerst bekannt geben. Hierbei ist es wichtig die Reihenfolge zu beachten und das Modul möglichst weit oben bekannt zu geben. Dies macht mann mit der folgenden Funktion.
+Aber gleich wie bei dem Express Modul benötigt man auch das dazu gehörige Variablen modul welches man mit dem folgenden Befehl installiert: `npm install --save-dev @types/body-parser`  
+Aber damit dieses Modul verwendet wird muss mann dies dem Server zuerst bekannt geben. Hierbei ist es wichtig die Reihenfolge zu beachten und das Modul möglichst weit oben bekannt zu geben. Dies macht man mit der folgenden Funktion.
 ```typescript
 this._server.use(bodyParser.function());
 ```
 ### Informationen in der URL
-Wenn mann die Informationen mit der URL sendet kann man diese einfach reinschreiben mann muss nur nach der abfrage einen verweis dazu machen, damit der Server weiß das es sich um eine Abfrage handelt. Dieser Verweis ist in diesem Falle das Fragezeichen **?**. Um weitere Informationen auf einmal zu senden muss man das Kaufmännische UND **&** nach jeder Information verwenden. Eine Abfrage könnte so aussehen: `localhost:4711/data?index=0`
+Wenn man die Informationen mit der URL sendet kann man diese einfach reinschreiben man muss nur nach der abfrage einen verweis dazu machen, damit der Server weiß das es sich um eine Abfrage handelt. Dieser Verweis ist in diesem Falle das Fragezeichen **?**. Um weitere Informationen auf einmal zu senden muss man das Kaufmännische UND **&** nach jeder Information verwenden. Eine Abfrage könnte so aussehen: `localhost:4711/data?index=0`
 
 **Die Handler-Methode**
 ```typescript
@@ -96,7 +96,7 @@ private handleGetData(req: express.Request, res: express.Response, next: express
         }
     }
 ```
-Mit dieser Methode kann mann nun einen speziellen Wert aus der Datenbank abrufen. Dies machen wir indem wir den Index aus der Variable `req.query.index` holen. Diesen Index setzten wir dann anschließend in unsere get Methode der Datenbank ein.
+Mit dieser Methode kann man nun einen speziellen Wert aus der Datenbank abrufen. Dies machen wir indem wir den Index aus der Variable `req.query.index` holen. Diesen Index setzten wir dann anschließend in unsere get Methode der Datenbank ein.
 Sollte der index jedoch **kleiner als 0** oder **großer als die Anzahl der Datensätze** sein wird eine response mit dem Statuswert **400** und einer Nachricht "invalid index" zurück gesendet.
 
 ### Informationen in dem Body
@@ -127,6 +127,6 @@ In dieser Handler Methode erstellen wir ein Neues **Value** Objekt mit den Daten
 ## [RESTED](https://addons.opera.com/en/extensions/details/rested/)
 Um zu testen ob der Server so funktioniert wie wir es möchten benutze ich die Browser extension **RESTED**. Mit diesem Tool können wir eine Maschine-zu-Maschine Kommunikation aufbauen. 
 ![Rested](https://github.com/HTLMechatronics/m14-la1-sx/blob/koemam13/Protokolle/Bilder/rested.svg)
-Auf der Linken Seite kann mann die Collections auswählen und auch den Verlauf anzeigen lassen.
-Auf der Rechten Seite kann man auswählen welche art von Request mann machen möchte. In diesem Fall handelt es sich um eine **PUT** request. Diese Request wird automatisch im JSON Format gesendet. Zuerst muss mann die URL eingeben. Dann wählt mann die Request Methode aus und anschließend welchen Wert mann senden möchte.
+Auf der Linken Seite kann man die Collections auswählen und auch den Verlauf anzeigen lassen.
+Auf der Rechten Seite kann man auswählen welche art von Request man machen möchte. In diesem Fall handelt es sich um eine **PUT** request. Diese Request wird automatisch im JSON Format gesendet. Zuerst muss man die URL eingeben. Dann wählt man die Request Methode aus und anschließend welchen Wert mann senden möchte.
 Diese Tool zeigt zudem auch direkt die Antwort des Servers.
