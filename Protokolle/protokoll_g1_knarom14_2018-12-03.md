@@ -34,7 +34,7 @@ Ein anderes Entwurfsmuster wäre zum Beispiel *immutable* bei dem nur mit Getter
 ```
 Diese Methode der Klasse database.ts gibt, anstatt des originalen Arrays, ein neues mit dem selben Inhalt zurück. Ansonsten hätte man von außen direkten Zugriff auf die Datenbank und könnte Daten verändern.
 
-### Hinzufügen von neuen Modulen in node.js
+### Hinzufügen von neuen Modulen mit NPM
 Auf der Website [www.npmjs.com](www.npmjs.com) kann man alle verfügbaren Module herunterladen. Dies erfolgt über den Konsolen-Befehl ```npm install <Modul-Name>```. Doch bevor man ein Modul installiert, sollte man überprüfen, ob die Verwendung sicher ist. Dafür sieht man sich einfach die Anzahl der wöchentlichen Downloads an. Im Falle von *body-parser* liegt diese Zahl zur Zeit bei 7.615.798. Dieses Modul kann man also bedenkenlos verwenden.
 
 ## Übertragen von Informationen mit HTTP
