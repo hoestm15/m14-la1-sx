@@ -1,7 +1,7 @@
 # Protokoll
   Berger Emil  
   5AHME, Gruppe 1  
-  03.12.18  
+  10.12.18  
   Anwesend: Berger, Böcksteiner, Bullner, Ehmann, Knappitsch, Kobor, Köhler  
   Abwesend: niemand  
   
