@@ -2,7 +2,7 @@
   Berger Emil  
   5AHME, Gruppe 1  
   03.12.18  
-  Anwesend: Berger, Bullner, Ehmann, Enzi, Köhler, Knappitsch  
+  Anwesend: Berger, Bullner, Ehmann, Köhler, Knappitsch  
   Abwesend: Böcksteiner, Kobor  
 
 ## Wiederholung
