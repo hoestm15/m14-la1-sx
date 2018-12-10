@@ -21,6 +21,13 @@ Da das Arbeiten mit der HTTP- und der HTTPS-Methode in node.js schwierig ist, wi
     }
     
     private static instance: Database;
+    
+    private constructor () {
+        this.add(new Value(23.4, 100));
+        this.add(new Value(23.5, 120));
+        this.add(new Value(23.6, 150));
+        this.add(new Value(23.7, 200));
+    }
 ```
 In der Klasse database.ts verwenden wir das Entwurfsmuster Singleton. Bei jedem Aufruf von ```getInstance()``` wird überprüft, ob bereits ein Objekt der Klasse existiert. Wenn nicht, dann wird ein neues angelegt und in der Variable ```instance``` gespeichert. Zusätzlich ist der Konstruktor private, um zu verhindern, dass von außen ein neues Objekt erzeugt wird. Dieses Entwurfsmuster ist besonders in einer Datenbank-Klasse sinnvoll, da so alle Daten gesammelt in einem Objekt gespeichert werden können.
 
