@@ -165,7 +165,7 @@ private handlePostData(req: express.Request, res: express.Response) {
 
   Da wir - zumindest nicht alle - in der Unterrichtseinheit mit der Methode *POST* fertig geworden sind, lag es an uns die Funktionalität auszutesten:  
   
-#### Ausgangszustand
+#### Ausgangszustand (via GET /dataset)
 ```json
 [{"time":"2018-12-10T19:11:02.486Z","temp":23.4,"tempUnit":"°C","power":100,"powerUnit":"W"},
 {"time":"2018-12-10T19:11:02.486Z","temp":23.5,"tempUnit":"°C","power":120,"powerUnit":"W"},
