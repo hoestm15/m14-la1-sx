@@ -35,5 +35,33 @@ Ein anderes Entwurfsmuster wäre zum Beispiel *immutable* bei dem nur mit Getter
 Diese Methode der Klasse database.ts gibt, anstatt des originalen Arrays, ein neues mit dem selben Inhalt zurück. Ansonsten hätte man von außen direkten Zugriff auf die Datenbank und könnte Daten verändern.
 
 ### Übertragen von Informationen mit HTTP
-#### URL
-Mit einem *?* können Daten direkt in der URL übergeben werden. Mit ```localhost:4711/data?index=2``` fordert man in unserem Fall des dritte Element der Datenbank an.
+
+#### Body-Parser
+Dieses Modul fügt eine Variable hinzu, mit der man Daten aus der URL oder des Bodys eines HTTP-Requests auslesen kann.
+
+Die Installation erfolgt über den Konsolen-Befehl ```npm install body-parser```. Durch einen Eintrag in der package.json macht der Befehl ```npm install --save-dev @types/body-parser``` das Modul auch für Typescript verfügbar.
+
+##### URL
+Mit einem **?** können Daten direkt in der URL übergeben werden. Mit ```localhost:4711/data?index=2``` fordert man in unserem Fall des dritte Element der Datenbank an und bekommt dieses im .json-Format. Sollte an diesem Index nichts in der Datenbank stehen, bekommt man *Invalid Index* zurück. Bearbeitet werden diese Requests mit ```bodyParser.json()```. 
+
+Diese Möglichkeit der Datenübertragung wird allerdings nur für unsensible Daten verwendet, da diese in der Browser-History gespeichert werden.
+
+##### Body
+Mit Tools wie z.B. RESTed(einfach als Browser-AddOn herunterladen) können bei einer HTTP-Request Daten im Body mitgesendet werden. Dadurch scheinen diese Daten nicht im Verlauf des Browsers auf und die URL wird nicht unnötig lang, wie es z.B. bei mehreren Microsoft Produkten der Fall ist.
+
+Wir verwenden diese Möglichkeit der Datenübertragung um mit dem Schlüsselwort **PUT** Einträge in die Datenbank zu tätigen. Um Daten aus der URL zu lesen verwenden wir ```bodyParser.urlencoded()```
+
+```Typescript
+    private handlePutData (req: express.Request, res: express.Response, next: express.NextFunction) {
+        try {
+            const m = new Value(+req.body.temp, +req.body.power);
+            Database.getInstance().add(m);
+            res.send({id: Database.getInstance().size() - 1});
+        } catch (err) {
+            res.status(400).send('400 Bad Request');
+        }
+    }
+```
+Mit dieser Methode behandeln wir PUT-Requests am Server. 
+
+
