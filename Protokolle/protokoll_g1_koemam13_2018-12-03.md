@@ -9,7 +9,7 @@ Abwesend: Böcksteiner, Kobor
 
 ## Wiederholung der letzten Einheit.
 ### Express-Modul
-Dieses Modul vereinfacht die programmierung eines HTTP/HTTPS-Server oder Clients.
+Dieses Modul vereinfacht die programmierung eines HTTP/HTTPS-Server.
 Es benutzt die bereits vorhandenen HTTP/HTTPS Module von Node.js.  
 Um Express nutzen zu können, muss mann es zuerst installieren. Dies kann mann mit dem Konsolen Befehl `npm install express`. Unter anderem benötigt mann dazu auch noch die zusätzlichen Typen der Variablen für das Modul. Da mann diese aber nur zum Entwickeln der Software braucht, wird dieses Modul mit dem `npm install --save-dev @types/express` installiert. Mann sieht anschließend das beide Module in der `package.json` Datei eingetragen wurden.
 
