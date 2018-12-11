@@ -93,6 +93,10 @@ public edit (index: number, p2: any, power?: any): void {
 }
 ```
   Die Methode berücksichtigt im Prinzip alle Parameter die in diesen Methoden deklariert sind und nutzt die, die beim Aufruf übergeben werden.  
+  * Wenn ein **Value**-Objekt ankommt, wir direkt dieses als Wert am Index gesetzt.  
+  * Wenn **zwei** Werte ankommen, wird ein neues Objekt aus diesen Werten gebaut.  
+  * Wenn nur **ein** Wert ankommt wird für den anderen Wert der bereits vorhandene verwendet.  
+  Da der dritte Parameter ja nicht da sein muss, muss der **Fragezeichen-Operator** (**?**) angeführt werden.  
   
   Zusätzlich werden in der Klasse *database* noch die Methoden `getPower()` und `getTemp()` benötigt:  
 ```typescript
