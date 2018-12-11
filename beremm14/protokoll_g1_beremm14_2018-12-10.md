@@ -5,14 +5,14 @@
   Anwesend: Berger, Böcksteiner, Bullner, Ehmann, Knappitsch, Kobor, Köhler  
   Abwesend: niemand  
   
-## Wiederholung
+# Wiederholung
 
-### Installation von Modulen
+## Installation von Modulen
   *Bsp: Installieren von express*
   * Befehl 1: `npm install express` -> Zum Installieren von express (es wird in der package.json eingetragen, welche Version benötigt wird.  
   * Befehl 2: `npm install --save-dev @types/express` -> Zum Installieren der TypeScript-Variante von Express, da diese aber nur zum Entwicklen benötigt wird, wird sie mit *--save-dev* in die Development-Module eingetragen.  
   
-### Verwenden der HTTP-Requests in unserem Programm:
+## Verwenden der HTTP-Requests in unserem Programm:
 
 Request | Methode | Ressource | Funktion
 ------- | ------- | --------- | --------
@@ -21,7 +21,7 @@ PUT | `this._server.put()` | `/data` | Hinzufügen eines Wertes
 POST | `this._server.post()` | `/data` | Ändern eines Wertes
 DELETE | `this._server.delete()` | `/data` | Löschen eines Wertes *(restliche Liste rückt im Index nach*)
 
-### Collections in TypeScript
+## Collections in TypeScript
 
   Prinzipiell gibt es in TypeScript keine Collections wie in Java, da bereits in der Sprache vorhandene Elemente diese überflüssig machen. So gibt es zu vielen Java-Collections ein passendes Pendant.  
 
@@ -33,7 +33,7 @@ Hash-Map | Object
   Dies sind nur zwei Beispiele. Eine ArrayList lässt sich mit einem Array realisieren, da Arrays über ähnlich funktionierende Methoden verfügt wie eine ArrayList in Java.  
   Das Gleiche gilt für Hash-Maps.  
 
-## REST-Server: DELETE (Löschen eines Wertes)
+# REST-Server: DELETE (Löschen eines Wertes)
   *Um PUT, POST oder DELETE zu testen werden HTTP-Client-Tools wie [RESTed](https://itunes.apple.com/at/app/rested-simple-http-requests/id421879749?mt=12) benötigt!*
 
   Um einen Wert aus der Datenbank zu löschen muss man für die HTTP-Request *DELETE* eine Handler-Methode schreiben und diese im Constructor an den Server weitergeben.  
@@ -66,13 +66,13 @@ private handleDeleteData(req: express.Request, res: express.Response) {
   Eine zweite Möglichkeit wäre es unserem Objekt *Value* noch eine Variable *ID* hinzuzufügen, die nicht mehr geändert wird.  
   
 
-## REST-Server: POST (Ändern eines Wertes)
+# REST-Server: POST (Ändern eines Wertes)
 
   Bevor wir die Handler-Methode für *POST* schreiben, muss eine Methode `edit();` in unserer Datenbank erstellt werden.  
   Diese Methode muss entweder **beide** Werte austauschen, wenn beide im Body vorhanden sind oder auch nur **einen der beiden** (Power / Temperature).  
   In Java würde man dafür mehrere *gleichnamige Methoden* mit *unterschiedlicher Parameterliste* ertsellen. Dies ist in TypeScript aber nicht möglich, da ein TypeScript-Code immer in JavaScript transpiliert wird und JavaScript keine Datentypen kennt. JavaScript kann also diese Methoden nicht durch ihre Parameterliste unterscheiden, daher funktioniert das nicht.  
   
-### [Signature Overloading](https://stackoverflow.com/questions/13212625/typescript-function-overloading)
+## [Signature Overloading](https://stackoverflow.com/questions/13212625/typescript-function-overloading)
   Eine Möglichkeit wäre das **Signature Overloading** in JavaScript. Im Prinzip erfüllt es die Funktion von *gleichnahmigen Methoden mit unterschiedlicher Parameterliste* in Java - mit einem anderen Syntax.  
   
   Dies wäre ein Beispiel, wie sich die Methode `edit()` mittels *Signature Overloading* realisieren lassen würde:  
@@ -111,7 +111,7 @@ public getTemp (index: number): number {
 }
 ```
 
-### Zweite Variante
+## Zweite Variante
   
   Ich habe mich allerdings dazu entschlossen dies anders zu lösen. Da JavaScript die Datentypen egal sind, kann man in der Deklaration einfach *any* eintragen und jeder Datentyp wird akzeptiert (auch wenn ein Parameter gar *nicht da* ist - dann ist er **undefined**). Dann wird geprüft welche Datentypen die übergebenen Variablen haben und je nach dem wird weiter vorgegangen:  
 ```typescript
@@ -130,7 +130,7 @@ public edit (index: number, temp: any, power: any): void {
   * Wenn **temp** *number* ist -> temp wird geändert, bei power wird der alte Wert beibehalten (getPower())  
   * Wenn **power** *number* ist -> power wird geändert, bei temp wird der alte Wert beibehalten
 
-### Handler-Methode
+## Handler-Methode
 
   Im Contructor:  
 ```typescript
@@ -165,11 +165,11 @@ private handlePostData(req: express.Request, res: express.Response) {
   Das zusätzliche *try-catch* innerhalb der Plausibilitätsüberprüfung der ID ist dazu da um interne Serverfehler, für die der Client nichts kann, nicht als *"400 Bad request"* auszugeben.  
   Sollte ein falscher Index eingegeben werden, wird dieser als neuer *Error* geworfen, am Schluss abgefangen und als *"400 Bad request"* zurückgeschickt.  
 
-### Testen von POST
+## Testen von POST
 
   Da wir - zumindest nicht alle - in der Unterrichtseinheit mit der Methode *POST* fertig geworden sind, lag es an uns die Funktionalität auszutesten:  
   
-#### Ausgangszustand (via GET /dataset)
+### Ausgangszustand (via GET /dataset)
 ```json
 [{"time":"2018-12-10T19:11:02.486Z","temp":23.4,"tempUnit":"°C","power":100,"powerUnit":"W"},
 {"time":"2018-12-10T19:11:02.486Z","temp":23.5,"tempUnit":"°C","power":120,"powerUnit":"W"},
@@ -177,7 +177,7 @@ private handlePostData(req: express.Request, res: express.Response) {
 {"time":"2018-12-10T19:11:02.486Z","temp":23.7,"tempUnit":"°C","power":200,"powerUnit":"W"}]
 ```
 
-#### Ändern von beiden Werten
+### Ändern von beiden Werten
   **Request:**  
   ![2 Werte](rest_2_werte_ändern.png)
   **Response:**  
@@ -188,7 +188,7 @@ private handlePostData(req: express.Request, res: express.Response) {
 {"time":"2018-12-10T19:07:11.529Z","temp":23.7,"tempUnit":"°C","power":200,"powerUnit":"W"}]
 ```
 
-#### Ändern eines Wertes 
+### Ändern eines Wertes 
   **Request:**  
   ![1 wert](rest_1_wert_ändern.png)  
   **Response:**  
@@ -199,5 +199,5 @@ private handlePostData(req: express.Request, res: express.Response) {
 {"time":"2018-12-10T19:11:02.486Z","temp":23.7,"tempUnit":"°C","power":200,"powerUnit":"W"}]
 ```
 
-#### Zusammenfassung
+### Zusammenfassung
 Alles funktioniert einwandfrei! (Und wie oft kann man das über ein Programm sagen...)
