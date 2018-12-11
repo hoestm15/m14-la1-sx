@@ -110,9 +110,7 @@ public getTemp (index: number): number {
   Ich habe mich allerdings dazu entschlossen dies anders zu lösen. Da JavaScript die Datentypen egal sind, kann man in der Deklaration einfach *any* eintragen und jeder Datentyp wird akzeptiert. Dann wird geprüft welche Datentypen die übergebenen Variablen haben und je nach dem wird weiter vorgegangen:  
 ```typescript
 public edit (index: number, temp: any, power: any): void {
-    if (temp instanceof Value) {
-        this.data[index] = temp;
-    } else if (typeof temp === 'number' && typeof power === 'number') {
+    if (typeof temp === 'number' && typeof power === 'number') {
         this.data[index] = new Value(temp, power);
     } else if (typeof temp === 'number' && typeof power === 'undefined') {
         this.data[index] = new Value(temp, this.getPower(index));
