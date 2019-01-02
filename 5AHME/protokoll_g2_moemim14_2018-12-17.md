@@ -61,7 +61,7 @@ Wenn einer der Hosts die Verbindung schließen möchte, sendet dieser ein **FIN*
 
 ## Übung mit HTTP im Terminal
 Unsere Aufgabe war es, eine Verbindung zu einem Server herzustellen.  
-Mit dem Tool *nc* der Shell haben wir eine Verbindung zum HTL-Server in Arnfels hergestellt.
+Mit dem Tool *nc* der Shell haben wir eine Verbindung zum HTL-Server in Arnfels hergestellt.  
 `nc -C -l www.htl-mechatronik.at 80` 
 
 Danach haben wir eine Anfrage an der Server geschickt. Diese sah wie folgt aus:
