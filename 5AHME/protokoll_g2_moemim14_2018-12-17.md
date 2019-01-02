@@ -23,4 +23,5 @@ Unter einem zustandslosen Protokoll versteht man, dass Informationen aus früher
 HTTP basiert auf dem *Request-Response*-System. Das bedeutet, dass der Client einen *Request* sendet und der Server anschließend mit einem *Response* antwortet.
 
 ### Verbindungsaufbau
-![HTTP-Handshake]()
+![HTTP-Handshake](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/5AHME/HTTP_Handshake.png)
+
