@@ -24,4 +24,4 @@ HTTP basiert auf dem *Request-Response*-System. Das bedeutet, dass der Client ei
 
 ### Verbindungsaufbau
 ![HTTP-Handshake](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/5AHME/HTTP_Handshake.png)
-
+Das obrige Bild beschreibt den sogenannten **HTTP-Handshake**. Wenn der Client die Verbindung aufbauen möchte, sendet dieser als erstes ein **SYN**-Package an den Server. Wenn das **SYN**-Package beim Server angekommen ist, antwortet der Server mit einem **ACK**-Package. Wenn der Client das **ACK**-Package vom Server erhalten hat, sendet dieser ein weiteres **ACK**-Package an den Server. Damit wurde erflogreich eine Verbindung aufgebaut.
