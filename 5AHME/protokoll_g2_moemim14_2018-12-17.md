@@ -142,4 +142,5 @@ Diese Datei ist für die Konfiguration des Typescript-Compilers zuständig.
 Diese Datei ist für den Übersetzungsvorgang verantwortlich.
 
 ### tslint.json
-TSLint ist ein erweiterbares statisches Analysewerkzeug, das TypeScript- Code auf Lesbarkeit, Wartbarkeit und Funktionsfehler überprüft . Es wird weitgehend von modernen Editoren und Build-Systemen unterstützt und kann mit Ihren eigenen Fusselregeln, Konfigurationen und Formaten angepasst werden.
+> TSLint ist ein erweiterbares statisches Analysewerkzeug, das TypeScript- Code auf Lesbarkeit, Wartbarkeit und Funktionsfehler überprüft . Es wird weitgehend von modernen Editoren und Build-Systemen unterstützt und kann mit Ihren eigenen Fusselregeln, Konfigurationen und Formaten angepasst werden.
+*[TSLint](https://palantir.github.io/tslint/)*
