@@ -127,3 +127,19 @@ Content-Type: text/html; charset=iso-8859-1
 </body></html>
 ```
 
+# Typescript
+>TypeScript ist eine Sprache für JavaScript im Anwendungsmaßstab. TypeScript fügt JavaScript optionale Typen hinzu, die Tools für umfangreiche JavaScript-Anwendungen für jeden Browser, jeden Host und jedes Betriebssystem unterstützen. TypeScript kompiliert zu lesbarem, standardbasiertem JavaScript.
+
+*[Typescript, npm](https://www.npmjs.com/package/typescript)*
+
+## Visual Studio Code
+Visual Studio Code ist eine IDE uir Programmierung von Typescript. Die IDE muss vor Benutzung eingerichtet werden. Dabei sind folgende Dateien wichtig:
+
+### tsconfig.json
+Diese Datei ist für die Konfiguration des Typescript-Compilers zuständig.
+
+### gulpfile.json
+Diese Datei ist für den Übersetzungsvorgang verantwortlich.
+
+### tslint.json
+TSLint ist ein erweiterbares statisches Analysewerkzeug, das TypeScript- Code auf Lesbarkeit, Wartbarkeit und Funktionsfehler überprüft . Es wird weitgehend von modernen Editoren und Build-Systemen unterstützt und kann mit Ihren eigenen Fusselregeln, Konfigurationen und Formaten angepasst werden.
