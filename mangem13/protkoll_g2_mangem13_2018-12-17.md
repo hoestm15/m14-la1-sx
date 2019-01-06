@@ -11,7 +11,7 @@ und Verhalten des Word Wide Web (WWW) orientier und einen Ansatz für die Kommun
 beschreibt.  
 Das verwendete Übertragungsprotokoll ist HTTP.  
 
-Für genaueres klicken Sie bitte hier.
+Mehr dazu finden Sie [hier](https://de.wikipedia.org/wiki/Representational_State_Transfer)
 
 # HTTP
 
@@ -116,9 +116,9 @@ Content-Type: text/html; charset=iso-8859-1
 </body></html>
 ```
 # Typescript
->TypeScript ist eine Sprache für JavaScript im Anwendungsmaßstab. TypeScript fügt JavaScript optionale Typen hinzu, die Tools für umfangreiche JavaScript-Anwendungen für jeden Browser, jeden Host und jedes Betriebssystem unterstützen. TypeScript kompiliert zu lesbarem, standardbasiertem JavaScript.
+TypeScript ist eine Sprache für JavaScript im Anwendungsmaßstab. TypeScript fügt JavaScript optionale Typen hinzu, die Tools für umfangreiche JavaScript-Anwendungen für jeden Browser, jeden Host und jedes Betriebssystem unterstützen. TypeScript kompiliert zu lesbarem, standardbasiertem JavaScript.
 
-*[Typescript, npm](https://www.npmjs.com/package/typescript)*
+Mehr dazu finden Sie [hier](https://www.npmjs.com/package/typescript)
 
 ## Visual Studio Code
 Der Quelltexteditor Visual Studio Code von Microsoft ist plattformunabhängig auf Windows, Linux und MacOS erhältlich. Es werden viele Programmiersprachen wie C#, C++, CoffeeScript, F#, HTML, Ini, Java, JavaScript, Makefile, Markdown, Objective-C, Python, R, Ruby, SQL, Swift, TypeScript, Visual Basic und XML unterstützt. Visual Studio Code kann mit dem Konsolenbefehl code gestartet werden. Optional kann das Programm mit code . im Projektordner geöffnet werden, wobei man sich dann gleich im jeweiligen Projekt befindet.
