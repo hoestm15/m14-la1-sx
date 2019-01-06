@@ -5,7 +5,7 @@ Gerhard Mandl
 Anwesend: Nebel Florian, Mandl Gerhard, Michael Mörth, Mario Nabernik, Muri Lorenz, Platzer Andreas  
 Abwesend: Moritz Martinak  
 
-# REST-Serverü
+# REST-Server
 __REST__ steht für REpresentational State Transfer. Gemeint ist damit eine Programmierschnittstelle, die sich an den Paradigmen
 und Verhalten des Word Wide Web (WWW) orientier und einen Ansatz für die Kommunikation zwischen Client und Server in Netzwerken
 beschreibt.  
