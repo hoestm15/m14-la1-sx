@@ -21,17 +21,23 @@ Meistens wird verwechselt, dass als Sprache HTML verwendet wird. Jedoch ist HTML
 Zudem ist HTTP ein zustandsloses Protkoll, darunter versteht man, dass Informationen aus früheren Anwendungen verloren gehen.
 Die Daten werden textuel übertragen und sind nicht verschlüsselt. Für das verschlüsselte Übertragen von Daten gibt es das HTTPS.
 
-## __Funktionsprinzip__:  
+### __Funktionsprinzip__:  
 
 ![](https://github.com/HTLMechatronics/m14-5ahme-fivu/blob/mangem13/ServerClient.png)
 
-Der Client schickt dem Server eine Anfrage (z.B. mit der Funktion GET), der Server bearbeitet diese und schickt eine 
-Response zurück.
+__Kurz zusammenfgefasst__:Der Client schickt dem Server eine Anfrage (z.B. mit der Funktion GET), der Server bearbeitet diese und schickt eine Response zurück.
 Dies tut er auch wenn er die Anfrage nicht verarbeiten kann.
 
+__Genauere beschreibung__: Zuerst wird vom Client ein __SYN__-Paket an den Server geschickt, damit signalisiert er das er eine Verbindung aufbauen möchte. Der Server bestätigt das __SYN__-Paket mit einem __ACK__-Paket und schickt dieses an den Client. Der Client bestätigt das Empfangen des __ACK__-Paket mit einem weitern __ACK__-Paket, sobald dieses vom Server empfangen wird wurde eine Verbindung aufgebaut.
 
+Normalerweise werden die Kommunikationen sobald nicht gesendet wird nach einer gewissen Dauer geschlossen um dies zu verhindern wird ein Attribut das __Keep-Alive__ im Header es HTTP-Pakets eingebunden.
 
-## __Wichtige Funktionen:__  
+__Wie wird die Verbindung geschlossen?__
+
+Wenn einer der Verbindungsteilnehmer die Verbindung beenden möchte, schickt dieser ein __FIN__-Paket. Der andere Teilnehmer 
+bestätigt diese Anfage mit einem __FIN-ACK__-Paket dadurch wird die Verbindung geschlossen.
+
+### __Wichtige Funktionen:__  
 
 | __Funktion__      | __Beschreibung__  |
 | ------------- |-------------- |
