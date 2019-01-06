@@ -49,3 +49,22 @@ bestätigt diese Anfage mit einem __FIN-ACK__-Paket dadurch wird die Verbindung 
 __Anmerkung:__ Es gibt noch weitere Funktionen jedoch sind die oben genannenten, jene die für uns relevant sind.
 
 Für näheres zu HTTP klicke [hier](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
+
+# Übungsbeispiel
+Zuerst haben wir folgende Befehlszeile in unsere Konsole eingegeben.  
+`nc -C -l www.htl-mechatronik.at 80`
+Mit diesem Befehl wird eine Verbindung zum HTL-Server in Arnfels hergestellt.  
+
+Nachdem die Verbindung aufgebaut wurde, haben wir folgende Anfrage an den Server geschickt:
+```
+GET /infotext.html HTTP/1.1
+Host: www.htl-mechatronik.at
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: de-at
+DNT: 1
+Accept-Encoding: deflate
+```
+
