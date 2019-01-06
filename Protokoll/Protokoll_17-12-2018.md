@@ -151,7 +151,7 @@ Der Quelltexteditor Visual Studio Code von Microsoft ist **plattformunabhängig*
 # Typescript
 >TypeScript ist eine Sprache für JavaScript im Anwendungsmaßstab. TypeScript fügt JavaScript optionale Typen hinzu, die Tools für umfangreiche JavaScript-Anwendungen für jeden Browser, jeden Host und jedes Betriebssystem unterstützen. TypeScript kompiliert zu lesbarem, standardbasiertem JavaScript.
 
-*[Typescript, npm](https://www.npmjs.com/package/typescript)*
+[Typescript, npm](https://www.npmjs.com/package/typescript)
 
 # gulp.js
 >gulp.js ist eine Software, basierend auf Node.js, um verschiedene Aufgaben im Webentwicklungsprozess zu automatisieren (Build-System).[3][4] So kann gulp zum Beispiel genutzt werden, um HTML, JavaScript und CSS zu verkleinern, SCSS in CSS umzuwandeln, Bilder zu optimieren und Dateien in einen „dist“-Ordner zu kopieren. Außerdem kann gulp dazu genutzt werden, um den Webbrowser automatisch zu aktualisieren oder den Webserver automatisch zu starten.
