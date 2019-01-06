@@ -116,6 +116,18 @@ Content-Type: text/html; charset=iso-8859-1
 </body></html>
 ```
 # Typescript
+>TypeScript ist eine Sprache für JavaScript im Anwendungsmaßstab. TypeScript fügt JavaScript optionale Typen hinzu, die Tools für umfangreiche JavaScript-Anwendungen für jeden Browser, jeden Host und jedes Betriebssystem unterstützen. TypeScript kompiliert zu lesbarem, standardbasiertem JavaScript.
+
+*[Typescript, npm](https://www.npmjs.com/package/typescript)*
+
+## Visual Studio Code
+Der Quelltexteditor Visual Studio Code von Microsoft ist plattformunabhängig auf Windows, Linux und MacOS erhältlich. Es werden viele Programmiersprachen wie C#, C++, CoffeeScript, F#, HTML, Ini, Java, JavaScript, Makefile, Markdown, Objective-C, Python, R, Ruby, SQL, Swift, TypeScript, Visual Basic und XML unterstützt. Visual Studio Code kann mit dem Konsolenbefehl code gestartet werden. Optional kann das Programm mit code . im Projektordner geöffnet werden, wobei man sich dann gleich im jeweiligen Projekt befindet.
+
+__Hinweis__: Visual Studio Code muss vor der Benutzung konfiguriert werden. Da bei der Verwendung von TypeScript in Kombination mit Visual Studio Code die Prozesse zur Kompelierung bzw Transpilierung nicht automatisch ausgeführt werden, Um dies jedoch zu ermöglichen werden folgende Dateien benötigt. 
+
+
+### gulpfile.json
+Die gulpfile.json wird benötigt wen wir den Task __GULP__ verwenden, mit dieser können wir in Visual Stuido Code ein Projekt builden, cleanen, etc.
 
 ### tsconfig.json
 In der tscongi.json File werden Optionen festgelegt, die der Compiler benötigt um ein Projekt zu tanspilieren.
@@ -123,6 +135,5 @@ Beispielsweise kann man mit "outDir": "./dist" festlegen, dass Output-Dateien wi
 Vorischt: tsc funktioniert nur, wenn man es global installiert: sudo npm install -g typescript, ansonsten muss man vor dem tsc-Command noch den Verzeichnis-Pfad angeben.
 
 ### tslint.json
-Lint wird verwendet, damit wir freundlich dazu genötigt werden "schönen Code" zu produzieren. Die Datei tslint.json liegt im Hauptverzeichnis und man kann in ihr festlegen, welche "Fehler" gemeldet werden. (Zum Beispiel unnötige Leerzeichen oder fehlende Semicolons). Ohne diese Datei wird uns derartiges nicht angezeigt. Zusätzlich benötigen wir noch ein Plug-In, dazu aber unten mehr.
-[Link zu unserer tslint.json](https://www.htl-mechatronik.at/gitweb/m14/?p=sx-fiv.git;a=blob;f=5AHME/ue02_typescript/tslint.json;h=22e9ee67d5a3869242de981362826f640b24dfc4;hb=d4e3db4405c8923aa35ddfccb370e1b2a51b74bc)
+Lint wird verwendet, damit wir freundlich dazu genötigt werden "schönen Code" zu produzieren. Die Datei tslint.json liegt im Hauptverzeichnis und man kann in ihr festlegen, welche "Fehler" gemeldet werden. (Zum Beispiel unnötige Leerzeichen oder fehlende Semicolons). Ohne diese Datei wird uns derartiges nicht angezeigt.
 Wenn man vor einer Code-Sequenz im Programm einen Kommentar schreibt wie `//tslint: disable`, wird Lint für die folgenden Zeilen deaktiviert. Es ist auch Möglich einzelne Fehler zu deaktivieren.
