@@ -9,4 +9,4 @@ Anwesend: Nebel Florian, Mandl Gerhard, Michael Mörth, Mario Nabernik, Muri Lor
 Abwesend: Moritz Martinak <br>
 
 ## Thema: REST - Representational State Transfer
-REST wird hauptsächlich wird bei Maschine-zu-Maschine-Kommunikation eingesetzt, dieses System ist auf einheitliche Schnittstllen aufgebaut dadurch ist REST eine einfacherer Programmierparadigmar als zum Beispiel: SOAP[(https://de.wikipedia.org/wiki/SOAP)]
+REST wird hauptsächlich wird bei Maschine-zu-Maschine-Kommunikation eingesetzt, dieses System ist auf einheitliche Schnittstllen aufgebaut dadurch ist REST eine einfacherer Programmierparadigmar als zum Beispiel: [SOAP(https://de.wikipedia.org/wiki/SOAP)]
