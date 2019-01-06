@@ -48,7 +48,7 @@ Statuscode | Beschreibung
 --- | ---  
 1XX | Informationen (z.B. Bearbeitung dauert noch an; wird verwendet um Client-Timeout zu verhindern)  
 2XX | erfolgreiche Operation  
-3XX | Umleitung (weitere Schritte durch Client notwendig, um die Anfrage bearbeiten zu können)
+3XX | Umleitung (weitere Schritte durch Client notwendig, um die Anfrage bearbeiten zu können)  
 4XX | Client-Fehler  
 5XX | Server-Fehler  
 
@@ -96,8 +96,8 @@ Content-Type: text/html
 # Typescript
 >TypeScript ist eine Sprache für JavaScript im Anwendungsmaßstab. TypeScript fügt JavaScript optionale Typen hinzu, 
 die Tools für umfangreiche JavaScript-Anwendungen für jeden Browser, jeden Host und jedes Betriebssystem unterstützen. 
-TypeScript kompiliert zu lesbarem, standardbasiertem JavaScript.
-[Quelle: Typescript](https://www.npmjs.com/package/typescript)
+TypeScript kompiliert zu lesbarem, standardbasiertem JavaScript.  
+[Quelle: npmjs, Typescript](https://www.npmjs.com/package/typescript)
 
 ## Visual Studio Code
 Um in der nächsten Einheit praktische Übungen in der Entwicklungsumgebung vornehmen zu können, haben wir einige Änderungen 
