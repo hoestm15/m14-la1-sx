@@ -40,25 +40,19 @@ HTTP basiert auf dem *Request-Response*-System. Das bedeutet, dass der Client ei
 ### Verbindungs- und Paketaufbau
 Client und Server bauen zum Austausch der Nachrichten im Standardfall eine TCP-Verbindung auf Port 80 auf.
 Die "Request und Response" gennanten Nachrichten bestehen aus einem Header und den wesentlichen Daten. Der Header enthält Steuerinformationen und im Datenabschnitt befindet sich meist ein HTML-Dokument oder Formulardaten, die der Client an den Server sendet
-![HTTP-Handshake](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/5AHME/HTTP_Handshake.png)
 
-### Paketaufbau
-Ein HTTP-Paket besteht immer aus einem **Header** und einem **Body**.  
-Im Header befinden sich alle Informationen, um Daten richtig zu interpretieren (Codierung etc.).  
-Im Body befinden sich die zu übertragenden Daten.
+![890x.jpg](https://github.com/HTLMechatronics/m14-la1-sx/blob/nabmam14/Protokoll/890x.jpg)
 
 ### Requests
-Request | Beschreibung  
+Request | Funktion  
 --- | ---  
 GET | Daten vom Server abrufen  
 POST | Daten an Server senden 
 PUT | Daten auf den Server hochladen  
 DELETE | Daten vom Server löschen 
 
-*[Quelle: Wikipedia, HTTP](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)*
-
 ### Stauscodes
-Statuscode | Beschreibung  
+Code | Beschreibung  
 --- | ---  
 1xx | Information (Status, falls die Bearbeitung der Anfrage länger dauert)  
 2xx | erfolgreiche Operation  
@@ -66,20 +60,16 @@ Statuscode | Beschreibung
 4xx | Client-Fehler  
 5xx | Server-Fehler
 
-*[Quelle: Wikipedia, HTTP](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)*
-
-### Keep-Alive
-Keep-Alive ist ein Attribut das im Header eines HTTP-Pakets eingetragen wird, damit die Kommunikation nicht sofort beendet wird.
-
 ### Verbindung schließen
-Wenn einer der Hosts die Verbindung schließen möchte, sendet dieser ein **FIN**-Package. Der andere Host antwortet darauf mit einem **FIN-ACK**-Package und die Verbindung wird anschließend geschlossen.
+Durch das Senden eines **FIN** Pakets von einem der beiden Hosts beginnt die Anfrage zum Schließen der Verbindung.
+Antwortet der andere Host dann mit einem **FIN-ACK** Paket, so wird die Verbindung geschlossen.
 
 ## Übung mit HTTP im Terminal
-Unsere Aufgabe war es, eine Verbindung zu einem Server herzustellen.  
-Mit dem Tool *nc* der Shell haben wir eine Verbindung zum HTL-Server in Arnfels hergestellt.  
+Verbindung zum HTL-Server in Arnfels herstellen.  
+
 `nc -C -l www.htl-mechatronik.at 80` 
 
-Danach haben wir eine Anfrage an der Server geschickt. Diese sah wie folgt aus:
+Anfrage an Server schicken
 ```
 GET /infotext.html HTTP/1.1
 Host: www.htl-mechatronik.at
@@ -92,7 +82,7 @@ DNT: 1
 Accept-Encoding: deflate
 ```
 
-Der Server hat darauf mit folgendem geantwortet:
+Server antwortet
 ```
 HTTP/1.1 200 OK
 Date: Mon, 19 Nov 2018 07:59:45 GMT
@@ -121,7 +111,7 @@ Content-Type: text/html
 </body></html>
 ```
 
-Sollte eine falsche Anfrage an den Server gesendet werden, so würde die Antwort wie folgt aussehen:
+Bei falscher Anfrage
 ```
 HTTP/1.1 400 Bad Request
 Date: Sun, 25 Nov 2018 18:29:08 GMT
@@ -142,20 +132,28 @@ Content-Type: text/html; charset=iso-8859-1
 </body></html>
 ```
 
+# Node.js
+Als Programmierumgebung für Javascript nutzen wir **Node.js**.
+
+>Node.js ist eine serverseitige Plattform in der Softwareentwicklung zum Betrieb von Netzwerkanwendungen. Insbesondere lassen sich Webserver damit realisieren. Node.js wird in der JavaScript-Laufzeitumgebung „V8“ ausgeführt, die ursprünglich für Google Chrome entwickelt wurde, und bietet eine ressourcensparende Architektur, die eine besonders große Anzahl gleichzeitig bestehender Netzwerkverbindungen ermöglicht.[6][7][8] 
+
+[Quelle: Wikipedia, Node.js](https://de.wikipedia.org/wiki/Node.js)
+
+Der Download für Linux erfolgte problemlos über den package manager. Auf der Website von Node.js findet man eine Anleitung dafür: 
+[Installing Node.js](https://nodejs.org/en/download/package-manager/)
+
+![Node.js](https://github.com/HTLMechatronics/m14-5ahme-fivu/blob/nabmam14/node.js.png)
+
+
+# Visual Studio Code
+Der Quelltexteditor Visual Studio Code von Microsoft ist **plattformunabhängig** auf Windows, Linux und MacOS erhältlich. Es werden viele Programmiersprachen wie C#, C++, CoffeeScript, F#, HTML, Ini, Java, JavaScript, Makefile, Markdown, Objective-C, Python, R, Ruby, SQL, Swift, TypeScript, Visual Basic und XML unterstützt. Visual Studio Code kann mit dem Konsolenbefehl ```code``` gestartet werden. Optional kann das Programm mit ```code . ``` im Projektordner geöffnet werden, wobei man sich dann gleich im jeweiligen Projekt befindet. 
+
 # Typescript
 >TypeScript ist eine Sprache für JavaScript im Anwendungsmaßstab. TypeScript fügt JavaScript optionale Typen hinzu, die Tools für umfangreiche JavaScript-Anwendungen für jeden Browser, jeden Host und jedes Betriebssystem unterstützen. TypeScript kompiliert zu lesbarem, standardbasiertem JavaScript.
 
 *[Typescript, npm](https://www.npmjs.com/package/typescript)*
 
-## Visual Studio Code
-Visual Studio Code ist eine IDE uir Programmierung von Typescript. Die IDE muss vor Benutzung eingerichtet werden. Dabei sind folgende Dateien wichtig:
+# gulp.js
+>gulp.js ist eine Software, basierend auf Node.js, um verschiedene Aufgaben im Webentwicklungsprozess zu automatisieren (Build-System).[3][4] So kann gulp zum Beispiel genutzt werden, um HTML, JavaScript und CSS zu verkleinern, SCSS in CSS umzuwandeln, Bilder zu optimieren und Dateien in einen „dist“-Ordner zu kopieren. Außerdem kann gulp dazu genutzt werden, um den Webbrowser automatisch zu aktualisieren oder den Webserver automatisch zu starten.
 
-### tsconfig.json
-Diese Datei ist für die Konfiguration des Typescript-Compilers zuständig.
-
-### gulpfile.json
-Diese Datei ist für den Übersetzungsvorgang verantwortlich.
-
-### tslint.json
-> TSLint ist ein erweiterbares statisches Analysewerkzeug, das TypeScript- Code auf Lesbarkeit, Wartbarkeit und Funktionsfehler überprüft . Es wird weitgehend von modernen Editoren und Build-Systemen unterstützt und kann mit Ihren eigenen Fusselregeln, Konfigurationen und Formaten angepasst werden.  
-*[Quelle: TSLint](https://palantir.github.io/tslint/)*
+[Quelle: Wikipedia, gulp.js](https://de.wikipedia.org/wiki/Gulp.js)
