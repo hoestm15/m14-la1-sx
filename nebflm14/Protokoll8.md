@@ -33,13 +33,11 @@ Jedes HTTP-Paket besteht aus einem **Header** in welchem sich Informationen befi
 und dem **Body** in welchem der eigentliche Inhalt übertragen wird.
 
 ### Request
-Mit vier der von HTTP zur Verfügung gestellten Anfragemethoden lassen sich bereits die wichtigsten Funktionen abdecken:
-Anfragemethode | Beschreibung  
-------- | ---------  
-GET | Daten vom Server holen  
-POST | Daten an den Server senden
-PUT | Daten auf den Server hochladen  
-DELETE | Daten vom Server löschen  
+Mit vier der von HTTP zur Verfügung gestellten Anfragemethoden lassen sich bereits die wichtigsten Funktionen abdecken:  
+* GET: Daten vom Server holen  
+* POST: Daten an den Server senden
+* PUT: Daten auf den Server hochladen  
+* DELETE: Daten vom Server löschen  
 
 ### Statuscode
 Auf jede Anfrage antwortet ein HTTP-Server mit einem Statuscode, welcher Informationen darüber gibt, ob die Anfrage verarbeitet werden 
