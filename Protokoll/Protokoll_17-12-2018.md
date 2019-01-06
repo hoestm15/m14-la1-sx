@@ -8,7 +8,7 @@
 * Gruppe: 2  
 * Anwesend: Nebel Florian, Mandl Gerhard, Michael Mörth, Mario Nabernik, Muri Lorenz, Platzer Andreas  
 * Abwesend: Martinak Moritz
-* Thema: 
+* Thema: HTTP, JavaScript
 
 
 # REST-Server
