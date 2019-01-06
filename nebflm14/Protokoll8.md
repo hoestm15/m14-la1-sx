@@ -42,13 +42,13 @@ Mit vier der von HTTP zur Verfügung gestellten Anfragemethoden lassen sich bere
 ### Statuscode
 Auf jede Anfrage antwortet ein HTTP-Server mit einem Statuscode, welcher Informationen darüber gibt, ob die Anfrage verarbeitet werden 
 kann, oder ob und welcher Fehler vorliegt.  
-Statuscode | Beschreibung  
-| --- | --- |  
-| 1XX | Informationen (z.B. Bearbeitung dauert noch an; wird verwendet um Client-Timeout zu verhindern) |  
-| 2XX | erfolgreiche Operation |  
-| 3XX | Umleitung (weitere Schritte durch Client notwendig, um die Anfrage bearbeiten zu können) |  
-| 4XX | Client-Fehler |  
-| 5XX | Server-Fehler |  
+| Statuscode | Beschreibung |
+| --- | --- |
+| 1XX | Informationen (z.B. Bearbeitung dauert noch an; wird verwendet um Client-Timeout zu verhindern) |
+| 2XX | erfolgreiche Operation |
+| 3XX | Umleitung (weitere Schritte durch Client notwendig, um die Anfrage bearbeiten zu können) |
+| 4XX | Client-Fehler |
+| 5XX | Server-Fehler |
 
 ### Keep-Alive
 In der ersten Version von HTTP konnte keine Verbindung dauerhaft am Leben erhalten bleiben. Dies wurde jedoch bereits in HTTP1.1 
