@@ -23,3 +23,6 @@ REST wird hauptsächlich wird bei Maschine-zu-Maschine-Kommunikation eingesetzt,
 HTTP funktioniert nach dem klassichen Request-Response-Prinzip. Der Client schickt eine Anfrage(Request) an den Server, der mit einer Response antwortet.
 
 ![HTTP-Prinzip](https://github.com/HTLMechatronics/m14-la1-sx/blob/murlom14/murlom14-la1-2018_19/HTTP-Prinzip.jpg)
+1. Zum Verindungsaufbau sendet der Client an den Server ein SYN-Package
+2. Beim erfolgreichem Erhalten sendet der Server ein ARC-Package zurück und stimmt somit den Verbindungsaufbau zu.
+3. Schlussendlich wird vom Client noch ein ACK-Package an den Server gesendet, dies bedeutet die Verbindung steht und Daten können ausgetauscht werden.
