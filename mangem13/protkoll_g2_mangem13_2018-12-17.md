@@ -21,5 +21,21 @@ Meistens wird verwechselt, dass als Sprache HTML verwendet wird. Jedoch ist HTML
 Zudem ist HTTP ein zustandsloses Protkoll, darunter versteht man, dass Informationen aus früheren Anwendungen verloren gehen.
 Die Daten werden textuel übertragen und sind nicht verschlüsselt. Für das verschlüsselte Übertragen von Daten gibt es das HTTPS.
 
-__Funktionsprinzip__:
+__Funktionsprinzip__:  
+
 ![](https://github.com/HTLMechatronics/m14-5ahme-fivu/blob/mangem13/ServerClient.png)
+
+Der Client schickt dem Server eine Anfrage (z.B. mit der Funktion GET), der Server bearbeitet diese und schickt eine 
+Response zurück.
+Dies tut er auch wenn er die Anfrage nicht verarbeiten kann.
+
+__Wichtige Funktionen:__  
+
+| Funktion      | Beschreibung  |
+| ------------- |-------------- |
+| GET           | Listen/Daten anfragen |
+| POST          | Daten verändern       |
+| PUT           | Neue Daten anlegen    |
+| DELETE        | Daten löschen         |
+
+__Anmerkung:__ Es gibt noch weitere Funktionen jedoch sind die oben genannenten, jene die für uns relevant sind.
