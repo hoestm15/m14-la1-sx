@@ -26,7 +26,7 @@ welcher mit einer Antwort (Response) antwortet. Die folgende Grafik stellt den V
 Als erstes, wenn der Client eine Verbindung aufbauen möchte, schickt er das **SYN-Package** über das Netzwerk an den Server. Sobald 
 dieses angekommen ist, antwortet dieser mit dem **ACK-Package** (acknowledge). Mit einem weiteren "acknowledge" vom Client ist die 
 Verbindung erfolgreich hergestellt.  
-![Handshake](https://github.com/HTLMechatronics/m14-la1-sx/blob/nebflm14/Handshake.png)  
+![Handshake](https://github.com/HTLMechatronics/m14-la1-sx/blob/nebflm14/nebflm14/Handshake.png)  
 
 ### Paketaufbau
 Jedes HTTP-Paket besteht aus einem **Header** in welchem sich Informationen befinden, wie die folgenden Daten zu interpretieren sind 
