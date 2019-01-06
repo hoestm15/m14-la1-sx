@@ -15,6 +15,7 @@ Alles was in REST adressierbar ist, ist eine Ressource. Es gelten folgende Grund
 
 ## HTTP
 [siehe auch: HTTP, Wikipedia](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)  
+  
 Mit dem Hypertext Transfer Protocol werden Daten in der Anwendungsschicht über ein Netzwerk übertragen. Es ist ein zustandsloses 
 Protokoll, was bedeutet, dass alle Informationen, bei jeder Anfrage mitgesendet werden müssen, da keinerlei Daten wie z.B. Cookies 
 gespeichert werden. Die Daten werden textuell und im Gegensatz zu HTTPS ohne jede Verschlüsselung übertragen.  
@@ -91,6 +92,7 @@ Content-Type: text/html
 </body></html>
 ```
 
+Sollte es zu keiner positiven Rückmeldung des Servers kommen, kann mithilfe der Statuscodes die Fehlersuche eingegrenzt werden.  
 ## Typescript
 >TypeScript ist eine Sprache für JavaScript im Anwendungsmaßstab. TypeScript fügt JavaScript optionale Typen hinzu, 
 die Tools für umfangreiche JavaScript-Anwendungen für jeden Browser, jeden Host und jedes Betriebssystem unterstützen. 
