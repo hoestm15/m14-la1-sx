@@ -9,8 +9,8 @@ Abwesend: Moritz Martinak
 Der Representational State Transfer ist ein Architekturstilhinter welchem der Anspruch steht, 
 selbst unabhängig von jeglichen konkreten Protokollen funktionieren soll, auch wenn zur Implementation REST-geeigneter
 Architekturen in der Regel ebenfalls HTTP verwendet wird. Die Kernidee bei REST ist das Konzept der Ressource. 
-Alles was in REST adressierbar ist, ist eine Ressource. Es gelten folgende Grundprinzipien: *Adressierbarkeit*, *Zustandslosigkeit*, 
-*Entkopplung von Resource und Repräsentation* und *Vereinheitlichung von Schnittstellen*.  
+Alles was in REST adressierbar ist, ist eine Ressource. Es gelten folgende Grundprinzipien: **Adressierbarkeit**, **Zustandslosigkeit**, 
+**Entkopplung von Resource und Repräsentation** und **Vereinheitlichung von Schnittstellen**.  
 [siehe auch: Thomas Drilling, REST](https://www.dev-insider.de/konzept-aufbau-und-funktionsweise-von-rest-a-603152/)  
 
 # HTTP
@@ -22,15 +22,15 @@ gespeichert werden. Die Daten werden textuell und im Gegensatz zu HTTPS ohne jed
 
 ## Funktionsweise
 HTTP liegt das Request-Response-System zu Grunde, welches daraus besteht, dass ein Client eine Anfrage (Request) an einen Server sende,
-welcher mit einer Antwort (Response) antwortet. Die folgende Grafik stellt den Verbindungsaufbau, den *HTTP-Handshake* dar. 
-Als erstes, wenn der Client eine Verbindung aufbauen möchte, schickt er das *SYN-Package* über das Netzwerk an den Server. Sobald 
-dieses angekommen ist, antwortet dieser mit dem *ACK-Package* (acknowledge). Mit einem weiteren "acknowledge" vom Client ist die 
+welcher mit einer Antwort (Response) antwortet. Die folgende Grafik stellt den Verbindungsaufbau, den **HTTP-Handshake** dar. 
+Als erstes, wenn der Client eine Verbindung aufbauen möchte, schickt er das **SYN-Package** über das Netzwerk an den Server. Sobald 
+dieses angekommen ist, antwortet dieser mit dem **ACK-Package** (acknowledge). Mit einem weiteren "acknowledge" vom Client ist die 
 Verbindung erfolgreich hergestellt.  
 ![Handshake](https://github.com/HTLMechatronics/m14-la1-sx/blob/nebflm14/Handshake.png)  
 
 ### Paketaufbau
-Jedes HTTP-Paket besteht aus einem *Header* in welchem sich Informationen befinden, wie die folgenden Daten zu interpretieren sind 
-und dem *Body* in welchem der eigentliche Inhalt übertragen wird.
+Jedes HTTP-Paket besteht aus einem **Header** in welchem sich Informationen befinden, wie die folgenden Daten zu interpretieren sind 
+und dem **Body** in welchem der eigentliche Inhalt übertragen wird.
 
 ### Request
 Mit vier der von HTTP zur Verfügung gestellten Anfragemethoden lassen sich bereits die wichtigsten Funktionen abdecken:
@@ -54,15 +54,15 @@ Statuscode | Beschreibung
 
 ### Keep-Alive
 In der ersten Version von HTTP konnte keine Verbindung dauerhaft am Leben erhalten bleiben. Dies wurde jedoch bereits in HTTP1.1 
-durch das Header-Attribut Connection: *Keep-Alive* behoben. Wird dieses eingetragen wird die Verbindung nicht nach einem Datenaustasch 
+durch das Header-Attribut Connection: **Keep-Alive** behoben. Wird dieses eingetragen wird die Verbindung nicht nach einem Datenaustasch 
 geschlossen, sondern bleibt bestehen bis einer der Kommunikationspartner die Verbindung schließen will.
 
 ### Verbindung abbrechen
-Da Verbindungen nun dauerhaft am Leben erhalten werden können, ist es notwendig, dass man diese auch schließen kann. Mit dem übertragen des *FIN-Package* 
-bittet der Host um die Schließung der Verbindung. Darauf wird mit einem *FIN-ACK-Package*, einer Bestätigung der Beendigung geantwortet.  
+Da Verbindungen nun dauerhaft am Leben erhalten werden können, ist es notwendig, dass man diese auch schließen kann. Mit dem übertragen des **FIN-Package** 
+bittet der Host um die Schließung der Verbindung. Darauf wird mit einem **FIN-ACK-Package**, einer Bestätigung der Beendigung geantwortet.  
 
 ## Übungen
-Aufbauen einer Verbindung zum Server der HTL Mechatronik mit dem *nc-Tool*, welches über die Kommandline mit dem Befehl: `nc www.htl-mechatronik.at 80` aufgerufen wird.  
+Aufbauen einer Verbindung zum Server der HTL Mechatronik mit dem **nc-Tool**, welches über die Kommandline mit dem Befehl: `nc www.htl-mechatronik.at 80` aufgerufen wird.  
 Mit der ersten Anfrage `GET / HTTP/1.1` konnten wir überprüfen, ob es möglich ist den Server zu erreichen.
 Als Antwort wurde folgender Text gesendet:
 ```
@@ -110,7 +110,6 @@ Diese Datei ist zuständig für die korrekte Konfiguration des Compilers.
 gulpfile ist für den Übersetzungsvorgang des Quellcodes verantwortlich.
 
 ### tslint.json
-*TSLint* ist ein Analysewerkzeug, mit dessen hilfe der TypeScript-Code auf Lesbarkeit, Wartbarkeit und Funktionsfehler überprüft werden kann.
-
+**TSLint** ist ein Analysewerkzeug, mit dessen hilfe der TypeScript-Code auf Lesbarkeit, Wartbarkeit und Funktionsfehler überprüft werden kann.
 
 
