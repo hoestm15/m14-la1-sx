@@ -115,3 +115,14 @@ Content-Type: text/html; charset=iso-8859-1
 <address>Apache/2.4.7 (Ubuntu) Server at www.htl-mechatronik.at Port 80</address>
 </body></html>
 ```
+# Typescript
+
+### tsconfig.json
+In der tscongi.json File werden Optionen festgelegt, die der Compiler benötigt um ein Projekt zu tanspilieren.
+Beispielsweise kann man mit "outDir": "./dist" festlegen, dass Output-Dateien wie bei Netbeans im dist-Ordner zu finden sind, oder dass Input-Files für den Kompiler im Ordner src liegen. Transpilieren der .ts-Dateien über die tsconfig.json wird mit dem Command tsc -p tsconfig.json
+Vorischt: tsc funktioniert nur, wenn man es global installiert: sudo npm install -g typescript, ansonsten muss man vor dem tsc-Command noch den Verzeichnis-Pfad angeben.
+
+### tslint.json
+Lint wird verwendet, damit wir freundlich dazu genötigt werden "schönen Code" zu produzieren. Die Datei tslint.json liegt im Hauptverzeichnis und man kann in ihr festlegen, welche "Fehler" gemeldet werden. (Zum Beispiel unnötige Leerzeichen oder fehlende Semicolons). Ohne diese Datei wird uns derartiges nicht angezeigt. Zusätzlich benötigen wir noch ein Plug-In, dazu aber unten mehr.
+[Link zu unserer tslint.json](https://www.htl-mechatronik.at/gitweb/m14/?p=sx-fiv.git;a=blob;f=5AHME/ue02_typescript/tslint.json;h=22e9ee67d5a3869242de981362826f640b24dfc4;hb=d4e3db4405c8923aa35ddfccb370e1b2a51b74bc)
+Wenn man vor einer Code-Sequenz im Programm einen Kommentar schreibt wie `//tslint: disable`, wird Lint für die folgenden Zeilen deaktiviert. Es ist auch Möglich einzelne Fehler zu deaktivieren.
