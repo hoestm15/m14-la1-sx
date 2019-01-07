@@ -64,7 +64,7 @@ Content-Type: text/html; charset=iso-8859-1
 <address>Apache/2.4.7 (Ubuntu) Server at www.htl-mechatronik.at Port 80</address>
 </body></html>
 ```
-Diese einfache Anfrage hat der HTL-Server nicht verstanden und gab nur eine bad Request zurück.
+Diese einfache Anfrage hat der HTL-Server nicht verstanden und gab nur eine Bad Request zurück.
 
 
 
