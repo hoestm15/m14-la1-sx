@@ -45,7 +45,7 @@ Statuscode | Beschreibung
 4** | Client-Fehler  
 5** | Server-Fehler  
 
-Zum Schließen der Verbindung sendet der Client ein FIN-Package welches mit einem FIN-ACK-Package beschlossen wird.
+Zum Schließen der Verbindung sendet der Client ein FIN-Package welches mit einem FIN-ACK-Package bestätigt wird, anschließend schließt sich die Verbindung.
 
 ### Praktische Übung
 Die Übung bestand daraus mittels Terminal eine Verbindung zu der Website www.htl-mechatronik.at zu erstellen
