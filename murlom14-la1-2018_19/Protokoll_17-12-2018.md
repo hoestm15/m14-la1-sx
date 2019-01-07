@@ -34,7 +34,7 @@ Request | Beschreibung
 ------- | ---------  
 GET | Daten abrufen  
 POST | Daten senden 
-PUT | Daten hochladen  
+PUT | Daten hochladen (neu Anlegen) 
 DELETE | Daten löschen
 
 Statuscode | Beschreibung  
