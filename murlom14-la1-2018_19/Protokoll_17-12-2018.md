@@ -28,6 +28,7 @@ HTTP funktioniert nach dem klassichen Request-Response-Prinzip. Der Client schic
 3. Schlussendlich wird vom Client noch ein ACK-Package an den Server gesendet, dies bedeutet die Verbindung steht und Daten können ausgetauscht werden. <br>
 
 Bei HTTP gibt es standartisierte Requests:
+
 Request | Beschreibung  
 ------- | ---------  
 GET | Daten abrufen  
