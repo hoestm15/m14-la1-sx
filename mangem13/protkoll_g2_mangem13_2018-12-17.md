@@ -30,7 +30,8 @@ Dies tut er auch wenn er die Anfrage nicht verarbeiten kann.
 
 __Genauere beschreibung__: Zuerst wird vom Client ein __SYN__-Paket an den Server geschickt, damit signalisiert er das er eine Verbindung aufbauen möchte. Der Server bestätigt das __SYN__-Paket mit einem __ACK__-Paket und schickt dieses an den Client. Der Client bestätigt das Empfangen des __ACK__-Paket mit einem weitern __ACK__-Paket, sobald dieses vom Server empfangen wird wurde eine Verbindung aufgebaut.
 
-Normalerweise werden die Kommunikationen sobald nicht gesendet wird nach einer gewissen Dauer geschlossen um dies zu verhindern wird ein Attribut das __Keep-Alive__ im Header es HTTP-Pakets eingebunden.
+Normalerweise wird die Kommunikation, sobald keine Daten mehr gesendet werden, nach einer gewissen Dauer geschlossen.
+Um die Kommunikation zu erhalten wird das Attribut __Keep-Alive__ im Header des HTTP-Pakets eingebunden.
 
 __Wie wird die Verbindung geschlossen?__
 
