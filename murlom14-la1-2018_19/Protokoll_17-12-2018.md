@@ -28,7 +28,7 @@ Der Verbindungsaufbau erfolgt über TCP mittels three Way Handshake:
 2. Beim erfolgreichem Erhalten sendet der Server ein SYN-ACK-Package zurück und stimmt somit den Verbindungsaufbau zu.
 3. Schlussendlich wird vom Client noch ein ACK-Package an den Server gesendet, dies bedeutet die Verbindung steht und Daten können ausgetauscht werden. <br>
 
-Bei HTTP gibt es standartisierte Requests:
+Bei HTTP gibt es standartisierte Requests und Statuscodes:
 
 Request | Beschreibung  
 ------- | ---------  
@@ -36,6 +36,14 @@ GET | Daten abrufen
 POST | Daten senden 
 PUT | Daten hochladen  
 DELETE | Daten löschen
+
+Statuscode | Beschreibung  
+--- | ---  
+1xx | Information (Status, falls die Bearbeitung der Anfrage länger dauert)  
+2xx | erfolgreiche Operation  
+3xx | Umleitung (Der Client muss weitere Informationen geben, um die Anfrage bearbeiten zu können)
+4xx | Client-Fehler  
+5xx | Server-Fehler  
 
 Zum Schließen der Verbindung sendet der Client ein FIN-Package welches mit einem FIN-ACK-Package beschlossen wird.
 
