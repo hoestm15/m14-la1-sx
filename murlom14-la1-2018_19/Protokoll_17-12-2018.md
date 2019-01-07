@@ -39,11 +39,11 @@ DELETE | Daten löschen
 
 Statuscode | Beschreibung  
 --- | ---  
-1xx | Information (Status, falls die Bearbeitung der Anfrage länger dauert)  
-2xx | erfolgreiche Operation  
-3xx | Umleitung (Der Client muss weitere Informationen geben, um die Anfrage bearbeiten zu können)
-4xx | Client-Fehler  
-5xx | Server-Fehler  
+1** | Information (mögliche Verzögerung)  
+2** | Alles in Ordnung (OK)  
+3** | Umleitung (Der Server benötigt noch mehr Informationen)
+4** | Client-Fehler  
+5** | Server-Fehler  
 
 Zum Schließen der Verbindung sendet der Client ein FIN-Package welches mit einem FIN-ACK-Package beschlossen wird.
 
