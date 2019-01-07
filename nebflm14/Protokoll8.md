@@ -43,6 +43,7 @@ Mit vier der von HTTP zur Verfügung gestellten Anfragemethoden lassen sich bere
 #### Statuscode
 Auf jede Anfrage antwortet ein HTTP-Server mit einem Statuscode, welcher Informationen darüber gibt, ob die Anfrage verarbeitet werden 
 kann, oder ob und welcher Fehler vorliegt.  
+  
 | Statuscode | Beschreibung |
 | --- | --- |
 | 1XX | Informationen (z.B. Bearbeitung dauert noch an; wird verwendet um Client-Timeout zu verhindern) |
