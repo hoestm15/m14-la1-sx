@@ -93,10 +93,75 @@ SyntaxError: Unexpected token :
     at bootstrap_node.js:625:3
 ```
 
-Um diesen Fehler zu beheben haben wir mit dem Node Package Manager das **TypeScript** Packet installiert. Dazu muss in der Konsole folgender Befehl eingegeben werden: `npm install typescript`.
-Das Programm `main.ts` kann nun mit dem Befehl `./node_modules/typescript/bin/tsc main.ts` zur Datei `main.js` transpiliert werden. Das Ausführen der Datei `main.js` ergibt folgende Ausgabe in der Konsole:
+Um diesen Fehler zu beheben haben wir mit dem Node Package Manager das **TypeScript** Paket installiert.  
+Dazu muss in der Konsole folgender Befehl eingegeben werden: `npm install typescript`.  
+Das Programm `main.ts` kann nun mit dem Befehl `./node_modules/typescript/bin/tsc main.ts` zur Datei `main.js` transpiliert werden.  
+Das Ausführen der Datei `main.js` ergibt folgende Ausgabe in der Konsole:
 ```
 Hallo 270
 ```
 Die Transpilierung war erfolgreich.
 
+## package.json
+Nach dem erfolgreichen Transpilierung des Programmes haben wir uns die Datei `package.json` genauer angesehen:
+```json
+{
+  "name": "voruebung",
+  "version": "1.0.0",
+  "description": "voruebung",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Moerth",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^3.2.2"
+  },
+}
+```
+Wir haben festgestellt, dass das ausführbare Programm ein Abhängigkeit von TypeScript hat. Allerdings ist das nicht ganz richtig, da nur der Entwickler Typescript benötigt um das Programm ändern zu können. Der Endverbraucher der das asuführbare Programm benutzt wird TypeScript nicht benötigen. Damit der Endverbraucher also keine unnötigen Pakete downloaden muss,haben wir folgende Maßnahmen getroffen:  
+* Entfernen des TypeScript-Pakets mit `npm rm typescript`
+* Neu installieren von TypeScript mit Zusatz `npm install --save-dev typescript`
+
+Ein erneuter Blick in die Datei `package.json` ergibt:
+```json
+{
+  "name": "voruebung",
+  "version": "1.0.0",
+  "description": "voruebung",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Moerth",
+  "license": "MIT",
+  "dependencies": { },
+  "devDependencies": {
+    "typescript": "^3.2.2"
+  }
+}
+```
+Es wurde ein neuer Eintrag "devDependencies" erstellt. Dieser Eintrag ermöglicht es, dass das TypeScript-Paket nur mehr dann installiert wird, wenn der Benutzer Änderungen an der Datei vornehmen möchte.
+
+Um nun eine Abhängigkeit für nen Endverbraucher einzubauen haben wir das Paket `sprintf` installiert. Das haben wir folgenden Befehl verwendet: `npm install sprintf-js`.  
+Ein Blick in die Datei `package.json` ergibt nun:
+´´´json
+{
+  "name": "voruebung",
+  "version": "1.0.0",
+  "description": "voruebung",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Moerth",
+  "license": "MIT",
+  "dependencies": {
+    "sprintf-js": "^1.1.2",
+  },
+  "devDependencies": {
+    "typescript": "^3.2.2"
+  }
+}
+´´´
