@@ -54,6 +54,7 @@ console.log('Hallo', y);
 Dann haben wir mit **npm remove typescript** typescript entfernt und es mit **npm install --save-dev typescript** in den devDependencies (statt in dependencies) abgespeichert da es nur in der Entwicklung, jedoch nicht zum Ausfühern notwendig ist.
 
 ## json Dateien   
-
+<<Die JavaScript Object Notation, kurz JSON [ˈdʒeɪsən], ist ein kompaktes Datenformat in einer einfach lesbaren Textform zum Zweck des Datenaustauschs zwischen Anwendungen. Jedes gültige JSON-Dokument soll ein gültiges JavaScript sein und per eval() interpretiert werden können.>>  
+Quelle:[https://de.wikipedia.org/wiki/JavaScript_Object_Notation](https://de.wikipedia.org/wiki/JavaScript_Object_Notation)
 
 
