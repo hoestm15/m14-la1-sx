@@ -19,6 +19,34 @@ Das Umwandeln eines C#-Codes in einen IL(Intermidate Language)-Code wird als Kom
 Das Umwandeln eines TypeScript-Codes in einen JavaScript-Code wird hingegen als Transpilierung bezeichnet, da beide Sprachen ein ähnliches Level der Abstraktivität haben.  
 [Quelle](https://www.stevefenton.co.uk/2012/11/compiling-vs-transpiling/)
 
+## Wiederholung JSON
+JSON ist die Abkürzung für **JavaScript Object Notation** und ist ein kompaktes Datenformat in einer einfach lesbaren Textform zum Zweck des Datenaustauschs zwischen Anwendungen.
+
+### Datenstruktur und Formatdefinition
+Mit JSON können Daten beliebig geschachteltwerden. Unteranderem ist auch das erstellen von Arrays aus Objekten möglich. Als Zeichenkodierung verwendet JSON meist UTF-8,allerdings sind UTF-16 und UTF-32 auch möglich.
+
+JSON kennt folgende Datentypen:
+* Nullwert `null`
+* Boolscher Wert `true` oder `false`
+* Zahlenfolge von `0`-`9` welche mit `+` und `-` vorzeichenbehaftet betrachtet werden können und durch einen Dezimalpunkt `.` unterbrochen sein können
+* Zeichenketten beginnen mit einem doppelten Anführungszeichen `"`
+* Arrays beginnen mit `[` und enden mit `]`
+* Objekte beginnen mit `{` und enden mit `}`
+	* Eigenschaften von Objekten sind folgendermaßen aufgebaut: `Schlüssel:Wert`
+
+Jeder Eintrag in eine JSON-Datei wird durch einen Beistrich vom nächsten Eintrag getrennt.
+
+#### Beispiel
+Das Objekt Schueler mit den Datenelementen `String nachname`, `String vorname` und `int alter` wäre wie folgt aufgebaut:
+```json
+"Schueler":
+{
+	"nachname": "Mörth",
+	"vorname": "Michael",
+	"alter": 18
+}
+```
+
 ## Einrichten von Visual Studio Code
 ### settings.json
 Im Ordner .vscode kann man in der Datei settings.json eintragen, welche Dateien man in Visual Studio nicht angezeigt bekommen möchte.
