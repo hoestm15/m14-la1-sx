@@ -32,4 +32,21 @@ Dabei handelt es sich um die zentrale Steuerdatei.  Mit **nano** haben wir dann 
 console.log('Hallo');
 ```  
 beinhaltet. Mit dem Befehle **node main.ts** haben wir die Datei dann ausgeführt.  
-Daraufhin haven wir sie mit **./node_modules/typescript/bin/tsc main.ts** zu einer JavaScript Datei transpiliert, was, da eigentlich kein Unterschied zu einem JavaScript Programm bestand, nicht nötig gewäsen wäre und sie mit **node main.js** ausgeführt. 
+Daraufhin haven wir sie mit **./node_modules/typescript/bin/tsc main.ts** zu einer JavaScript Datei transpiliert, was, da eigentlich kein Unterschied zu einem JavaScript Programm bestand, nicht nötig gewäsen wäre und sie mit **node main.js** ausgeführt.  
+
+Um diesen unterschied besser darzustellen haben wir die Datei mit
+
+```  
+const x=27; 
+let y: number; 
+y=10*x;
+console.log('Hallo', y);
+```  
+erweitert. Nach dem transiplieren sah es dann so aus:  
+```  
+var x =27;  
+var y:number;  
+y = 10*x;  
+console.log('Hallo', y);  
+```  
+
