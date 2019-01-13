@@ -145,6 +145,7 @@ Ein erneuter Blick in die Datei `package.json` ergibt:
 Es wurde ein neuer Eintrag "devDependencies" erstellt. Dieser Eintrag ermöglicht es, dass das TypeScript-Paket nur mehr dann installiert wird, wenn der Benutzer Änderungen an der Datei vornehmen möchte.
 
 Um nun eine Abhängigkeit für nen Endverbraucher einzubauen haben wir das Paket `sprintf` installiert. Das haben wir folgenden Befehl verwendet: `npm install sprintf-js`.  
+
 Ein Blick in die Datei `package.json` ergibt nun:  
 ```json
 {
@@ -164,4 +165,22 @@ Ein Blick in die Datei `package.json` ergibt nun:
     "typescript": "^3.2.2"
   }
 }
+```
+
+Um zu testen ob die Installation erfolgreich war haben unser Programm `main.ts` wieder erweiteret:
+```js
+import { sprintf } from 'sprintf-js';
+
+const x = 27;
+let y: number;
+
+y=10*x;
+
+console.log('Hallo', sprintf('%.02f', y));
+```
+
+Das Programm `main.ts` wird nun wie zuvor beschrieben in die Datei `main.js` transpiliert.  
+Das Ausführen der Datei `main.js` ergibt folgende Ausgabe in der Konsole:
+```
+Hallo 270.00
 ```
