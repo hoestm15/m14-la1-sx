@@ -41,7 +41,7 @@ Im Ordner .vscode kann man in der Datei settings.json eintragen, welche Dateien 
 *[Quelle: TSLint](https://palantir.github.io/tslint/)*
 
 ### Tasks
-Mit Hilfe von Tasks wird der Transpiliervorgang für die IDE automatisiert. Um diesen Vorgang zu realisieren gibt es Tasks. In diesen Tasks ist definiert was beim Builden, Cleanen etc. zu tun ist. Wir verwenden **gulp**.
+Mit Hilfe von Tasks wird der Transpiliervorgang für die IDE automatisiert. Um diesen Vorgang zu realisieren gibt es Tasks. In diesen Tasks ist definiert was beim Builden, Cleanen etc. zu tun ist. Wir verwenden [gulp](https://de.wikipedia.org/wiki/Gulp.js).
 ```js
 gulp.task('build', function (done) {
     console.log("Task build gestartet");
