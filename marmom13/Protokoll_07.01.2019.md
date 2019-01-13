@@ -38,14 +38,14 @@ Daraufhin haven wir sie mit **./node_modules/typescript/bin/tsc main.ts** zu ein
 
 Um diesen unterschied besser darzustellen haben wir die Datei mit
 
-```  
+```javascript  
 const x=27; 
 let y: number; 
 y=10*x;
 console.log('Hallo', y);
 ```  
 erweitert. Nach dem transiplieren sah es dann so aus:  
-```  
+```javascript  
 var x =27;  
 var y:number;  
 y = 10*x;  
@@ -64,4 +64,18 @@ Json Dateien sind im Gegensatz zu, zum Beispiel, CSV Dateien hirarchisch und sin
 Visual Studio ist eine IDE der Firma Microsoft die trotzdem multiplatform fähig ist und nichts mit Windows zu tun hat. Man startet sie in dem man direkt im Gewünschten Ordner den Befehl **code** aufruft. Die Quelldateien befinden sich im Ordner *src* in dem auch die main.ts vorzufinden ist. Visual Studio kann ausserdem auch readme Dateien korrekt darstelen. 
 
 Um sich überblick zu verschaffen kann man in .vscode settings.json Elemente ein und ausblenden was die Umgebung sehr individuell anpassbar macht. In meinem Fall:  
-```https://de.wiki
+```  
+{  
+	"files.exclude": {  
+		"**/node_modules": true,  
+		"**/package-lock.json":true,  
+		"**/dist": true,  
+		"**/tsconfig.json": true,  
+		"**/tslint.json": true,  
+		"**/gulpfile.js": true,  
+		"**/.vscode": true,  
+		  
+	}  
+}  
+```  
+
