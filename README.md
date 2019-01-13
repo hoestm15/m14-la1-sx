@@ -1,3 +1,8 @@
+# Labor 5AHME (2018/19) - SX
+* Gruppe 2: 1. Einheit, 17.12.2018 *Abwesend*
+* Gruppe 2: 2. Einheit, 07.01.2019 
+
+
 # Labor 4AHME (2017/18) - SX
 
 * Gruppe 2: 1. Einheit, 31.10.2017
