@@ -84,7 +84,7 @@ gulp.task('build', function (done) {
 ### Dokumentation mit VisualStudio Code
 VisualStudio Code ermöglicht es, Markdown-Dateien im Projekt anzulegen. Dies ermöglicht es, einfach und schnell Dokumentationen für das Programm zu erstellen.
 
-# Übung mit der Konsole - Transpilieren
+# Übung mit der Konsole
 Wir haben ein Projekt mit dem **Node Package Manager** erstellt. Der Befehl für die Konsole lautet: `npm init`. Mit diesem Befehl werden Packete loakl installiert. Dafür wird die Datei `package.json` verwendet, welche mit `npm init` erzeugt wurde.
 
 
