@@ -16,7 +16,7 @@ Ist der generelle Term um Quellcodes von einer Sprache in eine andere Sprache um
 Ist ein spezieller Term um Quellcode von einer Sprache in eine andere Sprache mit ähnlichen Abstraktionsgrad umzuwandeln  
 
 Das Umwandeln eines C#-Codes in einen IL(Intermidate Language)-Code wird als Kompilierung bezeichnet, da IL ein komplett anderes Level der Abstraktivität hat als C#.  
-Das Umwandeln eines TypeScript-Codes in einen JavaScript-Code wird hingegen als Transpilierung bezeichnet, da beide Sprachen ein ähnliches Level der Abstraktivität haben.
+Das Umwandeln eines TypeScript-Codes in einen JavaScript-Code wird hingegen als Transpilierung bezeichnet, da beide Sprachen ein ähnliches Level der Abstraktivität haben.  
 [Quelle](https://www.stevefenton.co.uk/2012/11/compiling-vs-transpiling/)
 
 ## Einrichten von Visual Studio Code
@@ -35,7 +35,7 @@ Im Ordner .vscode kann man in der Datei settings.json eintragen, welche Dateien 
 	}
 }
 ```
-### Lint
+
 ### tslint.json
 > TSLint ist ein erweiterbares statisches Analysewerkzeug, das TypeScript- Code auf Lesbarkeit, Wartbarkeit und Funktionsfehler überprüft . Es wird weitgehend von modernen Editoren und Build-Systemen unterstützt und kann mit Ihren eigenen Fusselregeln, Konfigurationen und Formaten angepasst werden.  
 *[Quelle: TSLint](https://palantir.github.io/tslint/)*
