@@ -120,7 +120,7 @@ Nach dem erfolgreichen Transpilierung des Programmes haben wir uns die Datei `pa
   },
 }
 ```
-Wir haben festgestellt, dass das ausführbare Programm ein Abhängigkeit von TypeScript hat. Allerdings ist das nicht ganz richtig, da nur der Entwickler Typescript benötigt um das Programm ändern zu können. Der Endverbraucher der das asuführbare Programm benutzt wird TypeScript nicht benötigen. Damit der Endverbraucher also keine unnötigen Pakete downloaden muss,haben wir folgende Maßnahmen getroffen:  
+Wir haben festgestellt, dass das ausführbare Programm eine Abhängigkeit von TypeScript hat. Allerdings ist das nicht ganz richtig, da nur der Entwickler Typescript benötigt um das Programm ändern zu können. Der Endverbraucher der das asuführbare Programm benutzt wird TypeScript nicht benötigen. Damit der Endverbraucher also keine unnötigen Pakete downloaden muss,haben wir folgende Maßnahmen getroffen:  
 * Entfernen des TypeScript-Pakets mit `npm rm typescript`
 * Neu installieren von TypeScript mit Zusatz `npm install --save-dev typescript`
 
@@ -144,7 +144,7 @@ Ein erneuter Blick in die Datei `package.json` ergibt:
 ```
 Es wurde ein neuer Eintrag "devDependencies" erstellt. Dieser Eintrag ermöglicht es, dass das TypeScript-Paket nur mehr dann installiert wird, wenn der Benutzer Änderungen an der Datei vornehmen möchte.
 
-Um nun eine Abhängigkeit für nen Endverbraucher einzubauen haben wir das Paket `sprintf` installiert. Das haben wir folgenden Befehl verwendet: `npm install sprintf-js`.  
+Um nun eine Abhängigkeit für den Endverbraucher einzubauen haben wir das Paket `sprintf` installiert. Dazu haben wir folgenden Befehl verwendet: `npm install sprintf-js`.  
 
 Ein Blick in die Datei `package.json` ergibt nun:  
 ```json
