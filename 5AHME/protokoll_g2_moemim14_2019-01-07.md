@@ -23,7 +23,7 @@ Das Umwandeln eines TypeScript-Codes in einen JavaScript-Code wird hingegen als 
 JSON ist die Abkürzung für **JavaScript Object Notation** und ist ein kompaktes Datenformat in einer einfach lesbaren Textform zum Zweck des Datenaustauschs zwischen Anwendungen.
 
 ### Datenstruktur und Formatdefinition
-Mit JSON können Daten beliebig geschachteltwerden. Unteranderem ist auch das erstellen von Arrays aus Objekten möglich. Als Zeichenkodierung verwendet JSON meist UTF-8,allerdings sind UTF-16 und UTF-32 auch möglich.
+Mit JSON können Daten beliebig geschachtelt werden. Unteranderem ist auch das erstellen von Arrays aus Objekten möglich. Als Zeichenkodierung verwendet JSON meist UTF-8,allerdings sind UTF-16 und UTF-32 auch möglich.
 
 JSON kennt folgende Datentypen:
 * Nullwert `null`
