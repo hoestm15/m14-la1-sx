@@ -39,11 +39,13 @@ Jeder Eintrag in eine JSON-Datei wird durch einen Beistrich vom nächsten Eintra
 #### Beispiel
 Das Objekt Schueler mit den Datenelementen `String nachname`, `String vorname` und `int alter` wäre wie folgt aufgebaut:
 ```json
-"Schueler":
 {
-	"nachname": "Mörth",
-	"vorname": "Michael",
-	"alter": 18
+	"Schueler":
+	{
+		"nachname": "Mörth",
+		"vorname": "Michael",
+		"alter": 18
+	}
 }
 ```
 
