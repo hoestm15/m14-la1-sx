@@ -12,3 +12,4 @@
 # Labor 5AHME (2018/19) - SX
 
 1. Einheit: [Protokoll am 18_12_17](plaanm14/README_18_12_17.md)
+2. Einheit: [Protokoll am 19_01_07](plaanm14/README_19_01_07.md)
