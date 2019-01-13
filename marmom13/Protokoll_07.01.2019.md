@@ -31,6 +31,8 @@ Dabei handelt es sich um die zentrale Steuerdatei.  Mit **nano** haben wir dann 
 ```  
 console.log('Hallo');
 ```  
+Um Typescript verwenden zu können haben wir es mit **npm install typescript** installiert. Installierte module finded man im 
+*node_modules* Verzeichnis.
 beinhaltet. Mit dem Befehle **node main.ts** haben wir die Datei dann ausgeführt.  
 Daraufhin haven wir sie mit **./node_modules/typescript/bin/tsc main.ts** zu einer JavaScript Datei transpiliert, was, da eigentlich kein Unterschied zu einem JavaScript Programm bestand, nicht nötig gewäsen wäre und sie mit **node main.js** ausgeführt.  
 
@@ -49,4 +51,9 @@ var y:number;
 y = 10*x;  
 console.log('Hallo', y);  
 ```  
+Dann haben wir mit **npm remove typescript** typescript entfernt und es mit **npm install --save-dev typescript** in den devDependencies (statt in dependencies) abgespeichert da es nur in der Entwicklung, jedoch nicht zum Ausfühern notwendig ist.
+
+## json Dateien   
+
+
 
