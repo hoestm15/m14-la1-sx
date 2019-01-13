@@ -27,3 +27,9 @@ Zuerst haben wir mit dem Befehl **npm init** (npm = node package manager) ein ne
   "license": "MIT"  
 }  
 
+Dabei handelt es sich um die zentrale Steuerdatei.  Mit **nano** haben wir dann eine *main.ts* angelegt die den sourcecode
+```  
+console.log('Hallo');
+```  
+beinhaltet. Mit dem Befehle **node main.ts** haben wir die Datei dann ausgeführt.  
+Daraufhin haven wir sie mit **./node_modules/typescript/bin/tsc main.ts** zu einer JavaScript Datei transpiliert, was, da eigentlich kein Unterschied zu einem JavaScript Programm bestand, nicht nötig gewäsen wäre und sie mit **node main.js** ausgeführt. 
