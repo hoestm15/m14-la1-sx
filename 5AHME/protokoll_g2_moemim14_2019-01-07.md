@@ -47,7 +47,8 @@ Das Objekt Schueler mit den Datenelementen `String nachname`, `String vorname` u
 		"alter": 18
 	}
 }
-```
+```  
+[Quelle](https://de.wikipedia.org/wiki/JavaScript_Object_Notation)
 
 ## Einrichten von Visual Studio Code
 ### settings.json
