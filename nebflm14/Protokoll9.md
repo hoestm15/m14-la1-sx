@@ -1,7 +1,7 @@
 # Protokoll
 Florian Nebel
 5AHME, Gruppe 2  
-07.Jänner.2019  
+07.Jänner 2019  
 Anwesend: Mandl Gerhard, Martinak Moritz, Mörth Michael, Muri Lorenz, Nabernik Mario, Nebel Florian, Platzer Andreas  
 Abwesend: ---
 
@@ -13,6 +13,7 @@ verwendet.
 ### Textuelle Formatierung
 Neben der verschachtelung von Daten ist es auch möglch Felder eines Datentyps zu erstellen.
 Folgende Datentypen sind verfügbar:  
+  
 Datentyp | Beispiel  
 --- | ---  
 boolean | `true`  
