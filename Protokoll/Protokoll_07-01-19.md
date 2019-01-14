@@ -70,17 +70,17 @@ gulp.task('build', function (done) {
 Es ist möglich in Visual Studio mit Markdown Dateien zu arbeiten. Dies ermöglicht eine einfache Art und Weise der Dokumentation.
 Siehe auch:  [Protokoll 31-10-17](https://github.com/HTLMechatronics/m14-la1-sx/blob/nabmam14/Protokoll/Protokoll_31-10-17.md)
 
-# Übung mit der Konsole
-Wir haben ein Projekt mit dem **Node Package Manager** erstellt. Der Befehl für die Konsole lautet: `npm init`. Mit diesem Befehl werden Packete loakl installiert. Dafür wird die Datei `package.json` verwendet, welche mit `npm init` erzeugt wurde.
+# Übungen in der 2.Einheit
+Wir haben ein Projekt mit dem **Node Package Manager** - Projekt erstellen. `npm init` Pakete werden installiert. Dafür wird die Datei `package.json` verwendet, welche mit `npm init` erzeugt wurde.
 
 
 Erstellen von `main.ts`
 ```js
 console.log('Hallo');
 ```  
-
-Danach haben wir versucht, dass Programm über die Konsole mit `node main.ts`auszuführen. Der Versuch war erfolgreich, da keine TypeScript spezifischen Ausdrücke verwendet wurden. Also haben wir unseren Code erweitert:
-
+ Mit dem Konsolenbefehl `node main.ts` führten wir unser Programm aus. Dies war möglich, da wir noch keine TypeScript spezifischen Ausdrücke verwendeten.
+ 
+ Wir erweitern unser Programm mit Typescript spezifischen Ausdrücken:
 ```js
 const x = 27;
 let y: number;
@@ -90,9 +90,10 @@ y=10*x;
 console.log('Hallo', y);
 ```  
 
-Wenn wir nun versucht haben das Programm mit `node main.ts` auszuführen, haben wir eine Fehlermeldung erhalten:
+Mit dem Befehl `node main.ts` erhalten wir eine Fehlermeldung, da das Programm noch nicht **transpiliert** wurde.
+
 ```
-/home/michael/Schreibtisch/Labor/Voruebung/main.ts:2
+/home/mario/Schreibtisch/lab/g2/main.ts:2
 let y: number;
      ^
 
@@ -112,57 +113,20 @@ SyntaxError: Unexpected token :
 Um diesen Fehler zu beheben haben wir mit dem Node Package Manager das **TypeScript** Paket installiert.  
 Dazu muss in der Konsole folgender Befehl eingegeben werden: `npm install typescript`.  
 Das Programm `main.ts` kann nun mit dem Befehl `./node_modules/typescript/bin/tsc main.ts` zur Datei `main.js` transpiliert werden.  
-Das Ausführen der Datei `main.js` ergibt folgende Ausgabe in der Konsole:
+
+Richtige Ausgabe:
 ```
 Hallo 270
 ```
-Die Transpilierung war erfolgreich.
 
 ## package.json
-Nach dem erfolgreichen Transpilierung des Programmes haben wir uns die Datei `package.json` genauer angesehen:
-```json
-{
-  "name": "voruebung",
-  "version": "1.0.0",
-  "description": "voruebung",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Michael Moerth",
-  "license": "MIT",
-  "dependencies": {
-    "typescript": "^3.2.2"
-  },
-}
-```
-Wir haben festgestellt, dass das ausführbare Programm eine Abhängigkeit von TypeScript hat. Allerdings ist das nicht ganz richtig, da nur der Entwickler Typescript benötigt um das Programm ändern zu können. Der Endverbraucher der das asuführbare Programm benutzt wird TypeScript nicht benötigen. Damit der Endverbraucher also keine unnötigen Pakete downloaden muss,haben wir folgende Maßnahmen getroffen:  
+
+Um die Handhabung mit unserem Programm einfacher zu gestalten und um das Downloaden unnötiger Pakete auszuschließen treffen wir in `package.json` einige Maßnahmen.
+
 * Entfernen des TypeScript-Pakets mit `npm rm typescript`
 * Neu installieren von TypeScript mit Zusatz `npm install --save-dev typescript`
+* Installieren von sprintf
 
-Ein erneuter Blick in die Datei `package.json` ergibt:
-```json
-{
-  "name": "voruebung",
-  "version": "1.0.0",
-  "description": "voruebung",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Michael Moerth",
-  "license": "MIT",
-  "dependencies": { },
-  "devDependencies": {
-    "typescript": "^3.2.2"
-  }
-}
-```
-Es wurde ein neuer Eintrag "devDependencies" erstellt. Dieser Eintrag ermöglicht es, dass das TypeScript-Paket nur mehr dann installiert wird, wenn der Benutzer Änderungen an der Datei vornehmen möchte.
-
-Um nun eine Abhängigkeit für den Endverbraucher einzubauen haben wir das Paket `sprintf` installiert. Dazu haben wir folgenden Befehl verwendet: `npm install sprintf-js`.  
-
-Ein Blick in die Datei `package.json` ergibt nun:  
 ```json
 {
   "name": "voruebung",
@@ -183,7 +147,13 @@ Ein Blick in die Datei `package.json` ergibt nun:
 }
 ```
 
-Um zu testen ob die Installation erfolgreich war haben unser Programm `main.ts` wieder erweiteret:
+Entstandene Änderungen:
+
+`devDependencie` - Dieser Eintrag ermöglicht es, dass das TypeScript-Paket nur mehr dann installiert wird, wenn der Benutzer Änderungen an der Datei vornehmen möcht
+`sprintf-js": "^1.1.` unter dependencies - Abhängigkeit für den Endverbraucher
+
+
+Erneutes testen von `main.ts`
 ```js
 import { sprintf } from 'sprintf-js';
 
@@ -195,8 +165,9 @@ y=10*x;
 console.log('Hallo', sprintf('%.02f', y));
 ```
 
-Das Programm `main.ts` wird nun wie zuvor beschrieben in die Datei `main.js` transpiliert.  
-Das Ausführen der Datei `main.js` ergibt folgende Ausgabe in der Konsole:
+Die Datei `main.ts` wurde nun in die Datei `main.js` transpiliert.
+
+Ausführen von `main.js`:
 ```
 Hallo 270.00
 ```
