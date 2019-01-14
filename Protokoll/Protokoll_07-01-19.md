@@ -28,7 +28,7 @@ JSON ist die Abkürzung für **JavaScript Object Notation** und ist ein kompakte
 * Zeichenketten beginnen mit einem doppelten Anführungszeichen `"`
 * Arrays beginnen mit `[` und enden mit `]`
 * Objekte beginnen mit `{` und enden mit `}`
-	* Eigenschaften von Objekten sind folgendermaßen aufgebaut: `Schlüssel:Wert`
+* Eigenschaften von Objekten sind folgendermaßen aufgebaut: `Schlüssel:Wert`
 
 # Einrichten von Visual Studio Code
 
