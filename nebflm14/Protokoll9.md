@@ -13,11 +13,11 @@ verwendet.
 ### Textuelle Formatierung
 Neben der verschachtelung von Daten ist es auch möglch Felder eines Datentyps zu erstellen.
 Folgende Datentypen sind verfügbar:  
-Datentyp | Beispiel  
---- | ---  
-boolean | `true`  
-number | `-7398.34`  
-String | `Hallo!`  
+Datentyp | Beispiel
+--- | ---
+boolean | `true`
+number | `-7398.34`
+String | `Hallo!`
   
 * Datensätze werden durch Kommas voneinander getrennt.
 * Ein Objekt wird durch geschwungene Klammern eingeschlossen.
