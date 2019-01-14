@@ -38,7 +38,7 @@ String | `Hallo!`
   }
 }}
 ```
-siehe auch: [json.org](www.json.org)  
+siehe auch: [json.org](https://json.org/)  
 
 
 ## VisualStudio Code
