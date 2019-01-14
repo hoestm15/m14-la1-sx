@@ -83,3 +83,91 @@ SyntaxError: Unexpected token :
     at startup (bootstrap_node.js:204:16)
     at bootstrap_node.js:625:3
 ```
+
+Um die Fehler zu beseitigen haben wir den Typescript Compiler mit dem Befehl __npm install typescript__ installiert.
+Das Programm `main.ts` kann nun mit dem Befehl `./node_modules/typescript/bin/tsc main.ts` zur Datei `main.js` transpiliert werden.
+
+Wenn wir nun die main.js ausführen, welche entsteht nachdem wird main.ts transpiliert haben, erhalten wir folgende Ausgabe in der Konsole: 
+```
+Hallo 270
+```
+
+### package.json
+Da das ausführbare Programm eine Abhängigkeit von Typescript beinhaltet, haben wir diese Abhängigkeit gelöscht, da nur der Entwickler Typescript benötigt. Dafür gibt es eigene Abhängigkeiten welche sich __devDependencies__ nennt.
+
+## package.json
+Nach dem erfolgreichen Transpilierung des Programmes haben wir uns die Datei `package.json` genauer angesehen:
+```json
+{
+  "name": "voruebung",
+  "version": "1.0.0",
+  "description": "voruebung",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Moerth",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^3.2.2"
+  },
+}
+```
+
+Nun haben wir die __dependencies__ mit dem Befehl __npm rm typescript__ gelöscht und mit dem Befehl __npm install --save-dev typescript__ die Entwickler Abhängigkeiten erstellt.
+```json
+{
+  "name": "voruebung",
+  "version": "1.0.0",
+  "description": "voruebung",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Moerth",
+  "license": "MIT",
+  "dependencies": { },
+  "devDependencies": {
+    "typescript": "^3.2.2"
+  }
+}
+```
+
+Anschließen haben wir eine Abhängigket für den Endverbraucher installiert. Wir haben das Paket __sprintf__ mit dem Befehl __npm install sprintf-js__ installiert.
+Ein Blick in die Datei `package.json` ergibt nun:  
+```json
+{
+  "name": "voruebung",
+  "version": "1.0.0",
+  "description": "voruebung",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Moerth",
+  "license": "MIT",
+  "dependencies": {
+    "sprintf-js": "^1.1.2",
+  },
+  "devDependencies": {
+    "typescript": "^3.2.2"
+  }
+}
+```
+
+Danach haben wir unser Programm __main.ts__ erweiter:
+```js
+import { sprintf } from 'sprintf-js';
+
+const x = 27;
+let y: number;
+
+y=10*x;
+
+console.log('Hallo', sprintf('%.02f', y));
+```
+
+Anschließend wurde das Programm wieder transpiliert und wir führten die dazugehörige main.js Datei aus.
+```
+Hallo 270.00
+```
