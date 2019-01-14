@@ -22,6 +22,17 @@ Vorteile:
 
 Da Javascript eine schlechte Programmiersprache ist weil sie keine Datentypen besitzt, wird der Quelltext oft mit Typescript geschrieben .ts und zu einer .js Datei transpiliert, dadurch wird js mit Datentypen erweitert. 
 
+### .json
+Der Begriff json steht für __JavaScript Object Notation__ und ist ein Datenformat mit einfacher lesbaren Textform, welches für Datenaustausch zwischen Anwendungen verwendet wird.
+
+__JSON Datentypen__:
+* Nullwert `null`
+* Boolscher Wert `true` oder `false`
+* Zahlenfolge von `0`-`9` welche mit `+` und `-` vorzeichenbehaftet betrachtet werden können und durch einen Dezimalpunkt `.` unterbrochen sein können
+* Zeichenketten beginnen mit einem doppelten Anführungszeichen `"`
+* Arrays beginnen mit `[` und enden mit `]`
+* Objekte beginnen mit `{` und enden mit `}`
+* Attribute von Objekten sehen folgendermaßen aus: `Schlüssel:Wert`
 ### Compiliert
 Beim Compilieren wird ein Quellcode von einer Sprache in eine andere Sprache umgewandelt.
 
@@ -60,6 +71,10 @@ gulp.task('build', function (done) {
 });
 ```
 
+### tslin.json 
+tslin ist ein Analysewerkzeug das Typescript auf sogenannte __SChonheitsfehler__ überprüft.
+Zum Beispiel die Lesbarkeit des Codes. 
+
 # Übung
 
 Zuerst haben wir das __npm__ Tool installiert, mit diesem können wir Projekte erstellen.
@@ -95,7 +110,6 @@ Hallo 270
 ### package.json
 Da das ausführbare Programm eine Abhängigkeit von Typescript beinhaltet, haben wir diese Abhängigkeit gelöscht, da nur der Entwickler Typescript benötigt. Dafür gibt es eigene Abhängigkeiten welche sich __devDependencies__ nennt.
 
-## package.json
 Nach dem erfolgreichen Transpilierung des Programmes haben wir uns die Datei `package.json` genauer angesehen:
 ```json
 {
