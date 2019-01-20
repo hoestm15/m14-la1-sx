@@ -47,7 +47,7 @@ export class Server {
         this._server.get('/student', (req, res, next) => this.handleGetStudent(req, res, next));
     }
 
-    public start (port: number) {
+    public start (port: number) { // Wenn weder public oder private immer public
         this._server.listen(port);
         console.log('Server auf port ' + port +  ' gestartet');
     }
@@ -69,7 +69,11 @@ Das Modul Express ermöglicht das Arbeiten mit *http*.
 
 >>>The Express philosophy is to provide small, robust tooling for HTTP servers, making it a great solution for single page applications, web sites, hybrids, or public HTTP APIs.  
 *Quelle: [www.npmjs.com](https://www.npmjs.com/package/express)*  
-Es wird mit dem Kommando *npm install express* installiert.
+Es wird mit dem Kommando *npm install express* installiert.  
+
+## Body-Parser  
+Ich habe das Modul Body-Parser nicht wirklich verstanden, ich vermute nach etwas Recherche aber das es dabei Hilft Pakete eines Streams zu einem verarbeitbaren Body zu formartieren.  
+Quelle[stackoverflow.com](https://stackoverflow.com/questions/38306569/what-does-body-parser-do-with-express)
 
 
 
