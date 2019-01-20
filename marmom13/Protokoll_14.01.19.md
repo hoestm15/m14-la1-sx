@@ -66,11 +66,12 @@ export class Server { // wird in Klasse main importiert
 
 
 ### Express  
-Das Modul Express ermöglicht das Arbeiten mit *http*. 
+Das Modul Express ist ein Framework für *http* um leichter an Webservern programmieren zu können. Durch das aufrufen von Express wird ein Server erzeugt.
 
 >>>The Express philosophy is to provide small, robust tooling for HTTP servers, making it a great solution for single page applications, web sites, hybrids, or public HTTP APIs.  
 *Quelle: [www.npmjs.com](https://www.npmjs.com/package/express)*  
-Es wird mit dem Kommando *npm install express* installiert.  
+
+Es wird mit dem Kommando *npm install express* installiert. Es ist immer ratsam zu überprüfen wie viele user ein Modul installiert haben um zu "verifiziern" ob es gut ist.
 
 ### Body-Parser  
 Ich habe das Modul Body-Parser nicht wirklich verstanden, ich vermute nach etwas Recherche aber das es dabei Hilft Pakete eines Streams zu einem verarbeitbaren Body zu formartieren.  
@@ -81,7 +82,7 @@ Ich habe das Modul Body-Parser nicht wirklich verstanden, ich vermute nach etwas
 ```javascript
 export class Student {
 
-    public id: string;
+    public id: string; // public statt private da keine getter
     public surname: string;
     public firstname: string;
 
@@ -91,10 +92,13 @@ export class Student {
         this.firstname = firstname;
     }
 }
+``` 
+Bei *student.ts* handelt es sich um unsere Datenerhaltungsklasse.
 
-db-users
+## db-user.ts  
 
-import { Student } from './student';
+```javascript
+import { Student } from './student'; //Importieren der Klasse Student
 
 export class DbUser {
 
@@ -128,7 +132,9 @@ export class DbUser {
         return this._students[id];
     }
 }
-``` 
+```  
+
+
 
 
 
