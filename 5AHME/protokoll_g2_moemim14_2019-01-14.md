@@ -21,7 +21,9 @@ class Main {
 Main.main();
 ```
 
-Die Klasse `main.ts` importiert die Klasse `main.ts`. Die Methode `public static main()` startet einen Server auf dem Port 4711. Javascript arbeitet wie die Programmiersprache C das Programm von oben nach unten ab. Am Ende muss die Methode `Main.main()` aufgerufen werden, da die klasse `Main` ansonsten nicht ausgeführt wird, sondern nur erzeugt werden würde. 
+Die Klasse `main.ts` importiert die Klasse `Server`.  
+Die Methode `public static main()` startet einen Server auf dem Port 4711.  
+Javascript arbeitet wie die Programmiersprache C das Programm von oben nach unten ab. Am Ende muss die Methode `Main.main()` aufgerufen werden, da die klasse `Main` ansonsten nicht ausgeführt wird, sondern nur erzeugt werden würde. 
 
 ## Server.ts
 ```typescript
