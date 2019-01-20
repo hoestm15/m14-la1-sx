@@ -63,6 +63,9 @@ export class DbUser {
     }
 }
 ```
+In unserer File haben wir einen Constructor `private constructor` gesetzt und die Funktion `getInstance()` aufgerufen.
+Wenn diese Funktion erstmalig aufgerufen wird, wird ein Objekt in der Objevariable `Instace:DbUser` erzeugt. 
+Dadurch wird sichergegangen das Werte nur gelöscht,geändert/,hinzugefügt werden, da nur mehr auf die Variable zugegriffen wird und kein objekt erstellt wird. 
 
 ### Server.ts
 In dieser File werden, für Anfragen die an den Server gerichtet sind, Antworten realisiert. 
