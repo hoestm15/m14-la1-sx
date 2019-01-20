@@ -35,7 +35,7 @@ import * as express from 'express'; // Importieren des Moduls express
 import * as bodyParser from 'body-parser'; // Importieren des Moduls bodyParser
 
 
-export class Server {
+export class Server { // wird in Klasse main importiert
     private _server: express.Express; 
 
     constructor () { 
@@ -63,21 +63,72 @@ export class Server {
     }
 }
 ```  
-### Express 
 
+
+### Express  
 Das Modul Express ermöglicht das Arbeiten mit *http*. 
 
 >>>The Express philosophy is to provide small, robust tooling for HTTP servers, making it a great solution for single page applications, web sites, hybrids, or public HTTP APIs.  
 *Quelle: [www.npmjs.com](https://www.npmjs.com/package/express)*  
 Es wird mit dem Kommando *npm install express* installiert.  
 
-## Body-Parser  
+### Body-Parser  
 Ich habe das Modul Body-Parser nicht wirklich verstanden, ich vermute nach etwas Recherche aber das es dabei Hilft Pakete eines Streams zu einem verarbeitbaren Body zu formartieren.  
-Quelle[stackoverflow.com](https://stackoverflow.com/questions/38306569/what-does-body-parser-do-with-express)
+*Quelle: [stackoverflow.com](https://stackoverflow.com/questions/38306569/what-does-body-parser-do-with-express)*  
 
+## student.ts  
 
+´´´javascript
+export class Student {
 
+    public id: string;
+    public surname: string;
+    public firstname: string;
 
+    constructor (id: string, surname: string, firstname: string) {
+        this.id = id;
+        this.surname = surname;
+        this.firstname = firstname;
+    }
+}
+
+db-users
+
+import { Student } from './student';
+
+export class DbUser {
+
+    public static getInstance (): DbUser {
+        if (DbUser.instance === null) {
+            DbUser.instance = new DbUser();
+        }
+        return DbUser.instance;
+    }
+
+    private static instance: DbUser;
+    // ********************************************************************************//
+
+    private _students: {
+        [ id: string ]: Student
+    };
+
+    private constructor () {
+        this._students = {};
+
+        this._students.mangem13 = new Student('mangem13', 'Mandl', 'Gerhard');
+
+        let s = new Student('marmom13', 'Martinak', 'Moritz');
+        this._students[s.id] = s;
+
+        s = new Student('nambam14', 'Nabernik', 'Mario');
+        this._students[s.id] = s;
+    }
+
+    public get (id: string): Student {
+        return this._students[id];
+    }
+}
+``` 
 
 
 
