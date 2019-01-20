@@ -66,7 +66,8 @@ Das Modul kann mit `npm install express` und `npm install --save-dev @types/expr
 
 **Body-Parser**  
 Der Body-Parser stellt Informationen zu einer Variable zur Verfügung. Genaueres kann [hier](https://www.npmjs.com/package/body-parser) nachgelesen werden.   
-Das Modul kann mit `npm install body-parser` und `npm install --save-dev @types/body-parser` installiert werden.
+Das Modul kann mit `npm install body-parser` und `npm install --save-dev @types/body-parser` installiert werden.  
+Um den Body-Parser verwenden zu können muss er dem Server übergeben werden `this._server.use(bodyParser.urlencoded())`.
 
 Das Schlüsselwort `export` wird verwendet, da die Klasse `Server` in der Klasse `Main` importiert wird. Die Variable `_server: express.Express` wird benötogt um den Server aufbauen zu können. Wichtig hierbei ist es, dass beim Angeben des Datentyps **Express** alleine nicht ausreicht.  
 Der Konstruktor werden die Handler-Methoden `localhost:4711/version` und `localhost:4711/student` realisiert.  
