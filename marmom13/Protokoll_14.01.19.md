@@ -93,7 +93,7 @@ export class Student {
     }
 }
 ``` 
-Bei *student.ts* handelt es sich um unsere Datenerhaltungsklasse.
+Bei *student.ts* handelt es sich um unsere Datenerhaltungsklasse. Anders als in java gibt es in java script keine *ArayList* und keine *Map*. Stattdessen gibt es nur *Array* und *Object*.
 
 ## db-user.ts  
 
