@@ -101,7 +101,7 @@ export class Student {
 }
 ```
 
-### db-user.ts
+### Db-user.ts
 ```typescript
 import { Student } from './student';
 
