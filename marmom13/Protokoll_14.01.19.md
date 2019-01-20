@@ -78,7 +78,7 @@ Ich habe das Modul Body-Parser nicht wirklich verstanden, ich vermute nach etwas
 
 ## student.ts  
 
-´´´javascript
+```javascript
 export class Student {
 
     public id: string;
