@@ -1,6 +1,7 @@
 # Labor 5AHME (2018/19) - SX
 * Gruppe 2: 1. Einheit, 17.12.2018 [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/murlom14/murlom14-la1-2018_19/Protokoll_17-12-2018.md)
-* Gruppe 2: 2. Einheit, 08.01.2019 [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/murlom14/murlom14-la1-2018_19/Protokoll_08-01-2019.md)
+* Gruppe 2: 2. Einheit, 08.01.2019 **Handschriftlich** 
+* Gruppe 2: 3. Einheit, 15.01.2019 [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/murlom14/murlom14-la1-2018_19/Protokoll_08-01-2019.md)
 
 # Labor 4AHME (2017/18) - SX
 
