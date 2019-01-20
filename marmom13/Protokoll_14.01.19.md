@@ -67,8 +67,8 @@ export class Server {
 
 Das Modul Express ermöglicht das Arbeiten mit *http*. 
 
->>>The Express philosophy is to provide small, robust tooling for HTTP servers, making it a great solution for single page applications, web sites, hybrids, or public HTTP APIs.
-*Quelle: [www.npmjs.com](https://www.npmjs.com/package/express)  
+>>>The Express philosophy is to provide small, robust tooling for HTTP servers, making it a great solution for single page applications, web sites, hybrids, or public HTTP APIs.  
+*Quelle: [www.npmjs.com](https://www.npmjs.com/package/express)*  
 
 
 
