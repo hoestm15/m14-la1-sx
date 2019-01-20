@@ -36,9 +36,9 @@ import * as bodyParser from 'body-parser'; // Importieren des Moduls bodyParser
 
 
 export class Server {
-    private _server: express.Express;
+    private _server: express.Express; 
 
-    constructor () {
+    constructor () { 
         this._server = express();
         this._server.use(bodyParser.urlencoded());
         this._server.get('/version', (req, res, next) => {
@@ -62,6 +62,16 @@ export class Server {
         res.json({ surname: 'Martinak', firstname: 'Moritz'});
     }
 }
-```
+```  
+### Express 
+
+Das Modul Express ermöglicht das Arbeiten mit *http*. 
+
+>>>The Express philosophy is to provide small, robust tooling for HTTP servers, making it a great solution for single page applications, web sites, hybrids, or public HTTP APIs.
+*Quelle: [www.npmjs.com](https://www.npmjs.com/package/express)  
+
+
+
+
 
 
