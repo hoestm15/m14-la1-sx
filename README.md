@@ -11,4 +11,5 @@
 # Labor 5AHME (2018/19) - SX
 
 * Gruppe 2: [1. Einheit, 17.12.2018](https://github.com/HTLMechatronics/m14-la1-sx/blob/mangem13/mangem13/protkoll_g2_mangem13_2018-12-17.md)
-* Gruppe 2: [2. Einheit, 07.01.2019](https://github.com/HTLMechatronics/m14-la1-sx/blob/mangem13/protokoll_g2_mangem13_2019-01-07.md)
+* Gruppe 2: [2. Einheit, 07.01.2019](https://github.com/HTLMechatronics/m14-la1-sx/blob/mangem13/protokoll_g2_mangem13_2019-01-07.md)  
+* Gruppe 2: [3. Einheit, 14.01.2019](https://github.com/HTLMechatronics/m14-la1-sx/blob/mangem13/protokoll_g2_mangem13_2019-01-14.md)
