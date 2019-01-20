@@ -14,7 +14,7 @@ Abwesend: -
 
 Als erstes Übungsprogramm haben wir einen einfachen Server mit einer Schülerdatenbank programmiert. 
 
-### main.ts  
+## main.ts  
 ```javascript
 import { Server } from './server'; // Importieren der Klasse Server
 
@@ -31,8 +31,8 @@ In der Klasse *main.ts* wird der Server angelegt und gestartet.
 
 ## server.ts  
 ```javascript
-import * as express from 'express';
-import * as bodyParser from 'body-parser';
+import * as express from 'express'; // Importieren des Moduls express  
+import * as bodyParser from 'body-parser'; // Importieren des Moduls bodyParser
 
 
 export class Server {
