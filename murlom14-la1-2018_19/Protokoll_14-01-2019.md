@@ -17,7 +17,7 @@ Am Anfang der dritten Einheit wurden die Protokolle der zweiten Einheit besproch
 Nach der Wiederholung der letzten Einheit begannen wir mit der Programmierung des REST-Servers fortzusetzen.
 
 ####  main.ts
-'''typescript
+```typescript
 import { Server } from './server';
 
 
@@ -31,4 +31,4 @@ public static main () {
 }
 
 Main.main(); 
-'''
+
