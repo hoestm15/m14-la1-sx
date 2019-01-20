@@ -71,7 +71,7 @@ Das Modul kann mit `npm install body-parser` und `npm install --save-dev @types/
 Das Schlüsselwort `export` wird verwendet, da die Klasse `Server` in der Klasse `Main` importiert wird. Die Variable `_server: express.Express` wird benötogt um den Server aufbauen zu können. Wichtig hierbei ist es, dass beim Angeben des Datentyps **Express** alleine nicht ausreicht.  
 Der Konstruktor werden die Handler-Methoden `localhost:4711/version` und `localhost:4711/student` realisiert.  
 Mit der Methode `start(port: number)` wird der Server gestartet.  
-Die Handler-Methode `handleGetStudent` definiert, eie der Server reagiert, falls die Anfrage `/student` eintrifft.
+Die Handler-Methode `handleGetStudent` definiert, wie der Server reagiert, falls die Anfrage `/student` eintrifft.
 
 ## Student.ts
 ```typescript
