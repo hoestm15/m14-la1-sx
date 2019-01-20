@@ -2,7 +2,7 @@
 Florian Nebel
 5AHME
 Gruppe 2  
-Montag, 14.Jänner 2019  
+Montag, 14. Jänner 2019  
 Anwesend: Mandl Gerhard, Martinak Moritz, Mörth Michael, Muri Lorenz, Nabernik Mario, Nebel Florian, Platzer Andreas  
 Abwesend: ---  
 
