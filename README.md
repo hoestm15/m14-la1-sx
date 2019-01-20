@@ -3,7 +3,9 @@
   * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/5AHME/protokoll_g2_moemim14_2018-12-17.md)
 * Gruppe 2: 2.Einheit, 07.01.2019
   * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/5AHME/protokoll_g2_moemim14_2019-01-07.md)
-
+* Gruppe 2: 3.Einheit, 14.01.2019
+  * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/moemim14/5AHME/protokoll_g2_moemim14_2019-01-14.md)  
+  
 # Labor 4AHME (2017/18) - SX
 
 * Gruppe 2: 1. Einheit, 31.10.2017
