@@ -62,14 +62,13 @@ export class Server {
 ```
 **Express**  
 In der Klasse `server.ts` wird das Modul **Express** importiert. Dieses Modul ermöglicht das Arbeiten mit **http** und **https**. Weitere Informationen zu Express können [hier](https://www.npmjs.com/package/express) nachgelesen werden.  
-Das Schlüsselwort `export` wird verwendet, da die Klasse `Server` in der Klasse `Main` importiert wird.
 Das Modul kann mit `npm install express` und `npm install --save-dev @types/express` installiert werden.  
 
 **Body-Parser**  
 Der Body-Parser stellt Informationen zu einer Variable zur Verfügung. Genaueres kann [hier](https://www.npmjs.com/package/body-parser) nachgelesen werden.   
 Das Modul kann mit `npm install body-parser` und `npm install --save-dev @types/body-parser` installiert werden.
 
-Die Variable `_server: express.Express` wird benötogt um den Server aufbauen zu können. Wichtig hierbei ist es, dass beim Angeben des Datentyps **Express** alleine nicht ausreicht.  
+Das Schlüsselwort `export` wird verwendet, da die Klasse `Server` in der Klasse `Main` importiert wird. Die Variable `_server: express.Express` wird benötogt um den Server aufbauen zu können. Wichtig hierbei ist es, dass beim Angeben des Datentyps **Express** alleine nicht ausreicht.  
 Der Konstruktor werden die Handler-Methoden `localhost:4711/version` und `localhost:4711/student` realisiert.  
 Mit der Methode `start(port: number)` wird der Server gestartet.  
 Die Handler-Methode `handleGetStudent` definiert, eie der Server reagiert, falls die Anfrage `/student` eintrifft.
