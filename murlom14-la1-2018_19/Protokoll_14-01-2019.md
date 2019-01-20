@@ -18,17 +18,16 @@ Nach der Wiederholung der letzten Einheit begannen wir mit der Programmierung de
 
 ####  main.ts
 ```typescript
-import { Server } from './server';
+import { Server } from './server';          // Es wird die Kalsse Server impotiert
 
-
-class Main {
+class Main {                                // main wird erzeugt/angelegt
 public static main () {
 
-    const server = new Server();
-    server.start(8080);
-
+    const server = new Server();            // legt einen Server an
+    server.start(8080);                     // startet einen Server auf dem Port 8080
     }
 }
 
-Main.main(); 
-
+Main.main();                                // Main führt die main aus
+```
+Diese Main Klasse ist dazu da einen Server am Port 8080 anzulegen. Durch den Aufruf am Ende der Main wird erst die Methode main ausgeführt und nicht nur angelegt.
