@@ -89,7 +89,7 @@ export class Student {
 }
 ```
 
-`students.ts` ist unsere Datenerhaltungsklasse für einen Schüler. Anders als in Java sind die Datenelemente public und es gibt keine Geter etc.
+`students.ts` ist unsere Datenerhaltungsklasse für einen Schüler. Anders als in Java sind die Datenelemente public und es gibt keine Getter etc.
 
 ## db-user.ts
 ```typescript
