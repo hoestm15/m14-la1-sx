@@ -24,6 +24,7 @@ Main.main();
 ```
 
 ### db-user.ts
+In dieser File werden alle Schüler in einem Array gespeichert, jeder Schüler hat eine __id__ durch diese können die Schüler auch wieder abgefragt werden. 
 ```typescript
 import { Student } from './student';
 
