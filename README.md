@@ -2,6 +2,7 @@
 
 * Gruppe 2: Protokoll der [1. Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/nabmam14/Protokoll/Protokoll_17-12-2018.md), 17.12.2018  
 * Gruppe 2: Protokoll der [2. Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/nabmam14/Protokoll/Protokoll_17-12-2018.md), 07.01.2019  
+* Gruppe 2: Protokoll der [3. Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/nabmam14/Protokoll/Protokoll_17-12-2018.md), 14.01.2019  
 
 # Labor 4AHME (2017/18) - SX
 
