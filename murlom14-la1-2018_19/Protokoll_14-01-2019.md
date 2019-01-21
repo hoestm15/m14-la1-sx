@@ -119,7 +119,7 @@ export class DbUser {
     private constructor () {
         this._students = {};
 
-        let s = new Student('mangem13', 'Mandl', 'Gerhard');
+        let s = new Student('murlom14', 'Muri', 'Lorenz');
         this._students[s.id] = s;
 
         s = new Student('marmom13', 'Martinak', 'Moritz');
@@ -134,6 +134,8 @@ export class DbUser {
     }
 }
 ```
+dbUser ist im Grunde genommen unsere Datenbank, hier werden die Daten (Studenten) im Array abgespeichert.
+
 ### Singleton
 Singelton wird dann eingesetzt wenn man von einer Klasse wirklich nur ein Objekt haben darf/sollte. In diesem Fall wird es bei unserer "Datenbank" eingesetzt.
 
