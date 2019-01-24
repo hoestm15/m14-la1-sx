@@ -23,4 +23,5 @@
   * [protokoll_g3_samdam14_2018-09-24](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/protokoll_g3_samdam14_2018-09-24.md)  
 * Gruppe 3: 2. Einheit, 01.10.2018  
   * [protokoll_g3_samdam14_2018-10-01](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/protokoll_g3_samdam14_2018-10-01.md)  
-  
+* Gruppe 3: 3. Einheit, 08.10.2018  
+  * [protokoll_g3_samdam14_2018-10-08](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/protokoll_3_samdam14_2018-10-08.md)  
