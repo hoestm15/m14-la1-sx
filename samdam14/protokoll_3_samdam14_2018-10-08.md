@@ -16,4 +16,14 @@ Um das Programmieren in Typescript angenehmer zu machen, bzw. schöner zu gestal
 [Diverse Tools für Typescript](http://definitelytyped.org/directory/tools.html)  
   
 #### TSLint  
-TSLint
+TSLint hilft, den Typescript-Code "schöner" zu gestalten. Dabei ist nicht nur die Optik gemeint, sondern der Code wird generell übersichtlicher und somit leserlicher. TSLint ist mit 1,8 Millionen wöchentlichen Downloads auch ein viel verwendetes Tool. Mit *npm install tslint typescript --save-dev* kann man das Tool im Arbeitsverzeichnis installieren.  
+[npmjs/tslint](https://palantir.github.io/tslint/)  
+  
+In der tslint.json Datei können Einstellungen am Tool getroffen werden, also auf was es achten soll. Z.B. kann man TSLint sagen, wie lange eine Zeile maximal sein darf und / oder wie Leerzeichen und -zeilen gehandhabt werden sollen.  
+```typescript
+// Beispiel maximale Zeilenlänge
+"rules": {
+        "max-line-length": {
+            "options": [120]
+        },
+```
