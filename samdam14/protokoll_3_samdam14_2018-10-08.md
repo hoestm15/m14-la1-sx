@@ -168,6 +168,12 @@ class Main {
             case 'suspam14':
                 resp.json({htlid: 'suspam14', surname: 'Schuster', firstname: 'Patrick'});
                 break;
+            case 'samdam14':
+                resp.json({htlid: 'samdam14', surname: 'Sammer', firstname: 'Daniel'});
+                break;
+            case 'rufflm14':
+                resp.json({htlid: 'rufflm14', surname: 'Ruffenacht', firstname: 'Florian'});
+                break;
             case 'reibem14':
                 resp.json({htlid: 'reibem14', surname: 'Reinbacher', firstname: 'Bernhard'});
                 break;
