@@ -196,3 +196,13 @@ class Main {
 const main = new Main(8080);  
 ```  
 
+### Konstruktor und Handlermethode  
+
+Auf *listen(zuhören)* wird der Server geschalten und wartet bis ein *Request* eintrifft. Dass man */status* in der URL eingeben kann, bewirkt die Zeile ```typescript this.server.get('/status', (req, resp) => this.handleGetStatus(req, resp)); ```.Die Handlermethode  wird mittels *HandleGetStatus* aufgerufen und bewirkt das *Response* "Server is running" zurückgegeben wird. Auch die restlichen Handlermethoden arbeiten mit den gleichen Prinzip.   
+
+### Anwenden des Rest-Servers  
+Wenn man Durch aufrufen von *http://localhost:8080/student?htlid=sacrom14* aufruft, wird der Student *sacrom14* mit den dazugehörigen Informationen durch der Handlermethode ausgegeben.  
+![8080](/sacrom14/8080.PNG)  
+  
+Die einzelelnen Teile der URL lauten:  
+![URL](/sacrom14/URL.PNG)    
