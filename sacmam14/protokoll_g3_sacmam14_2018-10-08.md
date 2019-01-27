@@ -1,1 +1,8 @@
-Hallo
+# 3. Protokoll  
+**Name:** Sackl Martin  
+**Klasse** 5ahme  
+**Gruppe:** 3  
+
+Anwesend: Reinbacher, Ruffenacht, Sackl M., Sackl R., Sammer, Schuster   
+Abwesend: Schmuck  
+*******************************************************************************************************************************************  
