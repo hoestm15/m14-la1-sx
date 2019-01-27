@@ -55,7 +55,7 @@ Die Datei sieht folgendermaßen aus:
 
 
 ### settings.json
- In der Datei im **.vscode**-Ordner wird zum Ausblenden von unerwünschten Dateien in der Programmierumgebung verwendet. Außerdem kann es auch während des Programmierens gesehen.
+ In der Datei im **.vscode**-Ordner wird zum Ausblenden von unerwünschten Dateien in der Programmierumgebung verwendet. Außerdem kann es auch während des Programmierens geschehen.
 
 ```json
 {
@@ -202,7 +202,4 @@ Auf *listen(zuhören)* wird der Server geschalten und wartet bis ein *Request* e
 
 ### Anwenden des Rest-Servers  
 Wenn man Durch aufrufen von *http://localhost:8080/student?htlid=sacrom14* aufruft, wird der Student *sacrom14* mit den dazugehörigen Informationen durch der Handlermethode ausgegeben.  
-![8080](/sacrom14/8080.PNG)  
-  
-Die einzelelnen Teile der URL lauten:  
-![URL](/sacrom14/URL.PNG)    
+   
