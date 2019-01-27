@@ -29,3 +29,44 @@ Ein Beispiel: Die maximale Anzahl an Zeichen in einer Zeile.
             140  
 ```  
 
+
+### tsconfig.json
+Hier werden die Einstellungen beim Übersetzungsvorgang mit dem **tsc** gesteuert und gespeichert. 
+Die Datei sieht folgendermaßen aus:
+```json
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "target": "ES2016",
+        "experimentalDecorators": true,
+        "noEmitOnError": true,
+        "mapRoot": "./",
+        "outDir": "./dist",
+        "typeRoots": [ "node_modules/@types" ]
+    },
+    "include": [ "src/**/*.ts" ]
+}
+```
+
+
+
+### settings.json
+ In der Datei im **.vscode**-Ordner wird zum Ausblenden von unerwünschten Dateien in der Programmierumgebung verwendet. Außerdem kann es auch während des Programmierens gesehen.
+
+```json
+{
+        "files.exclude": {
+                "**/node_modules": true,
+                "**/.vscode": true,
+                "**/package-lock.json": true,
+                "**/gulpfile.js" : true,
+                "**tslint.json": true,
+                "**/dist": true,
+                "**/tsconfig.json": true
+        }
+}
+```
