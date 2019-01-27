@@ -22,4 +22,4 @@
   [protokoll_g3_sacmam14_2018-10-01.md](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacmam14/sacmam14/protokoll_g3_sacmam14_2018-10-01.md)  
   
 * ## 3. Einheit: 08.10.2018  
-  [protokoll g3 sacmam14 2018-10-08.md](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacmam14/sacmam14/protokoll_g3_sacmam14_2018-10-08.md)  
+  [protokoll_g3_sacmam14_2018-10-08.md](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacmam14/sacmam14/protokoll_g3_sacmam14_2018-10-08.md)  
