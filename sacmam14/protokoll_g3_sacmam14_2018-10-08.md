@@ -127,3 +127,55 @@ Der Server wurde soweit fertiggestellt, dass auf Anfragen reagieren kann, hier k
 ### Anwendung  
 Wenn der Server gestartet wird kann mit der URL http://localhost:8080/student?htlid=sacmam14 die Handlermethode aufgerufen werden. Die Methode schickt eine Antwort und lautet `{htlid: 'sacmam14', surname: 'Sackl', firstname: 'Martin'}`  
 ### Funktionsweise  
+Sobald der Server gestartet wird, wartet er auf eine Anfrage. Wenn eine Anfrage gesendet wird, wird im Konstroktor die richtige Handlermethode aufgerufen. Zum Beispiel es wird eine Anfrage mit `/status` gesendet, dann wir die Handlermethode `this.server.get('/status', (req, resp) => this.handleGetStatus(req, resp));` aufgerufen.  Durch den Arrow Operator werden die Parameter **req** und **rep** an die `handleGetStatus` Methode weitergeben. Wenn eine Anfrage mit `/student` kommt wird die `handleGetStudent` Methode aufgerufen. `HandleGet` wird dann aufgerufen wenn eine Anfrage kommt, die keiner Handler-Methode zugewiesen werden kann, und gibt eine Fehlermeldung zurück.  
+### Quelltext  
+```typescript
+import * as express from 'express';
+import * as bodyParser from 'body-parser';
+
+class Main {
+
+    private port: number;
+    private server: express.Express;
+
+    constructor(port: number) {
+        this.port = port;
+        this.server = express();
+        this.server.use(bodyParser.urlencoded({extended: false}));
+        this.server.get('/status', (req, resp) => this.handleGetStatus(req, resp));
+        this.server.get('/student', (req, resp) => this.handleGetStudent(req, resp));
+        this.server.get('*', (req, resp) => this.handleGet(req, resp));
+        this.server.listen(this.port);
+    }
+
+    private handleGet(req: express.Request, resp: express.Response) {
+        resp.status(400);
+        resp.send('Error');
+        resp.end();
+    }
+
+    private handleGetStatus(req: express.Request, resp: express.Response) {
+        resp.send('Server is running');
+        resp.end();
+    }
+
+    private handleGetStudent(req: express.Request, resp: express.Response) {
+        switch (req.query.htlid) {
+            case 'suspam14':
+                resp.json({htlid: 'sacmam14', surname: 'Sackl', firstname: 'Martin'});
+                break;
+            case 'reibem14':
+                resp.json({htlid: 'sacrom14', surname: 'Sackl', firstname: 'Roland'});
+                break;
+            default:
+                resp.status(400);
+                resp.send(req.query.htlid + ' not found');
+                break;
+
+        }
+        resp.end();
+    }
+}
+
+const main = new Main(8080);  
+```  
