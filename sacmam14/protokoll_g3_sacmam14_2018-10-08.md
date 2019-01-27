@@ -39,3 +39,49 @@ Mit dieser Datei kann man das TSLint-Tool konfigurieren. Dieses Tool hilft dabei
             true,
             140  
 ```  
+### tsconfig.json  
+Hier man kann man Einstellungen bezüglich des Übersetzungsvorgang des tsc-Compilers verändern. Der Compiler übersetzt Typescript in Javasript.  
+```json
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "target": "ES2016",
+        "experimentalDecorators": true,
+        "noEmitOnError": true,
+        "mapRoot": "./",
+        "outDir": "./dist",
+        "typeRoots": [ "node_modules/@types" ]
+    },
+    "include": [ "src/**/*.ts" ]
+}
+```  
+### gulpfile.js
+Mit dieser Datei kann man das gulp-Tool steuern. In dieser sind alle Informationen über den Übersetzungsvorgang gespeichert.  
+
+### launch.json  
+Mit dieser Datei kann man den Debugger konfigurieren.  
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceRoot}/src/main.ts",
+            "cwd": "${workspaceRoot}/dist",
+            "console": "integratedTerminal",
+            "outFiles": [ "${workspaceRoot}/dist/*.js" ],
+            // "trace": "all",
+            "sourceMaps": true,
+            "preLaunchTask": "build",
+            "smartStep": true
+        }
+    ]
+}  
+```  
