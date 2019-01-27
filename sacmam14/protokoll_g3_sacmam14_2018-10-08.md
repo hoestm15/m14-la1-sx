@@ -85,3 +85,45 @@ Mit dieser Datei kann man den Debugger konfigurieren.
     ]
 }  
 ```  
+### tasks.json  
+Hier wird das gulp-Tool mit der Programmierumgebung verknüpft.  
+```json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "gulp",
+            "type": "shell",
+            "args": [
+                "--gulpfile",
+                "gulpfile.js",
+                "build"
+            ],
+            "group": "build",
+```  
+### keybindings.json  
+In dieser Datei kann man Tastenkürzel für bestimmte Vorgänge definieren.  
+```json
+ [
+    {
+        "key": "ctrl+alt+v",
+        "command": "workbench.action.tasks.runTask",
+        "args": "cleanAndBuild"
+    },{
+        "key": "ctrl+alt+b",
+        "command": "workbench.action.tasks.runTask",
+        "args": "build"
+    },
+    {
+        "key": "ctrl+alt+c",
+        "command": "workbench.action.tasks.runTask",
+        "args": "clean"
+    }
+]
+```  
+# REST-Server  
+Der Server wurde soweit fertiggestellt, dass auf Anfragen reagieren kann, hier kann der Schüler mit der HTL-ID angefragt werden.  
+### Anwendung  
+Wenn der Server gestartet wird kann mit der URL http://localhost:8080/student?htlid=sacmam14 die Handlermethode aufgerufen werden. Die Methode schickt eine Antwort und lautet `{htlid: 'sacmam14', surname: 'Sackl', firstname: 'Martin'}`  
+### Funktionsweise  
