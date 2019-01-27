@@ -70,3 +70,53 @@ Die Datei sieht folgendermaßen aus:
         }
 }
 ```
+
+
+
+
+
+### task.json
+Die Taks im Quelltextmanager, die sich ebenfalls im **.vscode**-Ordner befinden, werden mit denen des gulp-tools verknüpft.  
+
+```json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "gulp",
+            "type": "shell",
+            "args": [
+                "--gulpfile",
+                "gulpfile.js",
+                "build"
+            ],
+            "group": "build",
+```
+
+
+
+### launch.json
+In der Datei launch.json im **.vscode**-Ordner definiert die Einstellungen beim Debuggen.
+
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceRoot}/src/main.ts",
+            "cwd": "${workspaceRoot}/dist",
+            "console": "integratedTerminal",
+            "outFiles": [ "${workspaceRoot}/dist/*.js" ],
+            //"trace": "all",
+            "sourceMaps": true,
+            "preLaunchTask": "build",
+            "smartStep": true
+        }
+    ]
+}  
+```
