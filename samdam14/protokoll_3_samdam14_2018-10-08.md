@@ -5,7 +5,7 @@
 **Datum: 10.08.2018**  
 **Uhrzeit: 8:00-10:30**  
   
-**Anwesenheit: _Es waren alle Schüler anwesend_**  
+**Abwesend: M. Schmuck**  
   
 **Thema: Tools zur Programmierung in Typescript**  
   
