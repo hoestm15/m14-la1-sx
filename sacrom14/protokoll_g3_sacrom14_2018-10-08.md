@@ -15,7 +15,7 @@ Es gibt je nach Programmiersprache andere Anforderungen an den Compiler:
 Typescript | Java | Java(unter Android) | C  
 ---------- | ---- | ------------------- | -  
 Gulp | javac | gradle | make   
-gulp | javac | gradle | make  
+ 
 
 ## Konfigurartionsdateien  
 
