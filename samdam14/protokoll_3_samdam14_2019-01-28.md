@@ -12,13 +12,15 @@
 -----------------------------------------------------------
   
 ### Grundlegende Wiederholung  
-  
+Einer von vielen Unterschieden zwischen TypScript und Java ist es, dass bei TypeScript ein Konstruktor durch das Schlüsselwort **constructor** signalisiert wird. Außerdem sind Datenelemente, bei denen die Kennzeichnung **private / public** fehlt, grundsätzlich öffentlich, also *public*, anders als bei Java.  
+**Express* ist ein Webserver-Framework, das auf **Node.js HTTP** aufbaut und dem Programmierer das Programmieren von Web-Server komfortabler gestaltet.  
+Der **bodyParser** hilft dem Entwickler, einfacher mit Attributen / zusätzliche Informationen einer URL zu arbeiten, denn er speichert dieser Attribute als eigene **query** (Abfrage). Beispiel an unserem REST-Server wäre die HTL-ID. Auf sie kann über `req.query.htlid` zugegriffen werden.  
   
 --------------------------------------------------------------  
   
 ### Projekt REST-Server  
 Das Ziel der heutigen einheit war es, den REST-Server schöner zu gestalten, denn bis jetzt haben wir alles in unsere Main-Klasse gepackt. 
-Deshalb sollen die Klassen Server und Student erstellt werden, damit alles sauber voneinander getrennt ist und man in der Main nur mehr ein Server-Objekt erzeugt werden muss.  
+Deshalb sollen die Klassen **Server** und **Student** erstellt werden, damit alles sauber voneinander getrennt ist und man in der Main nur mehr ein Server-Objekt erzeugt werden muss.  
 Die Student-Klasse wird im späteren Verlauf in irgendeiner Art von Schüler-Datenbank verwendet werden.  
   
 #### Klasse student.ts  
