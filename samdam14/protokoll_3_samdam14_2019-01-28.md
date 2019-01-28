@@ -57,7 +57,7 @@ return this.firstname;
 #### Klasse server.ts  
 Der Server funktioniert nach dem gleichen Prinzipien, wie auch schon in der letzten Einheit. Die einzigste Veränderung ist die, dass wir eine eigene **start**-Methode eingefügt haben. Dieser Methode wird als Parameter die Portnummer übergeben. Weiters ruft sie `this.server.listen(port)` auf, wodurch im Endeffekt der Server am gegebenen Port gestartet wird.  
 Die Klasse enthält ebenfalls das Schlüsselwort **export**, da sie im weiteren Projektverlauf in der Klasse **Main.ts** importiert werden soll und ein Server-Objekt erzeugt werden soll.  
-Weitere Erklärungen zum Code können [hier](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/protokoll_3_samdam14_2018-10-08.md) nachgelesen werden!  
+Weitere Erklärungen zum Code können [hier](https://github.com/HTLMechatronics/m14-la1-sx/blob/samdam14/samdam14/protokoll_3_samdam14_2018-10-08.md#%C3%A4nderungen-am-rest-server) nachgelesen werden!  
 ```typescript
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
@@ -122,5 +122,17 @@ break;
 resp.end();
 }
 }
+```
+  
+#### main.ts  
+Die Klasse **main.ts** wurde erst in den letzten Minuten der Einheit angefangen und ist deshalb auch noch sehr mager vorhanden und unvollständig. Zurzeit wird nicht einmal die Methode **Main.main()** aufgerufen, somit würde die Main auch noch nicht ausgeführt werden, sondern nur erzeugt werden.  
+```typescript
+import { Server } from 'net';
 
+class Main {
+
+public static main () {
+new Server().setMaxListeners(8080);
+}
+}
 ```
