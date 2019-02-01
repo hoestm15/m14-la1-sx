@@ -7,7 +7,7 @@
   
    
     
- **Abwesend:** niemand 
+ **Abwesend:** niemand  
  **Anwesend:** Bernhard Reinbacher, Ruffenacht Florian, Sackl Martin, Sackl Roland, Schmuck Martin, Sammer Daniel, Schuster Patrick  
   
 *************************************************************************************************************************     
