@@ -19,4 +19,36 @@ Mithilfe des bodyPasers wird der Programmierer entlastet, da er automatisch zus�
 ## Aufteilung in Klassen  
 Um den Code schöner zu gestalten und auch das Fehlerhandling zu vereinfachen, haben wir die eine Klasse in kleinere unterteilt. Somit können wir sehr schön **Server, Student und Main** unterteilen.  
 ### Stundent.ts  
-Diese Klasse ist in unseren Fall die Datenerhaltungsklasse. **export** wird benötigt, da die Klasse später in einer anderen Klasse importiert wird.
+Diese Klasse ist in unseren Fall die Datenerhaltungsklasse. **export** wird benötigt, da die Klasse später in einer anderen Klasse importiert wird.  
+```typescript  
+  export class Student {
+
+    private htlid: string;
+    private surname: string;
+    private firstname: string;
+
+
+    constructor (htlid: string,
+                 surname: string,
+                 firstname: string) {
+        this.htlid = htlid;
+        this.surname = surname;
+        this.firstname = firstname;
+
+    }
+
+    public getHtlid () {
+        return this.htlid;
+    }
+
+    public getSurname () {
+        return this.surname;
+    }
+
+    public getFirstname () {
+        return this.firstname;
+    }
+}
+```  
+### Server.ts  
+
