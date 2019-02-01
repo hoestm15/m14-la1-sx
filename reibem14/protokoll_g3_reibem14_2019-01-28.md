@@ -16,3 +16,7 @@ Zu Beginn wiederholten wir das zuletzt gemachte, da seit der letzten Einheit sch
 Mithilfe des bodyPasers wird der Programmierer entlastet, da er automatisch zusätzliche Attribute zu speichern. Dafür bedient man sich der Methode **req.query**. In unserem Fall kann mit *req.query.htlid* auf das Atrribut HTLID zugegriffen werden.  
   
 *************************************************************************************************************************     
+## Aufteilung in Klassen  
+Um den Code schöner zu gestalten und auch das Fehlerhandling zu vereinfachen, haben wir die eine Klasse in kleinere unterteilt. Somit können wir sehr schön **Server, Student und Main** unterteilen.  
+### Stundent.ts  
+Diese Klasse ist in unseren Fall die Datenerhaltungsklasse. **export** wird benötigt, da die Klasse später in einer anderen Klasse importiert wird.
