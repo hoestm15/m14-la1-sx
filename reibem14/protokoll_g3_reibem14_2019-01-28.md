@@ -51,4 +51,4 @@ Diese Klasse ist in unseren Fall die Datenerhaltungsklasse. **export** wird ben�
 }
 ```  
 ### Server.ts  
-
+Der Server hat die Aufgabe, dass er auf Requests vom Client antwortet. Nun haben wir die Klassen Server.ts eigenständigt gemacht, was dazu füht, dass eine Methode *start* implementiert werden musste.
