@@ -5,11 +5,20 @@ Gruppe: 3
 Anwesend: Reinbacher, Ruffenacht, Sackl M., Sackl R., Sammer, Schmuck, Schuster  
 Abwesend: -
 
-
-
+## Wiederholung der vorherigen Einheiten:
+Folgende Punkte wurden besprochen:
+#### Javascript-Typescript Unterschied   
+Das Problem beim arbeiten mit JS ist, dass es nicht Typenstreng ist und somit leicht Fehler passieren können, welche erst in der Laufzeit aufscheinen. Um dies zu vermeiden arbeiten wir mit Typescipt
+#### Express Framework
+Um nicht von null auf einen Server programmieren greifen wir auf das Express Framework zurück. Dieses Framework baut auf NodeJs auf und erleichtert die Erstellung eines Webservers erheblich.
+#### Body-Parser
+Wir verwenden den Body-Parser um konfortabel mit Zusatz-Attributen in der URL arbeiten zu können. Diese Zusatzattribute werden in einer query gespeichert, welche man mit der Methode `reg.query` abfragen und weiterverarbeiten kann.
+## REST-Server
+Um den Quellcode für den REST-Server schöner zu gestalten, haben wir unser Programm in mehrere Klassen aufgeteilt, anstatt nur ein main-programm zu haben. Es wurden die Klassen *Student.ts* und *Server.ts* erstellt. Zusätzlich wird eine die Klasse *main.ts* benötigt in welcher ein Server Objekt erzeugt wird.
 
 ### Stundent.ts  
-  
+Diese Klasse ist eine Datenerhaltungsklasse für das anlegen von Schülern. Das Prinzip der Datenerhaltungsklasse ist gleich wie in Java, wonach die einzelnen Datenelemente private sind und diese über Getter-Methoden abgefragt werden können.
+Es wird das Schlüsselwort **export** benötigt, ansonsten könnte die Klasse nicht in einer anderen importiert werden.
 ```typescript  
   export class Student {
 
@@ -42,6 +51,7 @@ Abwesend: -
 ```  
 
 ### Server.ts
+Die Server Klasse hat sich seit der letzten Einheit nur geringfügig verändert. Es wurde lediglich eine **start**-Methode hinzugefügt. Diese wird ab jetzt benötigt da in der main ein Server-Objekt erstellt wird, dass daraufhin erst gestartet werden muss. Um den Server zu starten wird von der start-Methode der Befehl `this.server.listen(port)` aufgerufen, wodurch der eigentliche Server gestartet wird.
 ```typescript  
    import * as express from 'express';
 import * as bodyParser from 'body-parser';
@@ -100,6 +110,8 @@ export class ServerError extends Error {
 }
 ```  
 ### main.ts    
+In dieser Klasse wird die public static main aufgerufen, diese Methode ist der EInsprung in das Programm. 
+Diese Methode konnte in der Einheit nicht fertiggestellt werden und wird somit in der nächsten vervollständigt.
 ```typescript  
     import { Server } from 'http';
 
