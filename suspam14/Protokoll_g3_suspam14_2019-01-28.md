@@ -8,13 +8,15 @@ Abwesend: -
 ## Wiederholung der vorherigen Einheiten:
 Folgende Punkte wurden besprochen:
 #### Javascript-Typescript Unterschied   
-Das Problem beim arbeiten mit JS ist, dass es nicht Typenstreng ist und somit leicht Fehler passieren können, welche erst in der Laufzeit aufscheinen. Um dies zu vermeiden arbeiten wir mit Typescipt
+Das Problem beim arbeiten mit JS ist, dass es nicht Typenstreng ist und somit leicht Fehler passieren können, welche erst in der Laufzeit aufscheinen. Um dies zu vermeiden arbeiten wir mit Typescipt. 
 #### Express Framework
 Um nicht von null auf einen Server programmieren greifen wir auf das Express Framework zurück. Dieses Framework baut auf NodeJs auf und erleichtert die Erstellung eines Webservers erheblich.
 #### Body-Parser
 Wir verwenden den Body-Parser um konfortabel mit Zusatz-Attributen in der URL arbeiten zu können. Diese Zusatzattribute werden in einer query gespeichert, welche man mit der Methode `reg.query` abfragen und weiterverarbeiten kann.
 ## REST-Server
 Um den Quellcode für den REST-Server schöner zu gestalten, haben wir unser Programm in mehrere Klassen aufgeteilt, anstatt nur ein main-programm zu haben. Es wurden die Klassen *Student.ts* und *Server.ts* erstellt. Zusätzlich wird eine die Klasse *main.ts* benötigt in welcher ein Server Objekt erzeugt wird.
+(Protokoll zur 2. Einheit)[https://github.com/HTLMechatronics/m14-la1-sx/blob/suspam14/suspam14/Protokoll_g3_suspam14_2018-10-01.md]
+(Protokoll zur 3. Einheit)[https://github.com/HTLMechatronics/m14-la1-sx/blob/suspam14/suspam14/Protokoll_g3_suspam14_2018-10-08.md]
 
 ### Stundent.ts  
 Diese Klasse ist eine Datenerhaltungsklasse für das anlegen von Schülern. Das Prinzip der Datenerhaltungsklasse ist gleich wie in Java, wonach die einzelnen Datenelemente private sind und diese über Getter-Methoden abgefragt werden können.
