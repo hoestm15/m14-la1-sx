@@ -10,7 +10,7 @@ Abwesend: -
 Wenn man mit Java programmieren würden leichter Fehler passieren und diese Fehler würden erst in der Laufzeit aufscheinen. Um dies zu vermeiden arbeiten wir mit Typescript.  
 Das Webserver-Framework **Express** baut auf Node.js und gestaltet das Programmieren eines Web-Servers komfortabler.  
 Um mit Zusatz-Attributen in der URL zu arbeiten verwenden wir den **Body-Parser**. Mit der Methode *req.query* können wir diese Atribute abfragen und weiterverarbeiten.  
-[Vorherige Einheit](https://github.com/HTLMechatronics/m14-la1-sx/edit/sacmam14/sacmam14/protokoll_g3_sacmam14_2018-10-08.md)  
+[Vorherige Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacmam14/sacmam14/protokoll_g3_sacmam14_2018-10-08.md)  
 *******************************************************************************************************************************************  
 # Projekt: REST-Server  
 ### Aufteilung in Klassen  
