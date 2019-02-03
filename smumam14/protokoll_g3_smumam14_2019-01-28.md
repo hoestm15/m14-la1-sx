@@ -1,6 +1,6 @@
 
 # Laborprotokoll  
-Vierte Einheit am 28. Jan 2019  
+Vierte Einheit am 28. Jan. 2019  
 Martin Schmuck  
 5AHME  
 Gruppe 3
@@ -18,17 +18,96 @@ Wir erweitern unseren Server um eine weitere Funktion und lagern ihn in verschie
 #### main.ts  
 Die Klasse `Main` hat zur Zeit nur die Aufgabe, den Konstruktor der Klasse Server aufzurufen und somit den Server zu starten.
 ```typescript
+import { Server } from 'http';
+
+class Main {
+    public static main () {
+        new Server().setMaxListeners(8080);
+    }
+}
+
 
 ```  
 
 #### server.ts  
 Die Klasse `Server` hat die Aufgabe, einen Server zu realisireren. Da Schlüsselwort `export` muss im Klassenkopf angeführt werden, wenn man wie wir die Klasse in einer anderen Klasse verwendet, also dort mit `import` importiert.  
 ```typescript
+import * as express from 'express';
+import * as bodyParser from 'body-parser';
+
+export class Server {
+
+    private server: express.Express;
+
+    constructor() {
+        this.server = express();
+        this.server.use(bodyParser.urlencoded({extended: false}));
+        this.server.get('/status', (req, resp) => this.handleGetStatus(req, resp));
+        this.server.get('/student', (req, resp) => this.handleGetStudent(req, resp));
+        this.server.get('*', (req, resp) => this.handleGet(req, resp));
+    }
+
+    public start(port: number) {
+        this.server.listen(port);
+        console.log('started server on port' + port);
+    }
+
+    private handleGet(req: express.Request, resp: express.Response) {
+        resp.status(400);
+        resp.send('Error');
+        resp.end();
+    }
+
+    private handleGetStatus(req: express.Request, resp: express.Response) {
+        resp.send('Server is running');
+        resp.end();
+    }
+
+    private handleGetStudent(req: express.Request, resp: express.Response) {
+        switch (req.query.htlid) {
+            case 'suspam14':
+                resp.json({htlid: 'suspam14', surname: 'Schuster', firstname: 'Patrick'});
+                break;
+            case 'reibem14':
+                resp.json({htlid: 'reibem14', surname: 'Reinbacher', firstname: 'Bernhard'});
+                break;
+            default:
+                resp.status(400);
+                resp.send(req.query.htlid + ' not found');
+                break;
+
+        }
+        resp.end();
+    }
+  }
 
 ``` 
 
 #### student.ts  
 Die Klasse `Student` ist eine Datenhaltungsklasse. Sie representiert einen Schüler.
 ```typescript
+export class Student {
+    private htlid: string;
+    private surname: string;
+    private firstname: string;
+
+    constructor(htlid: string, surname: string, firstname: string) {
+        this.htlid = htlid;
+        this.surname = surname;
+        this.firstname = firstname;
+    }
+
+    public getHtlId() {
+        return this.htlid;
+    }
+
+    public getSurname() {
+        return this.surname;
+    }
+
+    public getFirstname() {
+        return this.firstname;
+    }
+}
 
 ```  
