@@ -63,7 +63,7 @@ export class Server {
     private handleGetStudent(req: express.Request, res: express.Response, next: express.NextFunction) {
         console.log('query --> ' + req.query);
         console.log('GET..');
-        res.json({surname: 'Martinak', firstname: 'Moritz'});
+        res.json({surname: 'Nabernik', firstname: 'Mario'});
     }
 }
 ```
