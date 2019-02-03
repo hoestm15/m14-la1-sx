@@ -6,7 +6,11 @@ __Turnus 1:__
 * Gruppe 3: 2. Einheit, 01.10.2018 
     * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/protokoll_g3_smumam14_2018-10-01.md)
 * Gruppe 3: 3. Einheit, 08.10.2018
-    * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/protokoll_g3_smumam14_2018-10-08.md)
+    * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/protokoll_g3_smumam14_2018-10-08.md)  
+      
+__Turnus 2:__
+* Gruppe 3: 4. Einheit, 28.01.2019  
+   * [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/protokoll_g3_smumam14_2019-01-28.md)
 
 _______________________
 
