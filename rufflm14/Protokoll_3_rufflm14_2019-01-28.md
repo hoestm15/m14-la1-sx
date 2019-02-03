@@ -25,7 +25,8 @@ Bei jeder Verwednung einer Variable, die in der Klasse deklariert wurde, muss da
 
 ### bodyParser
 Der bodyParser ist ein Modul, das die in der URL übergebenen Attribute in einem Objekt speichert und sie für den Programmierer leicht vefügbar macht. Sie lassen sich mit **req.query** abfragen.
-[bodyParser]()
+
+[bodyParser](https://www.npmjs.com/package/body-parser)
 
 ## Verbesserung des Codes
 Bis jetzt befand sich der gesamte Quellcode des Rest-Servers in einer Datei. Das ist unübersichtlich und entspricht nicht dem Standard. Deswegen wurde der Code auf die Dateien main.ts, server.ts und student.ts aufgeteilt. Grundsätzlich wäre es in JavaScript/TypeScript auch möglich mehrere, oder auch alle Klassen in einer Datei zu speichern. Das macht aber nur Sinn, wenn z.B. eine eigene Fehlerklasse, die zur Klasse gehört, in der gleichen Datei plaziert wird.
