@@ -50,5 +50,5 @@
 
    
 *   4.Einheit, 28.01.2019
-   [protokoll_g3_sacrom14_2018-10-08](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacrom14/sacrom14/protokoll_g3_sacrom14_2019-01-28.md)
+   [protokoll_g3_sacrom14_2018-01-28](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacrom14/sacrom14/protokoll_g3_sacrom14_2019-01-28.md)
     
