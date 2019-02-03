@@ -13,11 +13,12 @@
 *************************************************************************************************************************     
 ## Wiederholung  
 Zu Beginn wiederholten wir das zuletzt gemachte, da seit der letzten Einheit schon einige Zeit vergangen ist. Wir arbeiten mit Javascript schreiben jedoch in Typescript damit das Programmieren aufgrund der fehlenden Datentypen in Javascript. Somit wird das Arbeiten angenehmen, da Typescript Java sehr ähnlich ist. Einer von vielen Unterschieden zwischen Java und Javascript ist, dass bei Javascript automatisch public verwendet wird auch wenn man kein Schlüsselwort verwendet. In Java als auch in Typescript verwendet man private und public.  
-Mithilfe des bodyPasers wird der Programmierer entlastet, da er automatisch zusätzliche Attribute zu speichern. Dafür bedient man sich der Methode **req.query**. In unserem Fall kann mit *req.query.htlid* auf das Atrribut HTLID zugegriffen werden.  
-  
+Mithilfe des bodyPasers wird der Programmierer entlastet, da er automatisch zusätzliche Attribute hinzufügt. Dafür bedient man sich der Methode **req.query**.   
+
 *************************************************************************************************************************     
 ## Aufteilung in Klassen  
-Um den Code schöner zu gestalten und auch das Fehlerhandling zu vereinfachen, haben wir die eine Klasse in kleinere unterteilt. Somit können wir sehr schön **Server, Student und Main** unterteilen.  
+Um den Code schöner zu gestalten und auch das Fehlerhandling zu vereinfachen, haben wir die eine Klasse in kleinere unterteilt. Somit können wir sehr schön **Server, Student und Main** unterteilen. Das Schlüsselwort **this** ist sehr wichtig beim Zugreifen auf Variablen. Unsere lokalen Variablen sind private und deshalb brauchen wir davor "this". Ohne "this" würden wir auf globale Variablen zugreifen bzw. wenn noch nicht Vorhanden welche erstellen.  
+
 ### Stundent.ts  
 Diese Klasse ist in unseren Fall die Datenerhaltungsklasse. **export** wird benötigt, da die Klasse später in einer anderen Klasse importiert wird.  
 ```typescript  
@@ -52,6 +53,8 @@ Diese Klasse ist in unseren Fall die Datenerhaltungsklasse. **export** wird ben�
 ```  
 ### Server.ts  
 Der Server hat die Aufgabe, dass er auf Requests vom Client antwortet. Nun haben wir die Klassen Server.ts eigenständigt gemacht, was dazu füht, dass eine Methode *start* implementiert werden musste. Grundsätzlich hat sich an der Funktion dieser Klasse nichts geändert. Sie schickt immer noch bei Anfrage eines Schülers *http://localhost:8080/student?htlid=reibem14* die Informationen über den jeweiligen Schüler zurück: htlid: 'reibem14', sirname: 'Reinbacher', firstname: 'Bernhard'. Es kam auch eine ServerError Klasse für das Problemhandling dazu.  
+Wir verwenden das Websever Framework **express**, das auf HTTP aufbaut.  
+
 ```typescript  
    import * as express from 'express';
 import * as bodyParser from 'body-parser';
@@ -110,7 +113,8 @@ export class ServerError extends Error {
 }
 ```  
 ### main.ts  
-In dieser Methode rufen wir bis jetzt nur eine public static main auf.   
+In dieser Methode rufen wir bis jetzt nur eine *public static main* auf und haben die maximalen Zuhörer eingestellt.  
+
 ```typescript  
     import { Server } from 'http';
 
