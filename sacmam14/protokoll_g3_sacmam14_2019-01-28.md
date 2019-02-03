@@ -10,6 +10,7 @@ Abwesend: -
 Wenn man mit Java programmieren würden leichter Fehler passieren und diese Fehler würden erst in der Laufzeit aufscheinen. Um dies zu vermeiden arbeiten wir mit Typescript.  
 Das Webserver-Framework **Express** baut auf Node.js und gestaltet das Programmieren eines Web-Servers komfortabler.  
 Um mit Zusatz-Attributen in der URL zu arbeiten verwenden wir den **Body-Parser**. Mit der Methode *req.query* können wir diese Atribute abfragen und weiterverarbeiten.  
+[Vorherige Einheit](https://github.com/HTLMechatronics/m14-la1-sx/edit/sacmam14/sacmam14/protokoll_g3_sacmam14_2018-10-08.md)  
 *******************************************************************************************************************************************  
 # Projekt: REST-Server  
 ### Aufteilung in Klassen  
@@ -76,3 +77,47 @@ export class ServerError extends Error {
 ```  
 
 ### Student.ts  
+Für das anlegen von Schülern benötigen wir diese Datenerhaltungsklasse. Die einzelnen Datenelemente sind *private* und werden durch Getter-Methoden abgefragt. Das Schlüssewort **export** wird benötigt, um die Klasse in eine andere Klasse importieren zu können.  
+```typescript  
+  export class Student {
+
+    private htlid: string;
+    private surename: string;
+    private firstname: string;
+
+
+    constructor (htlid: string,
+                 surename: string,
+                 firstname: string) {
+        this.htlid = htlid;
+        this.surename = surename;
+        this.firstname = firstname;
+
+    }
+
+    public getHtlid () {
+        return this.htlid;
+    }
+
+    public getSurename () {
+        return this.surename;
+    }
+
+    public getFirstname () {
+        return this.firstname;
+    }
+}
+```  
+
+### Main.ts  
+Hier wird die *public static main* aufgerufen um in das Programm einzuspringen.  
+Main.ts konnte in der Einheit nicht fertiggestellt werden.  
+```typescript  
+import { Server } from 'http';
+
+class Main {
+    public static main () {
+        new Server().setMaxListeners(8080);
+    }
+}
+```  
