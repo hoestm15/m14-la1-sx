@@ -18,7 +18,7 @@ Um den Quellcode für den REST-Server schöner zu gestalten, haben wir unser Pro
 [Protokoll zur 2. Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/suspam14/suspam14/Protokoll_g3_suspam14_2018-10-01.md)  
 [Protokoll zur 3. Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/suspam14/suspam14/Protokoll_g3_suspam14_2018-10-08.md)
 
-### Stundent.ts  
+### Student.ts  
 Diese Klasse ist eine Datenerhaltungsklasse für das anlegen von Schülern. Das Prinzip der Datenerhaltungsklasse ist gleich wie in Java, wonach die einzelnen Datenelemente private sind und diese über Getter-Methoden abgefragt werden können.
 Es wird das Schlüsselwort **export** benötigt, ansonsten könnte die Klasse nicht in einer anderen importiert werden.
 ```typescript  
