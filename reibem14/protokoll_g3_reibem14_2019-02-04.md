@@ -30,5 +30,7 @@ Main.main();
  
  Art | Sprache | Eigenschaft | Link  
  --- | ------- | ----------- | ----  
+ schematische DB | SQL | effizient für große Datenmengen | [PostgreSQL](https://de.wikipedia.org/wiki/PostgreSQL)  
+ nicht schematische DB | MongoDB | effizient für ständige Änderungen der Daten | [MongoDB](https://de.wikipedia.org/wiki/MongoDB)  
  
  
