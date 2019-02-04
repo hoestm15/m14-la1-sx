@@ -54,6 +54,22 @@ UML-Diagramm: ![Singleton](/reibem14/Singleton.png)
 Weiter Infos zu Singleton:  
 * [Wikipedia/Singleton](https://de.wikipedia.org/wiki/Singleton_(Entwurfsmuster))  
 * [Singleton](https://www.philipphauer.de/study/se/design-pattern/singleton.php)  
+```typescript  
+  import { Student } from './student';
+
+export class Database {
+
+    public static getInstance (): Database {
+        if (!Database.instance) {
+            Database.instance = new Database();
+        }
+        return Database.instance;
+    }
+
+    private static instance: Database;
+    // ***********  
+    ...
+```
   
 ## allgemeine Informationen  
 * **falsy**: wenn null oder undefined  
