@@ -43,11 +43,101 @@ Weitere Informationen zu **Singleton** können [hier](https://de.wikipedia.org/w
   
 ### Änderungen am Code  
 #### main.ts  
-  
-  
+Die Klasse **main.ts** wurde richtig gestellt. Dafür wurde der Import und der Methodenaufruf geändert. Außerdem wird die Funktion durch den Aufruf von `Main.main();` auch ausgeführt.  
+```typescript
+import { Server } from './server';
+
+class Main {
+
+    public static main () {
+        new Server().start(8080);
+    }
+}
+
+Main.main();
+```
 #### database.ts  
-  
-  
+Die Klasse **database.ts** stellt unsere Datenbank dar und wurde nach dem **Singleton**-Schema programmiert. Um das Schema zu realisieren ist der Konstruktor *private* und es wurde die statische Methode **getInstance** erstellt. Darin wird überprüft, ob die gewünschte Instanz bereits vorhanden ist. Ist dies nicht der Fall, so wird eine neue Datenbank-Objekt für diese Instanz erzeugt.  
+Außerdem wurden in dieser Klasse die Methoden **add**, **get** und **remove** ausprogrammiert, da dies wichtige Funktionen einer Datenbank sind.  
+```typescript
+import { Student } from './student';
+
+export class Database {
+
+    public static getInstance (): Database {
+        if (!Database.instance) {
+            Database.instance = new Database ();
+        }
+        return Database.instance;
+    }
+
+    private static instance: Database;
+
+    private students: { [htlid: string]: Student} = {};
+
+    private constructor () {
+        this.add(new Student('samdam14', 'Sammer', 'Daniel'));
+    }
+
+    public add (s: Student) {
+        this.students[s.getHtlid()] = s;
+    }
+
+    public get (htlid: string): Student {
+        return this.students[htlid];
+    }
+
+    public remove (htlid: string) {
+        delete this.students[htlid];
+    }
+}
+```
 #### server.ts  
-  
-  
+In der Klasse **server.ts** wurde nur die Handler-Methode **handleGetStudent** bearbeitet. In einer konstanten Variable wird die Anfrage, die in der URL steht und durch den **bodyParser** für uns bereitgestellt wird, zwischengespeichert. Danach wird überprüft, ob der Schüler mit einer bestimmten *htlid* in der Datenbank vorhanden ist. Wenn dies der Fall ist, soll er ausgegeben werden. Ansonsten soll der Server mit einer ERROR-Meldung antworten.  
+```typescript
+import * as express from 'express';
+import * as bodyParser from 'body-parser';
+import { Database } from './database';
+
+export class Server {
+
+    private server: express.Express;
+
+    constructor () {
+        this.server = express();
+        this.server.use(bodyParser.urlencoded({extended: false}));
+        this.server.get('/status', (req, resp) => this.handleGetStatus(req, resp));
+        this.server.get('/student', (req, resp) => this.handleGetStudent(req, resp));
+        this.server.get('*', (req, resp) => this.handleGet(req, resp));
+    }
+
+    public start (port: number) {
+        this.server.listen(port);
+        console.log('Server auf Port ' + port + ' gestartet');
+    }
+
+    private handleGet (req: express.Request, resp: express.Response) {
+        resp.status(400);
+        resp.send('ERROR');
+        // resp.send('Hallo');
+        resp.end();
+    }
+
+    private handleGetStatus (req: express.Request, resp: express.Response) {
+        resp.send('Server is running');
+        resp.end();
+    }
+
+    private handleGetStudent (req: express.Request, resp: express.Response) {
+        const s = Database.getInstance().get(req.query.htlid);
+
+        if (s) {
+            resp.json(s);
+        } else {
+            resp.status(404);
+            resp.send('NOT FOUND');
+        }
+        resp.end();
+    }
+}
+```
