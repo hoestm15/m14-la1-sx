@@ -26,7 +26,8 @@ Main.main();
 ```  
  ## Datenbanken  
  Datenbanken sind System zur elektronischen Datenverwaltung. Sie besteht immer aus einer Datenbankmanagementsystem und einer Datenbasis.  
- Man kann grob zwischen zwei Datenbanken unterscheiden: schmeatischen DB und nicht schematische DB, welche beide **Relationale DB**sind.  
+ Man kann grob zwischen zwei Datenbanken unterscheiden: schmeatischen DB und nicht schematische DB, welche beide **Relationale DB** sind.    
+ 
  Art | Sprache | Eigenschaft | Link  
  --- | ------- | ----------- | ----  
  
