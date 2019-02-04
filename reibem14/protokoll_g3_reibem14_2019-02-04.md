@@ -66,8 +66,8 @@ Weiter Infos zu Singleton:
         return Database.instance;
     }
 
-    private static instance: Database;
-    // ***********  
+  private static instance: Database;
+  // ***********  
     ...
 ```
   
