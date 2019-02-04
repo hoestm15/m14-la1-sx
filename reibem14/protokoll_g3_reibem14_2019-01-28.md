@@ -116,11 +116,11 @@ export class ServerError extends Error {
 In dieser Methode rufen wir bis jetzt nur eine *public static main* auf und haben die maximalen Zuhörer eingestellt.  
 
 ```typescript  
-    import { Server } from 'http';
+    import { Server } from './server';
 
 class Main {
     public static main () {
-        new Server().setMaxListeners(8080);
+        new Server().start(8080);
     }
 }
 
