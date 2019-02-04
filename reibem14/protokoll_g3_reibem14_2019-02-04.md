@@ -12,7 +12,8 @@
  ********************************************************************************************************************************  
  ## Main.ts   
  Der Restsever ist ab nun lauffähig. Er wird mit *new Server().start(8080)* auf Port 8080 gestartet. Aufrufen kann man ihn über  
- *localhost:8080*. Allgemein ist ein Restserver, bei dem zwei Maschinen miteinander kommunizieren.
+ *localhost:8080*. Allgemein ist ein Restserver, bei dem zwei Maschinen miteinander kommunizieren. Man muss **Main.main()** extern aufrufen, da nicht automatisch eingesprungen wird.  
+ 
 ```typescript    
  import { Server } from './server';
 
@@ -48,7 +49,9 @@ Bei MongoDB ist zu sagen, dass es rund alle drei Monate eine neue Version gibt u
  * Map: kann man unter Javascript mit gewöhnlichen Objekten realisieren (deckt Map von Java ab)    
    
  ## Singleton  
- 
+ Singleton ist ein Entwurfsmuster, welches sicherstellt, dass es nur ein Objekt gibt. Der Konstruktor ist private und es wird eine statische Methode **getInstance()** aufgerufen und in **instance** abgelegt.     
+UML-Diagramm: ![Singleton](/reibem14/Singleton.PNG)  
+
  
  
  
