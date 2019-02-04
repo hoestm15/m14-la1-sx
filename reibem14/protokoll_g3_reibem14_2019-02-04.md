@@ -31,8 +31,9 @@ Main.main();
  Art | Typ | Software | Eigenschaft | Link  
  --- | --- | -------- | ----------- | ----  
  schematische DB | SQL | PostgreSQL| effizient für große Datenmengen | [PostgreSQL](https://de.wikipedia.org/wiki/PostgreSQL)  
- nicht schematische DB | noSQL | MongoDB | effizient für ständige Änderungen der Daten | [MongoDB](https://de.wikipedia.org/wiki/MongoDB)    
- Bei MongoDB ist zu sagen, dass es rund alle drei Monate eine neue Version gibt und deshalb ab und zu einige Schwierigkeiten. Noch dazu ist es eine sehr junge Sprache.  
+ nicht schematische DB | noSQL | MongoDB | effizient für ständige Änderungen der Daten | [MongoDB](https://de.wikipedia.org/wiki/MongoDB)      
+ 
+Bei MongoDB ist zu sagen, dass es rund alle drei Monate eine neue Version gibt und deshalb ab und zu einige Schwierigkeiten. Noch dazu ist es eine sehr junge Sprache.  
    
  ## Collections   
  **Java**
