@@ -12,8 +12,21 @@
 -----------------------------------------------------------
   
 #### Aufruf Main.main();  
-In TypeScript werden Programme Zeile für Zeile ausgeführt. Will man also eine Methode einer Klasse aufrufen, muss diese im Code zuerst definiert worden sein. Im jetzigen Zustand unseres REST-Servers wird unsere Main-Klasse nur erzeugt, aber nicht ausgeführt, da der Aufruf `Main.main ();` noch fehlt.
+In TypeScript werden Programme Zeile für Zeile ausgeführt. Will man also eine Methode einer Klasse aufrufen, muss diese im Code zuerst definiert worden sein. Im jetzigen Zustand unseres REST-Servers wird unsere Main-Klasse nur erzeugt, aber nicht ausgeführt, da der Aufruf `Main.main ();` noch fehlt.  
+```typescript
+
+import { Server } from './server';
+
+class Main {
+
+    public static main () {
+        new Server().start(8080);
+    }
+}
+
+Main.main();
+```
   
 #### Collections in Javascript / TypeScript  
 Grundsätzlich gibt es in Javascript / TypeScript keine Collections wie in Java, da diese Strukturen durch andere Elemente dieser Programmiersprachen vorhanden sind und somit überflüssig wären.  
-**ArrayList** und **LinkedList** aus Java sind in TypeScript durch **Felder** verfügbar, **Maps** können durch **Objekte** realisiert werden.  
+**ArrayList** und **LinkedList** aus Java sind in TypeScript durch **Felder** verfügbar, **Maps** können durch **Objekte** realisiert werden. Weiteres zu diesem Thema kann [hier](https://stackoverflow.com/questions/20699507/hashmap-arraylist-in-java-script) nachgelesen werden.  
