@@ -55,9 +55,9 @@ Weiter Infos zu Singleton:
 * [Wikipedia/Singleton](https://de.wikipedia.org/wiki/Singleton_(Entwurfsmuster))  
 * [Singleton](https://www.philipphauer.de/study/se/design-pattern/singleton.php)  
 ```typescript    
- import { Student } from './student';
+import { Student } from './student';
 
- export class Database {
+export class Database {
 
     public static getInstance (): Database {
         if (!Database.instance) {
@@ -66,11 +66,31 @@ Weiter Infos zu Singleton:
         return Database.instance;
     }
 
-  private static instance: Database;
-  // ***********  
-    ...
+private static instance: Database;
+    // **************************************
+
+private students: { [htlid: string]: Student } = {};
+
+private constructor () {
+    this.add(new Student('samdam14', 'Sammer', 'Daniel'));
+
+}
+public add (s: Student) {
+    this.students[s.getHtlid()] = s;
+    // this.students.suspam14 = s; um nur Schusters hinzuzufügen
+}
+
+public get (htlid: string): Student {
+    return this.students[htlid];
+}
+
+public remove (htlid: string) {
+    delete this.students[htlid];
+ }
+}
 ```
   
 ## allgemeine Informationen  
 * **falsy**: wenn null oder undefined  
-* **this**: bezieht sich in JS immer wo man sich gerade befindet. Wenn man in einer Klasse ist, bezieht sich *this* immer auf die Klasse. Gleich läuft es bei Methoden ab.
+* **this**: bezieht sich in JS immer wo man sich gerade befindet. Wenn man in einer Klasse ist, bezieht sich *this* immer auf die Klasse. Gleich läuft es bei Methoden ab.  
+Weiters wurden die Klassen *server.ts* und *main.ts* geändert.
