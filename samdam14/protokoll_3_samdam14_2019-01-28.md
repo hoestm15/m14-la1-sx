@@ -129,12 +129,12 @@ resp.end();
 #### main.ts  
 Die Klasse **main.ts** wurde erst in den letzten Minuten der Einheit angefangen und ist deshalb auch noch sehr mager vorhanden und unvollständig. Zurzeit wird nicht einmal die Methode **Main.main()** aufgerufen, somit würde die Main auch noch nicht ausgeführt werden, sondern nur erzeugt werden.  
 ```typescript
-import { Server } from 'net';
+import { Server } from './server';
 
 class Main {
 
 public static main () {
-new Server().setMaxListeners(8080);
+new Server().start(8080);
 }
 }
 ```
