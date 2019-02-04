@@ -28,9 +28,9 @@ Main.main();
  Datenbanken sind System zur elektronischen Datenverwaltung. Sie besteht immer aus einer Datenbankmanagementsystem und einer Datenbasis.  
  Man kann grob zwischen zwei Datenbanken unterscheiden: schmeatischen DB und nicht schematische DB, welche beide **Relationale DB** sind.    
  
- Art | Sprache | Software | Eigenschaft | Link  
- --- | ------- | -------- | ----------- | ----  
+ Art | Typ | Software | Eigenschaft | Link  
+ --- | --- | -------- | ----------- | ----  
  schematische DB | SQL | PostgreSQL| effizient für große Datenmengen | [PostgreSQL](https://de.wikipedia.org/wiki/PostgreSQL)  
- nicht schematische DB | | MongoDB | effizient für ständige Änderungen der Daten | [MongoDB](https://de.wikipedia.org/wiki/MongoDB)  
+ nicht schematische DB | noSQL | MongoDB | effizient für ständige Änderungen der Daten | [MongoDB](https://de.wikipedia.org/wiki/MongoDB)  
  
  
