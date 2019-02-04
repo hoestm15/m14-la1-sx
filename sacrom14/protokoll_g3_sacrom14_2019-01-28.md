@@ -16,7 +16,7 @@ Da die letzte Einheit noch im vorherigen Jahr war, wiederholten wir zu Beginn da
 ## REST-Server  
 Das wir alles in unseren Main-Klasse haben, war das Ziel unser Einheit, den REST-Server schöner und übersichtlicher zu gestalten. Um das erreichen zu können, haben wir die Klassen **Server** und **Student** erstellt. Dadurch ist alles voneinader getrennt.  
 
-### Stundent.ts  
+### Student.ts  
 Da die Klasse **Student** später in einer anderen Klasse importiert werden muss, wird das Schlüsselwort **export** verwendet. In unseren Fall wird die Klasse die Datenerhaltungsklasse. 
 ```typescript  
   export class Student {
