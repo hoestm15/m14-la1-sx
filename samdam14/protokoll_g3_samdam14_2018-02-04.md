@@ -42,3 +42,12 @@ Da eine Datenbank genau einmal existiert und nur Werte geändert werden, ist es 
 Weitere Informationen zu **Singleton** können [hier](https://de.wikipedia.org/wiki/Singleton_(Entwurfsmuster)) nachgelesen werden.  
   
 ### Änderungen am Code  
+#### main.ts  
+  
+  
+#### database.ts  
+  
+  
+#### server.ts  
+  
+  
