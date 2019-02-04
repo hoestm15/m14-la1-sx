@@ -50,7 +50,7 @@ Bei MongoDB ist zu sagen, dass es rund alle drei Monate eine neue Version gibt u
    
  ## Singleton  
  Singleton ist ein Entwurfsmuster, welches sicherstellt, dass es nur ein Objekt gibt. Der Konstruktor ist private und es wird eine statische Methode **getInstance()** aufgerufen und in **instance** abgelegt.     
-UML-Diagramm: ![Singleton](/reibem14/Singleton.PNG)  
+UML-Diagramm: ![Singleton](/reibem14/Singleton.png)  
 
  
  
