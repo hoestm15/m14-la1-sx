@@ -13,7 +13,7 @@ Abwesend: niemand
 ________
 ### Wiederholung  
 ##### Pakete und Tools installieren  
-Will man die zur Ausführung benötigten Pakete nachinstallieren, verwendet man `npm install -poid` im Terminal. Ansonsten, wenn man weiterentwickeln will, gibt man nur `npm install` ein.  
+Will man die zur Ausführung benötigten Pakete nachinstallieren, verwendet man `npm install -prod` im Terminal. Ansonsten, wenn man weiterentwickeln will, gibt man nur `npm install` ein.  
   
 ##### Zugriffschutz in TypeScript  
 Der Zugriffsschutz funktioniert so, dass Datenelemente, welche ohne Schlüsselwort deklariert werden, anders als in Java automatisch `public` sind. Außerdem muss man auch bei Zugriffen innerhalb der Klasse auf deren klasseneigenen Attribute das `this.<Datenelement>` aufrufen, da sonst die globale Variable gebraucht wird.  
