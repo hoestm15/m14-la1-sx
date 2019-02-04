@@ -19,7 +19,7 @@ Will man die zur Ausführung benötigten Pakete nachinstallieren, verwendet man 
 Der Zugriffsschutz funktioniert so, dass Datenelemente, welche ohne Schlüsselwort deklariert werden, anders als in Java automatisch `public` sind. Außerdem muss man auch bei Zugriffen innerhalb der Klasse auf deren klasseneigenen Attribute das `this.<Datenelement>` aufrufen, da sonst die globale Variable gebraucht wird.  
 
 ##### BodyParser
-Der Bodyparser (siehe Konstruktor der Klasse Server) teilt den URL der Anfrage in die einzeilenen Teile bzw. Attribute auf, die sich dann mit `req.get` abfragen lassen.
+Der Bodyparser (siehe Konstruktor der Klasse Server) teilt den URL der Anfrage in die einzeilenen Teile bzw. Attribute auf, die sich dann mit `req.query` abfragen lassen.
 
 
 ### Erweiterung des Servers 
