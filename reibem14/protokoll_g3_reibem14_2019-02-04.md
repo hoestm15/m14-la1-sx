@@ -50,4 +50,11 @@ Bei MongoDB ist zu sagen, dass es rund alle drei Monate eine neue Version gibt u
    
  ## Singleton  
  Singleton ist ein Entwurfsmuster, welches sicherstellt, dass es nur ein Objekt gibt. Der Konstruktor ist private und es wird eine statische Methode **getInstance()** aufgerufen und in **instance** abgelegt.     
-UML-Diagramm: ![Singleton](/reibem14/Singleton.png)   
+UML-Diagramm: ![Singleton](/reibem14/Singleton.png)     
+Weiter Infos zu Singleton:  
+* [Wikipedia/Singleton](https://de.wikipedia.org/wiki/Singleton_(Entwurfsmuster))  
+* [Singleton](https://www.philipphauer.de/study/se/design-pattern/singleton.php)  
+  
+## allgemeine Informationen  
+* **falsy**: wenn null oder undefined  
+* **this**: bezieht sich in JS immer wo man sich gerade befindet. Wenn man in einer Klasse ist, bezieht sich *this* immer auf die Klasse. Gleich läuft es bei Methoden ab.
