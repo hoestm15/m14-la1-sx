@@ -19,7 +19,7 @@ Mithilfe des bodyPasers wird der Programmierer entlastet, da er automatisch zus�
 ## Aufteilung in Klassen  
 Um den Code schöner zu gestalten und auch das Fehlerhandling zu vereinfachen, haben wir die eine Klasse in kleinere unterteilt. Somit können wir sehr schön **Server, Student und Main** unterteilen. Das Schlüsselwort **this** ist sehr wichtig beim Zugreifen auf Variablen. Unsere lokalen Variablen sind private und deshalb brauchen wir davor "this". Ohne "this" würden wir auf globale Variablen zugreifen bzw. wenn noch nicht Vorhanden welche erstellen.  
 
-### Stundent.ts  
+### Student.ts  
 Diese Klasse ist in unseren Fall die Datenerhaltungsklasse. **export** wird benötigt, da die Klasse später in einer anderen Klasse importiert wird.  
 ```typescript  
   export class Student {
