@@ -30,3 +30,9 @@ Main.main();
 #### Collections in Javascript / TypeScript  
 Grundsätzlich gibt es in Javascript / TypeScript keine Collections wie in Java, da diese Strukturen durch andere Elemente dieser Programmiersprachen vorhanden sind und somit überflüssig wären.  
 **ArrayList** und **LinkedList** aus Java sind in TypeScript durch **Felder** verfügbar, **Maps** können durch **Objekte** realisiert werden. Weiteres zu diesem Thema kann [hier](https://stackoverflow.com/questions/20699507/hashmap-arraylist-in-java-script) nachgelesen werden.  
+  
+#### Datenbanken  
+Eine Datenbank ist ein System zur elektronischen Datenverwaltung. Grundsätzlich kann man zwischen schematischen und nicht schematischen Datenbanken unterscheiden. Schematische Datenbanken haben eine klar definierte Struktur und sind daher sehr starr. Typische Programmiersprache für relationale DB ist **SQL**. Beispiele für schematische DB sind **Postgresql** oder **SQLite**.  
+Nicht schematische DB werden für dynamischen Systeme benötigt, z.B. in den DB der sozialen Medien. Die Struktur ist nicht klar definiert und kann daher unterschiedlich sein. Beispiel für eine nicht schematische Db ist **MongoDB**.  
+Weitere Informationen können [hier](https://stackoverflow.com/questions/20699507/hashmap-arraylist-in-java-script) nachgelesen werden.  
+  
