@@ -14,7 +14,7 @@
   
 ## Verwenden der HTTP-Requests in unserem Programm:
 
-GET -> `this._server.get()`  & `/dataset` -> Abrufen 
+GET -> `this._server.get()`  -> Abrufen 
 
 PUT -> `this._server.put()`  -> Hinzufügen
 
