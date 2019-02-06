@@ -9,6 +9,7 @@
 
 ## Installation von Modulen
   *Bsp: Installieren von express*
+  
   Zuerst `npm install express` 
   Danach `npm install --save-dev @types/express`
   
@@ -76,7 +77,9 @@ public edit (index: number, p2: any, power?: any): void {
  
   
   Value kommt an -> Indexwert 
-  zwei Werte -> neues Objekt  
+  
+  zwei Werte -> neues Objekt 
+  
   ein Wert -> alter Wert wird für den zweiten Wert verwendet
   
   Damit das funktioniert bracuht man noch zwei Methoden in der Klasse *database*.
