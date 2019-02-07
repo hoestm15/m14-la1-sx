@@ -1,6 +1,6 @@
 # *1. Laborprotokoll*
 
-  Name: Kilian Waltl 
+  Name: Kilian Waltl  
   Klasse: 5AHME   
   Datum: 15.10.2018   
   Anwesend: Strauß Lukas, Strutz Sebastian, Tuttner Raphael, Uhl Christian, Waltl Kilian, Wieser Markus, Zitz Karlheinz    
@@ -36,6 +36,14 @@
   
   ![Paketaufbau](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/paketaufbau.jpg)
   
+  ## TCP/IP
+  
+  Das Transmission Control Protocol/Internet Protocol ist eine Familie von Netzwerkprotokollen. Die Identifizierung der Rechner geschieht über die IP-Adresse. Für TCP/IP gibt es verschiedene Hilfs- und Anwendungsprotokolle, wie zum Beispiel DHCP.
+  
+  Beim Verbindungsaufbau sendet der Client dem Server ein SYN-Paket. Ist der Port geöffnet, wird ein SYN/ACK Paket zurückgesendet. Kommt auch dieses Paket vom Server beim Client an, sendet der Client ein ACK-Paket um einen erfolgreichen Verbindungsaufbau zu signalisieren. Um eine Verbindung zu trennen, muss ein FIN-Paket gesendet werden.
+  
+  ![Verbindungsaufbau](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/Verbindungsaufbau.png)
+  
   ## REST-Server
   
   Der Begriff Rest-Server steht für Representational State Transfer. Ein Rest-Server wird häufig zur Abfrage von Zuständen verwendet. Diese Abfragen erfolgen meist über HTTP und sind zudem zustandslos. Ein REST-Server hat 6 bestimmte Eigenschaften:
@@ -56,14 +64,7 @@
   * Mehrschichtige Systeme: Durch diese System wird die Architektur vereinfacht.
   * Code on Demand: Diese Forderung von Fielding ist optional. Unter Code on Demand ist zu verstehen, dass erst im Bedarfsfall an den Client Code zur lokalen Ausführung übertragen werden kann.
   
-  ## TCP/IP
-  
-  Das Transmission Control Protocol/Internet Protocol ist eine Familie von Netzwerkprotokollen. Die Identifizierung der Rechner geschieht über die IP-Adresse. Für TCP/IP gibt es verschiedene Hilfs- und Anwendungsprotokolle, wie zum Beispiel DHCP.
-  
-  Beim Verbindungsaufbau sendet der Client dem Server ein SYN-Paket. Ist der Port geöffnet, wird ein SYN/ACK Paket zurückgesendet. Kommt auch dieses Paket vom Server beim Client an, sendet der Client ein ACK-Paket um einen erfolgreichen Verbindungsaufbau zu signalisieren. Um eine Verbindung zu trennen, muss ein FIN-Paket gesendet werden.
-  
-  ![Verbindungsaufbau](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/Verbindungsaufbau.png)
-  
+
   ## Übung
   
   Zu Beginn versuchten wir mit einem Server eine Verbindung aufzubauen. Dies kann einfach über die Konsole erfolgen.
