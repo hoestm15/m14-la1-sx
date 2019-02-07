@@ -96,33 +96,8 @@ public getTemp (index: number): number {
 ## Testen von POST
 
 ### Ausgangszustand
-```json
-[{"time":"2018-12-10T19:11:02.486Z","temp":23.4,"tempUnit":"°C","power":100,"powerUnit":"W"},
-{"time":"2018-12-10T19:11:02.486Z","temp":23.5,"tempUnit":"°C","power":120,"powerUnit":"W"},
-{"time":"2018-12-10T19:11:02.486Z","temp":23.6,"tempUnit":"°C","power":150,"powerUnit":"W"},
-{"time":"2018-12-10T19:11:02.486Z","temp":23.7,"tempUnit":"°C","power":200,"powerUnit":"W"}]
-```
+[Ausgangszustand](https://github.com/HTLMechatronics/m14-la1-sx/blob/boejam13/boejam13/rest_1.png)
 
-### Ändern beide Werte
-  **Request:**  
-  ![2 Werte](boejam13/2_rest)
-  **Response:**  
-```json
-[{"time":"2018-12-10T19:07:11.529Z","temp":50,"tempUnit":"°C","power":1000,"powerUnit":"W"},
-{"time":"2018-12-10T19:07:11.529Z","temp":23.5,"tempUnit":"°C","power":120,"powerUnit":"W"},
-{"time":"2018-12-10T19:07:11.529Z","temp":23.6,"tempUnit":"°C","power":150,"powerUnit":"W"},
-{"time":"2018-12-10T19:07:11.529Z","temp":23.7,"tempUnit":"°C","power":200,"powerUnit":"W"}]
-```
-
-### Ändern ein Wert 
-  **Request:**  
-  ![1 wert](boejam13/1_rest)  
-  **Response:**  
-```json
-[{"time":"2018-12-10T19:11:44.008Z","temp":50,"tempUnit":"°C","power":2000,"powerUnit":"W"},
-{"time":"2018-12-10T19:11:02.486Z","temp":23.5,"tempUnit":"°C","power":120,"powerUnit":"W"},
-{"time":"2018-12-10T19:11:02.486Z","temp":23.6,"tempUnit":"°C","power":150,"powerUnit":"W"},
-{"time":"2018-12-10T19:11:02.486Z","temp":23.7,"tempUnit":"°C","power":200,"powerUnit":"W"}]
-```
-
-
+### Ändern der Werte
+[Veränderte Werte](https://github.com/HTLMechatronics/m14-la1-sx/blob/boejam13/boejam13/rest_2.png)
+ 
