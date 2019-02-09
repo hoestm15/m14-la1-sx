@@ -57,3 +57,16 @@ export class Database {
 }
 
   ```
+  
+  ## Klasse student.ts
+  
+  Bei der Datenhaltungsklasse student sind alle Datenelemente für einen Schüler private. Aufgrund dessen werden hier auch Getter Methoden verwendet. Um die Klasse exportieren zu können, wird zu Beginn export verwendet. Wenn man sie nun in einer anderen Klasse importiert, kann man auf die verschiedenen Getter Methoden zugreifen (wie in der Klasse database.ts).
+  
+   
+  
+  
+  
+  
+  
+  
+  
