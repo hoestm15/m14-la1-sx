@@ -20,4 +20,40 @@ Ein Singleton ist in der Softwareentwicklung ein Entwurfsmuster. Dieses Entwurfs
 
   ## Klasse database.ts
   
-  Unsere Datenbank wurde als Singleton realisiert. Hierfür setzten wir unsere Konstruktor private und riefen getInstance() zu Beginn auf, wodurch wir ein Objekt erzeugten. 
+  Unsere Datenbank wurde als Singleton realisiert. Hierfür setzten wir unsere Konstruktor private und riefen getInstance() zu Beginn auf, wodurch wir ein Objekt erzeugten. Ist schon eine Instanz vorhanden, wird dieser Vorgang übersprungen. Weiters fügten wir noch die Funktionen add() und get() hinzu.
+  
+  ```typescript
+import { Student } from './student';
+
+export class Database {
+
+    private static instance: Database;
+
+    public static getInstance (): Database {
+        if (Database.instance == null) {
+            Database.instance = new Database();
+        }
+        return Database.instance;
+    }
+
+    private students: { [ id: string ]: Student } = {};
+
+    private constructor () {
+
+         this.add(new Student('tutram12', 'Tuttner', 'Raphael' ));
+         this.add(new Student('zitkam13', 'Zitz', 'Karlheinz' ));
+    }
+
+    public add (s: Student) {
+        if (this.students[s.getHtlid()]) {
+            throw new Error('student already existing');
+        }
+        this.students[s.getHtlid()] = s;
+    }
+
+    public get (htlid: string): Student {
+        return this.students[htlid];
+    }
+}
+
+  ```
