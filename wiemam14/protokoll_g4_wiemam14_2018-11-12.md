@@ -12,4 +12,4 @@ Ein Singleton ist in der Softwareentwicklung ein Entwurfsmuster. Dieses Entwurfs
 
   ## Datenbank
   
-  Eine Datenbank ist ein elektronisches Verwaltungssystem. Sie soll Daten halten, sammeln und verwalten können. Datatenbanken sollen mit großen Datenmenge vorallem effizient, dauerhaft und ohne wiedersprüche umgehen können. Es gibt schematische (klare Struktur) und nicht schematische (nicht klar definiert) Datenbanken.
+  Eine Datenbank ist ein elektronisches Verwaltungssystem. Sie soll Daten halten, sammeln und verwalten können. Datatenbanken sollen mit großen Datenmenge vorallem effizient, dauerhaft und ohne wiedersprüche umgehen können. Es gibt schematische (klare Struktur) und nicht schematische (nicht klar definiert) Datenbanken. Eine sehr weit verbreitete Programmiersprache für Datenbanken ist SQL.
