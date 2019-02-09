@@ -62,8 +62,34 @@ export class Database {
   
   Bei der Datenhaltungsklasse student sind alle Datenelemente für einen Schüler private. Aufgrund dessen werden hier auch Getter Methoden verwendet. Um die Klasse exportieren zu können, wird zu Beginn export verwendet. Wenn man sie nun in einer anderen Klasse importiert, kann man auf die verschiedenen Getter Methoden zugreifen (wie in der Klasse database.ts).
   
-   
   
+  ```typescript
+   export class Student {
+
+    private htlid: string;
+    private surname: string;
+    private firstname: string;
+
+    constructor (htlid: string, surname: string, firstname: string) {
+        this.htlid = htlid;
+        this.surname = surname;
+        this.firstname = firstname;
+    }
+
+    public getHtlid (): string {
+        return this.htlid;
+    }
+
+    public getSurname (): string {
+        return this.surname;
+    }
+
+    public getFirstname (): string {
+        return this.firstname;
+    }
+
+}
+  ```
   
   
   
