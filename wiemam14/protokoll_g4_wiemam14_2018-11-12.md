@@ -8,4 +8,4 @@
 
   ## Singleton (Entwurfsmuster)
   
-    Ein Singleton ist ein Entwurfsmuster welches sicherstellt, dass es zum Beispiel ein Objekt in einer Klasse nur einmal gibt.
+    Ein Singleton ist in der Softwareentwicklung ein Entwurfsmuster. Dieses Entwurfsmuster stellt sicher, dass es von einer Klasse auch nur ein Objekt gibt.
