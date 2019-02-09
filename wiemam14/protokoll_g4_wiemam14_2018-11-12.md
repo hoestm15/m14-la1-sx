@@ -93,7 +93,7 @@ export class Database {
   
   ## Klasse server.ts
   
-  In dieser Klasse erweiterten wir die Handler-Methode durch das Verbinden mit unserer Datenbank. Der Body-Parser fragt mit req.query.htlid die HTL-ID ab, welche dann in einer Variable gespeichert wird. Existert ein Schüler mit solch einer ID, wird dieser ausgegeben. Ansonsten wird eine Fehlermeldung ausgegeben.
+  In dieser Klasse erweiterten wir die Handler-Methode durch das Verbinden mit unserer Datenbank. Der Body-Parser fragt mit req.query.htlid die HTL-ID ab, welche dann in einer Variable gespeichert wird. Existert ein Schüler mit solch einer ID, wird dieser ausgegeben. Ansonsten wird eine Fehlermeldung ausgegeben. Am Ende begannen wir noch mit der HandlePutStudent, welche in späterer Folge einen Schüler anlegen soll.
   
   
   
