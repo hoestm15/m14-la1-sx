@@ -17,3 +17,7 @@ Ein Singleton ist in der Softwareentwicklung ein Entwurfsmuster. Dieses Entwurfs
   ## Rest-Server
   
   In dieser Einheit erstellten wir die Klasse student und database. Die Klasse student agiert hierbei als Datenhaltungsklasse und database als Datenbank. Außerdem wurde die Klasse server erweitert.
+
+  ## Klasse database.ts
+  
+  Unsere Datenbank wurde als Singleton realisiert. Hierfür setzten wir unsere Konstruktor private und riefen getInstance() zu Beginn auf, wodurch wir ein Objekt erzeugten. 
