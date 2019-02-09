@@ -96,6 +96,60 @@ export class Database {
   In dieser Klasse erweiterten wir die Handler-Methode durch das Verbinden mit unserer Datenbank. Der Body-Parser fragt mit req.query.htlid die HTL-ID ab, welche dann in einer Variable gespeichert wird. Existert ein Schüler mit solch einer ID, wird dieser ausgegeben. Ansonsten wird eine Fehlermeldung ausgegeben. Am Ende begannen wir noch mit der HandlePutStudent, welche in späterer Folge einen Schüler anlegen soll.
   
   
+```typescript
+
+import * as express from 'express';
+import * as bodyParser from 'body-parser';
+import { Database } from './database';
+
+export class  Server {
+
+   private _server: express.Express;
+    constructor ( port: number) {
+        this._server = express(); 
+        this._server.use(bodyParser.urlencoded({extended: false}));
+        this._server.use(bodyParser.json);
+        this._server.get('/student', (req, resp, next) => this.handleGetStudent(req, resp, next));
+        this._server.put('/student', (req, resp, next) => this.handlePutStudent(req, resp, next));
+        this._server.listen(port); 
+        console.log('HTTP server gestartet auf Port ' + port);
+    }
+    
+    private handleGetStudent (req: express.Request,
+                              resp: express.Response,
+                              next: express.NextFunction) {
+        console.log('Abfrage');
+        console.log(req.query.htlid);
+
+        const id = req.query.htlid;
+        const s = Database.getInstance().get(id);
+        if (s) {
+            resp.json(s);
+        }
+        switch (req.query.htlid) {
+            case 'tutram12':
+            resp.json({surname: 'Tuttner', firstname: 'Raphael'}); break;
+            case 'zitkam13':
+            resp.json({surname: 'Zitz', firstname: 'Karlheinz'}); break;
+            case 'strlum14':
+            resp.json({surname: 'Strauß', firstname: 'Lukas'}); break;
+
+            default:
+                resp.status(404);
+                resp.end();
+        }
+        resp.send('Antwort' + req.query.htlid);
+    }
+    
+    private handlePutStudent (req: express.Request, resp: express.Response, next: express.NextFunction) {
+        console.log(req.query.htlid);
+        console.log(req.body);
+        resp.send('Test');
+        resp.end();
+}
+
+}
+```
   
   
   
