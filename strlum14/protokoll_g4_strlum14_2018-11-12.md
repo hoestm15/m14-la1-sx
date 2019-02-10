@@ -20,12 +20,12 @@ Unter einer Datenbank versteht man ein Sytem für die elektronische Datenverwalt
 (klar definierte Struktur) und **nicht schematischen** Datenbank unterscheiden. Eine typische Programmiersprache für eine 
 Datenbank ist **SQL**. Für schematische Datenbanken wird zum Beispiel **PostgreSQL** oder **SQLite** verwendet.
 
-# Rest-Server  
+### Rest-Server  
 Aufgabe in dieser Einheit war es, den programmierten Rest-Server umzugestalten. Dafür wurde eine Datenhaltungsklasse
 **Student** und eine Datenbank **Database** erstellt. Wir haben auch noch einige Änderungen in der **Server** Klasse
 vorgenommen.  
 
-## Änderungen am Code  
+## Code-Veränderungen
 ### Klasse student.ts
 ..... wird in unserem Fall als Datenhaltungsklasse für einen Schüler fungieren. Daher sind die Datenelemente, wie auch
 in Java, **private**. Deswegen haben wir auch die **Getter-Methoden** eingefügt.  
