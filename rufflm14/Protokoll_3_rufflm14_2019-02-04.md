@@ -50,3 +50,54 @@ Beispiele für nicht schemenbehaftete Datenbanken sind:
 Weitere Links:
 * [Relationale Datenbanken](https://de.wikipedia.org/wiki/Relationale_Datenbank)
 * [Nicht schemenbehaftete Datenbanken](http://wi-wiki.de/doku.php?id=bigdata:dokumentdb)
+
+### Datenerhaltung in JavaScript
+In Java stehen dazu die Interfaces *Map* und *Collection* zur Verfügung. Beispiele für Collections sind:
+
+* List (ArrayList, LinkedList)
+* Set 
+* Queue
+
+In JavaScript können Listen durch **Felder** ersetzt werden, da die ja dynamisch sind. Maps können durch **einfache Objekte** realisiert werden, da denen dynamisch Attribute hinzugefügt werden können. 
+
+### Datenbankklasse
+Diese Klasse simuliert eine Datenbank bzw. einen Datenbankzugriff. Mittels den Methoden **add(s: Student)**, **get(htlid: string)** und **remove(htlid: string)** können Daten hinzugefügt, abgefragt und entfernt werden. Es wird das Entwurfsmuster [Singleton](https://de.wikipedia.org/wiki/Singleton_(Entwurfsmuster)) realisiert. Dadurch wird garantiert, dass es nur ein Objekt der Klasse erzeugt wird. Der Konstruktor wird folglich *private* gesetzt. 
+
+Anders als in Java kann in der statischen Methode *getInstance* der Operator *this* verwendet werden, da dieser sich in diesem Fall auf die Klasse und nicht auf das Objekt bezieht.
+
+```javascript
+import { Student } from './student';
+
+export class Database {
+
+    public static getInstance (): Database {
+        if (!this.instance) {
+            this.instance = new Database();
+        }
+        return this.instance;
+    }
+
+    private static instance: Database;
+
+    /*******************/
+
+    private students: { [htlid: string]: Student } = {};
+
+    private constructor () {
+        this.add(new Student('samdam14', 'Sammer', 'Daniel'));
+    }
+
+    public add(s: Student) {
+        this.students[s.getHtlid()] = s;    // s wird als Attribut hinzugefügt
+        // this.student.suspam14 = s;
+    }
+
+    public get(htlid: string): Student {
+        return this.students[htlid];
+    }
+
+    public remove (htlid: string) {
+        delete this.students[htlid];
+    }
+}
+```
