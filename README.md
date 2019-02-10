@@ -39,3 +39,5 @@ Handschriftlich nachgebracht
 Handschriftlich nachgebracht 
 
 ## Einheit 3: 12.11.2018
+
+[Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/walkim14/walkim14/protokoll_g4_walkim14_2018-11-12.md)
