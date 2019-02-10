@@ -61,9 +61,11 @@ In Java stehen dazu die Interfaces *Map* und *Collection* zur Verfügung. Beispi
 In JavaScript können Listen durch **Felder** ersetzt werden, da die ja dynamisch sind. Maps können durch **einfache Objekte** realisiert werden, da denen dynamisch Attribute hinzugefügt werden können. 
 
 ### Datenbankklasse
-Diese Klasse simuliert eine Datenbank bzw. einen Datenbankzugriff. Mittels den Methoden **add(s: Student)**, **get(htlid: string)** und **remove(htlid: string)** können Daten hinzugefügt, abgefragt und entfernt werden. Es wird das Entwurfsmuster [Singleton](https://de.wikipedia.org/wiki/Singleton_(Entwurfsmuster)) realisiert. Dadurch wird garantiert, dass es nur ein Objekt der Klasse erzeugt wird. Der Konstruktor wird folglich *private* gesetzt. 
+Diese Klasse simuliert eine Datenbank bzw. einen Datenbankzugriff. Mittels den Methoden **add(s: Student)**, **get(htlid: string)** und **remove(htlid: string)** können Daten hinzugefügt, abgefragt und entfernt werden. 
 
-Anders als in Java kann in der statischen Methode *getInstance* der Operator *this* verwendet werden, da dieser sich in diesem Fall auf die Klasse und nicht auf das Objekt bezieht.
+Es wird das Entwurfsmuster [Singleton](https://de.wikipedia.org/wiki/Singleton_(Entwurfsmuster)) realisiert. Dadurch wird garantiert, dass es nur ein Objekt der Klasse erzeugt wird. Der Konstruktor wird folglich *private* gesetzt. 
+
+Anders als in Java kann in der statischen Methode *getInstance()* der Operator **this** verwendet werden, da dieser sich in diesem Fall auf die Klasse und nicht auf das Objekt bezieht.
 
 ```javascript
 import { Student } from './student';
