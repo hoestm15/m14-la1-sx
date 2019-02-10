@@ -63,7 +63,7 @@ In JavaScript können Listen durch **Felder** ersetzt werden, da die ja dynamisc
 ### Datenbankklasse
 Diese Klasse simuliert eine Datenbank bzw. einen Datenbankzugriff. Mittels den Methoden **add(s: Student)**, **get(htlid: string)** und **remove(htlid: string)** können Daten hinzugefügt, abgefragt und entfernt werden. 
 
-Es wird das Entwurfsmuster [Singleton](https://de.wikipedia.org/wiki/Singleton_(Entwurfsmuster)) realisiert. Dadurch wird garantiert, dass es nur ein Objekt der Klasse erzeugt wird. Der Konstruktor wird folglich *private* gesetzt. 
+Es wird das Entwurfsmuster [Singleton](https://de.wikipedia.org/wiki/Singleton_(Entwurfsmuster)) realisiert. Dadurch wird garantiert, dass es nur ein Objekt der Klasse erzeugt wird. Der Konstruktor wird folglich **private** gesetzt. 
 
 Anders als in Java kann in der statischen Methode *getInstance()* der Operator **this** verwendet werden, da dieser sich in diesem Fall auf die Klasse und nicht auf das Objekt bezieht.
 
@@ -102,4 +102,18 @@ export class Database {
         delete this.students[htlid];
     }
 }
+```
+Verwendung der Datenbankklasse in **server.ts**:
+
+```typescript
+ private handleGetStudent (req: express.Request, resp: express.Response) {
+        const s = Database.getInstance().get(req.query.htlid);
+        if (s) {
+            resp.json(s);
+        } else {
+            resp.status(404);
+            resp.send('NOT FOUND');
+        }
+        resp.end();
+    }
 ```
