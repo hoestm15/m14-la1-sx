@@ -7,3 +7,5 @@
 * [Protokoll_3_rufflm14_2018-10-08](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/protkoll_3_rufflm14_2018-10-08.md)
 
 * [Protokoll_3_rufflm14_2019-01-28](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/Protokoll_3_rufflm14_2019-01-28.md)
+
+* [Protokoll_3_rufflm14_2019-02-04](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/Protokoll_3_rufflm14_2019-02-04.md)
