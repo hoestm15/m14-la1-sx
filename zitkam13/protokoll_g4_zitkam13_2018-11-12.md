@@ -3,8 +3,8 @@
 **Datum:** 12.11.2018  
 **Uhrzeit:** 8:00-10:30  
 **Gruppe:** 4  
-**Anwesend**: Tuttner Raphael, Waltl Kilian, Wieser Markus, Zitz Karlheinz  
-**Abwesend**: Strauß Lukas, Strutz Sebastian, Uhl Christian  
+**Anwesend**: Strauß Lukas, Tuttner Raphael, Waltl Kilian, Wieser Markus, Zitz Karlheinz  
+**Abwesend**:  Strutz Sebastian, Uhl Christian  
 
 ### Datenbanken  
 Eine **Datenbank** ist ein System für eine **elektornische Datenverwaltung**. Man kann zwischen einer **schematischen** (klar definierte Strucktur) und **nicht schematischen** Datenbank unterscheiden. Eine typische Programmiersprache für eine Datenbank ist **SQL**. Für schematische Datenbanken wird zum Beispiel **PostgreSQL** oder **SQLite** verwendet.  
