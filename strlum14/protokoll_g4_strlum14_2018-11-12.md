@@ -104,7 +104,7 @@ export class  Server {
             case 'zitkam13':
             resp.json({surname: 'Zitz', firstname: 'Karlheinz'}); break;
             case 'strlum14':
-            resp.json({surname: 'Strauß', firstname: 'Lukas'}); break;
+            resp.json({surname: 'Strauss', firstname: 'Lukas'}); break;
 
             default:
                 resp.status(404);
