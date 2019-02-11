@@ -28,3 +28,8 @@ Link zur [1.Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13
   
 ## 2.Einheit, 22.10.2018  
 Link zur [2.Einheit]()  
+
+## 3.Einheit, 12.11.2018  
+Gefehlt  
+
+
