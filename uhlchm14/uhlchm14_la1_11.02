@@ -1,0 +1,15 @@
+Collections
+arrayList, Linked List
+Hashmap
+Set
+Array
+
+public get (htlid: string): Student
+public remove(htlid: string)
+public set (s: Student): Student
+
+DBMS
+
+node.js ist eine virtuelle maschine
+
+javascript ist DIEEEE programmiersprache Clientseitig
