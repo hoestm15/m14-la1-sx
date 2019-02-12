@@ -27,7 +27,7 @@ Gefehlt
 Link zur [1.Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/protokoll_g4_strsem13_2018-10-15.md)   
   
 ## 2.Einheit, 22.10.2018  
-Link zur [2.Einheit]()  
+Link zur [2.Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/protokoll_g4_strsem13_2018-10-22.md)  
 
 ## 3.Einheit, 12.11.2018  
 Gefehlt 
