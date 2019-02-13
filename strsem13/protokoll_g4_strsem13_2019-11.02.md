@@ -70,8 +70,8 @@ Hier wurden die Methoden **remove** und **set** ausprogrammiert. Die Methode **r
 public remove (htlid: string) {
         delete this.students[htlid];
     }
-
-    public set (s: Student): Student {
+    
+public set (s: Student): Student {
         const rv = this.get(s.getHtlid());
         this.students[s.getHtlid()] = s;
         // this.students.tutram12 = s;
