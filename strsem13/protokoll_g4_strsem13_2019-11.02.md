@@ -44,15 +44,14 @@ Für die Datenerhaltung in Java stehen dazu die Collections zur Verfügung. Beis
 
 In Javascript:  
 * für ArrayList -> Die Listen können durch Felder ersetzt werden        -> Array(Feld)
-* für HashMap   -> Maps können durch einfache Objekte realisiert werden -> Object
-### Datenbanken  
+* für HashMap   -> Maps können durch einfache Objekte realisiert werden -> Object  
+
 ### student.ts  
+Diese Klasse ist eien Datenerhaltungsklasse für Schüler. Wichtig ist dass die Klasse **export** ist, da wir sie in eine andere Klasse importieren müssen.   
+
 ### server.ts  
+
 ### database.ts  
 
 
-Für viele Datenmmengen -> DBMS (My SQL, Postgre SQL)  
-Node.js  (Virtuelle maschine, die am eigenen Pc läuft)  
-Javascript(Programmiersprache auf Client seite)
-deswegen auch auf Server -> Typescript  
-npm -> Installiert die Module  
+ 
