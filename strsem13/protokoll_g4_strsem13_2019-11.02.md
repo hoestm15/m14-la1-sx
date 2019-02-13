@@ -15,7 +15,7 @@ Da die letzte Einheit in diesem Labor schon sehr weit zurück lag, wiederholten 
 
 ### Rest-Server  
 Der Name **REST**-Server steht für **RE**presentational **S**tate **T**ransfer Server und wird meist für die Maschine-zu-Maschine-Kommunikation in Websevices verwendet. Das HTTP Protokoll wird als Sprache zwischen Server und Client verwendet. Rest Server werden häufig zur Abfrage von Zuständen, z.B. an einem entferntem System eingesetzt.  
-Weiter Infos zum Rest-Server und seine Eigenschaften finden sie [hier](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/protokoll_g4_strsem13_2018-10-15.md)  
+  
 #### HTTP 
 **HTTP** (**H**ypter**T**ext **T**ransfer **P**rotocol) ist ein Protokoll zur Übertragung von Daten. Das Protkoll ist zustandslos, dass bedeutet das Informationen aus früheren Anforderungen verloren gehen, deshalb ist ein mitführen von Sitzungsdaten erforderlich. Um Daten verschlüsselt zu Übertragen gibt es das HTTPS Protokoll. Weiteres erfolgt die Übetragung textuell. 
 Wichtige Befehle:  
@@ -23,6 +23,8 @@ Wichtige Befehle:
 * **POST**:    Daten zum Server schicken   
 * **PUT**:     Daten auf den Server laden  
 * **DELETE**:  Datem vom Server löschen   
+
+Weiter Infos zum Rest-Server und HTTP finden sie [hier](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/protokoll_g4_strsem13_2018-10-15.md)  
 
 ### Programmiersprachen Server/Client seitig 
 ### Datenerhaltung 
