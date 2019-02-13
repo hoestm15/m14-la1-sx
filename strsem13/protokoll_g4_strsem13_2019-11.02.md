@@ -65,7 +65,8 @@ export interface IStudent {
 }
 ```
 ### Klasse database.ts  
-Hier wurden die Methoden **remove** und **set** ausprogrammiert. Die Methode **remove** hat die Aufgabe einen Schüler zu löschen. Mit der Methode **set** soll man von einem Schüler, etwas verändern sollen.  
+Hier wurden die Methoden **remove** und **set** ausprogrammiert. Die Methode **remove** hat die Aufgabe einen Schüler zu löschen. 
+Mit der Methode **set** soll man von einem Schüler, etwas verändern sollen.  
 ```
 public remove (htlid: string) {
         delete this.students[htlid];
@@ -80,7 +81,64 @@ public set (s: Student): Student {
 
 ```  
 
-### Klasse server.ts
+### Klasse server.ts  
+In die Server Klasse musst das Interface importiert werden. Danach sollte die Methoden **handlePutStunent**, **handleDeleteStudent** und **handlePostStudent** fertig programmiert werden.  
+```
+private handlePutStudent (req: express.Request, resp: express.Response, next: express.NextFunction) {
+        console.log('PUT', req. body);
+        const s = <IStudent>req.body;
+        try {
+            const stud = new Student(s.htlid, s.surname, s.firstname);
+            if (Database.getInstance().get(stud.getHtlid())) {
+                resp.status(400).send('htlid already exists');
+                resp.end();
+                return;
+            }
+            Database.getInstance().add(stud);
+            resp.status(200).end();
+        } catch (err) {
+            console.log(err);
+            resp.status(400).send('invalid JSON data');
+            resp.end();
+        }
+    }
+
+    private handlePostStudent (req: express.Request, resp: express.Response, next: express.NextFunction) {
+        console.log('POST', req.body);
+        const s = <IStudent>req.body;
+        try {
+            const stud = new Student(s.htlid, s.surname, s.firstname);
+            if (!Database.getInstance().get(stud.getHtlid())) {
+                resp.status(400).send('htlid does not exists');
+                resp.end();
+                return;
+            }
+            Database.getInstance().set(stud);
+            resp.status(200).end();
+        } catch (err) {
+            console.log(err);
+            resp.status(400).send('invalid JSON data');
+            resp.end();
+        }
+    }
+
+    private handleDeleteStudent (req: express.Request, resp: express.Response, next: express.NextFunction) {
+        console.log('DELETE', req.query.htlid);
+        try {
+            if (!Database.getInstance().get(req.query.htlid)) {
+                resp.status(400).send('htlid does not exists');
+                resp.end();
+                return;
+            }
+            Database.getInstance().remove(req.query.htlid);
+            resp.status(200).end();
+        } catch (err) {
+            console.log(err);
+            resp.status(400).send('invalid JSON data');
+            resp.end();
+        }
+    }
+```
   
 
 
