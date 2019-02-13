@@ -55,8 +55,9 @@ In der Klasse **server.ts** wird der Server realisiert. Weiter haben wir zwei Me
 Das Ziel der Einheit war, den aktuell porgrammierten Rest-Server zu erweitern. Das bedeutet wir haben 3 weitere Methoden für den Server hinzugefügt, bzw. fertigstellt.  
   
 ### Klasse student.ts  
-In dieser Klasse wrude ein Interface hinzugefügt.
-'''
+In dieser Klasse wrude ein Interface hinzugefügt.  
+
+```
 export interface IStudent {
     htlid: string;
     surname: string;
@@ -88,7 +89,8 @@ export class Student {
     }
 
 }
-'''
+```
+
 ### Klasse server.ts  
   
 ### Klasse database.ts
