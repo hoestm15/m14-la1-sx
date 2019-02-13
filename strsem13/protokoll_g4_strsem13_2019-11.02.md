@@ -52,6 +52,47 @@ Die Klasse **database.ts** stellt unsere Datenbank dar, sie wird nach dem Entwur
 In der Klasse **server.ts** wird der Server realisiert. Weiter haben wir zwei Methoden *handlePutStudnet* und *handleGetStudnet* ausprogrammiert.  
 
 ## Erweiterung Programm  
+Das Ziel der Einheit war, den aktuell porgrammierten Rest-Server zu erweitern. Das bedeutet wir haben 3 weitere Methoden für den Server hinzugefügt, bzw. fertigstellt.  
+  
+### Klasse student.ts  
+In dieser Klasse wrude ein Interface hinzugefügt.
+'''
+export interface IStudent {
+    htlid: string;
+    surname: string;
+    firstname: string;
+}
+
+export class Student {
+
+    private htlid: string;
+    private surname: string;
+    private firstname: string;
+
+    constructor (htlid: string, surname: string, firstname: string) {
+        this.htlid = htlid;
+        this.surname = surname;
+        this.firstname = firstname;
+    }
+
+    public getHtlid (): string {
+        return this.htlid;
+    }
+
+    public getSurname (): string {
+        return this.surname;
+    }
+
+    public getFirstname (): string {
+        return this.firstname;
+    }
+
+}
+'''
+### Klasse server.ts  
+  
+### Klasse database.ts
+  
 
 
 
