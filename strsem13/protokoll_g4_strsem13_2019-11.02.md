@@ -5,11 +5,20 @@ Klasse: 5AHME
 Datum: Mo, 22. Oktober 2018  
 Ort: Automatisierungslabor, Htbla Kaindorf  
 
-Anwesend: Strauß, Strutz, Tuttner, Uhl, Wieser, Zitz  
-Abwesend: Waltl  
+Anwesend: Strauß, Strutz, Tuttner, Uhl, Wieser, Waltl, Zitz  
+Abwesend: -
 
-# Thema:  
+# Thema:Erweiterung Rest-Server  
 
+## Wiederholung der letzten Einheiten  
+Da die letzte Einheit in diesem Labor Monate zurück lag, wiederholten wir kurz alle besprochene Themen. Wir wiederholten auch wie weit wir bisher bei unserem Rest-Server waren, für was die verschiedenen Klasse waren, und was noch zu tun war.  
+### Rest-Server  
+### Programmiersprachen Server/Client seitig 
+### Datenerhaltung 
+### Datenbanken  
+### student.ts  
+### server.ts  
+### database.ts  
 Collections 
 ArrayList(Feld welches sich immer verdoppelt,falls zu klein) 
 LinkedList(speichern in einer List, von vorn nach hibnten durcharbeiten, muss alles durschschauen)
