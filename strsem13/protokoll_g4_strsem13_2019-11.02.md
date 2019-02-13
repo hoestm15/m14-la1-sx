@@ -26,7 +26,15 @@ Wichtige Befehle:
 
 Weiter Infos zum Rest-Server und HTTP finden sie [hier](https://github.com/HTLMechatronics/m14-la1-sx/blob/strsem13/strsem13/protokoll_g4_strsem13_2018-10-15.md)  
 
-### Programmiersprachen Server/Client seitig 
+### Programmiersprachen Server/Client seitig  
+**Serverseitig:**
+Auf der Serverseite kann mit mit vielen verschiedenen Programmiersprachen programmieren, z.B. PHP, Java, Perl, JacaScript(benötigt eine Virtuelle Maschine - Node.js)  
+
+**Clientseitig:**  
+Auf der Clientseite wird hauptsächlich JavaScript verwendet. Javascript war die erste Programmiersprache, die im Webbrowser zum Einsatz kam. Eine Subsprache von Javascript ist z.B. Typescript, mit dem wir unseren Server realisieren.  
+
+Wenn man sich besser in die Programmierung des Servers und des Clients einfinden will, ist es leichter und besser in nur einer Programmiersprache beide Programme zu schreiben. Deswegen wird JavaScript auch gerne für die Serverseitige progammierung verwendet.  
+
 ### Datenerhaltung 
 ### Datenbanken  
 ### student.ts  
