@@ -46,12 +46,16 @@ In Javascript:
 * für ArrayList -> Die Listen können durch Felder ersetzt werden        -> Array(Feld)
 * für HashMap   -> Maps können durch einfache Objekte realisiert werden -> Object  
 
-### student.ts  
-Diese Klasse ist eien Datenerhaltungsklasse für Schüler. Wichtig ist dass die Klasse **export** ist, da wir sie in eine andere Klasse importieren müssen.   
+### Klassen student.ts, database.ts, server.ts
+Die Klasse **student.ts** ist eien Datenerhaltungsklasse für Schüler. Wichtig ist dass die Klasse **export** ist, da wir sie in eine andere Klasse importieren müssen.  
+Die Klasse **database.ts** stellt unsere Datenbank dar, sie wird nach dem Entwurfsmuster Singelton programmiert. In dieser Klasse haben wir auch die Methoden *GET* und *ADD* ausprogrammiert.  
+In der Klasse **server.ts** wird der Server realisiert. Weiter haben wir zwei Methoden *handlePutStudnet* und *handleGetStudnet* ausprogrammiert.  
 
-### server.ts  
+## Erweiterung Programm  
 
-### database.ts  
+
+
+
 
 
  
