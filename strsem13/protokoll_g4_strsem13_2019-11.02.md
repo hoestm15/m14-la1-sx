@@ -34,18 +34,22 @@ Auf der Serverseite kann mit mit vielen verschiedenen Programmiersprachen progra
 Auf der Clientseite wird hauptsächlich JavaScript verwendet. Javascript war die erste Programmiersprache, die im Webbrowser zum Einsatz kam. Eine Subsprache von Javascript ist z.B. Typescript, mit dem wir unseren Server realisieren.  
 
 Wenn man sich besser in die Programmierung des Servers und des Clients einfinden will, ist es leichter und besser in nur einer Programmiersprache beide Programme zu schreiben. Deswegen wird JavaScript auch gerne für die Serverseitige progammierung verwendet.  
+  
+### Datenerhaltung   
+Für die Datenerhaltung in Java stehen dazu die Collections zur Verfügung. Beispiele für Collections:  
+* ArrayList     -> Ist ein Feld, welches sich immer verdoppelt, falls es  zu klein ist
+* Linked List   -> Hier werden die Datensätze hintereinander gespeichert, falls ein Wert benötigt wird, muss alles durchgeschaut      werden
+* HashMap       -> Hier werden keyvalue Paare erzeugt und vergeben
+* HashSet       -> Änlich wie LinkedList; der Unterschied ist, dass ein Objekt nur einmal vorkommen kann  
 
-### Datenerhaltung 
+In Javascript:  
+* für ArrayList -> Die Listen können durch Felder ersetzt werden        -> Array(Feld)
+* für HashMap   -> Maps können durch einfache Objekte realisiert werden -> Object
 ### Datenbanken  
 ### student.ts  
 ### server.ts  
 ### database.ts  
-Collections 
-ArrayList(Feld welches sich immer verdoppelt,falls zu klein) 
-LinkedList(speichern in einer List, von vorn nach hibnten durcharbeiten, muss alles durschschauen)
-HashMap(kayvalue paare, werden vergebn)(bei großen Daten schnell) 
-Set(Ein Objekt kann nur einmal vorkommen)
-(Arrays)   
+
 
 Für viele Datenmmengen -> DBMS (My SQL, Postgre SQL)  
 Node.js  (Virtuelle maschine, die am eigenen Pc läuft)  
