@@ -55,7 +55,7 @@ In der Klasse **server.ts** wird der Server realisiert. Weiter haben wir zwei Me
 Das Ziel der Einheit war, den aktuell porgrammierten Rest-Server zu erweitern. Das bedeutet wir haben 3 weitere Methoden für den Server hinzugefügt, bzw. fertigstellt.  
   
 ### Klasse student.ts  
-In dieser Klasse wrude ein Interface hinzugefügt.  
+In dieser Klasse wurde ein Interface hinzugefügt.  
 
 ```
 export interface IStudent {
@@ -63,37 +63,24 @@ export interface IStudent {
     surname: string;
     firstname: string;
 }
-
-export class Student {
-
-    private htlid: string;
-    private surname: string;
-    private firstname: string;
-
-    constructor (htlid: string, surname: string, firstname: string) {
-        this.htlid = htlid;
-        this.surname = surname;
-        this.firstname = firstname;
-    }
-
-    public getHtlid (): string {
-        return this.htlid;
-    }
-
-    public getSurname (): string {
-        return this.surname;
-    }
-
-    public getFirstname (): string {
-        return this.firstname;
-    }
-
-}
 ```
+### Klasse database.ts  
+Hier wurden die Methoden **remove** und **set** ausprogrammiert. Die Methode **remove** hat die Aufgabe einen Schüler zu löschen. Mit der Methode **set** soll man von einem Schüler, etwas verändern sollen.  
+```
+public remove (htlid: string) {
+        delete this.students[htlid];
+    }
 
-### Klasse server.ts  
-  
-### Klasse database.ts
+    public set (s: Student): Student {
+        const rv = this.get(s.getHtlid());
+        this.students[s.getHtlid()] = s;
+        // this.students.tutram12 = s;
+        return rv;
+    }
+
+```  
+
+### Klasse server.ts
   
 
 
