@@ -36,7 +36,7 @@ Für eine Datenspeicherung können Java Collections verwendet werden. Wichtige B
 ## Wiederholung und Erweiterung der bestehenden Klassen  
 ### server.ts  
 In der Klasse **server.ts** wird unser Server realisiert. Das heißt der Server bekommt die Clientanfrage, verarbeitet sie und gibt die passende Antwort auf den Client zurück. Wir haben diese Klassen mit 3 weiteren Methoden (**handlePutStudent, handlePostStudent, handleDeleteStudent)** erweitert. 
-
+```typescript
  private handlePostStudent(req: express.Request, resp: express.Response, next: express.NextFunction) {
         console.log(req.query.htlid);
         const s = <IStudent>req.body;
@@ -71,7 +71,6 @@ In der Klasse **server.ts** wird unser Server realisiert. Das heißt der Server 
     }
     private handlePutStudent (req: express.Request, resp: express.Response, next: express.NextFunction) {
         console.log(req.query.htlid);
-        // Abfragen obs einen Studenten gibt sonst muss post verwendet werden wenn es sschon einen gibt
         const s = <IStudent>req.body;
         try {
         const stud = new Student(s.htlid, s.surname, s.firstname);
@@ -88,3 +87,5 @@ In der Klasse **server.ts** wird unser Server realisiert. Das heißt der Server 
             resp.end();
         }
     }
+```  
+Die **handlePutStudent** Methode wird wie man schon erkennen kann für eine **PUT**-Anfrage vom Client verwendet. Dabei wird zuerst abgefragt ob es diesen Student in der Datenbank schon gibt. Wenn es den Student nicht gibt wird er hinzugefügt, ansonsten wird eine Fehlermeldung zurückgegeben. Die **handlePostStudent** Methode wird wie man schon erkennen kann für eine **POST**-Anfrage vom Client verwendet. Dabei wird wie in der Put Handler-Methode zuerst abgefragt ob des diesen Student gibt. Falls es diesen gibt wird er danach geändert, ansonsten wird wieder eine Fehlermeldung augegeben. Bei der Handler-Methode **handleDeleteStudent** wird auch wieder abgefragt ob sich der Student in der Datenbank befindet und wird danach gelöscht. Wenn der richtige Schüler nicht in der Datenbank vorkommt, dann wird eine Fehlermeldung an den Client gesendet. 
