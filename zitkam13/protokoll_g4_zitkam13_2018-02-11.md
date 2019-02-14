@@ -33,3 +33,6 @@ Für eine Datenspeicherung können Java Collections verwendet werden. Wichtige B
 * Listen werden durch Felder (Arrays) ersetzt.
 * Maps werden durch Objekte (Objects) ersetzt.  
 
+## Wiederholung und Erweiterung der bestehenden Klassen  
+### server.ts  
+In der Klasse **server.ts** wird unser Server realisiert. Das heißt der Server bekommt die Clientanfrage, verarbeitet sie und gibt die passende Antwort auf den Client zurück. Wir haben diese Klassen mit 3 weiteren Methoden (**handlePutStudent, handlePostStudent, handleDeleteStudent)** erweitert. 
