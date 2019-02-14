@@ -36,3 +36,55 @@ Für eine Datenspeicherung können Java Collections verwendet werden. Wichtige B
 ## Wiederholung und Erweiterung der bestehenden Klassen  
 ### server.ts  
 In der Klasse **server.ts** wird unser Server realisiert. Das heißt der Server bekommt die Clientanfrage, verarbeitet sie und gibt die passende Antwort auf den Client zurück. Wir haben diese Klassen mit 3 weiteren Methoden (**handlePutStudent, handlePostStudent, handleDeleteStudent)** erweitert. 
+
+ private handlePostStudent(req: express.Request, resp: express.Response, next: express.NextFunction) {
+        console.log(req.query.htlid);
+        const s = <IStudent>req.body;
+        try {
+        const stud = new Student(s.htlid, s.surname, s.firstname);
+        if (Database.getInstance().get(stud.getHtlid())) {
+            Database.getInstance().set(stud);
+            resp.status(200).end();
+            return;
+        }
+        resp.status(400).send('hdlid not exist');
+        resp.end();
+    } catch (err) {
+            console.log(err);
+            resp.status(404).send('invalid JSON data');
+            resp.end();
+    }
+    }
+    private handleDeleteStudent(req: express.Request, resp: express.Response, next: express.NextFunction) {
+        try {
+        if (Database.getInstance().get(req.query.htlid)) {
+            Database.getInstance().remove(req.query.htlid);
+            resp.status(200).end();
+            return;
+        }
+        resp.status(400).send('htlid not found');
+    } catch (err) {
+            console.log(err);
+            resp.status(404).send('invalid JSON data');
+            resp.end();
+    }
+    }
+    private handlePutStudent (req: express.Request, resp: express.Response, next: express.NextFunction) {
+        console.log(req.query.htlid);
+        // Abfragen obs einen Studenten gibt sonst muss post verwendet werden wenn es sschon einen gibt
+        const s = <IStudent>req.body;
+        try {
+        const stud = new Student(s.htlid, s.surname, s.firstname);
+        if (Database.getInstance().get(stud.getHtlid())) {
+            resp.status(400).send('htlid already exists');
+            resp.end();
+            return;
+        }
+        Database.getInstance().add(stud);
+        resp.status(200).end();
+        } catch (err) {
+            console.log(err);
+            resp.status(404).send('invalid JSON data');
+            resp.end();
+        }
+    }
