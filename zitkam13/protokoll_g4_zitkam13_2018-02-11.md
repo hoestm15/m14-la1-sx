@@ -33,6 +33,9 @@ Für eine Datenspeicherung können Java Collections verwendet werden. Wichtige B
 * Listen werden durch Felder (Arrays) ersetzt.
 * Maps werden durch Objekte (Objects) ersetzt.  
 
+### Was ist ein Singelton?  
+In der Softwareentwicklung ist **Singelton** ein Entwurfsmuster das sicherstellt, dass es ein Objekt einer Klasse nur einmal gibt. Das **Singelton** wird auch **Einzelstück** genannt. Dieses Einzelstück ist meistens global verfügbar. Da wie in unseren Fall eine Datenbank nur einmal existiert und nur die Werte einer Datenbank geändert werden, ist es sinnvoll, dieses Entwurfsmuster zu verwnden. Das erreicht man, wenn man den Konstruktor **private** setzt und eine statische Methothe mit dem Namen **getInstance()** am Beginn aufgerufen wird, die beim ersten Aufruf ein Objekt erzeugt. Deises Objekt wird danach in einer statischen Variable **instance** abgelegt.  
+
 ## Wiederholung und Erweiterung der bestehenden Klassen  
 ### server.ts  
 In der Klasse **server.ts** wird unser Server realisiert. Das heißt der Server bekommt die Clientanfrage, verarbeitet sie und gibt die passende Antwort auf den Client zurück. Wir haben diese Klassen mit 3 weiteren Methoden (**handlePutStudent, handlePostStudent, handleDeleteStudent)** erweitert. 
@@ -89,3 +92,25 @@ In der Klasse **server.ts** wird unser Server realisiert. Das heißt der Server 
     }
 ```  
 Die **handlePutStudent** Methode wird wie man schon erkennen kann für eine **PUT**-Anfrage vom Client verwendet. Dabei wird zuerst abgefragt ob es diesen Student in der Datenbank schon gibt. Wenn es den Student nicht gibt wird er hinzugefügt, ansonsten wird eine Fehlermeldung zurückgegeben. Die **handlePostStudent** Methode wird wie man schon erkennen kann für eine **POST**-Anfrage vom Client verwendet. Dabei wird wie in der Put Handler-Methode zuerst abgefragt ob des diesen Student gibt. Falls es diesen gibt wird er danach geändert, ansonsten wird wieder eine Fehlermeldung augegeben. Bei der Handler-Methode **handleDeleteStudent** wird auch wieder abgefragt ob sich der Student in der Datenbank befindet und wird danach gelöscht. Wenn der richtige Schüler nicht in der Datenbank vorkommt, dann wird eine Fehlermeldung an den Client gesendet. 
+
+### database.ts  
+Die Klasse **database.ts** representiert unsere Datenbank. Diese Klasse wird nach dem Entwufsmuster **Singelton** programmiert. In dieser Klasse befinden sich 4 Methoden, damit man einen Student aus der Datenbank einfügen, bearbeiten, löschen und herausholen kann.  In der letzten Einheit mussten wir noch 2 Methoden einfügen, damit wir einen Schüler ändern und löschen können.  
+```typescript
+public remove (htlid: string) {
+        delete this.students[htlid];
+    }
+    public set (s: Student): Student {
+        const rv = this.get(s.getHtlid());
+        this.students[s.getHtlid()] = s;
+        return rv;
+    }
+```   
+
+### student.ts  
+Die Klasse **student.ts** representiert eine Datenhaltungsklasse für einen Schüler. Die Klasse besitzt gleich wie in Java Getter-Methoden, damit man die Datenelemente in der Klasse abfrragen kann, da diese private sind. In dieser Klasse haben wir ein Inerface erstellt. Mit diesem Interface können wir das Objekt vom Request-Body in ein Studet-Objekt casten können.  Dieses Interface muss natürlich **export** beinhalten, weil wir das Interface in der Klasse **server.ts** benötigen.  
+```typescript
+export interface IStudent {
+    htlid: string;
+    surname: string;
+    firstname: string;
+```   
