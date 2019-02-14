@@ -4,3 +4,7 @@
 **Uhrzeit:** 8:00-10:30  
 **Gruppe:** 4  
 **Anwesend**: Strauß Lukas,Strutz Sebastian, Tuttner Raphael,  Uhl Christian  Waltl Kilian, Wieser Markus, Zitz Karlheinz  
+
+## Wiederholung der letzten Einheiten  
+
+Da die letzte einheit schon im November gewesen ist
