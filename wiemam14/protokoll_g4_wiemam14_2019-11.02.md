@@ -26,3 +26,7 @@
  ### TCP/IP
   
   Das Transmission Control Protocol/Internet Protocol ist eine Familie von Netzwerkprotokollen. Die Identifizierung der Rechner geschieht über die IP-Adresse. Für TCP/IP gibt es verschiedene Hilfs- und Anwendungsprotokolle, wie zum Beispiel DHCP.
+
+## Server/Client Programmiersprachen
+
+  Auf der Serverseite gibt es viele verschiedene Programmiersprachen wie zum Beispiel PHP, Pearl, Java, Javascript. Auf der Clientseite hingegen wird hauptsächlich Javascript verwendet. Da man sich um einiges leichter tut, wenn man auf beiden Seiten die gleiche Programmiersprache verwendet, programmieren wir auch unseren Server mit Javascript.
