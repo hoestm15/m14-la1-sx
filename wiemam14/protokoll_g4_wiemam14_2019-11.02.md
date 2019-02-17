@@ -30,3 +30,17 @@
 ## Server/Client Programmiersprachen
 
   Auf der Serverseite gibt es viele verschiedene Programmiersprachen wie zum Beispiel PHP, Pearl, Java, Javascript. Auf der Clientseite hingegen wird hauptsächlich Javascript verwendet. Da man sich um einiges leichter tut, wenn man auf beiden Seiten die gleiche Programmiersprache verwendet, programmieren wir unseren Server mit Typescript. Ein gültiger Javascript Code ist nämlich auch immer ein gültiger Typescript Code. Ein großer Vorteil in Typescript ist zum Beispiel das einfachere Finden von Fehler.
+  
+  ## Datenhaltung
+  
+  Collections in Java:
+  
+* ArrayList     -> Es wird ein Feld mit einer bestimmten Größe erzeugt. Wenn es zu klein wird, wird es doppelt so groß.
+* Linked List   -> In der LinkedList werden Daten hintereinander gespeichert. Sie ist nur von Vorteil, wenn die Werte hintereinander abgelesen werden sollen.
+* HashMap       -> Für jedes Element in einer Map wird ein Schlüsselpaar erzeugt. Somit können verschiedene Elemente schnell gefunden werden. 
+* HashSet       -> Sehr ähnlich der Linked List. Beim HashSet kann ein Element nur einmal vorkommen.  
+  
+  
+  
+  
+  
