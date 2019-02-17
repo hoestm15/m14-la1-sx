@@ -118,8 +118,21 @@ Ein Singleton ist in der Softwareentwicklung ein Entwurfsmuster. Dieses Entwurfs
   ```
   Bei der PUT-Anfrage wird zu Beginn gefragt, ob es den Schüler schon gibt. Wenn er existiert gibt es eine Fehlermeldung, ansonsten wird er erstellt. Bei der POST-Anfrage wird die PUT-Methode abgefragt. Wenn es ihn gibt wird er geändert, wenn nicht wird eine Fehlermeldung ausgegeben. Bei der DELETE-Anfrage wird wieder geprüft ob es den Schüler gibt. Wenn ja, wird er gelöscht und ansonsten eine Fehlermeldung ausgegeben.
   
+ ## database.ts
  
-  
+ Diese Klasse ist unsere Datenbank. Um auch Schüler ändern und löschen zu können, mussten wir noch zwei Methoden hinzufügen.
+ ```typescript
+ public remove (htlid: string) {
+        delete this.students[htlid];
+    }
+    
+public set (s: Student): Student {
+        const rv = this.get(s.getHtlid());
+        this.students[s.getHtlid()] = s;
+        // this.students.tutram12 = s;
+        return rv;
+    }
+  ```
   
   
   
