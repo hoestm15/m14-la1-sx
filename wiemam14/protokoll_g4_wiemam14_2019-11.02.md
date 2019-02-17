@@ -40,7 +40,13 @@
 * HashMap       -> Für jedes Element in einer Map wird ein Schlüsselpaar erzeugt. Somit können verschiedene Elemente schnell gefunden werden. 
 * HashSet       -> Sehr ähnlich der Linked List. Beim HashSet kann ein Element nur einmal vorkommen.  
   
-  In Javascript werden Maps als Objekte und Listen als Felder realisiert.
+In Javascript werden Maps als Objekte und Listen als Felder realisiert.
+
+## Singleton (Entwurfsmuster)
+  
+Ein Singleton ist in der Softwareentwicklung ein Entwurfsmuster. Dieses Entwurfsmuster stellt sicher, dass es von einer Klasse auch nur ein Objekt gibt. Es bietet normalwereise globalen Zugriff auf das Objekt. Da in unserem Beispiel mit einer Datenbank gearbeitet wird, wird auch diesses Entwurfsmuster verwendet. Eine Datenbank existiert nämlich nur einmal und es werden auch nur die Werte dieser verändert. 
+
+
   
   
   
