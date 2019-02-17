@@ -23,8 +23,6 @@
 * **DELETE**  -> Inhalte löschen
 * **PUT**     -> Neue Inhalte anlegen
 
- ### Aufbau eines Pakets
+ ### TCP/IP
   
-  Hier sieht man, dass ein HTTP Paket immer in Header und Body aufgeteilt ist. Im Header sind Informationen über das Protokoll (die verwendete Version), über den Client und über den Server. Im Body sind die Daten enthalten.
-  
-  ![Paketaufbau](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/paketaufbau.jpg)
+  Das Transmission Control Protocol/Internet Protocol ist eine Familie von Netzwerkprotokollen. Die Identifizierung der Rechner geschieht über die IP-Adresse. Für TCP/IP gibt es verschiedene Hilfs- und Anwendungsprotokolle, wie zum Beispiel DHCP.
