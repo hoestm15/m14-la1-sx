@@ -57,6 +57,51 @@ Ein Singleton ist in der Softwareentwicklung ein Entwurfsmuster. Dieses Entwurfs
 }
   ```
   
+  ## server.ts
+  
+  Der Server wurde mit drei Methoden erweitert (handlePutStudent, handlePostStudent, handleDeleteStudent).
+```typescript
+  private handlePostStudent (req: express.Request, resp: express.Response, next: express.NextFunction) {
+       console.log('POST', req.body);
+       const s = <IStudent>req.body;
+       try {
+           const stud = new Student(s.htlid, s.surname, s.firstname);
+           if (!Database.getInstance().get(stud.getHtlid())) {
+                resp.status(400).send('htlid does not exists');
+                resp.end();
+                return;
+            }
+            Database.getInstance().set(stud);
+            resp.status(200).end();
+        } catch (err) {
+            console.log(err);
+            resp.status(400).send('invalid JSON data');
+            resp.end();
+        }
+    }
+
+    private handleDeleteStudent (req: express.Request, resp: express.Response, next: express.NextFunction) {
+        console.log('DELETE', req.query.htlid);
+        try {
+            if (!Database.getInstance().get(req.query.htlid)) {
+                resp.status(400).send('htlid does not exists');
+                resp.end();
+                return;
+            }
+            Database.getInstance().remove(req.query.htlid);
+            resp.status(200).end();
+        } catch (err) {
+            console.log(err);
+            resp.status(400).send('invalid JSON data');
+            resp.end();
+        }
+    }
+  ```
+  
+  
+  
+  
+  
   
   
   
