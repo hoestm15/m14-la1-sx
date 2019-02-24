@@ -39,12 +39,7 @@ gibt es einige Befehle. Die wichtigsten sind:
 * **GET**:     --> wenn man Daten vom Server bekommen will.  
 * **POST**:    --> ändern von bestehenden Daten am Server 
  
-
-
-
-
-
-#### In Javascript:  
+### In Javascript:  
 * Listen werden durch Felder (Arrays) ersetzt.
 * Maps werden durch Objekte (Objects) ersetzt.  
 
@@ -156,7 +151,7 @@ public remove (htlid: string) {
 ```   
 
 ### student.ts  
-Die Klasse **student.ts** representiert eine Datenhaltungsklasse für einen Schüler. Die Klasse besitzt gleich wie in Java Getter-Methoden, damit man die Datenelemente in der Klasse abfrragen kann, da diese private sind. In dieser Klasse haben wir ein Inerface erstellt. Mit diesem Interface können wir das Objekt vom Request-Body in ein Studet-Objekt casten können.  Dieses Interface muss natürlich **export** beinhalten, weil wir das Interface in der Klasse **server.ts** benötigen.  
+Die # 'student.ts' Klasse representiert eine Datenhaltungsklasse für einen Schüler. Die Klasse besitzt gleich wie in Java Getter-Methoden, damit man die Datenelemente in der Klasse abfrragen kann, da diese private sind. In dieser Klasse haben wir ein Inerface erstellt. Mit diesem Interface können wir das Objekt vom Request-Body in ein Studet-Objekt casten können.  Dieses Interface muss natürlich *export* beinhalten, weil wir das Interface in der Klasse *server.ts* benötigen.  
 ```typescript
 export interface IStudent {
     htlid: string;
