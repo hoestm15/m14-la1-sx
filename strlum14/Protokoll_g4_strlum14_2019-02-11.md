@@ -12,17 +12,18 @@ wir das letzte mal gehabt haben.
 ## Collections in Java und JavaScript  
 Für eine Datenspeicherung können Java Collections verwendet werden. Wichtige Beispiele für Collections sind:  
 
-* ArrayList     -> Bei der ArrayList wird ein Feld mit einer bestimmten Größe erstellt. Wird das Feld zu klein dann
-                   wird automatisch das Feld um das doppelte vergrößert.  
+* ArrayList     :point_right: Bei der ArrayList wird ein Feld mit einer bestimmten Größe erstellt. Wird das Feld zu klein dann
+                 wird automatisch das Feld um das doppelte vergrößert.  
                    
-* HashMap       -> Für jedes Element in der Map wird ein KeyValue Paar erzeugt. Damit können danach schnell verschiedene
-                   Elemente gefunden werden.  
-                   
-* HashSet       ->Das HashSet ist ähnlich wie die LinkedList. Dabei darf beim HashSet ein Element nur einmal vorkommen.  
+* HashMap       :point_right: Für jedes Element in der Map wird ein KeyValue Paar erzeugt. Damit können danach schnell         
+                 verschiedene Elemente gefunden werden.
+                 
+* HashSet       :point_right: Das HashSet ist ähnlich wie die LinkedList. Dabei darf beim HashSet ein Element nur einmal   
+                vorkommen.
 
-* Linked List   -> In der LinkedList werden alle Daten hintereinander gespeichert. Daher wird diese Liste erst zum Vorteil, 
-                   wenn man alle Werte in der Liste hintereinander abrfragen will und einzelne Elemente herauslöschen will.
-
+* Linked List    :point_right: In der LinkedList werden alle Daten hintereinander gespeichert. Daher wird diese Liste erst zum
+                 Vorteil, wenn man alle Werte in der Liste hintereinander abrfragen will und einzelne Elemente herauslöschen  
+                 will.
 
 ## Rest-Server
 
@@ -34,10 +35,10 @@ textuell. Benötigt man eine verschlüsselte Übertragung dann git es dafür das
 gibt es einige Befehle. Die wichtigsten sind:   
 
  
-* **PUT**:     --> Daten zum Server schicken 
-* **DELETE**:  --> um bestehende Daten am Serve zu löschen
-* **GET**:     --> wenn man Daten vom Server bekommen will.  
-* **POST**:    --> ändern von bestehenden Daten am Server 
+* **PUT**:      :point_right: Daten zum Server schicken 
+* **DELETE**:   :point_right: um bestehende Daten am Serve zu löschen
+* **GET**:      :point_right: wenn man Daten vom Server bekommen will.  
+* **POST**:     :point_right: ändern von bestehenden Daten am Server 
  
 ### In Javascript:  
 * Listen werden durch Felder (Arrays) ersetzt.
