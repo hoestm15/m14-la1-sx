@@ -6,3 +6,13 @@
 **Anwesend**: Strauß Lukas, Tuttner Raphael,  Uhl Christian  Waltl Kilian, Wieser Markus, Zitz Karlheinz  
 **Abwesend**: Strutz Sebastian  
 
+Node.js Javaskript/Typescript  Express Technologien  
+
+Verbindungsaufbau ServerClient    
+HTTP 
+TCP/IP
+Wie schaut ein Request aus 
+Head Body
+content length das der server weiß wielange der body ist  
+früher xml format jetzt json  
+weil json für Übertragung umstänflich ist wird das Jsonobjekt komprimeirt  
