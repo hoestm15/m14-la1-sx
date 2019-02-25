@@ -41,6 +41,6 @@ Gefehlt aufgrund der Sturmschäden
  
 [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/protokoll_g4_wiemam14_2018-11-12.md)
 
-## Einheit 4, 25.02.2019
+## Einheit 4, 11.02.2019
 
 [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/protokoll_g4_wiemam14_2019-11.02.md)
