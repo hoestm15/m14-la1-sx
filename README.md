@@ -38,6 +38,7 @@ Protokoll
 
 ## Einheit 3, 12.11.2018
 
+gefehlt, schriftliche Abgabe
 
 ## Einheit 4, 11.2.2019
 
