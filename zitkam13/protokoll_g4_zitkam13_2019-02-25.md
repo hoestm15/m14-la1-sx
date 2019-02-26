@@ -60,3 +60,24 @@ this.students = JSON.parse(b.toString());
 ```    
 In der ersten Zeile bekommt man den Eintrag von der Datei **config.json**, damit wir den Pfad haben wo die Schüler gespeichert wurden. In der nächsten Zeile werden die Schüler mit Hilfe des File-Systems aus der Datei geladen und in eine Variable gespeichert. Diese Variable wird dann zum Schluss in **students** gespeichert und damit können wir dann weiterarbeiten.  
 Am Ende haben wir noch in der Methode **add()**, **remove()** und **set()** hinzugefügt,dass die Schüler neu in die Datei gespeichert werden. 
+ 
+**Datei der gespeicherten Schüler**
+``` json  
+{
+  "tutram12": {
+    "htlid": "tutram12",
+    "surname": "Tuttner",
+    "firstname": "Raphael"
+  },
+  "zitkam13": {
+    "htlid": "zitkam13",
+    "surname": "Zitz",
+    "firstname": "Karlheinz"
+  },
+  "uhlchm14": {
+    "htlid": "uhlchm14",
+    "surname": "Uhl",
+    "firstname": "Christian"
+  }
+}  
+```
