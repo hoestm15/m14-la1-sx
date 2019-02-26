@@ -22,7 +22,7 @@ Weiters stehen im Header noch weitere Informationen. Zum Beispiel der **Hostname
 
 ## Erweiterung des Rest-Server Projektes  
 Da es bei unseren Server noch nicht möglich war unsere Schülerdaten zu speichern, schrieben wir eine Methode die dies ermöglicht. Dafür erstellten wir zuerst eine Datei mit dem Namen **config.json**. In dieser Datei schrieben wir unseren Pfad hinein wo unsere Daten gespeichert werden sollen.  
-``` json  
+``` JSON  
 {
     "database" : { 
         "path" : "datenbank.json" 
@@ -38,9 +38,25 @@ Als nächsten Schritt müssen noch die Typen nachgeladen werden:
 npm install --save-dev @types/nconf  
 ```  
 
+Im nächsten Schritt mussten wir in der Klasse **main.ts** am Beginn eine Zeile einfügen, damit das Modul **nconf** weiß wo sich die Konfigurationsdatei befindet. Dabei ist wichtig das man das Modul zuerst importiert.  
 
-nconf  Moduldas man sehr schnell un komfortabel mit config dateien arbeiten kann 
-nconf.argv().env().file({ file: 'config.json' }); in main.ts am beginn einfügen das nconf weiß wo sich die config datei befindet  
-fs modul Filesystem modul für daten in eine datei speichern
-damit das file am beginn eingelesen wird, wird  getInstance von der Datenbank klasse  aufgerufen... damit wird die readfs im Construktor aufgerufen und die schüler in der Datei datenbank.json werden eingelesen  
-Bei der Methode für add set und remove noch this.writeToFile(); eingefügt, dass sich das File immer wieder aktualisiert falls ein schüler hinzugefügt, gelöscht oder geändert wird.  
+``` typescript  
+import * as nconf from 'nconf';
+nconf.argv().env().file({ file: '../config.json' });  
+```
+Da sich unsere Konfigurationsdatei nicht im gleichen Ordner sondern eine Ebene höher befindet wie unsere main und Datenbank benötigt man vor config.json **../**. Damit wir jetzt in der Datei **database.json** mit files arbeiten können benötigen wir noch ein weiteres Modul **fs**. Dieses Modul müssen wir aber nur am Beginn der Klasse importieren, da es dieses schon bei npm gibt. Für das Speichern haben wir eine eigene Methode erstellt da wir diese Methode beim hinzufügen, löschen und ändern brauchen. Die Methode bekam daher den Namen **writeToFile**.  
+``` typescript  
+public writeToFile () {
+        const s = JSON.stringify(this.students, null, 2);
+        fs.writeFileSync('../' + this.config.path, s);
+    }  
+```  
+In der ersten Zeile wird eine Variable erstellt in der ein JSONObjekt gespeichert wird. **JSON.stringify** benötigen wir damit wir eine gut lesbare Formatierung haben und nicht alles in einer Zeile steht. In der zweiten Zeile werden danach die Schüler mit Hilfe des Filesystems in die Datei **datenbank.json** gespeichert. Damit wir die Datei beim Starten des Servers einlesen können, programmierten wir im Konstruktor der Klasse mit Hilfe des File-Systems eine Funktion zum Einlesen der Datei. Da wir in der Klasse **main.ts** am Beginn eine Instance der Datenbank erstellen wird der Konstruktor ausgeführt und die Datei daher eingelesen.  
+**Einlesen der Datei**  
+``` typescript  
+this.config = <IDatabaseConfig> nconf.get('database');  
+const b = <Buffer> fs.readFileSync('../' + this.config.path);
+this.students = JSON.parse(b.toString());  
+```    
+In der ersten Zeile bekommt man den Eintrag von der Datei **config.json**, damit wir den Pfad haben wo die Schüler gespeichert wurden. In der nächsten Zeile werden die Schüler mit Hilfe des File-Systems aus der Datei geladen und in eine Variable gespeichert. Diese Variable wird dann zum Schluss in **students** gespeichert und damit können wir dann weiterarbeiten.  
+Am Ende haben wir noch in der Methode **add()**, **remove()** und **set()** hinzugefügt,dass die Schüler neu in die Datei gespeichert werden. 
