@@ -30,7 +30,7 @@
 
 ### Aufbau eines Pakets
   
-  Hier sieht man, dass ein HTTP Paket immer in Header und Body aufgeteilt sind. Im Header sind Informationen über das Protokoll (die verwendete Version), über den Client und über den Server. Im Body sind die Daten enthalten.
+  Hier sieht man, dass ein HTTP Paket immer in Header und Body aufgeteilt sind. Im Header sind Informationen über das Protokoll (die verwendete Version), über den Client und über den Server. Weiters wird die Länge des Bodys (content-length) auch im Header angegeben, dadurch weiß man wann der Body zu Ende ist. Im Body sind die Daten selbst enthalten.
   
   ![Paketaufbau](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/paketaufbau.jpg)
 
