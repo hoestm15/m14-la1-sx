@@ -19,6 +19,8 @@
   
   ![HTTP(s) Datenaustausch](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/requestResponse.png)
   
+  Für den Verbindungsaufbau wird ein TCP/IP Protokoll verwendet. Es sind zwei Datenröhren vorhanden, welche für den Request und die Response zuständig sind.
+  
   ### Schlüsselwörter für den Request
   
 * **GET**     -> Inhalte vom Server ansehen
