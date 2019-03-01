@@ -1,0 +1,105 @@
+# 6.Protokoll
+**Name:** Raphael Tuttner   
+**Datum:** 25.2.2018  
+**Gruppe:** 4  
+**Anwesend**: Strauß Lukas, Tuttner Raphael,  Uhl Christian  Waltl Kilian, Wieser Markus, Zitz Karlheinz  
+**Abwesend**: Strutz Sebastian  
+
+## Wiederholung des Rest-Servers  
+Der Rest-Server basiert in unserem Fall auf drei Technologien.  
+Diese sind **Node.js**,**Javaskript/Typeskript** und **Express**. **Typeskript** benötigen wir für die Programmierung,  
+da wir in dieser Sprache unseren Server programmieren. **Express** ist eine Erweiterung vom HTTP  Modul, welches einfacher  
+ist damit zu arbeiten und **Node.js** benötigen wir für unseren Server.  
+Die Übertragung kan  man im folgenden Bild sehen.  
+![HTTP](https://github.com/HTLMechatronics/m14-la1-sx/blob/tutram12/tutram12/5AHME/http.png)  
+
+### HTTP (HyperText Transfer Protocoll)  
+HTTP steht für **H**yper**T**ext **T**ransfer **P**rotokoll, ist Zustandslos und die Übertragung zwischen Server und Client findet textuell.  
+Die Verbindung zwischen Server und Client wird mittels **TCP/IP Protokoll** aufgebaut. Nach dem Verbindungsaufbau erfolg die Kummunikation mittels **HTTP-Protokoll**. Für die Kummunikation gibt es zwei Datenröhren. Eine für den **Request** und eine für den **Response**. Der Client sendet an den Server eine Anfrage, den sogenanten **Request**. Auf einem **Request** antwortet der Server mit dem **Response**. Für den Request gibt es einige Schlüsselwörter. Die vier wichtigsten sind:   
+* **GET** :arrow_right: Fordert Inhalte vom Server  
+* **POST** :arrow_right: Mit diesem SChlüsselwort kann man Daten ändern  
+* **PUT** :arrow_right: Neue Dateien können erstellt werden  
+* **DELETE** :arrow_right: Löscht Inhalte 
+Ein Request wird mit dem **Schlüsselwort** aufgebaut, mit der Information die man benötigt, und mit **HTTP/1.1.**  
+Weiters stehen im **Header** noch weitere Informationen. Zum Beispiel der **Hostname** oder falls es einen **Body** gibt die Länge des Bodys. Diese findet man danach unter **content-length**. Mit dieser **content-length** weiß der Server oder der Client wann der Body zu Ende ist und damit auch wann der Request oder der Response zu Ende ist.  
+Die **Response** des Servers schaut ähnlich aus wie der **Request** vom Client. Er besitzt auch einen **Header** und kann auch einen **Body** besitzen. Falls die Response einen Body besitzt, wird dies im Header wieder mit der Länge des Bodys unter **content-length** gekennzeichnet. Im **Header** der Response befindet sich zudem wieder **HTTP/1.1** und der **Statuscode als Zahl** und der **Statuscode in einem Wort**.  
+Früher wurde das XML Format für die Übertragung verwendet. Heuter wird aber JSON für die Übertragung verwendet. Die Übertragung ist zwar umständlicher aber die Informationen können viel besser komprimiert werden.  
+
+## Erweiterung des Rest-Server Projektes  
+Da es bei unseren Server noch nicht möglich war unsere Schülerdaten zu speichern, schrieben wir eine Methode die dies ermöglicht. Dafür erstellten wir zuerst eine Datei mit dem Namen **config.json**. In dieser Datei schrieben wir unseren Pfad hinein wo unsere Daten gespeichert werden sollen.  
+``` JSON  
+{
+    "database" :
+    { 
+        "path" : "datenbank.json" 
+    }
+}
+```
+Als nächstes installierten wir uns ein Modul mit den Namen **nconf**. Dieses Modul ermöglicht uns ein schnelles und konfortables arbeiten mit solchen config Dateien.[Link zu nconf](https://www.npmjs.com/package/nconf). Um das Modul zu installieren benötigt man das Kommando:  
+```  
+npm install nconf  
+```  
+Als nächsten Schritt müssen noch die Typen nachgeladen werden:  
+```  
+npm install --save-dev @types/nconf  
+```  
+
+Im nächsten Schritt mussten wir in der Klasse **main.ts** am Beginn eine Zeile einfügen, damit das Modul **nconf** weiß wo sich die Konfigurationsdatei befindet. Dabei ist wichtig das man das Modul zuerst importiert.  
+``` typescript  
+import * as nconf from 'nconf';
+nconf.argv().env().file({ file: '../config.json' });  
+```
+Da sich unsere Konfigurationsdatei nicht im gleichen Ordner sondern eine Ebene höher befindet wie unsere main und Datenbank benötigt man vor config.json **../**. Damit wir jetzt in der Datei **database.json** mit files arbeiten können benötigen wir noch ein weiteres Modul **fs**.  
+Dieses Modul müssen wir aber nur am Beginn der Klasse importieren, da es dieses schon bei npm gibt. Für das Speichern haben wir eine eigene Methode erstellt da wir diese Methode beim hinzufügen, löschen und ändern brauchen. Die Methode bekam daher den Namen **writeToFile**.  
+``` typescript  
+public writeToFile ()
+{
+    const s = JSON.stringify(this.students, null, 2);
+    fs.writeFileSync('../' + this.config.path, s);
+}  
+```  
+In der ersten Zeile wird eine Variable erstellt in der ein JSONObjekt gespeichert wird.  
+**JSON.stringify** benötigen wir damit wir eine gut lesbare Formatierung haben und nicht alles in einer Zeile steht.  
+In der zweiten Zeile werden danach die Schüler mit Hilfe des Filesystems in die Datei **datenbank.json** gespeichert.  
+Damit wir die Datei beim Starten des Servers einlesen können, programmierten wir im Konstruktor der Klasse mit Hilfe des File-Systems eine Funktion zum Einlesen der Datei.  
+Da wir in der Klasse **main.ts** am Beginn eine Instance der Datenbank erstellen wird der Konstruktor ausgeführt und die Datei daher eingelesen.  
+**Einlesen der Datei**  
+``` typescript  
+this.config = <IDatabaseConfig> nconf.get('database');  
+const b = <Buffer> fs.readFileSync('../' + this.config.path);
+this.students = JSON.parse(b.toString());  
+```    
+In der ersten Zeile bekommt man den Eintrag von der Datei **config.json**, damit wir den Pfad haben wo die Schüler gespeichert wurden.  
+In der nächsten Zeile werden die Schüler mit Hilfe des File-Systems aus der Datei geladen und in eine Variable gespeichert.  
+Diese Variable wird dann zum Schluss in **students** gespeichert und damit können wir dann weiterarbeiten.  
+Am Ende haben wir noch in der Methode **add()**, **remove()** und **set()** hinzugefügt, dass die Schüler neu in die Datei gespeichert werden. 
+ 
+**Datei der gespeicherten Schüler**
+``` json  
+{
+  "tutram12":
+  {
+      "htlid": "tutram12",
+      "surname": "Tuttner",
+      "firstname": "Raphael"
+  },
+  "walkim14":
+  {
+      "htlid": "walkim14",
+      "surname": "Waltl",
+      "firstname": "Kilian"
+  },
+  "uhlchm14":
+  {
+      "htlid": "uhlchm14",
+      "surname": "Uhl",
+      "firstname": "Christian"
+  },
+  "kagfam13":
+  {
+      "htlid": "kagfam13",
+      "surname": "Kager",
+      "firstname": "Fabian"
+  }
+}  
+```
