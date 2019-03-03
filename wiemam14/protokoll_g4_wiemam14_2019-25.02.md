@@ -58,8 +58,12 @@ Laden der Typen:
 ```  
 npm install --save-dev @types/nconf  
 ```  
-
+Als nächstes importierten wir nconf in unserer main.ts.
+``` typescript 
+import * as nconf from 'nconf';
+nconf.argv().env().file({ file: 'config.json'});
 `
+```
 
 
 
