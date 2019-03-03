@@ -18,7 +18,7 @@ Die Verbindung zwischen Server und Client wird mittels **TCP/IP Protokoll** aufg
 * **PUT** -> Neue Dateien können erstellt werden  
 * **DELETE** -> Löscht Inhalte.  
 Ein Request ist aufgebaut mit dem **Schlüsselwort** ,mit der Information die man benötigt, und mit **HTTP/1.1.**  
-Weiters stehen im Head noch weitere Informationen. Zum Beispiel der **Hostname** oder falls es einen Body gibt die Länge des Bodys. Diese findet man danach unter **content-length**. Mit dieser **content-length** weiß der Server oder der Client wann der Body zu Ende ist und damit auch wann der Request oder der Response zu Ende ist. Der **Response** des Servers schaut ähnlich aus wie der **Request** vom Client. Er besitzt auch einen **Head** und kann auch einen **Body** besitzen. Falls der Response einen Body besitzt, wird dies im Head wieder mit der Länge des Bodys unter **content-length** gekennzeichnet. Im **Head** vom Response befindet sich zu einem wieder **HTTP/1.1** und der **Statuscode als Zahl** und der **Statuscode in einem Wort**. [Hier](https://de.wikipedia.org/wiki/HTTP-Statuscode) können sie die Statuscodes nachlesen.  Früher wurde das XML Format für die Übertragung verwendet. Heuter wird aber JSON für die Übertragung verwendet. Die Übertragung ist zwar umstänflicher aber die Informationen können viel besser komprimiert werden.  
+Weiters stehen im Head noch weitere Informationen. Zum Beispiel der **Hostname** oder falls es einen Body gibt die Länge des Bodys. Diese findet man danach unter **content-length**. Mit dieser **content-length** weiß der Server oder der Client wann der Body zu Ende ist und damit auch wann der Request oder der Response zu Ende ist. Der **Response** des Servers schaut ähnlich aus wie der **Request** vom Client. Er besitzt auch einen **Head** und kann auch einen **Body** besitzen. Falls der Response einen Body besitzt, wird dies im Head wieder mit der Länge des Bodys unter **content-length** gekennzeichnet. Im **Head** vom Response befindet sich zu einem wieder **HTTP/1.1** und der **Statuscode als Zahl** und der **Statuscode in einem Wort**. [Hier](https://de.wikipedia.org/wiki/HTTP-Statuscode) können sie die Statuscodes nachlesen.  Früher wurde das XML Format für die Übertragung verwendet. Heuter wird aber JSON für die Übertragung verwendet. Die Übertragung ist zwar umständlicher  aber die Informationen können viel besser komprimiert werden.  
 
 ## Erweiterung des Rest-Server Projektes  
 Da es bei unseren Server noch nicht möglich war unsere Schülerdaten zu speichern, schrieben wir eine Methode die dies ermöglicht. Dafür erstellten wir zuerst eine Datei mit dem Namen **config.json**. In dieser Datei schrieben wir unseren Pfad hinein wo unsere Daten gespeichert werden sollen.  
@@ -29,7 +29,7 @@ Da es bei unseren Server noch nicht möglich war unsere Schülerdaten zu speiche
     }
 }
 ```
-Als nächstes installierten wir uns ein Modul mit den Namen **nconf**. Dieses Modul ermöglicht uns ein schnelles und konfortables arbeiten mit solchen config Dateien.[Link zu nconf](https://www.npmjs.com/package/nconf). Um das Modul zu installieren benötigt man das Kommando:  
+Als nächstes installierten wir uns ein Modul mit den Namen **nconf**. Dieses Modul ermöglicht uns ein schnelles und komfortables  Arbeiten mit solchen config Dateien.[Link zu nconf](https://www.npmjs.com/package/nconf). Um das Modul zu installieren benötigt man das Kommando:  
 ```  
 npm install nconf  
 ```  
@@ -38,7 +38,7 @@ Als nächsten Schritt müssen noch die Typen nachgeladen werden:
 npm install --save-dev @types/nconf  
 ```  
 
-Im nächsten Schritt mussten wir in der Klasse **main.ts** am Beginn eine Zeile einfügen, damit das Modul **nconf** weiß wo sich die Konfigurationsdatei befindet. Dabei ist wichtig das man das Modul zuerst importiert.  
+Im nächsten Schritt mussten wir in der Klasse **main.ts** am Beginn eine Zeile einfügen, damit das Modul **nconf** weiß wo sich die Konfigurationsdatei befindet. Dabei ist wichtig, dass man das Modul zuerst importiert.  
 
 ``` typescript  
 import * as nconf from 'nconf';
