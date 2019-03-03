@@ -51,7 +51,7 @@ public writeToFile () {
         fs.writeFileSync('../' + this.config.path, s);
     }  
 ```  
-In der ersten Zeile wird eine Variable erstellt in der ein JSONObjekt gespeichert wird. **JSON.stringify** benötigen wir damit wir eine gut lesbare Formatierung haben und nicht alles in einer Zeile steht. In der zweiten Zeile werden danach die Schüler mit Hilfe des Filesystems in die Datei **datenbank.json** gespeichert. Damit wir die Datei beim Starten des Servers einlesen können, programmierten wir im Konstruktor der Klasse mit Hilfe des File-Systems eine Funktion zum Einlesen der Datei. Da wir in der Klasse **main.ts** am Beginn eine Instance der Datenbank erstellen wird der Konstruktor ausgeführt und die Datei daher eingelesen.  
+In der ersten Zeile wird eine Variable erstellt in der ein JSONObjekt gespeichert wird. **JSON.stringify** benötigen wir, damit wir eine gut lesbare Formatierung haben und nicht alles in einer Zeile steht. In der zweiten Zeile werden danach die Schüler mit Hilfe des Filesystems in die Datei **datenbank.json** gespeichert. Damit wir die Datei beim Starten des Servers einlesen können, programmierten wir im Konstruktor der Klasse mit Hilfe des File-Systems eine Funktion zum Einlesen der Datei. Da wir in der Klasse **main.ts** am Beginn eine Instance der Datenbank erstellen wird der Konstruktor ausgeführt und die Datei daher eingelesen.  
 **Einlesen der Datei**  
 ``` typescript  
 this.config = <IDatabaseConfig> nconf.get('database');  
