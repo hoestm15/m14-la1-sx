@@ -38,7 +38,7 @@
 
 ## Fortsetzung des REST-Servers
 
-Um unsere Serverdaten zu speichern schrieben wir diese Methoden. Hierfür erstellten wir die config.json und schrieben dort den Pfad hinein, wo die Daten gespeichert werden.
+Um unsere Serverdaten zu speichern schrieben wir eine Methode. Hierfür erstellten wir die Datei config.json und schrieben dort den Pfad hinein, wo die Daten gespeichert werden.
 
 ``` typescript 
 {
@@ -47,9 +47,19 @@ Um unsere Serverdaten zu speichern schrieben wir diese Methoden. Hierfür erstel
     }
 }
 ```
+Danach installierten wird das Modul nconf. nconf ermöglicht einem ein angenehmes arbeiten mit config Dateien.
 
+Installieren:
+```  
+npm install nconf 
+```  
 
+Laden der Typen:
+```  
+npm install --save-dev @types/nconf  
+```  
 
+`
 
 
 
