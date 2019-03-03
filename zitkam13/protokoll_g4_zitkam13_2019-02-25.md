@@ -7,7 +7,7 @@
 **Abwesend**: Strutz Sebastian  
 
 ## Wiederholung des Rest-Servers  
-Der Rest-Server basiert in unserem Fall auf drei Technologien. Diese sind **Node.js**,**Javaskript/Typeskript** und **Express**. **Typeskript** benötigen wir für die Programmierung, da wir in dieser Sprache unseren Server programmieren. **Express** ist eine Erweiterung vom HTTP  Modul, welches einfacher ist damit zu arbeiten und **Node.js** benötigen wir für unseren Server.  
+Der Rest-Server basiert in unserem Fall auf drei Technologien. Diese sind **Node.js**,**Javaskript/Typeskript** und **Express**. **Typeskript** benötigen wir für die Programmierung, da wir in dieser Sprache unseren Server programmieren. **Express** ist eine Erweiterung vom HTTP  Modul. Wir arbeiten mit diesem Modul, da es einfacher ist amls mit dem HTTP Modul. **Node.js** benötigen wir für unseren Server.  
 
 ### HTTP (HyperText Transfer Protocoll)  
 HTTP steht für **H**yper**T**ext **T**ransfer **P**rotokoll. Die Übertragung zwischen Server und Client findet textuell statt und das Protokoll ist zustandslos. Die Übertragung kan  man im folgenden Bild sehen.  
@@ -16,7 +16,7 @@ Die Verbindung zwischen Server und Client wird mittels **TCP/IP Protokoll** aufg
 * **GET** -> Fordert Inhalte vom Server  
 * **POST** -> Mit diesem SChlüsselwort kann man Daten ändern  
 * **PUT** -> Neue Dateien können erstellt werden  
-* **DELETE** -> Löscht Inhalte 
+* **DELETE** -> Löscht Inhalte.  
 Ein Request ist aufgebaut mit dem **Schlüsselwort** ,mit der Information die man benötigt, und mit **HTTP/1.1.**  
 Weiters stehen im Header noch weitere Informationen. Zum Beispiel der **Hostname** oder falls es einen Body gibt die Länge des Bodys. Diese findet man danach unter **content-length**. Mit dieser **content-length** weiß der Server oder der Client wann der Body zu Ende ist und damit auch wann der Request oder der Response zu Ende ist. Der **Response** des Servers schaut ähnlich aus wie der **Request** vom Client. Er besitzt auch einen **Head** und kann auch einen **Body** besitzen. Falls der Response einen Body besitzt, wird dies im Head wieder mit der Länge des Bodys unter **content-length** gekennzeichnet. Im **Head** vom Response befindet sich zu einem wieder **HTTP/1.1** und der **Statuscode als Zahl** und der **Statuscode in einem Wort**. [Hier](https://de.wikipedia.org/wiki/HTTP-Statuscode) können sie die Statuscodes nachlesen.  Früher wurde das XML Format für die Übertragung verwendet. Heuter wird aber JSON für die Übertragung verwendet. Die Übertragung ist zwar umstänflicher aber die Informationen können viel besser komprimiert werden.  
 
