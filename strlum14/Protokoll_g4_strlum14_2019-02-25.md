@@ -1,8 +1,8 @@
-Name: Lukas Strauß 
-Klasse: 5AHME 
-Datum: 25.02.2019 
-Anwesend: Strauß Lukas, Tuttner Raphael, Uhl Christian, Waltl Kilian, Wieser Markus, Zitz Karlheinz 
-Abwesend: Strutz Sebastian 
+Name: Lukas Strauß   
+Klasse: 5AHME   
+Datum: 25.02.2019   
+Anwesend: Strauß Lukas, Tuttner Raphael, Uhl Christian, Waltl Kilian, Wieser Markus, Zitz Karlheinz   
+Abwesend: Strutz Sebastian   
 
 ## Wiederholung der Letzten Einheit
 
