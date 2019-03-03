@@ -44,7 +44,7 @@ mit dem Response. Schlüsselwörter siehe Rest-Server !
 ### Weiterführung des Pogrammes
 
 Als Zusatz in unserem Programm wollen wir nun die Daten von Schülern speichern. Folgende Methode macht dies möglich. 
-Die Datei config.json wird erstellt. In dieser Datei findet man den Pfad, wo die Daten gespeichert werden. 
+Die Datei config.json wird erstellt. In dieser Datei findet man den Pfad, wo die Daten gespeichert werden. :point_right:
 
 ``` JSON  
 {
@@ -55,13 +55,13 @@ Die Datei config.json wird erstellt. In dieser Datei findet man den Pfad, wo die
 ```
 
 Als nächsten Schritt wird das Modul .nconf, es erleichtert das Arbeiten mit den config-Dateien.
-Danach werden die Typen geladen. 
+Danach werden die Typen geladen. :point_right:
 
 ```  
 npm install nconf  
 ```  
 
-Der nächste Schritt ist nun das nconf in unsere main.ts zu importieren. 
+Der nächste Schritt ist nun das nconf in unsere main.ts zu importieren. :point_right:
 
 ```  
 npm install --save-dev @types/nconf  
@@ -70,7 +70,7 @@ npm install --save-dev @types/nconf
 
 
 Der nächste Schrittwäre in der Klasse main.ts am Beginn eine Zeile einfügen, damit das Modul nconf weiß wo
-sich die Konfigurationsdatei befindet. Dabei ist wichtig, dass man das Modul zuerst importiert.
+sich die Konfigurationsdatei befindet. Dabei ist wichtig, dass man das Modul zuerst importiert. :point_right:
 
 ``` typescript  
 import * as nconf from 'nconf';
@@ -86,7 +86,7 @@ wir eine gut lesbare Formatierung haben und nicht alles in einer Zeile steht. In
 mit Hilfe des Filesystems in die Datei datenbank.json gespeichert. Damit wir die Datei beim Starten des Servers einlesen
 können, programmierten wir im Konstruktor der Klasse mit Hilfe des File-Systems eine Funktion zum Einlesen der Datei. 
 Da wir in der Klasse main.ts am Beginn eine Instance der Datenbank erstellen wird der Konstruktor ausgeführt und die
-Datei daher eingelesen.
+Datei daher eingelesen. :point_right:
 
 ``` typescript  
 public writeToFile () {
@@ -98,7 +98,7 @@ public writeToFile () {
 In der ersten Zeile bekommt man den Eintrag von der Datei 'config.json', damit wir den Pfad haben wo die Schüler
 gespeichert wurden. In der nächsten Zeile werden die Schüler mit Hilfe des File-Systems aus der Datei geladen und in
 eine Variable gespeichert. Diese Variable wird dann zum Schluss in 'students' gespeichert und damit können wir 
-dann weiterarbeiten. 
+dann weiterarbeiten. :point_right:
 
 ``` typescript  
 this.config = <IDatabaseConfig> nconf.get('database');  
