@@ -76,11 +76,14 @@ public writeToFile () {
         const s = JSON.stringify(this.students);
         fs.writeFileSync('../' + this.config.path, s);
 ```
-Im Konstruktor wurde eine Methode ausprogrammiert, um die Dateien gleich zu Beginn einzulesen. 
+Im Konstruktor wurde eine Methode ausprogrammiert, um die Dateien gleich zu Beginn einzulesen. Am Anfange bekommt man die gespeicherten Daten aus der config.json. Als nächstes werden dann diese Schülerdaten geladen und als Variable gespeichert. Zum Schluss werden die Daten dann in der students.ts gespeichert.
 
 ```typescript
 this.config = <IDatebaseConfig>nconf.get('database');
 const b = <Buffer>fs.readFileSync('../' + this.config.path);
 this.students = JSON.parse(b.toString());
 ```
+
+
+
 
