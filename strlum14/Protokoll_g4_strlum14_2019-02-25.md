@@ -22,7 +22,9 @@ gibt es einige Befehle. Die wichtigsten sind:
 * **POST**:     :point_right: ändern von bestehenden Daten am Server 
 
 
+
 ## Hypertext Transfer Protocol(HTTP)
+![HTTP](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum14/strlum14/HTTP%20Protokoll%20Schema.png)
 
 ....HTTP ist ein sogenanntes Zustandsloses Protokoll. Die Kommunikation zwischen Server und Client erfolgt mit dem Request-
 Response Prinzip.Die Verbindung zwischen Server und Client wird mittels TCP/IP Protokoll aufgebaut. Nach dem Verbindungsaufbau
@@ -30,7 +32,7 @@ erfolg die Kummunikation mittels HTTP-Protokoll. Für die Kummunikation gibt es 
 für den Response. Der Client sendet an den Server eine Anfrage, den sogenanten Request. Auf einem Request antwortet der Server
 mit dem Response. Schlüsselwörter siehe Rest-Server !
 
-![HTTP]()
+
 
 
 
