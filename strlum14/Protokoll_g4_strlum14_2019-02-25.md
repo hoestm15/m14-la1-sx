@@ -41,7 +41,7 @@ mit dem Response. Schlüsselwörter siehe Rest-Server !
 
 
 
-###Weiterführung des Pogrammes###
+### Weiterführung des Pogrammes
 
 Als Zusatz in unserem Programm wollen wir nun die Daten von Schülern speichern. Folgende Methode macht dies möglich. 
 Die Datei config.json wird erstellt. In dieser Datei findet man den Pfad, wo die Daten gespeichert werden. 
