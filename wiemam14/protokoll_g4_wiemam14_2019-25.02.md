@@ -2,7 +2,7 @@
 
   Name: Markus Wieser   
   Klasse: 5AHME   
-  Datum: 11.02.2019   
+  Datum: 25.02.2019   
   Anwesend: Strauß Lukas, Tuttner Raphael, Uhl Christian, Waltl Kilian, Wieser Markus, Zitz Karlheinz    
   Abwesend: Strutz Sebastian
 
@@ -19,7 +19,7 @@
   
   ![HTTP(s) Datenaustausch](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/requestResponse.png)
   
-  Für den Verbindungsaufbau wird ein TCP/IP Protokoll verwendet. Es sind zwei Datenröhren vorhanden, welche für den Request und die Response zuständig sind.
+  Für den Verbindungsaufbau wird ein TCP/IP Protokoll verwendet. Es sind zwei Datenröhren vorhanden, welche für den Request und die Response zuständig sind. Der Client sendet den Request und der Server antwortet mit einer Response.
   
   ### Schlüsselwörter für den Request
   
