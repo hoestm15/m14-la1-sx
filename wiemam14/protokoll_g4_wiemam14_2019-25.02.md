@@ -76,8 +76,11 @@ public writeToFile () {
         const s = JSON.stringify(this.students);
         fs.writeFileSync('../' + this.config.path, s);
 ```
+Im Konstruktor wurde eine Methode ausprogrammiert, um die Dateien gleich zu Beginn einzulesen. 
 
-
-
-
+```typescript
+this.config = <IDatebaseConfig>nconf.get('database');
+const b = <Buffer>fs.readFileSync('../' + this.config.path);
+this.students = JSON.parse(b.toString());
+```
 
