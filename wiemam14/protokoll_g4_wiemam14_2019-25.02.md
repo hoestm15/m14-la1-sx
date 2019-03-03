@@ -65,5 +65,10 @@ nconf.argv().env().file({ file: 'config.json'});
 `
 ```
 
+Um in unserer Datenbank mit files arbeiten zu können, importierten wir das Modul fs. Dieses Modul musste jedoch nur importiert und nicht mehr installiert werden.
+```typescript
+import * as fs from 'fs';
+```
+Zum Speichern haben wir eine Methode namens writeToFile erstellt. Diese kommt beim Hinzufügen, Ändern und Löschen zum Einsatz. 
 
 
