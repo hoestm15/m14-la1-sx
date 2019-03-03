@@ -83,7 +83,27 @@ this.config = <IDatebaseConfig>nconf.get('database');
 const b = <Buffer>fs.readFileSync('../' + this.config.path);
 this.students = JSON.parse(b.toString());
 ```
+Die Datei der gespeicherten Schüler ist wie hier zu sehen auch für den Menschen sehr einfach zu lesen:
 
+``` json  
+{
+  "tutram12": {
+    "htlid": "tutram12",
+    "surname": "Tuttner",
+    "firstname": "Raphael"
+  },
+  "zitkam13": {
+    "htlid": "zitkam13",
+    "surname": "Zitz",
+    "firstname": "Karlheinz"
+  },
+  "uhlchm14": {
+    "htlid": "uhlchm14",
+    "surname": "Uhl",
+    "firstname": "Christian"
+  }
+}  
+```
 
 
 
