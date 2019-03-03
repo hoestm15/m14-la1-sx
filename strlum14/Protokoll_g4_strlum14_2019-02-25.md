@@ -93,11 +93,10 @@ public writeToFile () {
     }  
 ```  
 
-In der ersten Zeile bekommt man den Eintrag von der Datei **config.json**, damit wir den Pfad haben wo die Schüler
+In der ersten Zeile bekommt man den Eintrag von der Datei 'config.json', damit wir den Pfad haben wo die Schüler
 gespeichert wurden. In der nächsten Zeile werden die Schüler mit Hilfe des File-Systems aus der Datei geladen und in
-eine Variable gespeichert. Diese Variable wird dann zum Schluss in **students** gespeichert und damit können wir 
-dann weiterarbeiten. Am Ende haben wir noch in der Methode **add()**, **remove()** und **set()** hinzugefügt, dass 
-die Schüler neu in die Datei gespeichert werden. 
+eine Variable gespeichert. Diese Variable wird dann zum Schluss in 'students' gespeichert und damit können wir 
+dann weiterarbeiten. 
 
 ``` typescript  
 this.config = <IDatabaseConfig> nconf.get('database');  
