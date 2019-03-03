@@ -34,4 +34,4 @@ Link zur [4.Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum14
 Link zur [5.Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum14/strlum14/Protokoll_g4_strlum14_2019-02-11.md)
 
 ## 6. Einheit, 25.02.2019
-Link zur [6.Einheit]()
+Link zur [6.Einheit](https://github.com/HTLMechatronics/m14-la1-sx/blob/strlum14/strlum14/Protokoll_g4_strlum14_2019-02-25.md)
