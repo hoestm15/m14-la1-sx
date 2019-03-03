@@ -35,3 +35,21 @@
   ![Paketaufbau](https://github.com/HTLMechatronics/m14-la1-sx/blob/wiemam14/wiemam14/paketaufbau.jpg)
 
   Im Head von einer Response steht wie auch bei einer Request die Version (zum Beispiel HTTP/1.1) aber auch der Statuscode als Zahl und Wort.
+
+## Fortsetzung des REST-Servers
+
+Um unsere Serverdaten zu speichern schrieben wir diese Methoden. Hierfür erstellten wir die config.json und schrieben dort den Pfad hinein, wo die Daten gespeichert werden.
+
+``` typescript 
+{
+    "database": {
+        "path": "datenbank.json" 
+    }
+}
+```
+
+
+
+
+
+
