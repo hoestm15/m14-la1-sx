@@ -69,6 +69,15 @@ Um in unserer Datenbank mit files arbeiten zu können, importierten wir das Modu
 ```typescript
 import * as fs from 'fs';
 ```
-Zum Speichern haben wir eine Methode namens writeToFile erstellt. Diese kommt beim Hinzufügen, Ändern und Löschen zum Einsatz. 
+Zum Speichern haben wir eine Methode namens writeToFile in databse.ts erstellt. Diese kommt beim Hinzufügen, Ändern und Löschen zum Einsatz. Durch fs werden die Daten in die Datei database.json gespeichert. 
+
+```typescript
+public writeToFile () {
+        const s = JSON.stringify(this.students);
+        fs.writeFileSync('../' + this.config.path, s);
+```
+
+
+
 
 
