@@ -48,7 +48,8 @@ Die Datei config.json wird erstellt. In dieser Datei findet man den Pfad, wo die
 
 ``` JSON  
 {
-    "database" : { 
+    "database" : 
+    { 
         "path" : "datenbank.json" 
     }
 }
