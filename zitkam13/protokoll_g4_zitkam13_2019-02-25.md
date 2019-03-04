@@ -7,7 +7,7 @@
 **Abwesend**: Strutz Sebastian  
 
 ## Wiederholung des Rest-Servers  
-Der Rest-Server basiert in unserem Fall auf drei Technologien. Diese sind **Node.js**,**Javaskript/Typeskript** und **Express**. **Typeskript** benötigen wir für die Programmierung, da wir in dieser Sprache unseren Server programmieren. **Express** ist eine Erweiterung vom HTTP  Modul. Wir arbeiten mit diesem Modul, da es einfacher ist amls mit dem HTTP Modul. **Node.js** benötigen wir für unseren Server.  
+Der Rest-Server basiert in unserem Fall auf drei Technologien. Diese sind **Node.js**,**Javaskript/Typeskript** und **Express**. **Typeskript** benötigen wir für die Programmierung, da wir in dieser Sprache unseren Server programmieren. **Express** ist eine Erweiterung vom HTTP  Modul. Wir arbeiten mit diesem Modul, da es einfacher ist als mit dem HTTP Modul. **Node.js** benötigen wir für unseren Server.  
 
 ### HTTP (HyperText Transfer Protocoll)  
 HTTP steht für **H**yper**T**ext **T**ransfer **P**rotokoll. Die Übertragung zwischen Server und Client findet textuell statt und das Protokoll ist zustandslos. Die Übertragung kan  man im folgenden Bild sehen.  
