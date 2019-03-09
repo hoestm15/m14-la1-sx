@@ -4,9 +4,8 @@
 **Uhrzeit:** 8:00-10:30  
 **Gruppe:** 1  
 **Anwesend**: Berger Emil, Böcksteiner Jakob, Bullner Jeremy, Ehmann Julian, Knappitsch Robert, Kobor Markus, Köhler Marcel  
-**Abwesend**: niemand
+**Abwesend**: niemand  
 
-# Wiederholung
 
 ## Installation von Modulen
   *Installieren von Express*
@@ -59,8 +58,8 @@ private handleDeleteData(req: express.Request, res: express.Response) {
   Bei der Handler-Methode für *POST* müssen wir jedoch beachten, dass wir zuvor eine Methode `edit();` erstellen müssen.  
   Würde man das gleiche in Java machen wollen, würde man gleichnamige Methoden, aber mit unterschiedlichen Parametern erzeugen. Da     TypeScript in JavaScript übersetzt wird, JavaScript aber keine Datentypen kennt kann man diese nicht so schreiben, da die Methode nicht durch die Parameterliste unterschieden werden kann. Eine Möglichkeit hierfür wäre Signature Overloading.  
   
-### Signature Overloading
-  Bsp:  
+### Signature Overloading  
+
 ```typescript
 // Signature Overloading in TS
 public edit (index: number, value: Value): void;
@@ -94,7 +93,7 @@ public getTemp (index: number): number {
 ```  
   Damit das weiter oben beschriebene auch so funktioniert, sind die beiden überhalb stehenden Methoden von nöten.
 
-## Testen von POST
+## Tests von Post
 
 ### Ausgangszustand
 ![Ausgangszustand](https://github.com/HTLMechatronics/m14-la1-sx/blob/boejam13/boejam13/rest_1.png)
