@@ -9,33 +9,35 @@
 # Wiederholung
 
 ## Installation von Modulen
-  *Bsp: Installieren von express*
+  *Installieren von Express*
   
-  Zuerst `npm install express` 
-  Danach `npm install --save-dev @types/express`
+  Erstens: `npm install express` damit Express installiert wird.  
+  Zweitens `npm install --save-dev @types/express` hier wird die TypeScriptVariante von Express installiert.
   
 ## Verwenden der HTTP-Requests in unserem Programm:
 
-GET -> `this._server.get()`  -> Abrufen 
+GET = `this._server.get()`  mit dieser Methode wird ein Wert abgerufen  
 
-PUT -> `this._server.put()`  -> Hinzufügen
+PUT = `this._server.put()`  mit dieser Methode wird ein Wert hinzugefügt  
 
-POST -> `this._server.post()`  -> Ändern
+POST = `this._server.post()`  mit dieser Methode kann ein Wert verändert werden  
 
-DELETE -> `this._server.delete()` -> Löschen 
+DELETE = `this._server.delete()` mit dieser Methode kann ein Wert gelöscht werden
 
-# DELETE 
-
-  Um einen Wert zu löschen muss man eine Handler-Methode schreiben und diese an den Constructor des Servers weitergeben.
-  Der Index des Wertes wird in der URL mit *query* übergeben.
-  
+## REST-Server: Delete  
+   Damit irgendeiner dieser Befehle getestet werden kann, wird ein HTTP-Client Tool benötigt. Ein Beispiel hierfür wäre RESTed.  
+   
+   Um einen Wert löschen zu können ist eine Handler-Methode von nöten. Diese wird in weiterer Folge an den Constructor übermittelt. Der    Index eines Wertes muss mit **query** übergeben werden.  
+   
   Contructor  
+  
 ```typescript
 this._server.delete('/data',
     (req, res) => this.handleDeleteData(req, res));
 ```
 
-  Handler-Methode
+  Handler-Methode  
+  
 ```typescript
 private handleDeleteData(req: express.Request, res: express.Response) {
     try {
@@ -51,11 +53,11 @@ private handleDeleteData(req: express.Request, res: express.Response) {
     }
 }
 ```
-  Porblem: Die Idizes der dahintergereihten Werte änderns sich.
 
-# POST 
-
-  Vor der Handler-Methode müssenw wir noch eine Methode zum editieren der Datenback schreiben. Javascript kann nicht mehrere Methoden mit dem gleichen Namen und unterschiedlicher Parameterliste haben da Javascript keine Datentypen hat. Möglichkeit dafür ist Signature Overloading.
+# POST   
+  
+  Bei der Handler-Methode für *POST* müssen wir jedoch beachten, dass wir zuvor eine Methode `edit();` erstellen müssen.  
+  Würde man das gleiche in Java machen wollen, würde man gleichnamige Methoden, aber mit unterschiedlichen Parametern erzeugen. Da     TypeScript in JavaScript übersetzt wird, JavaScript aber keine Datentypen kennt kann man diese nicht so schreiben, da die Methode nicht durch die Parameterliste unterschieden werden kann. Eine Möglichkeit hierfür wäre Signature Overloading.  
   
 ## Signature Overloading
   Bsp:  
@@ -74,16 +76,13 @@ public edit (index: number, p2: any, power?: any): void {
         this.data[index] = new Value(this.getTemp(index), power);
     }
 }
-```
+```  
+ Diese Methode achtet alle Paramter, welche in ihr deklariert sind, nutzt jedoch nur die beim Aufruf übergebenen.  
+ 
+ Wenn **ein** Value ankommt, wird dieser als Index ankommt.  
+ Wenn **zwei** Values ankommen, wird ein neues Objekt erzeugt.
  
   
-  Value kommt an -> Indexwert 
-  
-  zwei Werte -> neues Objekt 
-  
-  ein Wert -> alter Wert wird für den zweiten Wert verwendet
-  
-  Damit das funktioniert bracuht man noch zwei Methoden in der Klasse *database*.
 ```typescript
 public getPower (index: number): number {
     return this.data[index].power;
@@ -92,7 +91,8 @@ public getPower (index: number): number {
 public getTemp (index: number): number {
     return this.data[index].temp;
 }
-```
+```  
+  Damit das weiter oben beschriebene auch so funktioniert, sind die beiden überhalb stehenden Methoden von nöten.
 
 ## Testen von POST
 
