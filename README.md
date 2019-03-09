@@ -36,4 +36,4 @@
   [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/ehmjum14/protokoll_g1_ehmjum14_03-12-2018.md)
   
   * 4.Einheit, 10.12.2018
-  [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/ehmjum14/protokoll_gr1_ehmjum14_10-12-2018.md)
+  [Protokoll](https://github.com/HTLMechatronics/m14-la1-sx/blob/ehmjum14/protokoll_g1_ehmjum14_10-12-2018.md)
