@@ -28,14 +28,14 @@ DELETE = `this._server.delete()` mit dieser Methode kann ein Wert gelöscht werd
    
    Um einen Wert löschen zu können ist eine Handler-Methode von nöten. Diese wird in weiterer Folge an den Constructor übermittelt. Der    Index eines Wertes muss mit **query** übergeben werden.  
    
-  Contructor  
+  **Contructor**  
   
 ```typescript
 this._server.delete('/data',
     (req, res) => this.handleDeleteData(req, res));
 ```
 
-  Handler-Methode  
+  **Handler-Methode**  
   
 ```typescript
 private handleDeleteData(req: express.Request, res: express.Response) {
