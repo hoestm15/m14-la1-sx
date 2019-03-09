@@ -96,7 +96,7 @@ public getTemp (index: number): number {
 ## Tests von Post
 
 ### Ausgangszustand
-![Ausgangszustand](https://github.com/HTLMechatronics/m14-la1-sx/blob/boejam13/boejam13/rest_1.png)
+![Ausgangszustand](https://github.com/HTLMechatronics/m14-la1-sx/blob/ehmjum14/ehmjum14/vorher.png)
 
 ### Ändern der Werte
-![Veränderte Werte](https://github.com/HTLMechatronics/m14-la1-sx/blob/boejam13/boejam13/rest_2.png)
+![Veränderte Werte](https://github.com/HTLMechatronics/m14-la1-sx/blob/ehmjum14/ehmjum14/nachher.png)
