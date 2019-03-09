@@ -54,12 +54,12 @@ private handleDeleteData(req: express.Request, res: express.Response) {
 }
 ```
 
-# POST   
+## REST-Server: POST   
   
   Bei der Handler-Methode für *POST* müssen wir jedoch beachten, dass wir zuvor eine Methode `edit();` erstellen müssen.  
   Würde man das gleiche in Java machen wollen, würde man gleichnamige Methoden, aber mit unterschiedlichen Parametern erzeugen. Da     TypeScript in JavaScript übersetzt wird, JavaScript aber keine Datentypen kennt kann man diese nicht so schreiben, da die Methode nicht durch die Parameterliste unterschieden werden kann. Eine Möglichkeit hierfür wäre Signature Overloading.  
   
-## Signature Overloading
+### Signature Overloading
   Bsp:  
 ```typescript
 // Signature Overloading in TS
