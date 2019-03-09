@@ -95,8 +95,8 @@ public getTemp (index: number): number {
 
 ## Tests von Post
 
-### Ausgangszustand
+### Grundzustand
 ![Ausgangszustand](https://github.com/HTLMechatronics/m14-la1-sx/blob/ehmjum14/ehmjum14/Vorher.PNG)
 
-### Ändern der Werte
+### Verändert
 ![Veränderte Werte](https://github.com/HTLMechatronics/m14-la1-sx/blob/ehmjum14/ehmjum14/Nachher.PNG)
