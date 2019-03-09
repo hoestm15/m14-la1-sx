@@ -11,8 +11,8 @@
 ## Installation von Modulen
   *Installieren von Express*
   
-  Erstens: `npm install express` damit Express installiert wird.  
-  Zweitens `npm install --save-dev @types/express` hier wird die TypeScriptVariante von Express installiert.
+  Erstens:  `npm install express` damit Express installiert wird.  
+  Zweitens:  `npm install --save-dev @types/express` hier wird die TypeScriptVariante von Express installiert.
   
 ## Verwenden der HTTP-Requests in unserem Programm:
 
@@ -79,8 +79,8 @@ public edit (index: number, p2: any, power?: any): void {
 ```  
  Diese Methode achtet alle Paramter, welche in ihr deklariert sind, nutzt jedoch nur die beim Aufruf übergebenen.  
  
- Wenn **ein** Value ankommt, wird dieser als Index ankommt.  
- Wenn **zwei** Values ankommen, wird ein neues Objekt erzeugt.
+ Wenn **ein** Value ankommt, wird dieser als Index genommen.  
+ Wenn **zwei** Values ankommen, wird ein neues Objekt aus diesen erzeugt.
  
   
 ```typescript
