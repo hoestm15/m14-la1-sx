@@ -117,7 +117,7 @@ Am Ende der Einheit wurde noch die Funktionalität unserer POST-Request überpr�
 
 ![Vorher](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/POST1.png)
 
-![Nachher](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/POST2.PNG)
+![Nachher](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/POST2.png)
 
 Hier siet man, dass die Verbindung in den Headers auf keep-alive eingestellt ist.
 
