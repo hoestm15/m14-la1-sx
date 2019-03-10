@@ -52,7 +52,7 @@ private handleDeleteData(req: express.Request, res: express.Response) {
     }
 }
 ```
-Der Index des zu löschenden Wertes muss wie oben erkenntlich mit „query“ übergeben werden. <br>
+Der Index des zu löschenden Wertes muss wie oben erkenntlich mit *„query“* übergeben werden. <br>
 
 Die Handler-Methode wurde dann im Konstruktor an den Server übergeben:
 
@@ -61,7 +61,7 @@ this._server.delete('/data',
     (req, res) => this.handleDeleteData(req, res));
 ```
 
-Um HTTP-Requests wie Delete testen zu können benötigen wir ein HTTP-Client-Tool. Hierfür wurde „RESTed“ genützt. <br><br>
+Um HTTP-Requests wie Delete testen zu können benötigen wir ein HTTP-Client-Tool. Hierfür wurde *„RESTed“* genützt. <br><br>
 
 
 ## REST-Server: POST   
@@ -119,7 +119,7 @@ Am Ende der Einheit wurde noch die Funktionalität unserer POST-Request überpr�
 
 ![Nachher](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/POST2.png)
 
-Hier siet man, dass die Verbindung in den Headers auf keep-alive eingestellt ist.
+Hier siet man, dass die Verbindung in den Headers auf *keep-alive* eingestellt ist.
 
 Mit der Nutzung von HTTP ist es wichtig, dass eine einmal aufgebaute "kostbare" Verbindung nicht gleich wieder verworfen wird.<br>
 So wurde im HTTP-Header das Feld "Connection: keepalive" definiert, mit dem der Client dem Server sagen kann, dass die Verbindung nach der Antwort nicht abgebaut werden soll und weitere Anfragen sequentiell folgen können.
