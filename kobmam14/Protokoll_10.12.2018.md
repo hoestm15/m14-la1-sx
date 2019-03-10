@@ -115,9 +115,9 @@ public getTemp (index: number): number {
 
 Am Ende der Einheit wurde noch die Funktionalität unserer POST-Request überprüft.
 
-![Ausgangszustand](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/Vorher.PNG)
+![Vorher](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/POST1.png)
 
-![Veränderte Werte](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/Nachher.PNG)
+![Nachher](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/POST2.PNG)
 
 Hier siet man, dass die Verbindung in den Headers auf keep-alive eingestellt ist.
 
