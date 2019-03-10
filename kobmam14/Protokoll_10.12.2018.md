@@ -5,7 +5,7 @@
  Name: Markus Kobor  
  Klasse: 5AHME  
  Datum: 10.12.2018  
- Anwesend: Berger Emil, Bullner Jeremy, Böcksteiner Jakob, Ehmann Julian, Knappitsch Robert, Kobor Markus, Köhler Marcel
+ Anwesend: Berger Emil, Bullner Jeremy, Böcksteiner Jakob, Ehmann Julian, Knappitsch Robert, Kobor Markus, Köhler Marcel <br>
  Abwesend: Niemand <br> <br> <br>
 ## Wiederholung
 
