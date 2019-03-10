@@ -10,7 +10,7 @@ Um es zu installieren sind folgende Schritte notwendig: <br>
 ### Collections
 
 Da es in TypeScript Collections wie die „Lists“ in Java nicht gibt, muss „Array“ verwendet werden, was über ähnliche Features wie beispielsweise eine ArrayList in Java verfügt. <br>
-Alternativ kann man sich auch fertige Bibliotheken, von zum Beispiel Github, herunterladen um diese Funktionalitäten anbieten.
+Alternativ kann man sich auch fertige Bibliotheken, von zum Beispiel Github, herunterladen um diese Funktionalitäten anbieten. <br>
 
 ## HTTP-Requests in unserem Programm:
 
@@ -20,7 +20,7 @@ DELETE: `this._server.delete()` Dieser Request dient zum Löschen eines
 
 POST: `this._server.post()`  Dieser Request dient zum Ändern eines Wertes   Wertes  
 
-PUT: `this._server.put()`  Dieser Request dient zum Hinzufügen eines Wertes  
+PUT: `this._server.put()`  Dieser Request dient zum Hinzufügen eines Wertes  <br>
 
 
 
@@ -53,7 +53,7 @@ this._server.delete('/data',
     (req, res) => this.handleDeleteData(req, res));
 ```
 
-Um HTTP-Requests wie Delete testen zu können benötigen wir ein HTTP-Client-Tool. Hierfür wurde „RESTed“ genützt.
+Um HTTP-Requests wie Delete testen zu können benötigen wir ein HTTP-Client-Tool. Hierfür wurde „RESTed“ genützt. <br>
 
 
 ## REST-Server: POST   
@@ -81,13 +81,13 @@ public edit (index: number, p2: any, power?: any): void {
     }
 }
 ```  
-Da bei der dritten edit-Methode der dritte Parameter nicht verwendet werden muss, wird hier der „Fragezeichen-Operator“ angeführt.<br><br>
+Da bei der dritten edit-Methode der dritte Parameter nicht verwendet werden muss, wird hier der „Fragezeichen-Operator“ angeführt.<br>
 
-Im Quellcode können wir beim ersten „if“ sehen, dass wenn „p2 instance of Value“, also „p2“ ein Value-Objekt ist, dieses als Wert beim Index gesetzt wird.<br><br>
+Im Quellcode können wir beim ersten „if“ sehen, dass wenn „p2 instance of Value“, also „p2“ ein Value-Objekt ist, dieses als Wert beim Index gesetzt wird.<br>
 
 Kommen nun, wie beim ersten „else-if“ zu sehen, zwei Werte an, so entsteht ein neues Value-Objekt.<br><br>
 
-Kommt jedoch nur ein Wert an so wird, für den nicht angekommenen Wert der bereits gespeicherte verwendet, was durch die beiden letzten „else-if‘s“ realisiert wurde.<br><br>
+Kommt jedoch nur ein Wert an so wird, für den nicht angekommenen Wert der bereits gespeicherte verwendet, was durch die beiden letzten „else-if‘s“ realisiert wurde.<br>
 
 Nach der Realisierung von „edit“, wurden in der „database“ noch die Methoden „getpower()“ sowie „getTemp()“ angelegt:
  
@@ -101,6 +101,7 @@ public getTemp (index: number): number {
     return this.data[index].temp;
 }
 ```  
+<br>
 
 ## Testen von „POST“
 
