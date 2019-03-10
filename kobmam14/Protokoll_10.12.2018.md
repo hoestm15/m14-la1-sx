@@ -10,7 +10,7 @@ Um es zu installieren sind folgende Schritte notwendig: <br>
 ### Collections
 
 Da es in TypeScript Collections wie die „Lists“ in Java nicht gibt, muss „Array“ verwendet werden, was über ähnliche Features wie beispielsweise eine ArrayList in Java verfügt. <br>
-Alternativ kann man sich auch fertige Bibliotheken, von zum Beispiel Github, herunterladen um diese Funktionalitäten anbieten. <br>
+Alternativ kann man sich auch fertige Bibliotheken, von zum Beispiel Github, herunterladen um diese Funktionalitäten anbieten. <br><br>
 
 ## HTTP-Requests in unserem Programm:
 
@@ -20,7 +20,7 @@ DELETE: `this._server.delete()` Dieser Request dient zum Löschen eines
 
 POST: `this._server.post()`  Dieser Request dient zum Ändern eines Wertes   Wertes  
 
-PUT: `this._server.put()`  Dieser Request dient zum Hinzufügen eines Wertes  <br>
+PUT: `this._server.put()`  Dieser Request dient zum Hinzufügen eines Wertes  <br><br>
 
 
 
@@ -85,7 +85,7 @@ Da bei der dritten edit-Methode der dritte Parameter nicht verwendet werden muss
 
 Im Quellcode können wir beim ersten „if“ sehen, dass wenn „p2 instance of Value“, also „p2“ ein Value-Objekt ist, dieses als Wert beim Index gesetzt wird.<br>
 
-Kommen nun, wie beim ersten „else-if“ zu sehen, zwei Werte an, so entsteht ein neues Value-Objekt.<br><br>
+Kommen nun, wie beim ersten „else-if“ zu sehen, zwei Werte an, so entsteht ein neues Value-Objekt.<br>
 
 Kommt jedoch nur ein Wert an so wird, für den nicht angekommenen Wert der bereits gespeicherte verwendet, was durch die beiden letzten „else-if‘s“ realisiert wurde.<br>
 
