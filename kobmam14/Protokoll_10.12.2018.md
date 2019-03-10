@@ -113,7 +113,7 @@ public getTemp (index: number): number {
 
 ## Testen von „GET“
 
-![Vorher](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/POST1.png)
+![Vorher](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/POST1.png) <br> <br>
 
 ## Testen von „POST“
 
