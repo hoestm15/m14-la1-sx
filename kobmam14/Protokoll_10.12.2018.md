@@ -111,11 +111,13 @@ public getTemp (index: number): number {
 ```  
 <br>
 
+## Testen von „GET“
+
+![Vorher](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/POST1.png)
+
 ## Testen von „POST“
 
 Am Ende der Einheit wurde noch die Funktionalität unserer POST-Request überprüft.
-
-![Vorher](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/POST1.png)
 
 ![Nachher](https://github.com/HTLMechatronics/m14-la1-sx/blob/kobmam14/kobmam14/POST2.png)
 
