@@ -4,8 +4,8 @@
  
  Name: Markus Kobor  
  Klasse: 5AHME  
- Datum: 26.11.2018  
- Anwesend: Berger Emil, Bullner Jeremy, Böcksteiner Jakob, Ehmann Julian, Knappitsch Robert, Kobor Markus, Köhler Marcel <br>
+ Datum: 10.12.2018  
+ Anwesend: Berger Emil, Bullner Jeremy, Böcksteiner Jakob, Ehmann Julian, Knappitsch Robert, Kobor Markus, Köhler Marcel
  Abwesend: Niemand <br> <br> <br>
 ## Wiederholung
 
@@ -61,7 +61,7 @@ this._server.delete('/data',
     (req, res) => this.handleDeleteData(req, res));
 ```
 
-Um HTTP-Requests wie Delete testen zu können benötigen wir ein HTTP-Client-Tool. Hierfür wurde „RESTed“ genützt. <br>
+Um HTTP-Requests wie Delete testen zu können benötigen wir ein HTTP-Client-Tool. Hierfür wurde „RESTed“ genützt. <br><br>
 
 
 ## REST-Server: POST   
