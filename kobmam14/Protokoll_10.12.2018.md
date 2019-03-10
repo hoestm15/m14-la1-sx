@@ -22,13 +22,13 @@ Alternativ kann man sich auch fertige Bibliotheken, von zum Beispiel Github, her
 
 ## HTTP-Requests in unserem Programm:
 
-GET: `this._server.get()`  Dieser Request dient zum Abrufen eines Wertes 
+GET: :point_right: `this._server.get()`  Dieser Request dient zum Abrufen eines Wertes 
 
-DELETE: `this._server.delete()` Dieser Request dient zum Löschen eines
+DELETE: :point_right: `this._server.delete()` Dieser Request dient zum Löschen eines
 
-POST: `this._server.post()`  Dieser Request dient zum Ändern eines Wertes   Wertes  
+POST: :point_right: `this._server.post()`  Dieser Request dient zum Ändern eines Wertes   Wertes  
 
-PUT: `this._server.put()`  Dieser Request dient zum Hinzufügen eines Wertes  <br><br>
+PUT: :point_right: `this._server.put()`  Dieser Request dient zum Hinzufügen eines Wertes  <br><br>
 
 
 
