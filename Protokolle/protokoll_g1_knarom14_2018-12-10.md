@@ -6,6 +6,12 @@
 * Anwesend: Berger Emil, Böcksteiner Jakob, Bullner Jeremy, Ehmann Julian, Knappitsch Robert, Kobor Markus, Köhler Marcel
 * Abwesend: -
 
+### Wiederholung
+Am Anfang der Einheit wurde der Stoff aus der letzten Einheit wiederholt. Dabei sprachen wir über:
+* die verschieden HTTP-Requests und Fehlercodes 
+* Collections in TypeScript und deren Unterschied zu denen in Java
+* das Installieren von zusätzlichen Modulen, wie zum Beispiel Express
+
 ### Löschen eines Eintrages - DELETE
 Um einen Wert löschen zu können, verwendeten wir die Methode ``` remove ```, welche wir bereits in der zweiten Einheit erstellt haben:
 
